@@ -10,9 +10,9 @@
 | Matrix ID | Type | Item | Outline heading |
 |-----------|------|------|-----------------|
 | 3.1.1 | K | Difference between data, information, and intelligence | 3.1.1 |
-| 3.1.2 | T | Correctly categorize examples as data, information, or intelligence | 3.1.1.1 |
+| 3.1.1.1 | T | Correctly categorize examples as data, information, or intelligence | 3.1.1.1 |
 
-The teaching-unit ID is **3.1.1** (matrix). Outline headings `3.1.1` / `3.1.1.1` are the K/T pair. Later Core Intelligence Concepts items (lifecycle, types, requirements) are **not** this module.
+The lesson ID is **3.1.1**. The categorize task is **3.1.1.1**. Later Core Intelligence Concepts items (lifecycle, types, requirements) are **not** this module.
 
 ## Concepts taught
 

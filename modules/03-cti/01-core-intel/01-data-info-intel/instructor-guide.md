@@ -42,7 +42,7 @@ Teach the distinction between data, information, and intelligence, and make stud
 
 **Mapped Items:**
 - K: 3.1.1 – Difference between data, information, and intelligence
-- T: 3.1.2 – Correctly categorize examples as data, information, or intelligence
+- T: 3.1.1.1 – Correctly categorize examples as data, information, or intelligence
 
 ---
 
@@ -172,5 +172,5 @@ We assess this host is **not** part of the lookalike-Microsoft activity; SNI and
 ## Additional Instructor Resources
 
 - Local examples of a good vs. weak CTI product (sanitize before class)
-- Escalation: if students ask about lifecycle stages, types (strategic / tactical), or PIRs, park it for 3.1.3 / 3.1.5 / 3.1.7
-- Next recommended module: Intelligence lifecycle (matrix 3.1.3)
+- Escalation: if students ask about lifecycle stages, types (strategic / tactical), or PIRs, park it for 3.1.2 / 3.1.3 / 3.1.4
+- Next recommended module: Intelligence lifecycle (3.1.2)

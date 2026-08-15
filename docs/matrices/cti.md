@@ -21,24 +21,24 @@
 | # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
 | 3.1.1 | Difference between data, information, and intelligence | K | B | C | C | Foundation. CTI 3 should already know the distinction at a principles level. |
-| 3.1.2 | Correctly categorize examples as data, information, or intelligence | T | 3c | 4c | 4c | Direct application of 3.1.1. Competent at 3-level. |
-| 3.1.3 | Intelligence lifecycle | K | B | C | C | CTI 3 should understand stages and purpose at a principles level. |
-| 3.1.4 | Identify the lifecycle stage of an activity and describe the flow | T | 3c | 4c | 4c | Practical mapping of work to the lifecycle. |
-| 3.1.5 | Intelligence types (strategic, operational, tactical, technical) | K | B | C | C | Raised baseline. 5/7 analyze which type a problem needs. |
-| 3.1.6 | Classify an intelligence product or requirement by type | T | 3c | 4c | 4c | Direct application of 3.1.5. |
-| 3.1.7 | Intelligence requirements and Priority Intelligence Requirements (PIRs) | K | B | C | C | CTI 3 should already understand principles of PIRs. Higher levels analyze and refine them. |
-| 3.1.8 | Develop or refine intelligence requirements | T | 3c | 4c | 4d | Core skill. 7-level can apply advanced judgment and align with strategic needs. |
-| 3.1.9 | Translate stakeholder questions into clear intelligence requirements | T | 3c | 4c | 4d | High-value analytical skill that improves with seniority. |
-| 3.1.10 | Explain how a given requirement drives analytic work | T | 3c | 4c | 4c | Ties requirements to collection and production. |
-| 3.1.11 | Ensuring intelligence is actionable | K | B | C | C | CTI 3 should know what “actionable” means and why products fail. |
-| 3.1.12 | Evaluate whether a piece of intelligence is actionable and explain why | T | 3c | 4c | 4d | Judgment-heavy; 7-level applies advanced criteria. |
-| 3.1.13 | Tailoring output to the audience | K | B | C | C | Raised baseline. Production depth continues in 3.11. |
-| 3.1.14 | Adjust an intelligence product for a specified audience | T | 3c | 4c | 4d | Communication skill that improves with seniority. |
-| 3.1.15 | Attribution (purpose, confidence, types) | K | B | C | C | CTI 3 should understand principles and limits of attribution. |
-| 3.1.16 | Assess attribution statements for confidence and supporting evidence | T | 3c | 4c | 4d | Analytic judgment expected to deepen at 7-level. |
-| 3.1.17 | Collection sources and methods (OSINT, commercial, internal) | K | B | C | C | Expands the collection stage of the lifecycle and how requirements drive collection. |
-| 3.1.18 | Identify appropriate collection source classes for a given requirement | T | 3c | 4c | 4c | Direct application of 3.1.17. |
-| 3.1.19 | Plan collection against an intelligence requirement | T | 3c | 4c | 4d | Planning skill; local request process is 3.12.4. |
+| 3.1.1.1 | Correctly categorize examples as data, information, or intelligence | T | 3c | 4c | 4c | Direct application of 3.1.1. Competent at 3-level. |
+| 3.1.2 | Intelligence lifecycle | K | B | C | C | CTI 3 should understand stages and purpose at a principles level. |
+| 3.1.2.1 | Identify the lifecycle stage of an activity and describe the flow | T | 3c | 4c | 4c | Practical mapping of work to the lifecycle. |
+| 3.1.3 | Intelligence types (strategic, operational, tactical, technical) | K | B | C | C | Raised baseline. 5/7 analyze which type a problem needs. |
+| 3.1.3.1 | Classify an intelligence product or requirement by type | T | 3c | 4c | 4c | Direct application of 3.1.3. |
+| 3.1.4 | Intelligence requirements and Priority Intelligence Requirements (PIRs) | K | B | C | C | CTI 3 should already understand principles of PIRs. Higher levels analyze and refine them. |
+| 3.1.4.1 | Develop or refine intelligence requirements | T | 3c | 4c | 4d | Core skill. 7-level can apply advanced judgment and align with strategic needs. |
+| 3.1.4.2 | Translate stakeholder questions into clear intelligence requirements | T | 3c | 4c | 4d | High-value analytical skill that improves with seniority. |
+| 3.1.4.3 | Explain how a given requirement drives analytic work | T | 3c | 4c | 4c | Ties requirements to collection and production. |
+| 3.1.5 | Ensuring intelligence is actionable | K | B | C | C | CTI 3 should know what “actionable” means and why products fail. |
+| 3.1.5.1 | Evaluate whether a piece of intelligence is actionable and explain why | T | 3c | 4c | 4d | Judgment-heavy; 7-level applies advanced criteria. |
+| 3.1.6 | Tailoring output to the audience | K | B | C | C | Raised baseline. Production depth continues in 3.11. |
+| 3.1.6.1 | Adjust an intelligence product for a specified audience | T | 3c | 4c | 4d | Communication skill that improves with seniority. |
+| 3.1.7 | Attribution (purpose, confidence, types) | K | B | C | C | CTI 3 should understand principles and limits of attribution. |
+| 3.1.7.1 | Assess attribution statements for confidence and supporting evidence | T | 3c | 4c | 4d | Analytic judgment expected to deepen at 7-level. |
+| 3.1.8 | Collection sources and methods (OSINT, commercial, internal) | K | B | C | C | Expands the collection stage of the lifecycle and how requirements drive collection. |
+| 3.1.8.1 | Identify appropriate collection source classes for a given requirement | T | 3c | 4c | 4c | Direct application of 3.1.8. |
+| 3.1.8.2 | Plan collection against an intelligence requirement | T | 3c | 4c | 4d | Planning skill; local request process is 3.12.4. |
 
 ---
 
@@ -165,11 +165,11 @@
 | 3.11.2 | Draft a finished product and evaluate it against standards | T | 3c | 4c | 4d | Core production skill. Quality increases with seniority. |
 | 3.11.3 | Disseminating intelligence to the correct audiences | K | B | C | C | Audience, approved methods, handling caveats and markings. |
 | 3.11.4 | Select audience and method and apply correct handling markings | T | 3c | 4c | 4c | Operational dissemination skill. |
-| 3.11.5 | Tailor products to different audiences (technical, leadership, etc.) | T | 3c | 4c | 4d | Builds on 3.1.13–3.1.14. |
+| 3.11.5 | Tailor products to different audiences (technical, leadership, etc.) | T | 3c | 4c | 4d | Builds on 3.1.6 / 3.1.6.1. |
 | 3.11.6 | Disseminate intelligence products through approved channels | T | 3c | 4c | 4c | Highly proficient by 5-level. |
 | 3.11.7 | Handling RFIs | K | B | C | C | Purpose, lifecycle, evaluate / prioritize / respond. |
 | 3.11.8 | Evaluate, prioritize, and produce a response to an RFI | T | 3c | 4c | 4d | Judgment-heavy customer-facing task. |
-| 3.11.9 | Produce a threat actor profile | T | 3c | 4c | 4d | Finished-product form of 3.1.15 attribution. 7-level produces more nuanced profiles. |
+| 3.11.9 | Produce a threat actor profile | T | 3c | 4c | 4d | Finished-product form of 3.1.7 attribution. 7-level produces more nuanced profiles. |
 
 ---
 
@@ -180,7 +180,7 @@
 | 3.12.1 | Local intelligence requirements and priorities | K | B | C | C | Current local PIRs and how they drive analytic focus. |
 | 3.12.2 | Identify current local priorities and align analytic work to them | T | 3c | 4c | 4c | Must be competent from 3-level up. |
 | 3.12.3 | Local production and approval processes | K | B | C | C | Workflow, reviews, and approval authorities. |
-| 3.12.4 | Follow the local process for requesting collection or producing and approving products | T | 3c | 4c | 4c | Site ticket/process. Planning the collection itself is 3.1.19. |
+| 3.12.4 | Follow the local process for requesting collection or producing and approving products | T | 3c | 4c | 4c | Site ticket/process. Planning the collection itself is 3.1.8.2. |
 | 3.12.5 | Local dissemination channels and customers | K | B | C | C | Primary customers and approved channels. |
 | 3.12.6 | Disseminate a product using the correct local channels and customers | T | 3c | 4c | 4c | Direct application of 3.12.5. |
 | 3.12.7 | Document and archive intelligence products according to local standards | T | 3c | 4c | 4c | Same as prior site-specific archive task. |

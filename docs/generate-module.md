@@ -23,8 +23,8 @@ Stop and say what is missing if any of these fail:
 
 | Caller ID | What to generate |
 |-----------|------------------|
-| A **cluster** heading with several distinct K topics (`3.1` Core Intelligence Concepts) | **Stop.** List the child K items (`3.1.1`, `3.1.3`, `3.1.5`, …) and ask which one. Do **not** write the whole cluster. |
-| A **child item** (`3.1.1`) | That K row plus its matching T row(s) only (`3.1.1` + `3.1.2`). |
+| A **cluster** heading with several distinct K topics (`3.1` Core Intelligence Concepts) | **Stop.** List the child K items (`3.1.1`, `3.1.2`, `3.1.3`, …) and ask which one. Do **not** write the whole cluster. |
+| A **child item** (`3.1.1`) | That K row plus its child T row(s) only (`3.1.1` + `3.1.1.1`). |
 | A **unit** that is already one lesson (`1.2.5` HTTP, `2.1` Purpose) | That heading’s rows, same as today. |
 
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
@@ -54,8 +54,8 @@ Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) be
 | You need | Where it comes from |
 |----------|---------------------|
 | Lesson ID | What the user typed. Examples: `1.2.5`, `2.1`, `3.1.1`. Not cluster `3.1`. |
-| Matrix item IDs | Combined `#` cells for this lesson only. SOC is often four parts (`1.2.5.1`). Hunt/CTI child lessons are often three (`3.1.1`, `3.1.2`). Do not add a `.1` to force four parts. |
-| Outline block | The outline K heading + tasks that map to those rows (example: matrix `3.1.1`/`3.1.2` = outline `3.1.1` + `3.1.1.1`). |
+| Matrix item IDs | Combined `#` cells for this lesson only. In cluster `3.1`, the task is a child of the knowledge item (`3.1.1` K, `3.1.1.1` T). Do not invent a sibling T such as `3.1.2` for the `3.1.1` lesson. |
+| Outline block | The outline K heading + tasks that map to those rows (example: matrix `3.1.1` / `3.1.1.1` = outline `3.1.1` + `3.1.1.1`). |
 | Folder | Usually `modules/<role>/<unit>/<nn-short-name>/`. Cluster children may use `modules/03-cti/01-core-intel/<nn-short-name>/`. |
 | Roles | Primary/secondary from the matrix. |
 | Proficiency lines | Copy **3 / 5 / 7** codes from the matrix into **both** the student guide and the instructor guide. Same string in both files. Do not collapse levels (wrong: `Hunter A/1a → B/3c`). Do not invent a `4d` if the matrix is `4c`. |

@@ -20,7 +20,7 @@ By the end of this module, you will be able to:
 
 **Mapped Proficiency Items:**
 - K: 3.1.1 – Difference between data, information, and intelligence
-- T: 3.1.2 – Correctly categorize examples as data, information, or intelligence
+- T: 3.1.1.1 – Correctly categorize examples as data, information, or intelligence
 
 ---
 
@@ -199,8 +199,8 @@ A is **information** (and some data) with a label. Closing the ticket does not c
 ## 6. References & Further Reading
 
 - Related modules:
-  - 3.1.3 – Intelligence lifecycle (next)
-  - 3.1.5 – Intelligence types
-  - 3.1.7 – Intelligence requirements
+  - 3.1.2 – Intelligence lifecycle (next)
+  - 3.1.3 – Intelligence types
+  - 3.1.4 – Intelligence requirements
 - Internal style for assessments (when published)
 - Joint / ODNI primers on the distinction between data, information, and intelligence (use the local copies)

@@ -250,24 +250,24 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.1.1 | Difference between data, information, and intelligence | K | A / A / A | A / B / B | B / C / C |
-| 3.1.2 | Correctly categorize examples as data, information, or intelligence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
-| 3.1.3 | Intelligence lifecycle | K | A / A / A | A / B / B | B / C / C |
-| 3.1.4 | Identify the lifecycle stage of an activity and describe the flow | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
-| 3.1.5 | Intelligence types (strategic, operational, tactical, technical) | K | A / A / A | A / B / B | B / C / C |
-| 3.1.6 | Classify an intelligence product or requirement by type | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
-| 3.1.7 | Intelligence requirements and Priority Intelligence Requirements (PIRs) | K | A / A / B | A / B / B | B / C / C |
-| 3.1.8 | Develop or refine intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.1.9 | Translate stakeholder questions into clear intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.1.10 | Explain how a given requirement drives analytic work | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
-| 3.1.11 | Ensuring intelligence is actionable | K | A / A / B | A / B / B | B / C / C |
-| 3.1.12 | Evaluate whether a piece of intelligence is actionable and explain why | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.1.13 | Tailoring output to the audience | K | A / A / B | A / B / B | B / C / C |
-| 3.1.14 | Adjust an intelligence product for a specified audience | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.1.15 | Attribution (purpose, confidence, types) | K | A / A / A | A / B / B | B / C / C |
-| 3.1.16 | Assess attribution statements for confidence and supporting evidence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.1.17 | Collection sources and methods (OSINT, commercial, internal) | K | A / A / B | A / B / B | B / C / C |
-| 3.1.18 | Identify appropriate collection source classes for a given requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 3.1.19 | Plan collection against an intelligence requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
+| 3.1.1.1 | Correctly categorize examples as data, information, or intelligence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.2 | Intelligence lifecycle | K | A / A / A | A / B / B | B / C / C |
+| 3.1.2.1 | Identify the lifecycle stage of an activity and describe the flow | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.3 | Intelligence types (strategic, operational, tactical, technical) | K | A / A / A | A / B / B | B / C / C |
+| 3.1.3.1 | Classify an intelligence product or requirement by type | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.4 | Intelligence requirements and Priority Intelligence Requirements (PIRs) | K | A / A / B | A / B / B | B / C / C |
+| 3.1.4.1 | Develop or refine intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.4.2 | Translate stakeholder questions into clear intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.4.3 | Explain how a given requirement drives analytic work | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.5 | Ensuring intelligence is actionable | K | A / A / B | A / B / B | B / C / C |
+| 3.1.5.1 | Evaluate whether a piece of intelligence is actionable and explain why | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.6 | Tailoring output to the audience | K | A / A / B | A / B / B | B / C / C |
+| 3.1.6.1 | Adjust an intelligence product for a specified audience | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.7 | Attribution (purpose, confidence, types) | K | A / A / A | A / B / B | B / C / C |
+| 3.1.7.1 | Assess attribution statements for confidence and supporting evidence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.8 | Collection sources and methods (OSINT, commercial, internal) | K | A / A / B | A / B / B | B / C / C |
+| 3.1.8.1 | Identify appropriate collection source classes for a given requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 3.1.8.2 | Plan collection against an intelligence requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
 
 ---
 
@@ -420,4 +420,4 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 - Primary role ratings are taken from the individual matrices.
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
-- CTI headings `3.1`–`3.12` follow [training-outlines.md](../outlines/training-outlines.md). Former matrix-only topics now sit on those units: collection sources/planning (`3.1.17`–`3.1.19`), relevance/impact (`3.8.8`–`3.8.9`), actor profile product (`3.11.9`), local collection request (`3.12.4`).
+- CTI headings `3.1`–`3.12` follow [training-outlines.md](../outlines/training-outlines.md). In cluster `3.1`, each task is a child of its knowledge item (`3.1.1` K, `3.1.1.1` T). Collection sources/planning is `3.1.8`; relevance/impact is `3.8.8`–`3.8.9`; actor profile product is `3.11.9`; local collection request is `3.12.4`.

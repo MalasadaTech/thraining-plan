@@ -28,7 +28,7 @@ By the end of this module, you will be able to:
 4. Spot “intel” that is still only data or information
 
 **Mapped Items:**  
-K: 3.1.1 | T: 3.1.2
+K: 3.1.1 | T: 3.1.1.1
 
 **Speaker Notes:**  
 CTI 3 is already at principles (B / 3c). Push them to sort messy, real-looking products.
@@ -237,7 +237,7 @@ Reinforce once. Do not reopen lifecycle.
 **Questions?**
 
 **Coming Next:**
-- Module 3.1.3 – Intelligence lifecycle
+- Module 3.1.2 – Intelligence lifecycle
 
 **Resources:**
 - Student Guide for this module
