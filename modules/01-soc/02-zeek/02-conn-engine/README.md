@@ -13,6 +13,20 @@
 | 1.2.2.2 | T | Analyze a Zeek conn log and accurately describe what occurred | 1.2.3 |
 | 1.2.2.3 | T | Create a SIEM query to detect specific connection activity | 1.2.3 |
 
+## Concepts taught
+
+- `conn` log
+- `uid` (Zeek connection identifier)
+- 5-tuple (`id.orig_h`, `id.orig_p`, `id.resp_h`, `id.resp_p`, `proto`)
+- `service`
+- `duration`
+- `orig_bytes` / `resp_bytes`
+- `conn_state` (`SF`, `S0`, `S1`, `REJ`, `RSTO`, `RSTR`, `OTH`, and related states)
+- `history`
+- beaconing (long duration, steady bytes)
+- scanning (`S0` / `REJ` volume)
+- pivoting with `uid`
+
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)

@@ -15,6 +15,19 @@
 
 Zeek writes this data to the `ssl` log. The teaching-unit ID is **1.2.4** (matrix). Outline headings `1.2.6` / `1.2.7` are the K/T pair.
 
+## Concepts taught
+
+- `ssl` log (Zeek TLS engine)
+- SNI (`server_name`)
+- certificate `subject` / `issuer`
+- self-signed certificate
+- SNI vs certificate mismatch
+- missing / empty SNI
+- JA3 / JA3S
+- TLS version (`TLSv13`, `TLSv12`, `TLSv11`, `TLSv10`, `SSLv3`)
+- cipher suite / weak ciphers
+- pivoting with `uid` to `conn` and `dns`
+
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)

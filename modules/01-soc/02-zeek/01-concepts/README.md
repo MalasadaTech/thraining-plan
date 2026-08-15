@@ -11,6 +11,24 @@
 |-----------|------|------|-----------------|
 | 1.2.1.1 | K | Zeek concepts | 1.2.1 |
 
+## Concepts taught
+
+- Zeek (formerly Bro)
+- Zeek vs signature-based IDS/IPS
+- Event engine
+- Policy scripts / Zeek scripting layer
+- Logging framework
+- `conn` log (survey)
+- `dns` log (survey)
+- `http` log (survey)
+- `ssl` / TLS log (survey)
+- `files` log
+- `smtp` log
+- `weird` log
+- `notice` log
+- `x509` log
+- TAP / SPAN placement
+
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)

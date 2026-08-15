@@ -15,6 +15,18 @@
 
 This folder is **not** outline item `1.2.3` (that heading is Conn engine tasks). Matrix IDs `1.2.3.*` are the canonical references.
 
+## Concepts taught
+
+- `dns` log
+- `query`
+- `qtype_name` (A, AAAA, CNAME, MX, TXT, NS, PTR, NULL, and related types)
+- `rcode_name` (NOERROR, NXDOMAIN, SERVFAIL, REFUSED, and related codes)
+- `answers`
+- DNS tunneling
+- DGA (domain generation algorithm)
+- NXDOMAIN spikes
+- pivoting with `uid` to `conn`
+
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)

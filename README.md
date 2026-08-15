@@ -11,6 +11,7 @@ docs/
   matrices/                       # combined + per-role proficiency matrices
   tracker.csv                     # module status (edit this)
   tracker.md                      # status legend and folder mapping
+  concept-index.md                # taught concepts → module (book-style index)
 templates/                        # copy these when starting a new module
 modules/
   01-soc/<unit>/<module>/
@@ -49,5 +50,6 @@ Record the mapping in each module `README.md`.
 3. Put lesson-specific screenshots in that module's `assets/` folder.
 4. Put reusable logs or PCAP in `labs/`.
 5. Add a row to [docs/tracker.csv](docs/tracker.csv).
+6. List taught concepts on the module `README.md` and add them to [docs/concept-index.md](docs/concept-index.md).
 
 Shared topics (frameworks, cross-role primers) go under `modules/shared/`, not copied into each role.
