@@ -67,6 +67,16 @@ Also: DNS answers, response records
 |----------|--------|-------|
 | Taught | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
 
+### anomaly-based hunt
+
+Also: anomaly hunt, baseline hunt, deviation hunt
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+
+See also: [hunt types](#hunt-types), [hypothesis-driven hunt](#hypothesis-driven-hunt)
+
 ---
 
 ## B
@@ -181,6 +191,7 @@ Also: detection gap, data exists no alert, missed detection
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [visibility gaps](#visibility-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -285,6 +296,17 @@ Also: examples existing controls might miss, identify missed-control examples
 
 See also: [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
+### execute a hunt by type
+
+Also: execute by type, first hunt search, hunt execute
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+
+See also: [hunt types](#hunt-types)
+
+
 ---
 
 ## F
@@ -332,6 +354,28 @@ Also: `http`, Zeek http
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
 Survey only. Field-level teaching is module 1.2.5 (not written yet).
+
+### hunt types
+
+Also: types of hunts, four hunt types, hunt type taxonomy
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+
+See also: [intel-driven hunt](#intel-driven-hunt), [hypothesis-driven hunt](#hypothesis-driven-hunt), [reactive hunt](#reactive-hunt), [anomaly-based hunt](#anomaly-based-hunt)
+
+### hypothesis-driven hunt
+
+Also: hypothesis hunt, if/then hunt, testable hunt hypothesis
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+
+How to write and document a hypothesis is a later item (2.2.2), not this module.
+
+See also: [hunt types](#hunt-types), [anomaly-based hunt](#anomaly-based-hunt)
 
 ---
 
@@ -381,6 +425,18 @@ Also: types of intelligence, intel types, four intelligence types
 | Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [strategic intelligence](#strategic-intelligence), [operational intelligence](#operational-intelligence), [tactical intelligence](#tactical-intelligence), [technical intelligence](#technical-intelligence)
+
+### intel-driven hunt
+
+Also: intelligence-driven hunt, IOC hunt, bulletin hunt
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+
+Extracting TTPs from a CTI report is a later item (2.4), not this module.
+
+See also: [hunt types](#hunt-types)
 
 ### id.orig_h / id.resp_h
 
@@ -551,6 +607,7 @@ Also: why hunt exists, hunt purpose, purpose of hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [threat hunting in the security program](#threat-hunting-in-the-security-program)
 
@@ -601,6 +658,19 @@ Also: rejected connection
 | Taught | [1.2.2 Conn Engine](../modules/01-soc/02-zeek/02-conn-engine/) | SOC, Hunter |
 
 See also: [conn_state](#conn_state), [scanning](#scanning)
+
+### reactive hunt
+
+Also: reactive hunting, spark hunt, hunt from IR ask
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+
+Re-working an already-raised alert queue is SOC work, not this type.
+
+See also: [hunt types](#hunt-types)
+
 
 ---
 
@@ -825,6 +895,7 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
