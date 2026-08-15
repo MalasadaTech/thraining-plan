@@ -113,6 +113,16 @@ Collection *sources* (OSINT, commercial, internal) are a later item (3.1.8), not
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [data](#data)
 
+### classify an intelligence product or requirement by type
+
+Also: classify by type, intelligence type classification
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+
+See also: [intelligence types](#intelligence-types)
+
 ### conn log
 
 Also: `conn`, connection log, Zeek conn
@@ -150,6 +160,7 @@ Also: raw data, raw observation, unprocessed fact
 |----------|--------|-------|
 | Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [information](#information), [intelligence](#intelligence)
 
@@ -304,6 +315,7 @@ Also: organized data, context, parsed alert, rewritten log story
 |----------|--------|-------|
 | Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [data](#data), [intelligence](#intelligence)
 
@@ -315,6 +327,7 @@ Also: analytic judgment, decision support, finished intelligence, so what
 |----------|--------|-------|
 | Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [data](#data), [information](#information), [transformation from raw data to information to intelligence](#transformation-from-raw-data-to-information-to-intelligence)
 
@@ -325,8 +338,19 @@ Also: intelligence cycle, intel lifecycle, intelligence process
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [stages of the intelligence lifecycle](#stages-of-the-intelligence-lifecycle), [flow of the intelligence lifecycle](#flow-of-the-intelligence-lifecycle)
+
+### intelligence types
+
+Also: types of intelligence, intel types, four intelligence types
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+
+See also: [strategic intelligence](#strategic-intelligence), [operational intelligence](#operational-intelligence), [tactical intelligence](#tactical-intelligence), [technical intelligence](#technical-intelligence)
 
 ### id.orig_h / id.resp_h
 
@@ -417,6 +441,16 @@ See also: [DGA](#dga), [rcode_name](#rcode_name)
 ---
 
 ## O
+
+### operational intelligence
+
+Also: operational intel, campaign intelligence, operational type
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+
+See also: [intelligence types](#intelligence-types)
 
 ### orig_bytes / resp_bytes
 
@@ -630,6 +664,16 @@ Also: lifecycle stages, six stages, intelligence cycle stages
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [purpose and activities in each stage](#purpose-and-activities-in-each-stage)
 
+### strategic intelligence
+
+Also: strategic intel, strategic type, posture intelligence
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+
+See also: [intelligence types](#intelligence-types)
+
 ### subject
 
 See [certificate subject / issuer](#certificate-subject--issuer).
@@ -645,6 +689,26 @@ Also: network TAP, SPAN port, how Zeek sees traffic
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
+
+### tactical intelligence
+
+Also: tactical intel, tactical type
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+
+See also: [intelligence types](#intelligence-types), [technical intelligence](#technical-intelligence)
+
+### technical intelligence
+
+Also: technical intel, technical type, technical observables
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+
+See also: [intelligence types](#intelligence-types), [tactical intelligence](#tactical-intelligence)
 
 ### TLS / ssl log
 

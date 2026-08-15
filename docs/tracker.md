@@ -24,3 +24,4 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 1.2.4 | [modules/01-soc/02-zeek/04-tls-engine](../modules/01-soc/02-zeek/04-tls-engine/) |
 | 3.1.1 | [modules/03-cti/01-core-intel/01-data-info-intel](../modules/03-cti/01-core-intel/01-data-info-intel/) |
 | 3.1.2 | [modules/03-cti/01-core-intel/02-intelligence-lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) |
+| 3.1.3 | [modules/03-cti/01-core-intel/03-intelligence-types](../modules/03-cti/01-core-intel/03-intelligence-types/) |

@@ -44,6 +44,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/01-soc/02-zeek/04-tls-engine` | `1.2.4.1`–`1.2.4.3` | `1.2.6` + `1.2.7` |
 | `modules/03-cti/01-core-intel/01-data-info-intel` | `3.1.1` / `3.1.1.1` | `3.1.1` + `3.1.1.1` |
 | `modules/03-cti/01-core-intel/02-intelligence-lifecycle` | `3.1.2` / `3.1.2.1` | `3.1.2` + `3.1.2.1` |
+| `modules/03-cti/01-core-intel/03-intelligence-types` | `3.1.3` / `3.1.3.1` | `3.1.3` + `3.1.3.1` |
 
 Record the mapping in each module `README.md`.
 
