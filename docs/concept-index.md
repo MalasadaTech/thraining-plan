@@ -192,6 +192,7 @@ Also: detection gap, data exists no alert, missed detection
 |----------|--------|-------|
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
 | Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [visibility gaps](#visibility-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -355,6 +356,26 @@ Also: `http`, Zeek http
 
 Survey only. Field-level teaching is module 1.2.5 (not written yet).
 
+### hunt development concepts
+
+Also: developing a hunt, hunt intake card, hunt planning card
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+
+See also: [hunt hypothesis](#hunt-hypothesis), [scoping a hunt](#scoping-a-hunt), [prioritizing hunts](#prioritizing-hunts)
+
+### hunt hypothesis
+
+Also: developing a hunt hypothesis, documented hunt hypothesis, testable if/then
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+
+See also: [hypothesis-driven hunt](#hypothesis-driven-hunt), [unique patterns or behaviors suitable for hunting](#unique-patterns-or-behaviors-suitable-for-hunting)
+
 ### hunt types
 
 Also: types of hunts, four hunt types, hunt type taxonomy
@@ -372,10 +393,11 @@ Also: hypothesis hunt, if/then hunt, testable hunt hypothesis
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
-How to write and document a hypothesis is a later item (2.2.2), not this module.
+How to write and document the hypothesis is [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/).
 
-See also: [hunt types](#hunt-types), [anomaly-based hunt](#anomaly-based-hunt)
+See also: [hunt types](#hunt-types), [hunt hypothesis](#hunt-hypothesis), [anomaly-based hunt](#anomaly-based-hunt)
 
 ---
 
@@ -576,6 +598,16 @@ Also: Zeek scripts, scripting layer, policy script interpreter
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
+### prioritizing hunts
+
+Also: hunt priority, rank hunts, why this hunt first
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+
+See also: [scoping a hunt](#scoping-a-hunt), [hunt development concepts](#hunt-development-concepts)
+
 ### processing and exploitation
 
 Also: processing, exploitation, process and exploit
@@ -608,6 +640,7 @@ Also: why hunt exists, hunt purpose, purpose of hunting
 |----------|--------|-------|
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
 | Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [threat hunting in the security program](#threat-hunting-in-the-security-program)
 
@@ -693,6 +726,16 @@ Also: port scan, `S0`/`REJ` volume
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.2 Conn Engine](../modules/01-soc/02-zeek/02-conn-engine/) | SOC, Hunter |
+
+### scoping a hunt
+
+Also: hunt scope, bound a hunt, who where how long
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+
+See also: [prioritizing hunts](#prioritizing-hunts), [visibility gaps](#visibility-gaps)
 
 ### self-signed certificate
 
@@ -884,6 +927,16 @@ Also: Zeek uid, connection UID, pivot key
 
 The obligation is created in 1.2.2: copy `uid` and search other Zeek logs. Later engines assume that habit.
 
+### unique patterns or behaviors suitable for hunting
+
+Also: hunt-worthy pattern, unique hunt behavior, internal search pattern
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+
+See also: [hunt hypothesis](#hunt-hypothesis), [hunt development concepts](#hunt-development-concepts)
+
 ---
 
 ## V
@@ -896,6 +949,7 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 |----------|--------|-------|
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
 | Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
