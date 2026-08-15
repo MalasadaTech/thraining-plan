@@ -53,8 +53,6 @@ Expansion is allowed when it supports the outline (examples, `uid`, extra contex
 
 If an outline bullet has no obvious home in this unit, stop and map it. Do not drop it.
 
-**CTI `3.1`:** the matrix heading is Intelligence Requirements & Direction (PIRs). Until the board splits it, teaching-unit `3.1` covers **all** of outline `3.1` (core intelligence concepts), not only the PIR rows.
-
 ### Required
 
 - [ ] Module folder (new modules only): `modules/<role>/<unit>/<nn-short-name>/`

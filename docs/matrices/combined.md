@@ -245,13 +245,26 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 
 ---
 
-## 3.1 Intelligence Requirements & Direction
+## 3.1 Core Intelligence Concepts
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 3.1.1 | Priority Intelligence Requirements (PIRs) and intelligence requirements concepts | K | A / A / B | A / B / B | B / C / C |
-| 3.1.2 | Develop or refine intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.1.3 | Translate stakeholder questions into clear intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.1 | Difference between data, information, and intelligence | K | A / A / A | A / B / B | B / C / C |
+| 3.1.2 | Correctly categorize examples as data, information, or intelligence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.3 | Intelligence lifecycle | K | A / A / A | A / B / B | B / C / C |
+| 3.1.4 | Identify the lifecycle stage of an activity and describe the flow | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.5 | Intelligence types (strategic, operational, tactical, technical) | K | A / A / A | A / B / B | B / C / C |
+| 3.1.6 | Classify an intelligence product or requirement by type | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.7 | Intelligence requirements and Priority Intelligence Requirements (PIRs) | K | A / A / B | A / B / B | B / C / C |
+| 3.1.8 | Develop or refine intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.9 | Translate stakeholder questions into clear intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.10 | Explain how a given requirement drives analytic work | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.1.11 | Ensuring intelligence is actionable | K | A / A / B | A / B / B | B / C / C |
+| 3.1.12 | Evaluate whether a piece of intelligence is actionable and explain why | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.13 | Tailoring output to the audience | K | A / A / B | A / B / B | B / C / C |
+| 3.1.14 | Adjust an intelligence product for a specified audience | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.15 | Attribution (purpose, confidence, types) | K | A / A / A | A / B / B | B / C / C |
+| 3.1.16 | Assess attribution statements for confidence and supporting evidence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 
 ---
 

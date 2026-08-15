@@ -16,13 +16,26 @@
 
 ---
 
-## 3.1 Intelligence Requirements & Direction
+## 3.1 Core Intelligence Concepts
 
 | # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 3.1.1 | Priority Intelligence Requirements (PIRs) and intelligence requirements concepts | K | B | C | C | CTI 3 should already understand principles of PIRs. Higher levels analyze and refine them. |
-| 3.1.2 | Develop or refine intelligence requirements | T | 3c | 4c | 4d | Core skill. 7-level can apply advanced judgment and align with strategic needs. |
-| 3.1.3 | Translate stakeholder questions into clear intelligence requirements | T | 3c | 4c | 4d | High-value analytical skill that improves with seniority. |
+| 3.1.1 | Difference between data, information, and intelligence | K | B | C | C | Foundation. CTI 3 should already know the distinction at a principles level. |
+| 3.1.2 | Correctly categorize examples as data, information, or intelligence | T | 3c | 4c | 4c | Direct application of 3.1.1. Competent at 3-level. |
+| 3.1.3 | Intelligence lifecycle | K | B | C | C | CTI 3 should understand stages and purpose at a principles level. |
+| 3.1.4 | Identify the lifecycle stage of an activity and describe the flow | T | 3c | 4c | 4c | Practical mapping of work to the lifecycle. |
+| 3.1.5 | Intelligence types (strategic, operational, tactical, technical) | K | B | C | C | Raised baseline. 5/7 analyze which type a problem needs. |
+| 3.1.6 | Classify an intelligence product or requirement by type | T | 3c | 4c | 4c | Direct application of 3.1.5. |
+| 3.1.7 | Intelligence requirements and Priority Intelligence Requirements (PIRs) | K | B | C | C | CTI 3 should already understand principles of PIRs. Higher levels analyze and refine them. |
+| 3.1.8 | Develop or refine intelligence requirements | T | 3c | 4c | 4d | Core skill. 7-level can apply advanced judgment and align with strategic needs. |
+| 3.1.9 | Translate stakeholder questions into clear intelligence requirements | T | 3c | 4c | 4d | High-value analytical skill that improves with seniority. |
+| 3.1.10 | Explain how a given requirement drives analytic work | T | 3c | 4c | 4c | Ties requirements to collection and production. |
+| 3.1.11 | Ensuring intelligence is actionable | K | B | C | C | CTI 3 should know what “actionable” means and why products fail. |
+| 3.1.12 | Evaluate whether a piece of intelligence is actionable and explain why | T | 3c | 4c | 4d | Judgment-heavy; 7-level applies advanced criteria. |
+| 3.1.13 | Tailoring output to the audience | K | B | C | C | Raised baseline. Production depth continues in 3.6. |
+| 3.1.14 | Adjust an intelligence product for a specified audience | T | 3c | 4c | 4d | Communication skill that improves with seniority. |
+| 3.1.15 | Attribution (purpose, confidence, types) | K | B | C | C | CTI 3 should understand principles and limits of attribution. |
+| 3.1.16 | Assess attribution statements for confidence and supporting evidence | T | 3c | 4c | 4d | Analytic judgment expected to deepen at 7-level. |
 
 ---
 

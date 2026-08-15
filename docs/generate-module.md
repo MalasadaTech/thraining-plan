@@ -21,8 +21,6 @@ Stop and say what is missing if any of these fail:
 
 **IDs and ratings come from the matrix. Content floor is the outline.** Combined.md headings match [soc.md](matrices/soc.md) / [hunter.md](matrices/hunter.md) / [cti.md](matrices/cti.md). Teach at least every outline `a/b/c` and task for this unit. Expand only to support that syllabus. Do not invent a new matrix obligation.
 
-**CTI `3.1`:** matrix `3.1` is the teaching-unit ID (PIRs / direction). Outline `3.1` is Core Intelligence Concepts (lifecycle, types, requirements, actionable, audience, attribution, …). Until the board splits it, generate **one** module `3.1` that covers **all** of outline `3.1`. Do not teach PIRs only.
-
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).
 
 ---
@@ -49,7 +47,7 @@ Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) be
 |----------|---------------------|
 | Teaching-unit ID | Combined.md heading / tracker (examples: `1.2.5`, `2.1`, `3.1`) |
 | Matrix item IDs | Combined matrix `#` column as written. SOC is often four parts (`1.2.5.1`). Hunt and CTI are often three (`2.1.1`, `3.1.2`). Do not add a `.1` to force four parts. |
-| Outline block | Syllabus for this unit. SOC/Hunt usually share the prefix. For CTI `3.1`, use **all** of outline `3.1`, not only outline `3.1.4`. |
+| Outline block | Syllabus for this unit. Use the outline heading that matches the teaching-unit ID (example: matrix `3.1` = outline `3.1` Core Intelligence Concepts). |
 | Folder | `modules/<role>/<unit>/<nn-short-name>/` |
 | Roles | Module primary/secondary from outline + matrix |
 
