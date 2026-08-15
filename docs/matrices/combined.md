@@ -164,8 +164,8 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 2.1.1 | Purpose of Threat Hunting | K | A / B / B | B / C / C | A / B / B |
-| 2.1.2 | Explain the purpose of threat hunting in the context of the security program | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.1.3 | Identify examples of activity that existing controls might miss | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.1.1.1 | Explain the purpose of threat hunting in the context of the security program | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.1.1.2 | Identify examples of activity that existing controls might miss | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
 
 ---
 
@@ -174,10 +174,10 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 2.2.1 | Persistence techniques | K | A / B / B | B / C / C | A / B / B |
-| 2.2.2 | Recognize persistence techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.2.3 | Privilege escalation techniques | K | A / B / B | B / C / C | A / B / B |
-| 2.2.4 | Recognize privilege escalation techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.2.5 | Hunt for specific persistence or privilege escalation techniques | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
+| 2.2.1.1 | Recognize persistence techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.2.2 | Privilege escalation techniques | K | A / B / B | B / C / C | A / B / B |
+| 2.2.2.1 | Recognize privilege escalation techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.2.3 | Hunt for specific persistence or privilege escalation techniques | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
 
 ---
 
@@ -186,14 +186,14 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 2.3.1 | Hunt types | K | A / B / B | B / C / C | A / B / B |
+| 2.3.1.1 | Execute an intel-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.3.1.2 | Execute a hypothesis-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.3.1.3 | Execute a reactive hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.3.1.4 | Execute an anomaly-based hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 | 2.3.2 | Hunt development concepts | K | A / B / B | B / C / C | A / B / B |
-| 2.3.3 | Develop and document a hunt hypothesis | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.3.4 | Scope and prioritize a hunt | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.3.5 | Identify unique patterns or behaviors suitable for hunting | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.3.6 | Execute an intel-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.3.7 | Execute a hypothesis-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.3.8 | Execute a reactive hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.3.9 | Execute an anomaly-based hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.3.2.1 | Develop and document a hunt hypothesis | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.3.2.2 | Scope and prioritize a hunt | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.3.2.3 | Identify unique patterns or behaviors suitable for hunting | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
 
 ---
 
@@ -202,9 +202,9 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 2.4.1 | Tool capabilities for hunting | K | A / B / B | B / C / C | A / B / B |
-| 2.4.2 | Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.4.3 | Extract actionable hunting leads from external tool results | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.4.4 | Convert external findings into precise internal SIEM or Zeek queries | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.4.1.1 | Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.4.1.2 | Extract actionable hunting leads from external tool results | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.4.1.3 | Convert external findings into precise internal SIEM or Zeek queries | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
 
 ---
 
@@ -213,11 +213,11 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 2.5.1 | Assessing CTI for hunting value | K | A / B / B | B / C / C | B / C / C |
-| 2.5.2 | Extract TTPs suitable for hunting from a CTI report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.5.3 | Extract artifacts (IOCs, patterns, behaviors) suitable for hunting | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.5.4 | Common STIX objects as they relate to hunting | K | A / B / B | B / C / C | B / C / C |
-| 2.5.5 | Identify STIX objects relevant to a hunt | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 2.5.6 | Use STIX-structured information to support hunt planning | T | 1a / 1a / 2b | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.5.1.1 | Extract TTPs suitable for hunting from a CTI report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.5.1.2 | Extract artifacts (IOCs, patterns, behaviors) suitable for hunting | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.5.3 | Common STIX objects as they relate to hunting | K | A / B / B | B / C / C | B / C / C |
+| 2.5.3.1 | Identify STIX objects relevant to a hunt | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 2.5.3.2 | Use STIX-structured information to support hunt planning | T | 1a / 1a / 2b | 3c / 4c / 4d | 3c / 4c / 4d |
 
 ---
 
@@ -226,9 +226,9 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 2.6.1 | Using MITRE ATT&CK for hunt planning and coverage analysis | K | A / B / B | B / C / C | B / C / C |
-| 2.6.2 | Map a hunt plan or hunt findings to MITRE ATT&CK | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 2.6.3 | Use ATT&CK to identify detection or visibility gaps | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.6.4 | Use ATT&CK to support hunt prioritization | T | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.6.1.1 | Map a hunt plan or hunt findings to MITRE ATT&CK | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 2.6.1.2 | Use ATT&CK to identify detection or visibility gaps | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.6.1.3 | Use ATT&CK to support hunt prioritization | T | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
 
 ---
 
@@ -237,11 +237,11 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 2.7.1 | Hunt control and lead management | K | A / A / B | B / C / C | A / A / B |
+| 2.7.1.1 | Follow the local process for initiating and controlling a hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 | 2.7.2 | Hunt documentation standards | K | A / A / B | B / C / C | A / A / B |
+| 2.7.2.1 | Document a hunt according to local standards | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 | 2.7.3 | Hunt outputs and hand-off | K | A / A / B | B / C / C | A / A / B |
-| 2.7.4 | Follow the local process for initiating and controlling a hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.7.5 | Document a hunt according to local standards | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.7.6 | Produce required hunt outputs and perform proper hand-off | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.7.3.1 | Produce required hunt outputs and perform proper hand-off | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 
 ---
 
@@ -276,13 +276,13 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.2.1 | Estimative language | K | A / A / A | A / B / B | B / C / C |
-| 3.2.2 | Use and interpret estimative language in analytic judgments | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
-| 3.2.3 | Structured analytic techniques | K | A / A / A | A / B / B | B / C / C |
-| 3.2.4 | Apply a structured analytic technique and select the right one for a scenario | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.2.5 | Admiralty Code / source reliability and information credibility | K | A / A / B | A / B / B | B / C / C |
-| 3.2.6 | Assign Admiralty Code ratings and evaluate source reliability and credibility | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.2.7 | Cognitive biases and mitigation | K | A / A / A | A / B / B | B / C / C |
-| 3.2.8 | Identify cognitive bias in a judgment and apply a mitigation technique | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.2.1.1 | Use and interpret estimative language in analytic judgments | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.2.2 | Structured analytic techniques | K | A / A / A | A / B / B | B / C / C |
+| 3.2.2.1 | Apply a structured analytic technique and select the right one for a scenario | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.2.3 | Admiralty Code / source reliability and information credibility | K | A / A / B | A / B / B | B / C / C |
+| 3.2.3.1 | Assign Admiralty Code ratings and evaluate source reliability and credibility | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.2.4 | Cognitive biases and mitigation | K | A / A / A | A / B / B | B / C / C |
+| 3.2.4.1 | Identify cognitive bias in a judgment and apply a mitigation technique | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 
 ---
 
@@ -291,9 +291,9 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.3.1 | Internal threat intelligence platform | K | A / A / B | A / B / B | B / C / C |
-| 3.3.2 | Search, retrieve, and use the internal TIP for enrichment or analysis | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.3.3 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A / B / B | B / C / C | B / C / C |
-| 3.3.4 | Select the appropriate external tool and perform enrichment or pivoting | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 3.3.1.1 | Search, retrieve, and use the internal TIP for enrichment or analysis | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.3.2 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A / B / B | B / C / C | B / C / C |
+| 3.3.2.1 | Select the appropriate external tool and perform enrichment or pivoting | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 
 ---
 
@@ -302,8 +302,8 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.4.1 | Hashing and similarity concepts (imphash, ssdeep, TLSH, code-signing certificates) | K | A / A / B | A / B / B | B / C / C |
-| 3.4.2 | Use file similarity hashes to identify related samples | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.4.3 | Extract and interpret certificate / code-signing information from a file | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.4.1.1 | Use file similarity hashes to identify related samples | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.4.1.2 | Extract and interpret certificate / code-signing information from a file | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
 
 ---
 
@@ -312,7 +312,7 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.5.1 | RDAP and WHOIS concepts | K | A / A / B | A / B / B | B / C / C |
-| 3.5.2 | Query RDAP/WHOIS and interpret fields for enrichment or attribution | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 3.5.1.1 | Query RDAP/WHOIS and interpret fields for enrichment or attribution | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
 ---
 
@@ -321,7 +321,7 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.6.1 | Advanced DNS concepts (SOA and other records of intel value) | K | A / A / B | B / C / C | B / C / C |
-| 3.6.2 | Interpret an SOA record and use advanced DNS data to enrich or pivot | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 3.6.1.1 | Interpret an SOA record and use advanced DNS data to enrich or pivot | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
 
 ---
 
@@ -330,15 +330,15 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.7.1 | MITRE ATT&CK for CTI analysis and reporting | K | A / B / B | B / C / C | B / C / C |
-| 3.7.2 | Map activity or reports to MITRE ATT&CK | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 3.7.3 | Diamond Model application in CTI | K | A / B / B | B / C / C | B / C / C |
-| 3.7.4 | Apply the Diamond Model to an intelligence problem | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 3.7.5 | Cyber Kill Chain in intelligence analysis | K | A / B / B | B / C / C | B / C / C |
-| 3.7.6 | Identify the Kill Chain stage of observed or reported activity | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 3.7.7 | MalasadaTech Defender’s ThreatMesh Framework (DTF) | K | A / A / B | A / B / B | B / C / C |
-| 3.7.8 | Apply DTF to identify patterns and score or prioritize indicators or infrastructure | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.7.9 | Use DTF pattern analysis to guide enrichment and pivoting | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.7.10 | Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.7.1.1 | Map activity or reports to MITRE ATT&CK | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 3.7.2 | Diamond Model application in CTI | K | A / B / B | B / C / C | B / C / C |
+| 3.7.2.1 | Apply the Diamond Model to an intelligence problem | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 3.7.3 | Cyber Kill Chain in intelligence analysis | K | A / B / B | B / C / C | B / C / C |
+| 3.7.3.1 | Identify the Kill Chain stage of observed or reported activity | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 3.7.4 | MalasadaTech Defender’s ThreatMesh Framework (DTF) | K | A / A / B | A / B / B | B / C / C |
+| 3.7.4.1 | Apply DTF to identify patterns and score or prioritize indicators or infrastructure | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.7.4.2 | Use DTF pattern analysis to guide enrichment and pivoting | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.7.4.3 | Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
 
 ---
 
@@ -347,14 +347,14 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.8.1 | Identifying additional adversary infrastructure from seed indicators | K | A / B / B | B / C / C | B / C / C |
-| 3.8.2 | Pivot from a seed indicator to additional adversary infrastructure | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 3.8.3 | Extracting applicable TTPs from intelligence reports | K | A / B / B | B / C / C | B / C / C |
-| 3.8.4 | Extract applicable TTPs from an intelligence report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 3.8.5 | IOC handling and enrichment concepts | K | A / B / B | B / C / C | B / C / C |
-| 3.8.6 | Enrich and pivot on IOCs using internal and external tools | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 3.8.7 | Link analysis and campaign tracking | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.8.8 | Threat relevance and organizational impact | K | A / B / B | B / C / C | B / C / C |
-| 3.8.9 | Assess threat relevance and potential impact to the organization | T | 1a / 2b / 3c | 2b / 3c / 4c | 3c / 4c / 4d |
+| 3.8.1.1 | Pivot from a seed indicator to additional adversary infrastructure | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 3.8.2 | Extracting applicable TTPs from intelligence reports | K | A / B / B | B / C / C | B / C / C |
+| 3.8.2.1 | Extract applicable TTPs from an intelligence report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 3.8.3 | IOC handling and enrichment concepts | K | A / B / B | B / C / C | B / C / C |
+| 3.8.3.1 | Enrich and pivot on IOCs using internal and external tools | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 3.8.3.2 | Link analysis and campaign tracking | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.8.4 | Threat relevance and organizational impact | K | A / B / B | B / C / C | B / C / C |
+| 3.8.4.1 | Assess threat relevance and potential impact to the organization | T | 1a / 2b / 3c | 2b / 3c / 4c | 3c / 4c / 4d |
 
 ---
 
@@ -363,13 +363,13 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.9.1 | VirusTotal (Relations and Behavior tabs) | K | A / B / B | B / C / C | B / C / C |
-| 3.9.2 | Use VirusTotal Relations and Behavior to pivot and extract events | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 3.9.3 | AnyRun | K | A / A / B | A / B / B | B / C / C |
-| 3.9.4 | Search and review AnyRun submissions for actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
-| 3.9.5 | Silent Push | K | A / A / B | A / B / B | B / C / C |
-| 3.9.6 | Enrich an indicator and pivot in Silent Push | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
-| 3.9.7 | URLScan | K | A / A / B | A / B / B | B / C / C |
-| 3.9.8 | Submit or retrieve a URLScan result and extract actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 3.9.1.1 | Use VirusTotal Relations and Behavior to pivot and extract events | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 3.9.2 | AnyRun | K | A / A / B | A / B / B | B / C / C |
+| 3.9.2.1 | Search and review AnyRun submissions for actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 3.9.3 | Silent Push | K | A / A / B | A / B / B | B / C / C |
+| 3.9.3.1 | Enrich an indicator and pivot in Silent Push | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 3.9.4 | URLScan | K | A / A / B | A / B / B | B / C / C |
+| 3.9.4.1 | Submit or retrieve a URLScan result and extract actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
 ---
 
@@ -378,11 +378,11 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.10.1 | Core STIX objects | K | A / B / B | B / C / C | B / C / C |
+| 3.10.1.1 | Identify and label common STIX objects in a report | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 | 3.10.2 | How STIX objects are used in intelligence production | K | A / B / B | B / C / C | B / C / C |
-| 3.10.3 | Identify and label common STIX objects in a report | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
-| 3.10.4 | Create STIX-aligned relationships and explain a threat scenario | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
-| 3.10.5 | Create and validate STIX objects | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
-| 3.10.6 | Use TAXII for sharing and consumption of intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 3.10.2.1 | Create STIX-aligned relationships and explain a threat scenario | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 3.10.2.2 | Create and validate STIX objects | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 3.10.2.3 | Use TAXII for sharing and consumption of intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
 ---
 
@@ -391,14 +391,14 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.11.1 | Creating finished intelligence products | K | A / A / B | A / B / B | B / C / C |
-| 3.11.2 | Draft a finished product and evaluate it against standards | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.11.3 | Disseminating intelligence to the correct audiences | K | A / A / B | A / B / B | B / C / C |
-| 3.11.4 | Select audience and method and apply correct handling markings | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
-| 3.11.5 | Tailor products to different audiences (technical, leadership, etc.) | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.11.6 | Disseminate intelligence products through approved channels | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
-| 3.11.7 | Handling RFIs | K | A / A / A | A / A / B | B / C / C |
-| 3.11.8 | Evaluate, prioritize, and produce a response to an RFI | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
-| 3.11.9 | Produce a threat actor profile | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.11.1.1 | Draft a finished product and evaluate it against standards | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.11.1.2 | Produce a threat actor profile | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.11.2 | Disseminating intelligence to the correct audiences | K | A / A / B | A / B / B | B / C / C |
+| 3.11.2.1 | Select audience and method and apply correct handling markings | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.11.2.2 | Tailor products to different audiences (technical, leadership, etc.) | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.11.2.3 | Disseminate intelligence products through approved channels | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 3.11.3 | Handling RFIs | K | A / A / A | A / A / B | B / C / C |
+| 3.11.3.1 | Evaluate, prioritize, and produce a response to an RFI | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
 
 ---
 
@@ -407,12 +407,12 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 3.12.1 | Local intelligence requirements and priorities | K | A / A / A | A / A / B | B / C / C |
-| 3.12.2 | Identify current local priorities and align analytic work to them | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 3.12.3 | Local production and approval processes | K | A / A / A | A / A / B | B / C / C |
-| 3.12.4 | Follow the local process for requesting collection or producing and approving products | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 3.12.5 | Local dissemination channels and customers | K | A / A / A | A / A / B | B / C / C |
-| 3.12.6 | Disseminate a product using the correct local channels and customers | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 3.12.7 | Document and archive intelligence products according to local standards | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 3.12.1.1 | Identify current local priorities and align analytic work to them | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 3.12.2 | Local production and approval processes | K | A / A / A | A / A / B | B / C / C |
+| 3.12.2.1 | Follow the local process for requesting collection or producing and approving products | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 3.12.2.2 | Document and archive intelligence products according to local standards | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 3.12.3 | Local dissemination channels and customers | K | A / A / A | A / A / B | B / C / C |
+| 3.12.3.1 | Disseminate a product using the correct local channels and customers | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
 
 ---
 
@@ -420,4 +420,4 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 - Primary role ratings are taken from the individual matrices.
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
-- CTI headings `3.1`–`3.12` follow [training-outlines.md](../outlines/training-outlines.md). In cluster `3.1`, each task is a child of its knowledge item (`3.1.1` K, `3.1.1.1` T). Collection sources/planning is `3.1.8`; relevance/impact is `3.8.8`–`3.8.9`; actor profile product is `3.11.9`; local collection request is `3.12.4`.
+- Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.

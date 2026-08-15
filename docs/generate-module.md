@@ -24,7 +24,7 @@ Stop and say what is missing if any of these fail:
 | Caller ID | What to generate |
 |-----------|------------------|
 | A **cluster** heading with several distinct K topics (`3.1` Core Intelligence Concepts) | **Stop.** List the child K items (`3.1.1`, `3.1.2`, `3.1.3`, …) and ask which one. Do **not** write the whole cluster. |
-| A **child item** (`3.1.1`) | That K row plus its child T row(s) only (`3.1.1` + `3.1.1.1`). |
+| A **child item** (`3.1.1`, `3.2.2`, `2.2.1`) | That K row plus its child T row(s) only (`3.1.1` + `3.1.1.1`). |
 | A **unit** that is already one lesson (`1.2.5` HTTP, `2.1` Purpose) | That heading’s rows, same as today. |
 
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
@@ -54,7 +54,7 @@ Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) be
 | You need | Where it comes from |
 |----------|---------------------|
 | Lesson ID | What the user typed. Examples: `1.2.5`, `2.1`, `3.1.1`. Not cluster `3.1`. |
-| Matrix item IDs | Combined `#` cells for this lesson only. In cluster `3.1`, the task is a child of the knowledge item (`3.1.1` K, `3.1.1.1` T). Do not invent a sibling T such as `3.1.2` for the `3.1.1` lesson. |
+| Matrix item IDs | Combined `#` cells for this lesson only. Hunt and CTI nest each task under its knowledge item (`3.2.1` K, `3.2.1.1` T; `2.2.1` K, `2.2.1.1` T). Do not invent a sibling T such as `3.2.2` for the `3.2.1` lesson. SOC Zeek units stay `1.2.x.1` K / `1.2.x.2` T. |
 | Outline block | The outline K heading + tasks that map to those rows (example: matrix `3.1.1` / `3.1.1.1` = outline `3.1.1` + `3.1.1.1`). |
 | Folder | Usually `modules/<role>/<unit>/<nn-short-name>/`. Cluster children may use `modules/03-cti/01-core-intel/<nn-short-name>/`. |
 | Roles | Primary/secondary from the matrix. |
