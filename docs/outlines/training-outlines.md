@@ -375,20 +375,30 @@ d. Silent Push – strengths and limitations for hunting
 **2.4 [K/T] CTI for Hunters**  
 
 **2.4.1 [K] Assessing CTI for hunting value**  
-a. Criteria for determining whether CTI is useful for hunting  
-b. Rapid triage of intelligence reports for hunt potential  
+a. Hunt-worthy vs awareness-only vs hand off to detections / IR  
+b. Rapid triage of a report  
+c. What “actionable for a hunt” means (question, telemetry, scope)  
 
-**2.4.2 [T] Extracting TTPs and artifacts**  
-1. Extract TTPs suitable for hunting from a CTI report  
-2. Extract artifacts (IOCs, patterns, behaviors) suitable for hunting  
+**2.4.1.1 [T] Tasks**  
+1. Triage a CTI report: hunt / don’t hunt / hand off, and say why  
 
-**2.4.3 [K] Common STIX objects as they relate to hunting**  
-a. Which STIX objects are most relevant to hunters  
-b. How STIX objects can be used to structure hunt leads  
+**2.4.2 [K] Extracting hunt leads from CTI**  
+a. TTPs vs IOCs vs behaviors — which can drive a hunt  
+b. What to drop (no telemetry, expired IOCs, noise)  
+c. Record ATT&CK IDs if the report has them (mapping hunts is 2.5)  
 
-**2.4.3.1 [T] STIX tasks for hunters**  
-1. Identify STIX objects relevant to a hunt  
-2. Use STIX-structured information to support hunt planning  
+**2.4.2.1 [T] Tasks**  
+1. Extract hunt-suitable TTPs from a CTI report  
+2. Extract hunt-suitable artifacts (IOCs, patterns, behaviors)  
+3. State the hunt question those leads support  
+
+**2.4.3 [K] STIX as hunt input**  
+a. Objects a hunter actually uses (indicator, attack-pattern, observed-data, malware, threat-actor / intrusion-set, relationship)  
+b. How a STIX bundle seeds a hunt (not how to author STIX)  
+
+**2.4.3.1 [T] Tasks**  
+1. Identify hunt-relevant objects in a report or bundle  
+2. Turn those objects into hunt leads  
 
 **2.5 [K/T] Framework Application for Hunting**  
 

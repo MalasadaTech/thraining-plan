@@ -57,12 +57,15 @@
 
 | # | Item | Type | Hunter 3 | Hunter 5 | Hunter 7 | Justification |
 |---|------|------|----------|----------|----------|---------------|
-| 2.4.1 | Assessing CTI for hunting value | K | B | C | C | Hunter 3 should already understand principles of what makes CTI useful for hunting. |
-| 2.4.1.1 | Extract TTPs suitable for hunting from a CTI report | T | 3c | 4c | 4d | Core skill. 7-level can apply advanced judgment on applicability. |
-| 2.4.1.2 | Extract artifacts (IOCs, patterns, behaviors) suitable for hunting | T | 3c | 4c | 4d | Same as above. |
-| 2.4.3 | Common STIX objects as they relate to hunting | K | B | C | C | Raised baseline knowledge. Matches outline 2.4.3. |
-| 2.4.3.1 | Identify STIX objects relevant to a hunt | T | 3c | 4c | 4c | Practical application. |
-| 2.4.3.2 | Use STIX-structured information to support hunt planning | T | 3c | 4c | 4d | Higher value at senior level. |
+| 2.4.1 | Assessing CTI for hunting value | K | B | C | C | Hunter 3 should already know hunt-worthy vs awareness-only vs hand-off. |
+| 2.4.1.1 | Triage a CTI report: hunt / don’t hunt / hand off, and say why | T | 3c | 4c | 4d | Core consumer skill. 7-level applies finer judgment on weak or mixed reports. |
+| 2.4.2 | Extracting hunt leads from CTI | K | B | C | C | TTPs vs IOCs vs behaviors; what to drop; ATT&CK IDs if present. Mapping hunts is 2.5. |
+| 2.4.2.1 | Extract hunt-suitable TTPs from a CTI report | T | 3c | 4c | 4d | Direct application of 2.4.2. Overlap with CTI 3.8.2 is hunter-as-consumer. |
+| 2.4.2.2 | Extract hunt-suitable artifacts (IOCs, patterns, behaviors) | T | 3c | 4c | 4d | Same as above. |
+| 2.4.2.3 | State the hunt question those leads support | T | 3c | 4c | 4d | Bridges 2.4 to methodology (2.2) and queries (2.3). |
+| 2.4.3 | STIX as hunt input | K | B | C | C | Objects a hunter uses and how a bundle seeds a hunt. Authoring STIX is CTI 3.10. |
+| 2.4.3.1 | Identify hunt-relevant objects in a report or bundle | T | 3c | 4c | 4c | Practical read of a bundle, not production. |
+| 2.4.3.2 | Turn those objects into hunt leads | T | 3c | 4c | 4d | Hunter-specific last step. |
 
 ---
 
