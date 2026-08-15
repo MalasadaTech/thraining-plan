@@ -336,38 +336,21 @@ b. Identify detection and visibility gaps
 1. Explain the purpose of threat hunting in the context of the security program  
 2. Identify examples of activity that existing controls might miss  
 
-**2.2 [K/T] Attacker Techniques**  
+**2.2 [K/T] Hunt Methodology**  
 
-**2.2.1 [K] Persistence techniques**  
-a. Registry-based persistence  
-b. Start menu / startup folder persistence  
-c. Scheduled tasks  
-d. Other common persistence methods  
-
-**2.2.2 [K] Privilege escalation techniques**  
-a. Common Windows privilege escalation methods  
-b. Indicators associated with privilege escalation  
-
-**2.2.3 [T] Attacker technique tasks**  
-1. Recognize persistence techniques in logs or telemetry  
-2. Recognize privilege escalation techniques in logs or telemetry  
-3. Hunt for specific persistence or privilege escalation techniques  
-
-**2.3 [K/T] Hunt Methodology**  
-
-**2.3.1 [K] Hunt types**  
+**2.2.1 [K] Hunt types**  
 a. Intel-driven hunts  
 b. Hypothesis-driven hunts  
 c. Reactive hunts  
 d. Anomaly-based hunts  
 
-**2.3.2 [K] Hunt development concepts**  
+**2.2.2 [K] Hunt development concepts**  
 a. Developing a hunt hypothesis  
 b. Scoping a hunt  
 c. Prioritizing hunts  
 d. Identifying unique patterns or behaviors for internal searches  
 
-**2.3.3 [T] Hunt methodology tasks**  
+**2.2.3 [T] Hunt methodology tasks**  
 1. Develop and document a hunt hypothesis  
 2. Scope and prioritize a hunt  
 3. Identify unique patterns or behaviors suitable for hunting  
@@ -376,48 +359,65 @@ d. Identifying unique patterns or behaviors for internal searches
 6. Execute a reactive hunt  
 7. Execute an anomaly-based hunt  
 
-**2.4 [T] Online Tools & Enrichment**  
+**2.3 [T] Online Tools & Enrichment**  
 
-**2.4.1 [K] Tool capabilities for hunting**  
+**2.3.1 [K] Tool capabilities for hunting**  
 a. VirusTotal – strengths and limitations for hunting  
 b. AnyRun – strengths and limitations for hunting  
 c. URLScan – strengths and limitations for hunting  
 d. Silent Push – strengths and limitations for hunting  
 
-**2.4.2 [T] Online tools & enrichment tasks**  
+**2.3.2 [T] Online tools & enrichment tasks**  
 1. Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push  
 2. Extract actionable hunting leads from external tool results  
 3. Convert external findings into precise internal SIEM or Zeek queries  
 
-**2.5 [K/T] CTI for Hunters**  
+**2.4 [K/T] CTI for Hunters**  
 
-**2.5.1 [K] Assessing CTI for hunting value**  
+**2.4.1 [K] Assessing CTI for hunting value**  
 a. Criteria for determining whether CTI is useful for hunting  
 b. Rapid triage of intelligence reports for hunt potential  
 
-**2.5.2 [T] Extracting TTPs and artifacts**  
+**2.4.2 [T] Extracting TTPs and artifacts**  
 1. Extract TTPs suitable for hunting from a CTI report  
 2. Extract artifacts (IOCs, patterns, behaviors) suitable for hunting  
 
-**2.5.3 [K] Common STIX objects as they relate to hunting**  
+**2.4.3 [K] Common STIX objects as they relate to hunting**  
 a. Which STIX objects are most relevant to hunters  
 b. How STIX objects can be used to structure hunt leads  
 
-**2.5.3.1 [T] STIX tasks for hunters**  
+**2.4.3.1 [T] STIX tasks for hunters**  
 1. Identify STIX objects relevant to a hunt  
 2. Use STIX-structured information to support hunt planning  
 
-**2.6 [K/T] Framework Application for Hunting**  
+**2.5 [K/T] Framework Application for Hunting**  
 
-**2.6.1 [K] Using MITRE ATT&CK for hunt planning and coverage analysis**  
+**2.5.1 [K] Using MITRE ATT&CK for hunt planning and coverage analysis**  
 a. Mapping hunts to ATT&CK tactics and techniques  
 b. Using ATT&CK to identify coverage gaps  
 c. Using ATT&CK to prioritize hunt topics  
 
-**2.6.2 [T] Framework application tasks**  
+**2.5.2 [T] Framework application tasks**  
 1. Map a hunt plan or hunt findings to MITRE ATT&CK  
 2. Use ATT&CK to identify detection or visibility gaps  
 3. Use ATT&CK to support hunt prioritization  
+
+**2.6 [K/T] Attacker Techniques**  
+
+**2.6.1 [K] Persistence techniques**  
+a. Registry-based persistence  
+b. Start menu / startup folder persistence  
+c. Scheduled tasks  
+d. Other common persistence methods  
+
+**2.6.2 [K] Privilege escalation techniques**  
+a. Common Windows privilege escalation methods  
+b. Indicators associated with privilege escalation  
+
+**2.6.3 [T] Attacker technique tasks**  
+1. Recognize persistence techniques in logs or telemetry  
+2. Recognize privilege escalation techniques in logs or telemetry  
+3. Hunt for specific persistence or privilege escalation techniques  
 
 **2.7 [T] Site-Specific Hunt Knowledge and Tasks**  
 

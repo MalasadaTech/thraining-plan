@@ -169,66 +169,66 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 
 ---
 
-## 2.2 Attacker Techniques
+## 2.2 Hunt Methodology
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 2.2.1 | Persistence techniques | K | A / B / B | B / C / C | A / B / B |
-| 2.2.1.1 | Recognize persistence techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.2.2 | Privilege escalation techniques | K | A / B / B | B / C / C | A / B / B |
-| 2.2.2.1 | Recognize privilege escalation techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.2.3 | Hunt for specific persistence or privilege escalation techniques | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
+| 2.2.1 | Hunt types | K | A / B / B | B / C / C | A / B / B |
+| 2.2.1.1 | Execute an intel-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.1.2 | Execute a hypothesis-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.1.3 | Execute a reactive hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.1.4 | Execute an anomaly-based hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.2 | Hunt development concepts | K | A / B / B | B / C / C | A / B / B |
+| 2.2.2.1 | Develop and document a hunt hypothesis | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.2.2.2 | Scope and prioritize a hunt | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.2.2.3 | Identify unique patterns or behaviors suitable for hunting | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
 
 ---
 
-## 2.3 Hunt Methodology
+## 2.3 Online Tools & Enrichment
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 2.3.1 | Hunt types | K | A / B / B | B / C / C | A / B / B |
-| 2.3.1.1 | Execute an intel-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.3.1.2 | Execute a hypothesis-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.3.1.3 | Execute a reactive hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.3.1.4 | Execute an anomaly-based hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.3.2 | Hunt development concepts | K | A / B / B | B / C / C | A / B / B |
-| 2.3.2.1 | Develop and document a hunt hypothesis | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.3.2.2 | Scope and prioritize a hunt | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.3.2.3 | Identify unique patterns or behaviors suitable for hunting | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.3.1 | Tool capabilities for hunting | K | A / B / B | B / C / C | A / B / B |
+| 2.3.1.1 | Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.3.1.2 | Extract actionable hunting leads from external tool results | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.3.1.3 | Convert external findings into precise internal SIEM or Zeek queries | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
 
 ---
 
-## 2.4 Online Tools & Enrichment
+## 2.4 CTI for Hunters
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 2.4.1 | Tool capabilities for hunting | K | A / B / B | B / C / C | A / B / B |
-| 2.4.1.1 | Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.4.1.2 | Extract actionable hunting leads from external tool results | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.4.1.3 | Convert external findings into precise internal SIEM or Zeek queries | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.4.1 | Assessing CTI for hunting value | K | A / B / B | B / C / C | B / C / C |
+| 2.4.1.1 | Extract TTPs suitable for hunting from a CTI report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.4.1.2 | Extract artifacts (IOCs, patterns, behaviors) suitable for hunting | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.4.3 | Common STIX objects as they relate to hunting | K | A / B / B | B / C / C | B / C / C |
+| 2.4.3.1 | Identify STIX objects relevant to a hunt | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 2.4.3.2 | Use STIX-structured information to support hunt planning | T | 1a / 1a / 2b | 3c / 4c / 4d | 3c / 4c / 4d |
 
 ---
 
-## 2.5 CTI for Hunters
+## 2.5 Framework Application for Hunting
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 2.5.1 | Assessing CTI for hunting value | K | A / B / B | B / C / C | B / C / C |
-| 2.5.1.1 | Extract TTPs suitable for hunting from a CTI report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.5.1.2 | Extract artifacts (IOCs, patterns, behaviors) suitable for hunting | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.5.3 | Common STIX objects as they relate to hunting | K | A / B / B | B / C / C | B / C / C |
-| 2.5.3.1 | Identify STIX objects relevant to a hunt | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 2.5.3.2 | Use STIX-structured information to support hunt planning | T | 1a / 1a / 2b | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.5.1 | Using MITRE ATT&CK for hunt planning and coverage analysis | K | A / B / B | B / C / C | B / C / C |
+| 2.5.1.1 | Map a hunt plan or hunt findings to MITRE ATT&CK | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 2.5.1.2 | Use ATT&CK to identify detection or visibility gaps | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.5.1.3 | Use ATT&CK to support hunt prioritization | T | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
 
 ---
 
-## 2.6 Framework Application for Hunting
+## 2.6 Attacker Techniques
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 2.6.1 | Using MITRE ATT&CK for hunt planning and coverage analysis | K | A / B / B | B / C / C | B / C / C |
-| 2.6.1.1 | Map a hunt plan or hunt findings to MITRE ATT&CK | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 2.6.1.2 | Use ATT&CK to identify detection or visibility gaps | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.6.1.3 | Use ATT&CK to support hunt prioritization | T | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.6.1 | Persistence techniques | K | A / B / B | B / C / C | A / B / B |
+| 2.6.1.1 | Recognize persistence techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.6.2 | Privilege escalation techniques | K | A / B / B | B / C / C | A / B / B |
+| 2.6.2.1 | Recognize privilege escalation techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.6.3 | Hunt for specific persistence or privilege escalation techniques | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
 
 ---
 
