@@ -1,0 +1,110 @@
+# CTI Analyst Proficiency Matrix
+
+**Skill Levels**
+- **3** = Apprentice (Note: CTI Analyst 3-level is expected to already have solid foundational knowledge and competence)
+- **5** = Journeyman (independent)
+- **7** = Craftsman / Senior (can train others)
+
+**Proficiency Codes**
+- Knowledge: A (Facts) → B (Principles) → C (Analysis) → D (Evaluation)
+- Task Performance: 1 (Extremely Limited) → 2 (Partially Proficient) → 3 (Competent) → 4 (Highly Proficient)
+- Task Knowledge: a (Nomenclature) → b (Procedures) → c (Operating Principles) → d (Advanced Theory)
+
+**Baseline for CTI Analyst**
+- Knowledge items generally start at **B**
+- Task items generally start at **3c**
+
+---
+
+## 3.1 Intelligence Requirements & Direction
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.1.1 | Priority Intelligence Requirements (PIRs) and intelligence requirements concepts | K | B | C | C | CTI 3 should already understand principles of PIRs. Higher levels analyze and refine them. |
+| 3.1.2 | Develop or refine intelligence requirements | T | 3c | 4c | 4d | Core skill. 7-level can apply advanced judgment and align with strategic needs. |
+| 3.1.3 | Translate stakeholder questions into clear intelligence requirements | T | 3c | 4c | 4d | High-value analytical skill that improves with seniority. |
+
+---
+
+## 3.2 Collection Management
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.2.1 | Collection sources and methods (OSINT, commercial, internal, etc.) | K | B | C | C | CTI 3 should understand principles of major collection sources. |
+| 3.2.2 | Evaluate source reliability and information credibility | T | 3c | 4c | 4d | Critical CTI skill. 7-level applies advanced source evaluation theory. |
+| 3.2.3 | Plan and request collection against intelligence requirements | T | 3c | 4c | 4d | Planning skill that benefits from senior-level insight. |
+
+---
+
+## 3.3 Processing & Exploitation
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.3.1 | IOC handling and enrichment concepts | K | B | C | C | Raised baseline knowledge. |
+| 3.3.2 | Enrich and pivot on IOCs using internal and external tools | T | 3c | 4c | 4d | Core operational skill. 7-level can develop advanced enrichment workflows. |
+| 3.3.3 | Extract TTPs and behavioral patterns from raw data or reports | T | 3c | 4c | 4d | Higher-value analytical task. |
+
+---
+
+## 3.4 Analysis
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.4.1 | Threat actor profiling concepts | K | B | C | C | CTI 3 should understand principles of profiling. |
+| 3.4.2 | Produce a threat actor profile | T | 3c | 4c | 4d | Signature CTI product. Senior analysts produce higher-quality, more nuanced profiles. |
+| 3.4.3 | Link analysis and campaign tracking | T | 3c | 4c | 4d | Complex analytical skill that benefits from advanced theory at 7-level. |
+| 3.4.4 | Assess threat relevance and potential impact to the organization | T | 3c | 4c | 4d | Judgment-heavy task. |
+
+---
+
+## 3.5 Structured Analytic Techniques & Frameworks
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.5.1 | MITRE ATT&CK for CTI analysis and reporting | K | B | C | C | Raised baseline. |
+| 3.5.2 | Map activity or reports to MITRE ATT&CK | T | 3c | 4c | 4c | Practical mapping skill. |
+| 3.5.3 | Diamond Model application in CTI | K | B | C | C | Same knowledge progression. |
+| 3.5.4 | Apply the Diamond Model to an intelligence problem | T | 3c | 4c | 4d | Analytical application skill. |
+| 3.5.5 | Cyber Kill Chain in intelligence analysis | K | B | C | C | Same knowledge progression. |
+| 3.5.6 | Use structured analytic techniques (e.g., ACH, key assumptions check) | T | 3c | 4c | 4d | Advanced analytic tradecraft expected at senior level. |
+
+---
+
+## 3.6 Production & Dissemination
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.6.1 | Intelligence product types and standards | K | B | C | C | CTI 3 should understand principles of different product types. |
+| 3.6.2 | Write clear, concise, and actionable intelligence reports | T | 3c | 4c | 4d | Core production skill. Writing quality and impact increase with seniority. |
+| 3.6.3 | Tailor products to different audiences (technical, leadership, etc.) | T | 3c | 4c | 4d | Audience analysis and communication skill that benefits from experience. |
+| 3.6.4 | Disseminate intelligence products through approved channels | T | 3c | 4c | 4c | Operational task – highly proficient by 5-level. |
+
+---
+
+## 3.7 STIX / TAXII & Structured Sharing
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.7.1 | Common STIX objects and relationships | K | B | C | C | Raised baseline knowledge. |
+| 3.7.2 | Create and validate STIX objects | T | 3c | 4c | 4d | Technical production skill. 7-level can design more complex object relationships. |
+| 3.7.3 | Use TAXII for sharing and consumption of intelligence | T | 3c | 4c | 4c | Practical operational skill. |
+
+---
+
+## 3.8 Tools & Platforms
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.8.1 | CTI platform and enrichment tool capabilities | K | B | C | C | CTI 3 should understand principles of major tools. |
+| 3.8.2 | Perform advanced research and pivoting in primary CTI tools | T | 3c | 4c | 4d | Core research skill. Senior analysts develop more sophisticated methods. |
+
+---
+
+## 3.9 Site-Specific CTI Knowledge & Processes
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 3.9.1 | Local intelligence requirements and prioritization process | K | B | C | C | Must understand local context at principles level. |
+| 3.9.2 | Local production, review, and dissemination standards | K | B | C | C | Same progression. |
+| 3.9.3 | Follow local processes for requesting collection or producing products | T | 3c | 4c | 4c | Operational competence expected from 3-level upward. |
+| 3.9.4 | Document and archive intelligence products according to local standards | T | 3c | 4c | 4c | Same as above. |
