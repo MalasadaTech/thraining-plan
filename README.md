@@ -13,6 +13,7 @@ docs/
   tracker.md                      # status legend and folder mapping
   concept-index.md                # taught concepts → module (book-style index)
   contributing.md                 # how to add a requirement and a module
+  generate-module.md              # AI instructions to write a Gate 2 module
 templates/                        # proposal + module writing templates
 modules/
   01-soc/<unit>/<module>/
@@ -50,5 +51,6 @@ Do not start with a student guide. Approve the requirement first, then build the
 
 1. Propose with [templates/requirement-proposal.md](templates/requirement-proposal.md).
 2. Follow the two gates in [docs/contributing.md](docs/contributing.md) (matrix/outline/tracker, then guides, concepts, and the index).
+3. To generate an existing unit with an AI tool: `Follow docs/generate-module.md and generate teaching-unit <ID> (<Title>) for me to review.`
 
 Shared topics (frameworks, cross-role primers) go under `modules/shared/`, not copied into each role.
