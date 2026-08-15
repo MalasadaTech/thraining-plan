@@ -39,6 +39,16 @@ See also: [conn log](#conn-log)
 
 See [qtype_name](#qtype_name).
 
+### activity missed by existing security mechanisms
+
+Also: missed activity, activity existing controls might miss, activity the stack did not surface
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+
+See also: [detection gaps](#detection-gaps), [visibility gaps](#visibility-gaps), [purpose of threat hunting](#purpose-of-threat-hunting)
+
 ### analysis and production
 
 Also: analysis, production, analytic production, finished intelligence production
@@ -164,6 +174,16 @@ Also: raw data, raw observation, unprocessed fact
 
 See also: [information](#information), [intelligence](#intelligence)
 
+### detection gaps
+
+Also: detection gap, data exists no alert, missed detection
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+
+See also: [visibility gaps](#visibility-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
+
 ### DGA
 
 Also: domain generation algorithm
@@ -254,6 +274,16 @@ Also: Zeek events, `connection_established`
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
+
+### examples of activity existing controls might miss
+
+Also: examples existing controls might miss, identify missed-control examples
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+
+See also: [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
 ---
 
@@ -514,6 +544,16 @@ Also: purpose of each lifecycle stage, activities in each stage
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [stages of the intelligence lifecycle](#stages-of-the-intelligence-lifecycle)
 
+### purpose of threat hunting
+
+Also: why hunt exists, hunt purpose, purpose of hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+
+See also: [threat hunting in the security program](#threat-hunting-in-the-security-program)
+
 ---
 
 ## Q
@@ -710,6 +750,16 @@ Also: technical intel, technical type, technical observables
 
 See also: [intelligence types](#intelligence-types), [tactical intelligence](#tactical-intelligence)
 
+### threat hunting in the security program
+
+Also: hunt in the program, hunt vs SOC vs CTI, explain hunt to the SOC lead
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+
+See also: [purpose of threat hunting](#purpose-of-threat-hunting)
+
 ### TLS / ssl log
 
 Also: `ssl` log, TLS log, Zeek TLS engine, ssl/tls
@@ -763,6 +813,20 @@ Also: Zeek uid, connection UID, pivot key
 | Used | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
 
 The obligation is created in 1.2.2: copy `uid` and search other Zeek logs. Later engines assume that habit.
+
+---
+
+## V
+
+### visibility gaps
+
+Also: visibility gap, no telemetry, cannot see, blind segment
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+
+See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
 ---
 
