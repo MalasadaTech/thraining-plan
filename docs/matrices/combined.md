@@ -265,6 +265,9 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | 3.1.14 | Adjust an intelligence product for a specified audience | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 | 3.1.15 | Attribution (purpose, confidence, types) | K | A / A / A | A / B / B | B / C / C |
 | 3.1.16 | Assess attribution statements for confidence and supporting evidence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.1.17 | Collection sources and methods (OSINT, commercial, internal) | K | A / A / B | A / B / B | B / C / C |
+| 3.1.18 | Identify appropriate collection source classes for a given requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 3.1.19 | Plan collection against an intelligence requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
 
 ---
 
@@ -350,6 +353,8 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | 3.8.5 | IOC handling and enrichment concepts | K | A / B / B | B / C / C | B / C / C |
 | 3.8.6 | Enrich and pivot on IOCs using internal and external tools | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 | 3.8.7 | Link analysis and campaign tracking | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.8.8 | Threat relevance and organizational impact | K | A / B / B | B / C / C | B / C / C |
+| 3.8.9 | Assess threat relevance and potential impact to the organization | T | 1a / 2b / 3c | 2b / 3c / 4c | 3c / 4c / 4d |
 
 ---
 
@@ -393,6 +398,7 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | 3.11.6 | Disseminate intelligence products through approved channels | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
 | 3.11.7 | Handling RFIs | K | A / A / A | A / A / B | B / C / C |
 | 3.11.8 | Evaluate, prioritize, and produce a response to an RFI | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
+| 3.11.9 | Produce a threat actor profile | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 
 ---
 
@@ -403,7 +409,7 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 | 3.12.1 | Local intelligence requirements and priorities | K | A / A / A | A / A / B | B / C / C |
 | 3.12.2 | Identify current local priorities and align analytic work to them | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
 | 3.12.3 | Local production and approval processes | K | A / A / A | A / A / B | B / C / C |
-| 3.12.4 | Follow the local production and approval process | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 3.12.4 | Follow the local process for requesting collection or producing and approving products | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
 | 3.12.5 | Local dissemination channels and customers | K | A / A / A | A / A / B | B / C / C |
 | 3.12.6 | Disseminate a product using the correct local channels and customers | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
 | 3.12.7 | Document and archive intelligence products according to local standards | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
@@ -414,4 +420,4 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 - Primary role ratings are taken from the individual matrices.
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
-- CTI headings `3.1`–`3.12` follow [training-outlines.md](../outlines/training-outlines.md). Four former matrix topics have **no outline heading** and are parked for a Gate 1 decision: collection sources and methods; plan/request collection against requirements; threat actor profiling / produce a profile; assess threat relevance and organizational impact.
+- CTI headings `3.1`–`3.12` follow [training-outlines.md](../outlines/training-outlines.md). Former matrix-only topics now sit on those units: collection sources/planning (`3.1.17`–`3.1.19`), relevance/impact (`3.8.8`–`3.8.9`), actor profile product (`3.11.9`), local collection request (`3.12.4`).

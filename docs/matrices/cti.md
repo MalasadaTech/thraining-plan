@@ -36,6 +36,9 @@
 | 3.1.14 | Adjust an intelligence product for a specified audience | T | 3c | 4c | 4d | Communication skill that improves with seniority. |
 | 3.1.15 | Attribution (purpose, confidence, types) | K | B | C | C | CTI 3 should understand principles and limits of attribution. |
 | 3.1.16 | Assess attribution statements for confidence and supporting evidence | T | 3c | 4c | 4d | Analytic judgment expected to deepen at 7-level. |
+| 3.1.17 | Collection sources and methods (OSINT, commercial, internal) | K | B | C | C | Expands the collection stage of the lifecycle and how requirements drive collection. |
+| 3.1.18 | Identify appropriate collection source classes for a given requirement | T | 3c | 4c | 4c | Direct application of 3.1.17. |
+| 3.1.19 | Plan collection against an intelligence requirement | T | 3c | 4c | 4d | Planning skill; local request process is 3.12.4. |
 
 ---
 
@@ -121,6 +124,8 @@
 | 3.8.5 | IOC handling and enrichment concepts | K | B | C | C | Supports 3.8.1; raised baseline. |
 | 3.8.6 | Enrich and pivot on IOCs using internal and external tools | T | 3c | 4c | 4d | Same family as 3.8.2. |
 | 3.8.7 | Link analysis and campaign tracking | T | 3c | 4c | 4d | Supports infrastructure and TTP enrichment; not a separate outline unit. |
+| 3.8.8 | Threat relevance and organizational impact | K | B | C | C | Whether a finding matters here, not only whether it is technically interesting. |
+| 3.8.9 | Assess threat relevance and potential impact to the organization | T | 3c | 4c | 4d | Judgment-heavy “so what” of enrichment and TTP applicability. |
 
 ---
 
@@ -164,6 +169,7 @@
 | 3.11.6 | Disseminate intelligence products through approved channels | T | 3c | 4c | 4c | Highly proficient by 5-level. |
 | 3.11.7 | Handling RFIs | K | B | C | C | Purpose, lifecycle, evaluate / prioritize / respond. |
 | 3.11.8 | Evaluate, prioritize, and produce a response to an RFI | T | 3c | 4c | 4d | Judgment-heavy customer-facing task. |
+| 3.11.9 | Produce a threat actor profile | T | 3c | 4c | 4d | Finished-product form of 3.1.15 attribution. 7-level produces more nuanced profiles. |
 
 ---
 
@@ -174,7 +180,7 @@
 | 3.12.1 | Local intelligence requirements and priorities | K | B | C | C | Current local PIRs and how they drive analytic focus. |
 | 3.12.2 | Identify current local priorities and align analytic work to them | T | 3c | 4c | 4c | Must be competent from 3-level up. |
 | 3.12.3 | Local production and approval processes | K | B | C | C | Workflow, reviews, and approval authorities. |
-| 3.12.4 | Follow the local production and approval process | T | 3c | 4c | 4c | Operational competence expected from 3-level upward. |
+| 3.12.4 | Follow the local process for requesting collection or producing and approving products | T | 3c | 4c | 4c | Site ticket/process. Planning the collection itself is 3.1.19. |
 | 3.12.5 | Local dissemination channels and customers | K | B | C | C | Primary customers and approved channels. |
 | 3.12.6 | Disseminate a product using the correct local channels and customers | T | 3c | 4c | 4c | Direct application of 3.12.5. |
 | 3.12.7 | Document and archive intelligence products according to local standards | T | 3c | 4c | 4c | Same as prior site-specific archive task. |
