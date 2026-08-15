@@ -77,6 +77,16 @@ Also: anomaly hunt, baseline hunt, deviation hunt
 
 See also: [hunt types](#hunt-types), [hypothesis-driven hunt](#hypothesis-driven-hunt)
 
+### AnyRun for hunting
+
+Also: Any.Run, AnyRun sandbox, interactive sandbox for hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+
 ---
 
 ## B
@@ -167,6 +177,16 @@ Also: connection state, how the connection ended
 Common values taught here: `SF`, `S0`, `S1`, `REJ`, `RSTO`, `RSTR`, `RSTOS0`, `RSTRH`, `SH`, `SHR`, `OTH`.
 
 See also: [SF](#sf), [S0](#s0), [REJ](#rej), [scanning](#scanning)
+
+### convert external findings to internal queries
+
+Also: convert to SIEM query, convert to Zeek query, internal query from enrichment
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+
+See also: [hunting leads from external tools](#hunting-leads-from-external-tools), [tool capabilities for hunting](#tool-capabilities-for-hunting)
 
 ---
 
@@ -375,6 +395,16 @@ Also: developing a hunt hypothesis, documented hunt hypothesis, testable if/then
 | Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [hypothesis-driven hunt](#hypothesis-driven-hunt), [unique patterns or behaviors suitable for hunting](#unique-patterns-or-behaviors-suitable-for-hunting)
+
+### hunting leads from external tools
+
+Also: actionable hunting lead, extract hunt lead, enrichment lead
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+
+See also: [convert external findings to internal queries](#convert-external-findings-to-internal-queries), [unique patterns or behaviors suitable for hunting](#unique-patterns-or-behaviors-suitable-for-hunting)
 
 ### hunt types
 
@@ -767,6 +797,16 @@ Also: normal teardown, established and terminated
 
 See also: [conn_state](#conn_state)
 
+### Silent Push for hunting
+
+Also: Silent Push, passive DNS for hunting, infra clustering for hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+
 ### smtp log
 
 Also: `smtp`, Zeek smtp
@@ -907,6 +947,16 @@ Also: `version`, TLSv13, TLSv12, TLSv11, TLSv10, SSLv3, deprecated TLS
 |----------|--------|-------|
 | Taught | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
 
+### tool capabilities for hunting
+
+Also: online tools for hunting, enrichment tools, VT AnyRun URLScan Silent Push
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+
+See also: [VirusTotal for hunting](#virustotal-for-hunting), [AnyRun for hunting](#anyrun-for-hunting), [URLScan for hunting](#urlscan-for-hunting), [Silent Push for hunting](#silent-push-for-hunting)
+
 ### TXT
 
 See [qtype_name](#qtype_name) and [DNS tunneling](#dns-tunneling).
@@ -934,8 +984,19 @@ Also: hunt-worthy pattern, unique hunt behavior, internal search pattern
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [hunt hypothesis](#hunt-hypothesis), [hunt development concepts](#hunt-development-concepts)
+
+### URLScan for hunting
+
+Also: urlscan.io, URLScan page scan, URLScan for hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
 
 ---
 
@@ -950,8 +1011,19 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
 | Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 | Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
+
+### VirusTotal for hunting
+
+Also: VT, VirusTotal Relations, VirusTotal for hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
 
 ---
 
