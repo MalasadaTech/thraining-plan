@@ -120,6 +120,16 @@ See also: [SF](#sf), [S0](#s0), [REJ](#rej), [scanning](#scanning)
 
 ## D
 
+### data
+
+Also: raw data, raw observation, unprocessed fact
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+
+See also: [information](#information), [intelligence](#intelligence)
+
 ### DGA
 
 Also: domain generation algorithm
@@ -129,6 +139,16 @@ Also: domain generation algorithm
 | Taught | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
 
 See also: [NXDOMAIN](#nxdomain)
+
+### distinction between data, information, and intelligence
+
+Also: data vs information vs intelligence, three terms
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+
+See also: [data](#data), [information](#information), [intelligence](#intelligence)
 
 ### dns log
 
@@ -218,7 +238,27 @@ Survey only. Field-level teaching is module 1.2.5 (not written yet).
 
 ---
 
-## I
+## Information
+
+Also: organized data, context, parsed alert, rewritten log story
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+
+See also: [data](#data), [intelligence](#intelligence)
+
+### intelligence
+
+Also: analytic judgment, decision support, finished intelligence, so what
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+
+See also: [data](#data), [information](#information), [transformation from raw data to information to intelligence](#transformation-from-raw-data-to-information-to-intelligence)
+
+### i
 
 ### id.orig_h / id.resp_h
 
@@ -499,7 +539,17 @@ Also: network TAP, SPAN port, how Zeek sees traffic
 ### TLS / ssl log
 
 Also: `ssl` log, TLS log, Zeek TLS engine, ssl/tls
+transformation from raw data to information to intelligence
 
+Also: data to information to intelligence, how raw data becomes intelligence
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+
+See also: [data](#data), [information](#information), [intelligence](#intelligence)
+
+### 
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |

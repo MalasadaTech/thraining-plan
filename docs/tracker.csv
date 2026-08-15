@@ -8,5 +8,6 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 1.2.3,DNS Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
 1.2.4,TLS Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
 2.3,Hunt Methodology,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,
-3.1,Core Intelligence Concepts,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,
+3.1,Core Intelligence Concepts,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Remaining 3.1 items after 3.1.1
+3.1.1,Data Information and Intelligence,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
 3.4,File Similarity & Hashing Techniques,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,
