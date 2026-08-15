@@ -12,7 +12,8 @@ docs/
   tracker.csv                     # module status (edit this)
   tracker.md                      # status legend and folder mapping
   concept-index.md                # taught concepts → module (book-style index)
-templates/                        # copy these when starting a new module
+  contributing.md                 # how to add a requirement and a module
+templates/                        # proposal + module writing templates
 modules/
   01-soc/<unit>/<module>/
   02-hunter/<unit>/<module>/
@@ -43,13 +44,11 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 
 Record the mapping in each module `README.md`.
 
-## Adding a module
+## Changing the curriculum
 
-1. Create `modules/<role>/<unit>/<nn-short-name>/`.
-2. Copy files from `templates/` and rename them to `instructor-guide.md`, `student-guide.md`, `slides.md`, and `answer-key.md` as needed.
-3. Put lesson-specific screenshots in that module's `assets/` folder.
-4. Put reusable logs or PCAP in `labs/`.
-5. Add a row to [docs/tracker.csv](docs/tracker.csv).
-6. List taught concepts on the module `README.md` and add them to [docs/concept-index.md](docs/concept-index.md).
+Do not start with a student guide. Approve the requirement first, then build the lesson.
+
+1. Propose with [templates/requirement-proposal.md](templates/requirement-proposal.md).
+2. Follow the two gates in [docs/contributing.md](docs/contributing.md) (matrix/outline/tracker, then guides, concepts, and the index).
 
 Shared topics (frameworks, cross-role primers) go under `modules/shared/`, not copied into each role.
