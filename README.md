@@ -51,6 +51,6 @@ Do not start with a student guide. Approve the requirement first, then build the
 
 1. Propose with [templates/requirement-proposal.md](templates/requirement-proposal.md).
 2. Follow the two gates in [docs/contributing.md](docs/contributing.md) (matrix/outline/tracker, then guides, concepts, and the index).
-3. To generate an existing unit with an AI tool: `Follow docs/generate-module.md and generate teaching-unit <ID> (<Title>) for me to review.`
+3. To generate an existing unit with an AI tool, use the **matrix** teaching-unit ID and the **combined.md** heading as the title: `Follow docs/generate-module.md and generate teaching-unit <ID> (<Title>) for me to review. Do not invent IDs.`
 
 Shared topics (frameworks, cross-role primers) go under `modules/shared/`, not copied into each role.
