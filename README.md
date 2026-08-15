@@ -9,8 +9,8 @@ docs/
   outlines/training-outlines.md   # source list of knowledge and task items
   proficiency-legend.md           # CFETP-style 3/5/7 levels and codes
   matrices/                       # combined + per-role proficiency matrices
-  tracker.md                      # module status
-  tracker.xlsx                    # optional spreadsheet copy
+  tracker.csv                     # module status (edit this)
+  tracker.md                      # status legend and folder mapping
 templates/                        # copy these when starting a new module
 modules/
   01-soc/<unit>/<module>/
@@ -47,6 +47,6 @@ Record the mapping in each module `README.md`.
 2. Copy files from `templates/` and rename them to `instructor-guide.md`, `student-guide.md`, `slides.md`, and `answer-key.md` as needed.
 3. Put lesson-specific screenshots in that module's `assets/` folder.
 4. Put reusable logs or PCAP in `labs/`.
-5. Add a row to [docs/tracker.md](docs/tracker.md).
+5. Add a row to [docs/tracker.csv](docs/tracker.csv).
 
 Shared topics (frameworks, cross-role primers) go under `modules/shared/`, not copied into each role.

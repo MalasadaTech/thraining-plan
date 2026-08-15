@@ -1,11 +1,23 @@
 # Module tracker
 
-Status: `draft` (generated) → `review` → `ready`.
+The working tracker is [tracker.csv](tracker.csv). Add a row there when you start a module, and update the status columns as artifacts land.
 
-| Module | Role | Matrix items | Artifacts | Status |
-|--------|------|--------------|-----------|--------|
-| [01-concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC (primary), Hunter | `1.2.1.1` | instructor, student, slides | draft |
-| [02-conn-engine](../modules/01-soc/02-zeek/02-conn-engine/) | SOC (primary), Hunter | `1.2.2.1`–`1.2.2.3` | instructor, student, slides | draft |
-| [03-dns-engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC (primary), Hunter | `1.2.3.1`–`1.2.3.3` | instructor, student, slides | draft |
+## Status values
 
-An Excel copy lives at [tracker.xlsx](tracker.xlsx). Prefer this Markdown file for git reviews.
+| Status | Meaning |
+|--------|---------|
+| Not Started | Work has not begun |
+| In Progress | Actively being developed |
+| Review | Draft complete, needs review |
+| Complete | Finished and approved |
+| Deferred | Intentionally postponed |
+
+## Folder mapping
+
+Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/T headings.
+
+| Module ID | Folder |
+|-----------|--------|
+| 1.2.1 | [modules/01-soc/02-zeek/01-concepts](../modules/01-soc/02-zeek/01-concepts/) |
+| 1.2.2 | [modules/01-soc/02-zeek/02-conn-engine](../modules/01-soc/02-zeek/02-conn-engine/) |
+| 1.2.3 | [modules/01-soc/02-zeek/03-dns-engine](../modules/01-soc/02-zeek/03-dns-engine/) |
