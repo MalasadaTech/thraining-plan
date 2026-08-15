@@ -2,7 +2,13 @@
 
 Two gates. The board approves the **requirement** first. Content is written only after that.
 
-Do not write a full module and then ask to put it on the matrix. The matrix is the contract; the module is how the contract is taught.
+Do not write a full module and then ask to put it on the matrix.
+
+| File | Job |
+|------|-----|
+| [training-outlines.md](outlines/training-outlines.md) | Syllabus. Every `a/b/c` and numbered task is the **floor** of the lesson. |
+| Combined / role matrices | Contract. Item IDs, roles, and 3/5/7 codes. |
+| Module | Teaches the outline (and may expand). Does not invent a new obligation. |
 
 Use [templates/requirement-proposal.md](../templates/requirement-proposal.md) for Gate 1. Open it as an issue or a pull request.
 
@@ -39,6 +45,16 @@ No student guide, instructor guide, or slides at this gate.
 
 Only after Gate 1. If Gate 1 said “add to an existing module,” amend that module. Do not create a new folder.
 
+### Coverage (required)
+
+The module must cover **every** outline knowledge bullet and task that belongs to this teaching unit. Those items go in the student guide and in **Concepts taught**.
+
+Expansion is allowed when it supports the outline (examples, `uid`, extra context). A new *requirement* (something an analyst must now be signed off on) still goes through Gate 1.
+
+If an outline bullet has no obvious home in this unit, stop and map it. Do not drop it.
+
+**CTI `3.1`:** the matrix heading is Intelligence Requirements & Direction (PIRs). Until the board splits it, teaching-unit `3.1` covers **all** of outline `3.1` (core intelligence concepts), not only the PIR rows.
+
 ### Required
 
 - [ ] Module folder (new modules only): `modules/<role>/<unit>/<nn-short-name>/`
@@ -48,6 +64,7 @@ Only after Gate 1. If Gate 1 said “add to an existing module,” amend that mo
 - [ ] `slides.md` from [templates/slides.md](../templates/slides.md)
 - [ ] [concept-index.md](concept-index.md) — Taught vs Used, aliases, roles; same terms as the README Concepts list
 - [ ] [tracker.csv](tracker.csv) — move the row to `Review`, then `Complete` when accepted
+- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index
 
 ### Optional / later
 
