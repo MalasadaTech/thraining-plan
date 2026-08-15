@@ -13,9 +13,13 @@ This is a procedure. Clone the sibling module. Do not invent requirements, IDs, 
 
 Stop and say what is missing if any of these fail:
 
-- The teaching-unit ID already exists on the [combined matrix](matrices/combined.md) and in [training-outlines.md](outlines/training-outlines.md).
-- You were given a teaching-unit ID (for example `1.2.5`), not a vague topic.
+- The teaching-unit ID already exists as a heading or `#` prefix on the [combined matrix](matrices/combined.md) (for example `1.2.5`, `2.1`, `3.1`).
+- You were given that ID, not a vague topic and not an old display number (`section 7`, `section 8`).
 - Gate 1 is done. You are not proposing a new matrix row.
+
+**Assign work by ID prefix:** `1.x` = SOC (`modules/01-soc/`), `2.x` = Hunt (`modules/02-hunter/`), `3.x` = CTI (`modules/03-cti/`).
+
+**Matrix wins on IDs.** Combined.md headings match [soc.md](matrices/soc.md) / [hunter.md](matrices/hunter.md) / [cti.md](matrices/cti.md). The outline uses the same prefixes for SOC and Hunt, but **outline `3.1` is not matrix `3.1`**. For CTI, teach the combined/cti.md rows. Use the outline only when the topic clearly matches.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).
 
@@ -23,14 +27,15 @@ If the user wants a **new** requirement, stop and point them at [templates/requi
 
 ## 1. Read, in this order
 
-1. The outline headings for this unit (knowledge + matching tasks).
-2. The matrix rows (`x.x.x.1` K, `.2` / `.3` T) and 3/5/7 codes for every role.
-3. [proficiency-legend.md](proficiency-legend.md)
-4. [contributing.md](contributing.md) Gate 2
-5. [templates/student-guide.md](../templates/student-guide.md), [instructor-guide.md](../templates/instructor-guide.md), [slides.md](../templates/slides.md)
-6. The **previous sibling module** in the same unit — full `README.md`, `student-guide.md`, `instructor-guide.md`, `slides.md`
+1. The [combined.md](matrices/combined.md) heading for this teaching-unit ID and every row under it.
+2. The matching role matrix (`soc.md` / `hunter.md` / `cti.md`).
+3. Outline bullets only if they describe the **same** topic as those matrix rows (SOC/Hunt usually; CTI often will not).
+4. [proficiency-legend.md](proficiency-legend.md)
+5. [contributing.md](contributing.md) Gate 2
+6. [templates/student-guide.md](../templates/student-guide.md), [instructor-guide.md](../templates/instructor-guide.md), [slides.md](../templates/slides.md)
+7. The **previous sibling module** in the same unit — full `README.md`, `student-guide.md`, `instructor-guide.md`, `slides.md`
 
-Sibling for the current Zeek series: `1.2.4` at `modules/01-soc/02-zeek/04-tls-engine/`. Use the latest written engine module if a later one exists.
+Sibling for the current Zeek series: `1.2.4` at `modules/01-soc/02-zeek/04-tls-engine/`. For a first Hunt or CTI module, clone TLS for package shape only (not content). Use the latest written sibling in that prefix if one exists.
 
 Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) before you write.
 
@@ -40,9 +45,9 @@ Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) be
 
 | You need | Where it comes from |
 |----------|---------------------|
-| Teaching-unit ID | User prompt / tracker (example: `1.2.5`) |
-| Matrix item IDs | Combined matrix (example: `1.2.5.1` K, `1.2.5.2` T, `1.2.5.3` T) |
-| Outline headings | Outline K/T pair (often **not** the same numbers as the teaching unit) |
+| Teaching-unit ID | Combined.md heading / tracker (examples: `1.2.5`, `2.1`, `3.1`) |
+| Matrix item IDs | Combined matrix `#` column as written. SOC is often four parts (`1.2.5.1`). Hunt and CTI are often three (`2.1.1`, `3.1.2`). Do not add a `.1` to force four parts. |
+| Outline headings | Matching topic in the outline, when it exists. Do not assume outline `3.1` = matrix `3.1`. |
 | Folder | `modules/<role>/<unit>/<nn-short-name>/` |
 | Roles | Module primary/secondary from outline + matrix |
 
@@ -73,9 +78,10 @@ Voice: direct, instructional, short paragraphs, tables for fields. Do not lectur
 
 ---
 
-## 4. Teach only what the outline lists
+## 4. Teach only what the matrix lists
 
-- Knowledge bullets (a, b, c…) become the field/idea sections.
+- Combined.md / role-matrix rows for this ID are the obligation.
+- Outline knowledge bullets (a, b, c…) become field/idea sections **when they belong to this unit**.
 - Task items become the analysis exercise and the two pseudo-queries.
 - Carry `ts`, `uid`, and addressing fields when this is a Zeek log, even if the outline names the protocol fields first.
 - Stay out of the next module’s topic. Point to it under Related modules.
@@ -111,6 +117,7 @@ Do not set tracker status to `Complete` for the module as a whole if that column
 ## 6. Do not
 
 - Invent matrix IDs, outline headings, or proficiency codes
+- Treat combined.md `## 7` / `## 8` / `## 9` as real (those headings are gone; use `2.x` / `3.x` / `1.8`)
 - Index sample IPs, `example.com`, or passing name-drops
 - Put JA3-style depth in a survey module, or HTTP bodies in a TLS module
 - Copy shared frameworks into a role folder
