@@ -195,6 +195,16 @@ Also: classify by type, intelligence type classification
 
 See also: [intelligence types](#intelligence-types)
 
+### common Windows privilege escalation methods
+
+Also: Windows privilege escalation, token theft, UAC bypass, service image abuse
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+
+See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
+
 ### conn log
 
 Also: `conn`, connection log, Zeek conn
@@ -562,6 +572,16 @@ See also: [hunt types](#hunt-types), [hunt hypothesis](#hunt-hypothesis), [anoma
 
 ## I
 
+### indicators associated with privilege escalation
+
+Also: privilege escalation indicators, integrity change, parent vs child identity, missing UAC consent
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+
+See also: [privilege escalation techniques](#privilege-escalation-techniques), [recognizing privilege escalation techniques in logs or telemetry](#recognizing-privilege-escalation-techniques-in-logs-or-telemetry)
+
 ### information
 
 Also: organized data, context, parsed alert, rewritten log story
@@ -760,6 +780,7 @@ Also: persistence, persist after reboot, autorun methods
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Used | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [registry-based persistence](#registry-based-persistence), [scheduled-task persistence](#scheduled-task-persistence)
 
@@ -797,6 +818,16 @@ Also: hunt priority, rank hunts, why this hunt first
 | Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [scoping a hunt](#scoping-a-hunt), [hunt development concepts](#hunt-development-concepts)
+
+### privilege escalation techniques
+
+Also: privilege escalation, privesc, elevation of privilege
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+
+See also: [common Windows privilege escalation methods](#common-windows-privilege-escalation-methods), [persistence techniques](#persistence-techniques)
 
 ### processing and exploitation
 
@@ -879,6 +910,16 @@ Also: recognize persistence, persistence in telemetry, persistence recognition
 | Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [registry-based persistence](#registry-based-persistence)
+
+### recognizing privilege escalation techniques in logs or telemetry
+
+Also: recognize privilege escalation, privilege escalation in telemetry, privesc recognition
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+
+See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
 
 ### recording ATT&CK IDs from a report
 
@@ -1305,6 +1346,7 @@ See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [ATT&CK coverage a
 Also: visibility gap, no telemetry, cannot see, blind segment
 
 | Coverage | Module | Roles |
+| Used | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 |----------|--------|-------|
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
 | Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
