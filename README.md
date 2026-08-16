@@ -47,6 +47,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/02-hunter/02-methodology/02-hunt-development` | `2.2.2` / `2.2.2.1`–`2.2.2.3` | `2.2.2` + `2.2.3` tasks 1–3 |
 | `modules/02-hunter/03-online-tools` | `2.3.1` / `2.3.1.1`–`2.3.1.3` | `2.3.1` + `2.3.2` tasks 1–3 |
 | `modules/02-hunter/04-cti-for-hunters/01-assessing-cti` | `2.4.1` / `2.4.1.1` | `2.4.1` + `2.4.1.1` |
+| `modules/02-hunter/04-cti-for-hunters/02-extracting-leads` | `2.4.2` / `2.4.2.1`–`2.4.2.3` | `2.4.2` + `2.4.2.1` tasks 1–3 |
 | `modules/03-cti/01-core-intel/01-data-info-intel` | `3.1.1` / `3.1.1.1` | `3.1.1` + `3.1.1.1` |
 | `modules/03-cti/01-core-intel/02-intelligence-lifecycle` | `3.1.2` / `3.1.2.1` | `3.1.2` + `3.1.2.1` |
 | `modules/03-cti/01-core-intel/03-intelligence-types` | `3.1.3` / `3.1.3.1` | `3.1.3` + `3.1.3.1` |

@@ -46,6 +46,7 @@ Also: actionable CTI for hunting, hunt question telemetry scope
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
 
@@ -337,6 +338,16 @@ Also: Zeek events, `connection_established`
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
+### extracting hunt leads from CTI
+
+Also: extract hunt leads, pull leads from a report, CTI extract for hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+
+See also: [hunt-suitable TTPs](#hunt-suitable-ttps), [hunt-suitable artifacts](#hunt-suitable-artifacts), [what to drop from CTI](#what-to-drop-from-cti)
+
 ### examples of activity existing controls might miss
 
 Also: examples existing controls might miss, identify missed-control examples
@@ -436,6 +447,36 @@ Also: developing a hunt hypothesis, documented hunt hypothesis, testable if/then
 
 See also: [hypothesis-driven hunt](#hypothesis-driven-hunt), [unique patterns or behaviors suitable for hunting](#unique-patterns-or-behaviors-suitable-for-hunting)
 
+### hunt question from CTI leads
+
+Also: hunt question those leads support, if/then from extracted leads
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+
+See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [hunt hypothesis](#hunt-hypothesis)
+
+### hunt-suitable artifacts
+
+Also: hunt-suitable IOCs, hunt-suitable patterns, hunt-suitable behaviors from CTI
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+
+See also: [TTPs vs IOCs vs behaviors](#ttps-vs-iocs-vs-behaviors), [what to drop from CTI](#what-to-drop-from-cti)
+
+### hunt-suitable TTPs
+
+Also: hunt suitable TTPs, extract TTPs for hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+
+See also: [TTPs vs IOCs vs behaviors](#ttps-vs-iocs-vs-behaviors), [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti)
+
 ### hunting leads from external tools
 
 Also: actionable hunting lead, extract hunt lead, enrichment lead
@@ -463,6 +504,7 @@ Also: hunt worthy report, hunt this report, CTI worth hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [awareness-only CTI](#awareness-only-cti), [actionable for a hunt](#actionable-for-a-hunt)
 
@@ -760,6 +802,18 @@ Also: rapid CTI triage, triage a report for hunting, hunt don’t hunt hand off
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [actionable for a hunt](#actionable-for-a-hunt)
 
+### recording ATT&CK IDs from a report
+
+Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+
+Mapping hunts to ATT&CK is a later item (2.5), not this module.
+
+See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti)
+
 ### rcode_name
 
 Also: DNS response code, `rcode`
@@ -995,6 +1049,16 @@ Also: data to information to intelligence, how raw data becomes intelligence
 
 See also: [data](#data), [information](#information), [intelligence](#intelligence)
 
+### TTPs vs IOCs vs behaviors
+
+Also: TTP vs IOC vs behavior, which can drive a hunt, method vs object vs pattern
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+
+See also: [hunt-suitable TTPs](#hunt-suitable-ttps), [hunt-suitable artifacts](#hunt-suitable-artifacts)
+
 ### TLS fingerprint
 
 See [JA3](#ja3).
@@ -1045,6 +1109,7 @@ Also: hunt-worthy pattern, unique hunt behavior, internal search pattern
 |----------|--------|-------|
 | Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 | Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [hunt hypothesis](#hunt-hypothesis), [hunt development concepts](#hunt-development-concepts)
 
@@ -1073,6 +1138,7 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 | Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 | Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 | Used | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -1089,6 +1155,16 @@ See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunt
 ---
 
 ## W
+
+### what to drop from CTI
+
+Also: drop no telemetry expired IOCs noise, what not to extract from a report
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+
+See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [visibility gaps](#visibility-gaps)
 
 ### weird log
 
