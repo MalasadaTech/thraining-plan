@@ -660,7 +660,8 @@ Also: Zeek logs, TSV, JSON logs
 ---
 
 ## M
-apping hunts to ATT&CK
+
+### mapping hunts to ATT&CK
 
 Also: map a hunt plan to ATT&CK, map hunt findings to ATT&CK, ATT&CK tactics and techniques
 
@@ -670,7 +671,6 @@ Also: map a hunt plan to ATT&CK, map hunt findings to ATT&CK, ATT&CK tactics and
 
 See also: [using MITRE ATT&CK for hunt planning](#using-mitre-attck-for-hunt-planning), [recording ATT&CK IDs from a report](#recording-attck-ids-from-a-report)
 
-### m
 ### missing SNI
 
 Also: empty SNI, no `server_name`
@@ -739,9 +739,29 @@ Also: byte counts, `orig_bytes`, `resp_bytes`
 
 See also: [beaconing](#beaconing)
 
+### other common persistence methods
+
+Also: service persistence, WMI persistence, logon script persistence
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+
+See also: [persistence techniques](#persistence-techniques), [recognizing persistence techniques in logs or telemetry](#recognizing-persistence-techniques-in-logs-or-telemetry)
+
 ---
 
 ## P
+
+### persistence techniques
+
+Also: persistence, persist after reboot, autorun methods
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+
+See also: [registry-based persistence](#registry-based-persistence), [scheduled-task persistence](#scheduled-task-persistence)
 
 ### pivot
 
@@ -764,7 +784,6 @@ See also: [intelligence lifecycle](#intelligence-lifecycle)
 Also: Zeek scripts, scripting layer, policy script interpreter
 
 | Coverage | Module | Roles |
-| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
@@ -775,6 +794,7 @@ Also: hunt priority, rank hunts, why this hunt first
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [scoping a hunt](#scoping-a-hunt), [hunt development concepts](#hunt-development-concepts)
 
@@ -850,19 +870,29 @@ Also: rapid CTI triage, triage a report for hunting, hunt don’t hunt hand off
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [actionable for a hunt](#actionable-for-a-hunt)
 
+### recognizing persistence techniques in logs or telemetry
+
+Also: recognize persistence, persistence in telemetry, persistence recognition
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+
+See also: [persistence techniques](#persistence-techniques), [registry-based persistence](#registry-based-persistence)
+
 ### recording ATT&CK IDs from a report
 
 Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
 
 | Coverage | Module | Roles |
-|-Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+|----------|--------|-------|
+| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 | Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 | Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 Mapping hunts to ATT&CK is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
-See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [mapping hunts to ATT&CK](#mapping-hunts-to-attck
-See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti)
+See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
 
 ### rcode_name
 
@@ -898,6 +928,15 @@ Re-working an already-raised alert queue is SOC work, not this type.
 
 See also: [hunt types](#hunt-types)
 
+### registry-based persistence
+
+Also: Run key persistence, RunOnce, Winlogon persistence, registry autorun
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+
+See also: [persistence techniques](#persistence-techniques), [start menu / startup folder persistence](#start-menu--startup-folder-persistence)
 
 ---
 
@@ -930,6 +969,16 @@ Also: hunt scope, bound a hunt, who where how long
 | Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [prioritizing hunts](#prioritizing-hunts), [visibility gaps](#visibility-gaps)
+
+### scheduled-task persistence
+
+Also: scheduled tasks, Task Scheduler persistence, event 4698, T1053.005
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+
+See also: [persistence techniques](#persistence-techniques), [recognizing persistence techniques in logs or telemetry](#recognizing-persistence-techniques-in-logs-or-telemetry)
 
 ### self-signed certificate
 
@@ -1020,6 +1069,16 @@ Also: lifecycle stages, six stages, intelligence cycle stages
 | Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [purpose and activities in each stage](#purpose-and-activities-in-each-stage)
+
+### start menu / startup folder persistence
+
+Also: startup folder, Start Menu Startup, All Users Startup, T1547.001 startup folder
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+
+See also: [persistence techniques](#persistence-techniques), [registry-based persistence](#registry-based-persistence)
 
 ### STIX as hunt input
 
@@ -1255,6 +1314,7 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 | Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 | Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 | Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Used | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
