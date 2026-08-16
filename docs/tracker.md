@@ -40,6 +40,9 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 1.4.3 | [modules/01-soc/04-alerts/03-false-positive-causes](../modules/01-soc/04-alerts/03-false-positive-causes/) |
 | 1.4.4 | [modules/01-soc/04-alerts/04-categorizations](../modules/01-soc/04-alerts/04-categorizations/) |
 | 1.4.5 | [modules/01-soc/04-alerts/05-sla-response-times](../modules/01-soc/04-alerts/05-sla-response-times/) |
+| 1.5.1 | [modules/01-soc/05-frameworks/01-attck](../modules/01-soc/05-frameworks/01-attck/) |
+| 1.5.2 | [modules/01-soc/05-frameworks/02-diamond-model](../modules/01-soc/05-frameworks/02-diamond-model/) |
+| 1.5.3 | [modules/01-soc/05-frameworks/03-cyber-kill-chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) |
 | 2.1 | [modules/02-hunter/01-purpose](../modules/02-hunter/01-purpose/) |
 | 2.2.1 | [modules/02-hunter/02-methodology/01-hunt-types](../modules/02-hunter/02-methodology/01-hunt-types/) |
 | 2.2.2 | [modules/02-hunter/02-methodology/02-hunt-development](../modules/02-hunter/02-methodology/02-hunt-development/) |

@@ -117,6 +117,8 @@ Five teaching units. Tasks apply the knowledge item they sit under. False-positi
 
 ## 1.5 Frameworks (Shared across all roles)
 
+Three teaching units. Outline tasks nest under each K (`1.5.1` + `1.5.1.1`). Hunt planning with ATT&CK is **2.5**. Actor profiles are **3.11**.
+
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 1.5.1.1 | MITRE ATT&CK | K | A / B / C | B / C / C | B / C / C |

@@ -142,6 +142,26 @@ Also: CTI hunting value, assess a report for hunting, hunter as CTI consumer
 
 See also: [hunt-worthy CTI](#hunt-worthy-cti), [awareness-only CTI](#awareness-only-cti), [hand off to detections / IR](#hand-off-to-detections--ir)
 
+### ATT&CK tactics
+
+Also: ATT&CK tactic, why column, TA0002 Execution
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+
+See also: [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
+
+### ATT&CK techniques and sub-techniques
+
+Also: ATT&CK technique, sub-technique, T1059.001
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+
+See also: [ATT&CK tactics](#attck-tactics), [MITRE ATT&CK purpose and structure](#mitre-attck-purpose-and-structure)
+
 ### ATT&CK coverage analysis
 
 Also: ATT&CK coverage, coverage analysis for hunting, Navigator as a view
@@ -365,9 +385,39 @@ Also: convert to SIEM query, convert to Zeek query, internal query from enrichme
 
 See also: [hunting leads from external tools](#hunting-leads-from-external-tools), [tool capabilities for hunting](#tool-capabilities-for-hunting)
 
+### Cyber Kill Chain purpose
+
+Also: Kill Chain, Lockheed Martin Kill Chain
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+
+See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next)
+
 ---
 
 ## D
+
+### Diamond Model purpose
+
+Also: Diamond Model, intrusion diamond
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+
+See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim)
+
+### Diamond vertices: Adversary, Capability, Infrastructure, Victim
+
+Also: Adversary vertex, Capability vertex, Infrastructure vertex, Victim vertex
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+
+See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
 
 ### data
 
@@ -530,6 +580,16 @@ See also: [hunt types](#hunt-types)
 ---
 
 ## F
+
+### filling four vertices and naming the weakest
+
+Also: weakest Diamond vertex, honest empty vertex
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+
+See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim)
 
 ### False Negative
 
@@ -904,6 +964,16 @@ Also: image load, driver load, DLL load, DeviceImageLoadEvents
 
 See also: [user-mode image load vs kernel driver load](#user-mode-image-load-vs-kernel-driver-load), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
 
+### identifying the stage and rejecting the previous or next
+
+Also: Kill Chain neighbor stage, not previous not next
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+
+See also: [Kill Chain stages](#kill-chain-stages), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression)
+
 ### identifying the cause class and what you would change
 
 Also: FP cause class plus change, class a or b and a change
@@ -1072,6 +1142,20 @@ Taught as a lead, not a malware verdict. Fields are used only where the deployme
 
 ---
 
+## K
+
+### Kill Chain stages
+
+Also: Reconnaissance Delivery Exploitation Installation C2 Actions on Objectives, Weaponization
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+
+See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose)
+
+---
+
 ## L
 
 ### logging framework
@@ -1095,6 +1179,18 @@ Also: mailfrom, SMTP MAIL FROM, envelope from
 | Taught | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
 
 See also: [smtp log](#smtp-log), [rcpt to](#rcpt-to)
+
+### mapping observed activity to ATT&CK
+
+Also: map an alert to ATT&CK, tactic plus technique plus cite
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+
+Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
+
+See also: [ATT&CK tactics](#attck-tactics), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
 
 ### mapping hunts to ATT&CK
 
@@ -1157,6 +1253,16 @@ Also: empty SNI, no `server_name`
 | Taught | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
 
 See also: [SNI](#sni)
+
+### MITRE ATT&CK purpose and structure
+
+Also: ATT&CK matrix, ATT&CK Enterprise
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+
+See also: [ATT&CK tactics](#attck-tactics), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
 
 ### MX
 
@@ -2162,6 +2268,26 @@ Also: user_agent, HTTP User-Agent
 | Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
 
 See also: [http log](#http-log), [HTTP method](#http-method)
+
+### using Diamond for analysis and attribution
+
+Also: Diamond attribution, unknown adversary vertex
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+
+See also: [Diamond Model purpose](#diamond-model-purpose), [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest)
+
+### using the Kill Chain to understand attack progression
+
+Also: Kill Chain progression, where you are in the intrusion
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+
+See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next)
 
 ### using ATT&CK to identify detection or visibility gaps
 

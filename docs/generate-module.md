@@ -31,6 +31,8 @@ Stop and say what is missing if any of these fail:
 
 **`1.4.x` alert lessons:** five units — investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not restate a K item as its task. Detection authoring is `1.3`. Do not open the next `1.4` unit when asked for one child.
 
+**`1.5.x` framework lessons:** three units — ATT&CK (`1.5.1`), Diamond (`1.5.2`), Kill Chain (`1.5.3`). Do not write all three as one module. Do not turn `1.5.1` into hunt planning (`2.5`) or an actor profile (`3.11`). Do not copy `modules/shared/frameworks/` into a role folder.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

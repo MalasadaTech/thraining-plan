@@ -249,7 +249,9 @@ b. Required time to process an alert (close or escalate)
 1. Given timestamps, identify whether the start clock or the close/escalate clock is at risk  
 2. Close or escalate an alert and record it against the correct clock  
 
-**1.5 [K] Frameworks**
+**1.5 [K/T] Frameworks**
+
+Shared analysis frameworks. Hunt *planning* with ATT&CK is 2.5. Attribution products are 3.11. Each framework has its own applying task.
 
 **1.5.1 [K] MITRE ATT&CK**  
 a. Purpose and structure of the ATT&CK framework  
@@ -257,20 +259,24 @@ b. Tactics
 c. Techniques and Sub-techniques  
 d. How to map observed activity to ATT&CK  
 
+**1.5.1.1 [T] ATT&CK tasks**  
+1. Map an alert or observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
+
 **1.5.2 [K] Diamond Model**  
 a. Purpose of the Diamond Model  
 b. The four core features (Adversary, Capability, Infrastructure, Victim)  
 c. How the Diamond Model is used for analysis and attribution  
+
+**1.5.2.1 [T] Diamond Model tasks**  
+1. Apply the Diamond Model to an incident or set of indicators: fill the four vertices and state which vertex is weakest  
 
 **1.5.3 [K] Cyber Kill Chain**  
 a. Purpose of the Cyber Kill Chain  
 b. The stages of the Kill Chain  
 c. How the Kill Chain is used to understand attack progression  
 
-**1.5.4 [T] Framework application tasks**  
-1. Map an alert or observed activity to MITRE ATT&CK tactics/techniques  
-2. Apply the Diamond Model to an incident or set of indicators  
-3. Identify the Kill Chain stage of observed activity  
+**1.5.3.1 [T] Kill Chain tasks**  
+1. Identify the Kill Chain stage of observed activity and why it is not the previous or next stage  
 
 **1.6 [K/T] Reporting**
 
