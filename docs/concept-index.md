@@ -194,6 +194,18 @@ Also: fill a mini ACH, fill a KAC table
 
 See also: [select the right structured analytic technique for a scenario](#select-the-right-structured-analytic-technique-for-a-scenario), [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach)
 
+### apply the Diamond Model to an intelligence problem
+
+Also: Diamond on a report, Diamond activity-set card, CTI Diamond line
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+
+Incident / indicator cards are [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/).
+
+See also: [Diamond Model application in CTI](#diamond-model-application-in-cti), [weakest vertex constrains the intel product](#weakest-vertex-constrains-the-intel-product)
+
 ### approved reporting channels
 
 Also: ticket channel, RFI form, approved distro
@@ -635,6 +647,18 @@ Also: draft a PIR, refine a requirement
 
 See also: [purpose of intelligence requirements](#purpose-of-intelligence-requirements), [translate stakeholder questions into clear intelligence requirements](#translate-stakeholder-questions-into-clear-intelligence-requirements)
 
+### Diamond Model application in CTI
+
+Also: advanced Diamond for CTI, Diamond in intel products
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+
+SOC incident cards are [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
+
+See also: [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem), [reject filling Adversary from a vendor name](#reject-filling-adversary-from-a-vendor-name)
+
 ### Diamond Model purpose
 
 Also: Diamond Model, intrusion diamond
@@ -642,8 +666,9 @@ Also: Diamond Model, intrusion diamond
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
-See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim)
+See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [Diamond Model application in CTI](#diamond-model-application-in-cti)
 
 ### Diamond vertices: Adversary, Capability, Infrastructure, Victim
 
@@ -652,6 +677,7 @@ Also: Adversary vertex, Capability vertex, Infrastructure vertex, Victim vertex
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
 
@@ -926,8 +952,9 @@ Also: weakest Diamond vertex, honest empty vertex
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
-See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim)
+See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [weakest vertex constrains the intel product](#weakest-vertex-constrains-the-intel-product)
 
 ### False Negative
 
@@ -2406,6 +2433,16 @@ Also: reject the neighbor ID, neighbor technique reject, T1059.001 vs T1059.003
 
 See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques)
 
+### reject filling Adversary from a vendor name
+
+Also: vendor-name Adversary, Night Owl APT is not Adversary, reject vendor cluster name
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+
+See also: [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
+
 ### related endpoint logs for an alert
 
 Also: pull endpoint logs for an alert, what logs add
@@ -3323,8 +3360,9 @@ Also: Diamond attribution, unknown adversary vertex
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
-See also: [Diamond Model purpose](#diamond-model-purpose), [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest)
+See also: [Diamond Model purpose](#diamond-model-purpose), [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [Diamond Model application in CTI](#diamond-model-application-in-cti)
 
 ### using the Kill Chain to understand attack progression
 
@@ -3413,6 +3451,18 @@ See also: [VirusTotal for hunting](#virustotal-for-hunting), [when to use each e
 ---
 
 ## W
+
+### weakest vertex constrains the intel product
+
+Also: Diamond product constraint, weakest vertex drops a claim, Adversary empty so no group name
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+
+Naming the weakest on an incident card is [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/).
+
+See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem)
 
 ### what to drop from CTI
 

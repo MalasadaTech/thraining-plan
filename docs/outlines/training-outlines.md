@@ -651,6 +651,9 @@ a. Advanced application for intelligence analysis and TTP extraction
 **3.7.2 [K] Diamond Model**  
 a. Advanced application for analysis and attribution  
 
+**3.7.2.1 [T] Tasks**  
+1. Apply the Diamond Model to an intelligence problem (fill vertices from a report or activity set; name the weakest; reject a vendor-name Adversary fill)  
+
 **3.7.3 [K] Cyber Kill Chain**  
 a. Advanced application for understanding attack progression  
 
