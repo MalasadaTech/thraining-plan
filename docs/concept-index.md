@@ -205,6 +205,18 @@ Also: Windows privilege escalation, token theft, UAC bypass, service image abuse
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
 
+### common persistence locations (Run, Services)
+
+Also: Run key, RunOnce, Services key, registry persistence locations as examples
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+
+Persistence *techniques* are [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/).
+
+See also: [registry activity](#registry-activity), [registry-based persistence](#registry-based-persistence)
+
 ### conn log
 
 Also: `conn`, connection log, Zeek conn
@@ -324,6 +336,16 @@ Also: TXT tunneling, covert DNS channel
 
 See also: [qtype_name](#qtype_name)
 
+### domain / URL (endpoint-logged)
+
+Also: DestinationHostname, RemoteUrl, QueryName, endpoint-logged domain
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+
+See also: [network activity (endpoint)](#network-activity-endpoint), [Sysmon 3 / 22 and DeviceNetworkEvents](#sysmon-3--22-and-devicenetworkevents)
+
 ### duration
 
 Also: `duration`, connection length
@@ -413,6 +435,7 @@ Also: file SHA256, DeviceFileEvents SHA256, file hash
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [hashes and original filename](#hashes-and-original-filename)
 
@@ -468,6 +491,7 @@ Also: process SHA256, OriginalFileName, PE original filename
 |----------|--------|-------|
 | Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
 | Used | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line), [file hashes](#file-hashes)
 
@@ -480,6 +504,26 @@ Also: `history`, Zeek history flags
 | Taught | [1.2.2 Conn Engine](../modules/01-soc/02-zeek/02-conn-engine/) | SOC, Hunter |
 
 3-level: awareness. 5- and 7-level: read the flag string.
+
+### hives and key → value
+
+Also: registry hive, HKLM, HKCU, TargetObject, RegistryKey, RegistryValueName
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+
+See also: [registry activity](#registry-activity), [registry set / delete / rename](#registry-set--delete--rename)
+
+### host-observed vs Zeek
+
+Also: host-observed network, endpoint vs network sensor, 1.1.3 vs 1.2
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+
+See also: [network activity (endpoint)](#network-activity-endpoint), [initiating process (endpoint network)](#initiating-process-endpoint-network)
 
 ### how a STIX bundle seeds a hunt
 
@@ -613,6 +657,16 @@ See also: [hunt types](#hunt-types), [hunt hypothesis](#hunt-hypothesis), [anoma
 
 ## I
 
+### image and driver load activity
+
+Also: image load, driver load, DLL load, DeviceImageLoadEvents
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+
+See also: [user-mode image load vs kernel driver load](#user-mode-image-load-vs-kernel-driver-load), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
+
 ### indicators associated with privilege escalation
 
 Also: privilege escalation indicators, integrity change, parent vs child identity, missing UAC consent
@@ -635,6 +689,16 @@ Also: organized data, context, parsed alert, rewritten log story
 
 See also: [data](#data), [intelligence](#intelligence)
 
+### initiating process (endpoint network)
+
+Also: who talked, DeviceNetworkEvents InitiatingProcess, Sysmon 3 Image
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+
+See also: [network activity (endpoint)](#network-activity-endpoint), [parent-child process](#parent-child-process)
+
 ### initiating process (file events)
 
 Also: file initiating process, who touched the file, DeviceFileEvents InitiatingProcess
@@ -642,8 +706,31 @@ Also: file initiating process, who touched the file, DeviceFileEvents Initiating
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [parent-child process](#parent-child-process)
+
+### initiating process (image load)
+
+Also: who loaded the module, image-load initiating process, Event 7 Image
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+
+See also: [image and driver load activity](#image-and-driver-load-activity), [parent-child process](#parent-child-process)
+
+### initiating process (registry events)
+
+Also: who changed the registry, DeviceRegistryEvents InitiatingProcess
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+
+See also: [registry activity](#registry-activity), [parent-child process](#parent-child-process)
 
 ### integrity / user context
 
@@ -770,6 +857,16 @@ See [qtype_name](#qtype_name).
 
 ## N
 
+### network activity (endpoint)
+
+Also: host network activity, endpoint network, DeviceNetworkEvents, Sysmon Event ID 3
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+
+See also: [host-observed vs Zeek](#host-observed-vs-zeek), [source / dest IP and port, protocol, direction](#source--dest-ip-and-port-protocol-direction)
+
 ### notice log
 
 Also: `notice`, Zeek notices
@@ -842,8 +939,21 @@ Also: PPID, parent process, InitiatingProcess, ParentImage
 |----------|--------|-------|
 | Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
 | Used | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line), [initiating process (file events)](#initiating-process-file-events)
+
+### path, hashes, signed vs unsigned
+
+Also: ImageLoaded path, loaded-image hash, Signed, SignatureStatus
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+
+See also: [image and driver load activity](#image-and-driver-load-activity), [file hashes](#file-hashes)
 
 ### path, name, and extension
 
@@ -1091,6 +1201,26 @@ Re-working an already-raised alert queue is SOC work, not this type.
 
 See also: [hunt types](#hunt-types)
 
+### registry activity
+
+Also: registry events, registry telemetry, DeviceRegistryEvents
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+
+See also: [hives and key → value](#hives-and-key--value), [registry set / delete / rename](#registry-set--delete--rename)
+
+### registry set / delete / rename
+
+Also: SetValue, CreateKey, DeleteKey, RenameKey, RegistryValueSet
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+
+See also: [registry activity](#registry-activity), [Sysmon 12 / 13 / 14 and DeviceRegistryEvents](#sysmon-12--13--14-and-deviceregistryevents)
+
 ### registry-based persistence
 
 Also: Run key persistence, RunOnce, Winlogon persistence, registry autorun
@@ -1099,7 +1229,7 @@ Also: Run key persistence, RunOnce, Winlogon persistence, registry autorun
 |----------|--------|-------|
 | Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
-See also: [persistence techniques](#persistence-techniques), [start menu / startup folder persistence](#start-menu--startup-folder-persistence)
+See also: [persistence techniques](#persistence-techniques), [start menu / startup folder persistence](#start-menu--startup-folder-persistence), [common persistence locations (Run, Services)](#common-persistence-locations-run-services)
 
 ---
 
@@ -1211,6 +1341,16 @@ Also: SNI does not match subject, lookalike certificate
 |----------|--------|-------|
 | Taught | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
 
+### source / dest IP and port, protocol, direction
+
+Also: SourceIp, DestinationIp, RemoteIP, RemotePort, Initiated, LocalIP
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+
+See also: [network activity (endpoint)](#network-activity-endpoint), [host-observed vs Zeek](#host-observed-vs-zeek)
+
 ### SPAN
 
 See [TAP / SPAN](#tap--span).
@@ -1298,6 +1438,36 @@ Also: DeviceFileEvents, Sysmon file events, ActionType FileCreated, FileDeleteDe
 | Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read)
+
+### Sysmon 12 / 13 / 14 and DeviceRegistryEvents
+
+Also: DeviceRegistryEvents, Sysmon registry events, SetValue, CreateKey, RenameValue
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+
+See also: [registry activity](#registry-activity), [registry set / delete / rename](#registry-set--delete--rename)
+
+### Sysmon 3 / 22 and DeviceNetworkEvents
+
+Also: DeviceNetworkEvents, Sysmon network connection, Sysmon DNS query, Event ID 3, Event ID 22
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+
+See also: [network activity (endpoint)](#network-activity-endpoint), [host-observed vs Zeek](#host-observed-vs-zeek)
+
+### Sysmon 6 / 7 and DeviceImageLoadEvents
+
+Also: DeviceImageLoadEvents, Sysmon driver load, Sysmon image load, Event ID 6, Event ID 7
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+
+See also: [image and driver load activity](#image-and-driver-load-activity), [user-mode image load vs kernel driver load](#user-mode-image-load-vs-kernel-driver-load)
 
 ---
 
@@ -1448,6 +1618,16 @@ Also: urlscan.io, URLScan page scan, URLScan for hunting
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+
+### user-mode image load vs kernel driver load
+
+Also: DLL load vs driver load, Event 7 vs Event 6, user-mode vs kernel
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+
+See also: [image and driver load activity](#image-and-driver-load-activity), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
 
 ### using ATT&CK to identify detection or visibility gaps
 
