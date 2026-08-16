@@ -35,6 +35,8 @@ Stop and say what is missing if any of these fail:
 
 **`1.6.x` reporting lessons:** three units — report types (`1.6.1`), timelines (`1.6.2`), notification/distribution (`1.6.3`). Do not collapse them. Do not turn this into shift change (`1.7`) or an intel product (`3.11`). Alert start/close clocks are `1.4.5`.
 
+**`1.7.x` shift-change lessons:** two units — changeover process (`1.7.1`), changeover report content (`1.7.2`). Do not collapse them. Do not turn this into reporting types/clocks/routing (`1.6`) or site-specific ops (`1.8`).
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

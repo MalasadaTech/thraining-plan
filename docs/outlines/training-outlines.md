@@ -307,10 +307,15 @@ c. Approved reporting channels
 
 **1.7 [K/T] Shift Change**
 
+SOC shift change. Reporting products are **1.6**. Site-specific tools and IR process are **1.8**. Each knowledge item has its own applying task.
+
 **1.7.1 [K] Shift changeover process**  
 a. Purpose and importance of a structured shift change  
 b. Who should participate in the shift change  
 c. Where the changeover report is recorded  
+
+**1.7.1.1 [T] Shift changeover process tasks**  
+1. Conduct or participate in a shift changeover  
 
 **1.7.2 [K] Required content of the changeover report**  
 a. Current open / in-progress investigations  
@@ -319,9 +324,8 @@ c. Upcoming planned service outages
 d. Ongoing service outages or outages that occurred during the shift  
 e. Urgent process or policy items  
 
-**1.7.3 [T] Shift change tasks**  
-1. Conduct or participate in a shift changeover  
-2. Produce a complete changeover report that includes all required elements  
+**1.7.2.1 [T] Changeover report content tasks**  
+1. Produce a complete changeover report that includes all required elements  
 
 **1.8 [T] Site-Specific Knowledge**
 

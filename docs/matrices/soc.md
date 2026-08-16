@@ -248,12 +248,21 @@ Shift-change reports are 1.7. Alert SLA clocks are 1.4.5. Tasks apply the knowle
 
 ## 1.7 Shift Change
 
+Reporting products are 1.6. Site-specific ops are 1.8. Tasks apply the knowledge they sit under.
+
+### 1.7.1 Shift changeover process
+
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
 | 1.7.1.1 | Shift changeover process | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level can analyze and improve the process. |
-| 1.7.1.2 | Required content of the changeover report | K | A | B | C | Same knowledge progression. |
-| 1.7.2.1 | Conduct or participate in a shift changeover | T | 2b | 3c | 4c | 3-level participates with guidance. 5-level can run it independently. 7-level is highly proficient and can train others. |
-| 1.7.2.2 | Produce a complete changeover report that includes all required elements | T | 2b | 3c | 4c | Same performance progression. |
+| 1.7.1.2 | Conduct or participate in a shift changeover | T | 2b | 3c | 4c | Extends “know the process” — name who runs it, who attends, your role, and the record location. |
+
+### 1.7.2 Required content of the changeover report
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.7.2.1 | Required content of the changeover report | K | A | B | C | Five required buckets. Same knowledge progression. |
+| 1.7.2.2 | Produce a complete changeover report that includes all required elements | T | 2b | 3c | 4c | Extends listing the buckets — write all five (or explicit none) and reject a missing-element draft. |
 
 ---
 

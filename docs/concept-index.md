@@ -254,6 +254,16 @@ Also: user-level alert category, Medium user token category
 
 See also: [category: root-level access](#category-root-level-access)
 
+### changeover report record location
+
+Also: SOC-CHANGEOVER, shift change log, system of record for changeover
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+
+See also: [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover), [producing a complete changeover report](#producing-a-complete-changeover-report)
+
 ### certificate subject / issuer
 
 Also: `subject`, `issuer`, CN, certificate name
@@ -339,6 +349,16 @@ Also: Run key, RunOnce, Services key, registry persistence locations as examples
 Persistence *techniques* are [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/).
 
 See also: [registry activity](#registry-activity), [registry-based persistence](#registry-based-persistence)
+
+### conducting or participating in a shift changeover
+
+Also: handoff line, who runs the changeover, reject informal shift change
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+
+See also: [shift change participants](#shift-change-participants), [changeover report record location](#changeover-report-record-location)
 
 ### conn log
 
@@ -1342,6 +1362,16 @@ Also: host network activity, endpoint network, DeviceNetworkEvents, Sysmon Event
 
 See also: [host-observed vs Zeek](#host-observed-vs-zeek), [source / dest IP and port, protocol, direction](#source--dest-ip-and-port-protocol-direction)
 
+### newly opened, updated, or closed reports (changeover)
+
+Also: what changed this shift, opened updated closed this shift
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+
+See also: [open / in-progress investigations (changeover)](#open--in-progress-investigations-changeover), [producing a complete changeover report](#producing-a-complete-changeover-report)
+
 ### notice log
 
 Also: `notice`, Zeek notices
@@ -1381,6 +1411,26 @@ See also: [DGA](#dga), [rcode_name](#rcode_name)
 ---
 
 ## O
+
+### ongoing / occurred-during-shift outages
+
+Also: sensor down this shift, occurred outage, lost visibility this shift
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+
+See also: [planned service outages](#planned-service-outages), [producing a complete changeover report](#producing-a-complete-changeover-report)
+
+### open / in-progress investigations (changeover)
+
+Also: still-open cases at changeover, in-progress investigations
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+
+See also: [newly opened, updated, or closed reports (changeover)](#newly-opened-updated-or-closed-reports-changeover), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
 ### operational intelligence
 
@@ -1495,6 +1545,16 @@ See also: [process activity](#process-activity), [parent-child process](#parent-
 
 See [uid](#uid).
 
+### planned service outages
+
+Also: upcoming maintenance, planned outage window
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+
+See also: [ongoing / occurred-during-shift outages](#ongoing--occurred-during-shift-outages), [producing a complete changeover report](#producing-a-complete-changeover-report)
+
 ### planning and direction
 
 Also: direction, intelligence planning, requirements direction
@@ -1576,6 +1636,16 @@ Also: processing, exploitation, process and exploit
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [information](#information)
 
+### producing a complete changeover report
+
+Also: five-bucket changeover, explicit none, reject missing-element draft
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+
+See also: [open / in-progress investigations (changeover)](#open--in-progress-investigations-changeover), [urgent process or policy items](#urgent-process-or-policy-items)
+
 ### proto
 
 See [5-tuple](#5-tuple).
@@ -1589,6 +1659,16 @@ Also: purpose of each lifecycle stage, activities in each stage
 | Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [stages of the intelligence lifecycle](#stages-of-the-intelligence-lifecycle)
+
+### purpose of a structured shift change
+
+Also: why structure changeover, prevent dropped cases at shift change
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+
+See also: [shift change participants](#shift-change-participants), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
 
 ### purpose of threat hunting
 
@@ -1867,6 +1947,16 @@ Also: normal teardown, established and terminated
 | Taught | [1.2.2 Conn Engine](../modules/01-soc/02-zeek/02-conn-engine/) | SOC, Hunter |
 
 See also: [conn_state](#conn_state)
+
+### shift change participants
+
+Also: outgoing lead, incoming lead, who attends changeover
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+
+See also: [purpose of a structured shift change](#purpose-of-a-structured-shift-change), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
 
 ### SIEM detection rules / correlation searches
 
@@ -2338,6 +2428,16 @@ Also: Suricata to SIEM to alert, alert chain, name each hop
 | Taught | [1.4.1 Alert Context and Investigation](../modules/01-soc/04-alerts/01-context-investigation/) | SOC, Hunter, CTI |
 
 See also: [alert configuration (what would fire)](#alert-configuration-what-would-fire), [Suricata rules](#suricata-rules)
+
+### urgent process or policy items
+
+Also: urgent policy at changeover, do-not-close without IR
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+
+See also: [producing a complete changeover report](#producing-a-complete-changeover-report), [open / in-progress investigations (changeover)](#open--in-progress-investigations-changeover)
 
 ### URI / URL
 

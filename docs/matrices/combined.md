@@ -147,11 +147,13 @@ Three teaching units. Tasks apply the knowledge they sit under. Shift-change rep
 
 ## 1.7 Shift Change (Primarily SOC)
 
+Two teaching units. Tasks apply the knowledge they sit under. Reporting products are **1.6**. Site-specific ops are **1.8**.
+
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 1.7.1.1 | Shift changeover process | K | A / B / C | A / B / B | A / A / A |
-| 1.7.1.2 | Required content of the changeover report | K | A / B / C | A / B / B | A / A / A |
-| 1.7.2.1 | Conduct or participate in a shift changeover | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.7.1.2 | Conduct or participate in a shift changeover | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.7.2.1 | Required content of the changeover report | K | A / B / C | A / B / B | A / A / A |
 | 1.7.2.2 | Produce a complete changeover report that includes all required elements | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
 
 ---
@@ -435,4 +437,4 @@ Three teaching units. Tasks apply the knowledge they sit under. Shift-change rep
 - Primary role ratings are taken from the individual matrices.
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
-- Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`). Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.
+- Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`). Shift change is two units (`1.7.1`–`1.7.2`). Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.
