@@ -817,7 +817,10 @@ a. Workflow for producing intelligence products
 b. Required reviews and approval authorities  
 
 **3.12.2.1 [T] Tasks**  
-1. Follow the local production and approval process for an intelligence product  
+1. Follow the local process for requesting collection or producing and approving an intelligence product  
+
+**3.12.2.2 [T] Tasks**  
+1. Document and archive intelligence products according to local standards  
 
 **3.12.3 [K] Local dissemination channels and customers**  
 a. Primary internal and external customers  

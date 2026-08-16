@@ -61,6 +61,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.11.x` CTI production lessons:** three children — finished products (`3.11.1` including actor profile `3.11.1.2`), dissemination (`3.11.2` including tailor and channels), RFIs (`3.11.3`). Generate only the asked child unless the caller asks for all of `3.11`. Do not write cluster `3.11` as one module. Audience *rewrite* floor is `3.1.6`. Attribution *assessment* is `3.1.7`. STIX bundle/TAXII is `3.10`. SOC ticket types/routing are `1.6`. Local approval and customer lists are `3.12`. Classroom markings/channels/RFI queue are lesson-only — not live org policy.
 
+**`3.12.x` CTI site-specific lessons:** three children — local priorities (`3.12.1`), local production/approval/archive (`3.12.2`), local customers/channels (`3.12.3`). Generate only the asked child unless the caller asks for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Teach that every org/section has its own, and a new analyst must obtain them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. SOC site orientation is `1.8`.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

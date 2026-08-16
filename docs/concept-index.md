@@ -132,8 +132,29 @@ Also: send on TIP or ticket or brief, reject Slack and public post
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+| Used | [3.12.3 Local Dissemination Channels and Customers](../modules/03-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
 
-See also: [approved dissemination methods and handling markings](#approved-dissemination-methods-and-handling-markings), [dissemination](#dissemination)
+See also: [approved dissemination methods and handling markings](#approved-dissemination-methods-and-handling-markings), [local customers and channels are site-specific](#local-customers-and-channels-are-site-specific)
+
+### local customers and channels are site-specific
+
+Also: classroom 3.11.2 channels are not the local list, do not invent a customer roster
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.3 Local Dissemination Channels and Customers](../modules/03-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
+
+See also: [disseminate using the correct local list](#disseminate-using-the-correct-local-list), [disseminate through approved channels](#disseminate-through-approved-channels)
+
+### disseminate using the correct local list
+
+Also: reject sending without checking local customers, send only from a shown list
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.3 Local Dissemination Channels and Customers](../modules/03-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
+
+See also: [local customers and channels are site-specific](#local-customers-and-channels-are-site-specific), [disseminate through approved channels](#disseminate-through-approved-channels)
 
 ### actionable for a hunt
 
@@ -2329,8 +2350,39 @@ Also: collection plan line, first collection class, what you will not collect
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
+| Used | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
 
-See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [identify collection source classes for a requirement](#identify-collection-source-classes-for-a-requirement)
+See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [follow the local collection-request or approval path](#follow-the-local-collection-request-or-approval-path)
+
+### local production and approval processes
+
+Also: do not invent a local workflow, produce approve collect-request archive
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
+
+See also: [follow the local collection-request or approval path](#follow-the-local-collection-request-or-approval-path), [document and archive products to local standards](#document-and-archive-products-to-local-standards)
+
+### follow the local collection-request or approval path
+
+Also: no send without the shown path, collection request is not a 3.1.8 plan
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
+
+See also: [local production and approval processes](#local-production-and-approval-processes), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
+
+### document and archive products to local standards
+
+Also: official copy not personal folder, local archive path
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
+
+See also: [local production and approval processes](#local-production-and-approval-processes), [follow the local collection-request or approval path](#follow-the-local-collection-request-or-approval-path)
 
 ### planning and direction
 
@@ -2370,8 +2422,51 @@ Also: PIR, ranked intelligence requirement
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+| Used | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
 
-See also: [purpose of intelligence requirements](#purpose-of-intelligence-requirements), [develop or refine intelligence requirements](#develop-or-refine-intelligence-requirements)
+Writing PIRs is 3.1.4. Obtaining *this section's current* list is [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/).
+
+See also: [purpose of intelligence requirements](#purpose-of-intelligence-requirements), [local PIRs are site-specific](#local-pirs-are-site-specific)
+
+### local PIRs are site-specific
+
+Also: every section has its own PIRs, do not invent a PIR list
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+
+See also: [identify current local intelligence priorities](#identify-current-local-intelligence-priorities), [Priority Intelligence Requirements (PIRs)](#priority-intelligence-requirements-pirs)
+
+### how local requirements drive analytic focus
+
+Also: in focus vs parked vs ask, interesting is not assigned
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+
+See also: [align analytic work to a stated local requirement](#align-analytic-work-to-a-stated-local-requirement), [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis)
+
+### identify current local intelligence priorities
+
+Also: orientation line, obtain the current PIR list, do not invent PIRs
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+
+See also: [local PIRs are site-specific](#local-pirs-are-site-specific), [align analytic work to a stated local requirement](#align-analytic-work-to-a-stated-local-requirement)
+
+### align analytic work to a stated local requirement
+
+Also: align Night Owl to a shown PIR, cannot mark in focus without a list
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+
+See also: [how local requirements drive analytic focus](#how-local-requirements-drive-analytic-focus), [identify current local intelligence priorities](#identify-current-local-intelligence-priorities)
 
 ### privilege escalation techniques
 

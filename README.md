@@ -115,6 +115,9 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/11-production/01-finished-products` | `3.11.1` / `3.11.1.1`–`3.11.1.2` | `3.11.1` + `3.11.1.1` |
 | `modules/03-cti/11-production/02-dissemination` | `3.11.2` / `3.11.2.1`–`3.11.2.3` | `3.11.2` + `3.11.2.1` |
 | `modules/03-cti/11-production/03-rfi` | `3.11.3` / `3.11.3.1` | `3.11.3` + `3.11.3.1` |
+| `modules/03-cti/12-site-specific/01-local-priorities` | `3.12.1` / `3.12.1.1` | `3.12.1` + `3.12.1.1` |
+| `modules/03-cti/12-site-specific/02-local-production` | `3.12.2` / `3.12.2.1`–`3.12.2.2` | `3.12.2` + `3.12.2.1` |
+| `modules/03-cti/12-site-specific/03-local-dissemination` | `3.12.3` / `3.12.3.1` | `3.12.3` + `3.12.3.1` |
 
 Record the mapping in each module `README.md`.
 
