@@ -174,6 +174,16 @@ Also: ACH matrix, fewest inconsistent, competing hypotheses
 
 See also: [Key Assumptions Check](#key-assumptions-check), [when to apply ACH vs Key Assumptions Check](#when-to-apply-ach-vs-key-assumptions-check)
 
+### apply a mitigation technique
+
+Also: concrete bias mitigation, not be aware
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+
+See also: [identify potential cognitive bias in a judgment](#identify-potential-cognitive-bias-in-a-judgment), [techniques to mitigate cognitive biases](#techniques-to-mitigate-cognitive-biases)
+
 ### apply a structured analytic technique
 
 Also: fill a mini ACH, fill a KAC table
@@ -447,6 +457,16 @@ Also: Windows privilege escalation, token theft, UAC bypass, service image abuse
 | Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
+
+### common cognitive biases that affect analysis
+
+Also: confirmation anchoring availability premature closure
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+
+See also: [impact of biases on intelligence products](#impact-of-biases-on-intelligence-products), [techniques to mitigate cognitive biases](#techniques-to-mitigate-cognitive-biases)
 
 ### common estimative terms and their meaning
 
@@ -1304,6 +1324,16 @@ Also: which collection class, OSINT vs internal first
 
 See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
 
+### identify potential cognitive bias in a judgment
+
+Also: name the tilt, textual tell of bias
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+
+See also: [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis), [apply a mitigation technique](#apply-a-mitigation-technique)
+
 ### interpret the likelihood expressed in an estimative statement
 
 Also: read an estimative term, interpret likely vs high confidence
@@ -1313,6 +1343,16 @@ Also: read an estimative term, interpret likely vs high confidence
 | Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [use estimative language in an analytic judgment](#use-estimative-language-in-an-analytic-judgment)
+
+### impact of biases on intelligence products
+
+Also: omitted evidence, stuck first label, isolate too early
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+
+See also: [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis), [identify potential cognitive bias in a judgment](#identify-potential-cognitive-bias-in-a-judgment)
 
 ### incident report
 
@@ -2726,6 +2766,16 @@ Also: technical intel, technical type, technical observables
 | Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types), [tactical intelligence](#tactical-intelligence)
+
+### techniques to mitigate cognitive biases
+
+Also: ACH to hunt an I, KAC a must-be, rewrite without the anchor
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+
+See also: [apply a mitigation technique](#apply-a-mitigation-technique), [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis)
 
 ### threat hunting in the security program
 

@@ -94,6 +94,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/02-tradecraft/01-estimative-language` | `3.2.1` / `3.2.1.1` | `3.2.1` + `3.2.1.1` |
 | `modules/03-cti/02-tradecraft/02-structured-techniques` | `3.2.2` / `3.2.2.1` | `3.2.2` + `3.2.2.1` |
 | `modules/03-cti/02-tradecraft/03-admiralty-code` | `3.2.3` / `3.2.3.1` | `3.2.3` + `3.2.3.1` |
+| `modules/03-cti/02-tradecraft/04-cognitive-biases` | `3.2.4` / `3.2.4.1` | `3.2.4` + `3.2.4.1` |
 
 Record the mapping in each module `README.md`.
 
