@@ -15,7 +15,22 @@
 - Non-primary roles receive minimal awareness ratings: **A** (Knowledge) or **1a** (Task) unless the skill has clear shared value.
 - "—" means the item is not applicable / no requirement for that role.
 
-Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those match the `#` column. Do not assign work by old display numbers (there is no “section 7 = all hunting”).
+Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `2.1`, `3.1`, …). Those match the `#` column. Do not assign work by old display numbers (there is no “section 7 = all hunting”).
+
+---
+
+## 0 How a SOC can operate (all roles)
+
+Shared intro. Same codes for SOC, Hunter, and CTI. Not a detection-engineer column yet. Firewall / IA and IR are hand-offs, not scored jobs. DYA / PRD are course fiction, not site policy.
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 0.1 | What a SOC is | K | A / B / B | A / B / B | A / B / B |
+| 0.2 | How work can move | K | A / B / B | A / B / B | A / B / B |
+| 0.3 | Jobs in one sentence | K | A / B / B | A / B / B | A / B / B |
+| 0.4 | Where the jobs lightly overlap | K | A / B / B | A / B / B | A / B / B |
+| 0.5 | How this course is laid out | K | A / B / B | A / B / B | A / B / B |
+| 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a / 2b / 2b | 1a / 2b / 2b | 1a / 2b / 2b |
 
 ---
 
@@ -440,4 +455,5 @@ Five teaching units. Classroom cards are stand-ins. IR process is **1.8.5**, not
 - Primary role ratings are taken from the individual matrices.
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
+- Section `0` is a shared intro (`0.1`–`0.5` K, `0.5.1` T). Same codes for every current role. No detection-engineer column until that track exists.
 - Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`). Shift change is two units (`1.7.1`–`1.7.2`). Site-specific is five units (`1.8.1`–`1.8.5`); IR process is `1.8.5`. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.

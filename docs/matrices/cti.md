@@ -13,6 +13,22 @@
 **Baseline for CTI Analyst**
 - Knowledge items generally start at **B**
 - Task items generally start at **3c**
+- Section **0** is the shared intro (same codes as SOC and Hunter), not CTI-primary work
+
+---
+
+## 0 How a SOC can operate
+
+Shared intro. Same idea on the SOC and hunter sheets. Not site policy.
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.1 | What a SOC is | K | A | B | B | Shared intro. Not CTI-primary; do not start at B/3c. |
+| 0.2 | How work can move | K | A | B | B | RFI and enrich are named, not taught. |
+| 0.3 | Jobs in one sentence | K | A | B | B | CTI is one desk among several. |
+| 0.4 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
+| 0.5 | How this course is laid out | K | A | B | B | CTI sits this after the SOC analyst block. |
+| 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a PIR or ticket. No 4d. |
 
 ---
 

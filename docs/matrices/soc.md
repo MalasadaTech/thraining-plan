@@ -12,6 +12,21 @@
 
 ---
 
+## 0 How a SOC can operate
+
+Shared intro. Same idea on the hunter and CTI sheets. Not site policy.
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.1 | What a SOC is | K | A | B | B | Facts at 3. Principles at 5/7. Not an analysis item. |
+| 0.2 | How work can move | K | A | B | B | One possible flow. Not “how DYA files tickets.” |
+| 0.3 | Jobs in one sentence | K | A | B | B | Name the desk. Do not teach that desk’s full job. |
+| 0.4 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
+| 0.5 | How this course is laid out | K | A | B | B | Order of the course, not a qualification on tools. |
+| 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a ticket path. No 4d. |
+
+---
+
 ## 1.1 Endpoint Logs
 
 Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive is 1.2.

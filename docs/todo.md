@@ -2,7 +2,8 @@
 
 Do these first (course order and story):
 
-- [ ] Write a short intro: what a SOC is, how it can run, the jobs, and where they lightly overlap (one-sentence hand-offs; no fake DYA ticket system)
+- [x] Put section 0 (How a SOC can operate) in the training outline
+- [ ] Write the section 0 intro lesson: what a SOC is, how it can run, the jobs, and where they lightly overlap (one-sentence hand-offs; no fake DYA ticket system)
 - [ ] Teach in this order (lesson IDs can stay as they are): intro → SOC analyst → CTI → hunting → detection engineers
 - [ ] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
 - [ ] Add a detection-engineers section after the threat hunters section

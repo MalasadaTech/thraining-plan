@@ -10,6 +10,50 @@ These rules apply across SOC Analyst, Threat Hunter, and CTI Analyst roles.
 
 ---
 
+# 0. How a SOC can operate
+
+A short front door. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
+
+The rest of the course follows this same sequence. The companion story at the end is this outline again, as one incident.
+
+**0.1 [K] What a SOC is**  
+a. A place that watches for bad or suspicious activity and starts the response  
+b. It is a team sport: more than one job sits in or next to the SOC  
+c. This course uses one company (DYA) and one adversary (PRD). Those are fiction, not your site’s policy  
+
+**0.2 [K] How work can move**  
+a. An analyst gets an alert and triages it  
+b. They send it to incident response and notify leadership  
+c. They ask intel for more work on that alert (an RFI)  
+d. Intel works the RFI, enriches it, and may find more adversary infrastructure  
+e. Extra infrastructure can go to whoever blocks (firewall / IA)  
+f. Intel can also hand hunters a hunt package  
+g. That same package can go to detection engineers to write or tune rules (MDE, YARA, Suricata, SIGMA, and so on)  
+
+**0.3 [K] Jobs in one sentence**  
+a. **SOC analyst** — work the alert in front of you; start the hand-offs  
+b. **Incident response** — contain and recover (this course points at them; it is not an IR school)  
+c. **CTI analyst** — answer the RFI; add context; find more of the adversary  
+d. **Threat hunter** — look for more activity the alerts missed, from a hunt package or a hypothesis  
+e. **Detection engineer** — turn what we learned into lasting rules  
+f. **Firewall / IA** — block what intel names (a hand-off, not a track in this course)  
+
+**0.4 [K] Where the jobs lightly overlap**  
+a. Everyone may look at the same host, log, or domain  
+b. The *product* is different: close/escalate an alert vs an intel note vs a hunt vs a rule  
+c. Asking the next desk is not doing that desk’s whole job  
+
+**0.5 [K] How this course is laid out**  
+a. After this intro: SOC analyst, then CTI, then hunting, then detection engineers  
+b. Inside SOC, you learn what detections *are* before you live in the alert queue  
+c. Site-specific “how we do it here” comes later and will differ by shop  
+d. After the lessons, a companion story retells this same flow as one PRD/DYA incident  
+
+**0.5.1 [T] Tasks**  
+1. Given a step in the flow, name the next hand-off and whose product it is (not how your site files the ticket)
+
+---
+
 # 1. SOC Analyst Fundamentals
 
 **1.1 [K/T] Endpoint Logs**
