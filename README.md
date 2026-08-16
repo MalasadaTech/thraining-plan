@@ -68,6 +68,11 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/01-soc/06-reporting/03-notification-distribution` | `1.6.3.1`–`1.6.3.2` | `1.6.3` + `1.6.3.1` |
 | `modules/01-soc/07-shift-change/01-changeover-process` | `1.7.1.1`–`1.7.1.2` | `1.7.1` + `1.7.1.1` |
 | `modules/01-soc/07-shift-change/02-changeover-report` | `1.7.2.1`–`1.7.2.2` | `1.7.2` + `1.7.2.1` |
+| `modules/01-soc/08-site-specific/01-environment-orientation` | `1.8.1.1`–`1.8.1.2` | `1.8.1` + `1.8.1.1` |
+| `modules/01-soc/08-site-specific/02-pcap-handling` | `1.8.2.1`–`1.8.2.2` | `1.8.2` tasks 1–2 |
+| `modules/01-soc/08-site-specific/03-tool-access` | `1.8.3.1`–`1.8.3.3` | `1.8.3` tasks 1–3 |
+| `modules/01-soc/08-site-specific/04-investigation-notes` | `1.8.4.1` | `1.8.4` task 1 |
+| `modules/01-soc/08-site-specific/05-incident-response` | `1.8.5.1` | `1.8.5` task 1 |
 | `modules/02-hunter/01-purpose` | `2.1.1` / `2.1.1.1` / `2.1.1.2` | `2.1` + `2.1.1` |
 | `modules/02-hunter/02-methodology/01-hunt-types` | `2.2.1` / `2.2.1.1`–`2.2.1.4` | `2.2.1` + `2.2.3` tasks 4–7 |
 | `modules/02-hunter/02-methodology/02-hunt-development` | `2.2.2` / `2.2.2.1`–`2.2.2.3` | `2.2.2` + `2.2.3` tasks 1–3 |
@@ -81,6 +86,11 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/01-core-intel/01-data-info-intel` | `3.1.1` / `3.1.1.1` | `3.1.1` + `3.1.1.1` |
 | `modules/03-cti/01-core-intel/02-intelligence-lifecycle` | `3.1.2` / `3.1.2.1` | `3.1.2` + `3.1.2.1` |
 | `modules/03-cti/01-core-intel/03-intelligence-types` | `3.1.3` / `3.1.3.1` | `3.1.3` + `3.1.3.1` |
+| `modules/03-cti/01-core-intel/04-intelligence-requirements` | `3.1.4` / `3.1.4.1`–`3.1.4.3` | `3.1.4` + `3.1.4.1` |
+| `modules/03-cti/01-core-intel/05-actionable-intelligence` | `3.1.5` / `3.1.5.1` | `3.1.5` + `3.1.5.1` |
+| `modules/03-cti/01-core-intel/06-tailoring-audience` | `3.1.6` / `3.1.6.1` | `3.1.6` + `3.1.6.1` |
+| `modules/03-cti/01-core-intel/07-attribution` | `3.1.7` / `3.1.7.1` | `3.1.7` + `3.1.7.1` |
+| `modules/03-cti/01-core-intel/08-collection-sources` | `3.1.8` / `3.1.8.1`–`3.1.8.2` | `3.1.8` + `3.1.8.1` |
 
 Record the mapping in each module `README.md`.
 

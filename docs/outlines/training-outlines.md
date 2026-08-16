@@ -327,7 +327,9 @@ e. Urgent process or policy items
 **1.7.2.1 [T] Changeover report content tasks**  
 1. Produce a complete changeover report that includes all required elements  
 
-**1.8 [T] Site-Specific Knowledge**
+**1.8 [K/T] Site-Specific Knowledge**
+
+Classroom stand-ins only — overlay the live site card. Not reporting products (**1.6**), not shift change (**1.7**), not Zeek log reading (**1.2**). Each heading is its own teaching unit. Tasks apply the knowledge they sit under.
 
 **1.8.1 [K] Environment orientation**  
 a. Path to the internet / network egress points  
@@ -337,6 +339,9 @@ d. Edge firewall architecture and key choke points
 e. Trusted third-party access / federation  
 f. Crown jewel / critical assets  
 g. PCAP collection points / sensors  
+
+**1.8.1.1 [T] Environment orientation tasks**  
+1. Identify which orientation fact applies to a given situation and why it is not the adjacent fact  
 
 **1.8.2 [T] PCAP handling**  
 1. How to download PCAP  
@@ -512,8 +517,9 @@ b. Types of requirements (e.g., Priority Intelligence Requirements)
 c. How requirements drive collection and analysis  
 
 **3.1.4.1 [T] Tasks**  
-1. Identify or draft a basic intelligence requirement  
-2. Explain how a given requirement drives analytic work  
+1. Identify or draft (develop or refine) a basic intelligence requirement  
+2. Translate stakeholder questions into clear intelligence requirements  
+3. Explain how a given requirement drives analytic work  
 
 **3.1.5 [K] Ensuring intelligence is actionable**  
 a. Characteristics of actionable intelligence  
@@ -536,6 +542,17 @@ c. Types of attribution (e.g., activity group vs. nation-state)
 
 **3.1.7.1 [T] Tasks**  
 1. Assess attribution statements for confidence and supporting evidence  
+
+**3.1.8 [K] Collection sources and methods**  
+a. OSINT  
+b. Commercial  
+c. Internal  
+
+**3.1.8.1 [T] Tasks**  
+1. Identify appropriate collection source classes for a given requirement  
+2. Plan collection against an intelligence requirement  
+
+Local request *process* (tickets, approval) is **3.12**. Tool *operation* is **3.3** / **2.3**.
 
 **3.2 [K] Analytic Tradecraft**  
 **3.2.1 [K] Estimative language**  

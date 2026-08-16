@@ -37,6 +37,10 @@ Stop and say what is missing if any of these fail:
 
 **`1.7.x` shift-change lessons:** two units — changeover process (`1.7.1`), changeover report content (`1.7.2`). Do not collapse them. Do not turn this into reporting types/clocks/routing (`1.6`) or site-specific ops (`1.8`).
 
+**`1.8.x` site-specific lessons:** five units — environment (`1.8.1`), PCAP handling (`1.8.2`), tool access (`1.8.3`), investigation notes (`1.8.4`), IR process (`1.8.5`). Do not collapse IR into notes. Classroom cards are stand-ins, not live org policy. Do not turn `1.8.2` into Zeek (`1.2`) or `1.8.5` into report routing (`1.6.3`).
+
+**`3.1.x` core intel lessons:** eight children (`3.1.1`–`3.1.8`). Generate only the asked child unless the caller asks for the rest of `3.1`. Do not write cluster `3.1` as one module. Collection *source classes* are `3.1.8` (not the lifecycle collection *stage* in `3.1.2`). Audience tailoring is `3.1.6`; finished production is `3.11`. Actor profile is `3.11.1.2`. Local collection *request process* is `3.12.2.1`.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

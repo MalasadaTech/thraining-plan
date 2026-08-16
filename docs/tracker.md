@@ -48,6 +48,11 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 1.6.3 | [modules/01-soc/06-reporting/03-notification-distribution](../modules/01-soc/06-reporting/03-notification-distribution/) |
 | 1.7.1 | [modules/01-soc/07-shift-change/01-changeover-process](../modules/01-soc/07-shift-change/01-changeover-process/) |
 | 1.7.2 | [modules/01-soc/07-shift-change/02-changeover-report](../modules/01-soc/07-shift-change/02-changeover-report/) |
+| 1.8.1 | [modules/01-soc/08-site-specific/01-environment-orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) |
+| 1.8.2 | [modules/01-soc/08-site-specific/02-pcap-handling](../modules/01-soc/08-site-specific/02-pcap-handling/) |
+| 1.8.3 | [modules/01-soc/08-site-specific/03-tool-access](../modules/01-soc/08-site-specific/03-tool-access/) |
+| 1.8.4 | [modules/01-soc/08-site-specific/04-investigation-notes](../modules/01-soc/08-site-specific/04-investigation-notes/) |
+| 1.8.5 | [modules/01-soc/08-site-specific/05-incident-response](../modules/01-soc/08-site-specific/05-incident-response/) |
 | 2.1 | [modules/02-hunter/01-purpose](../modules/02-hunter/01-purpose/) |
 | 2.2.1 | [modules/02-hunter/02-methodology/01-hunt-types](../modules/02-hunter/02-methodology/01-hunt-types/) |
 | 2.2.2 | [modules/02-hunter/02-methodology/02-hunt-development](../modules/02-hunter/02-methodology/02-hunt-development/) |
@@ -61,3 +66,8 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 3.1.1 | [modules/03-cti/01-core-intel/01-data-info-intel](../modules/03-cti/01-core-intel/01-data-info-intel/) |
 | 3.1.2 | [modules/03-cti/01-core-intel/02-intelligence-lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) |
 | 3.1.3 | [modules/03-cti/01-core-intel/03-intelligence-types](../modules/03-cti/01-core-intel/03-intelligence-types/) |
+| 3.1.4 | [modules/03-cti/01-core-intel/04-intelligence-requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) |
+| 3.1.5 | [modules/03-cti/01-core-intel/05-actionable-intelligence](../modules/03-cti/01-core-intel/05-actionable-intelligence/) |
+| 3.1.6 | [modules/03-cti/01-core-intel/06-tailoring-audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) |
+| 3.1.7 | [modules/03-cti/01-core-intel/07-attribution](../modules/03-cti/01-core-intel/07-attribution/) |
+| 3.1.8 | [modules/03-cti/01-core-intel/08-collection-sources](../modules/03-cti/01-core-intel/08-collection-sources/) |

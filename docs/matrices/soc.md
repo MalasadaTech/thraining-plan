@@ -268,13 +268,38 @@ Reporting products are 1.6. Site-specific ops are 1.8. Tasks apply the knowledge
 
 ## 1.8 Site-Specific Knowledge
 
+Classroom cards are stand-ins. Reporting products are 1.6. Shift change is 1.7. IR process is 1.8.5, not notes.
+
+### 1.8.1 Environment orientation
+
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.8.1.1 | Environment orientation | K | A | B | C | 3-level needs basic facts about the environment. 5-level understands how the pieces relate. 7-level can analyze and apply deeper knowledge. |
-| 1.8.2.1 | How to download PCAP | T | 2b | 3c | 4c | Standard operational task progression. |
-| 1.8.2.2 | What tool to use to view PCAP | T | 2b | 3c | 4c | Same performance progression. |
-| 1.8.3.1 | How to access required tools and their URLs | T | 2b | 3c | 4c | Core daily skill. |
-| 1.8.3.2 | How to request tools to be installed | T | 2b | 3c | 4c | Same progression. |
-| 1.8.3.3 | How to request access (e.g., SIEM) | T | 2b | 3c | 4c | Same progression. |
-| 1.8.4.1 | Where and how to save investigation notes | T | 2b | 3c | 4c | Must be consistent and reliable by 5-level. |
-| 1.8.4.2 | Follow site-specific incident response processes | T | 2b | 3c | 4c | Critical operational task – standard progression. |
+| 1.8.1.1 | Environment orientation | K | A | B | C | Seven orientation facts. 3-level needs the card. 5-level relates the pieces. 7-level can analyze gaps. |
+| 1.8.1.2 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b | 3c | 4c | Extends listing a–g — name the fact and reject the neighbor. |
+
+### 1.8.2 PCAP handling
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.8.2.1 | How to download PCAP | T | 2b | 3c | 4c | Name the site path for this case and reject the wrong store. |
+| 1.8.2.2 | What tool to use to view PCAP | T | 2b | 3c | 4c | Name the viewer and reject the wrong tool. Not Zeek log reading (1.2). |
+
+### 1.8.3 Tool access and requests
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.8.3.1 | How to access required tools and their URLs | T | 2b | 3c | 4c | Open the named URL from the site card. |
+| 1.8.3.2 | How to request tools to be installed | T | 2b | 3c | 4c | Install ticket — not a random download. |
+| 1.8.3.3 | How to request access (e.g., SIEM) | T | 2b | 3c | 4c | Access ticket — not a shared password. |
+
+### 1.8.4 Investigation documentation
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.8.4.1 | Where and how to save investigation notes | T | 2b | 3c | 4c | Approved location + reject desktop / chat-only. |
+
+### 1.8.5 Incident response processes
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.8.5.1 | Follow site-specific incident response processes | T | 2b | 3c | 4c | Next process step + reject freelance containment. Not 1.6.3 routing alone. |

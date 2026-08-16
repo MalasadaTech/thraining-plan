@@ -42,6 +42,56 @@ See also: [conn log](#conn-log)
 
 See [qtype_name](#qtype_name).
 
+### accessing required tools and their URLs
+
+Also: tool URL, open the SIEM URL
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.3 Tool Access and Requests](../modules/01-soc/08-site-specific/03-tool-access/) | SOC, Hunter, CTI |
+
+See also: [requesting access (e.g., SIEM)](#requesting-access-eg-siem), [requesting a tool to be installed](#requesting-a-tool-to-be-installed)
+
+### adjust an intelligence product for a specified audience
+
+Also: rewrite for audience, keep cut format
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.6 Tailoring Output to the Audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
+
+See also: [audience analysis](#audience-analysis), [adjusting content, format, and detail for consumers](#adjusting-content-format-and-detail-for-consumers)
+
+### adjusting content, format, and detail for consumers
+
+Also: content format detail, tailor product shape
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.6 Tailoring Output to the Audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
+
+See also: [audience analysis](#audience-analysis), [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience)
+
+### assess attribution statements for confidence and evidence
+
+Also: over-claim, supported attribution, assess the claim
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+
+See also: [levels of confidence in attribution](#levels-of-confidence-in-attribution), [types of attribution (activity group vs nation-state)](#types-of-attribution-activity-group-vs-nation-state)
+
+### audience analysis
+
+Also: who owns the decision, audience questions
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.6 Tailoring Output to the Audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
+
+See also: [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience), [tailoring output to the audience](#adjusting-content-format-and-detail-for-consumers)
+
 ### actionable for a hunt
 
 Also: actionable CTI for hunting, hunt question telemetry scope
@@ -264,6 +314,16 @@ Also: SOC-CHANGEOVER, shift change log, system of record for changeover
 
 See also: [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
+### characteristics of actionable intelligence
+
+Also: five actionable checks, who what timely confidence
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.5 Ensuring Intelligence Is Actionable](../modules/03-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
+
+See also: [evaluate whether intelligence is actionable](#evaluate-whether-intelligence-is-actionable), [common reasons intelligence fails to be actionable](#common-reasons-intelligence-fails-to-be-actionable)
+
 ### certificate subject / issuer
 
 Also: `subject`, `issuer`, CN, certificate name
@@ -294,9 +354,19 @@ Also: collect, intelligence collection, raw intake
 |----------|--------|-------|
 | Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
-Collection *sources* (OSINT, commercial, internal) are a later item (3.1.8), not this module.
+Collection *sources* (OSINT, commercial, internal) are [3.1.8 Collection Sources](../modules/03-cti/01-core-intel/08-collection-sources/), not this module.
 
-See also: [intelligence lifecycle](#intelligence-lifecycle), [data](#data)
+See also: [intelligence lifecycle](#intelligence-lifecycle), [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal)
+
+### collection source classes (OSINT, commercial, internal)
+
+Also: OSINT, commercial TIP, internal telemetry as collection class
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
+
+See also: [identify collection source classes for a requirement](#identify-collection-source-classes-for-a-requirement), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
 
 ### classify an intelligence product or requirement by type
 
@@ -337,6 +407,16 @@ Also: Windows privilege escalation, token theft, UAC bypass, service image abuse
 | Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
+
+### common reasons intelligence fails to be actionable
+
+Also: IOC list only, too late, no so-what, not actionable
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.5 Ensuring Intelligence Is Actionable](../modules/03-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
+
+See also: [characteristics of actionable intelligence](#characteristics-of-actionable-intelligence), [evaluate whether intelligence is actionable](#evaluate-whether-intelligence-is-actionable)
 
 ### common persistence locations (Run, Services)
 
@@ -415,6 +495,16 @@ Also: convert to SIEM query, convert to Zeek query, internal query from enrichme
 
 See also: [hunting leads from external tools](#hunting-leads-from-external-tools), [tool capabilities for hunting](#tool-capabilities-for-hunting)
 
+### crown jewel / critical assets
+
+Also: pay-db-01, crown jewel host, critical asset
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [key network segments and data flow](#key-network-segments-and-data-flow), [site-specific incident response processes](#site-specific-incident-response-processes)
+
 ### Cyber Kill Chain purpose
 
 Also: Kill Chain, Lockheed Martin Kill Chain
@@ -428,6 +518,16 @@ See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and re
 ---
 
 ## D
+
+### develop or refine intelligence requirements
+
+Also: draft a PIR, refine a requirement
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+
+See also: [purpose of intelligence requirements](#purpose-of-intelligence-requirements), [translate stakeholder questions into clear intelligence requirements](#translate-stakeholder-questions-into-clear-intelligence-requirements)
 
 ### Diamond Model purpose
 
@@ -553,6 +653,26 @@ See also: [beaconing](#beaconing)
 
 ## E
 
+### edge firewall / choke points
+
+Also: fw-edge, fw-ot, network choke point
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors)
+
+### email flow and related systems
+
+Also: mail-edge, MX path, email flow vs egress
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [identifying which orientation fact applies and rejecting the adjacent fact](#identifying-which-orientation-fact-applies-and-rejecting-the-adjacent-fact)
+
 ### escalation timeline when more information is needed
 
 Also: blocked escalate clock, escalate-for-more-info
@@ -576,6 +696,26 @@ Also: feedback, evaluation, intelligence feedback loop
 | Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle)
+
+### evaluate whether intelligence is actionable
+
+Also: score the five checks, actionable pass fail
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.5 Ensuring Intelligence Is Actionable](../modules/03-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
+
+See also: [characteristics of actionable intelligence](#characteristics-of-actionable-intelligence), [actionable for a hunt](#actionable-for-a-hunt)
+
+### explain how a given requirement drives analytic work
+
+Also: what the PIR stops you collecting, drive collection and analysis
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+
+See also: [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis), [develop or refine intelligence requirements](#develop-or-refine-intelligence-requirements)
 
 ### event engine
 
@@ -843,6 +983,26 @@ Also: Suricata vs Zeek, signature vs parsed session
 
 See also: [Suricata rules](#suricata-rules), [http log](#http-log)
 
+### how to download PCAP
+
+Also: PCAP-REQ, pcap.harbor.internal, hot vs warm PCAP
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.2 PCAP Handling](../modules/01-soc/08-site-specific/02-pcap-handling/) | SOC, Hunter, CTI |
+
+See also: [what tool to use to view PCAP](#what-tool-to-use-to-view-pcap), [PCAP collection points / sensors](#pcap-collection-points--sensors)
+
+### how requirements drive collection and analysis
+
+Also: requirement drives work, PIR drives collect and analyze
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+
+See also: [explain how a given requirement drives analytic work](#explain-how-a-given-requirement-drives-analytic-work), [purpose of intelligence requirements](#purpose-of-intelligence-requirements)
+
 ### how YARA is used with files / memory
 
 Also: YARA file scan, YARA memory scan
@@ -1054,6 +1214,26 @@ Also: start clock at risk, close/escalate clock at risk
 
 See also: [start clock (time to begin investigation)](#start-clock-time-to-begin-investigation), [close/escalate clock (time to process)](#closeescalate-clock-time-to-process)
 
+### identifying which orientation fact applies and rejecting the adjacent fact
+
+Also: orientation neighbor, egress vs email vs sensor gap
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors)
+
+### identify collection source classes for a requirement
+
+Also: which collection class, OSINT vs internal first
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
+
+See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
+
 ### incident report
 
 Also: incident case record, IR case report
@@ -1224,6 +1404,16 @@ Also: Reconnaissance Delivery Exploitation Installation C2 Actions on Objectives
 
 See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose)
 
+### key network segments and data flow
+
+Also: user VLAN, OT segment, Harbor segments
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [crown jewel / critical assets](#crown-jewel--critical-assets)
+
 ---
 
 ## L
@@ -1237,6 +1427,16 @@ Also: duty SOC lead awareness, notify leadership
 | Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [notification chart / matrix](#notification-chart--matrix), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
+
+### levels of confidence in attribution
+
+Also: low medium high attribution, classroom confidence scale
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+
+See also: [assess attribution statements for confidence and evidence](#assess-attribution-statements-for-confidence-and-evidence), [purpose and challenges of attribution](#purpose-and-challenges-of-attribution)
 
 ### logging framework
 
@@ -1500,6 +1700,16 @@ Also: PPID, parent process, InitiatingProcess, ParentImage
 
 See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line), [initiating process (file events)](#initiating-process-file-events)
 
+### PCAP collection points / sensors
+
+Also: span-1, span-2, no OT span, where sensors sit
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [how to download PCAP](#how-to-download-pcap), [edge firewall / choke points](#edge-firewall--choke-points)
+
 ### path, hashes, signed vs unsigned
 
 Also: ImageLoaded path, loaded-image hash, Signed, SignatureStatus
@@ -1519,6 +1729,16 @@ Also: FolderPath, FileName, TargetFilename, file extension, double extension
 | Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read)
+
+### path to the internet / network egress
+
+Also: fw-edge-01, fw-guest, NAT egress
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [email flow and related systems](#email-flow-and-related-systems), [edge firewall / choke points](#edge-firewall--choke-points)
 
 ### persistence techniques
 
@@ -1555,6 +1775,16 @@ Also: upcoming maintenance, planned outage window
 
 See also: [ongoing / occurred-during-shift outages](#ongoing--occurred-during-shift-outages), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
+### plan collection against an intelligence requirement
+
+Also: collection plan line, first collection class, what you will not collect
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
+
+See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [identify collection source classes for a requirement](#identify-collection-source-classes-for-a-requirement)
+
 ### planning and direction
 
 Also: direction, intelligence planning, requirements direction
@@ -1563,7 +1793,7 @@ Also: direction, intelligence planning, requirements direction
 |----------|--------|-------|
 | Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
-How to write PIRs is a later item (3.1.4), not this module.
+How to write PIRs is [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/), not this module.
 
 See also: [intelligence lifecycle](#intelligence-lifecycle)
 
@@ -1585,6 +1815,16 @@ Also: hunt priority, rank hunts, why this hunt first
 | Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [scoping a hunt](#scoping-a-hunt), [hunt development concepts](#hunt-development-concepts)
+
+### Priority Intelligence Requirements (PIRs)
+
+Also: PIR, ranked intelligence requirement
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+
+See also: [purpose of intelligence requirements](#purpose-of-intelligence-requirements), [develop or refine intelligence requirements](#develop-or-refine-intelligence-requirements)
 
 ### privilege escalation techniques
 
@@ -1660,6 +1900,16 @@ Also: purpose of each lifecycle stage, activities in each stage
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [stages of the intelligence lifecycle](#stages-of-the-intelligence-lifecycle)
 
+### purpose and challenges of attribution
+
+Also: why attribute, attribution challenges, false flags shared infra
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+
+See also: [levels of confidence in attribution](#levels-of-confidence-in-attribution), [types of attribution (activity group vs nation-state)](#types-of-attribution-activity-group-vs-nation-state)
+
 ### purpose of a structured shift change
 
 Also: why structure changeover, prevent dropped cases at shift change
@@ -1669,6 +1919,16 @@ Also: why structure changeover, prevent dropped cases at shift change
 | Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
 
 See also: [shift change participants](#shift-change-participants), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
+
+### purpose of intelligence requirements
+
+Also: why write a requirement, focus collection on a decision
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+
+See also: [Priority Intelligence Requirements (PIRs)](#priority-intelligence-requirements-pirs), [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis)
 
 ### purpose of threat hunting
 
@@ -1866,6 +2126,26 @@ Also: RFI, information request to another team
 
 See also: [incident report](#incident-report), [other common report types](#other-common-report-types)
 
+### requesting a tool to be installed
+
+Also: SOFT-REQ, install Wireshark ticket
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.3 Tool Access and Requests](../modules/01-soc/08-site-specific/03-tool-access/) | SOC, Hunter, CTI |
+
+See also: [accessing required tools and their URLs](#accessing-required-tools-and-their-urls), [requesting access (e.g., SIEM)](#requesting-access-eg-siem)
+
+### requesting access (e.g., SIEM)
+
+Also: ACCESS-REQ, SIEM 403, entitlement ticket
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.3 Tool Access and Requests](../modules/01-soc/08-site-specific/03-tool-access/) | SOC, Hunter, CTI |
+
+See also: [accessing required tools and their URLs](#accessing-required-tools-and-their-urls), [requesting a tool to be installed](#requesting-a-tool-to-be-installed)
+
 ### routing a report (recipients, leadership, channel)
 
 Also: route line, reject wrong reporting channel
@@ -2007,6 +2287,16 @@ Also: Silent Push, passive DNS for hunting, infra clustering for hunting
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+
+### site-specific incident response processes
+
+Also: IR card, Sev1 Sev2 Sev3, reject freelance containment
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.5 Incident Response Processes](../modules/01-soc/08-site-specific/05-incident-response/) | SOC, Hunter, CTI |
+
+See also: [crown jewel / critical assets](#crown-jewel--critical-assets), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
 
 ### smtp log
 
@@ -2256,6 +2546,36 @@ Also: tactical intel, tactical type
 | Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types), [technical intelligence](#technical-intelligence)
+
+### trusted third-party access / federation
+
+Also: vpn-vendor, idp-corp, federation access
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+
+See also: [key network segments and data flow](#key-network-segments-and-data-flow), [identifying which orientation fact applies and rejecting the adjacent fact](#identifying-which-orientation-fact-applies-and-rejecting-the-adjacent-fact)
+
+### translate stakeholder questions into clear intelligence requirements
+
+Also: rewrite a messy ask, translate are we safe
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+
+See also: [develop or refine intelligence requirements](#develop-or-refine-intelligence-requirements), [purpose of intelligence requirements](#purpose-of-intelligence-requirements)
+
+### types of attribution (activity group vs nation-state)
+
+Also: activity group, cluster vs country, nation-state claim
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+
+See also: [assess attribution statements for confidence and evidence](#assess-attribution-statements-for-confidence-and-evidence), [purpose and challenges of attribution](#purpose-and-challenges-of-attribution)
 
 ### technical intelligence
 
@@ -2576,6 +2896,26 @@ Also: drop no telemetry expired IOCs noise, what not to extract from a report
 | Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [visibility gaps](#visibility-gaps)
+
+### what tool to use to view PCAP
+
+Also: Wireshark viewer, tshark, not Zeek-as-PCAP
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.2 PCAP Handling](../modules/01-soc/08-site-specific/02-pcap-handling/) | SOC, Hunter, CTI |
+
+See also: [how to download PCAP](#how-to-download-pcap), [requesting a tool to be installed](#requesting-a-tool-to-be-installed)
+
+### where and how to save investigation notes
+
+Also: ticket worklog, fact vs hypothesis, reject desktop notes
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.8.4 Investigation Documentation](../modules/01-soc/08-site-specific/04-investigation-notes/) | SOC, Hunter, CTI |
+
+See also: [changeover report record location](#changeover-report-record-location), [site-specific incident response processes](#site-specific-incident-response-processes)
 
 ### weird log
 

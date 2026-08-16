@@ -160,16 +160,19 @@ Two teaching units. Tasks apply the knowledge they sit under. Reporting products
 
 ## 1.8 Site-Specific Operational Knowledge (Mixed)
 
+Five teaching units. Classroom cards are stand-ins. IR process is **1.8.5**, not notes. Reporting products are **1.6**. Shift change is **1.7**.
+
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 1.8.1.1 | Environment orientation | K | A / B / C | B / C / C | A / B / B |
+| 1.8.1.2 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 2b / 3c |
 | 1.8.2.1 | How to download PCAP | T | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 1a / 2b |
 | 1.8.2.2 | What tool to use to view PCAP | T | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 1a / 2b |
 | 1.8.3.1 | How to access required tools and their URLs | T | 2b / 3c / 4c | 3c / 4c / 4c | 2b / 3c / 4c |
 | 1.8.3.2 | How to request tools to be installed | T | 2b / 3c / 4c | 3c / 4c / 4c | 2b / 3c / 4c |
 | 1.8.3.3 | How to request access (e.g., SIEM) | T | 2b / 3c / 4c | 3c / 4c / 4c | 2b / 3c / 4c |
 | 1.8.4.1 | Where and how to save investigation notes | T | 2b / 3c / 4c | 3c / 4c / 4c | 2b / 3c / 4c |
-| 1.8.4.2 | Follow site-specific incident response processes | T | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 1.8.5.1 | Follow site-specific incident response processes | T | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 2b / 3c |
 
 ---
 
@@ -437,4 +440,4 @@ Two teaching units. Tasks apply the knowledge they sit under. Reporting products
 - Primary role ratings are taken from the individual matrices.
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
-- Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`). Shift change is two units (`1.7.1`–`1.7.2`). Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.
+- Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`). Shift change is two units (`1.7.1`–`1.7.2`). Site-specific is five units (`1.8.1`–`1.8.5`); IR process is `1.8.5`. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.
