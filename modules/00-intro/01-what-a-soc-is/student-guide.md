@@ -28,7 +28,7 @@ By the end of this module, you will be able to:
 
 **What it is:** A SOC watches for bad or suspicious activity and **starts** the response. It is not every security job in the company.
 
-**Team sport:** More than one job sits in or next to the SOC. Who does what, and how work moves, are later hours (**0.2**, **0.3**).
+**Team sport:** More than one job sits in or next to the SOC. Who does what is **0.2**. How work moves is **0.3**.
 
 **This course’s story:** We use one company — **Dixon, Yamada, & Associates (DYA)**, a law firm — and one adversary name — **Pink River Dolphin (PRD)**. Those names are **fiction for this course**. They are not your shop’s rules.
 
@@ -46,12 +46,12 @@ By the end of this module, you will be able to:
 
 A SOC watches and starts the response. Several jobs sit nearby. DYA and PRD are for this course, not your site.
 
-**Next:** **0.2** How work can move.
+**Next:** **0.2** Jobs in one sentence.
 
 ---
 
 ## 4. Related modules
 
-- 0.2 – How work can move
-- 0.3 – Jobs in one sentence
+- 0.2 – Jobs in one sentence
+- 0.3 – How work can move
 - [docs/story-bible.md](../../../docs/story-bible.md) – DYA / PRD names

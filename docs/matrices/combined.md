@@ -28,8 +28,8 @@ Shared intro. Same codes for SOC, Hunter, and CTI. Not a detection-engineer colu
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 0.1 | What a SOC is | K | A / B / B | A / B / B | A / B / B |
-| 0.2 | How work can move | K | A / B / B | A / B / B | A / B / B |
-| 0.3 | Jobs in one sentence | K | A / B / B | A / B / B | A / B / B |
+| 0.2 | Jobs in one sentence | K | A / B / B | A / B / B | A / B / B |
+| 0.3 | How work can move | K | A / B / B | A / B / B | A / B / B |
 | 0.4 | Where the jobs lightly overlap | K | A / B / B | A / B / B | A / B / B |
 | 0.5 | How this course is laid out | K | A / B / B | A / B / B | A / B / B |
 | 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a / 2b / 2b | 1a / 2b / 2b | 1a / 2b / 2b |

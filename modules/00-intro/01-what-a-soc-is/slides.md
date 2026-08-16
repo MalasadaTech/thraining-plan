@@ -23,7 +23,7 @@ First hour of the course. We only name what a SOC is. We do not walk an alert ye
 Three facts. Then we stop.
 
 **Speaker Notes:**  
-This is the front door. Next hour (0.2) is how work moves. No lab today.
+This is the front door. Next hour (0.2) names each job in one sentence. No lab today.
 
 ---
 
@@ -43,7 +43,7 @@ A SOC watches for bad or suspicious activity and **starts** the response.
 Intel, hunting, detections, and IR can sit in or next to the SOC.
 
 **Speaker Notes:**  
-Do not name their products yet. That is 0.3. Here they only need “more than one job,” not “the whole company.”
+Do not name their products yet. That is 0.2. Here they only need “more than one job,” not “the whole company.”
 
 ---
 
@@ -85,7 +85,7 @@ Same three facts. Do not preview the full hand-off chain.
 ### Slide 8 – Next
 **Title:** Next
 
-**0.2** How work can move
+**0.2** Jobs in one sentence
 
 **Speaker Notes:**  
 That is the next small piece. Sit down.

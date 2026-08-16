@@ -21,7 +21,15 @@ a. A place that watches for bad or suspicious activity and starts the response
 b. It is a team sport: more than one job sits in or next to the SOC  
 c. This course uses one company (DYA) and one adversary (PRD). Those are fiction, not your site’s policy  
 
-**0.2 [K] How work can move**  
+**0.2 [K] Jobs in one sentence**  
+a. **SOC analyst** — work the alert in front of you; start the hand-offs  
+b. **Incident response** — contain and recover (this course points at them; it does not train IR)  
+c. **CTI analyst** — answer the RFI; add context; find more of the adversary  
+d. **Threat hunter** — look for more activity the alerts missed, from a hunt package or a hypothesis  
+e. **Detection engineer** — turn what we learned into lasting rules  
+f. **Firewall / IA** — block what intel names (a hand-off, not a track in this course)  
+
+**0.3 [K] How work can move**  
 a. An analyst gets an alert and triages it  
 b. They send it to incident response and notify leadership  
 c. They ask intel for more work on that alert (an RFI)  
@@ -29,14 +37,6 @@ d. Intel works the RFI, enriches it, and may find more adversary infrastructure
 e. Extra infrastructure can go to whoever blocks (firewall / IA)  
 f. Intel can also hand hunters a hunt package  
 g. That same package can go to detection engineers to write or tune rules (MDE, YARA, Suricata, SIGMA, and so on)  
-
-**0.3 [K] Jobs in one sentence**  
-a. **SOC analyst** — work the alert in front of you; start the hand-offs  
-b. **Incident response** — contain and recover (this course points at them; it is not an IR school)  
-c. **CTI analyst** — answer the RFI; add context; find more of the adversary  
-d. **Threat hunter** — look for more activity the alerts missed, from a hunt package or a hypothesis  
-e. **Detection engineer** — turn what we learned into lasting rules  
-f. **Firewall / IA** — block what intel names (a hand-off, not a track in this course)  
 
 **0.4 [K] Where the jobs lightly overlap**  
 a. Everyone may look at the same host, log, or domain  

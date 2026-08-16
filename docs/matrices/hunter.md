@@ -24,8 +24,8 @@ Shared intro. Same idea on the SOC and CTI sheets. Not site policy.
 | # | Item | Type | Hunter 3 | Hunter 5 | Hunter 7 | Justification |
 |---|------|------|----------|----------|----------|---------------|
 | 0.1 | What a SOC is | K | A | B | B | Shared intro. Not hunter-primary; do not start at B/3c. |
-| 0.2 | How work can move | K | A | B | B | One possible flow. Hunt package is a later beat. |
-| 0.3 | Jobs in one sentence | K | A | B | B | Hunter is one desk among several. |
+| 0.2 | Jobs in one sentence | K | A | B | B | Hunter is one desk among several. |
+| 0.3 | How work can move | K | A | B | B | One possible flow. Hunt package is a later beat. |
 | 0.4 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
 | 0.5 | How this course is laid out | K | A | B | B | Hunters sit this after SOC and CTI. |
 | 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a hunt ticket. No 4d. |

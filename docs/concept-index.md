@@ -1048,6 +1048,16 @@ Evidence-bound mapping is [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](..
 
 See also: [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment), [reject a TTP that does not apply here](#reject-a-ttp-that-does-not-apply-here)
 
+### jobs in one sentence
+
+Also: SOC analyst, CTI, hunter, detection engineer, IR, firewall IA one-liners
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.2 Jobs in one sentence](../modules/00-intro/02-jobs-in-one-sentence/) | SOC, Hunter, CTI |
+
+See also: [what a SOC is](#what-a-soc-is)
+
 ### what a SOC is
 
 Also: Security Operations Center, watch and start the response

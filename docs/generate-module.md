@@ -19,7 +19,7 @@ Stop and say what is missing if any of these fail:
 
 **Assign work by ID prefix:** `0.x` = shared intro (`modules/00-intro/`). `1.x` = SOC (`modules/01-soc/`), `2.x` = Hunt (`modules/02-hunter/`), `3.x` = CTI (`modules/03-cti/`). `4.x` = Detection Engineer (folder when that track is built).
 
-**`0.x` intro lessons:** five children (`0.1`–`0.5`). Generate only the asked child. Do not write cluster `0` as one module unless the human asks for the whole intro in one folder. `0.1` is what a SOC *is*. How work moves is `0.2`. Job one-liners are `0.3`. Overlap is `0.4`. Course layout and the hand-off task are `0.5` / `0.5.1`. DYA / PRD are course fiction, not site policy. Do not invent tickets, PIR lists, or approval chains.
+**`0.x` intro lessons:** five children (`0.1`–`0.5`). Generate only the asked child. Do not write cluster `0` as one module unless the human asks for the whole intro in one folder. `0.1` is what a SOC *is*. Job one-liners are `0.2`. How work moves is `0.3`. Overlap is `0.4`. Course layout and the hand-off task are `0.5` / `0.5.1`. DYA / PRD are course fiction, not site policy. Do not invent tickets, PIR lists, or approval chains.
 
 **How big is one lesson**
 
