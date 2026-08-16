@@ -86,3 +86,7 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 3.10,Common STIX Objects,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.10.1–3.10.2"
 3.10.1,Core STIX Objects,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 3.10.2,How STIX Objects Are Used in Intelligence Production,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.11,Intelligence Production & Dissemination,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.11.1–3.11.3"
+3.11.1,Creating Finished Intelligence Products,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.11.2,Disseminating Intelligence to the Correct Audiences,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.11.3,Handling RFIs,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review

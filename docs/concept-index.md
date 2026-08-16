@@ -89,8 +89,51 @@ Also: who owns the decision, audience questions
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.1.6 Tailoring Output to the Audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
+| Used | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
 
-See also: [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience), [tailoring output to the audience](#adjusting-content-format-and-detail-for-consumers)
+See also: [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience), [tailor products to different audiences](#tailor-products-to-different-audiences)
+
+### audience identification for dissemination
+
+Also: who owns the next decision, SOC vs leadership audience
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+
+See also: [audience analysis](#audience-analysis), [disseminate through approved channels](#disseminate-through-approved-channels)
+
+### approved dissemination methods and handling markings
+
+Also: classroom TLP, TLP:AMBER, approved intel channel
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+
+Classroom TLP/channel cards are lesson-only, not live org policy.
+
+See also: [disseminate through approved channels](#disseminate-through-approved-channels), [audience identification for dissemination](#audience-identification-for-dissemination)
+
+### tailor products to different audiences
+
+Also: technical vs leadership product, two sends same facts
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+
+See also: [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience), [audience identification for dissemination](#audience-identification-for-dissemination)
+
+### disseminate through approved channels
+
+Also: send on TIP or ticket or brief, reject Slack and public post
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+
+See also: [approved dissemination methods and handling markings](#approved-dissemination-methods-and-handling-markings), [dissemination](#dissemination)
 
 ### actionable for a hunt
 
@@ -807,10 +850,11 @@ Also: disseminate, deliver intelligence, intelligence dissemination
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
 
-Production and dissemination *process* depth is unit 3.11, not this module.
+Production and dissemination *process* depth is [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) and [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/).
 
-See also: [intelligence lifecycle](#intelligence-lifecycle)
+See also: [intelligence lifecycle](#intelligence-lifecycle), [disseminate through approved channels](#disseminate-through-approved-channels)
 
 ### dns log
 
@@ -2410,8 +2454,49 @@ Also: why attribute, attribution challenges, false flags shared infra
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+| Used | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
 
-See also: [levels of confidence in attribution](#levels-of-confidence-in-attribution), [types of attribution (activity group vs nation-state)](#types-of-attribution-activity-group-vs-nation-state)
+See also: [levels of confidence in attribution](#levels-of-confidence-in-attribution), [produce a threat actor profile](#produce-a-threat-actor-profile)
+
+### produce a threat actor profile
+
+Also: honest Night Owl profile, unattributed actor profile, 3.11.1.2
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+
+See also: [types of finished intelligence products](#types-of-finished-intelligence-products), [purpose and challenges of attribution](#purpose-and-challenges-of-attribution)
+
+### types of finished intelligence products
+
+Also: activity note, assessment, defensive note, finished intel product types
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+
+See also: [structure and quality standards for a finished product](#structure-and-quality-standards-for-a-finished-product), [draft and evaluate a finished intelligence product](#draft-and-evaluate-a-finished-intelligence-product)
+
+### structure and quality standards for a finished product
+
+Also: BLUF facts assessment gaps action, quality fail T1486 and certainty
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+
+See also: [types of finished intelligence products](#types-of-finished-intelligence-products), [use estimative language in an analytic judgment](#use-estimative-language-in-an-analytic-judgment)
+
+### draft and evaluate a finished intelligence product
+
+Also: draft line, eval line, fail unearned who
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+
+See also: [structure and quality standards for a finished product](#structure-and-quality-standards-for-a-finished-product), [produce a threat actor profile](#produce-a-threat-actor-profile)
 
 ### purpose and core functions of the internal TIP
 
@@ -2739,8 +2824,31 @@ Also: RFI, information request to another team
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Used | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
 
-See also: [incident report](#incident-report), [other common report types](#other-common-report-types)
+CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/). This heading is the SOC ticket type.
+
+See also: [incident report](#incident-report), [purpose and lifecycle of an RFI](#purpose-and-lifecycle-of-an-rfi)
+
+### purpose and lifecycle of an RFI
+
+Also: intelligence RFI inbox, receive evaluate prioritize respond
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
+
+See also: [evaluate and prioritize an RFI](#evaluate-and-prioritize-an-rfi), [Request for Information (RFI)](#request-for-information-rfi)
+
+### evaluate and prioritize an RFI
+
+Also: produce a response to an RFI, reject an out-of-scope or duplicate RFI
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
+
+See also: [purpose and lifecycle of an RFI](#purpose-and-lifecycle-of-an-rfi), [produce a threat actor profile](#produce-a-threat-actor-profile)
 
 ### requesting a tool to be installed
 

@@ -92,3 +92,6 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 3.9.4 | [modules/03-cti/09-platforms/04-urlscan](../modules/03-cti/09-platforms/04-urlscan/) |
 | 3.10.1 | [modules/03-cti/10-stix/01-core-objects](../modules/03-cti/10-stix/01-core-objects/) |
 | 3.10.2 | [modules/03-cti/10-stix/02-stix-production](../modules/03-cti/10-stix/02-stix-production/) |
+| 3.11.1 | [modules/03-cti/11-production/01-finished-products](../modules/03-cti/11-production/01-finished-products/) |
+| 3.11.2 | [modules/03-cti/11-production/02-dissemination](../modules/03-cti/11-production/02-dissemination/) |
+| 3.11.3 | [modules/03-cti/11-production/03-rfi](../modules/03-cti/11-production/03-rfi/) |

@@ -112,6 +112,9 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/09-platforms/04-urlscan` | `3.9.4` / `3.9.4.1` | `3.9.4` + `3.9.4.1` |
 | `modules/03-cti/10-stix/01-core-objects` | `3.10.1` / `3.10.1.1` | `3.10.1` + `3.10.1.1` |
 | `modules/03-cti/10-stix/02-stix-production` | `3.10.2` / `3.10.2.1`–`3.10.2.3` | `3.10.2` + `3.10.2.1` |
+| `modules/03-cti/11-production/01-finished-products` | `3.11.1` / `3.11.1.1`–`3.11.1.2` | `3.11.1` + `3.11.1.1` |
+| `modules/03-cti/11-production/02-dissemination` | `3.11.2` / `3.11.2.1`–`3.11.2.3` | `3.11.2` + `3.11.2.1` |
+| `modules/03-cti/11-production/03-rfi` | `3.11.3` / `3.11.3.1` | `3.11.3` + `3.11.3.1` |
 
 Record the mapping in each module `README.md`.
 

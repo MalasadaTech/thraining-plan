@@ -59,6 +59,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.10.x` CTI STIX lessons:** two children — core objects (`3.10.1`), production use (`3.10.2` including create/validate and TAXII). Generate only the asked child unless the caller asks for all of `3.10`. Do not write cluster `3.10` or lumped outline `3.10.3` as one module. Hunt-facing STIX *input* is `2.4.3`. Finished narrative products are `3.11`. TIP retrieve is `3.3.1`. Use real STIX 2.1 object and relationship types. Do not invent types. Classroom bundles/collections are lesson-only — do not stand up a TAXII server.
 
+**`3.11.x` CTI production lessons:** three children — finished products (`3.11.1` including actor profile `3.11.1.2`), dissemination (`3.11.2` including tailor and channels), RFIs (`3.11.3`). Generate only the asked child unless the caller asks for all of `3.11`. Do not write cluster `3.11` as one module. Audience *rewrite* floor is `3.1.6`. Attribution *assessment* is `3.1.7`. STIX bundle/TAXII is `3.10`. SOC ticket types/routing are `1.6`. Local approval and customer lists are `3.12`. Classroom markings/channels/RFI queue are lesson-only — not live org policy.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

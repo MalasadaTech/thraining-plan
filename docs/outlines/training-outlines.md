@@ -777,6 +777,9 @@ c. Quality and analytic standards
 1. Draft a basic finished intelligence product  
 2. Evaluate a finished product against quality and analytic standards  
 
+**3.11.1.2 [T] Tasks**  
+1. Produce a threat actor profile  
+
 **3.11.2 [K] Disseminating intelligence to the correct audiences**  
 a. Audience identification  
 b. Approved dissemination methods and channels  
@@ -785,6 +788,12 @@ c. Handling caveats and handling markings
 **3.11.2.1 [T] Tasks**  
 1. Select the appropriate audience and dissemination method for a product  
 2. Apply correct handling markings and caveats  
+
+**3.11.2.2 [T] Tasks**  
+1. Tailor products to different audiences (technical, leadership, etc.)  
+
+**3.11.2.3 [T] Tasks**  
+1. Disseminate intelligence products through approved channels  
 
 **3.11.3 [K] Handling RFIs**  
 a. Purpose and lifecycle of an RFI  
