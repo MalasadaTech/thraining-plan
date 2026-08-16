@@ -86,3 +86,7 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 3.7.4 | [modules/03-cti/07-frameworks/04-dtf](../modules/03-cti/07-frameworks/04-dtf/) |
 | 3.8.1 | [modules/03-cti/08-enrichment/01-infra-pivot](../modules/03-cti/08-enrichment/01-infra-pivot/) |
 | 3.8.2 | [modules/03-cti/08-enrichment/02-applicable-ttps](../modules/03-cti/08-enrichment/02-applicable-ttps/) |
+| 3.9.1 | [modules/03-cti/09-platforms/01-virustotal](../modules/03-cti/09-platforms/01-virustotal/) |
+| 3.9.2 | [modules/03-cti/09-platforms/02-anyrun](../modules/03-cti/09-platforms/02-anyrun/) |
+| 3.9.3 | [modules/03-cti/09-platforms/03-silent-push](../modules/03-cti/09-platforms/03-silent-push/) |
+| 3.9.4 | [modules/03-cti/09-platforms/04-urlscan](../modules/03-cti/09-platforms/04-urlscan/) |

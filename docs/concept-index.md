@@ -252,8 +252,29 @@ Also: AnyRun for intelligence, detonate a sample
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
 
 See also: [AnyRun for hunting](#anyrun-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
+
+### searching AnyRun by tag, IP, domain, or hash
+
+Also: AnyRun search types, search AnyRun submissions
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
+
+See also: [reviewing an AnyRun submission for actionable intelligence](#reviewing-an-anyrun-submission-for-actionable-intelligence), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
+
+### reviewing an AnyRun submission for actionable intelligence
+
+Also: extract actionable intelligence from an AnyRun submission, AnyRun R1 vs R2
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
+
+See also: [searching AnyRun by tag, IP, domain, or hash](#searching-anyrun-by-tag-ip-domain-or-hash), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
 
 ### assessing CTI for hunting value
 
@@ -2922,8 +2943,29 @@ Also: Silent Push for intelligence, historical PDNS
 |----------|--------|-------|
 | Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
 | Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Used | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
 
 See also: [Silent Push for hunting](#silent-push-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
+
+### Silent Push core capabilities and use cases
+
+Also: how to pivot and enrich indicators in Silent Push, Silent Push PDNS siblings NS
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
+
+See also: [enrich an indicator using Silent Push](#enrich-an-indicator-using-silent-push), [purpose, strengths, and weaknesses of Silent Push](#purpose-strengths-and-weaknesses-of-silent-push)
+
+### enrich an indicator using Silent Push
+
+Also: Silent Push enrich line, pivot within Silent Push to identify additional infrastructure
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
+
+See also: [Silent Push core capabilities and use cases](#silent-push-core-capabilities-and-use-cases), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
 ### site-specific incident response processes
 
@@ -3475,8 +3517,29 @@ Also: URLScan for intelligence, live page scan
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
 
 See also: [URLScan for hunting](#urlscan-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
+
+### URLScan core capabilities and use cases
+
+Also: interpreting URLScan results for intelligence value, this page load
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
+
+See also: [submit or retrieve a URLScan result](#submit-or-retrieve-a-urlscan-result), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
+
+### submit or retrieve a URLScan result
+
+Also: retrieve existing URLScan, extract actionable intelligence from a URLScan report
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
+
+See also: [URLScan core capabilities and use cases](#urlscan-core-capabilities-and-use-cases), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
 
 ### use estimative language in an analytic judgment
 
@@ -3645,8 +3708,29 @@ Also: VT for intelligence, hash reputation, one hop not Relations
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [VirusTotal for hunting](#virustotal-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
+
+### VirusTotal Relations tab for infrastructure pivoting
+
+Also: use the Relations tab to identify additional adversary infrastructure, VT contacted domain
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
+
+See also: [VirusTotal Behavior tab for host and network events](#virustotal-behavior-tab-for-host-and-network-events), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
+
+### VirusTotal Behavior tab for host and network events
+
+Also: extract file, network, registry, and process events from the Behavior tab, VT Behavior four classes
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
+
+See also: [VirusTotal Relations tab for infrastructure pivoting](#virustotal-relations-tab-for-infrastructure-pivoting), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
 ---
 
