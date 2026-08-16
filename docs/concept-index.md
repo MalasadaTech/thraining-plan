@@ -1230,7 +1230,7 @@ Also: STIX bundle seeds a hunt, bundle as hunt seed, not how to author STIX
 |----------|--------|-------|
 | Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
-Authoring STIX is a later CTI item (3.10), not this module.
+Authoring STIX is [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) and [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/), not this module.
 
 See also: [STIX as hunt input](#stix-as-hunt-input), [turning STIX objects into hunt leads](#turning-stix-objects-into-hunt-leads)
 
@@ -3096,6 +3096,7 @@ Also: STIX for hunters, read STIX for hunting, STIX report or bundle
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Used | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 See also: [hunt-relevant STIX objects](#hunt-relevant-stix-objects), [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt)
 
@@ -3106,10 +3107,93 @@ Also: indicator attack-pattern observed-data malware threat-actor intrusion-set 
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Used | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
-Core STIX object inventory for production is a later CTI item (3.10), not this module.
+Core STIX object inventory for production is [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/).
 
 See also: [hunt-relevant STIX objects](#hunt-relevant-stix-objects), [STIX as hunt input](#stix-as-hunt-input)
+
+### Indicator, Observed Data, and Malware (STIX)
+
+Also: STIX indicator vs observed-data, STIX malware object
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+
+See also: [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report), [STIX objects a hunter uses](#stix-objects-a-hunter-uses)
+
+### Attack Pattern, Threat Actor, Intrusion Set, and Campaign (STIX)
+
+Also: STIX attack-pattern, empty threat-actor, intrusion-set vs campaign
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+
+See also: [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report), [reject filling Adversary from a vendor name](#reject-filling-adversary-from-a-vendor-name)
+
+### Course of Action, Identity, Relationship, and Sighting (STIX)
+
+Also: STIX course-of-action, STIX sighting vs indicator, STIX identity
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+
+See also: [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report), [linking STIX objects to represent threat activity](#linking-stix-objects-to-represent-threat-activity)
+
+### identify and label common STIX objects in a report
+
+Also: label a STIX type, reject the neighbor STIX type
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+
+See also: [Indicator, Observed Data, and Malware (STIX)](#indicator-observed-data-and-malware-stix), [STIX as hunt input](#stix-as-hunt-input)
+
+### structuring STIX for sharing and automation
+
+Also: STIX bundle for sharing, STIX for automation
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+
+See also: [use TAXII for sharing and consumption of intelligence](#use-taxii-for-sharing-and-consumption-of-intelligence), [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt)
+
+### linking STIX objects to represent threat activity
+
+Also: STIX relationship_type, Night Owl STIX graph, explain a STIX scenario
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+
+See also: [create and validate STIX objects](#create-and-validate-stix-objects), [Course of Action, Identity, Relationship, and Sighting (STIX)](#course-of-action-identity-relationship-and-sighting-stix)
+
+### create and validate STIX objects
+
+Also: valid STIX pattern, missing relationship_type, unearned threat-actor object
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+
+See also: [linking STIX objects to represent threat activity](#linking-stix-objects-to-represent-threat-activity), [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report)
+
+### use TAXII for sharing and consumption of intelligence
+
+Also: TAXII collection, publish STIX bundle, consume STIX, harbor-cti classroom collection
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+
+TAXII is the channel. The bundle is the payload. Emailing a PDF is not TAXII.
+
+See also: [structuring STIX for sharing and automation](#structuring-stix-for-sharing-and-automation), [navigating and searching the internal TIP](#navigating-and-searching-the-internal-tip)
 
 ### strategic intelligence
 

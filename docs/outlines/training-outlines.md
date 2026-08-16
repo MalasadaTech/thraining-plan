@@ -745,9 +745,22 @@ i. Identity
 j. Relationship  
 k. Sighting  
 
+**3.10.1.1 [T] Tasks**  
+1. Correctly identify and label common STIX objects in an intelligence report  
+
 **3.10.2 [K] How STIX objects are used in intelligence production**  
 a. Structuring intelligence for sharing and automation  
 b. Linking objects to represent complex threat activity  
+
+**3.10.2.1 [T] Tasks**  
+1. Create basic STIX-aligned relationships between objects  
+2. Explain how a set of STIX objects represents a threat scenario  
+
+**3.10.2.2 [T] Tasks**  
+1. Create and validate STIX objects  
+
+**3.10.2.3 [T] Tasks**  
+1. Use TAXII for sharing and consumption of intelligence  
 
 **3.10.3 [T] STIX tasks**  
 1. Correctly identify and label common STIX objects in an intelligence report  

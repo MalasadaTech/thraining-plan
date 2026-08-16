@@ -57,6 +57,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.9.x` CTI platform lessons:** four children — VirusTotal Relations/Behavior (`3.9.1`), AnyRun (`3.9.2`), Silent Push (`3.9.3`), URLScan (`3.9.4`). Generate only the asked child unless the caller asks for all of `3.9`. Do not write cluster `3.9` as one module. Do not re-teach the 3.3.2 survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `2.3.1`. Conceptual infra hop is `3.8.1`. File-similarity hashes are `3.4`. Applicable TTPs are `3.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
 
+**`3.10.x` CTI STIX lessons:** two children — core objects (`3.10.1`), production use (`3.10.2` including create/validate and TAXII). Generate only the asked child unless the caller asks for all of `3.10`. Do not write cluster `3.10` or lumped outline `3.10.3` as one module. Hunt-facing STIX *input* is `2.4.3`. Finished narrative products are `3.11`. TIP retrieve is `3.3.1`. Use real STIX 2.1 object and relationship types. Do not invent types. Classroom bundles/collections are lesson-only — do not stand up a TAXII server.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

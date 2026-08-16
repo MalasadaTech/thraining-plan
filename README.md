@@ -110,6 +110,8 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/09-platforms/02-anyrun` | `3.9.2` / `3.9.2.1` | `3.9.2` + `3.9.2.1` |
 | `modules/03-cti/09-platforms/03-silent-push` | `3.9.3` / `3.9.3.1` | `3.9.3` + `3.9.3.1` |
 | `modules/03-cti/09-platforms/04-urlscan` | `3.9.4` / `3.9.4.1` | `3.9.4` + `3.9.4.1` |
+| `modules/03-cti/10-stix/01-core-objects` | `3.10.1` / `3.10.1.1` | `3.10.1` + `3.10.1.1` |
+| `modules/03-cti/10-stix/02-stix-production` | `3.10.2` / `3.10.2.1`–`3.10.2.3` | `3.10.2` + `3.10.2.1` |
 
 Record the mapping in each module `README.md`.
 
