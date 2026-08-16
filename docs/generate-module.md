@@ -25,7 +25,9 @@ Stop and say what is missing if any of these fail:
 |-----------|------------------|
 | A **cluster** heading with several distinct K topics (`3.1` Core Intelligence Concepts) | **Stop.** List the child K items (`3.1.1`, `3.1.2`, `3.1.3`, …) and ask which one. Do **not** write the whole cluster. |
 | A **child item** (`3.1.1`, `3.2.2`, `2.6.1`) | That K row plus its child T row(s) only (`3.1.1` + `3.1.1.1`). |
-| A **unit** that is already one lesson (`1.2.5` HTTP, `2.1` Purpose) | That heading’s rows, same as today. |
+| A **unit** that is already one lesson (`1.1.1` Process Activity, `1.2.5` HTTP, `2.1` Purpose) | That heading’s rows (`1.1.1.1` K, `1.1.1.2` / `1.1.1.3` T). |
+
+**`1.1.x` endpoint lessons:** five activity units (Process, File System, Network, Registry, Image/Driver Load). Use Sysmon Event IDs and MDE table/field names as the examples. Do not teach Sysmon install or config. `1.1.3` is **host-observed** network (initiating process → IP/port/domain). Protocol deep-dive is `1.2` Zeek. Do not merge the two.
 
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 

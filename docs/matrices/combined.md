@@ -21,20 +21,25 @@ Headings use **teaching-unit IDs** (`1.1`, `1.2`, `2.1`, `3.1`, …). Those matc
 
 ## 1.1 Endpoint Logs & Telemetry Analysis (Primarily SOC)
 
+Host-observed activity (Sysmon / MDE). Protocol deep-dive is 1.2 Zeek.
+
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 1.1.1.1 | File logging concepts | K | A / B / C | A / B / B | A / A / A |
-| 1.1.1.2 | Analyze a file event log and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
-| 1.1.1.3 | Create a SIEM query to detect specific file operations | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
-| 1.1.2.1 | Registry logging concepts | K | A / B / C | A / B / B | A / A / A |
-| 1.1.2.2 | Analyze a registry event log and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
-| 1.1.2.3 | Create a SIEM query to detect specific registry operations | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
-| 1.1.3.1 | Process logging concepts | K | A / B / C | A / B / B | A / A / A |
-| 1.1.3.2 | Analyze a process event log and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
-| 1.1.3.3 | Create a SIEM query to detect specific process activity | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
-| 1.1.4.1 | Network logging concepts | K | A / B / C | A / B / B | A / A / A |
-| 1.1.4.2 | Analyze a network event log and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
-| 1.1.4.3 | Create a SIEM query to detect specific network activity | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.1.1 | Process activity concepts | K | A / B / C | A / B / B | A / A / A |
+| 1.1.1.2 | Analyze a process event (Sysmon or MDE) and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.1.3 | Create a SIEM query to detect specific process activity | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.2.1 | File system activity concepts | K | A / B / C | A / B / B | A / A / A |
+| 1.1.2.2 | Analyze a file event (Sysmon or MDE) and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.2.3 | Create a SIEM query to detect specific file operations | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.3.1 | Network activity (endpoint) concepts | K | A / B / C | A / B / B | A / A / A |
+| 1.1.3.2 | Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.3.3 | Create a SIEM query to detect specific endpoint network activity | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.4.1 | Registry activity concepts | K | A / B / C | A / B / B | A / A / A |
+| 1.1.4.2 | Analyze a registry event (Sysmon or MDE) and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.4.3 | Create a SIEM query to detect specific registry operations | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.5.1 | Image and driver load activity concepts | K | A / B / C | A / B / B | A / A / A |
+| 1.1.5.2 | Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.5.3 | Create a SIEM query to detect specific image or driver load activity | T | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
 
 ---
 

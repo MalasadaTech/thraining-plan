@@ -14,59 +14,67 @@ These rules apply across SOC Analyst, Threat Hunter, and CTI Analyst roles.
 
 **1.1 [K/T] Endpoint Logs**
 
-**1.1.1 [K] File logging concepts**  
-a. Create  
-b. Rename / Move  
-c. Delete  
-d. Modify / Write (content or metadata changes)  
-e. Read / Access  
-f. Execute (where logged)  
-g. Permission / Ownership changes (ACL / attributes)  
+Endpoint telemetry (Sysmon / MDE) vs network-sensor telemetry (Zeek, unit 1.2). Sysmon Event IDs and MDE tables encode the same activities; this unit is not Sysmon installation or configuration.
 
-**1.1.2 [T] File logging tasks**  
-1. Analyze a file event log and accurately describe what occurred  
-2. Create a SIEM query to detect specific file operations  
+**1.1.1 [K] Process activity**  
+a. Process create / terminate  
+b. PID, name, command line  
+c. Parent-child (PPID, parent name, parent command line)  
+d. Integrity / user context (where logged)  
+e. Hashes and original filename (where logged)  
+f. Process access (Sysmon Event ID 10) as “who touched whom,” not a separate unit  
+g. How this shows up: Sysmon 1 / 5 / 10; MDE `DeviceProcessEvents` (key fields: `ActionType`, `InitiatingProcess*`, `ProcessCommandLine`, SHA256)  
 
-**1.1.3 [K] Registry logging concepts**  
-a. Windows Registry hives (HKLM, HKCU, HKCR, HKU, HKCC)  
-b. Purpose of the Registry (storing configuration settings, system and application state)  
-c. Common persistence and configuration locations (Run keys, Services, etc.)  
-d. Key hierarchy (Keys → Subkeys → Values)  
-e. Value types (REG_SZ, REG_DWORD, REG_BINARY, etc.)  
-
-**1.1.4 [T] Registry logging tasks**  
-1. Analyze a registry event log and accurately describe what occurred  
-2. Create a SIEM query to detect specific registry operations  
-
-**1.1.5 [K] Process logging concepts**  
-a. Process ID (PID)  
-b. Process name  
-c. Process command line  
-d. Parent Process ID (PPID)  
-e. Parent process name  
-f. Parent process command line  
-g. Parent-child process relationship  
-
-**1.1.6 [T] Process logging tasks**  
-1. Analyze a process event log and accurately describe what occurred  
+**1.1.1.1 [T] Process activity tasks**  
+1. Analyze a process event (Sysmon or MDE) and accurately describe what occurred  
 2. Create a SIEM query to detect specific process activity  
 
-**1.1.7 [K] Network logging concepts**  
-a. Source IP  
-b. Source port  
-c. Destination IP  
-d. Destination port  
-e. Protocol  
-f. Direction (inbound / outbound)  
-g. Connection state / status (where logged)  
-h. Domain  
-i. URL  
+**1.1.2 [K] File system activity**  
+a. Create / rename-move / delete / modify / read (where logged)  
+b. Path, name, extension  
+c. Hashes  
+d. Initiating process  
+e. How this shows up: Sysmon 11 / 23 / 26; MDE `DeviceFileEvents` (`ActionType`, `FolderPath`, `FileName`, SHA256, `InitiatingProcess*`)  
 
-**1.1.8 [T] Network logging tasks**  
-1. Analyze a network event log and accurately describe what occurred  
-2. Create a SIEM query to detect specific network activity  
+**1.1.2.1 [T] File system activity tasks**  
+1. Analyze a file event (Sysmon or MDE) and accurately describe what occurred  
+2. Create a SIEM query to detect specific file operations  
+
+**1.1.3 [K] Network activity (endpoint)**  
+a. Source / dest IP and port, protocol, direction  
+b. Domain / URL when the endpoint logged them  
+c. Initiating process (this is the point of 1.1 vs Zeek)  
+d. How this shows up: Sysmon 3 (and 22 if DNS is logged here); MDE `DeviceNetworkEvents`  
+e. This is host-observed activity. Protocol deep-dive is 1.2  
+
+**1.1.3.1 [T] Network activity tasks**  
+1. Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred  
+2. Create a SIEM query to detect specific endpoint network activity  
+
+**1.1.4 [K] Registry activity**  
+a. Hives and key → value  
+b. Set / delete / rename  
+c. Common persistence locations (Run, Services) as examples, not a 2.6 dump  
+d. Initiating process  
+e. How this shows up: Sysmon 12 / 13 / 14; MDE `DeviceRegistryEvents`  
+
+**1.1.4.1 [T] Registry activity tasks**  
+1. Analyze a registry event (Sysmon or MDE) and accurately describe what occurred  
+2. Create a SIEM query to detect specific registry operations  
+
+**1.1.5 [K] Image and driver load activity**  
+a. User-mode image load vs kernel driver load  
+b. Path, hashes, signed vs unsigned (where logged)  
+c. Initiating process  
+d. How this shows up: Sysmon 6 / 7; MDE `DeviceImageLoadEvents`  
+
+**1.1.5.1 [T] Image and driver load tasks**  
+1. Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred  
+2. Create a SIEM query to detect specific image or driver load activity  
 
 **1.2 [K/T] Zeek and Zeek Engines**
+
+Network-sensor telemetry. Host-observed process/file/network/registry/image activity is 1.1.
 
 **1.2.1 [K] Zeek concepts**  
 a. Zeek as a network analysis framework  
