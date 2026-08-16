@@ -38,6 +38,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 
 | Folder | Matrix items | Outline headings |
 |--------|----------------|------------------|
+| `modules/01-soc/01-endpoint/01-process-activity` | `1.1.1.1`–`1.1.1.3` | `1.1.1` + `1.1.1.1` |
 | `modules/01-soc/02-zeek/01-concepts` | `1.2.1.1` | `1.2.1` |
 | `modules/01-soc/02-zeek/02-conn-engine` | `1.2.2.1`–`1.2.2.3` | `1.2.2` + `1.2.3` |
 | `modules/01-soc/02-zeek/03-dns-engine` | `1.2.3.1`–`1.2.3.3` | `1.2.4` + `1.2.5` |

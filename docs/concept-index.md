@@ -430,6 +430,16 @@ Also: hand off CTI, detections hand off, IR hand off from a report
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
 
+### hashes and original filename
+
+Also: process SHA256, OriginalFileName, PE original filename
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line)
+
 ### history
 
 Also: `history`, Zeek history flags
@@ -593,6 +603,16 @@ Also: organized data, context, parsed alert, rewritten log story
 | Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [data](#data), [intelligence](#intelligence)
+
+### integrity / user context
+
+Also: integrity level, process user, Medium vs High vs SYSTEM
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process activity](#process-activity), [parent-child process](#parent-child-process)
 
 ### intelligence
 
@@ -773,6 +793,16 @@ See also: [persistence techniques](#persistence-techniques), [recognizing persis
 
 ## P
 
+### parent-child process
+
+Also: PPID, parent process, InitiatingProcess, ParentImage
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line)
+
 ### persistence techniques
 
 Also: persistence, persist after reboot, autorun methods
@@ -783,6 +813,16 @@ Also: persistence, persist after reboot, autorun methods
 | Used | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [registry-based persistence](#registry-based-persistence), [scheduled-task persistence](#scheduled-task-persistence)
+
+### PID, name, and command line
+
+Also: ProcessId, process name, CommandLine, ProcessCommandLine
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process activity](#process-activity), [parent-child process](#parent-child-process)
 
 ### pivot
 
@@ -828,6 +868,36 @@ Also: privilege escalation, privesc, elevation of privilege
 | Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [common Windows privilege escalation methods](#common-windows-privilege-escalation-methods), [persistence techniques](#persistence-techniques)
+
+### process access (Sysmon Event ID 10)
+
+Also: process access, Event ID 10, who touched whom, SourceImage TargetImage
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process activity](#process-activity), [Sysmon 1 / 5 / 10 and DeviceProcessEvents](#sysmon-1--5--10-and-deviceprocessevents)
+
+### process activity
+
+Also: process events, process telemetry, host process activity
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process create / terminate](#process-create--terminate), [parent-child process](#parent-child-process)
+
+### process create / terminate
+
+Also: ProcessCreated, ProcessTerminated, Sysmon Event ID 1, Sysmon Event ID 5
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process activity](#process-activity), [Sysmon 1 / 5 / 10 and DeviceProcessEvents](#sysmon-1--5--10-and-deviceprocessevents)
 
 ### processing and exploitation
 
@@ -1156,6 +1226,16 @@ See also: [intelligence types](#intelligence-types)
 ### subject
 
 See [certificate subject / issuer](#certificate-subject--issuer).
+
+### Sysmon 1 / 5 / 10 and DeviceProcessEvents
+
+Also: DeviceProcessEvents, Sysmon process events, ActionType ProcessCreated
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+
+See also: [process activity](#process-activity), [process create / terminate](#process-create--terminate), [process access (Sysmon Event ID 10)](#process-access-sysmon-event-id-10)
 
 ---
 

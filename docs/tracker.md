@@ -18,6 +18,7 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 
 | Module ID | Folder |
 |-----------|--------|
+| 1.1.1 | [modules/01-soc/01-endpoint/01-process-activity](../modules/01-soc/01-endpoint/01-process-activity/) |
 | 1.2.1 | [modules/01-soc/02-zeek/01-concepts](../modules/01-soc/02-zeek/01-concepts/) |
 | 1.2.2 | [modules/01-soc/02-zeek/02-conn-engine](../modules/01-soc/02-zeek/02-conn-engine/) |
 | 1.2.3 | [modules/01-soc/02-zeek/03-dns-engine](../modules/01-soc/02-zeek/03-dns-engine/) |
