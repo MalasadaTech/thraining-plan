@@ -82,3 +82,4 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 3.6.1 | [modules/03-cti/06-advanced-dns](../modules/03-cti/06-advanced-dns/) |
 | 3.7.1 | [modules/03-cti/07-frameworks/01-attck-cti](../modules/03-cti/07-frameworks/01-attck-cti/) |
 | 3.7.2 | [modules/03-cti/07-frameworks/02-diamond-cti](../modules/03-cti/07-frameworks/02-diamond-cti/) |
+| 3.7.3 | [modules/03-cti/07-frameworks/03-kill-chain-cti](../modules/03-cti/07-frameworks/03-kill-chain-cti/) |

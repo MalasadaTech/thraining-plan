@@ -102,6 +102,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/06-advanced-dns` | `3.6.1` / `3.6.1.1` | `3.6.1` + `3.6.1.1` |
 | `modules/03-cti/07-frameworks/01-attck-cti` | `3.7.1` / `3.7.1.1` | `3.7.1` + `3.7.1.1` |
 | `modules/03-cti/07-frameworks/02-diamond-cti` | `3.7.2` / `3.7.2.1` | `3.7.2` + `3.7.2.1` |
+| `modules/03-cti/07-frameworks/03-kill-chain-cti` | `3.7.3` / `3.7.3.1` | `3.7.3` + `3.7.3.1` |
 
 Record the mapping in each module `README.md`.
 

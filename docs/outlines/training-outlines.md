@@ -657,6 +657,9 @@ a. Advanced application for analysis and attribution
 **3.7.3 [K] Cyber Kill Chain**  
 a. Advanced application for understanding attack progression  
 
+**3.7.3.1 [T] Tasks**  
+1. Identify the Kill Chain stage of observed or reported activity (stage, reject previous/next; list only supported stages in the product; reject an unobserved stage)  
+
 **3.7.4 [K] MalasadaTech Defender’s ThreatMesh Framework (DTF)**  
 a. Purpose of DTF (pattern identification and defensive prioritization)  
 b. Core components and scoring methodology  

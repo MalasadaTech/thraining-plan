@@ -623,6 +623,18 @@ Also: pay-db-01, crown jewel host, critical asset
 
 See also: [key network segments and data flow](#key-network-segments-and-data-flow), [site-specific incident response processes](#site-specific-incident-response-processes)
 
+### Cyber Kill Chain in intelligence analysis
+
+Also: advanced Kill Chain for CTI, Kill Chain in intel products, supported Kill Chain stages in a product
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+
+SOC single-row staging is [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/).
+
+See also: [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity)
+
 ### Cyber Kill Chain purpose
 
 Also: Kill Chain, Lockheed Martin Kill Chain
@@ -630,8 +642,9 @@ Also: Kill Chain, Lockheed Martin Kill Chain
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
-See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next)
+See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
 
 ---
 
@@ -1399,6 +1412,18 @@ Also: report clock at risk, submit vs blocked clock
 
 See also: [submit timelines by report type](#submit-timelines-by-report-type), [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed)
 
+### identify the Kill Chain stage of observed or reported activity
+
+Also: stage a report span, Kill Chain stage from a report, CTI Kill Chain stage line
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+
+Single-row staging is [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/).
+
+See also: [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain)
+
 ### identifying the stage and rejecting the previous or next
 
 Also: Kill Chain neighbor stage, not previous not next
@@ -1406,8 +1431,9 @@ Also: Kill Chain neighbor stage, not previous not next
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
-See also: [Kill Chain stages](#kill-chain-stages), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression)
+See also: [Kill Chain stages](#kill-chain-stages), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity)
 
 ### identifying the cause class and what you would change
 
@@ -1686,8 +1712,9 @@ Also: Reconnaissance Delivery Exploitation Installation C2 Actions on Objectives
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
-See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose)
+See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
 
 ### key network segments and data flow
 
@@ -2104,6 +2131,16 @@ See also: [process activity](#process-activity), [parent-child process](#parent-
 
 See [uid](#uid).
 
+### place a report or activity set on the Kill Chain
+
+Also: place a report on the Kill Chain, activity-set progression, CTI Kill Chain product list
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+
+See also: [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression)
+
 ### planned service outages
 
 Also: upcoming maintenance, planned outage window
@@ -2432,6 +2469,16 @@ Also: reject the neighbor ID, neighbor technique reject, T1059.001 vs T1059.003
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques)
+
+### reject an unobserved Kill Chain stage
+
+Also: unobserved Weaponization, uncited Actions on Objectives, reject a Kill Chain stage not in the excerpt
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+
+See also: [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next)
 
 ### reject filling Adversary from a vendor name
 
@@ -3371,8 +3418,9 @@ Also: Kill Chain progression, where you are in the intrusion
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
-See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next)
+See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain)
 
 ### using ATT&CK to identify detection or visibility gaps
 
