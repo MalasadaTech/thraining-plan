@@ -229,8 +229,19 @@ Also: Any.Run, AnyRun sandbox, interactive sandbox for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
 
-See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
+
+### purpose, strengths, and weaknesses of AnyRun
+
+Also: AnyRun for intelligence, detonate a sample
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+
+See also: [AnyRun for hunting](#anyrun-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
 ### assessing CTI for hunting value
 
@@ -756,6 +767,16 @@ See also: [submit timelines by report type](#submit-timelines-by-report-type), [
 ### empty SNI
 
 See [missing SNI](#missing-sni).
+
+### enrich or pivot using an external tool
+
+Also: one hop, classroom pivot, not Relations graph
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+
+See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
 ### evaluation and feedback
 
@@ -2388,6 +2409,16 @@ Also: KAC vs ACH vs neither, pick the SAT
 
 See also: [when to apply ACH vs Key Assumptions Check](#when-to-apply-ach-vs-key-assumptions-check), [apply a structured analytic technique](#apply-a-structured-analytic-technique)
 
+### select the appropriate external tool
+
+Also: pick VT AnyRun Silent Push URLScan, reject neighbor tool
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+
+See also: [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process), [enrich or pivot using an external tool](#enrich-or-pivot-using-an-external-tool)
+
 ### search and retrieve from the internal TIP
 
 Also: retrieve line, open IND-1882
@@ -2495,8 +2526,19 @@ Also: Silent Push, passive DNS for hunting, infra clustering for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
 
-See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of Silent Push](#purpose-strengths-and-weaknesses-of-silent-push)
+
+### purpose, strengths, and weaknesses of Silent Push
+
+Also: Silent Push for intelligence, historical PDNS
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+
+See also: [Silent Push for hunting](#silent-push-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
 ### site-specific incident response processes
 
@@ -3006,8 +3048,19 @@ Also: urlscan.io, URLScan page scan, URLScan for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
 
-See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
+
+### purpose, strengths, and weaknesses of URLScan
+
+Also: URLScan for intelligence, live page scan
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+
+See also: [URLScan for hunting](#urlscan-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
 ### use estimative language in an analytic judgment
 
@@ -3129,8 +3182,19 @@ Also: VT, VirusTotal Relations, VirusTotal for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
 
-See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
+
+### purpose, strengths, and weaknesses of VirusTotal
+
+Also: VT for intelligence, hash reputation, one hop not Relations
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+
+See also: [VirusTotal for hunting](#virustotal-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
 ---
 
@@ -3166,6 +3230,16 @@ Also: locked story vs competing hyps, neither collect first
 | Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach), [Key Assumptions Check](#key-assumptions-check)
+
+### when to use each external tool in the intelligence process
+
+Also: first external tool, hash vs sample vs history vs live URL
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+
+See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
 ### where and how to save investigation notes
 
