@@ -14,6 +14,9 @@ docs/
   concept-index.md                # taught concepts → module (book-style index)
   contributing.md                 # how to add a requirement and a module
   generate-module.md              # AI instructions to write a Gate 2 module
+  story-bible.md                  # living classroom fiction (PRD / DYA)
+  todo.md                         # review and follow-up list
+
 templates/                        # proposal + module writing templates
 modules/
   01-soc/<unit>/<module>/
