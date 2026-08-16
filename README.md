@@ -92,6 +92,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/01-core-intel/07-attribution` | `3.1.7` / `3.1.7.1` | `3.1.7` + `3.1.7.1` |
 | `modules/03-cti/01-core-intel/08-collection-sources` | `3.1.8` / `3.1.8.1`–`3.1.8.2` | `3.1.8` + `3.1.8.1` |
 | `modules/03-cti/02-tradecraft/01-estimative-language` | `3.2.1` / `3.2.1.1` | `3.2.1` + `3.2.1.1` |
+| `modules/03-cti/02-tradecraft/02-structured-techniques` | `3.2.2` / `3.2.2.1` | `3.2.2` + `3.2.2.1` |
 
 Record the mapping in each module `README.md`.
 

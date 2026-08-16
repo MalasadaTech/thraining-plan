@@ -154,6 +154,26 @@ Also: analysis, production, analytic production, finished intelligence productio
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [intelligence](#intelligence)
 
+### Analysis of Competing Hypotheses (ACH)
+
+Also: ACH matrix, fewest inconsistent, competing hypotheses
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+
+See also: [Key Assumptions Check](#key-assumptions-check), [when to apply ACH vs Key Assumptions Check](#when-to-apply-ach-vs-key-assumptions-check)
+
+### apply a structured analytic technique
+
+Also: fill a mini ACH, fill a KAC table
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+
+See also: [select the right structured analytic technique for a scenario](#select-the-right-structured-analytic-technique-for-a-scenario), [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach)
+
 ### approved reporting channels
 
 Also: ticket channel, RFI form, approved distro
@@ -1424,6 +1444,16 @@ Taught as a lead, not a malware verdict. Fields are used only where the deployme
 
 ## K
 
+### Key Assumptions Check
+
+Also: KAC, must-be-true claims, if assumption false
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+
+See also: [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach), [purpose of structured analytic techniques](#purpose-of-structured-analytic-techniques)
+
 ### Kill Chain stages
 
 Also: Reconnaissance Delivery Exploitation Installation C2 Actions on Objectives, Weaponization
@@ -1970,6 +2000,16 @@ Also: why write a requirement, focus collection on a decision
 
 See also: [Priority Intelligence Requirements (PIRs)](#priority-intelligence-requirements-pirs), [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis)
 
+### purpose of structured analytic techniques
+
+Also: why SAT, make thinking visible, do not lock first story
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+
+See also: [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach), [Key Assumptions Check](#key-assumptions-check)
+
 ### purpose of threat hunting
 
 Also: why hunt exists, hunt purpose, purpose of hunting
@@ -2227,6 +2267,16 @@ Also: hunt scope, bound a hunt, who where how long
 | Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [prioritizing hunts](#prioritizing-hunts), [visibility gaps](#visibility-gaps)
+
+### select the right structured analytic technique for a scenario
+
+Also: KAC vs ACH vs neither, pick the SAT
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+
+See also: [when to apply ACH vs Key Assumptions Check](#when-to-apply-ach-vs-key-assumptions-check), [apply a structured analytic technique](#apply-a-structured-analytic-technique)
 
 ### scheduled-task persistence
 
@@ -2956,6 +3006,16 @@ Also: Wireshark viewer, tshark, not Zeek-as-PCAP
 | Taught | [1.8.2 PCAP Handling](../modules/01-soc/08-site-specific/02-pcap-handling/) | SOC, Hunter, CTI |
 
 See also: [how to download PCAP](#how-to-download-pcap), [requesting a tool to be installed](#requesting-a-tool-to-be-installed)
+
+### when to apply ACH vs Key Assumptions Check
+
+Also: locked story vs competing hyps, neither collect first
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+
+See also: [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach), [Key Assumptions Check](#key-assumptions-check)
 
 ### where and how to save investigation notes
 

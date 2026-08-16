@@ -72,3 +72,4 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 3.1.7 | [modules/03-cti/01-core-intel/07-attribution](../modules/03-cti/01-core-intel/07-attribution/) |
 | 3.1.8 | [modules/03-cti/01-core-intel/08-collection-sources](../modules/03-cti/01-core-intel/08-collection-sources/) |
 | 3.2.1 | [modules/03-cti/02-tradecraft/01-estimative-language](../modules/03-cti/02-tradecraft/01-estimative-language/) |
+| 3.2.2 | [modules/03-cti/02-tradecraft/02-structured-techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) |
