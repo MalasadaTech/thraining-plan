@@ -255,6 +255,16 @@ Also: files.conn_uids, connection UIDs on the files log
 
 See also: [files log](#files-log), [uid](#uid)
 
+### creating a SIEM rule from log fields or from SIGMA
+
+Also: SIEM from SIGMA, SIEM from log fields, propose a SIEM detection
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.4 SIEM Rules](../modules/01-soc/03-detection/04-siem-rules/) | SOC, Hunter, CTI |
+
+See also: [SIEM detection rules / correlation searches](#siem-detection-rules--correlation-searches), [how SIGMA translates to SIEM queries](#how-sigma-translates-to-siem-queries)
+
 ### convert external findings to internal queries
 
 Also: convert to SIEM query, convert to Zeek query, internal query from enrichment
@@ -581,6 +591,37 @@ Also: STIX bundle seeds a hunt, bundle as hunt seed, not how to author STIX
 Authoring STIX is a later CTI item (3.10), not this module.
 
 See also: [STIX as hunt input](#stix-as-hunt-input), [turning STIX objects into hunt leads](#turning-stix-objects-into-hunt-leads)
+
+### how SIGMA translates to SIEM queries
+
+Also: SIGMA to SIEM, SIGMA conversion, logsource to table
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.1 SIGMA Rules](../modules/01-soc/03-detection/01-sigma-rules/) | SOC, Hunter, CTI |
+| Used | [1.3.4 SIEM Rules](../modules/01-soc/03-detection/04-siem-rules/) | SOC, Hunter, CTI |
+
+See also: [SIGMA rules](#sigma-rules), [creating a SIEM rule from log fields or from SIGMA](#creating-a-siem-rule-from-log-fields-or-from-sigma)
+
+### how Suricata rules relate to Zeek
+
+Also: Suricata vs Zeek, signature vs parsed session
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.2 Suricata Rules](../modules/01-soc/03-detection/02-suricata-rules/) | SOC, Hunter, CTI |
+
+See also: [Suricata rules](#suricata-rules), [http log](#http-log)
+
+### how YARA is used with files / memory
+
+Also: YARA file scan, YARA memory scan
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.3 YARA Rules](../modules/01-soc/03-detection/03-yara-rules/) | SOC, Hunter, CTI |
+
+See also: [YARA rules](#yara-rules), [files log](#files-log)
 
 ### http log
 
@@ -934,6 +975,28 @@ Also: mime_type, files MIME, application/pdf, application/x-dosexec
 | Taught | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
 
 See also: [files log](#files-log), [filename (files log)](#filename-files-log)
+
+### matching techniques: ASCII, hex, and regex
+
+Also: ASCII match, hex match, regex match, pcre, YARA hex string
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.2 Suricata Rules](../modules/01-soc/03-detection/02-suricata-rules/) | SOC, Hunter, CTI |
+| Taught | [1.3.3 YARA Rules](../modules/01-soc/03-detection/03-yara-rules/) | SOC, Hunter, CTI |
+| Used | [1.3.4 SIEM Rules](../modules/01-soc/03-detection/04-siem-rules/) | SOC, Hunter, CTI |
+
+See also: [Suricata rule options](#suricata-rule-options), [YARA strings and conditions](#yara-strings-and-conditions)
+
+### matching techniques: regex and wildcards (SIEM)
+
+Also: SIEM wildcard, SIEM regex, has vs matches regex
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.4 SIEM Rules](../modules/01-soc/03-detection/04-siem-rules/) | SOC, Hunter, CTI |
+
+See also: [SIEM detection rules / correlation searches](#siem-detection-rules--correlation-searches), [matching techniques: ASCII, hex, and regex](#matching-techniques-ascii-hex-and-regex)
 
 ### missing SNI
 
@@ -1409,6 +1472,46 @@ Also: normal teardown, established and terminated
 
 See also: [conn_state](#conn_state)
 
+### SIEM detection rules / correlation searches
+
+Also: SIEM rule, analytics rule, correlation search, saved detection
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.4 SIEM Rules](../modules/01-soc/03-detection/04-siem-rules/) | SOC, Hunter, CTI |
+
+See also: [turning log fields into detections](#turning-log-fields-into-detections), [creating a SIEM rule from log fields or from SIGMA](#creating-a-siem-rule-from-log-fields-or-from-sigma)
+
+### SIGMA fields / selectors
+
+Also: SIGMA modifiers, endswith, contains, SIGMA selection
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.1 SIGMA Rules](../modules/01-soc/03-detection/01-sigma-rules/) | SOC, Hunter, CTI |
+
+See also: [SIGMA rule structure](#sigma-rule-structure), [SIGMA rules](#sigma-rules)
+
+### SIGMA rule structure
+
+Also: SIGMA logsource, SIGMA detection, SIGMA condition
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.1 SIGMA Rules](../modules/01-soc/03-detection/01-sigma-rules/) | SOC, Hunter, CTI |
+
+See also: [SIGMA rules](#sigma-rules), [how SIGMA translates to SIEM queries](#how-sigma-translates-to-siem-queries)
+
+### SIGMA rules
+
+Also: Sigma, SIGMA YAML, generic detection format
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.1 SIGMA Rules](../modules/01-soc/03-detection/01-sigma-rules/) | SOC, Hunter, CTI |
+
+See also: [SIGMA rule structure](#sigma-rule-structure), [creating a SIEM rule from log fields or from SIGMA](#creating-a-siem-rule-from-log-fields-or-from-sigma)
+
 ### Silent Push for hunting
 
 Also: Silent Push, passive DNS for hunting, infra clustering for hunting
@@ -1546,6 +1649,36 @@ See also: [weird log](#weird-log), [5-tuple](#5-tuple)
 
 See [certificate subject / issuer](#certificate-subject--issuer).
 
+### Suricata rule options
+
+Also: content, http.uri, http.user_agent, tls.sni, Suricata pcre
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.2 Suricata Rules](../modules/01-soc/03-detection/02-suricata-rules/) | SOC, Hunter, CTI |
+
+See also: [Suricata rule structure](#suricata-rule-structure), [matching techniques: ASCII, hex, and regex](#matching-techniques-ascii-hex-and-regex)
+
+### Suricata rule structure
+
+Also: Suricata action, Suricata header, alert proto src dest
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.2 Suricata Rules](../modules/01-soc/03-detection/02-suricata-rules/) | SOC, Hunter, CTI |
+
+See also: [Suricata rules](#suricata-rules), [Suricata rule options](#suricata-rule-options)
+
+### Suricata rules
+
+Also: Suricata signature, IDS rule, network signature
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.2 Suricata Rules](../modules/01-soc/03-detection/02-suricata-rules/) | SOC, Hunter, CTI |
+
+See also: [how Suricata rules relate to Zeek](#how-suricata-rules-relate-to-zeek), [Suricata rule structure](#suricata-rule-structure)
+
 ### Sysmon 1 / 5 / 10 and DeviceProcessEvents
 
 Also: DeviceProcessEvents, Sysmon process events, ActionType ProcessCreated
@@ -1680,6 +1813,16 @@ Also: turn STIX objects into hunt leads, convert bundle leftovers to leads
 | Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt), [hunt question from CTI leads](#hunt-question-from-cti-leads)
+
+### turning log fields into detections
+
+Also: fields to detection, log fields into a SIEM rule
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.4 SIEM Rules](../modules/01-soc/03-detection/04-siem-rules/) | SOC, Hunter, CTI |
+
+See also: [SIEM detection rules / correlation searches](#siem-detection-rules--correlation-searches), [creating a SIEM rule from log fields or from SIGMA](#creating-a-siem-rule-from-log-fields-or-from-sigma)
 
 ### tx_hosts / rx_hosts
 
@@ -1914,6 +2057,40 @@ Also: `x509`, certificate details log
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
 Handshake metadata is taught in [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/). Full `x509` depth is a later topic if it becomes its own module.
+
+---
+
+## Y
+
+### YARA rule structure
+
+Also: YARA meta, YARA strings, YARA condition
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.3 YARA Rules](../modules/01-soc/03-detection/03-yara-rules/) | SOC, Hunter, CTI |
+
+See also: [YARA rules](#yara-rules), [YARA strings and conditions](#yara-strings-and-conditions)
+
+### YARA rules
+
+Also: YARA, YARA signature, file pattern rule
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.3 YARA Rules](../modules/01-soc/03-detection/03-yara-rules/) | SOC, Hunter, CTI |
+
+See also: [how YARA is used with files / memory](#how-yara-is-used-with-files--memory), [YARA rule structure](#yara-rule-structure)
+
+### YARA strings and conditions
+
+Also: YARA ascii, YARA hex, YARA regex, filesize, at 0
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.3.3 YARA Rules](../modules/01-soc/03-detection/03-yara-rules/) | SOC, Hunter, CTI |
+
+See also: [YARA rules](#yara-rules), [matching techniques: ASCII, hex, and regex](#matching-techniques-ascii-hex-and-regex)
 
 ---
 
