@@ -517,6 +517,18 @@ Also: confirmation anchoring availability premature closure
 
 See also: [impact of biases on intelligence products](#impact-of-biases-on-intelligence-products), [techniques to mitigate cognitive biases](#techniques-to-mitigate-cognitive-biases)
 
+### common data sources for infrastructure enrichment
+
+Also: RDAP SOA PDNS TIP as infra sources, classroom infra source set
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+
+How to *read* those sources was taught in [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/), [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/), and [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/).
+
+See also: [pivoting concepts and techniques](#pivoting-concepts-and-techniques), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
+
 ### common estimative terms and their meaning
 
 Also: likely, even chance, remote, estimative term card
@@ -854,6 +866,7 @@ Also: one hop, classroom pivot, not Relations graph
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -2166,6 +2179,28 @@ See also: [process activity](#process-activity), [parent-child process](#parent-
 
 See [uid](#uid).
 
+### pivot from a seed indicator to additional adversary infrastructure
+
+Also: infra hop from a seed, additional adversary domain or IP, CTI pivot line
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+
+DTF names the seed in [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/). Zeek `uid` joins are [uid](#uid).
+
+See also: [pivoting concepts and techniques](#pivoting-concepts-and-techniques), [reject a weak or uncited infra pivot](#reject-a-weak-or-uncited-infra-pivot)
+
+### pivoting concepts and techniques
+
+Also: seed shared property additional infra, one cited hop, stop rule
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+
+See also: [common data sources for infrastructure enrichment](#common-data-sources-for-infrastructure-enrichment), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
+
 ### place a report or activity set on the Kill Chain
 
 Also: place a report on the Kill Chain, activity-set progression, CTI Kill Chain product list
@@ -2434,6 +2469,7 @@ Also: RDAP first, WHOIS fallback
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 See also: [extract and interpret RDAP/WHOIS fields](#extract-and-interpret-rdapwhois-fields), [purpose of WHOIS and RDAP](#purpose-of-whois-and-rdap)
 
@@ -2514,6 +2550,16 @@ Also: reject the neighbor ID, neighbor technique reject, T1059.001 vs T1059.003
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques)
+
+### reject a weak or uncited infra pivot
+
+Also: reject cloud /24 as infra, reject public NS hop, uncited vendor domain
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+
+See also: [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure), [key RDAP/WHOIS fields for enrichment and attribution](#key-rdapwhois-fields-for-enrichment-and-attribution)
 
 ### reject an unobserved Kill Chain stage
 
@@ -2829,6 +2875,7 @@ Also: Silent Push for intelligence, historical PDNS
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 See also: [Silent Push for hunting](#silent-push-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -3402,8 +3449,9 @@ Also: pivot on NS and MNAME, unique TXT token
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-See also: [SOA records](#soa-records), [other advanced DNS record types of intelligence value](#other-advanced-dns-record-types-of-intelligence-value)
+See also: [SOA records](#soa-records), [other advanced DNS record types of intelligence value](#other-advanced-dns-record-types-of-intelligence-value), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
 ### use DTF scoring to guide enrichment or pivoting
 
@@ -3412,8 +3460,9 @@ Also: DTF next seed, score then seed, do not pivot this hour
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-Doing the infrastructure pivot is later (`3.8.1`).
+Doing the hop is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
 
 See also: [identify patterns across indicators, infrastructure, and behavior](#identify-patterns-across-indicators-infrastructure-and-behavior), [DTF core components and scoring](#dtf-core-components-and-scoring)
 

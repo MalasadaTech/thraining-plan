@@ -53,6 +53,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.7.x` CTI framework lessons:** four children — ATT&CK (`3.7.1`), Diamond (`3.7.2`), Kill Chain (`3.7.3`), DTF (`3.7.4`). Generate only the asked child. Do not write cluster `3.7` or lumped outline `3.7.5` as one module. Do not re-teach SOC floor (`1.5`) or hunt planning (`2.5`). Do not copy `modules/shared/frameworks/`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
 
+**`3.8.x` CTI enrichment lessons:** generate only the asked child (`3.8.1` infra pivot, `3.8.2` applicable TTPs, `3.8.3` IOC handling, `3.8.4` relevance/impact). Do not write cluster `3.8` as one module. `3.8.1` does the hop from a seed; do not re-teach RDAP (`3.5`), SOA (`3.6`), or Silent Push tool choice (`3.3.2`). DTF *names* the seed (`3.7.4`). VT Relations depth is `3.9`. Actor profile is `3.11`.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).
