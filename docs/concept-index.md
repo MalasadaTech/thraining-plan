@@ -382,8 +382,19 @@ Also: `subject`, `issuer`, CN, certificate name
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
+| Used | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
 
-See also: [self-signed certificate](#self-signed-certificate), [SNI vs certificate mismatch](#sni-vs-certificate-mismatch)
+See also: [self-signed certificate](#self-signed-certificate), [certificate / code-signing information](#certificate--code-signing-information)
+
+### certificate / code-signing information
+
+Also: signed vs unsigned, issuer not subject, stolen cert serial
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+
+See also: [extract and interpret certificate information from a file](#extract-and-interpret-certificate-information-from-a-file), [certificate subject / issuer](#certificate-subject--issuer)
 
 ### cipher suite
 
@@ -817,6 +828,16 @@ Also: what the PIR stops you collecting, drive collection and analysis
 | Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
 
 See also: [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis), [develop or refine intelligence requirements](#develop-or-refine-intelligence-requirements)
+
+### extract and interpret certificate information from a file
+
+Also: interpret signer issuer validity, signed is not trusted
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+
+See also: [certificate / code-signing information](#certificate--code-signing-information), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
 ### event engine
 
@@ -1384,6 +1405,16 @@ Also: omitted evidence, stuck first label, isolate too early
 | Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
 
 See also: [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis), [identify potential cognitive bias in a judgment](#identify-potential-cognitive-bias-in-a-judgment)
+
+### imphash
+
+Also: import hash, PE import table hash
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+
+See also: [ssdeep](#ssdeep), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
 ### incident report
 
@@ -2607,6 +2638,16 @@ See [TAP / SPAN](#tap--span).
 
 See [TLS / ssl log](#tls--ssl-log).
 
+### ssdeep
+
+Also: fuzzy hash, ssdeep score, classroom 50
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+
+See also: [TLSH](#tlsh), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
+
 ### SSLv3
 
 See [TLS version](#tls-version).
@@ -2818,6 +2859,16 @@ Also: vpn-vendor, idp-corp, federation access
 | Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
 
 See also: [key network segments and data flow](#key-network-segments-and-data-flow), [identifying which orientation fact applies and rejecting the adjacent fact](#identifying-which-orientation-fact-applies-and-rejecting-the-adjacent-fact)
+
+### TLSH
+
+Also: trend locality sensitive hash, TLSH distance
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+
+See also: [ssdeep](#ssdeep), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
 ### translate stakeholder questions into clear intelligence requirements
 
@@ -3071,6 +3122,16 @@ Also: write a likely judgment, banned is will could
 | Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [interpret the likelihood expressed in an estimative statement](#interpret-the-likelihood-expressed-in-an-estimative-statement)
+
+### use file similarity hashes to identify related samples
+
+Also: related vs identical, ssdeep 50, same imphash different SHA256
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+
+See also: [imphash](#imphash), [ssdeep](#ssdeep), [TLSH](#tlsh)
 
 ### use the TIP for enrichment or analysis
 

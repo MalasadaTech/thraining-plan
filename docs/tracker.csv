@@ -64,4 +64,5 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 3.3,Tools,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.3.1–3.3.2"
 3.3.1,Internal Threat Intelligence Platform,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 3.3.2,External Tools,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.4,File Similarity & Hashing Techniques,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,
+3.4,File Similarity & Hashing Techniques,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 3.4.1"
+3.4.1,Hashing and Similarity Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review

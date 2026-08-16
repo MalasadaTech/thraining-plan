@@ -45,6 +45,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.3.x` tool lessons:** two children — internal TIP (`3.3.1`), external tools (`3.3.2`). Generate only the asked child. Do not write cluster `3.3` as one module. Do not turn `3.3.1` into VirusTotal / Silent Push (`3.3.2`, `3.9`) or STIX authoring (`3.10`). Classroom TIP names are stand-ins.
 
+**`3.4` file-similarity lesson:** one teaching unit (`3.4.1`) — imphash, ssdeep, TLSH, and code-signing. Do not turn it into VT Relations (`3.9`) or cryptographic identity-only hashes (`1.2.7` MD5/SHA). Classroom match thresholds are stand-ins.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).
