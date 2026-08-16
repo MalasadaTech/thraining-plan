@@ -408,6 +408,16 @@ Also: Windows privilege escalation, token theft, UAC bypass, service image abuse
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
 
+### common estimative terms and their meaning
+
+Also: likely, even chance, remote, estimative term card
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+
+See also: [purpose of estimative language](#purpose-of-estimative-language), [use estimative language in an analytic judgment](#use-estimative-language-in-an-analytic-judgment)
+
 ### common reasons intelligence fails to be actionable
 
 Also: IOC list only, too late, no so-what, not actionable
@@ -993,6 +1003,16 @@ Also: PCAP-REQ, pcap.harbor.internal, hot vs warm PCAP
 
 See also: [what tool to use to view PCAP](#what-tool-to-use-to-view-pcap), [PCAP collection points / sensors](#pcap-collection-points--sensors)
 
+### how estimative language communicates confidence and uncertainty
+
+Also: likelihood vs confidence, two axes estimative
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+
+See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [levels of confidence in attribution](#levels-of-confidence-in-attribution)
+
 ### how requirements drive collection and analysis
 
 Also: requirement drives work, PIR drives collect and analyze
@@ -1233,6 +1253,16 @@ Also: which collection class, OSINT vs internal first
 | Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
 
 See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
+
+### interpret the likelihood expressed in an estimative statement
+
+Also: read an estimative term, interpret likely vs high confidence
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+
+See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [use estimative language in an analytic judgment](#use-estimative-language-in-an-analytic-judgment)
 
 ### incident report
 
@@ -1919,6 +1949,16 @@ Also: why structure changeover, prevent dropped cases at shift change
 | Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
 
 See also: [shift change participants](#shift-change-participants), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
+
+### purpose of estimative language
+
+Also: why estimative terms, comparable uncertainty
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+
+See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [how estimative language communicates confidence and uncertainty](#how-estimative-language-communicates-confidence-and-uncertainty)
 
 ### purpose of intelligence requirements
 
@@ -2778,6 +2818,16 @@ Also: urlscan.io, URLScan page scan, URLScan for hunting
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+
+### use estimative language in an analytic judgment
+
+Also: write a likely judgment, banned is will could
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+
+See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [interpret the likelihood expressed in an estimative statement](#interpret-the-likelihood-expressed-in-an-estimative-statement)
 
 ### user-mode image load vs kernel driver load
 

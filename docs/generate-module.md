@@ -41,6 +41,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.1.x` core intel lessons:** eight children (`3.1.1`–`3.1.8`). Generate only the asked child unless the caller asks for the rest of `3.1`. Do not write cluster `3.1` as one module. Collection *source classes* are `3.1.8` (not the lifecycle collection *stage* in `3.1.2`). Audience tailoring is `3.1.6`; finished production is `3.11`. Actor profile is `3.11.1.2`. Local collection *request process* is `3.12.2.1`.
 
+**`3.2.x` tradecraft lessons:** four children — estimative language (`3.2.1`), structured techniques (`3.2.2`), Admiralty Code (`3.2.3`), cognitive bias (`3.2.4`). Generate only the asked child. Do not write cluster `3.2` as one module. Attribution *confidence* (low/medium/high) is `3.1.7`; this lesson is *likelihood terms*. Source letters are `3.2.3`.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).
