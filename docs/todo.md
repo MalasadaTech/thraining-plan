@@ -6,7 +6,7 @@ Do these first (course order and story):
 - [ ] Write the section 0 intro lesson: what a SOC is, how it can run, the jobs, and where they lightly overlap (one-sentence hand-offs; no fake DYA ticket system)
 - [ ] Teach in this order (lesson IDs can stay as they are): intro → SOC analyst → CTI → hunting → detection engineers
 - [ ] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
-- [ ] Add a detection-engineers section after the threat hunters section
+- [x] Add a detection-engineers section after the threat hunters section (outline 4.x; matrix/lessons later)
 - [ ] Put the full incident flow in the companion story: SOC alert → triage → IR + leadership notify → RFI to intel → hunt package, block list to firewall/IA, and a request to write detections. Firewall/IA is a hand-off, not a new course unless we decide we want that track.
 - [ ] As we review and revise the outline, make the outline follow that same flow, so the companion story is a re-read of the outline as one combined story
 

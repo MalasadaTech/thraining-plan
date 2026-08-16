@@ -1,5 +1,5 @@
 # Combined Proficiency Matrix  
-## SOC Analyst | Threat Hunter | CTI Analyst
+## SOC Analyst | Threat Hunter | CTI Analyst | Detection Engineer
 
 **Skill Levels**
 - **3** = Apprentice
@@ -15,7 +15,9 @@
 - Non-primary roles receive minimal awareness ratings: **A** (Knowledge) or **1a** (Task) unless the skill has clear shared value.
 - "—" means the item is not applicable / no requirement for that role.
 
-Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `2.1`, `3.1`, …). Those match the `#` column. Do not assign work by old display numbers (there is no “section 7 = all hunting”).
+Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `2.1`, `3.1`, `4.1`, …). Those match the `#` column. Do not assign work by old display numbers (there is no “section 7 = all hunting”).
+
+Section **4** adds a Detection Engineer column. Sections **0–3** stay three columns until we rate DE on those items.
 
 ---
 
@@ -451,9 +453,44 @@ Five teaching units. Classroom cards are stand-ins. IR process is **1.8.5**, not
 
 ---
 
+## 4 Detection Engineer (primarily DE)
+
+Taught last. **1.3** is rule syntax / first read-write. Nominations from SOC, hunt, and CTI need not be perfect. Blocks are firewall / IA. Site lists and deploy paths are **4.8** — do not invent them.
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
+|---|------|------|-----------|--------------|-----------|----------|
+| 4.1 | What DE owns | K | A / B / B | A / B / B | A / B / B | B / C / C |
+| 4.1.1 | Sort work to DE, nominator, 1.3, or block | T | 1a / 2b / 2b | 1a / 2b / 2b | 1a / 2b / 2b | 3c / 4c / 4c |
+| 4.2 | Making a detection sound and meeting shop requirements | K | A / A / B | A / A / B | A / A / B | B / C / C |
+| 4.2.1 | Test a draft or change: what must fire and what must not | T | 1a / 1a / 2b | 1a / 1a / 2b | 1a / 1a / 2b | 3c / 4c / 4d |
+| 4.2.2 | Mark which shop requirements are met and which are still missing | T | 1a / 1a / 1a | 1a / 1a / 1a | 1a / 1a / 1a | 3c / 4c / 4c |
+| 4.2.3 | Write the close-the-loop note to the nominator | T | 1a / 1a / 2b | 1a / 1a / 2b | 1a / 1a / 2b | 3c / 4c / 4c |
+| 4.3 | Nominations from SOC, hunt, and CTI | K | A / B / B | A / B / B | A / B / B | B / C / C |
+| 4.3.1 | Review a nomination: accept, send back, or reject, and say who finishes what | T | 1a / 2b / 2b | 1a / 2b / 2b | 1a / 2b / 2b | 3c / 4c / 4d |
+| 4.4 | Tune requests from SOC | K | A / B / B | A / A / B | A / A / B | B / C / C |
+| 4.4.1 | Pick tune / exception / replace / leave / retire and cite why | T | 1a / 2b / 3c | 1a / 1a / 2b | 1a / 1a / 2b | 3c / 4c / 4d |
+| 4.4.2 | Reject a request that is investigation, a block, or IR containment | T | 1a / 2b / 2b | 1a / 1a / 2b | 1a / 1a / 2b | 3c / 4c / 4c |
+| 4.5 | Hunt and intel packages | K | A / A / B | A / B / B | A / B / B | B / C / C |
+| 4.5.1 | Review a package: one add, one change, or no new rule | T | 1a / 1a / 2b | 1a / 2b / 3c | 1a / 2b / 3c | 3c / 4c / 4d |
+| 4.5.2 | Reject turning the package into a block list | T | 1a / 1a / 2b | 1a / 2b / 2b | 1a / 2b / 2b | 3c / 4c / 4c |
+| 4.6 | Detection lifecycle | K | A / A / B | A / A / B | A / A / B | B / C / C |
+| 4.6.1 | Call modify / retire / leave and cite the reason | T | 1a / 1a / 2b | 1a / 1a / 2b | 1a / 1a / 2b | 3c / 4c / 4d |
+| 4.6.2 | Given a block, decide whether the matching rule still earns its keep | T | 1a / 1a / 2b | 1a / 1a / 2b | 1a / 1a / 2b | 3c / 4c / 4d |
+| 4.7 | Sensor availability and performance | K | A / A / A | A / A / A | A / A / A | A / B / B |
+| 4.7.1 | Given “the rule never fired,” check the rule, the sensor, or both | T | 1a / 1a / 1a | 1a / 1a / 1a | 1a / 1a / 1a | 2b / 3c / 3c |
+| 4.7.2 | Reject treating a down sensor as proof the activity did not happen | T | 1a / 1a / 1a | 1a / 1a / 1a | 1a / 1a / 1a | 2b / 3c / 3c |
+| 4.8.1 | Local detection requirements | K | A / A / A | A / A / A | A / A / A | B / C / C |
+| 4.8.1.1 | Identify whether you have the local list and align only to a list you were shown | T | 1a / 1a / 1a | 1a / 1a / 1a | 1a / 1a / 1a | 3c / 4c / 4c |
+| 4.8.2 | Local review, deploy, and retire paths | K | A / A / A | A / A / A | A / A / A | B / C / C |
+| 4.8.2.1 | Follow the local path you were shown (or record that you do not have it yet) | T | 1a / 1a / 1a | 1a / 1a / 1a | 1a / 1a / 1a | 3c / 4c / 4c |
+| 4.8.2.2 | Reject inventing a change board or ticket name as policy | T | 1a / 1a / 1a | 1a / 1a / 1a | 1a / 1a / 1a | 3c / 4c / 4c |
+
+---
+
 **Notes for Review**
 - Primary role ratings are taken from the individual matrices.
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
-- Section `0` is a shared intro (`0.1`–`0.5` K, `0.5.1` T). Same codes for every current role. No detection-engineer column until that track exists.
+- Section `0` is a shared intro (`0.1`–`0.5` K, `0.5.1` T). Same codes for SOC, Hunter, and CTI. No DE column on `0`–`3` yet.
+- Section `4` is Detection Engineer (`4.1`–`4.8`). DE is primary (`docs/matrices/de.md`). Cross-role awareness lives **only** on this combined sheet — not on the SOC, hunter, or CTI sheets. Sensor unit `4.7` is lighter. Site unit `4.8` is obtain-and-follow.
 - Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`). Shift change is two units (`1.7.1`–`1.7.2`). Site-specific is five units (`1.8.1`–`1.8.5`); IR process is `1.8.5`. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.

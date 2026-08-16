@@ -1,0 +1,99 @@
+# Detection Engineer Proficiency Matrix
+
+**Skill Levels**
+- **3** = Apprentice (supervised, never alone on shift)
+- **5** = Journeyman (independent)
+- **7** = Craftsman / Senior (can train others)
+
+**Proficiency Codes**
+- Knowledge: A (Facts) → B (Principles) → C (Analysis) → D (Evaluation)
+- Task Performance: 1 (Extremely Limited) → 2 (Partially Proficient) → 3 (Competent) → 4 (Highly Proficient)
+- Task Knowledge: a (Nomenclature) → b (Procedures) → c (Operating Principles) → d (Advanced Theory)
+
+**Baseline for Detection Engineer**
+- Knowledge items generally start at **B**
+- Task items generally start at **3c**
+- Sensor work (**4.7**) is lighter
+- Site-specific (**4.8**) is obtain-and-follow, not invented DYA process
+- Rule syntax / first read-write is **1.3**, not this sheet
+
+---
+
+## 4.1 What DE owns
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.1 | What DE owns | K | B | C | C | Own new / change / retire / deploy. Nominations can be rough. Not 1.3. Not a block. |
+| 4.1.1 | Sort work to DE, nominator, 1.3, or block | T | 3c | 4c | 4c | First-day sort. Reject “rough draft is not DE” and “block request is a deploy.” |
+
+---
+
+## 4.2 Making a detection sound and meeting shop requirements
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.2 | Making a detection sound and meeting shop requirements | K | B | C | C | Sound + test + required fields + close the loop. Field *list* is 4.8. |
+| 4.2.1 | Test a draft or change: what must fire and what must not | T | 3c | 4c | 4d | Core craft. 7-level adapts tests when the activity is messy. |
+| 4.2.2 | Mark which shop requirements are met and which are still missing | T | 3c | 4c | 4c | Fill the list you were shown. Do not invent fields. |
+| 4.2.3 | Write the close-the-loop note to the nominator | T | 3c | 4c | 4c | Shipped / changed / sent back / retired. |
+
+---
+
+## 4.3 Nominations from SOC, hunt, and CTI
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.3 | Nominations from SOC, hunt, and CTI | K | B | C | C | Draft need not be perfect. Bar is “clear enough to review.” |
+| 4.3.1 | Review a nomination: accept, send back, or reject, and say who finishes what | T | 3c | 4c | 4d | Distinctive vs weak nomination. 7-level judges what DE should finish. |
+
+---
+
+## 4.4 Tune requests from SOC
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.4 | Tune requests from SOC | K | B | C | C | Live rules. Different inbox from nominations. |
+| 4.4.1 | Pick tune / exception / replace / leave / retire and cite why | T | 3c | 4c | 4d | Judgment on a live rule. |
+| 4.4.2 | Reject a request that is investigation, a block, or IR containment | T | 3c | 4c | 4c | Stay on the DE product. |
+
+---
+
+## 4.5 Hunt and intel packages
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.5 | Hunt and intel packages | K | B | C | C | Both CTI and hunters. Treat like a nomination. “No new rule” is valid. |
+| 4.5.1 | Review a package: one add, one change, or no new rule | T | 3c | 4c | 4d | Core package review. |
+| 4.5.2 | Reject turning the package into a block list | T | 3c | 4c | 4c | Blocks are firewall / IA. |
+
+---
+
+## 4.6 Detection lifecycle
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.6 | Detection lifecycle | K | B | C | C | Modify / retire / leave, and why. |
+| 4.6.1 | Call modify / retire / leave and cite the reason | T | 3c | 4c | 4d | 7-level when reasons compete. |
+| 4.6.2 | Given a block, decide whether the matching rule still earns its keep | T | 3c | 4c | 4d | Block is not automatically retire. |
+
+---
+
+## 4.7 Sensor availability and performance
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.7 | Sensor availability and performance | K | A | B | B | Lighter. Sometimes DE. Not vendor admin. |
+| 4.7.1 | Given “the rule never fired,” check the rule, the sensor, or both | T | 2b | 3c | 3c | Not a 4d sensor-engineering task. |
+| 4.7.2 | Reject treating a down sensor as proof the activity did not happen | T | 2b | 3c | 3c | Same ceiling as 4.7.1. |
+
+---
+
+## 4.8 Site-specific DE knowledge
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 4.8.1 | Local detection requirements | K | B | C | C | Obtain the list. Do not invent meta fields. |
+| 4.8.1.1 | Identify whether you have the local list and align only to a list you were shown | T | 3c | 4c | 4c | Same pattern as other site units. |
+| 4.8.2 | Local review, deploy, and retire paths | K | B | C | C | How this shop ships and retires. |
+| 4.8.2.1 | Follow the local path you were shown (or record that you do not have it yet) | T | 3c | 4c | 4c | Do not invent a ticket name. |
+| 4.8.2.2 | Reject inventing a change board or ticket name as policy | T | 3c | 4c | 4c | Same fail as other site units. |

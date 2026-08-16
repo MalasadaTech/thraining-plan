@@ -1,4 +1,4 @@
-# Training Outlines – SOC Analyst, Threat Hunter, CTI Analyst
+# Training Outlines – SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer
 
 **Manning & Qualification Rules**
 - 1-level: Never authorized to work on shift
@@ -6,7 +6,7 @@
 - 5-level: May work a shift alone
 - 7-level: Qualified to supervise and train 3-levels
 
-These rules apply across SOC Analyst, Threat Hunter, and CTI Analyst roles.
+These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection Engineer roles.
 
 ---
 
@@ -892,3 +892,101 @@ b. Approved dissemination channels and methods
 
 **3.12.3.1 [T] Tasks**  
 1. Disseminate a product using the correct local channels and customers  
+
+---
+
+# 4. Detection Engineer
+
+Taught last: intro → SOC → CTI → hunting → this section. Rule *syntax* and a first read/write are **1.3**. This section is how detections are run as a service.
+
+SOC, hunt, and CTI may **nominate** a detection. The nomination does not need to be perfect. DE reviews it, makes it sound, tunes it, meets shop requirements (meta fields and the like), and deploys.
+
+Extra adversary infrastructure from intel is a **block** for firewall / IA, not a DE job. “We blocked X — do we still need a rule?” is lifecycle, not running the firewall.
+
+Do not invent DYA meta-field lists, change boards, or deploy tickets. Those vary by site (**4.8**).
+
+**4.1 [K] What DE owns**  
+a. DE owns the set of detections: new, change, retire, deploy  
+b. SOC, hunt, and CTI nominate; the draft need not be perfect  
+c. **1.3** is how a rule works; this section is how we run them  
+d. Firewall / IA blocks; DE does not  
+
+**4.1.1 [T] Tasks**  
+1. Given a piece of work, say whether it is DE, a nominator, **1.3**, or a block (firewall / IA)  
+2. Reject treating a rough nomination as “not DE’s problem” and reject treating a block request as a DE deploy  
+
+**4.2 [K] Making a detection sound and meeting shop requirements**  
+a. Sound: fires on the intended activity; does not fire on what it must not  
+b. Test before it goes live (what must fire; what must not)  
+c. Shop requirements DE owns: required meta fields, naming, IDs, tags, logging — the *list* is local (**4.8**)  
+d. Close the loop with the nominator (and SOC): shipped, changed, sent back, or retired  
+
+**4.2.1 [T] Tasks**  
+1. Test a draft or change: state what must fire and what must not  
+2. Mark which shop requirements are met and which are still missing (do not invent the field list)  
+3. Write the close-the-loop note to the nominator  
+
+**4.3 [K] Nominations from SOC, hunt, and CTI**  
+a. Who can nominate (SOC analyst, hunter, CTI analyst)  
+b. A nomination can be a draft, a sketch, or “we need something on this” — it does not have to be production-ready  
+c. DE review: accept for work, send back with what is missing, or reject with why  
+d. The bar for the nominator is “clear enough to review,” not “ready to deploy”  
+
+**4.3.1 [T] Tasks**  
+1. Review a nomination and accept it for work, send it back, or reject it — and say why  
+2. Name what the nominator still owes vs what DE will finish  
+
+**4.4 [K] Tune requests from SOC**  
+a. Requests on *live* rules (noisy, brittle, missing context)  
+b. Same desk as nominations; different inbox  
+c. Possible answers: tune the logic, add an exception, replace the rule, leave it, or retire it  
+
+**4.4.1 [T] Tasks**  
+1. Given a SOC tune request, pick tune / exception / replace / leave / retire and cite why  
+2. Reject a request that is really an investigation, a block, or IR containment  
+
+**4.5 [K] Hunt and intel packages**  
+a. Packages from CTI and from hunters are both inputs  
+b. Review for chances to add or change a detection  
+c. “No new rule” is a valid product  
+d. A package is not a finished detection — treat it like a nomination (**4.3**)  
+
+**4.5.1 [T] Tasks**  
+1. Review a hunt or intel package and name one add, one change, or “no new rule”  
+2. Reject turning the package into a block list (that is firewall / IA)  
+
+**4.6 [K] Detection lifecycle**  
+a. When to modify  
+b. When to retire  
+c. When to leave a rule alone  
+d. Reasons: still useful, too noisy, threat gone, sensor gone, a nomination replaced it, already blocked so the rule may not be needed  
+
+**4.6.1 [T] Tasks**  
+1. Given a live rule and a reason, call modify / retire / leave and cite the reason  
+2. Given “we blocked this infrastructure,” decide whether the matching rule still earns its keep  
+
+**4.7 [K] Sensor availability and performance**  
+a. Sometimes DE watches whether sensors are up and seeing the right place (MDE, Zeek, IDS)  
+b. A dead or blind sensor is not “no threat”  
+c. This is not a vendor admin or architecture course  
+
+**4.7.1 [T] Tasks**  
+1. Given a “the rule never fired” report, say whether you would check the rule, the sensor, or both  
+2. Reject treating a down sensor as proof the activity did not happen  
+
+**4.8 [K/T] Site-specific DE knowledge**  
+**4.8.1 [K] Local detection requirements**  
+a. Required meta fields, naming, and other deploy checks  
+b. These vary by shop; obtain the current list — do not invent one  
+
+**4.8.1.1 [T] Tasks**  
+1. Identify that you do or do not have the local requirements list  
+2. Align a nomination or change only to a list you were actually shown  
+
+**4.8.2 [K] Local review, deploy, and retire paths**  
+a. How a change is reviewed and deployed  
+b. How a retire is recorded  
+
+**4.8.2.1 [T] Tasks**  
+1. Follow the local path you were shown (or record that you do not have it yet)  
+2. Reject inventing a change board or ticket name as policy  
