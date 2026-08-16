@@ -51,6 +51,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.6` advanced-DNS lesson:** one teaching unit (`3.6.1`) — interpret SOA and use other records for enrichment/pivot. Do not re-teach Zeek `dns` fields or DGA (`1.2.3`). Do not turn it into RDAP (`3.5`) or Silent Push PDNS (`3.3.2`).
 
+**`3.7.x` CTI framework lessons:** four children — ATT&CK (`3.7.1`), Diamond (`3.7.2`), Kill Chain (`3.7.3`), DTF (`3.7.4`). Generate only the asked child. Do not write cluster `3.7` or lumped outline `3.7.5` as one module. Do not re-teach SOC floor (`1.5`) or hunt planning (`2.5`). Do not copy `modules/shared/frameworks/`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

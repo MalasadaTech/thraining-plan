@@ -645,6 +645,9 @@ c. How advanced DNS data supports enrichment and infrastructure analysis
 **3.7.1 [K] MITRE ATT&CK**  
 a. Advanced application for intelligence analysis and TTP extraction  
 
+**3.7.1.1 [T] Tasks**  
+1. Map activity or reports to MITRE ATT&CK (tactic, technique or sub-technique, evidence; reject the neighbor ID)  
+
 **3.7.2 [K] Diamond Model**  
 a. Advanced application for analysis and attribution  
 

@@ -260,6 +260,7 @@ Also: ATT&CK tactic, why column, TA0002 Execution
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
 
@@ -270,6 +271,7 @@ Also: ATT&CK technique, sub-technique, T1059.001
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK tactics](#attck-tactics), [MITRE ATT&CK purpose and structure](#mitre-attck-purpose-and-structure)
 
@@ -282,6 +284,18 @@ Also: ATT&CK coverage, coverage analysis for hunting, Navigator as a view
 | Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [using ATT&CK to identify detection or visibility gaps](#using-attck-to-identify-detection-or-visibility-gaps)
+
+### ATT&CK for CTI analysis and reporting
+
+Also: ATT&CK in intel products, advanced ATT&CK for CTI, supported ATT&CK IDs in a product
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+
+SOC alert mapping is [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
+
+See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck)
 
 ### awareness-only CTI
 
@@ -867,6 +881,18 @@ Also: extract hunt leads, pull leads from a report, CTI extract for hunting
 | Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt-suitable TTPs](#hunt-suitable-ttps), [hunt-suitable artifacts](#hunt-suitable-artifacts), [what to drop from CTI](#what-to-drop-from-cti)
+
+### extracting TTPs onto ATT&CK IDs
+
+Also: TTP extract to ATT&CK, extract behavior onto T-ID, evidence-bound ATT&CK map
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+
+Copying printed IDs from a hunt-facing skim is [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/). Which extracted TTPs apply here is later (`3.8.2`).
+
+See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [reject a neighbor ATT&CK ID](#reject-a-neighbor-attck-id)
 
 ### examples of activity existing controls might miss
 
@@ -1712,6 +1738,18 @@ Also: mailfrom, SMTP MAIL FROM, envelope from
 
 See also: [smtp log](#smtp-log), [rcpt to](#rcpt-to)
 
+### map a report or activity set to ATT&CK
+
+Also: map a report to ATT&CK, map an activity set to ATT&CK, CTI ATT&CK map line
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+
+Alert mapping is [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/). Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
+
+See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
+
 ### mapping observed activity to ATT&CK
 
 Also: map an alert to ATT&CK, tactic plus technique plus cite
@@ -1719,10 +1757,11 @@ Also: map an alert to ATT&CK, tactic plus technique plus cite
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
-Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
+Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/). Report / activity-set maps are [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
 
-See also: [ATT&CK tactics](#attck-tactics), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
+See also: [ATT&CK tactics](#attck-tactics), [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck)
 
 ### mapping hunts to ATT&CK
 
@@ -1793,8 +1832,9 @@ Also: ATT&CK matrix, ATT&CK Enterprise
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
-See also: [ATT&CK tactics](#attck-tactics), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
+See also: [ATT&CK tactics](#attck-tactics), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
 
 ### MX
 
@@ -2355,6 +2395,16 @@ Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
 Mapping hunts to ATT&CK is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
+
+### reject a neighbor ATT&CK ID
+
+Also: reject the neighbor ID, neighbor technique reject, T1059.001 vs T1059.003
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+
+See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques)
 
 ### related endpoint logs for an alert
 

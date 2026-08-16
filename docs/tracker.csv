@@ -70,3 +70,5 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 3.5.1,RDAP and WHOIS Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 3.6,Advanced DNS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 3.6.1"
 3.6.1,Advanced DNS Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.7,Frameworks,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.7.1–3.7.4"
+3.7.1,MITRE ATT&CK for CTI Analysis and Reporting,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review

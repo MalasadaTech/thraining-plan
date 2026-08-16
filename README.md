@@ -100,6 +100,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/04-file-similarity` | `3.4.1` / `3.4.1.1`–`3.4.1.2` | `3.4.1` + `3.4.1.1` |
 | `modules/03-cti/05-rdap-whois` | `3.5.1` / `3.5.1.1` | `3.5.1` + `3.5.1.1` |
 | `modules/03-cti/06-advanced-dns` | `3.6.1` / `3.6.1.1` | `3.6.1` + `3.6.1.1` |
+| `modules/03-cti/07-frameworks/01-attck-cti` | `3.7.1` / `3.7.1.1` | `3.7.1` + `3.7.1.1` |
 
 Record the mapping in each module `README.md`.
 
