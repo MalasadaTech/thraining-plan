@@ -109,6 +109,16 @@ Also: CTI hunting value, assess a report for hunting, hunter as CTI consumer
 
 See also: [hunt-worthy CTI](#hunt-worthy-cti), [awareness-only CTI](#awareness-only-cti), [hand off to detections / IR](#hand-off-to-detections--ir)
 
+### ATT&CK coverage analysis
+
+Also: ATT&CK coverage, coverage analysis for hunting, Navigator as a view
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+
+See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [using ATT&CK to identify detection or visibility gaps](#using-attck-to-identify-detection-or-visibility-gaps)
+
 ### awareness-only CTI
 
 Also: awareness only, context-only CTI, do not hunt this report
@@ -245,6 +255,7 @@ Also: detection gap, data exists no alert, missed detection
 | Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
 | Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 | Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [visibility gaps](#visibility-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -649,7 +660,17 @@ Also: Zeek logs, TSV, JSON logs
 ---
 
 ## M
+apping hunts to ATT&CK
 
+Also: map a hunt plan to ATT&CK, map hunt findings to ATT&CK, ATT&CK tactics and techniques
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+
+See also: [using MITRE ATT&CK for hunt planning](#using-mitre-attck-for-hunt-planning), [recording ATT&CK IDs from a report](#recording-attck-ids-from-a-report)
+
+### m
 ### missing SNI
 
 Also: empty SNI, no `server_name`
@@ -743,6 +764,7 @@ See also: [intelligence lifecycle](#intelligence-lifecycle)
 Also: Zeek scripts, scripting layer, policy script interpreter
 
 | Coverage | Module | Roles |
+| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
@@ -833,12 +855,13 @@ See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [
 Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
 
 | Coverage | Module | Roles |
-|----------|--------|-------|
+|-Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 | Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
-Mapping hunts to ATT&CK is a later item (2.5), not this module.
+Mapping hunts to ATT&CK is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
+See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [mapping hunts to ATT&CK](#mapping-hunts-to-attck
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti)
 
 ### rcode_name
@@ -1184,6 +1207,36 @@ Also: urlscan.io, URLScan page scan, URLScan for hunting
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
 
+### using ATT&CK to identify detection or visibility gaps
+
+Also: ATT&CK detection gap, ATT&CK visibility gap, coverage gaps from a hunt map
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+
+See also: [detection gaps](#detection-gaps), [visibility gaps](#visibility-gaps), [ATT&CK coverage analysis](#attck-coverage-analysis)
+
+### using ATT&CK to support hunt prioritization
+
+Also: ATT&CK-supported priority, rank hunts with ATT&CK
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+
+See also: [prioritizing hunts](#prioritizing-hunts), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
+
+### using MITRE ATT&CK for hunt planning
+
+Also: ATT&CK for hunt planning, ATT&CK for hunting, framework application for hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+
+See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [ATT&CK coverage analysis](#attck-coverage-analysis)
+
 ---
 
 ## V
@@ -1201,6 +1254,7 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 | Used | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 | Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 | Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
