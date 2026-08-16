@@ -1145,6 +1145,16 @@ Also: requirement drives work, PIR drives collect and analyze
 
 See also: [explain how a given requirement drives analytic work](#explain-how-a-given-requirement-drives-analytic-work), [purpose of intelligence requirements](#purpose-of-intelligence-requirements)
 
+### how advanced DNS supports enrichment and infrastructure analysis
+
+Also: stack SOA NS TXT, cluster on MNAME
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+
+See also: [SOA records](#soa-records), [use advanced DNS records to enrich or pivot](#use-advanced-dns-records-to-enrich-or-pivot)
+
 ### how the TIP supports enrichment, analysis, and production
 
 Also: TIP sighting, attach TIP object to draft
@@ -1395,6 +1405,16 @@ Also: name the tilt, textual tell of bias
 | Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
 
 See also: [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis), [apply a mitigation technique](#apply-a-mitigation-technique)
+
+### interpret an SOA record
+
+Also: MNAME RNAME serial, serial is not a hash
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+
+See also: [SOA records](#soa-records), [how advanced DNS supports enrichment and infrastructure analysis](#how-advanced-dns-supports-enrichment-and-infrastructure-analysis)
 
 ### interpret the likelihood expressed in an estimative statement
 
@@ -1904,6 +1924,16 @@ Also: service persistence, WMI persistence, logon script persistence
 
 See also: [persistence techniques](#persistence-techniques), [recognizing persistence techniques in logs or telemetry](#recognizing-persistence-techniques-in-logs-or-telemetry)
 
+### other advanced DNS record types of intelligence value
+
+Also: NS MX TXT SRV intel value
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+
+See also: [SOA records](#soa-records), [use advanced DNS records to enrich or pivot](#use-advanced-dns-records-to-enrich-or-pivot)
+
 ### other common report types
 
 Also: informational report, awareness note, local report types
@@ -2237,6 +2267,8 @@ Also: DNS query type, `qtype`
 | Taught | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
 
 Types taught: A, AAAA, CNAME, MX, TXT, NS, PTR, SOA, SRV, NULL.
+
+SOA *field interpretation* and intel pivot are [3.6.1 Advanced DNS](../modules/03-cti/06-advanced-dns/).
 
 ### query
 
@@ -2697,6 +2729,17 @@ Also: fuzzy hash, ssdeep score, classroom 50
 | Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [TLSH](#tlsh), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
+
+### SOA records
+
+Also: Start of Authority, MNAME, RNAME, zone serial
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+| Used | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
+
+See also: [interpret an SOA record](#interpret-an-soa-record), [qtype_name](#qtype_name)
 
 ### SSLv3
 
@@ -3172,6 +3215,16 @@ Also: write a likely judgment, banned is will could
 | Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [interpret the likelihood expressed in an estimative statement](#interpret-the-likelihood-expressed-in-an-estimative-statement)
+
+### use advanced DNS records to enrich or pivot
+
+Also: pivot on NS and MNAME, unique TXT token
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+
+See also: [SOA records](#soa-records), [other advanced DNS record types of intelligence value](#other-advanced-dns-record-types-of-intelligence-value)
 
 ### use file similarity hashes to identify related samples
 

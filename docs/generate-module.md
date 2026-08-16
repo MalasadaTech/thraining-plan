@@ -49,6 +49,8 @@ Stop and say what is missing if any of these fail:
 
 **`3.5` RDAP/WHOIS lesson:** one teaching unit (`3.5.1`). Do not turn it into SOA / advanced DNS (`3.6`) or Silent Push PDNS (`3.3.2`). Redacted registrant is not “no intel” and is not nation-state attribution (`3.1.7`).
 
+**`3.6` advanced-DNS lesson:** one teaching unit (`3.6.1`) — interpret SOA and use other records for enrichment/pivot. Do not re-teach Zeek `dns` fields or DGA (`1.2.3`). Do not turn it into RDAP (`3.5`) or Silent Push PDNS (`3.3.2`).
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

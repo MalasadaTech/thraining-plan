@@ -79,3 +79,4 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 3.3.2 | [modules/03-cti/03-tools/02-external-tools](../modules/03-cti/03-tools/02-external-tools/) |
 | 3.4.1 | [modules/03-cti/04-file-similarity](../modules/03-cti/04-file-similarity/) |
 | 3.5.1 | [modules/03-cti/05-rdap-whois](../modules/03-cti/05-rdap-whois/) |
+| 3.6.1 | [modules/03-cti/06-advanced-dns](../modules/03-cti/06-advanced-dns/) |
