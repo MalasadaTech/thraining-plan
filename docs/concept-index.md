@@ -839,6 +839,16 @@ Also: interpret signer issuer validity, signed is not trusted
 
 See also: [certificate / code-signing information](#certificate--code-signing-information), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
+### extract and interpret RDAP/WHOIS fields
+
+Also: redacted is not empty, cloud org is not the actor
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+
+See also: [key RDAP/WHOIS fields for enrichment and attribution](#key-rdapwhois-fields-for-enrichment-and-attribution), [query RDAP/WHOIS for a domain or IP](#query-rdapwhois-for-a-domain-or-ip)
+
 ### event engine
 
 Also: Zeek events, `connection_established`
@@ -1616,6 +1626,26 @@ Also: user VLAN, OT segment, Harbor segments
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [crown jewel / critical assets](#crown-jewel--critical-assets)
 
+### key differences between WHOIS and RDAP
+
+Also: RDAP first, structured vs free text, HTTPS vs port 43
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+
+See also: [purpose of WHOIS and RDAP](#purpose-of-whois-and-rdap), [query RDAP/WHOIS for a domain or IP](#query-rdapwhois-for-a-domain-or-ip)
+
+### key RDAP/WHOIS fields for enrichment and attribution
+
+Also: created registrar nameservers, IP CIDR org
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+
+See also: [extract and interpret RDAP/WHOIS fields](#extract-and-interpret-rdapwhois-fields), [purpose of WHOIS and RDAP](#purpose-of-whois-and-rdap)
+
 ---
 
 ## L
@@ -2184,6 +2214,16 @@ Also: why hunt exists, hunt purpose, purpose of hunting
 
 See also: [threat hunting in the security program](#threat-hunting-in-the-security-program)
 
+### purpose of WHOIS and RDAP
+
+Also: registration lookup, who holds the block
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+
+See also: [key differences between WHOIS and RDAP](#key-differences-between-whois-and-rdap), [key RDAP/WHOIS fields for enrichment and attribution](#key-rdapwhois-fields-for-enrichment-and-attribution)
+
 ---
 
 ## Q
@@ -2205,6 +2245,16 @@ Also: DNS query, queried domain, `query`
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
+
+### query RDAP/WHOIS for a domain or IP
+
+Also: RDAP first, WHOIS fallback
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+
+See also: [extract and interpret RDAP/WHOIS fields](#extract-and-interpret-rdapwhois-fields), [purpose of WHOIS and RDAP](#purpose-of-whois-and-rdap)
 
 ---
 
