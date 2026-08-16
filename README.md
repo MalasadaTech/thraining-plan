@@ -47,6 +47,10 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/01-soc/02-zeek/02-conn-engine` | `1.2.2.1`–`1.2.2.3` | `1.2.2` + `1.2.3` |
 | `modules/01-soc/02-zeek/03-dns-engine` | `1.2.3.1`–`1.2.3.3` | `1.2.4` + `1.2.5` |
 | `modules/01-soc/02-zeek/04-tls-engine` | `1.2.4.1`–`1.2.4.3` | `1.2.6` + `1.2.7` |
+| `modules/01-soc/02-zeek/05-http-engine` | `1.2.5.1`–`1.2.5.3` | `1.2.8` + `1.2.9` |
+| `modules/01-soc/02-zeek/06-smtp-engine` | `1.2.6.1`–`1.2.6.3` | `1.2.10` + `1.2.11` |
+| `modules/01-soc/02-zeek/07-files-engine` | `1.2.7.1`–`1.2.7.3` | `1.2.12` + `1.2.13` |
+| `modules/01-soc/02-zeek/08-weird-engine` | `1.2.8.1`–`1.2.8.3` | `1.2.14` + `1.2.15` |
 | `modules/02-hunter/01-purpose` | `2.1.1` / `2.1.1.1` / `2.1.1.2` | `2.1` + `2.1.1` |
 | `modules/02-hunter/02-methodology/01-hunt-types` | `2.2.1` / `2.2.1.1`–`2.2.1.4` | `2.2.1` + `2.2.3` tasks 4–7 |
 | `modules/02-hunter/02-methodology/02-hunt-development` | `2.2.2` / `2.2.2.1`–`2.2.2.3` | `2.2.2` + `2.2.3` tasks 1–3 |

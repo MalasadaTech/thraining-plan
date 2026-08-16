@@ -27,6 +27,10 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 1.2.2 | [modules/01-soc/02-zeek/02-conn-engine](../modules/01-soc/02-zeek/02-conn-engine/) |
 | 1.2.3 | [modules/01-soc/02-zeek/03-dns-engine](../modules/01-soc/02-zeek/03-dns-engine/) |
 | 1.2.4 | [modules/01-soc/02-zeek/04-tls-engine](../modules/01-soc/02-zeek/04-tls-engine/) |
+| 1.2.5 | [modules/01-soc/02-zeek/05-http-engine](../modules/01-soc/02-zeek/05-http-engine/) |
+| 1.2.6 | [modules/01-soc/02-zeek/06-smtp-engine](../modules/01-soc/02-zeek/06-smtp-engine/) |
+| 1.2.7 | [modules/01-soc/02-zeek/07-files-engine](../modules/01-soc/02-zeek/07-files-engine/) |
+| 1.2.8 | [modules/01-soc/02-zeek/08-weird-engine](../modules/01-soc/02-zeek/08-weird-engine/) |
 | 2.1 | [modules/02-hunter/01-purpose](../modules/02-hunter/01-purpose/) |
 | 2.2.1 | [modules/02-hunter/02-methodology/01-hunt-types](../modules/02-hunter/02-methodology/01-hunt-types/) |
 | 2.2.2 | [modules/02-hunter/02-methodology/02-hunt-development](../modules/02-hunter/02-methodology/02-hunt-development/) |

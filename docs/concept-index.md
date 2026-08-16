@@ -28,6 +28,9 @@ Also: source/destination IP and port, `id.orig_h`, `id.orig_p`, `id.resp_h`, `id
 | Taught | [1.2.2 Conn Engine](../modules/01-soc/02-zeek/02-conn-engine/) | SOC, Hunter |
 | Used | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
 | Used | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
+| Used | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
+| Used | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
+| Used | [1.2.8 Weird Engine](../modules/01-soc/02-zeek/08-weird-engine/) | SOC, Hunter, CTI |
 
 See also: [conn log](#conn-log)
 
@@ -242,6 +245,16 @@ Common values taught here: `SF`, `S0`, `S1`, `REJ`, `RSTO`, `RSTR`, `RSTOS0`, `R
 
 See also: [SF](#sf), [S0](#s0), [REJ](#rej), [scanning](#scanning)
 
+### conn_uids (link to other Zeek logs)
+
+Also: files.conn_uids, connection UIDs on the files log
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
+
+See also: [files log](#files-log), [uid](#uid)
+
 ### convert external findings to internal queries
 
 Also: convert to SIEM query, convert to Zeek query, internal query from enrichment
@@ -436,8 +449,9 @@ Also: file SHA256, DeviceFileEvents SHA256, file hash
 |----------|--------|-------|
 | Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
 | Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Used | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
 
-See also: [file system activity](#file-system-activity), [hashes and original filename](#hashes-and-original-filename)
+See also: [file system activity](#file-system-activity), [hashes and original filename](#hashes-and-original-filename), [files-log hashes (MD5, SHA1, SHA256)](#files-log-hashes-md5-sha1-sha256)
 
 ### file system activity
 
@@ -456,8 +470,29 @@ Also: `files`, Zeek files
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
+| Taught | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
 
-Depth on this log is a later module.
+1.2.1 teaches that the log exists. 1.2.7 teaches filename, MIME, hashes, tx/rx hosts, and `conn_uids`.
+
+### filename (files log)
+
+Also: files.filename, Zeek filename
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
+
+See also: [files log](#files-log), [MIME type](#mime-type)
+
+### files-log hashes (MD5, SHA1, SHA256)
+
+Also: files.md5, files.sha1, files.sha256, Zeek file hash
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
+
+See also: [files log](#files-log), [file hashes](#file-hashes)
 
 ### flow of the intelligence lifecycle
 
@@ -525,6 +560,16 @@ Also: host-observed network, endpoint vs network sensor, 1.1.3 vs 1.2
 
 See also: [network activity (endpoint)](#network-activity-endpoint), [initiating process (endpoint network)](#initiating-process-endpoint-network)
 
+### HTTP host
+
+Also: http.host, Host header
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
+
+See also: [http log](#http-log), [URI / URL](#uri--url)
+
 ### how a STIX bundle seeds a hunt
 
 Also: STIX bundle seeds a hunt, bundle as hunt seed, not how to author STIX
@@ -544,8 +589,29 @@ Also: `http`, Zeek http
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
+| Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
 
-Survey only. Field-level teaching is module 1.2.5 (not written yet).
+1.2.1 teaches that the log exists. 1.2.5 teaches method, host, URI, User-Agent, status, and analysis.
+
+### HTTP method
+
+Also: GET, POST, PUT, HEAD, http.method
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
+
+See also: [http log](#http-log), [HTTP status code](#http-status-code)
+
+### HTTP status code
+
+Also: status_code, HTTP 200, HTTP 404, HTTP 401
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
+
+See also: [http log](#http-log), [HTTP method](#http-method)
 
 ### hunt development concepts
 
@@ -829,6 +895,16 @@ Also: Zeek logs, TSV, JSON logs
 
 ## M
 
+### mail from
+
+Also: mailfrom, SMTP MAIL FROM, envelope from
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
+
+See also: [smtp log](#smtp-log), [rcpt to](#rcpt-to)
+
 ### mapping hunts to ATT&CK
 
 Also: map a hunt plan to ATT&CK, map hunt findings to ATT&CK, ATT&CK tactics and techniques
@@ -838,6 +914,26 @@ Also: map a hunt plan to ATT&CK, map hunt findings to ATT&CK, ATT&CK tactics and
 | Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [using MITRE ATT&CK for hunt planning](#using-mitre-attck-for-hunt-planning), [recording ATT&CK IDs from a report](#recording-attck-ids-from-a-report)
+
+### message ID
+
+Also: msg_id, SMTP Message-ID
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
+
+See also: [smtp log](#smtp-log), [uid](#uid)
+
+### MIME type
+
+Also: mime_type, files MIME, application/pdf, application/x-dosexec
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
+
+See also: [files log](#files-log), [filename (files log)](#filename-files-log)
 
 ### missing SNI
 
@@ -1133,6 +1229,16 @@ Also: rapid CTI triage, triage a report for hunting, hunt don’t hunt hand off
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [actionable for a hunt](#actionable-for-a-hunt)
 
+### rcpt to
+
+Also: rcptto, SMTP RCPT TO, envelope recipient
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
+
+See also: [smtp log](#smtp-log), [mail from](#mail-from)
+
 ### recognizing persistence techniques in logs or telemetry
 
 Also: recognize persistence, persistence in telemetry, persistence recognition
@@ -1320,8 +1426,9 @@ Also: `smtp`, Zeek smtp
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
+| Taught | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
 
-Depth on this log is a later module.
+1.2.1 teaches that the log exists. 1.2.6 teaches mailfrom, rcptto, subject, msg_id, and analysis.
 
 ### SNI
 
@@ -1414,6 +1521,26 @@ Also: strategic intel, strategic type, posture intelligence
 | Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types)
+
+### SMTP subject
+
+Also: smtp.subject, mail subject
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
+
+See also: [smtp log](#smtp-log), [mail from](#mail-from)
+
+### source and destination (weird)
+
+Also: weird 5-tuple, weird id.orig_h, weird id.resp_h
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.8 Weird Engine](../modules/01-soc/02-zeek/08-weird-engine/) | SOC, Hunter, CTI |
+
+See also: [weird log](#weird-log), [5-tuple](#5-tuple)
 
 ### subject
 
@@ -1554,6 +1681,16 @@ Also: turn STIX objects into hunt leads, convert bundle leftovers to leads
 
 See also: [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt), [hunt question from CTI leads](#hunt-question-from-cti-leads)
 
+### tx_hosts / rx_hosts
+
+Also: files tx_hosts, files rx_hosts, file sender, file receiver
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
+
+See also: [files log](#files-log), [5-tuple](#5-tuple)
+
 ### TLS fingerprint
 
 See [JA3](#ja3).
@@ -1586,15 +1723,19 @@ See [qtype_name](#qtype_name) and [DNS tunneling](#dns-tunneling).
 
 ### uid
 
-Also: Zeek uid, connection UID, pivot key
+Also: Zeek uid, connection UID, pivot key, pivoting with uid to conn
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.2 Conn Engine](../modules/01-soc/02-zeek/02-conn-engine/) | SOC, Hunter |
 | Used | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
 | Used | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
+| Used | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
+| Used | [1.2.6 SMTP Engine](../modules/01-soc/02-zeek/06-smtp-engine/) | SOC, Hunter, CTI |
+| Used | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
+| Used | [1.2.8 Weird Engine](../modules/01-soc/02-zeek/08-weird-engine/) | SOC, Hunter, CTI |
 
-The obligation is created in 1.2.2: copy `uid` and search other Zeek logs. Later engines assume that habit.
+The obligation is created in 1.2.2: copy `uid` and search other Zeek logs. Later engines assume that habit. `files` joins with `conn_uids` (those values *are* connection `uid`s).
 
 ### unique patterns or behaviors suitable for hunting
 
@@ -1608,6 +1749,16 @@ Also: hunt-worthy pattern, unique hunt behavior, internal search pattern
 | Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt hypothesis](#hunt-hypothesis), [hunt development concepts](#hunt-development-concepts)
+
+### URI / URL
+
+Also: http.uri, HTTP URL, host plus uri
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
+
+See also: [http log](#http-log), [HTTP host](#http-host)
 
 ### URLScan for hunting
 
@@ -1628,6 +1779,16 @@ Also: DLL load vs driver load, Event 7 vs Event 6, user-mode vs kernel
 | Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [image and driver load activity](#image-and-driver-load-activity), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
+
+### User-Agent
+
+Also: user_agent, HTTP User-Agent
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
+
+See also: [http log](#http-log), [HTTP method](#http-method)
 
 ### using ATT&CK to identify detection or visibility gaps
 
@@ -1714,8 +1875,31 @@ Also: `weird`, Zeek weird
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
+| Taught | [1.2.8 Weird Engine](../modules/01-soc/02-zeek/08-weird-engine/) | SOC, Hunter, CTI |
 
-Depth on this log is a later module.
+1.2.1 teaches that the log exists. 1.2.8 teaches `name`, the `notice` flag, and analysis.
+
+### weird activity type (`name`)
+
+Also: weird.name, weird type, dns_unmatched_reply, data_before_established
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.8 Weird Engine](../modules/01-soc/02-zeek/08-weird-engine/) | SOC, Hunter, CTI |
+
+See also: [weird log](#weird-log), [weird notice flag](#weird-notice-flag)
+
+### weird notice flag
+
+Also: weird.notice, notice boolean on weird
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.8 Weird Engine](../modules/01-soc/02-zeek/08-weird-engine/) | SOC, Hunter, CTI |
+
+This is a field on the `weird` row, not the `notice` log.
+
+See also: [weird log](#weird-log), [weird activity type (`name`)](#weird-activity-type-name)
 
 ---
 
