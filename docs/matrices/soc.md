@@ -162,39 +162,47 @@ Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive i
 
 ## 1.4 Alerts
 
-### 1.4.1 Alert Context and Investigation
+Detection authoring is 1.3. Tasks apply the knowledge they sit under.
+
+### 1.4.1 Alert context and investigation
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
 | 1.4.1.1 | Alert context and investigation | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level can analyze and apply. |
-| 1.4.1.2 | Review an alert and its provided context | T | 2b | 3c | 4c | Core daily task – standard performance progression. |
-| 1.4.1.3 | Trace an alert back to its upstream detection logic | T | 2b | 3c | 4c | Important investigative skill that increases with experience. |
-| 1.4.1.4 | Collect and examine related endpoint logs for an alert | T | 2b | 3c | 4c | Standard analysis progression. |
-| 1.4.1.5 | Collect and examine PCAP related to an alert | T | 2b | 3c | 4c | Standard analysis progression. |
+| 1.4.1.2 | Review an alert and identify which context is present and which is missing | T | 2b | 3c | 4c | Extends “view context” — must name gaps, not just open the pane. |
+| 1.4.1.3 | Review the alert configuration and explain what would fire | T | 2b | 3c | 4c | Knowledge *b* had no task before. |
+| 1.4.1.4 | Trace an alert to its upstream detection logic and name each hop | T | 2b | 3c | 4c | Extends upstream knowledge — name the chain, not “look at the rule.” |
+| 1.4.1.5 | Collect related endpoint logs and state what they add (or fail to add) | T | 2b | 3c | 4c | Extends collection — say what the logs change about the story. |
+| 1.4.1.6 | Collect related PCAP and state what it adds versus the alert fields | T | 2b | 3c | 4c | Extends PCAP — contrast with the alert, not “open a pcap.” |
 
-### 1.4.2 Alert Classification
+### 1.4.2 Alert classification
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
 | 1.4.2.1 | Alert classification (TP/FP/TN/FN) | K | A | B | C | Same knowledge progression. |
-| 1.4.2.2 | Common false positive causes | K | A | B | C | Same knowledge progression. |
-| 1.4.2.3 | Correctly classify an alert as TP, FP, TN, or FN | T | 2b | 3c | 4c | Critical daily task – standard performance progression. |
-| 1.4.2.4 | Identify likely causes of a false positive | T | 2b | 3c | 4c | Builds with experience. |
+| 1.4.2.2 | Classify given cases as TP, FP, TN, or FN and cite the evidence | T | 2b | 3c | 4c | Must include a missed detection (FN). Citing evidence is the extension. |
 
-### 1.4.3 Alert Categorization
+### 1.4.3 Common false positive causes
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.4.3.1 | Common alert categorizations | K | A | B | C | Same knowledge progression. |
-| 1.4.3.2 | Assign an appropriate category to an alert | T | 2b | 3c | 4c | Standard performance progression. |
+| 1.4.3.1 | Common false positive causes | K | A | B | C | Own unit — not a second K row under classification. |
+| 1.4.3.2 | Given a false positive, identify the cause class and what you would change | T | 2b | 3c | 4c | Extends cause knowledge — class plus a change, not just “name a cause.” |
 
-### 1.4.4 Service Level Agreements / Response Time Goals
+### 1.4.4 Common alert categorizations
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.4.4.1 | Service Level Agreements / Response Time Goals | K | A | B | C | 3-level needs to know the requirements exist. 5/7 need deeper understanding. |
-| 1.4.4.2 | Demonstrate understanding of alert response time requirements | T | 2b | 3c | 4c | Must be reliable at 5-level. |
-| 1.4.4.3 | Process an alert within required timeframes | T | 2b | 3c | 4c | Core operational expectation. |
+| 1.4.4.1 | Common alert categorizations | K | A | B | C | Same knowledge progression. |
+| 1.4.4.2 | Assign a category to an alert and justify why it is not the adjacent category | T | 2b | 3c | 4c | Extends labeling — must rule out the neighbor (scan vs unsuccessful, user vs root). |
+
+### 1.4.5 Service Level Agreements / Response Time Goals
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.4.5.1 | Service Level Agreements / Response Time Goals | K | A | B | C | Two clocks: start investigation vs close/escalate. |
+| 1.4.5.2 | Given timestamps, identify whether the start clock or the close/escalate clock is at risk | T | 2b | 3c | 4c | Replaces “demonstrate understanding,” which only restated the K. |
+| 1.4.5.3 | Close or escalate an alert and record it against the correct clock | T | 2b | 3c | 4c | Applies both clocks; not “work faster.” |
 
 ---
 

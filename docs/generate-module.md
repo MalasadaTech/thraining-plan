@@ -29,6 +29,8 @@ Stop and say what is missing if any of these fail:
 
 **`1.1.x` endpoint lessons:** five activity units (Process, File System, Network, Registry, Image/Driver Load). Use Sysmon Event IDs and MDE table/field names as the examples. Do not teach Sysmon install or config. `1.1.3` is **host-observed** network (initiating process → IP/port/domain). Protocol deep-dive is `1.2` Zeek. Do not merge the two.
 
+**`1.4.x` alert lessons:** five units — investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not restate a K item as its task. Detection authoring is `1.3`. Do not open the next `1.4` unit when asked for one child.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

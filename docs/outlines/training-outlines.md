@@ -199,6 +199,8 @@ c. Matching techniques: regex and wildcards
 
 **1.4 [K/T] Alerts**
 
+Alert handling. Detection *authoring* is 1.3. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it.
+
 **1.4.1 [K] Alert context and investigation**  
 a. Viewing the context provided by the alert  
 b. Reviewing the alert configuration  
@@ -206,43 +208,46 @@ c. Understanding upstream alerting (e.g., Suricata rule → SIEM correlation sea
 d. Pulling related endpoint logs that led up to the event  
 e. Pulling and reviewing PCAP for the network traffic that triggered the alert  
 
-**1.4.2 [T] Alert investigation tasks**  
-1. Review an alert and its provided context  
-2. Trace an alert back to its upstream detection logic  
-3. Collect and examine related endpoint logs for an alert  
-4. Collect and examine PCAP related to an alert  
+**1.4.1.1 [T] Alert investigation tasks**  
+1. Review an alert and identify which context is present and which is missing  
+2. Review the alert configuration and explain what would fire  
+3. Trace an alert to its upstream detection logic and name each hop  
+4. Collect related endpoint logs and state what they add (or fail to add)  
+5. Collect related PCAP and state what it adds versus the alert fields  
 
-**1.4.3 [K] Alert classification**  
+**1.4.2 [K] Alert classification**  
 a. True Positive  
 b. False Positive  
 c. True Negative  
 d. False Negative  
 
-**1.4.4 [K] Common false positive causes**  
+**1.4.2.1 [T] Alert classification tasks**  
+1. Classify given cases as TP, FP, TN, or FN and cite the evidence (include at least one missed detection as FN)  
+
+**1.4.3 [K] Common false positive causes**  
 a. Security analyst or tool activity (e.g., downloading/testing rules that are already deployed)  
 b. Untuned or overly broad detection logic  
 
-**1.4.5 [T] Alert classification tasks**  
-1. Correctly classify an alert as TP, FP, TN, or FN  
-2. Identify likely causes of a false positive  
+**1.4.3.1 [T] False positive cause tasks**  
+1. Given a false positive, identify the cause class and what you would change  
 
-**1.4.6 [K] Common alert categorizations**  
+**1.4.4 [K] Common alert categorizations**  
 a. Scanning / Reconnaissance  
 b. Root-level access  
 c. User-level access  
 d. Unsuccessful activity  
 e. Other common categories (as used in your environment)  
 
-**1.4.7 [T] Alert categorization tasks**  
-1. Assign an appropriate category to an alert  
+**1.4.4.1 [T] Alert categorization tasks**  
+1. Assign a category to an alert and justify why it is not the adjacent category  
 
-**1.4.8 [K] Service Level Agreements / Response Time Goals**  
+**1.4.5 [K] Service Level Agreements / Response Time Goals**  
 a. Maximum time allowed before an alert investigation must begin  
 b. Required time to process an alert (close or escalate)  
 
-**1.4.9 [T] SLA / Response Time tasks**  
-1. Demonstrate understanding of alert response time requirements  
-2. Process an alert within required timeframes  
+**1.4.5.1 [T] SLA / Response Time tasks**  
+1. Given timestamps, identify whether the start clock or the close/escalate clock is at risk  
+2. Close or escalate an alert and record it against the correct clock  
 
 **1.5 [K] Frameworks**
 
