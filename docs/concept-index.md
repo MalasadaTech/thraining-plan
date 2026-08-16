@@ -47,6 +47,7 @@ Also: actionable CTI for hunting, hunt question telemetry scope
 |----------|--------|-------|
 | Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 | Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
 
@@ -345,6 +346,7 @@ Also: extract hunt leads, pull leads from a report, CTI extract for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt-suitable TTPs](#hunt-suitable-ttps), [hunt-suitable artifacts](#hunt-suitable-artifacts), [what to drop from CTI](#what-to-drop-from-cti)
 
@@ -417,6 +419,18 @@ Also: `history`, Zeek history flags
 
 3-level: awareness. 5- and 7-level: read the flag string.
 
+### how a STIX bundle seeds a hunt
+
+Also: STIX bundle seeds a hunt, bundle as hunt seed, not how to author STIX
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+
+Authoring STIX is a later CTI item (3.10), not this module.
+
+See also: [STIX as hunt input](#stix-as-hunt-input), [turning STIX objects into hunt leads](#turning-stix-objects-into-hunt-leads)
+
 ### http log
 
 Also: `http`, Zeek http
@@ -454,8 +468,19 @@ Also: hunt question those leads support, if/then from extracted leads
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [hunt hypothesis](#hunt-hypothesis)
+
+### hunt-relevant STIX objects
+
+Also: hunt relevant objects in a bundle, identify hunt-relevant STIX
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+
+See also: [STIX objects a hunter uses](#stix-objects-a-hunter-uses), [STIX as hunt input](#stix-as-hunt-input)
 
 ### hunt-suitable artifacts
 
@@ -504,6 +529,7 @@ Also: hunt worthy report, hunt this report, CTI worth hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 | Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [awareness-only CTI](#awareness-only-cti), [actionable for a hunt](#actionable-for-a-hunt)
@@ -808,6 +834,7 @@ Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 | Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 Mapping hunts to ATT&CK is a later item (2.5), not this module.
@@ -971,6 +998,28 @@ Also: lifecycle stages, six stages, intelligence cycle stages
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [purpose and activities in each stage](#purpose-and-activities-in-each-stage)
 
+### STIX as hunt input
+
+Also: STIX for hunters, read STIX for hunting, STIX report or bundle
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+
+See also: [hunt-relevant STIX objects](#hunt-relevant-stix-objects), [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt)
+
+### STIX objects a hunter uses
+
+Also: indicator attack-pattern observed-data malware threat-actor intrusion-set relationship
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+
+Core STIX object inventory for production is a later CTI item (3.10), not this module.
+
+See also: [hunt-relevant STIX objects](#hunt-relevant-stix-objects), [STIX as hunt input](#stix-as-hunt-input)
+
 ### strategic intelligence
 
 Also: strategic intel, strategic type, posture intelligence
@@ -1056,8 +1105,19 @@ Also: TTP vs IOC vs behavior, which can drive a hunt, method vs object vs patter
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt-suitable TTPs](#hunt-suitable-ttps), [hunt-suitable artifacts](#hunt-suitable-artifacts)
+
+### turning STIX objects into hunt leads
+
+Also: turn STIX objects into hunt leads, convert bundle leftovers to leads
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+
+See also: [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt), [hunt question from CTI leads](#hunt-question-from-cti-leads)
 
 ### TLS fingerprint
 
@@ -1110,6 +1170,7 @@ Also: hunt-worthy pattern, unique hunt behavior, internal search pattern
 | Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 | Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 | Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt hypothesis](#hunt-hypothesis), [hunt development concepts](#hunt-development-concepts)
 
@@ -1139,6 +1200,7 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 | Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 | Used | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 | Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -1162,6 +1224,7 @@ Also: drop no telemetry expired IOCs noise, what not to extract from a report
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
+| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 | Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [visibility gaps](#visibility-gaps)
