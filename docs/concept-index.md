@@ -396,6 +396,36 @@ See also: [hunt types](#hunt-types)
 
 ## F
 
+### file create / rename-move / delete / modify / read
+
+Also: FileCreated, FileRenamed, FileDeleted, FileModified, FileRead, Sysmon Event ID 11, Sysmon Event ID 23, Sysmon Event ID 26
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+
+See also: [file system activity](#file-system-activity), [Sysmon 11 / 23 / 26 and DeviceFileEvents](#sysmon-11--23--26-and-devicefileevents)
+
+### file hashes
+
+Also: file SHA256, DeviceFileEvents SHA256, file hash
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+
+See also: [file system activity](#file-system-activity), [hashes and original filename](#hashes-and-original-filename)
+
+### file system activity
+
+Also: file events, file telemetry, host file activity, DeviceFileEvents
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+
+See also: [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read), [path, name, and extension](#path-name-and-extension)
+
 ### files log
 
 Also: `files`, Zeek files
@@ -437,8 +467,9 @@ Also: process SHA256, OriginalFileName, PE original filename
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
 
-See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line)
+See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line), [file hashes](#file-hashes)
 
 ### history
 
@@ -603,6 +634,16 @@ Also: organized data, context, parsed alert, rewritten log story
 | Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [data](#data), [intelligence](#intelligence)
+
+### initiating process (file events)
+
+Also: file initiating process, who touched the file, DeviceFileEvents InitiatingProcess
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+
+See also: [file system activity](#file-system-activity), [parent-child process](#parent-child-process)
 
 ### integrity / user context
 
@@ -800,8 +841,19 @@ Also: PPID, parent process, InitiatingProcess, ParentImage
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
 
-See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line)
+See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line), [initiating process (file events)](#initiating-process-file-events)
+
+### path, name, and extension
+
+Also: FolderPath, FileName, TargetFilename, file extension, double extension
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+
+See also: [file system activity](#file-system-activity), [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read)
 
 ### persistence techniques
 
@@ -1236,6 +1288,16 @@ Also: DeviceProcessEvents, Sysmon process events, ActionType ProcessCreated
 | Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [process create / terminate](#process-create--terminate), [process access (Sysmon Event ID 10)](#process-access-sysmon-event-id-10)
+
+### Sysmon 11 / 23 / 26 and DeviceFileEvents
+
+Also: DeviceFileEvents, Sysmon file events, ActionType FileCreated, FileDeleteDetected
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+
+See also: [file system activity](#file-system-activity), [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read)
 
 ---
 

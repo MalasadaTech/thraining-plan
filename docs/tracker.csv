@@ -1,6 +1,6 @@
 Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,Status - Instructor Guide,Status - Slide Deck,Status - Exercise,Status - Answer Key,Status - Quiz,Owner,Target Completion,Notes
 1.1.1,Process Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.1.2,File System Activity,SOC,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Sysmon/MDE DeviceFileEvents
+1.1.2,File System Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.1.3,Network Activity (Endpoint),SOC,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Host-observed; Zeek is 1.2
 1.1.4,Registry Activity,SOC,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Sysmon/MDE DeviceRegistryEvents
 1.1.5,Image and Driver Load Activity,SOC,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Sysmon 6/7; DeviceImageLoadEvents
