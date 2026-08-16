@@ -26,6 +26,7 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 2.2.1 | [modules/02-hunter/02-methodology/01-hunt-types](../modules/02-hunter/02-methodology/01-hunt-types/) |
 | 2.2.2 | [modules/02-hunter/02-methodology/02-hunt-development](../modules/02-hunter/02-methodology/02-hunt-development/) |
 | 2.3.1 | [modules/02-hunter/03-online-tools](../modules/02-hunter/03-online-tools/) |
+| 2.4.1 | [modules/02-hunter/04-cti-for-hunters/01-assessing-cti](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) |
 | 3.1.1 | [modules/03-cti/01-core-intel/01-data-info-intel](../modules/03-cti/01-core-intel/01-data-info-intel/) |
 | 3.1.2 | [modules/03-cti/01-core-intel/02-intelligence-lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) |
 | 3.1.3 | [modules/03-cti/01-core-intel/03-intelligence-types](../modules/03-cti/01-core-intel/03-intelligence-types/) |

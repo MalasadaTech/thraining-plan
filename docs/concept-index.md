@@ -39,6 +39,16 @@ See also: [conn log](#conn-log)
 
 See [qtype_name](#qtype_name).
 
+### actionable for a hunt
+
+Also: actionable CTI for hunting, hunt question telemetry scope
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+
+See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
+
 ### activity missed by existing security mechanisms
 
 Also: missed activity, activity existing controls might miss, activity the stack did not surface
@@ -86,6 +96,26 @@ Also: Any.Run, AnyRun sandbox, interactive sandbox for hunting
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [hunting leads from external tools](#hunting-leads-from-external-tools)
+
+### assessing CTI for hunting value
+
+Also: CTI hunting value, assess a report for hunting, hunter as CTI consumer
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+
+See also: [hunt-worthy CTI](#hunt-worthy-cti), [awareness-only CTI](#awareness-only-cti), [hand off to detections / IR](#hand-off-to-detections--ir)
+
+### awareness-only CTI
+
+Also: awareness only, context-only CTI, do not hunt this report
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+
+See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
 
 ---
 
@@ -356,6 +386,16 @@ See also: [intelligence lifecycle](#intelligence-lifecycle)
 
 ## H
 
+### hand off to detections / IR
+
+Also: hand off CTI, detections hand off, IR hand off from a report
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+
+See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
+
 ### history
 
 Also: `history`, Zeek history flags
@@ -415,6 +455,16 @@ Also: types of hunts, four hunt types, hunt type taxonomy
 | Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [intel-driven hunt](#intel-driven-hunt), [hypothesis-driven hunt](#hypothesis-driven-hunt), [reactive hunt](#reactive-hunt), [anomaly-based hunt](#anomaly-based-hunt)
+
+### hunt-worthy CTI
+
+Also: hunt worthy report, hunt this report, CTI worth hunting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+
+See also: [awareness-only CTI](#awareness-only-cti), [actionable for a hunt](#actionable-for-a-hunt)
 
 ### hypothesis-driven hunt
 
@@ -699,6 +749,16 @@ Also: DNS query, queried domain, `query`
 ---
 
 ## R
+
+### rapid triage of a CTI report
+
+Also: rapid CTI triage, triage a report for hunting, hunt don’t hunt hand off
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+
+See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [actionable for a hunt](#actionable-for-a-hunt)
 
 ### rcode_name
 
@@ -1012,6 +1072,7 @@ Also: visibility gap, no telemetry, cannot see, blind segment
 | Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 | Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 | Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
