@@ -304,10 +304,11 @@ Also: ATT&CK in intel products, advanced ATT&CK for CTI, supported ATT&CK IDs in
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC alert mapping is [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
-See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck)
+See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
 ### awareness-only CTI
 
@@ -630,10 +631,11 @@ Also: advanced Kill Chain for CTI, Kill Chain in intel products, supported Kill 
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Used | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC single-row staging is [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/).
 
-See also: [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity)
+See also: [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
 ### Cyber Kill Chain purpose
 
@@ -667,10 +669,11 @@ Also: advanced Diamond for CTI, Diamond in intel products
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Used | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC incident cards are [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
 
-See also: [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem), [reject filling Adversary from a vendor name](#reject-filling-adversary-from-a-vendor-name)
+See also: [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem), [reject filling Adversary from a vendor name](#reject-filling-adversary-from-a-vendor-name), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
 ### Diamond Model purpose
 
@@ -693,6 +696,18 @@ Also: Adversary vertex, Capability vertex, Infrastructure vertex, Victim vertex
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
+
+### DTF core components and scoring
+
+Also: ThreatMesh nodes, classroom DTF score, mesh recency reach
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+
+Classroom scores are lesson-only, not live org policy.
+
+See also: [purpose of DTF (pattern identification and defensive prioritization)](#purpose-of-dtf-pattern-identification-and-defensive-prioritization), [identify patterns across indicators, infrastructure, and behavior](#identify-patterns-across-indicators-infrastructure-and-behavior)
 
 ### data
 
@@ -1221,6 +1236,16 @@ Also: stack SOA NS TXT, cluster on MNAME
 
 See also: [SOA records](#soa-records), [use advanced DNS records to enrich or pivot](#use-advanced-dns-records-to-enrich-or-pivot)
 
+### how DTF complements ATT&CK, Diamond, and Kill Chain
+
+Also: DTF vs ATT&CK, DTF does not replace Diamond, DTF and Kill Chain jobs
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+
+See also: [purpose of DTF (pattern identification and defensive prioritization)](#purpose-of-dtf-pattern-identification-and-defensive-prioritization), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
+
 ### how the TIP supports enrichment, analysis, and production
 
 Also: TIP sighting, attach TIP object to draft
@@ -1411,6 +1436,16 @@ Also: report clock at risk, submit vs blocked clock
 | Taught | [1.6.2 Reporting Timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
 
 See also: [submit timelines by report type](#submit-timelines-by-report-type), [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed)
+
+### identify patterns across indicators, infrastructure, and behavior
+
+Also: DTF pattern, three-node mesh, link indicator infra behavior
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+
+See also: [DTF core components and scoring](#dtf-core-components-and-scoring), [use DTF scoring to guide enrichment or pivoting](#use-dtf-scoring-to-guide-enrichment-or-pivoting)
 
 ### identify the Kill Chain stage of observed or reported activity
 
@@ -2305,6 +2340,16 @@ Also: why structure changeover, prevent dropped cases at shift change
 | Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
 
 See also: [shift change participants](#shift-change-participants), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
+
+### purpose of DTF (pattern identification and defensive prioritization)
+
+Also: why DTF, ThreatMesh purpose, pattern then prioritize
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+
+See also: [DTF core components and scoring](#dtf-core-components-and-scoring), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
 ### purpose of estimative language
 
@@ -3359,6 +3404,18 @@ Also: pivot on NS and MNAME, unique TXT token
 | Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
 
 See also: [SOA records](#soa-records), [other advanced DNS record types of intelligence value](#other-advanced-dns-record-types-of-intelligence-value)
+
+### use DTF scoring to guide enrichment or pivoting
+
+Also: DTF next seed, score then seed, do not pivot this hour
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+
+Doing the infrastructure pivot is later (`3.8.1`).
+
+See also: [identify patterns across indicators, infrastructure, and behavior](#identify-patterns-across-indicators-infrastructure-and-behavior), [DTF core components and scoring](#dtf-core-components-and-scoring)
 
 ### use file similarity hashes to identify related samples
 

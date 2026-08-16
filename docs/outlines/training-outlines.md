@@ -667,6 +667,15 @@ c. How DTF is used to identify patterns across indicators, infrastructure, and a
 d. How DTF scoring and pattern analysis feed enrichment and pivoting decisions  
 e. Relationship of DTF to other frameworks (ATT&CK, Diamond Model, Cyber Kill Chain)  
 
+**3.7.4.1 [T] Tasks**  
+1. Apply DTF to identify patterns and score or prioritize indicators or infrastructure  
+
+**3.7.4.2 [T] Tasks**  
+1. Use DTF pattern analysis to guide enrichment and pivoting  
+
+**3.7.4.3 [T] Tasks**  
+1. Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain  
+
 **3.7.5 [T] Framework application tasks**  
 1. Apply MITRE ATT&CK, Diamond Model, and/or Cyber Kill Chain at an advanced level to an intelligence problem set  
 2. Apply DTF to identify patterns and score/prioritize indicators or infrastructure  
