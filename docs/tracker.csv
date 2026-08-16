@@ -1,6 +1,6 @@
 Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,Status - Instructor Guide,Status - Slide Deck,Status - Exercise,Status - Answer Key,Status - Quiz,Owner,Target Completion,Notes
 0,How a SOC can operate,SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 0.1–0.5"
-0.1,What a SOC is,SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only
+0.1,What a SOC is,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Trimmed short intro; ready for review; no lab on purpose
 0.2,How work can move,SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only
 0.3,Jobs in one sentence,SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only
 0.4,Where the jobs lightly overlap,SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only

@@ -17,7 +17,9 @@ Stop and say what is missing if any of these fail:
 - You were given that ID, not a vague topic and not an old display number (`section 7`, `section 8`).
 - Gate 1 is done. You are not proposing a new matrix row.
 
-**Assign work by ID prefix:** `1.x` = SOC (`modules/01-soc/`), `2.x` = Hunt (`modules/02-hunter/`), `3.x` = CTI (`modules/03-cti/`).
+**Assign work by ID prefix:** `0.x` = shared intro (`modules/00-intro/`). `1.x` = SOC (`modules/01-soc/`), `2.x` = Hunt (`modules/02-hunter/`), `3.x` = CTI (`modules/03-cti/`). `4.x` = Detection Engineer (folder when that track is built).
+
+**`0.x` intro lessons:** five children (`0.1`–`0.5`). Generate only the asked child. Do not write cluster `0` as one module unless the human asks for the whole intro in one folder. `0.1` is what a SOC *is*. How work moves is `0.2`. Job one-liners are `0.3`. Overlap is `0.4`. Course layout and the hand-off task are `0.5` / `0.5.1`. DYA / PRD are course fiction, not site policy. Do not invent tickets, PIR lists, or approval chains.
 
 **How big is one lesson**
 
@@ -108,25 +110,31 @@ If Gate 1 said “add to an existing module,” amend that folder. Do not create
 
 ## 3. Clone this shape
 
-Match the sibling. Typical engine module:
+Match the sibling’s **voice and fences** (plain words, same names, stay in this lesson). **Do not copy** the sibling’s length, section list, tables, example count, or slide count. An old hour-long lesson is not a mold for a short intro.
+
+**Do not add optional content to fill.** If the template marks a section optional and this lesson does not need it, omit it.
 
 | Artifact | Shape |
 |----------|--------|
-| Time | 60–75 minutes (~72 in the timing table) |
+| Time | As long as the outline needs. A short intro may be 15–20 minutes. A log-reading lesson may be an hour. Never stretch a short topic to fill 60–75 minutes. |
 | Audience | Primary + secondary roles from the matrix |
 | Proficiency | 3/5/7 codes from the matrix, per role, identical in student + instructor headers |
-| Student guide | Objectives → key concepts (fields + 1–2 idea sections) → 3 walkthrough examples → hands-on exercise → 5 knowledge-check questions → summary → references |
-| Instructor guide | **Context (plain language)** first (one block), then purpose, teaching points, pitfalls with an example each, timing, notes per section, exercise key (pseudo-queries), knowledge-check answers |
-| Slides | ~17 slides: title, objectives, agenda, concepts, 3 examples, `uid` pivot if network logs, hunts, exercise, check, summary, next steps, optional quick-reference. Face of each slide is short enough to read alone. **Speaker Notes** on every slide: 3–6 plain sentences (why this slide, how it connects). |
+| Student guide | Objectives → key concepts that cover the outline, including what each **task** looks like when done well. **No labs, demos, or hands-on exercises** until the human asks. **Knowledge check: 1–3 questions per lesson** that has slides. Short summary. |
+| Instructor guide | **Intro required** (Context + what this hour is). No demo or lab write-up until the human asks. Timing table lists only sections you actually teach. Answers for the 1–3 lesson questions. |
+| Slides | As many as you need. Intro + concepts + **knowledge check (1–3 questions for the lesson)** are required. No demo or exercise slides until the human asks. Face of each slide is short enough to read alone. **Speaker Notes** on every slide: a few plain sentences (why this slide, how it connects). |
 | Answers | Only in the instructor guide. No standalone `answer-key.md`. No quiz. |
 
-Exercise pattern (engine modules): one-sentence summary of each example; two SIEM-style **pseudo-queries**; explain the `uid` pivot when the log has a `uid`.
+Outline **tasks stay**. Teach what the task *is* (the product line, what good looks like). **Do not write labs, demos, or hands-on exercises** unless the human asks. Existing labs stay until that section is reviewed.
 
-Examples: one normal, two leads. Leads are not automatic incidents.
+Examples: use them when they help. Do not invent fail-stories to hit a count.
+
+**“This lesson / other” table** and **“expected vs lead” table:** optional. They fence this hour vs the next, or good call vs bad call. Add one only if it prevents a real mix-up. Do not add both by default. Do not add them to fill.
+
+**Knowledge check:** **1–3 questions per lesson** that has slides. Required. Put them on the slides and/or in the student guide. Not per concept. Do not write a fourth question to fill. Do not ask about the next lesson just to have more items.
 
 Voice: direct, instructional, short paragraphs, tables for fields. Do not lecture about decrypting traffic, writing Zeek scripts, or other later modules.
 
-**Context and challenges (required):**
+**Context (required). Challenges (only if real):**
 
 Write **Context (plain language)** as the first block in the instructor overview, before Key Teaching Points. Anyone who was not in the planning chat should still see the connection. Use ordinary words. No outline letters, no matrix codes in this block.
 
@@ -139,7 +147,7 @@ Include:
 
 If you add a step the human did not say, it must appear in Context as “extra, because ___.” If you cannot finish that sentence, do not add the step. Do not jump ahead.
 
-**Common Student Challenges:** each bullet is one short why + one concrete example. Not a label alone (wrong: “They invent a ticket.” Right: “They invent a ticket so the exercise has an answer — e.g. ‘open Jira HUNT-17.’”).
+**Common Student Challenges:** omit the whole list when the hour is this simple (facts everyone already has). Do not invent struggles to satisfy a quota. If you *do* list a challenge, each bullet is one short why + one concrete example. Not a label alone (wrong: “They invent a ticket.” Right: “They invent a ticket so the exercise has an answer — e.g. ‘open Jira HUNT-17.’”).
 
 **Slides:** someone who only reads the deck should still get the point. Speaker notes carry the why; they are not “read the bullets again.”
 
@@ -150,7 +158,7 @@ If you add a step the human did not say, it must appear in Context as “extra, 
 ## 4. Teach at least the outline
 
 - Outline knowledge bullets (`a`, `b`, `c`…) become the field/idea sections. None may be skipped.
-- Outline tasks become the analysis exercise and the two pseudo-queries (or equivalent practice).
+- Outline tasks are taught as *what good looks like*, not as a lab (until the human asks for labs).
 - Combined.md / role-matrix rows are the **sign-off** items and IDs. Put them in the README map.
 - Expansion is allowed when it supports the outline (Zeek `uid` / `ts`, extra examples). New obligations need Gate 1.
 - If an outline bullet has no home in this teaching-unit, **stop** and say so. Do not drop it.
@@ -176,7 +184,7 @@ modules/<role>/<unit>/<nn-short-name>/          # or …/01-core-intel/<nn-short
 Then update:
 
 - [concept-index.md](concept-index.md) — every README concept; **Taught** here; **Used** on this module for terms taught earlier (`uid`, `conn` log, …); aliases people will search; link the folder, not a line number
-- [tracker.csv](tracker.csv) — add or update the row; guides/slides `Complete`; exercise/quiz as in the sibling (usually exercise `Not Started`, answer key `Complete` if answers are in the instructor guide)
+- [tracker.csv](tracker.csv) — add or update the row; mark only the artifacts you actually wrote
 - [tracker.md](tracker.md) — folder map row if this ID is new
 - README numbering table in the repo root if this ID is new
 
@@ -196,13 +204,21 @@ Do not set tracker status to `Complete` for the module as a whole if that column
 - Copy shared frameworks into a role folder
 - Mark the module human-accepted (`Complete` on the whole package) — stop for review
 - Write Gate 1 proposal files unless asked
-- Skip **Context (plain language)** or leave Common Student Challenges as labels with no example
+- Skip **Context (plain language)**
+- Invent Common Student Challenges to fill a quota, or leave a listed challenge as a label with no example
 - Leave a slide without plain-language speaker notes
 - Jump ahead of what the human asked without saying why in Context
+- Pad a short lesson, or add optional sections (examples, lab, extra tables, extra slides) only to fill
+- Copy a sibling’s table of contents, timing, or example set
+- Write more than 3 knowledge-check questions for the lesson, or skip the 1–3 when the lesson has slides
+- Write a new lab, demo, or hands-on exercise unless the human asked for one
+- Skip the fluff review when you finish
 - Use a shop nickname (bulletin, annex, firehose) in the instructor guide or slides without the student-guide word or a one-line gloss
 
 ---
 
 ## 7. When you finish
 
-List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) Concepts taught matches the index, (3) Context and challenge examples are in the instructor guide, (4) every slide has plain speaker notes, (5) status stays at review until they accept the lesson.
+List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) Concepts taught matches the index, (3) Context is in the instructor guide, (4) any challenges have examples (or the list is omitted), (5) every slide has plain speaker notes, (6) **fluff review done** — nothing is there only to fill, (7) 1–3 knowledge-check questions for the lesson, (8) no new lab/demo unless asked, (9) status stays at review until they accept the lesson.
+
+**Fluff review (required, you and the human):** For each extra example, table, slide, lab step, or question, say which outline bullet it serves. If you cannot, delete it.

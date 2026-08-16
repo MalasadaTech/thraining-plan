@@ -1048,6 +1048,36 @@ Evidence-bound mapping is [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](..
 
 See also: [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment), [reject a TTP that does not apply here](#reject-a-ttp-that-does-not-apply-here)
 
+### what a SOC is
+
+Also: Security Operations Center, watch and start the response
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI |
+
+See also: [a SOC is a team sport](#a-soc-is-a-team-sport), [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction)
+
+### a SOC is a team sport
+
+Also: more than one job next to the SOC
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI |
+
+See also: [what a SOC is](#what-a-soc-is)
+
+### DYA and PRD are course fiction
+
+Also: Dixon Yamada and Associates, Pink River Dolphin, not site policy
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI |
+
+See also: [what a SOC is](#what-a-soc-is)
+
 ### what an IOC is versus a TTP
 
 Also: IOC vs TTP, observable vs behavior

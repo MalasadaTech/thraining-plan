@@ -42,6 +42,7 @@ f. **Firewall / IA** — block what intel names (a hand-off, not a track in this
 a. Everyone may look at the same host, log, or domain  
 b. The *product* is different: close/escalate an alert vs an intel note vs a hunt vs a rule  
 c. Asking the next desk is not doing that desk’s whole job  
+d. A smaller shop may have one person fill more than one of these jobs. This outline still names the jobs separately so each *product* stays clear, even if the same person writes two of them.  
 
 **0.5 [K] How this course is laid out**  
 a. After this intro: SOC analyst, then CTI, then hunting, then detection engineers  

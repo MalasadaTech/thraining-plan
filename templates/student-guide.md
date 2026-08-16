@@ -2,7 +2,9 @@
 
 **Target Audience:** SOC Analyst / Threat Hunter / CTI Analyst  
 **Proficiency Focus:** 3-level / 5-level / 7-level (or mixed)  
-**Estimated Time:** XX minutes  
+**Estimated Time:** XX minutes (real length — do not pad to an hour)  
+
+Do not add optional sections just to fill the page.
 
 ---
 
@@ -10,79 +12,60 @@
 
 By the end of this module, you will be able to:
 
-1. [Objective tied to a Knowledge item – e.g., Explain the purpose of...]
-2. [Objective tied to a Task item – e.g., Analyze a ... log and accurately describe what occurred]
-3. [Additional objective if needed]
+1. [Objective tied to what this lesson actually teaches]
+2. [Add more only if needed]
 
 **Mapped Proficiency Items:**
 - K: X.X.X – [Item name] (Target: A/B/C)
-- T: X.X.X – [Item name] (Target: 2b/3c/4c)
+- T: X.X.X – [Item name] (Target: 2b/3c/4c) — omit if this lesson has no task
 
 ---
 
 ## 1. Key Concepts
 
+Teach every outline bullet for this lesson. No extra concept sections to look complete.
+
 ### 1.1 [Concept Name]
 - Definition / explanation
-- Why it matters
-- Key fields or components
-- Common pitfalls
-
-### 1.2 [Concept Name]
-...
+- Why it matters (only if it is not obvious)
+- Key fields or components (only if this lesson has them)
 
 ---
 
-## 2. Detailed Walkthrough / Examples
+## 2. Detailed Walkthrough / Examples *(optional)*
 
-### Example 1: [Scenario Name]
-- Description of the scenario
-- Relevant log sample or screenshot
-- Step-by-step analysis
-- What to look for / red flags
+Include only if an example teaches something the concepts did not already make obvious. Do not invent fail-stories to hit a count.
 
-### Example 2: [Scenario Name]
-...
+### Example: [Scenario Name]
+- What happened
+- What to call it / what to write down
 
 ---
 
-## 3. Hands-On Exercise
+## 3. Hands-On Exercise *(later — do not write yet)*
 
-**Objective:** [What the student should accomplish]
-
-**Instructions:**
-1. ...
-2. ...
-3. ...
-
-**Expected Outcome / Deliverable:**
-- ...
-
-**Hints (if needed):**
-- ...
+Do not add a lab, demo, or hands-on exercise until the human asks. Outline **tasks** are still taught in Key Concepts as what good looks like.
 
 ---
 
 ## 4. Knowledge Check
 
+Required when this lesson has slides: **1–3 questions for the whole lesson**. Not per concept. Answers only in the instructor guide.
+
+Do not add a fourth question to fill. Do not ask about the next lesson just to have more items.
+
 1. [Question]
 2. [Question]
-3. [Question]
-
-*(Answers in Instructor Guide or separate answer key)*
 
 ---
 
 ## 5. Summary
 
-- Key takeaway 1
-- Key takeaway 2
-- Key takeaway 3
+- Only the takeaways this lesson earned
 
 ---
 
-## 6. References & Further Reading
+## 6. References & Further Reading *(optional except related modules if there is a next lesson)*
 
-- Internal documentation links
-- External resources (MITRE, Zeek docs, etc.)
 - Related modules
+- External links only if this lesson uses that source

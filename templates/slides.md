@@ -1,21 +1,20 @@
 # Slide Deck Template Structure
 
-**Recommended slide sequence for each module**
+**Suggested slide sequence** (a menu, not a quota). Use only the slides this lesson needs. Do not add slides to fill.
 
-| Slide # | Slide Title                        | Content Guidance                                      | Notes for Instructor                     |
-|---------|------------------------------------|-------------------------------------------------------|------------------------------------------|
-| 1       | Title Slide                        | Module number + title + target roles                  | Why this hour; hook to last hour         |
-| 2       | Learning Objectives                | 3–5 clear objectives                                  | Tie each to a proficiency code           |
-| 3       | Agenda / Roadmap                   | High-level flow of the module                         | Optional                                 |
-| 4–N     | Key Concepts                       | One major concept per slide (or small group)          | Keep text minimal; use visuals           |
-|         |                                    | Use diagrams, tables, or field callouts               |                                          |
-|         | Demonstration / Walkthrough        | Screenshots + step-by-step                            | Live demo preferred when possible        |
-|         | Common Mistakes / Pitfalls         | 3–5 frequent errors                                   | Very high value for students             |
-|         | Hands-On Exercise                  | Clear instructions + timebox                          | Circulate and assist                     |
-|         | Knowledge Check                    | 3–5 quick questions (can be verbal or poll)           |                                          |
-|         | Summary & Key Takeaways            | 3–5 bullet points                                     |                                          |
-|         | Questions                          | Open floor                                            |                                          |
-| Last    | Resources & Next Steps             | Links + what comes next                               |                                          |
+| Slide # | Slide Title                        | Required? | Content Guidance |
+|---------|------------------------------------|-----------|------------------|
+| 1       | Title Slide                        | Yes       | Module number + title + roles |
+| 2       | What this hour is                  | Yes       | Intro — same idea as instructor Context |
+|         | Learning Objectives                | If useful | Only the objectives you actually have |
+|         | Agenda / Roadmap                   | Optional  | Skip on a short lesson |
+|         | Key Concepts                       | Yes       | One idea per slide |
+|         | Demonstration / Walkthrough        | Later     | Do not add until asked |
+|         | Common Mistakes                    | Optional  | Only real ones |
+|         | Hands-On Exercise                  | Later     | Do not add until asked |
+|         | Knowledge Check                    | Yes       | **1–3 questions for the lesson.** Not per concept. |
+|         | Summary                            | If useful | Only earned takeaways |
+| Last    | Next lesson                        | If there is one | One line |
 
 ---
 
@@ -23,7 +22,7 @@
 
 Every slide has **Speaker Notes**. Write them in ordinary words. Someone who was not in the planning chat should still follow.
 
-- 3–6 short sentences
+- A few short sentences
 - Why this slide is here, and how it connects to the last one or the next one
 - Not a recap of the on-slide bullets
 - Not a second student guide
@@ -70,4 +69,4 @@ The **face of the slide** must be short enough to understand without a briefing.
    - Time allocation
 
 6. **Summary Slide**
-   - 3–5 key takeaways maximum
+   - Only the takeaways this lesson earned

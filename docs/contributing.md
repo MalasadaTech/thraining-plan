@@ -49,6 +49,12 @@ Only after Gate 1. If Gate 1 said “add to an existing module,” amend that mo
 
 The module must cover **every** outline knowledge bullet and task that belongs to this teaching unit. Those items go in the student guide and in **Concepts taught**.
 
+Length follows the outline, not a clock. **Do not add optional content to fill.** If a section is marked optional and this lesson does not need it, omit it.
+
+**Knowledge check is required: 1–3 questions per lesson** that has slides. Not per concept. Not more than 3.
+
+**No new labs, demos, or hands-on exercises** until we decide to add them (after the concept baseline). Outline **tasks stay** — teach what the task is. Existing labs stay until that section is reviewed.
+
 Expansion is allowed when it supports the outline (examples, `uid`, extra context). A new *requirement* (something an analyst must now be signed off on) still goes through Gate 1.
 
 If an outline bullet has no obvious home in this unit, stop and map it. Do not drop it.
@@ -58,12 +64,13 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 - [ ] Module folder (new modules only): `modules/<role>/<unit>/<nn-short-name>/`
 - [ ] `README.md` — mapped matrix IDs, outline headings, roles, time, **Concepts taught**
 - [ ] `student-guide.md` from [templates/student-guide.md](../templates/student-guide.md)
-- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md) (include the exercise answer key here). Must have **Context (plain language)** as one block at the top of the overview. Each **Common Student Challenges** bullet must include a short explanation and one example.
+- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md). Must have **Context (plain language)** as one block at the top of the overview. **Common Student Challenges** is optional. If you list any, each bullet needs a short why and one example. Do not invent challenges to fill a quota. Do not add a new lab or demo unless asked.
 - [ ] `slides.md` from [templates/slides.md](../templates/slides.md). On-slide text stays short and readable without extra briefing. Every slide has **Speaker Notes** in plain language (why this slide, how it connects — not a recap of the bullets).
 - [ ] [concept-index.md](concept-index.md) — Taught vs Used, aliases, roles; same terms as the README Concepts list
 - [ ] [tracker.csv](tracker.csv) — move the row to `Review`, then `Complete` when accepted
-- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index; Context and challenge examples are present; slide notes are plain language
+- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index; Context is present; any challenges have examples; slide notes are plain language
 - [ ] Review: names match the outline and student guide. A shop nickname (e.g. “bulletin”) is either the same word the student already has, or it is defined on first use in ordinary words. Do not leave the instructor saying a word the student guide never explained.
+- [ ] **Fluff review (required):** hunt for content that is only there to fill. Cut examples, slides, tables, labs, or extra questions that do not teach a new outline fact. If you cannot say what outline bullet a piece serves, remove it.
 
 ### Optional / later
 

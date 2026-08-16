@@ -19,6 +19,7 @@ docs/
 
 templates/                        # proposal + module writing templates
 modules/
+  00-intro/<module>/              # shared section 0
   01-soc/<unit>/<module>/
   02-hunter/<unit>/<module>/
   03-cti/<unit>/<module>/
@@ -41,6 +42,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 
 | Folder | Matrix items | Outline headings |
 |--------|----------------|------------------|
+| `modules/00-intro/01-what-a-soc-is` | `0.1` | `0.1` a–c |
 | `modules/01-soc/01-endpoint/01-process-activity` | `1.1.1.1`–`1.1.1.3` | `1.1.1` + `1.1.1.1` |
 | `modules/01-soc/01-endpoint/02-file-system-activity` | `1.1.2.1`–`1.1.2.3` | `1.1.2` + `1.1.2.1` |
 | `modules/01-soc/01-endpoint/03-network-activity` | `1.1.3.1`–`1.1.3.3` | `1.1.3` + `1.1.3.1` |
