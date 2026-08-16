@@ -697,6 +697,26 @@ b. Criteria for determining which TTPs are applicable to the environment
 **3.8.2.1 [T] Tasks**  
 1. Extract applicable TTPs from an intelligence report  
 
+**3.8.3 [K] IOC handling and enrichment concepts**  
+a. What an IOC is (an observable you record, enrich, or expire) versus a TTP  
+b. Handling rules: keep cited current IOCs; reject stale, uncited, or shared-infrastructure noise  
+c. Enrichment uses internal and external tools already taught — this hour selects and records the enrichment; it does not re-teach the tool  
+d. Link analysis and campaign tracking: connect handled IOCs into one activity set or keep them apart  
+
+**3.8.3.1 [T] Tasks**  
+1. Enrich and pivot on IOCs using internal and external tools (name the tool/field and what you hope to learn)  
+
+**3.8.3.2 [T] Tasks**  
+1. Perform link analysis / campaign tracking: same activity set vs separate (cite the shared objects; reject a vendor group name with no link)  
+
+**3.8.4 [K] Threat relevance and organizational impact**  
+a. Relevance: does this finding apply to this environment (mission / assets / platform)  
+b. Potential impact: what would change here if the finding is true  
+c. Relevance and impact are not TTP applicability (3.8.2), not a PIR (3.1.4 / 3.12.1), and not attribution (3.1.7)  
+
+**3.8.4.1 [T] Tasks**  
+1. Assess threat relevance and potential impact to the organization  
+
 **3.9 [K/T] Platform-Specific Skills**  
 
 **3.9.1 [K] VirusTotal**  

@@ -1048,6 +1048,48 @@ Evidence-bound mapping is [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](..
 
 See also: [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment), [reject a TTP that does not apply here](#reject-a-ttp-that-does-not-apply-here)
 
+### what an IOC is versus a TTP
+
+Also: IOC vs TTP, observable vs behavior
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+
+See also: [IOC handling rules (keep, expire, reject)](#ioc-handling-rules-keep-expire-reject), [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report)
+
+### IOC handling rules (keep, expire, reject)
+
+Also: keep cited IOC, expire stale IOC, reject uncited IOC
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+
+See also: [what an IOC is versus a TTP](#what-an-ioc-is-versus-a-ttp), [record an enrichment without re-teaching the tool](#record-an-enrichment-without-re-teaching-the-tool)
+
+### record an enrichment without re-teaching the tool
+
+Also: enrich line, name the next lookup, 3.8.3.1
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+
+The generic hop sentence is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
+
+See also: [IOC handling rules (keep, expire, reject)](#ioc-handling-rules-keep-expire-reject), [link analysis and campaign tracking](#link-analysis-and-campaign-tracking)
+
+### link analysis and campaign tracking
+
+Also: same activity set, link line, not a group name
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+
+See also: [reject a vendor group name with no shared objects](#reject-a-vendor-group-name-with-no-shared-objects), [IOC handling rules (keep, expire, reject)](#ioc-handling-rules-keep-expire-reject)
+
 ### extracting hunt leads from CTI
 
 Also: extract hunt leads, pull leads from a report, CTI extract for hunting
@@ -1431,6 +1473,38 @@ Also: developing a hunt, hunt intake card, hunt planning card
 
 See also: [hunt hypothesis](#hunt-hypothesis), [scoping a hunt](#scoping-a-hunt), [prioritizing hunts](#prioritizing-hunts)
 
+### hunt for a named persistence or privilege-escalation technique
+
+Also: 2.6.3 hunt line, named technique hunt, unique pattern hunt
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
+
+Recognition is [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) and [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/).
+
+See also: [reject an unbounded tactic hunt](#reject-an-unbounded-tactic-hunt), [reject hunting the wrong class (persist vs privesc)](#reject-hunting-the-wrong-class-persist-vs-privesc)
+
+### hunt hand-off to SOC, IR, or CTI is site-specific
+
+Also: hunt recipient chart, do not invent a hunt hand-off
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.3 Hunt Outputs and Hand-off](../modules/02-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
+
+See also: [expected hunt outputs are site-specific](#expected-hunt-outputs-are-site-specific), [produce required hunt outputs and perform proper hand-off](#produce-required-hunt-outputs-and-perform-proper-hand-off)
+
+### hunt initiation and control are site-specific
+
+Also: hunt queue varies, do not invent a hunt ticket
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.1 Hunt Control and Lead Management](../modules/02-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
+
+See also: [lead management is site-specific](#lead-management-is-site-specific), [follow the local process for initiating and controlling a hunt](#follow-the-local-process-for-initiating-and-controlling-a-hunt)
+
 ### hunt hypothesis
 
 Also: developing a hunt hypothesis, documented hunt hypothesis, testable if/then
@@ -1501,6 +1575,16 @@ Also: types of hunts, four hunt types, hunt type taxonomy
 | Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [intel-driven hunt](#intel-driven-hunt), [hypothesis-driven hunt](#hypothesis-driven-hunt), [reactive hunt](#reactive-hunt), [anomaly-based hunt](#anomaly-based-hunt)
+
+### lead management is site-specific
+
+Also: hunt lead board, park leads locally
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.1 Hunt Control and Lead Management](../modules/02-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
+
+See also: [hunt initiation and control are site-specific](#hunt-initiation-and-control-are-site-specific)
 
 ### hunt-worthy CTI
 
@@ -2222,6 +2306,28 @@ See also: [assigning a category and ruling out the adjacent one](#assigning-a-ca
 
 ## P
 
+### potential organizational impact
+
+Also: impact if true, so what here, not because clause
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+
+See also: [relevance to this environment](#relevance-to-this-environment), [reject impact that skips the path](#reject-impact-that-skips-the-path)
+
+### relevance to this environment
+
+Also: so what here, relevant to Harbor estate, mission asset platform
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+
+TTP apply is [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/).
+
+See also: [potential organizational impact](#potential-organizational-impact), [reject impact that skips the path](#reject-impact-that-skips-the-path)
+
 ### parent-child process
 
 Also: PPID, parent process, InitiatingProcess, ParentImage
@@ -2374,6 +2480,36 @@ Also: no send without the shown path, collection request is not a 3.1.8 plan
 
 See also: [local production and approval processes](#local-production-and-approval-processes), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
 
+### follow the local process for initiating and controlling a hunt
+
+Also: do not open a hunt without the shown path, hunt control orientation
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.1 Hunt Control and Lead Management](../modules/02-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
+
+See also: [hunt initiation and control are site-specific](#hunt-initiation-and-control-are-site-specific)
+
+### document a hunt according to local standards
+
+Also: file the hunt on the shown form, classroom card is not the site form
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.2 Hunt Documentation Standards](../modules/02-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
+
+See also: [required hunt-documentation elements are site-specific](#required-hunt-documentation-elements-are-site-specific), [where hunts are documented is site-specific](#where-hunts-are-documented-is-site-specific)
+
+### produce required hunt outputs and perform proper hand-off
+
+Also: hunt hand-off line, do not send without the chart
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.3 Hunt Outputs and Hand-off](../modules/02-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
+
+See also: [expected hunt outputs are site-specific](#expected-hunt-outputs-are-site-specific), [hunt hand-off to SOC, IR, or CTI is site-specific](#hunt-hand-off-to-soc-ir-or-cti-is-site-specific)
+
 ### document and archive products to local standards
 
 Also: official copy not personal folder, local archive path
@@ -2437,6 +2573,36 @@ Also: every section has its own PIRs, do not invent a PIR list
 | Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
 
 See also: [identify current local intelligence priorities](#identify-current-local-intelligence-priorities), [Priority Intelligence Requirements (PIRs)](#priority-intelligence-requirements-pirs)
+
+### required hunt-documentation elements are site-specific
+
+Also: hunt form varies, do not invent a hunt template
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.2 Hunt Documentation Standards](../modules/02-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
+
+See also: [where hunts are documented is site-specific](#where-hunts-are-documented-is-site-specific), [document a hunt according to local standards](#document-a-hunt-according-to-local-standards)
+
+### where hunts are documented is site-specific
+
+Also: hunt store, official hunt record, not Slack
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.2 Hunt Documentation Standards](../modules/02-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
+
+See also: [required hunt-documentation elements are site-specific](#required-hunt-documentation-elements-are-site-specific)
+
+### expected hunt outputs are site-specific
+
+Also: hunt done list, what a finished hunt must produce
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.7.3 Hunt Outputs and Hand-off](../modules/02-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
+
+See also: [hunt hand-off to SOC, IR, or CTI is site-specific](#hunt-hand-off-to-soc-ir-or-cti-is-site-specific)
 
 ### how local requirements drive analytic focus
 
@@ -2797,6 +2963,56 @@ Also: reject Unix TTP on Windows Harbor, reject ESXi T1486, platform-miss TTP
 | Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
 See also: [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
+
+### reject a vendor group name with no shared objects
+
+Also: APT name is not a link, Night Owl APT is not glue
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+
+See also: [link analysis and campaign tracking](#link-analysis-and-campaign-tracking)
+
+### reject an unbounded tactic hunt
+
+Also: reject hunt persistence, reject hunt TA0003
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
+
+See also: [hunt for a named persistence or privilege-escalation technique](#hunt-for-a-named-persistence-or-privilege-escalation-technique)
+
+### reject hunting the wrong class (persist vs privesc)
+
+Also: SYSTEM task is not a privesc hunt
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [2.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
+
+See also: [hunt for a named persistence or privilege-escalation technique](#hunt-for-a-named-persistence-or-privilege-escalation-technique)
+
+### reject impact that skips the path
+
+Also: reject pay-db-01 outage from WS-JLEE, jewel needs a path
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+
+See also: [potential organizational impact](#potential-organizational-impact), [relevance to this environment](#relevance-to-this-environment)
+
+### reject substituting a PIR or an attribution letter
+
+Also: impact line is not a PIR, impact line is not 3.1.7
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+
+See also: [relevance to this environment](#relevance-to-this-environment), [local PIRs are site-specific](#local-pirs-are-site-specific)
 
 ### reject a weak DTF pivot
 

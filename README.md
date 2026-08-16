@@ -83,6 +83,10 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/02-hunter/05-framework-application` | `2.5.1` / `2.5.1.1`–`2.5.1.3` | `2.5.1` + `2.5.2` tasks 1–3 |
 | `modules/02-hunter/06-attacker-techniques/01-persistence` | `2.6.1` / `2.6.1.1` | `2.6.1` + `2.6.3` task 1 |
 | `modules/02-hunter/06-attacker-techniques/02-privilege-escalation` | `2.6.2` / `2.6.2.1` | `2.6.2` + `2.6.3` task 2 |
+| `modules/02-hunter/06-attacker-techniques/03-hunt-specific` | `2.6.3` | `2.6.3` task 3 |
+| `modules/02-hunter/07-site-specific/01-hunt-control` | `2.7.1` / `2.7.1.1` | `2.7.1` + `2.7.4` task 1 |
+| `modules/02-hunter/07-site-specific/02-hunt-documentation` | `2.7.2` / `2.7.2.1` | `2.7.2` + `2.7.4` task 2 |
+| `modules/02-hunter/07-site-specific/03-hunt-outputs` | `2.7.3` / `2.7.3.1` | `2.7.3` + `2.7.4` task 3 |
 | `modules/03-cti/01-core-intel/01-data-info-intel` | `3.1.1` / `3.1.1.1` | `3.1.1` + `3.1.1.1` |
 | `modules/03-cti/01-core-intel/02-intelligence-lifecycle` | `3.1.2` / `3.1.2.1` | `3.1.2` + `3.1.2.1` |
 | `modules/03-cti/01-core-intel/03-intelligence-types` | `3.1.3` / `3.1.3.1` | `3.1.3` + `3.1.3.1` |
@@ -106,6 +110,8 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/07-frameworks/04-dtf` | `3.7.4` / `3.7.4.1`–`3.7.4.3` | `3.7.4` + `3.7.4.1` |
 | `modules/03-cti/08-enrichment/01-infra-pivot` | `3.8.1` / `3.8.1.1` | `3.8.1` + `3.8.1.1` |
 | `modules/03-cti/08-enrichment/02-applicable-ttps` | `3.8.2` / `3.8.2.1` | `3.8.2` + `3.8.2.1` |
+| `modules/03-cti/08-enrichment/03-ioc-handling` | `3.8.3` / `3.8.3.1`–`3.8.3.2` | `3.8.3` + `3.8.3.1` |
+| `modules/03-cti/08-enrichment/04-relevance-impact` | `3.8.4` / `3.8.4.1` | `3.8.4` + `3.8.4.1` |
 | `modules/03-cti/09-platforms/01-virustotal` | `3.9.1` / `3.9.1.1` | `3.9.1` + `3.9.1.1` |
 | `modules/03-cti/09-platforms/02-anyrun` | `3.9.2` / `3.9.2.1` | `3.9.2` + `3.9.2.1` |
 | `modules/03-cti/09-platforms/03-silent-push` | `3.9.3` / `3.9.3.1` | `3.9.3` + `3.9.3.1` |
