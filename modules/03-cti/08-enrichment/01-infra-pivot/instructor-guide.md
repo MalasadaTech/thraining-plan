@@ -13,7 +13,7 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Do the hop **3.7.4** only named: seed → shared property → **additional infrastructure**. Reject weak public NS / cloud CIDR hops and uncited vendor names.
+Write the **generic hop sentence**: seed → shared property → **additional infrastructure**. **3.7.4** already wrote the DTF ID line. Reject weak public NS / cloud CIDR hops and uncited vendor names.
 
 **Key Teaching Points:**
 - Do not re-teach RDAP fields, SOA timers, or Silent Push vs VT. Point at the **cards** and the hop.
@@ -25,7 +25,7 @@ Do the hop **3.7.4** only named: seed → shared property → **additional infra
 - Treating Example Cloud /24 as “theirs.”
 - Shared CDN NS as a cluster.
 - Pasting `evil-c2.net` from the vendor PDF.
-- Re-scoring DTF or writing T-IDs.
+- Rewriting DTF PTA/P IDs or writing T-IDs.
 - Opening VT Relations because “that’s pivoting.”
 
 **Required Materials:**

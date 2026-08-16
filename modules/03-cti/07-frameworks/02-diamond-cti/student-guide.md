@@ -114,7 +114,7 @@ Social-political and technology meta-features exist in the paper. They are **not
    - E. “Write the Night Owl actor profile from this card.”
 
 3. Write the **product Diamond sentence** for A only.
-4. Do not assign ATT&CK IDs (**3.7.1**). Do not pick a Kill Chain stage (**3.7.3**). Do not score DTF (**3.7.4**). Do not assign a 3.1.7 confidence letter.
+4. Do not assign ATT&CK IDs (**3.7.1**). Do not pick a Kill Chain stage (**3.7.3**). Do not write DTF PTA/P IDs (**3.7.4**). Do not assign a 3.1.7 confidence letter.
 5. Empty vertices are allowed. Guessing is not.
 
 **Expected Outcome:**

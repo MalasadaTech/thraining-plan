@@ -389,7 +389,7 @@ Also: ATT&CK in intel products, advanced ATT&CK for CTI, supported ATT&CK IDs in
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
-| Used | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC alert mapping is [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
@@ -740,7 +740,7 @@ Also: advanced Kill Chain for CTI, Kill Chain in intel products, supported Kill 
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
-| Used | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC single-row staging is [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/).
 
@@ -778,7 +778,7 @@ Also: advanced Diamond for CTI, Diamond in intel products
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
-| Used | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC incident cards are [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
 
@@ -806,17 +806,17 @@ Also: Adversary vertex, Capability vertex, Infrastructure vertex, Victim vertex
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
 
-### DTF core components and scoring
+### DTF pivot tactics and pivots
 
-Also: ThreatMesh nodes, classroom DTF score, mesh recency reach
+Also: PTA0001 Domain, PTA0002 IP, P0101.010, real DTF IDs
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-Classroom scores are lesson-only, not live org policy.
+Source of truth: [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). No scoring methodology.
 
-See also: [purpose of DTF (pattern identification and defensive prioritization)](#purpose-of-dtf-pattern-identification-and-defensive-prioritization), [identify patterns across indicators, infrastructure, and behavior](#identify-patterns-across-indicators-infrastructure-and-behavior)
+See also: [purpose of DTF (discover additional adversary infrastructure)](#purpose-of-dtf-discover-additional-adversary-infrastructure), [apply DTF from a known-bad seed](#apply-dtf-from-a-known-bad-seed), [reject a weak DTF pivot](#reject-a-weak-dtf-pivot)
 
 ### data
 
@@ -1362,13 +1362,13 @@ See also: [SOA records](#soa-records), [use advanced DNS records to enrich or pi
 
 ### how DTF complements ATT&CK, Diamond, and Kill Chain
 
-Also: DTF vs ATT&CK, DTF does not replace Diamond, DTF and Kill Chain jobs
+Also: DTF vs ATT&CK, DTF discovery not behavior, DTF does not replace Diamond
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-See also: [purpose of DTF (pattern identification and defensive prioritization)](#purpose-of-dtf-pattern-identification-and-defensive-prioritization), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
+See also: [purpose of DTF (discover additional adversary infrastructure)](#purpose-of-dtf-discover-additional-adversary-infrastructure), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
 
 ### how the TIP supports enrichment, analysis, and production
 
@@ -1561,15 +1561,15 @@ Also: report clock at risk, submit vs blocked clock
 
 See also: [submit timelines by report type](#submit-timelines-by-report-type), [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed)
 
-### identify patterns across indicators, infrastructure, and behavior
+### apply DTF from a known-bad seed
 
-Also: DTF pattern, three-node mesh, link indicator infra behavior
+Also: DTF line, PTA plus P-ID, cite the shared characteristic
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-See also: [DTF core components and scoring](#dtf-core-components-and-scoring), [use DTF scoring to guide enrichment or pivoting](#use-dtf-scoring-to-guide-enrichment-or-pivoting)
+See also: [DTF pivot tactics and pivots](#dtf-pivot-tactics-and-pivots), [reject a weak DTF pivot](#reject-a-weak-dtf-pivot)
 
 ### identify the Kill Chain stage of observed or reported activity
 
@@ -2309,7 +2309,7 @@ Also: infra hop from a seed, additional adversary domain or IP, CTI pivot line
 |----------|--------|-------|
 | Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-DTF names the seed in [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/). Zeek `uid` joins are [uid](#uid).
+DTF records the PTA/P pivot from that seed in [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/). The product here is the generic hop sentence, not a DTF ID line. Zeek `uid` joins are [uid](#uid).
 
 See also: [pivoting concepts and techniques](#pivoting-concepts-and-techniques), [reject a weak or uncited infra pivot](#reject-a-weak-or-uncited-infra-pivot)
 
@@ -2613,15 +2613,15 @@ Also: why structure changeover, prevent dropped cases at shift change
 
 See also: [shift change participants](#shift-change-participants), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
 
-### purpose of DTF (pattern identification and defensive prioritization)
+### purpose of DTF (discover additional adversary infrastructure)
 
-Also: why DTF, ThreatMesh purpose, pattern then prioritize
+Also: why DTF, ThreatMesh purpose, communicate and record pivots
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-See also: [DTF core components and scoring](#dtf-core-components-and-scoring), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
+See also: [DTF pivot tactics and pivots](#dtf-pivot-tactics-and-pivots), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
 ### purpose of estimative language
 
@@ -2798,6 +2798,18 @@ Also: reject Unix TTP on Windows Harbor, reject ESXi T1486, platform-miss TTP
 
 See also: [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
 
+### reject a weak DTF pivot
+
+Also: reject P0202 /24, reject invented P-code, distinctive NS vs shared hosting
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+
+The generic hop reject (no PTA/P IDs) is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
+
+See also: [apply DTF from a known-bad seed](#apply-dtf-from-a-known-bad-seed), [reject a weak or uncited infra pivot](#reject-a-weak-or-uncited-infra-pivot)
+
 ### reject a weak or uncited infra pivot
 
 Also: reject cloud /24 as infra, reject public NS hop, uncited vendor domain
@@ -2805,6 +2817,8 @@ Also: reject cloud /24 as infra, reject public NS hop, uncited vendor domain
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+
+The DTF-ID reject is [reject a weak DTF pivot](#reject-a-weak-dtf-pivot).
 
 See also: [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure), [key RDAP/WHOIS fields for enrichment and attribution](#key-rdapwhois-fields-for-enrichment-and-attribution)
 
@@ -3849,18 +3863,18 @@ Also: pivot on NS and MNAME, unique TXT token
 
 See also: [SOA records](#soa-records), [other advanced DNS record types of intelligence value](#other-advanced-dns-record-types-of-intelligence-value), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
-### use DTF scoring to guide enrichment or pivoting
+### use a selected DTF pivot to guide the next lookup
 
-Also: DTF next seed, score then seed, do not pivot this hour
+Also: DTF lookup line, P0101.010 to RDAP NS, do not re-teach 3.5
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 MalasadaTech Defender’s ThreatMesh Framework (DTF)](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 | Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-Doing the hop is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
+The generic hop sentence is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
 
-See also: [identify patterns across indicators, infrastructure, and behavior](#identify-patterns-across-indicators-infrastructure-and-behavior), [DTF core components and scoring](#dtf-core-components-and-scoring)
+See also: [apply DTF from a known-bad seed](#apply-dtf-from-a-known-bad-seed), [DTF pivot tactics and pivots](#dtf-pivot-tactics-and-pivots)
 
 ### use file similarity hashes to identify related samples
 

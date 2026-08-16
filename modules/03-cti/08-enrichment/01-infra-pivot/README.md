@@ -12,7 +12,7 @@
 | 3.8.1 | K | Identifying additional adversary infrastructure from seed indicators | 3.8.1 a–b |
 | 3.8.1.1 | T | Pivot from a seed indicator to additional adversary infrastructure | 3.8.1.1 task 1 |
 
-The lesson ID is **3.8.1**. DTF *names* the seed (**3.7.4**). RDAP field reading is **3.5**. SOA / NS stacks are **3.6**. Silent Push / PDNS tool choice is **3.3.2**. Applicable TTPs are **3.8.2**. IOC handling is **3.8.3**. Relevance / impact is **3.8.4**. VT Relations depth is **3.9**. Actor profile is **3.11**. Classroom PDNS / TIP rows are lesson-only.
+The lesson ID is **3.8.1**. Product is the **generic hop sentence**. The DTF ID line is **3.7.4**. RDAP field reading is **3.5**. SOA / NS stacks are **3.6**. Silent Push / PDNS tool choice is **3.3.2**. Applicable TTPs are **3.8.2**. IOC handling is **3.8.3**. Relevance / impact is **3.8.4**. VT Relations depth is **3.9**. Actor profile is **3.11**. Classroom PDNS / TIP rows are lesson-only.
 
 ## Concepts taught
 

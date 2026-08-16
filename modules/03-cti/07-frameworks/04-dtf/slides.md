@@ -8,41 +8,42 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.7.4 – Defender’s ThreatMesh Framework (DTF)  
+**Title:** Module 3.7.4 – Defender’s ThreatMesh Framework  
 **Subtitle:** CTI Analyst Training (Hunter secondary)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Local framework. Classroom card is lesson-only.
+Real DTF. Discovery pivots. No score.
 
 ---
 
 ### Slide 2 – Learning Objectives
 **Title:** Learning Objectives
 
-1. Purpose: pattern + prioritize
-2. Mesh and score (classroom card)
-3. Name the next seed — do not pivot
-4. Complement ATT&CK, Diamond, Kill Chain
+1. Discover additional infra from a known-bad seed
+2. Pick a real PTA + P
+3. Cite the characteristic; reject the weak neighbor
+4. Name the next lookup
+5. Complement ATT&CK, Diamond, Kill Chain
 
 **Mapped Items:**  
 K: 3.7.4 | T: 3.7.4.1 · 3.7.4.2 · 3.7.4.3
 
 **Speaker Notes:**  
-SOC K is A/A/B. CTI 4d on score and seed.
+SOC K is A/A/B. CTI 4d is distinctive vs weak.
 
 ---
 
 ### Slide 3 – Agenda
 **Title:** Agenda
 
-- Purpose, mesh, score, complement
+- Purpose, PTA/P, apply set
 - Three examples
-- DTF lines + next seed + three sentences
+- DTF lines + lookups + complement
 - Knowledge check
 
 **Speaker Notes:**  
-3.8.1 is next, not this hour.
+3.8.1 is next, not this hour’s product.
 
 ---
 
@@ -52,99 +53,96 @@ SOC K is A/A/B. CTI 4d on score and seed.
 ATT&CK IDs (**3.7.1**)  
 Diamond vertices (**3.7.2**)  
 Kill Chain stages (**3.7.3**)  
-Doing the pivot (**3.8.1**)  
-Applies-on-Harbor? (**3.8.2**)
+Generic hop without IDs (**3.8.1**)  
+Mesh + 0–3 score (**retired**)
 
-**Key Point:** Cluster and rank. Name the seed. Stop.
+**Key Point:** Real PTA/P. No score.
 
 **Speaker Notes:**  
-Fence. Do not copy shared/frameworks.
+Fence. Link the GitHub repo; do not copy it.
 
 ---
 
 ### Slide 5 – Purpose
-**Title:** Pattern, Then Prioritize
+**Title:** Discover · Communicate · Record
 
-See a link across indicator + infrastructure + behavior.  
-Rank what deserves the next look.
+Known-bad seed → shared characteristic → candidate infra.
 
 **Speaker Notes:**  
-Outline a.
+Outline a. Official DTF README.
 
 ---
 
-### Slide 6 – Classroom Mesh
-**Title:** Four Pieces (Lesson-Only)
+### Slide 6 – Four Tactics
+**Title:** PTA0001–0004
 
-Indicator · Infrastructure · Behavior · Link
+Domain · IP · SSL · Application  
+Depth this hour: Domain + IP.
 
 **Speaker Notes:**  
-If the site posts a real card, swap it. Keep the obligation.
+Outline b. SSL/HTTP named only.
 
 ---
 
-### Slide 7 – Classroom Score
-**Title:** Mesh + Recency + Reach (0–3)
+### Slide 7 – Apply Set (Real IDs)
+**Title:** Night Owl Seed
 
-Sum. Higher total first.  
-No mesh → do not prioritize.
+P0101.010 NS · P0102.002 substring · P0103.003 same A  
+P0202 /24 = reject. T1486 = not a DTF ID.
 
 **Speaker Notes:**  
-Not live org policy.
+Outline c. IDs from the live matrix.
 
 ---
 
-### Slide 8 – DTF Line
-**Title:** Five Fields
+### Slide 8 – Lines
+**Title:** DTF Line · Lookup Line
 
-`nodes | links | scores = total | prioritize? | next seed`
+`seed | PTA | P-ID | characteristic | candidate | why`  
+`P-ID | next lookup | what you hope to learn`
 
 **Speaker Notes:**  
 Tasks 3.7.4.1–2.
 
 ---
 
-### Slide 9 – Complements, Does Not Replace
+### Slide 9 – Complements
 **Title:** Four Frameworks, Four Jobs
 
-ATT&CK = IDs  
+ATT&CK = behavior  
 Diamond = gaps  
 Kill Chain = order  
-DTF = cluster + rank
+DTF = defender discovery
 
 **Speaker Notes:**  
-Outline e / 3.7.4.3.
+Outline e. Same shape as ATT&CK, different job.
 
 ---
 
-### Slide 10 – Example 1: Harbor Mesh
-**Title:** Example 1 – Night Owl Cluster
+### Slide 10 – Example 1
+**Title:** Example 1 – Distinctive Stack
 
-Three-node mesh. Total 8.  
-Next seed: `nightowl-updates.net`.
+NS + substring + same A → `login-nightowl.net`
 
 **Speaker Notes:**  
 Students first.
 
 ---
 
-### Slide 11 – Example 2: Vendor Only
-**Title:** Example 2 – Unmeshed T1486
+### Slide 11 – Example 2
+**Title:** Example 2 – Weak P0202
 
-PDF label. No Harbor nodes.  
-Score 0.
+Cloud /24 is not theirs.
 
 **Speaker Notes:**  
-Lead.
+Lead. 4d.
 
 ---
 
-### Slide 12 – Example 3: Replacement Traps
-**Title:** Example 3 – Not a Substitute
+### Slide 12 – Example 3
+**Title:** Example 3 – Not Infra / Invented ID
 
-No T-IDs in the score box.  
-No “8 = nation-state.”  
-No RDAP this hour.
+T1486 and `P9999` fail.
 
 **Speaker Notes:**  
 Lead.
@@ -154,10 +152,10 @@ Lead.
 ### Slide 13 – Common Mistakes
 **Title:** Common Mistakes
 
-- Scoring the vendor first  
-- T-IDs / stages in the score  
-- Total as attribution  
-- Running 3.8.1 now  
+- Mesh + recency + reach  
+- /24 as P0202  
+- T-IDs in the DTF line  
+- Opening Silent Push as the product  
 
 **Speaker Notes:**  
 Then the exercise.
@@ -170,8 +168,8 @@ Then the exercise.
 **Time:** 16–18 minutes
 
 1. Summarize Ex 1–3.
-2. A–C: DTF lines.
-3. Next seed for A.
+2. A–E: DTF lines.
+3. Lookup lines for A–C.
 4. One complement sentence each (ATT&CK / Diamond / Kill Chain).
 
 **Speaker Notes:**  
@@ -183,9 +181,9 @@ Instructor Guide key.
 **Title:** Knowledge Check
 
 1. DTF for?
-2. DTF line besides the total?
-3. Why not T1486 high?
-4. High score this hour — do / don’t?
+2. DTF line besides the P-ID?
+3. Why not the /24?
+4. This hour — do / don’t?
 5. One complement?
 
 **Speaker Notes:**  
@@ -196,8 +194,8 @@ Interactive.
 ### Slide 16 – Summary
 **Title:** Key Takeaways
 
-- Mesh. Score. Name the seed. Stop.
-- Next: **3.8.1** infrastructure pivot.
+- Real PTA/P. Cite. Reject the weak one. Name the lookup.
+- Next: **3.8.1** generic infra hop.
 
 **Speaker Notes:**  
 Do not open 3.8.1 unless scheduled.
@@ -205,14 +203,14 @@ Do not open 3.8.1 unless scheduled.
 ---
 
 ### Slide 17 – Quick Reference (Optional)
-**Title:** Classroom DTF — Quick Reference
+**Title:** DTF — Quick Reference
 
-| Fill | Score-ish |
-|------|-----------|
-| PS-enc + Run + GET + domain | Mesh 3 · total 8 · prioritize |
-| Next seed | `nightowl-updates.net` |
-| Vendor T1486 only | 0 |
-| T-ID / APT in the box | fail |
+| Evidence | ID |
+|----------|-----|
+| Distinctive NS | P0101.010 |
+| `nightowl` substring | P0102.002 |
+| Same A | P0103.003 |
+| /24 or T1486 | none |
 
 **Coming next:** Module 3.8.1 – Identifying additional adversary infrastructure
 

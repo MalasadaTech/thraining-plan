@@ -13,7 +13,7 @@
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-3.7.4 named the seed. This hour hops.
+3.7.4 wrote the DTF ID line. This hour writes the hop sentence.
 
 ---
 

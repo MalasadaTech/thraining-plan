@@ -123,7 +123,7 @@ An ATT&CK tactic name is **not** a Kill Chain stage. A GET of `update.exe` can b
    - E. “They weaponized the VBS off-net” as the only sentence.
 
 3. Write the **product stage list** for A–C only (chain order, comma-separated).
-4. Do not assign ATT&CK IDs (**3.7.1**). Do not fill Diamond (**3.7.2**). Do not score DTF (**3.7.4**).
+4. Do not assign ATT&CK IDs (**3.7.1**). Do not fill Diamond (**3.7.2**). Do not write DTF PTA/P IDs (**3.7.4**).
 5. If a stage is not in the telemetry, write **not observed** — do not invent it.
 
 **Expected Outcome:**

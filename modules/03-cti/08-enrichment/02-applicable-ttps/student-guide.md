@@ -132,7 +132,7 @@ A TTP must pass **platform + path**. Visibility tells you whether Harbor can *de
    - E. Vendor T1486 against ESXi.
 
 3. Write the **product applicable-TTP line** for A–C only.
-4. Do not pivot infra (**3.8.1**). Do not score DTF. Do not write **3.8.4** impact. Do not open Navigator (**2.5**). Do not invent IDs.
+4. Do not pivot infra (**3.8.1**). Do not write DTF PTA/P IDs (**3.7.4**). Do not write **3.8.4** impact. Do not open Navigator (**2.5**). Do not invent IDs.
 5. If they ask about T1071.004, treat it like Example 3 (no apply line required unless you add it — then **no**).
 
 **Expected Outcome:**

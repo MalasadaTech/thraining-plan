@@ -355,9 +355,9 @@ Five teaching units. Classroom cards are stand-ins. IR process is **1.8.5**, not
 | 3.7.2.1 | Apply the Diamond Model to an intelligence problem | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 | 3.7.3 | Cyber Kill Chain in intelligence analysis | K | A / B / B | B / C / C | B / C / C |
 | 3.7.3.1 | Identify the Kill Chain stage of observed or reported activity | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 3.7.4 | MalasadaTech Defender’s ThreatMesh Framework (DTF) | K | A / A / B | A / B / B | B / C / C |
-| 3.7.4.1 | Apply DTF to identify patterns and score or prioritize indicators or infrastructure | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 3.7.4.2 | Use DTF pattern analysis to guide enrichment and pivoting | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.7.4 | Defender’s ThreatMesh Framework (DTF) for infrastructure discovery | K | A / A / B | A / B / B | B / C / C |
+| 3.7.4.1 | Apply DTF: select a pivot tactic and pivot from a seed and reject the weak neighbor | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 3.7.4.2 | Use a selected DTF pivot to guide the next enrichment or lookup | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 | 3.7.4.3 | Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
 
 ---

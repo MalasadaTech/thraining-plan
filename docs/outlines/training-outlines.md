@@ -661,25 +661,25 @@ a. Advanced application for understanding attack progression
 1. Identify the Kill Chain stage of observed or reported activity (stage, reject previous/next; list only supported stages in the product; reject an unobserved stage)  
 
 **3.7.4 [K] MalasadaTech Defender’s ThreatMesh Framework (DTF)**  
-a. Purpose of DTF (pattern identification and defensive prioritization)  
-b. Core components and scoring methodology  
-c. How DTF is used to identify patterns across indicators, infrastructure, and adversary behavior  
-d. How DTF scoring and pattern analysis feed enrichment and pivoting decisions  
-e. Relationship of DTF to other frameworks (ATT&CK, Diamond Model, Cyber Kill Chain)  
+a. Purpose of DTF (discover additional adversary infrastructure; communicate and record pivots)  
+b. Core components: pivot tactics (PTA) and pivots (P), ATT&CK-like structure  
+c. How DTF identifies related infrastructure from a known-bad seed (shared registration, domain, DNS, IP, SSL, or HTTP characteristics)  
+d. How a selected DTF pivot guides the next enrichment or lookup  
+e. Relationship of DTF to ATT&CK, Diamond Model, and Cyber Kill Chain (discovery vs behavior vs know/don’t-know vs progression)  
 
 **3.7.4.1 [T] Tasks**  
-1. Apply DTF to identify patterns and score or prioritize indicators or infrastructure  
+1. Apply DTF: pick tactic + pivot (or sub-pivot), cite the characteristic, reject the weak neighbor  
 
 **3.7.4.2 [T] Tasks**  
-1. Use DTF pattern analysis to guide enrichment and pivoting  
+1. Use a selected DTF pivot to name the next enrichment or lookup  
 
 **3.7.4.3 [T] Tasks**  
 1. Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain  
 
 **3.7.5 [T] Framework application tasks**  
 1. Apply MITRE ATT&CK, Diamond Model, and/or Cyber Kill Chain at an advanced level to an intelligence problem set  
-2. Apply DTF to identify patterns and score/prioritize indicators or infrastructure  
-3. Use DTF pattern analysis to guide enrichment and pivoting  
+2. Apply DTF: pick tactic + pivot, cite the characteristic, reject the weak neighbor  
+3. Use a selected DTF pivot to name the next enrichment or lookup  
 4. Explain how DTF integrates with or complements other frameworks  
 
 **3.8 [T] Enrichment & Analysis**  

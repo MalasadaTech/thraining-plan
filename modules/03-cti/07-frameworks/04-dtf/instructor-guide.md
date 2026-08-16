@@ -1,4 +1,4 @@
-# Instructor Guide – Module 3.7.4 – MalasadaTech Defender’s ThreatMesh Framework (DTF)
+# Instructor Guide – Module 3.7.4 – Defender’s ThreatMesh Framework (DTF)
 
 **Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
 **Proficiency Focus:**  
@@ -13,34 +13,37 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Local DTF: mesh indicator / infrastructure / behavior, **score** on the classroom card, **prioritize**, name the **next seed**, and explain how DTF **complements** ATT&CK, Diamond, and Kill Chain.
+Real DTF: pick **PTA + P**, cite the characteristic, name candidate infra, name the **next lookup**, reject weak neighbors. **No scores.**
 
 **Key Teaching Points:**
-- Shared `modules/shared/frameworks/` is empty. The **classroom card** is the stand-in. Say “lesson-only, not live org policy” out loud.
-- If a site later posts a real DTF spec, swap the card. Keep purpose + mesh + score + seed + complement.
-- SOC K is **A / A / B** (not A/B/B). Hunter K is **A / B / B**. CTI tasks **4d** on 3.7.4.1–2 (judgment on the score and the seed), **4c** on 3.7.4.3. Do not collapse.
-- Do **not** run 3.8.1 this hour. Name the seed and stop.
+- Source of truth: [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Do not copy it into this folder.
+- Real IDs only. Invented `P9999` fails. T1486 is not a DTF ID.
+- SOC K is **A / A / B**. Hunter K is **A / B / B**. CTI **4d** on 3.7.4.1–2 = distinctive vs weak pivot (NS+substring vs /24), not a number. 3.7.4.3 is **4c**.
+- Survey four tactics. Apply Domain + IP. SSL/HTTP stay named unless you overlay a cert/page card.
+- 3.8.1 still owns the generic hop sentence. This hour’s product is the **ID line**.
 - Do not copy `modules/shared/frameworks/` into this folder.
 
 **Common Student Challenges:**
-- Scoring the vendor PDF first.
-- Putting T-IDs or Kill Chain stages in the score box.
-- Treating the total as attribution (“8 = nation-state”).
-- Opening RDAP / Silent Push / VT Relations.
+- Reaching for the old mesh+recency+reach card.
+- /24 or Example Cloud as “theirs.”
+- Vendor APT / T1486 as a pivot.
+- Opening RDAP/Silent Push and calling that the DTF product.
 - Re-teaching 3.7.1–3.7.3 instead of one complement sentence each.
 
 **Required Materials:**
-- Student Guide (classroom card)
+- Student Guide (apply table)
 - Slide Deck
+- Optional: live DTF matrix for lookup
 - Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Purpose: pattern + prioritize.
-2. Mesh + classroom score + next seed.
-3. Complement, do not replace, the other three.
+1. DTF = discover more infra; communicate/record the pivot.
+2. Real PTA/P; reject the weak neighbor.
+3. Name the next lookup.
+4. Complement, do not replace, the other three.
 
 **Mapped Items:** K 3.7.4 · T 3.7.4.1 · T 3.7.4.2 · T 3.7.4.3
 
@@ -50,79 +53,82 @@ Local DTF: mesh indicator / infrastructure / behavior, **score** on the classroo
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Lesson-only card; not 3.7.1–3 redo / 3.8 |
-| Purpose, mesh, score, complement | 16 min | a–e |
+| Introduction & fence           | 8 min    | Not a scorecard; not 3.7.1–3 redo |
+| Purpose, PTA/P, apply set, complement | 16 min | a–e |
 | Walkthrough Examples           | 12 min   | |
-| Hands-On Exercise              | 18 min   | Lines + seed + three sentences |
+| Hands-On Exercise              | 18 min   | Lines + lookups + three sentences |
 | Knowledge Check & Discussion   | 8 min    | |
 | Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they boost T1486 |
+| **Total**                      | **~66 min** | Stretch Ex 2 if they keep the /24 |
 
 ---
 
 ## Detailed Teaching Notes
 
 **Talking Points:**
-- CTI 3: 3c — they can fill a table. Push **why Mesh is 3 not 1** and **why the seed is the domain not T1486** (4d).
-- Mesh 3 on one host is allowed (three *node types* linked). A *second name* is the “same mesh on a second host or name” bump — item C.
-- Reach 2 vs 3: they can hunt/block the domain; they have not shown they can interrupt every node. Do not invent a Harbor block policy.
+- CTI 3: 3c — they can name P0101.010. Push **why** that NS is distinctive and **why** P0202 fails (4d).
+- P0101.010 + P0102.002 together is stronger than either alone. That is not a numeric score.
+- No PTR on the classroom card → P0201 is **not on card**, not a fail and not a take.
+- hIGMA / masq-monitor: one “out of scope” sentence if asked.
 
 **Question:**  
-“The vendor listed T1486. What would have to appear in the Harbor excerpt before that claim is a DTF *node*?”
+“What would make P0202 legal on *this* card — and do we have it?”
 
 ---
 
 ## Hands-On Exercise – Instructor Guidance
 
-**How to run:** Fail high scores on B. Fail T-IDs in the score box. Fail RDAP. Fail “8 = APT.” Accept Mesh 3 on A (three-node). On C, Mesh stays **3** if they already gave A a 3, or rises from 2 → 3 if they were conservative on A — both OK if they cite the second name.
+**How to run:** Fail D (/24). Fail E (not infra). Fail invented P-codes. Fail T-IDs in the DTF line. Fail a numeric total.
 
 **Summaries:**
-- Ex 1: mesh 3 / recency 3 / reach 2 = 8; seed = domain.
-- Ex 2: unmeshed vendor claim = 0.
-- Ex 3: DTF does not replace the other three and does not pivot.
+- Ex 1: PTA0001 stack → `login-nightowl.net`.
+- Ex 2: /24 / AS = hosting.
+- Ex 3: no DTF ID for T1486 / APT; no minted P-code.
 
 **DTF lines:**
 
-| Item | Mesh | Recency | Reach | Total | Notes |
-|------|------|---------|-------|-------|-------|
-| A | **3** | **3** | **2** | **8** | Prioritize. Seed: `nightowl-updates.net` |
-| B | **0** | **0** | **0** | **0** | No Harbor nodes |
-| C | **3** | 3 | 2 | 8 | Second name *confirms* Mesh 3; still not a 3.8 pivot |
+| Item | PTA | P-ID | Candidate | Notes |
+|------|-----|------|-----------|-------|
+| A | **PTA0001** | **P0101.010** | other names on `cdn-test.net` NS | Distinctive NS |
+| B | **PTA0001** | **P0102.002** | **`login-nightowl.net`** | Substring |
+| C | **PTA0001** | **P0103.003** | **`login-nightowl.net`** / same A | Stack with A–B |
+| D | **Reject** | P0202 | — | Shared /24 |
+| E | **None** | — | — | Not infrastructure |
 
-**Next seed (A):** `nightowl-updates.net` (infra is the linked, hunt-able node). Accept `203.0.113.88` if they say the IP is the same infra node. Reject T1486 / “Night Owl APT.”
+**Lookups (A–C):** A → RDAP NS (**3.5**). B → PDNS / name search for substring. C → PDNS same A (**3.3.2 / 3.9.3**). Optional stack: P0103.004 → SOA RNAME (**3.6**). Do not run the tools.
 
 **Complement (must hit all three):**
-- ATT&CK: names *how* (T-IDs); DTF clusters/ranks those facts.
-- Diamond: shows empty Adversary; DTF does not fill it.
-- Kill Chain: orders Delivery / Exploitation / Installation; DTF does not relabel stages.
+- ATT&CK: *how* (T-IDs). DTF: *where else* (PTA/P).
+- Diamond: empty Adversary allowed. DTF does not fill it.
+- Kill Chain: order of stages. DTF does not relabel them.
 
 ---
 
 ## Knowledge Check – Answer Key
 
 1. **DTF for?**  
-   **Answer:** See a pattern across indicator / infrastructure / behavior, then prioritize the next defensive or enrichment look.  
+   **Answer:** Discover additional adversary infrastructure from a known-bad seed; communicate and record the pivot.  
    **Explanation:** Outline a.
 
-2. **DTF line besides the total?**  
-   **Answer:** Nodes, links, the three factor scores, prioritize yes/no, next seed.  
+2. **DTF line besides the P-ID?**  
+   **Answer:** Seed, PTA, shared characteristic, candidate infra, why not coincidence.  
    **Explanation:** Tasks 3.7.4.1–2.
 
-3. **Why not T1486 high?**  
-   **Answer:** Not in *this* evidence. No Harbor mesh. Uncited vendor claims score 0.  
+3. **Why not the /24?**  
+   **Answer:** Shared hosting. P0202 / P0203 are weak alone.  
    **Explanation:** Example 2.
 
-4. **High score this hour?**  
-   **Answer:** Name the next seed. Do **not** run **3.8.1**.  
+4. **This hour — do / don’t?**  
+   **Answer:** Name the next lookup (RDAP NS, SOA RNAME, PDNS A). Do **not** invent a score. Do **not** run **3.8.1** as a generic hop without IDs.  
    **Explanation:** Outline d.
 
 5. **Complement (any one)?**  
-   **Answer:** ATT&CK = IDs; Diamond = gaps; Kill Chain = order. DTF = cluster + rank. It does not assign T-IDs, fill Adversary, or replace stages.  
+   **Answer:** ATT&CK = behavior IDs; Diamond = gaps; Kill Chain = order. DTF = defender discovery pivots. It does not assign T-IDs, fill Adversary, or replace stages.  
    **Explanation:** Outline e / 3.7.4.3.
 
 ---
 
 ## Additional Instructor Resources
 
-- Classroom DTF card (student guide)
+- [DTF matrix](https://github.com/MalasadaTech/defenders-threatmesh-framework/blob/main/matrix.md)
 - Next recommended module: 3.8.1 Identifying additional adversary infrastructure from seed indicators

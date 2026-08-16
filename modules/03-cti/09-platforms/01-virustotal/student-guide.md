@@ -114,7 +114,7 @@ By the end of this module, you will be able to:
    - D. Community “related” `random-cdn.example`.
 
 3. **Behavior** (task 2): one **Behavior line** for `6734f374…` (all four classes).
-4. Do not write a SIEM query (**2.3.1**). Do not score DTF. Do not open AnyRun (**3.9.2**). Do not extract applicable TTPs (**3.8.2**).
+4. Do not write a SIEM query (**2.3.1**). Do not write DTF PTA/P IDs (**3.7.4**). Do not open AnyRun (**3.9.2**). Do not extract applicable TTPs (**3.8.2**).
 5. Empty hop is allowed. A 12-node paste is not.
 
 **Expected Outcome:**

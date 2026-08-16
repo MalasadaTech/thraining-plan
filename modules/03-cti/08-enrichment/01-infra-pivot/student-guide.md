@@ -26,7 +26,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**3.7.4** *named* the seed (`nightowl-updates.net`). This hour **does the hop**. You already know how to read RDAP (**3.5**), SOA/NS (**3.6**), and when Silent Push is the right tool (**3.3.2**). Do not re-open those lessons.
+**3.7.4** already recorded DTF IDs from this seed (`nightowl-updates.net`). This hour writes the **generic hop sentence** — no PTA/P IDs required. You already know how to read RDAP (**3.5**), SOA/NS (**3.6**), and when Silent Push is the right tool (**3.3.2**). Do not re-open those lessons.
 
 Applicable TTPs are **3.8.2**. Broader IOC handling is **3.8.3**. “Does this matter to Harbor?” is **3.8.4**. VT Relations *depth* is **3.9**. A finished actor profile is **3.11**.
 
@@ -34,7 +34,7 @@ Applicable TTPs are **3.8.2**. Broader IOC handling is **3.8.3**. “Does this m
 
 | Term | Meaning |
 |------|---------|
-| **Seed** | The indicator you start with (here: the DTF seed) |
+| **Seed** | The indicator you start with (here: `nightowl-updates.net`) |
 | **Shared property** | NS set, SOA MNAME/RNAME, historical A, TIP sighting |
 | **Additional infra** | Another **domain / IP / host** you can cite |
 | **Stop** | One cited hop this hour unless the card already gives the second name |
@@ -55,7 +55,7 @@ File similarity (**3.4**) finds *samples*, not infra, unless a sample *names* a 
 
 **Classroom cards (this lesson only, not live feeds):**
 
-**Seed:** `nightowl-updates.net` (from **3.7.4**).
+**Seed:** `nightowl-updates.net` (same classroom name as **3.7.4**).
 
 | Source | What the card shows |
 |--------|---------------------|
@@ -73,7 +73,7 @@ File similarity (**3.4**) finds *samples*, not infra, unless a sample *names* a 
 
 | This lesson | Other |
 |-------------|-------|
-| Seed → cited hop → additional name/IP | DTF names the seed — **3.7.4** |
+| Seed → cited hop → additional name/IP | DTF ID line — **3.7.4** |
 | Use RDAP / SOA / PDNS *results* | How to read those fields — **3.5** / **3.6** / **3.3.2** |
 | Not applicable TTPs | **3.8.2** |
 | Not VT Relations depth | **3.9** |
@@ -110,7 +110,7 @@ File similarity (**3.4**) finds *samples*, not infra, unless a sample *names* a 
 
 **Draft:** Copy `evil-c2.net` from the vendor PDF into “additional infra.”
 
-**Fail.** No shared property on the classroom cards. Same rule as uncited T1486 (**3.7.1**) and unmeshed vendor claims (**3.7.4**).  
+**Fail.** No shared property on the classroom cards. Same rule as uncited T1486 (**3.7.1**) and a weak / invented DTF pivot (**3.7.4**).  
 **Lead:** Additional infra is **evidence-bound**.
 
 ---
@@ -133,7 +133,7 @@ File similarity (**3.4**) finds *samples*, not infra, unless a sample *names* a 
    - E. “Write the Night Owl actor profile from this hop.”
 
 3. Write the **product hop sentence** for A/C only.
-4. Do not extract applicable TTPs (**3.8.2**). Do not re-score DTF. Do not open VT Relations (**3.9**). Do not assign a 3.1.7 confidence letter.
+4. Do not extract applicable TTPs (**3.8.2**). Do not write DTF PTA/P IDs (**3.7.4**). Do not open VT Relations (**3.9**). Do not assign a 3.1.7 confidence letter.
 5. Empty hop is allowed. Guessing is not.
 
 **Expected Outcome:**
@@ -165,7 +165,7 @@ File similarity (**3.4**) finds *samples*, not infra, unless a sample *names* a 
 ## 6. References & Further Reading
 
 - Related modules:
-  - 3.7.4 – DTF (named the seed)
+  - 3.7.4 – DTF (PTA/P ID line)
   - 3.5.1 – RDAP / WHOIS
   - 3.6.1 – SOA / advanced DNS
   - 3.3.2 – Silent Push / PDNS
