@@ -1093,6 +1093,16 @@ Also: requirement drives work, PIR drives collect and analyze
 
 See also: [explain how a given requirement drives analytic work](#explain-how-a-given-requirement-drives-analytic-work), [purpose of intelligence requirements](#purpose-of-intelligence-requirements)
 
+### how the TIP supports enrichment, analysis, and production
+
+Also: TIP sighting, attach TIP object to draft
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+
+See also: [search and retrieve from the internal TIP](#search-and-retrieve-from-the-internal-tip), [use the TIP for enrichment or analysis](#use-the-tip-for-enrichment-or-analysis)
+
 ### how YARA is used with files / memory
 
 Also: YARA file scan, YARA memory scan
@@ -1692,6 +1702,16 @@ See [qtype_name](#qtype_name).
 
 ## N
 
+### navigating and searching the internal TIP
+
+Also: Harbor TIP search, indicator type filter
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+
+See also: [purpose and core functions of the internal TIP](#purpose-and-core-functions-of-the-internal-tip), [search and retrieve from the internal TIP](#search-and-retrieve-from-the-internal-tip)
+
 ### network activity (endpoint)
 
 Also: host network activity, endpoint network, DeviceNetworkEvents, Sysmon Event ID 3
@@ -2050,6 +2070,16 @@ Also: why attribute, attribution challenges, false flags shared infra
 
 See also: [levels of confidence in attribution](#levels-of-confidence-in-attribution), [types of attribution (activity group vs nation-state)](#types-of-attribution-activity-group-vs-nation-state)
 
+### purpose and core functions of the internal TIP
+
+Also: intel store, have we seen this, Harbor TIP
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+
+See also: [navigating and searching the internal TIP](#navigating-and-searching-the-internal-tip), [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal)
+
 ### purpose of a structured shift change
 
 Also: why structure changeover, prevent dropped cases at shift change
@@ -2357,6 +2387,16 @@ Also: KAC vs ACH vs neither, pick the SAT
 | Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [when to apply ACH vs Key Assumptions Check](#when-to-apply-ach-vs-key-assumptions-check), [apply a structured analytic technique](#apply-a-structured-analytic-technique)
+
+### search and retrieve from the internal TIP
+
+Also: retrieve line, open IND-1882
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+
+See also: [navigating and searching the internal TIP](#navigating-and-searching-the-internal-tip), [use the TIP for enrichment or analysis](#use-the-tip-for-enrichment-or-analysis)
 
 ### scheduled-task persistence
 
@@ -2978,6 +3018,16 @@ Also: write a likely judgment, banned is will could
 | Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [interpret the likelihood expressed in an estimative statement](#interpret-the-likelihood-expressed-in-an-estimative-statement)
+
+### use the TIP for enrichment or analysis
+
+Also: add a sighting, link related indicator in TIP
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+
+See also: [how the TIP supports enrichment, analysis, and production](#how-the-tip-supports-enrichment-analysis-and-production), [search and retrieve from the internal TIP](#search-and-retrieve-from-the-internal-tip)
 
 ### user-mode image load vs kernel driver load
 
