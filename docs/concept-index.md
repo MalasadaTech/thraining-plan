@@ -626,6 +626,18 @@ Also: convert to SIEM query, convert to Zeek query, internal query from enrichme
 
 See also: [hunting leads from external tools](#hunting-leads-from-external-tools), [tool capabilities for hunting](#tool-capabilities-for-hunting)
 
+### criteria for TTP applicability to the environment
+
+Also: Harbor platform and path, applicable vs relevant TTP, classroom apply criteria
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+
+Organizational impact is later (`3.8.4`). Harbor facts are [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/).
+
+See also: [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report), [identifying relevant TTPs in a report](#identifying-relevant-ttps-in-a-report)
+
 ### crown jewel / critical assets
 
 Also: pay-db-01, crown jewel host, critical asset
@@ -938,6 +950,18 @@ Also: Zeek events, `connection_established`
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
+### extract applicable TTPs from an intelligence report
+
+Also: applicable TTP line, dual-gate TTP extract, Harbor-applicable IDs
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+
+Evidence-bound mapping is [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
+
+See also: [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment), [reject a TTP that does not apply here](#reject-a-ttp-that-does-not-apply-here)
+
 ### extracting hunt leads from CTI
 
 Also: extract hunt leads, pull leads from a report, CTI extract for hunting
@@ -956,10 +980,11 @@ Also: TTP extract to ATT&CK, extract behavior onto T-ID, evidence-bound ATT&CK m
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
-Copying printed IDs from a hunt-facing skim is [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/). Which extracted TTPs apply here is later (`3.8.2`).
+Copying printed IDs from a hunt-facing skim is [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/). Which extracted TTPs apply here is [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/).
 
-See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [reject a neighbor ATT&CK ID](#reject-a-neighbor-attck-id)
+See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [reject a neighbor ATT&CK ID](#reject-a-neighbor-attck-id), [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report)
 
 ### examples of activity existing controls might miss
 
@@ -1503,6 +1528,16 @@ Also: start clock at risk, close/escalate clock at risk
 
 See also: [start clock (time to begin investigation)](#start-clock-time-to-begin-investigation), [close/escalate clock (time to process)](#closeescalate-clock-time-to-process)
 
+### identifying relevant TTPs in a report
+
+Also: relevant TTP in a report, TTP with a how, gate 1 TTP extract
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+
+See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
+
 ### identifying which orientation fact applies and rejecting the adjacent fact
 
 Also: orientation neighbor, egress vs email vs sensor gap
@@ -1510,8 +1545,9 @@ Also: orientation neighbor, egress vs email vs sensor gap
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Used | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
-See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors)
+See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
 
 ### identify collection source classes for a requirement
 
@@ -2550,6 +2586,16 @@ Also: reject the neighbor ID, neighbor technique reject, T1059.001 vs T1059.003
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques)
+
+### reject a TTP that does not apply here
+
+Also: reject Unix TTP on Windows Harbor, reject ESXi T1486, platform-miss TTP
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+
+See also: [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
 
 ### reject a weak or uncited infra pivot
 

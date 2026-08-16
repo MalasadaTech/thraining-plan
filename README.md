@@ -105,6 +105,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/07-frameworks/03-kill-chain-cti` | `3.7.3` / `3.7.3.1` | `3.7.3` + `3.7.3.1` |
 | `modules/03-cti/07-frameworks/04-dtf` | `3.7.4` / `3.7.4.1`–`3.7.4.3` | `3.7.4` + `3.7.4.1` |
 | `modules/03-cti/08-enrichment/01-infra-pivot` | `3.8.1` / `3.8.1.1` | `3.8.1` + `3.8.1.1` |
+| `modules/03-cti/08-enrichment/02-applicable-ttps` | `3.8.2` / `3.8.2.1` | `3.8.2` + `3.8.2.1` |
 
 Record the mapping in each module `README.md`.
 
