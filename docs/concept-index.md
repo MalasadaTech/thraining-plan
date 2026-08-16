@@ -134,6 +134,16 @@ Also: alert pane, missing context, present context
 
 See also: [alert configuration (what would fire)](#alert-configuration-what-would-fire), [upstream alerting hops](#upstream-alerting-hops)
 
+### assign Admiralty Code ratings
+
+Also: rate source and report, write B3 F1
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+
+See also: [source reliability scale](#source-reliability-scale), [information credibility scale](#information-credibility-scale)
+
 ### assigning a category and ruling out the adjacent one
 
 Also: reject the adjacent category, category neighbor
@@ -387,6 +397,16 @@ Also: OSINT, commercial TIP, internal telemetry as collection class
 | Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
 
 See also: [identify collection source classes for a requirement](#identify-collection-source-classes-for-a-requirement), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
+
+### combining Admiralty ratings
+
+Also: letter plus number, B2 F6 A1 rare
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+
+See also: [assign Admiralty Code ratings](#assign-admiralty-code-ratings), [explain an Admiralty Code rating](#explain-an-admiralty-code-rating)
 
 ### classify an intelligence product or requirement by type
 
@@ -736,6 +756,16 @@ Also: score the five checks, actionable pass fail
 | Taught | [3.1.5 Ensuring Intelligence Is Actionable](../modules/03-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
 
 See also: [characteristics of actionable intelligence](#characteristics-of-actionable-intelligence), [actionable for a hunt](#actionable-for-a-hunt)
+
+### explain an Admiralty Code rating
+
+Also: what C3 means, what F1 means
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+
+See also: [combining Admiralty ratings](#combining-admiralty-ratings), [source reliability scale](#source-reliability-scale)
 
 ### explain how a given requirement drives analytic work
 
@@ -1315,6 +1345,16 @@ Also: organized data, context, parsed alert, rewritten log story
 | Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [data](#data), [intelligence](#intelligence)
+
+### information credibility scale
+
+Also: Admiralty 1–6, confirmed probably possibly
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+
+See also: [source reliability scale](#source-reliability-scale), [combining Admiralty ratings](#combining-admiralty-ratings)
 
 ### initiating process (endpoint network)
 
@@ -2426,6 +2466,16 @@ Also: SourceIp, DestinationIp, RemoteIP, RemotePort, Initiated, LocalIP
 | Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
 
 See also: [network activity (endpoint)](#network-activity-endpoint), [host-observed vs Zeek](#host-observed-vs-zeek)
+
+### source reliability scale
+
+Also: Admiralty A–F, usually reliable, cannot be judged
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+
+See also: [information credibility scale](#information-credibility-scale), [assign Admiralty Code ratings](#assign-admiralty-code-ratings)
 
 ### SPAN
 
