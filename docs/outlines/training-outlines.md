@@ -280,24 +280,30 @@ c. How the Kill Chain is used to understand attack progression
 
 **1.6 [K/T] Reporting**
 
+SOC reporting. Shift-change reports are **1.7**. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task.
+
 **1.6.1 [K] Report types**  
 a. Incident report  
 b. Request for Information (RFI)  
 c. Other common report types used in the environment  
 
+**1.6.1.1 [T] Report type tasks**  
+1. Identify the correct report type for a given situation and why it is not the adjacent type  
+
 **1.6.2 [K] Reporting timeline requirements**  
 a. Required timelines for submitting different report types  
 b. Escalation timelines when additional information or actions are needed  
+
+**1.6.2.1 [T] Reporting timeline tasks**  
+1. Given a situation and timestamps, identify which report timeline applies (submit vs escalate-for-more-info) and whether it is at risk  
 
 **1.6.3 [K] Notification and distribution**  
 a. Notification chart / matrix (which teams or sections receive which reports)  
 b. Requirement to notify leadership for awareness  
 c. Approved reporting channels  
 
-**1.6.4 [T] Reporting tasks**  
-1. Identify the correct report type for a given situation  
-2. Submit a report within required timelines  
-3. Route a report to the correct recipients and leadership using approved channels  
+**1.6.3.1 [T] Notification and distribution tasks**  
+1. Route a report: name the recipients, whether leadership gets awareness, and the approved channel (and reject the wrong channel)  
 
 **1.7 [K/T] Shift Change**
 

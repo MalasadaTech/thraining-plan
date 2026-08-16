@@ -221,14 +221,28 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 
 ## 1.6 Reporting
 
+Shift-change reports are 1.7. Alert SLA clocks are 1.4.5. Tasks apply the knowledge they sit under.
+
+### 1.6.1 Report types
+
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
 | 1.6.1.1 | Report types | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level can analyze and apply. |
-| 1.6.1.2 | Reporting timeline requirements | K | A | B | C | Same knowledge progression. |
-| 1.6.1.3 | Notification and distribution | K | A | B | C | Same knowledge progression. |
-| 1.6.2.1 | Identify the correct report type for a given situation | T | 2b | 3c | 4c | Standard performance progression. |
-| 1.6.2.2 | Submit a report within required timelines | T | 2b | 3c | 4c | Core operational task – must be reliable at 5-level. |
-| 1.6.2.3 | Route a report to the correct recipients and leadership using approved channels | T | 2b | 3c | 4c | Same performance progression. |
+| 1.6.1.2 | Identify the correct report type for a given situation and why it is not the adjacent type | T | 2b | 3c | 4c | Extends labeling — must reject the neighbor type (incident vs RFI vs other). |
+
+### 1.6.2 Reporting timeline requirements
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.6.2.1 | Reporting timeline requirements | K | A | B | C | Submit clocks vs escalate-for-more-info clocks. Not 1.4.5 alert SLA. |
+| 1.6.2.2 | Given timestamps, identify which report timeline applies and whether it is at risk | T | 2b | 3c | 4c | Extends “know the times” — name the clock and at-risk vs met. |
+
+### 1.6.3 Notification and distribution
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.6.3.1 | Notification and distribution | K | A | B | C | Chart, leadership awareness, approved channels. |
+| 1.6.3.2 | Route a report: name recipients, leadership awareness, and the approved channel | T | 2b | 3c | 4c | Extends the chart — route plus reject the wrong channel. |
 
 ---
 

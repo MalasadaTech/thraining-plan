@@ -33,6 +33,8 @@ Stop and say what is missing if any of these fail:
 
 **`1.5.x` framework lessons:** three units — ATT&CK (`1.5.1`), Diamond (`1.5.2`), Kill Chain (`1.5.3`). Do not write all three as one module. Do not turn `1.5.1` into hunt planning (`2.5`) or an actor profile (`3.11`). Do not copy `modules/shared/frameworks/` into a role folder.
 
+**`1.6.x` reporting lessons:** three units — report types (`1.6.1`), timelines (`1.6.2`), notification/distribution (`1.6.3`). Do not collapse them. Do not turn this into shift change (`1.7`) or an intel product (`3.11`). Alert start/close clocks are `1.4.5`.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).

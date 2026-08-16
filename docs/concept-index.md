@@ -104,6 +104,16 @@ Also: analysis, production, analytic production, finished intelligence productio
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [intelligence](#intelligence)
 
+### approved reporting channels
+
+Also: ticket channel, RFI form, approved distro
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+
+See also: [notification chart / matrix](#notification-chart--matrix), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
+
 ### answers
 
 Also: DNS answers, response records
@@ -522,6 +532,16 @@ See also: [beaconing](#beaconing)
 ---
 
 ## E
+
+### escalation timeline when more information is needed
+
+Also: blocked escalate clock, escalate-for-more-info
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+
+See also: [submit timelines by report type](#submit-timelines-by-report-type), [identifying which report timeline applies and whether it is at risk](#identifying-which-report-timeline-applies-and-whether-it-is-at-risk)
 
 ### empty SNI
 
@@ -964,6 +984,26 @@ Also: image load, driver load, DLL load, DeviceImageLoadEvents
 
 See also: [user-mode image load vs kernel driver load](#user-mode-image-load-vs-kernel-driver-load), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
 
+### identifying the report type and rejecting the adjacent type
+
+Also: incident vs RFI, reject neighbor report type
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+
+See also: [incident report](#incident-report), [Request for Information (RFI)](#request-for-information-rfi)
+
+### identifying which report timeline applies and whether it is at risk
+
+Also: report clock at risk, submit vs blocked clock
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+
+See also: [submit timelines by report type](#submit-timelines-by-report-type), [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed)
+
 ### identifying the stage and rejecting the previous or next
 
 Also: Kill Chain neighbor stage, not previous not next
@@ -993,6 +1033,16 @@ Also: start clock at risk, close/escalate clock at risk
 | Taught | [1.4.5 SLA / Response Time Goals](../modules/01-soc/04-alerts/05-sla-response-times/) | SOC, Hunter, CTI |
 
 See also: [start clock (time to begin investigation)](#start-clock-time-to-begin-investigation), [close/escalate clock (time to process)](#closeescalate-clock-time-to-process)
+
+### incident report
+
+Also: incident case record, IR case report
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+
+See also: [Request for Information (RFI)](#request-for-information-rfi), [other common report types](#other-common-report-types)
 
 ### indicators associated with privilege escalation
 
@@ -1158,6 +1208,16 @@ See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose)
 
 ## L
 
+### leadership awareness
+
+Also: duty SOC lead awareness, notify leadership
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+
+See also: [notification chart / matrix](#notification-chart--matrix), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
+
 ### logging framework
 
 Also: Zeek logs, TSV, JSON logs
@@ -1290,6 +1350,16 @@ Also: `notice`, Zeek notices
 |----------|--------|-------|
 | Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter |
 
+### notification chart / matrix
+
+Also: who gets which report, notification matrix
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+
+See also: [leadership awareness](#leadership-awareness), [approved reporting channels](#approved-reporting-channels)
+
 ### NOERROR
 
 See [rcode_name](#rcode_name).
@@ -1341,6 +1411,16 @@ Also: service persistence, WMI persistence, logon script persistence
 | Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [recognizing persistence techniques in logs or telemetry](#recognizing-persistence-techniques-in-logs-or-telemetry)
+
+### other common report types
+
+Also: informational report, awareness note, local report types
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+
+See also: [incident report](#incident-report), [Request for Information (RFI)](#request-for-information-rfi)
 
 ### other local categories
 
@@ -1696,6 +1776,26 @@ Also: Run key persistence, RunOnce, Winlogon persistence, registry autorun
 
 See also: [persistence techniques](#persistence-techniques), [start menu / startup folder persistence](#start-menu--startup-folder-persistence), [common persistence locations (Run, Services)](#common-persistence-locations-run-services)
 
+### Request for Information (RFI)
+
+Also: RFI, information request to another team
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+
+See also: [incident report](#incident-report), [other common report types](#other-common-report-types)
+
+### routing a report (recipients, leadership, channel)
+
+Also: route line, reject wrong reporting channel
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+
+See also: [notification chart / matrix](#notification-chart--matrix), [approved reporting channels](#approved-reporting-channels)
+
 ---
 
 ## S
@@ -1954,6 +2054,16 @@ See also: [weird log](#weird-log), [5-tuple](#5-tuple)
 ### subject
 
 See [certificate subject / issuer](#certificate-subject--issuer).
+
+### submit timelines by report type
+
+Also: incident submit 30, RFI submit 60, informational before changeover
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+
+See also: [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed), [identifying which report timeline applies and whether it is at risk](#identifying-which-report-timeline-applies-and-whether-it-is-at-risk)
 
 ### Suricata rule options
 

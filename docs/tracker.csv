@@ -24,6 +24,9 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 1.5.1,MITRE ATT&CK,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.5.2,Diamond Model,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.5.3,Cyber Kill Chain,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+1.6.1,Report Types,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+1.6.2,Reporting Timelines,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+1.6.3,Notification and Distribution,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 2.1,Purpose of Threat Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 2.2,Hunt Methodology,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Remaining 2.2 items after 2.2.1 and 2.2.2"
 2.2.1,Hunt Types,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
