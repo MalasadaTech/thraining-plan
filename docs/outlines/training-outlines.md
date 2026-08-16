@@ -697,9 +697,9 @@ b. Criteria for determining which TTPs are applicable to the environment
 **3.8.2.1 [T] Tasks**  
 1. Extract applicable TTPs from an intelligence report  
 
-**3.9 [T] Platform-Specific Skills**  
+**3.9 [K/T] Platform-Specific Skills**  
 
-**3.9.1 [T] VirusTotal**  
+**3.9.1 [K] VirusTotal**  
 a. Relations tab for infrastructure pivoting  
 b. Behavior tab for extracting file, network, registry, and process events  
 
@@ -707,7 +707,7 @@ b. Behavior tab for extracting file, network, registry, and process events
 1. Use the Relations tab to identify additional adversary infrastructure from a seed indicator  
 2. Use the Behavior tab to extract file, network, registry, and process events  
 
-**3.9.2 [T] AnyRun**  
+**3.9.2 [K] AnyRun**  
 a. Searching submissions by tag, IP, domain, or hash  
 b. Reviewing submissions for actionable intelligence  
 
@@ -715,7 +715,7 @@ b. Reviewing submissions for actionable intelligence
 1. Search AnyRun submissions by tag, IP, domain, or hash  
 2. Review an AnyRun submission and extract actionable intelligence  
 
-**3.9.3 [T] Silent Push**  
+**3.9.3 [K] Silent Push**  
 a. Core capabilities and primary use cases  
 b. How to pivot and enrich indicators  
 
@@ -723,7 +723,7 @@ b. How to pivot and enrich indicators
 1. Enrich an indicator using Silent Push  
 2. Pivot within Silent Push to identify additional infrastructure  
 
-**3.9.4 [T] URLScan**  
+**3.9.4 [K] URLScan**  
 a. Core capabilities and primary use cases  
 b. How to interpret scan results for intelligence value  
 
@@ -754,7 +754,7 @@ b. Linking objects to represent complex threat activity
 2. Create basic STIX-aligned relationships between objects  
 3. Explain how a set of STIX objects represents a threat scenario  
 
-**3.11 [T] Intelligence Production & Dissemination**  
+**3.11 [K/T] Intelligence Production & Dissemination**  
 **3.11.1 [K] Creating finished intelligence products**  
 a. Types of finished intelligence products  
 b. Structure and required elements of a finished product  
@@ -781,7 +781,7 @@ b. How to evaluate, prioritize, and respond to an RFI
 1. Evaluate and prioritize an RFI  
 2. Produce a response to an RFI  
 
-**3.12 [T] Site-Specific CTI Knowledge and Tasks**  
+**3.12 [K/T] Site-Specific CTI Knowledge and Tasks**  
 **3.12.1 [K] Local intelligence requirements and priorities**  
 a. Current Priority Intelligence Requirements (PIRs) / intelligence priorities  
 b. How local requirements drive analytic focus  
