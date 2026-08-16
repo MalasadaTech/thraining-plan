@@ -4,7 +4,7 @@
 
 | Slide # | Slide Title                        | Content Guidance                                      | Notes for Instructor                     |
 |---------|------------------------------------|-------------------------------------------------------|------------------------------------------|
-| 1       | Title Slide                        | Module number + title + target roles                  | —                                        |
+| 1       | Title Slide                        | Module number + title + target roles                  | Why this hour; hook to last hour         |
 | 2       | Learning Objectives                | 3–5 clear objectives                                  | Tie each to a proficiency code           |
 | 3       | Agenda / Roadmap                   | High-level flow of the module                         | Optional                                 |
 | 4–N     | Key Concepts                       | One major concept per slide (or small group)          | Keep text minimal; use visuals           |
@@ -19,10 +19,23 @@
 
 ---
 
+## Speaker notes (required)
+
+Every slide has **Speaker Notes**. Write them in ordinary words. Someone who was not in the planning chat should still follow.
+
+- 3–6 short sentences
+- Why this slide is here, and how it connects to the last one or the next one
+- Not a recap of the on-slide bullets
+- Not a second student guide
+
+The **face of the slide** must be short enough to understand without a briefing. One idea. If you need a technical term, put a few ordinary words next to it.
+
+---
+
 ## Slide Design Guidelines
 
 - Title at top of every slide
-- Minimal text (prefer visuals, tables, screenshots, diagrams)
+- Minimal text (prefer visuals, tables, screenshots, diagrams). A reader who only sees the deck should still get the point.
 - Consistent footer with module number and “SOC / Hunter / CTI Training”
 - Pick one theme (dark or clean light) and stick to it across all decks
 - Optional color coding:

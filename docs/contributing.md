@@ -58,11 +58,12 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 - [ ] Module folder (new modules only): `modules/<role>/<unit>/<nn-short-name>/`
 - [ ] `README.md` — mapped matrix IDs, outline headings, roles, time, **Concepts taught**
 - [ ] `student-guide.md` from [templates/student-guide.md](../templates/student-guide.md)
-- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md) (include the exercise answer key here)
-- [ ] `slides.md` from [templates/slides.md](../templates/slides.md)
+- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md) (include the exercise answer key here). Must have **Context (plain language)** as one block at the top of the overview. Each **Common Student Challenges** bullet must include a short explanation and one example.
+- [ ] `slides.md` from [templates/slides.md](../templates/slides.md). On-slide text stays short and readable without extra briefing. Every slide has **Speaker Notes** in plain language (why this slide, how it connects — not a recap of the bullets).
 - [ ] [concept-index.md](concept-index.md) — Taught vs Used, aliases, roles; same terms as the README Concepts list
 - [ ] [tracker.csv](tracker.csv) — move the row to `Review`, then `Complete` when accepted
-- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index
+- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index; Context and challenge examples are present; slide notes are plain language
+- [ ] Review: names match the outline and student guide. A shop nickname (e.g. “bulletin”) is either the same word the student already has, or it is defined on first use in ordinary words. Do not leave the instructor saying a word the student guide never explained.
 
 ### Optional / later
 

@@ -12,14 +12,28 @@
 **Purpose of this module:**  
 [1–2 sentence summary of why this module exists]
 
+**Context (plain language):**  
+[One block. Ordinary words. No outline letters or matrix codes.]
+
+- What this hour is for:
+- How it hooks to the hour before:
+- How it hooks to the hour after:
+- Why we are doing it this way:
+- What we are *not* doing this hour:
+- Extra step (only if you added something the outline/human did not say, and why):
+
+Use the same names as the student guide. If you use a shop nickname, define it here in ordinary words on first use.
+
 **Key Teaching Points:**
 - ...
 - ...
 - ...
 
-**Common Student Challenges:**
-- ...
-- ...
+**Common Student Challenges:**  
+Each bullet: short why + one example.
+
+- [Challenge]. [Why it happens]. Example: [concrete wrong move].
+- [Challenge]. [Why it happens]. Example: [concrete wrong move].
 
 **Required Materials / Access:**
 - Student Guide

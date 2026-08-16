@@ -116,8 +116,8 @@ Match the sibling. Typical engine module:
 | Audience | Primary + secondary roles from the matrix |
 | Proficiency | 3/5/7 codes from the matrix, per role, identical in student + instructor headers |
 | Student guide | Objectives → key concepts (fields + 1–2 idea sections) → 3 walkthrough examples → hands-on exercise → 5 knowledge-check questions → summary → references |
-| Instructor guide | Purpose, teaching points, pitfalls, timing, notes per section, exercise key (pseudo-queries), knowledge-check answers |
-| Slides | ~17 slides: title, objectives, agenda, concepts, 3 examples, `uid` pivot if network logs, hunts, exercise, check, summary, next steps, optional quick-reference |
+| Instructor guide | **Context (plain language)** first (one block), then purpose, teaching points, pitfalls with an example each, timing, notes per section, exercise key (pseudo-queries), knowledge-check answers |
+| Slides | ~17 slides: title, objectives, agenda, concepts, 3 examples, `uid` pivot if network logs, hunts, exercise, check, summary, next steps, optional quick-reference. Face of each slide is short enough to read alone. **Speaker Notes** on every slide: 3–6 plain sentences (why this slide, how it connects). |
 | Answers | Only in the instructor guide. No standalone `answer-key.md`. No quiz. |
 
 Exercise pattern (engine modules): one-sentence summary of each example; two SIEM-style **pseudo-queries**; explain the `uid` pivot when the log has a `uid`.
@@ -125,6 +125,25 @@ Exercise pattern (engine modules): one-sentence summary of each example; two SIE
 Examples: one normal, two leads. Leads are not automatic incidents.
 
 Voice: direct, instructional, short paragraphs, tables for fields. Do not lecture about decrypting traffic, writing Zeek scripts, or other later modules.
+
+**Context and challenges (required):**
+
+Write **Context (plain language)** as the first block in the instructor overview, before Key Teaching Points. Anyone who was not in the planning chat should still see the connection. Use ordinary words. No outline letters, no matrix codes in this block.
+
+Include:
+
+- What this hour is for (one or two sentences)
+- How it hooks to the hour before and the hour after (one line each)
+- Why we are doing it this way (the human’s stated reason, not a new rule)
+- What we are *not* doing this hour
+
+If you add a step the human did not say, it must appear in Context as “extra, because ___.” If you cannot finish that sentence, do not add the step. Do not jump ahead.
+
+**Common Student Challenges:** each bullet is one short why + one concrete example. Not a label alone (wrong: “They invent a ticket.” Right: “They invent a ticket so the exercise has an answer — e.g. ‘open Jira HUNT-17.’”).
+
+**Slides:** someone who only reads the deck should still get the point. Speaker notes carry the why; they are not “read the bullets again.”
+
+**Words:** use the word the outline and student guide already use. If you want a shop nickname, define it on first use in ordinary words (“bulletin” = this week’s CTI report). If the student guide says **report**, the instructor guide and slide notes say **report** unless you add that one-line gloss. Do not invent a second name and assume the reader knows it.
 
 ---
 
@@ -177,9 +196,13 @@ Do not set tracker status to `Complete` for the module as a whole if that column
 - Copy shared frameworks into a role folder
 - Mark the module human-accepted (`Complete` on the whole package) — stop for review
 - Write Gate 1 proposal files unless asked
+- Skip **Context (plain language)** or leave Common Student Challenges as labels with no example
+- Leave a slide without plain-language speaker notes
+- Jump ahead of what the human asked without saying why in Context
+- Use a shop nickname (bulletin, annex, firehose) in the instructor guide or slides without the student-guide word or a one-line gloss
 
 ---
 
 ## 7. When you finish
 
-List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) Concepts taught matches the index, (3) status stays at review until they accept the lesson.
+List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) Concepts taught matches the index, (3) Context and challenge examples are in the instructor guide, (4) every slide has plain speaker notes, (5) status stays at review until they accept the lesson.
