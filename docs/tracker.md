@@ -35,6 +35,11 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 1.3.2 | [modules/01-soc/03-detection/02-suricata-rules](../modules/01-soc/03-detection/02-suricata-rules/) |
 | 1.3.3 | [modules/01-soc/03-detection/03-yara-rules](../modules/01-soc/03-detection/03-yara-rules/) |
 | 1.3.4 | [modules/01-soc/03-detection/04-siem-rules](../modules/01-soc/03-detection/04-siem-rules/) |
+| 1.4.1 | [modules/01-soc/04-alerts/01-context-investigation](../modules/01-soc/04-alerts/01-context-investigation/) |
+| 1.4.2 | [modules/01-soc/04-alerts/02-classification](../modules/01-soc/04-alerts/02-classification/) |
+| 1.4.3 | [modules/01-soc/04-alerts/03-false-positive-causes](../modules/01-soc/04-alerts/03-false-positive-causes/) |
+| 1.4.4 | [modules/01-soc/04-alerts/04-categorizations](../modules/01-soc/04-alerts/04-categorizations/) |
+| 1.4.5 | [modules/01-soc/04-alerts/05-sla-response-times](../modules/01-soc/04-alerts/05-sla-response-times/) |
 | 2.1 | [modules/02-hunter/01-purpose](../modules/02-hunter/01-purpose/) |
 | 2.2.1 | [modules/02-hunter/02-methodology/01-hunt-types](../modules/02-hunter/02-methodology/01-hunt-types/) |
 | 2.2.2 | [modules/02-hunter/02-methodology/02-hunt-development](../modules/02-hunter/02-methodology/02-hunt-development/) |

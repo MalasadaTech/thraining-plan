@@ -55,6 +55,11 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/01-soc/03-detection/02-suricata-rules` | `1.3.2.1`–`1.3.2.3` | `1.3.3` + `1.3.4` |
 | `modules/01-soc/03-detection/03-yara-rules` | `1.3.3.1`–`1.3.3.3` | `1.3.5` + `1.3.6` |
 | `modules/01-soc/03-detection/04-siem-rules` | `1.3.4.1`–`1.3.4.3` | `1.3.7` + `1.3.8` |
+| `modules/01-soc/04-alerts/01-context-investigation` | `1.4.1.1`–`1.4.1.6` | `1.4.1` + `1.4.1.1` |
+| `modules/01-soc/04-alerts/02-classification` | `1.4.2.1`–`1.4.2.2` | `1.4.2` + `1.4.2.1` |
+| `modules/01-soc/04-alerts/03-false-positive-causes` | `1.4.3.1`–`1.4.3.2` | `1.4.3` + `1.4.3.1` |
+| `modules/01-soc/04-alerts/04-categorizations` | `1.4.4.1`–`1.4.4.2` | `1.4.4` + `1.4.4.1` |
+| `modules/01-soc/04-alerts/05-sla-response-times` | `1.4.5.1`–`1.4.5.3` | `1.4.5` + `1.4.5.1` |
 | `modules/02-hunter/01-purpose` | `2.1.1` / `2.1.1.1` / `2.1.1.2` | `2.1` + `2.1.1` |
 | `modules/02-hunter/02-methodology/01-hunt-types` | `2.2.1` / `2.2.1.1`–`2.2.1.4` | `2.2.1` + `2.2.3` tasks 4–7 |
 | `modules/02-hunter/02-methodology/02-hunt-development` | `2.2.2` / `2.2.2.1`–`2.2.2.3` | `2.2.2` + `2.2.3` tasks 1–3 |

@@ -64,6 +64,36 @@ Also: missed activity, activity existing controls might miss, activity the stack
 
 See also: [detection gaps](#detection-gaps), [visibility gaps](#visibility-gaps), [purpose of threat hunting](#purpose-of-threat-hunting)
 
+### alert configuration (what would fire)
+
+Also: alert config, what the detection would fire
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.1 Alert Context and Investigation](../modules/01-soc/04-alerts/01-context-investigation/) | SOC, Hunter, CTI |
+
+See also: [alert context (present vs missing)](#alert-context-present-vs-missing), [SIEM detection rules / correlation searches](#siem-detection-rules--correlation-searches)
+
+### alert context (present vs missing)
+
+Also: alert pane, missing context, present context
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.1 Alert Context and Investigation](../modules/01-soc/04-alerts/01-context-investigation/) | SOC, Hunter, CTI |
+
+See also: [alert configuration (what would fire)](#alert-configuration-what-would-fire), [upstream alerting hops](#upstream-alerting-hops)
+
+### assigning a category and ruling out the adjacent one
+
+Also: reject the adjacent category, category neighbor
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.4 Common Alert Categorizations](../modules/01-soc/04-alerts/04-categorizations/) | SOC, Hunter, CTI |
+
+See also: [category: scanning / reconnaissance](#category-scanning--reconnaissance), [category: unsuccessful activity](#category-unsuccessful-activity)
+
 ### analysis and production
 
 Also: analysis, production, analytic production, finished intelligence production
@@ -154,6 +184,46 @@ See [Zeek](#zeek).
 
 ## C
 
+### category: root-level access
+
+Also: root-level alert category, SYSTEM / admin category
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.4 Common Alert Categorizations](../modules/01-soc/04-alerts/04-categorizations/) | SOC, Hunter, CTI |
+
+See also: [category: user-level access](#category-user-level-access), [assigning a category and ruling out the adjacent one](#assigning-a-category-and-ruling-out-the-adjacent-one)
+
+### category: scanning / reconnaissance
+
+Also: scan category, recon category
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.4 Common Alert Categorizations](../modules/01-soc/04-alerts/04-categorizations/) | SOC, Hunter, CTI |
+
+See also: [category: unsuccessful activity](#category-unsuccessful-activity), [assigning a category and ruling out the adjacent one](#assigning-a-category-and-ruling-out-the-adjacent-one)
+
+### category: unsuccessful activity
+
+Also: unsuccessful attempt category, failed access category
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.4 Common Alert Categorizations](../modules/01-soc/04-alerts/04-categorizations/) | SOC, Hunter, CTI |
+
+See also: [category: scanning / reconnaissance](#category-scanning--reconnaissance)
+
+### category: user-level access
+
+Also: user-level alert category, Medium user token category
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.4 Common Alert Categorizations](../modules/01-soc/04-alerts/04-categorizations/) | SOC, Hunter, CTI |
+
+See also: [category: root-level access](#category-root-level-access)
+
 ### certificate subject / issuer
 
 Also: `subject`, `issuer`, CN, certificate name
@@ -197,6 +267,26 @@ Also: classify by type, intelligence type classification
 | Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types)
+
+### classifying cases and citing evidence
+
+Also: classify TP FP TN FN, cite evidence for classification
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.2 Alert Classification](../modules/01-soc/04-alerts/02-classification/) | SOC, Hunter, CTI |
+
+See also: [True Positive](#true-positive), [False Negative](#false-negative)
+
+### close/escalate clock (time to process)
+
+Also: close clock, escalate clock, time to process an alert
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.5 SLA / Response Time Goals](../modules/01-soc/04-alerts/05-sla-response-times/) | SOC, Hunter, CTI |
+
+See also: [start clock (time to begin investigation)](#start-clock-time-to-begin-investigation), [recording a close or escalate against the correct clock](#recording-a-close-or-escalate-against-the-correct-clock)
 
 ### common Windows privilege escalation methods
 
@@ -440,6 +530,46 @@ See also: [hunt types](#hunt-types)
 ---
 
 ## F
+
+### False Negative
+
+Also: FN, missed detection, quiet and bad
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.2 Alert Classification](../modules/01-soc/04-alerts/02-classification/) | SOC, Hunter, CTI |
+
+See also: [True Positive](#true-positive), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
+
+### False Positive
+
+Also: FP, fired and benign
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.2 Alert Classification](../modules/01-soc/04-alerts/02-classification/) | SOC, Hunter, CTI |
+
+See also: [false positive cause: analyst or tool activity](#false-positive-cause-analyst-or-tool-activity), [classifying cases and citing evidence](#classifying-cases-and-citing-evidence)
+
+### false positive cause: analyst or tool activity
+
+Also: analyst testing a live rule, packet replay FP, scanner FP
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.3 Common False Positive Causes](../modules/01-soc/04-alerts/03-false-positive-causes/) | SOC, Hunter, CTI |
+
+See also: [false positive cause: untuned or overly broad logic](#false-positive-cause-untuned-or-overly-broad-logic)
+
+### false positive cause: untuned or overly broad logic
+
+Also: over-broad detection, any-PowerShell rule, untuned logic
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.3 Common False Positive Causes](../modules/01-soc/04-alerts/03-false-positive-causes/) | SOC, Hunter, CTI |
+
+See also: [identifying the cause class and what you would change](#identifying-the-cause-class-and-what-you-would-change)
 
 ### file create / rename-move / delete / modify / read
 
@@ -774,6 +904,26 @@ Also: image load, driver load, DLL load, DeviceImageLoadEvents
 
 See also: [user-mode image load vs kernel driver load](#user-mode-image-load-vs-kernel-driver-load), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
 
+### identifying the cause class and what you would change
+
+Also: FP cause class plus change, class a or b and a change
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.3 Common False Positive Causes](../modules/01-soc/04-alerts/03-false-positive-causes/) | SOC, Hunter, CTI |
+
+See also: [false positive cause: analyst or tool activity](#false-positive-cause-analyst-or-tool-activity), [false positive cause: untuned or overly broad logic](#false-positive-cause-untuned-or-overly-broad-logic)
+
+### identifying which clock is at risk
+
+Also: start clock at risk, close/escalate clock at risk
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.5 SLA / Response Time Goals](../modules/01-soc/04-alerts/05-sla-response-times/) | SOC, Hunter, CTI |
+
+See also: [start clock (time to begin investigation)](#start-clock-time-to-begin-investigation), [close/escalate clock (time to process)](#closeescalate-clock-time-to-process)
+
 ### indicators associated with privilege escalation
 
 Also: privilege escalation indicators, integrity change, parent vs child identity, missing UAC consent
@@ -1086,6 +1236,16 @@ Also: service persistence, WMI persistence, logon script persistence
 
 See also: [persistence techniques](#persistence-techniques), [recognizing persistence techniques in logs or telemetry](#recognizing-persistence-techniques-in-logs-or-telemetry)
 
+### other local categories
+
+Also: other alert category, local SOC buckets
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.4 Common Alert Categorizations](../modules/01-soc/04-alerts/04-categorizations/) | SOC, Hunter, CTI |
+
+See also: [assigning a category and ruling out the adjacent one](#assigning-a-category-and-ruling-out-the-adjacent-one)
+
 ---
 
 ## P
@@ -1322,6 +1482,16 @@ Also: recognize privilege escalation, privilege escalation in telemetry, privesc
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
 
+### recording a close or escalate against the correct clock
+
+Also: SLA record line, close vs escalate record
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.5 SLA / Response Time Goals](../modules/01-soc/04-alerts/05-sla-response-times/) | SOC, Hunter, CTI |
+
+See also: [close/escalate clock (time to process)](#closeescalate-clock-time-to-process), [identifying which clock is at risk](#identifying-which-clock-is-at-risk)
+
 ### recording ATT&CK IDs from a report
 
 Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
@@ -1335,6 +1505,26 @@ Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
 Mapping hunts to ATT&CK is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
+
+### related endpoint logs for an alert
+
+Also: pull endpoint logs for an alert, what logs add
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.1 Alert Context and Investigation](../modules/01-soc/04-alerts/01-context-investigation/) | SOC, Hunter, CTI |
+
+See also: [related PCAP versus alert fields](#related-pcap-versus-alert-fields), [process activity](#process-activity)
+
+### related PCAP versus alert fields
+
+Also: PCAP vs alert, what PCAP adds
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.1 Alert Context and Investigation](../modules/01-soc/04-alerts/01-context-investigation/) | SOC, Hunter, CTI |
+
+See also: [related endpoint logs for an alert](#related-endpoint-logs-for-an-alert), [http log](#http-log)
 
 ### rcode_name
 
@@ -1583,6 +1773,16 @@ Also: lifecycle stages, six stages, intelligence cycle stages
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [purpose and activities in each stage](#purpose-and-activities-in-each-stage)
 
+### start clock (time to begin investigation)
+
+Also: time to start an alert, start SLA
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.5 SLA / Response Time Goals](../modules/01-soc/04-alerts/05-sla-response-times/) | SOC, Hunter, CTI |
+
+See also: [close/escalate clock (time to process)](#closeescalate-clock-time-to-process), [identifying which clock is at risk](#identifying-which-clock-is-at-risk)
+
 ### start menu / startup folder persistence
 
 Also: startup folder, Start Menu Startup, All Users Startup, T1547.001 startup folder
@@ -1814,6 +2014,26 @@ Also: turn STIX objects into hunt leads, convert bundle leftovers to leads
 
 See also: [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt), [hunt question from CTI leads](#hunt-question-from-cti-leads)
 
+### True Negative
+
+Also: TN, quiet and benign, correctly no alert
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.2 Alert Classification](../modules/01-soc/04-alerts/02-classification/) | SOC, Hunter, CTI |
+
+See also: [True Positive](#true-positive), [False Negative](#false-negative)
+
+### True Positive
+
+Also: TP, fired and bad
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.2 Alert Classification](../modules/01-soc/04-alerts/02-classification/) | SOC, Hunter, CTI |
+
+See also: [False Positive](#false-positive), [classifying cases and citing evidence](#classifying-cases-and-citing-evidence)
+
 ### turning log fields into detections
 
 Also: fields to detection, log fields into a SIEM rule
@@ -1892,6 +2112,16 @@ Also: hunt-worthy pattern, unique hunt behavior, internal search pattern
 | Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt hypothesis](#hunt-hypothesis), [hunt development concepts](#hunt-development-concepts)
+
+### upstream alerting hops
+
+Also: Suricata to SIEM to alert, alert chain, name each hop
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.4.1 Alert Context and Investigation](../modules/01-soc/04-alerts/01-context-investigation/) | SOC, Hunter, CTI |
+
+See also: [alert configuration (what would fire)](#alert-configuration-what-would-fire), [Suricata rules](#suricata-rules)
 
 ### URI / URL
 
