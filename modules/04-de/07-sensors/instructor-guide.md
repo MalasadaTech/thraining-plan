@@ -20,7 +20,7 @@ Sometimes DE checks whether sensors are up and seeing the right place. A down se
 
 - What this hour is for: When a rule never fires, DE sometimes asks whether the sensor was up and looking at the right place. Check the rule, the sensor, or both. A dead sensor is not proof nothing happened.
 - How it hooks to the hour before: 4.6 used “sensor gone” as a retire reason. This hour is that check.
-- How it hooks to the hour after: 4.8.1 is the local requirements list. Obtain it. Do not invent fields.
+- How it hooks to the hour after: 4.8 is local policy — obtain the list and the path. Do not invent either.
 - Why we are doing it this way: This unit is lighter on purpose. Sometimes DE. Not a vendor-admin or architecture course.
 - What we are *not* doing this hour: Logging into MDE to configure it. Sizing Zeek. Writing a rule (1.3). Lifecycle calls (4.6). No lab. No DYA tickets.
 - Extra step: none.
@@ -88,4 +88,4 @@ If they invent a ticket: “Check, not the ticket.”
 
 ## Additional Instructor Resources
 
-- Next: 4.8.1 Local detection requirements
+- Next: 4.8 Site-specific DE knowledge

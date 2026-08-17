@@ -56,13 +56,13 @@ Do not log into the vendor box. Do not size a sensor. Do not invent a ticket.
 
 Sometimes DE checks whether sensors are up and seeing the right place. A dead sensor is not “no threat.” Check the rule, the sensor, or both. This is not vendor admin.
 
-**Next:** **4.8.1** Local detection requirements.
+**Next:** **4.8** Site-specific DE knowledge.
 
 ---
 
 ## 4. Related modules
 
 - 4.6 – Detection lifecycle
-- 4.8.1 – Local detection requirements
+- 4.8 – Site-specific DE knowledge
 - 1.2 – Zeek (how those logs work)
 - 1.1 – Endpoint logs (MDE as a source)

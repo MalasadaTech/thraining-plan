@@ -1484,6 +1484,46 @@ Also: the rule never fired, 4.7.1
 
 See also: [a dead or blind sensor is not no threat](#a-dead-or-blind-sensor-is-not-no-threat)
 
+### local policy varies by shop
+
+Also: site-specific DE, not DYA policy
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.8 Site-specific DE knowledge](../modules/04-de/08-site-specific/) | DE, SOC, Hunter, CTI |
+
+See also: [obtain the requirements list](#obtain-the-requirements-list), [shop requirements (list is local)](#shop-requirements-list-is-local)
+
+### obtain the requirements list
+
+Also: 4.8.1, do not invent fields
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.8 Site-specific DE knowledge](../modules/04-de/08-site-specific/) | DE, SOC, Hunter, CTI |
+
+See also: [local policy varies by shop](#local-policy-varies-by-shop), [shop requirements (list is local)](#shop-requirements-list-is-local)
+
+### obtain the review, deploy, and retire path
+
+Also: 4.8.2, how a change is reviewed and deployed
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.8 Site-specific DE knowledge](../modules/04-de/08-site-specific/) | DE, SOC, Hunter, CTI |
+
+See also: [local policy varies by shop](#local-policy-varies-by-shop), [reject inventing policy](#reject-inventing-policy)
+
+### reject inventing policy
+
+Also: do not invent a change board or ticket name, 4.8.2.2
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.8 Site-specific DE knowledge](../modules/04-de/08-site-specific/) | DE, SOC, Hunter, CTI |
+
+See also: [obtain the review, deploy, and retire path](#obtain-the-review-deploy-and-retire-path)
+
 ### what an IOC is versus a TTP
 
 Also: IOC vs TTP, observable vs behavior

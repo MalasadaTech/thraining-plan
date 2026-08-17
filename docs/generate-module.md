@@ -80,7 +80,7 @@ This section is how detections are **run as a service**. Rule *syntax* and a fir
 - `4.5` Hunt and intel packages. Both are inputs. “No new rule” is valid. Treat like a nomination (`4.3`). Reject turning the package into a block list.
 - `4.6` Lifecycle — modify / retire / leave, and why. “We blocked it” is not automatically retire.
 - `4.7` Sensors — lighter. Sometimes DE. Dead sensor is not “no threat.” Not vendor admin or architecture.
-- `4.8.x` Site-specific — generate only the asked child (`4.8.1` local requirements, `4.8.2` review/deploy/retire paths). Obtain-and-follow. Do not invent the list or a ticket name.
+- `4.8` Site-specific — one teaching unit when asked for `4.8` or both children (`4.8.1` local requirements + `4.8.2` review/deploy/retire paths). Obtain-and-follow. Local **policy** exists and varies by shop. Do **not** invent a field list, change board, ticket name, or DYA policy. If asked for only one child, generate only that child.
 
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 

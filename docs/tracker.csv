@@ -115,4 +115,4 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 4.5,Hunt and Intel Packages,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab
 4.6,Detection Lifecycle,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab; block is not automatic retire
 4.7,Sensor Availability and Performance,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; lighter; ready for review; no lab; not vendor admin
-4.8,Site-Specific DE Knowledge,DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster — children are 4.8.1–4.8.2"
+4.8,Site-Specific DE Knowledge,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,One unit (4.8.1–4.8.2); ready for review; obtain-and-follow; do not invent policy

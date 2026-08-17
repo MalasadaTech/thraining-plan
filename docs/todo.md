@@ -20,6 +20,7 @@ Do these first (course order and story):
 - [x] Write 4.5 Hunt and intel packages
 - [x] Write 4.6 Detection lifecycle
 - [x] Write 4.7 Sensor availability and performance
+- [x] Write 4.8 Site-specific DE knowledge (4.8.1 + 4.8.2 lumped; obtain-and-follow)
 - [ ] Put the full incident flow in the companion story: SOC alert → triage → IR + leadership notify → RFI to intel → hunt package, block list to firewall/IA, and a request to write detections. Firewall/IA is a hand-off, not a new course unless we decide we want that track.
 - [ ] As we review and revise the outline, make the outline follow that same flow, so the companion story is a re-read of the outline as one combined story
 

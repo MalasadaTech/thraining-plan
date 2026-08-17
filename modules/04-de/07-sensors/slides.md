@@ -93,7 +93,7 @@ Site lists are next. Obtain them. Do not invent fields.
 ### Slide 8 – Next
 **Title:** Next
 
-**4.8.1** Local detection requirements
+**4.8** Site-specific DE knowledge
 
 **Speaker Notes:**  
-That hour is the list you were shown — meta fields, naming, deploy checks. Do not invent the list.
+That hour is local policy: obtain the list and the path. Do not invent either.
