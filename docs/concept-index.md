@@ -640,7 +640,7 @@ Also: Run key, RunOnce, Services key, registry persistence locations as examples
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
 
 Persistence *techniques* are [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/).
 
@@ -905,7 +905,7 @@ Also: DestinationHostname, RemoteUrl, QueryName, endpoint-logged domain
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
 
 See also: [network activity (endpoint)](#network-activity-endpoint), [Sysmon 3 / 22 and DeviceNetworkEvents](#sysmon-3--22-and-devicenetworkevents)
 
@@ -1150,6 +1150,46 @@ Also: 0.5.1, not how the site files the ticket
 | Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
 
 See also: [the product is different](#the-product-is-different), [how work can move from an alert](#how-work-can-move-from-an-alert)
+
+### host rows
+
+Also: endpoint activity map, five kinds of host rows
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Endpoint activity (the map)](../modules/01-soc/01-endpoint/01-endpoint-activity/) | SOC, Hunter, CTI |
+
+See also: [five activity types](#five-activity-types), [Sysmon and MDE encode the same activities](#sysmon-and-mde-encode-the-same-activities)
+
+### five activity types
+
+Also: process file registry host-network image-driver load
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Endpoint activity (the map)](../modules/01-soc/01-endpoint/01-endpoint-activity/) | SOC, Hunter, CTI |
+
+See also: [host rows](#host-rows)
+
+### Sysmon and MDE encode the same activities
+
+Also: two encodings not two stories
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Endpoint activity (the map)](../modules/01-soc/01-endpoint/01-endpoint-activity/) | SOC, Hunter, CTI |
+
+See also: [host rows](#host-rows), [endpoint vs Zeek](#endpoint-vs-zeek)
+
+### endpoint vs Zeek
+
+Also: host telemetry vs network sensor, 1.1 vs 1.2
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.1.1 Endpoint activity (the map)](../modules/01-soc/01-endpoint/01-endpoint-activity/) | SOC, Hunter, CTI |
+
+See also: [host-observed vs Zeek](#host-observed-vs-zeek)
 
 ### what a SOC is
 
@@ -1672,7 +1712,7 @@ Also: FileCreated, FileRenamed, FileDeleted, FileModified, FileRead, Sysmon Even
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [Sysmon 11 / 23 / 26 and DeviceFileEvents](#sysmon-11--23--26-and-devicefileevents)
 
@@ -1682,8 +1722,8 @@ Also: file SHA256, DeviceFileEvents SHA256, file hash
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 | Used | [1.2.7 Files Engine](../modules/01-soc/02-zeek/07-files-engine/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [hashes and original filename](#hashes-and-original-filename), [files-log hashes (MD5, SHA1, SHA256)](#files-log-hashes-md5-sha1-sha256)
@@ -1694,7 +1734,7 @@ Also: file events, file telemetry, host file activity, DeviceFileEvents
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
 
 See also: [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read), [path, name, and extension](#path-name-and-extension)
 
@@ -1759,9 +1799,9 @@ Also: process SHA256, OriginalFileName, PE original filename
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line), [file hashes](#file-hashes)
 
@@ -1781,17 +1821,17 @@ Also: registry hive, HKLM, HKCU, TargetObject, RegistryKey, RegistryValueName
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
 
 See also: [registry activity](#registry-activity), [registry set / delete / rename](#registry-set--delete--rename)
 
 ### host-observed vs Zeek
 
-Also: host-observed network, endpoint vs network sensor, 1.1.3 vs 1.2
+Also: host-observed network, endpoint vs network sensor, 1.1.4 vs 1.2
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
 
 See also: [network activity (endpoint)](#network-activity-endpoint), [initiating process (endpoint network)](#initiating-process-endpoint-network)
 
@@ -2117,7 +2157,7 @@ Also: image load, driver load, DLL load, DeviceImageLoadEvents
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [user-mode image load vs kernel driver load](#user-mode-image-load-vs-kernel-driver-load), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
 
@@ -2323,7 +2363,7 @@ Also: who talked, DeviceNetworkEvents InitiatingProcess, Sysmon 3 Image
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
 
 See also: [network activity (endpoint)](#network-activity-endpoint), [parent-child process](#parent-child-process)
 
@@ -2333,10 +2373,10 @@ Also: file initiating process, who touched the file, DeviceFileEvents Initiating
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [parent-child process](#parent-child-process)
 
@@ -2346,7 +2386,7 @@ Also: who loaded the module, image-load initiating process, Event 7 Image
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [image and driver load activity](#image-and-driver-load-activity), [parent-child process](#parent-child-process)
 
@@ -2356,7 +2396,7 @@ Also: who changed the registry, DeviceRegistryEvents InitiatingProcess
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
 
 See also: [registry activity](#registry-activity), [parent-child process](#parent-child-process)
 
@@ -2366,7 +2406,7 @@ Also: integrity level, process user, Medium vs High vs SYSTEM
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [parent-child process](#parent-child-process)
 
@@ -2664,7 +2704,7 @@ Also: host network activity, endpoint network, DeviceNetworkEvents, Sysmon Event
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
 
 See also: [host-observed vs Zeek](#host-observed-vs-zeek), [source / dest IP and port, protocol, direction](#source--dest-ip-and-port-protocol-direction)
 
@@ -2830,11 +2870,11 @@ Also: PPID, parent process, InitiatingProcess, ParentImage
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
-| Used | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
+| Used | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [PID, name, and command line](#pid-name-and-command-line), [initiating process (file events)](#initiating-process-file-events)
 
@@ -2854,7 +2894,7 @@ Also: ImageLoaded path, loaded-image hash, Signed, SignatureStatus
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [image and driver load activity](#image-and-driver-load-activity), [file hashes](#file-hashes)
 
@@ -2864,7 +2904,7 @@ Also: FolderPath, FileName, TargetFilename, file extension, double extension
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read)
 
@@ -2895,7 +2935,7 @@ Also: ProcessId, process name, CommandLine, ProcessCommandLine
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [parent-child process](#parent-child-process)
 
@@ -3146,7 +3186,7 @@ Also: process access, Event ID 10, who touched whom, SourceImage TargetImage
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [Sysmon 1 / 5 / 10 and DeviceProcessEvents](#sysmon-1--5--10-and-deviceprocessevents)
 
@@ -3156,7 +3196,7 @@ Also: process events, process telemetry, host process activity
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
 
 See also: [process create / terminate](#process-create--terminate), [parent-child process](#parent-child-process)
 
@@ -3166,7 +3206,7 @@ Also: ProcessCreated, ProcessTerminated, Sysmon Event ID 1, Sysmon Event ID 5
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [Sysmon 1 / 5 / 10 and DeviceProcessEvents](#sysmon-1--5--10-and-deviceprocessevents)
 
@@ -3614,7 +3654,7 @@ Also: registry events, registry telemetry, DeviceRegistryEvents
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
 
 See also: [hives and key → value](#hives-and-key--value), [registry set / delete / rename](#registry-set--delete--rename)
 
@@ -3624,7 +3664,7 @@ Also: SetValue, CreateKey, DeleteKey, RenameKey, RegistryValueSet
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
 
 See also: [registry activity](#registry-activity), [Sysmon 12 / 13 / 14 and DeviceRegistryEvents](#sysmon-12--13--14-and-deviceregistryevents)
 
@@ -3953,7 +3993,7 @@ Also: SourceIp, DestinationIp, RemoteIP, RemotePort, Initiated, LocalIP
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
 
 See also: [network activity (endpoint)](#network-activity-endpoint), [host-observed vs Zeek](#host-observed-vs-zeek)
 
@@ -4216,7 +4256,7 @@ Also: DeviceProcessEvents, Sysmon process events, ActionType ProcessCreated
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.1 Process Activity](../modules/01-soc/01-endpoint/01-process-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.2 Process Activity](../modules/01-soc/01-endpoint/02-process-activity/) | SOC, Hunter, CTI |
 
 See also: [process activity](#process-activity), [process create / terminate](#process-create--terminate), [process access (Sysmon Event ID 10)](#process-access-sysmon-event-id-10)
 
@@ -4226,7 +4266,7 @@ Also: DeviceFileEvents, Sysmon file events, ActionType FileCreated, FileDeleteDe
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.2 File System Activity](../modules/01-soc/01-endpoint/02-file-system-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.3 File System Activity](../modules/01-soc/01-endpoint/03-file-system-activity/) | SOC, Hunter, CTI |
 
 See also: [file system activity](#file-system-activity), [file create / rename-move / delete / modify / read](#file-create--rename-move--delete--modify--read)
 
@@ -4236,7 +4276,7 @@ Also: DeviceRegistryEvents, Sysmon registry events, SetValue, CreateKey, RenameV
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.4 Registry Activity](../modules/01-soc/01-endpoint/04-registry-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
 
 See also: [registry activity](#registry-activity), [registry set / delete / rename](#registry-set--delete--rename)
 
@@ -4246,7 +4286,7 @@ Also: DeviceNetworkEvents, Sysmon network connection, Sysmon DNS query, Event ID
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.3 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/03-network-activity/) | SOC, Hunter, CTI |
+| Taught | [1.1.4 Network Activity (Endpoint)](../modules/01-soc/01-endpoint/04-network-activity/) | SOC, Hunter, CTI |
 
 See also: [network activity (endpoint)](#network-activity-endpoint), [host-observed vs Zeek](#host-observed-vs-zeek)
 
@@ -4256,7 +4296,7 @@ Also: DeviceImageLoadEvents, Sysmon driver load, Sysmon image load, Event ID 6, 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [image and driver load activity](#image-and-driver-load-activity), [user-mode image load vs kernel driver load](#user-mode-image-load-vs-kernel-driver-load)
 
@@ -4626,7 +4666,7 @@ Also: DLL load vs driver load, Event 7 vs Event 6, user-mode vs kernel
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.1.5 Image and Driver Load Activity](../modules/01-soc/01-endpoint/05-image-driver-load/) | SOC, Hunter, CTI |
+| Taught | [1.1.6 Image and Driver Load Activity](../modules/01-soc/01-endpoint/06-image-driver-load/) | SOC, Hunter, CTI |
 
 See also: [image and driver load activity](#image-and-driver-load-activity), [Sysmon 6 / 7 and DeviceImageLoadEvents](#sysmon-6--7-and-deviceimageloadevents)
 

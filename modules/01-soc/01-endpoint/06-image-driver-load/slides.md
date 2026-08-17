@@ -1,4 +1,4 @@
-# Module 1.1.5 – Image and Driver Load Activity  
+# Module 1.1.6 – Image and Driver Load Activity  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.1.5 – Image and Driver Load Activity  
+**Title:** Module 1.1.6 – Image and Driver Load Activity  
 **Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
 **Footer:** SOC / Hunter / CTI Training Program
 
@@ -27,7 +27,7 @@ By the end of this module, you will be able to:
 3. Write a SIEM query for *specific* image or driver load activity
 
 **Mapped Items:**  
-K: 1.1.5.1 | T: 1.1.5.2 | T: 1.1.5.3
+K: 1.1.6.1 | T: 1.1.6.2 | T: 1.1.6.3
 
 **Speaker Notes:**  
 SOC 3 is A / 2b. CTI is nomenclature only (A / 1a). Last 1.1 unit.
@@ -54,8 +54,8 @@ SOC 3 is A / 2b. CTI is nomenclature only (A / 1a). Last 1.1 unit.
 **Title:** Not This Hour
 
 Sysmon install / “enable Event 7”  
-File create of `helper.dll` (**1.1.2**)  
-Process create of Word (**1.1.1**)  
+File create of `helper.dll` (**1.1.3**)  
+Process create of Word (**1.1.2**)  
 BYOVD / sideload hunt methodology (**2.6**)  
 Zeek `files` / `conn` (**1.2**)
 

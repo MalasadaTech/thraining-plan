@@ -94,7 +94,7 @@ Teach analysts to read SIGMA, describe what a rule detects, map it to a SIEM sha
 
 ### 3. Examples
 
-**Example 1:** Good scope. Tie to 1.1.1 Ex 2.  
+**Example 1:** Good scope. Tie to 1.1.2 Ex 2.  
 **Example 2:** Broad = lead about the rule.  
 **Example 3:** `uri` on process_creation. Do not write Suricata.
 

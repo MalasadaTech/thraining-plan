@@ -113,7 +113,7 @@ Teach analysts to read the Zeek `weird` log, describe the type and endpoints, wr
 | weird data_before_established | **weird event** | `weird` log |
 | http POST beacon | **Not this log** | **1.2.5** — stack via uid |
 | notice log policy row | **Not this log** | Different log |
-| MDE DeviceNetworkEvents | **Not this log** | **1.1.3** |
+| MDE DeviceNetworkEvents | **Not this log** | **1.1.4** |
 
 **Pseudo-queries:**
 

@@ -78,7 +78,7 @@ Assume these are **working** alerts (you are not classifying TP/FP here).
 **Category:** **Unsuccessful activity**.  
 **Not scanning:** This is a failed access attempt against one application, not a wide unauthenticated sweep.
 
-**Nearby root (not a fourth full example):** Temp `helpdesk.exe` **CreateKey** under `HKLM\...\Services\HelpdeskSvc` (**1.1.4** Ex 3) → **root-level** (service/HKLM), **not user-level**, even though the binary sat in a user path.
+**Nearby root (not a fourth full example):** Temp `helpdesk.exe` **CreateKey** under `HKLM\...\Services\HelpdeskSvc` (**1.1.5** Ex 3) → **root-level** (service/HKLM), **not user-level**, even though the binary sat in a user path.
 
 ---
 

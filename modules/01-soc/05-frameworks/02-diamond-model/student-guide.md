@@ -97,7 +97,7 @@ Two meta-features exist in the original paper (social-political, technology). Yo
 
 ### Example 3: Capability Strong, Infra Weak (Lead)
 
-**Facts:** HKCU Run `Updater` = Temp `update.exe` (**1.1.4** Ex 2). No network row yet.
+**Facts:** HKCU Run `Updater` = Temp `update.exe` (**1.1.5** Ex 2). No network row yet.
 
 | Vertex | Fill |
 |--------|------|
@@ -107,7 +107,7 @@ Two meta-features exist in the original paper (social-political, technology). Yo
 | Victim | `jlee` / that user’s hive |
 
 **Weakest:** **Infrastructure** (and Adversary).  
-**Next:** host network / Zeek for that time (**1.1.3** / **1.2**) — still not an actor name.
+**Next:** host network / Zeek for that time (**1.1.4** / **1.2**) — still not an actor name.
 
 ---
 
@@ -121,7 +121,7 @@ Two meta-features exist in the original paper (social-political, technology). Yo
 2. For each case, fill **A / C / I / V** (empty allowed) and **circle the weakest**.
 
    - A. GET `/payload/update.exe` on 8080; no process; PCAP has empty UA (**1.4.1** Ex 3).
-   - B. Temp `helpdesk.exe` creates `HKLM\...\Services\HelpdeskSvc` as `jlee` (**1.1.4** Ex 3).
+   - B. Temp `helpdesk.exe` creates `HKLM\...\Services\HelpdeskSvc` as `jlee` (**1.1.5** Ex 3).
    - C. Inbox: `mailfrom` claims `jlee@buildingc.internal` from `203.0.113.88`, invoice subject (**1.2.6** Ex 2).
 
 3. Do not assign ATT&CK IDs (**1.5.1**). Do not pick a Kill Chain stage (**1.5.3**).

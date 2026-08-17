@@ -1,4 +1,4 @@
-# Module 1.1.3 – Network Activity (Endpoint)  
+# Module 1.1.4 – Network Activity (Endpoint)  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.1.3 – Network Activity (Endpoint)  
+**Title:** Module 1.1.4 – Network Activity (Endpoint)  
 **Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
 **Footer:** SOC / Hunter / CTI Training Program
 
@@ -27,7 +27,7 @@ By the end of this module, you will be able to:
 3. Write a SIEM query for *specific* host-network activity
 
 **Mapped Items:**  
-K: 1.1.3.1 | T: 1.1.3.2 | T: 1.1.3.3
+K: 1.1.4.1 | T: 1.1.4.2 | T: 1.1.4.3
 
 **Speaker Notes:**  
 SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
@@ -55,8 +55,8 @@ SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
 
 Sysmon install / “turn on Event 22”  
 Zeek `conn` / `dns` / `ssl` / `uid` / JA3 (**1.2**)  
-Process create of `powershell.exe` (**1.1.1**)  
-File create under Temp (**1.1.2**)  
+Process create of `powershell.exe` (**1.1.2**)  
+File create under Temp (**1.1.3**)  
 “443 means browsing”
 
 **Key Point:** Describe *this* host network row.
@@ -69,7 +69,7 @@ Park deploy and protocol-depth questions on the board.
 ### Slide 5 – Host vs Zeek
 **Title:** Why This Lesson Exists
 
-**1.1.3** — process on the endpoint → IP / port / name  
+**1.1.4** — process on the endpoint → IP / port / name  
 **1.2** — what the sensor saw on the wire
 
 Same dest IP can appear in both. Only this row names `Image` / `InitiatingProcess*`.
@@ -119,7 +119,7 @@ MDE: `InitiatingProcess*` = **who talked**
 **Lead:** `powershell.exe` / `wscript.exe` / Office → 443 or a high port
 
 **Speaker Notes:**  
-Same field family as 1.1.1/1.1.2, different job.
+Same field family as 1.1.2/1.1.3, different job.
 
 ---
 
@@ -157,7 +157,7 @@ Students describe the row before you reveal.
 **Title:** Example 2 – powershell -enc → 443
 
 - MDE `ConnectionSuccess`
-- Parent story is **1.1.1** (different row)
+- Parent story is **1.1.2** (different row)
 - `RemoteUrl` empty
 - Dest `203.0.113.88:443`
 
@@ -234,10 +234,10 @@ Run through answers interactively.
 - IP/port/protocol/direction + initiator; name when logged.
 - Sysmon 3 / 22 ↔ `DeviceNetworkEvents`.
 - 3 = connect. 22 = DNS. Zeek is **1.2**.
-- Next: registry activity (**1.1.4**).
+- Next: registry activity (**1.1.5**).
 
 **Speaker Notes:**  
-Do not open a 1.1.4 registry lab.
+Do not open a 1.1.5 registry lab.
 
 ---
 
@@ -252,6 +252,6 @@ Do not open a 1.1.4 registry lab.
 | Direction | `Initiated` / ActionType |
 | Actor | `Image` / `InitiatingProcess*` |
 
-**Coming next:** Module 1.1.4 – Registry activity
+**Coming next:** Module 1.1.5 – Registry activity
 
 **Footer:** SOC / Hunter / CTI Training Program

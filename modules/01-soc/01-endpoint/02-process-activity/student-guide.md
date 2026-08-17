@@ -1,10 +1,10 @@
-# Module 1.1.1 – Process Activity
+# Module 1.1.2 – Process Activity
 
 **Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.1.1 A / B / C ; 1.1.1.2 2b / 3c / 4c ; 1.1.1.3 2b / 3c / 4c  
-- Hunter: 1.1.1.1 A / B / B ; 1.1.1.2 1a / 2b / 3c ; 1.1.1.3 1a / 2b / 3c  
-- CTI: 1.1.1.1 A / A / A ; 1.1.1.2 1a / 1a / 1a ; 1.1.1.3 1a / 1a / 1a  
+- SOC: 1.1.2.1 A / B / C ; 1.1.2.2 2b / 3c / 4c ; 1.1.2.3 2b / 3c / 4c  
+- Hunter: 1.1.2.1 A / B / B ; 1.1.2.2 1a / 2b / 3c ; 1.1.2.3 1a / 2b / 3c  
+- CTI: 1.1.2.1 A / A / A ; 1.1.2.2 1a / 1a / 1a ; 1.1.2.3 1a / 1a / 1a  
 **Estimated Time:** 25–30 minutes  
 
 ---
@@ -17,15 +17,15 @@ By the end of this module, you will be able to:
 2. Describe what a Sysmon or MDE process event shows, and say what a **specific** SIEM query looks like.
 
 **Mapped Proficiency Items:**
-- K: 1.1.1.1 – Process activity concepts
-- T: 1.1.1.2 – Analyze a process event (Sysmon or MDE) and accurately describe what occurred
-- T: 1.1.1.3 – Create a SIEM query to detect specific process activity
+- K: 1.1.2.1 – Process activity concepts
+- T: 1.1.2.2 – Analyze a process event (Sysmon or MDE) and accurately describe what occurred
+- T: 1.1.2.3 – Create a SIEM query to detect specific process activity
 
 ---
 
 ## 1. Key Concepts
 
-SOC analysts read **host** process rows to see who ran what. This hour is that row. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
+SOC analysts read **host** process rows to see who ran what. **1.1.1** was the map. This hour is the **process** row. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
 
 **Process activity** is endpoint telemetry about a running program: it **started**, it **ended**, or one process **touched** another.
 
@@ -53,7 +53,7 @@ If a field is empty in your tenant, say so. Do not invent it.
 
 **What good looks like:**
 
-- Describe: one sentence — who ran what, from whom, as whom. Create, terminate, or access. Do not jump to file, DNS, or registry (**1.1.2**–**1.1.4**).
+- Describe: one sentence — who ran what, from whom, as whom. Create, terminate, or access. Do not jump to file, DNS, or registry (**1.1.3**–**1.1.5**).
 - Given: `wscript.exe` (Temp `invoice.vbs`) → `powershell.exe -enc …` as `jlee`. **What occurred:** script host launched hidden encoded PowerShell. The hash of `powershell.exe` can still be fine. The parent + command line is the story.
 - Query: names a **specific** pattern (parent + command-line fragment), not “all processes.”
 
@@ -73,13 +73,13 @@ File, host-network, registry, and image-load rows are the next **1.1** lessons.
 
 A process row is who ran what, from whom, as whom. Create, terminate, or access. Command line and parent tell the story. A query names a specific pattern.
 
-**Next:** **1.1.2** File system activity.
+**Next:** **1.1.3** File system activity.
 
 ---
 
 ## 4. Related modules
 
-- 0.3 – How work can move
-- 1.1.2 – File system activity
-- 1.1.3 – Network activity (endpoint)
+- 1.1.1 – Endpoint activity (the map)
+- 1.1.3 – File system activity
+- 1.1.4 – Network activity (endpoint)
 - 1.2 – Zeek

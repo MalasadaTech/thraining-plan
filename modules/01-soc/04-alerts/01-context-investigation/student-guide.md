@@ -168,8 +168,8 @@ Classroom alerts reuse **1.1** / **1.2** / **1.3** stories. They are not automat
 ## 6. References & Further Reading
 
 - Related modules:
-  - 1.1.1 – Process activity
-  - 1.1.3 – Network activity (endpoint)
+  - 1.1.2 – Process activity
+  - 1.1.4 – Network activity (endpoint)
   - 1.2.5 – HTTP engine
   - 1.3.1 – SIGMA rules
   - 1.3.2 – Suricata rules

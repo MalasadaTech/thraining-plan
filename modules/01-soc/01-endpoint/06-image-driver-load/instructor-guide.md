@@ -1,10 +1,10 @@
-# Instructor Guide – Module 1.1.5 – Image and Driver Load Activity
+# Instructor Guide – Module 1.1.6 – Image and Driver Load Activity
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.5.1 A / B / C · 1.1.5.2 2b / 3c / 4c · 1.1.5.3 2b / 3c / 4c  
-- Hunter: 1.1.5.1 A / B / B · 1.1.5.2 1a / 2b / 3c · 1.1.5.3 1a / 2b / 3c  
-- CTI: 1.1.5.1 A / A / A · 1.1.5.2 1a / 1a / 1a · 1.1.5.3 1a / 1a / 1a  
+- SOC: 1.1.6.1 A / B / C · 1.1.6.2 2b / 3c / 4c · 1.1.6.3 2b / 3c / 4c  
+- Hunter: 1.1.6.1 A / B / B · 1.1.6.2 1a / 2b / 3c · 1.1.6.3 1a / 2b / 3c  
+- CTI: 1.1.6.1 A / A / A · 1.1.6.2 1a / 1a / 1a · 1.1.6.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 **Delivery Method:** Instructor-led with hands-on analysis
 
@@ -16,7 +16,7 @@
 Teach analysts to read host image- and driver-load telemetry (Sysmon 6 / 7 and MDE `DeviceImageLoadEvents`), describe what occurred, and write a SIEM query for a specific load pattern.
 
 **Key Teaching Points:**
-- Endpoint load rows, not Zeek (**1.2**), not Sysmon install, not file create (**1.1.2**).
+- Endpoint load rows, not Zeek (**1.2**), not Sysmon install, not file create (**1.1.3**).
 - User-mode image (7 / `DeviceImageLoadEvents`) vs kernel driver (6).
 - Path + hash + signed vs unsigned (where logged).
 - Initiating process is the **loader** on user-mode rows. Event 6 has no user-mode parent.
@@ -46,9 +46,9 @@ Teach analysts to read host image- and driver-load telemetry (Sysmon 6 / 7 and M
 3. Write a SIEM query that finds a *specific* image or driver load pattern — not “all image loads.”
 
 **Mapped Items:**
-- K: 1.1.5.1 – Image and driver load activity concepts
-- T: 1.1.5.2 – Analyze an image or driver load event (Sysmon or MDE)
-- T: 1.1.5.3 – Create a SIEM query to detect specific image or driver load activity
+- K: 1.1.6.1 – Image and driver load activity concepts
+- T: 1.1.6.2 – Analyze an image or driver load event (Sysmon or MDE)
+- T: 1.1.6.3 – Create a SIEM query to detect specific image or driver load activity
 
 ---
 
@@ -139,8 +139,8 @@ Event 6 ≠ Event 7. Temp `.sys` + unsigned. Not BYOVD theater.
 | Sysmon 7 Word → Temp helper.dll | **User-mode image load** | Event 7 |
 | Sysmon 6 Temp helpdesk.sys | **Driver load** | Event 6 |
 | MDE ImageLoaded Word → mso.dll | **User-mode image load** | MDE image load |
-| DeviceFileEvents Temp helper.dll | **Not an image/driver load event** | **1.1.2** |
-| DeviceProcessEvents explorer → WINWORD | **Not an image/driver load event** | **1.1.1** |
+| DeviceFileEvents Temp helper.dll | **Not an image/driver load event** | **1.1.3** |
+| DeviceProcessEvents explorer → WINWORD | **Not an image/driver load event** | **1.1.2** |
 
 **Pseudo-queries (equivalent is fine):**
 
@@ -182,7 +182,7 @@ Fail the card if they only write “DLL sideload,” call Event 6 a DLL, or trea
    **Explanation:** Same names, different job; 6 is not a process row.
 
 4. **No Event 7 / no DeviceImageLoadEvents, only Event 11?**  
-   **Answer:** No. A file create is not a load. Write “image load not logged” and describe the file row as **1.1.2**.  
+   **Answer:** No. A file create is not a load. Write “image load not logged” and describe the file row as **1.1.3**.  
    **Explanation:** Do not invent a load.
 
 5. **Empty Signed?**  
@@ -194,5 +194,5 @@ Fail the card if they only write “DLL sideload,” call Event 6 a DLL, or trea
 ## Additional Instructor Resources
 
 - Local note on whether Event 7 / `DeviceImageLoadEvents` exists in the student tenant
-- Escalation: file → 1.1.2; persistence / BYOVD → 2.6; protocol → 1.2
+- Escalation: file → 1.1.3; persistence / BYOVD → 2.6; protocol → 1.2
 - Next recommended module: Zeek concepts (1.2.1)

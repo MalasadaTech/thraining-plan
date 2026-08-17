@@ -16,7 +16,7 @@
 Teach analysts to read the Zeek `http` log, describe what occurred, write a specific HTTP query, and pivot on `uid`.
 
 **Key Teaching Points:**
-- Sensor HTTP metadata, not host process (**1.1.3**), not body dump, not **1.2.7** files.
+- Sensor HTTP metadata, not host process (**1.1.4**), not body dump, not **1.2.7** files.
 - Method, host, URI (together = URL), User-Agent, status, 5-tuple, `uid`.
 - Empty field → “not logged.” UA is a claim, not an identity. 200 is not benign.
 - Always reinforce the `uid` pivot to `conn`.
@@ -56,7 +56,7 @@ Teach analysts to read the Zeek `http` log, describe what occurred, write a spec
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction & Objectives      | 4 min    | Sensor vs 1.1.3 |
+| Introduction & Objectives      | 4 min    | Sensor vs 1.1.4 |
 | Purpose of the http log        | 6 min    | Metadata, not body |
 | Key Fields                     | 14 min   | a–f; URL = host+uri |
 | Walkthrough Examples           | 14 min   | Students first |
@@ -78,7 +78,7 @@ Teach analysts to read the Zeek `http` log, describe what occurred, write a spec
 - CTI: A / B / B and 1a / 2b / 3c on HTTP (higher than SMTP). Nomenclature plus a simple read. Do not grade them as Hunter 5.
 
 **What to emphasize:**
-- No process name on this row. That is **1.1.3**.
+- No process name on this row. That is **1.1.4**.
 - Do not teach file extract here.
 
 **Question to ask:**  
@@ -134,7 +134,7 @@ Empty UA + `.exe` + 8080 + 200. 404 spray is a *different* uid.
 |------|--------|-----|
 | Zeek `http` GET PDF 200 | **HTTP event** | `http` log |
 | Zeek `ssl` SNI intranet | **Not this log** | **1.2.4** |
-| MDE chrome → :80 | **Not this log** | **1.1.3** |
+| MDE chrome → :80 | **Not this log** | **1.1.4** |
 | Zeek `files` PDF hash | **Not this log** | **1.2.7** |
 
 **Pseudo-queries (equivalent is fine):**
@@ -168,8 +168,8 @@ Copy `uid` from the `http` row. Search `conn` for the same `uid` (duration, byte
 
 ## Knowledge Check – Answer Key
 
-1. **Purpose vs 1.1.3?**  
-   **Answer:** `http` records HTTP request/response metadata the **sensor** saw (method, host, URI, UA, status). **1.1.3** is host-observed connect/DNS and names the **process**.  
+1. **Purpose vs 1.1.4?**  
+   **Answer:** `http` records HTTP request/response metadata the **sensor** saw (method, host, URI, UA, status). **1.1.4** is host-observed connect/DNS and names the **process**.  
    **Explanation:** Wire vs endpoint.
 
 2. **URL fields?**  
@@ -193,5 +193,5 @@ Copy `uid` from the `http` row. Search `conn` for the same `uid` (duration, byte
 ## Additional Instructor Resources
 
 - Local expected intranet hosts / browser UAs if you have a list
-- Escalation: files → 1.2.7; TLS → 1.2.4; host process → 1.1.3; detections → 1.3
+- Escalation: files → 1.2.7; TLS → 1.2.4; host process → 1.1.4; detections → 1.3
 - Next recommended module: 1.2.6 SMTP Engine

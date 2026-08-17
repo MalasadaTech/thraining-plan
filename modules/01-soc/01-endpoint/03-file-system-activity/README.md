@@ -1,6 +1,6 @@
 # File System Activity
 
-**Path:** `modules/01-soc/01-endpoint/02-file-system-activity`  
+**Path:** `modules/01-soc/01-endpoint/03-file-system-activity`  
 **Primary role:** SOC Analyst  
 **Secondary:** Threat Hunter, CTI Analyst  
 **Time:** 60–75 minutes
@@ -9,11 +9,11 @@
 
 | Matrix ID | Type | Item | Outline heading |
 |-----------|------|------|-----------------|
-| 1.1.2.1 | K | File system activity concepts | 1.1.2 a–e |
-| 1.1.2.2 | T | Analyze a file event (Sysmon or MDE) and accurately describe what occurred | 1.1.2.1 task 1 |
-| 1.1.2.3 | T | Create a SIEM query to detect specific file operations | 1.1.2.1 task 2 |
+| 1.1.3.1 | K | File system activity concepts | 1.1.3 a–e |
+| 1.1.3.2 | T | Analyze a file event (Sysmon or MDE) and accurately describe what occurred | 1.1.3.1 task 1 |
+| 1.1.3.3 | T | Create a SIEM query to detect specific file operations | 1.1.3.1 task 2 |
 
-The teaching-unit ID is **1.1.2**. Process activity is **1.1.1**. Host-observed network is **1.1.3**. Registry is **1.1.4**. Image/driver load is **1.1.5**. Zeek is **1.2**. This lesson does not teach Sysmon install or config.
+The teaching-unit ID is **1.1.3**. Process activity is **1.1.2**. Host-observed network is **1.1.4**. Registry is **1.1.5**. Image/driver load is **1.1.6**. Zeek is **1.2**. This lesson does not teach Sysmon install or config.
 
 ## Concepts taught
 

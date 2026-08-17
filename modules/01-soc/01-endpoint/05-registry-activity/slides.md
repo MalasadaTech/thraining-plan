@@ -1,4 +1,4 @@
-# Module 1.1.4 – Registry Activity  
+# Module 1.1.5 – Registry Activity  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.1.4 – Registry Activity  
+**Title:** Module 1.1.5 – Registry Activity  
 **Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
 **Footer:** SOC / Hunter / CTI Training Program
 
@@ -27,7 +27,7 @@ By the end of this module, you will be able to:
 3. Write a SIEM query for *specific* registry operations
 
 **Mapped Items:**  
-K: 1.1.4.1 | T: 1.1.4.2 | T: 1.1.4.3
+K: 1.1.5.1 | T: 1.1.5.2 | T: 1.1.5.3
 
 **Speaker Notes:**  
 SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
@@ -55,7 +55,7 @@ SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
 
 Sysmon install / XML  
 Persistence catalog (Winlogon, IFEO, …) (**2.6.1**)  
-File create of `update.exe` (**1.1.2**)  
+File create of `update.exe` (**1.1.3**)  
 Zeek `conn` (**1.2**)  
 “Every Run write is an incident”
 
@@ -236,10 +236,10 @@ Run through answers interactively.
 - Hive + key → value + initiator; data when present.
 - Sysmon 12 / 13 / 14 ↔ `DeviceRegistryEvents`.
 - Run / Services = example locations. Hunt techniques = **2.6**.
-- Next: image and driver load (**1.1.5**).
+- Next: image and driver load (**1.1.6**).
 
 **Speaker Notes:**  
-Do not open a 1.1.5 image-load lab.
+Do not open a 1.1.6 image-load lab.
 
 ---
 
@@ -254,6 +254,6 @@ Do not open a 1.1.5 image-load lab.
 | Object | `TargetObject` or `RegistryKey` |
 | Actor | `Image` / `InitiatingProcess*` |
 
-**Coming next:** Module 1.1.5 – Image and driver load
+**Coming next:** Module 1.1.6 – Image and driver load
 
 **Footer:** SOC / Hunter / CTI Training Program

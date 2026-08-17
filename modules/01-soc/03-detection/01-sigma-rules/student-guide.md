@@ -64,7 +64,7 @@ A rule without `logsource` + `detection` + `condition` is not a SIGMA detection.
 | Regex | `CommandLine\|re: '(?i)-e(nc\|ncodedcommand)'` | Pattern (use sparingly) |
 | Filter | `filter_admin:` + `condition: selection and not filter_admin` | Exclude known-good |
 
-Field **names** follow the logsource. `Image` / `CommandLine` on `process_creation` are the process row from **1.1.1**. Do not invent a Zeek `uid` on a Windows process rule.
+Field **names** follow the logsource. `Image` / `CommandLine` on `process_creation` are the process row from **1.1.2**. Do not invent a Zeek `uid` on a Windows process rule.
 
 **How SIGMA becomes a SIEM query (outline c):**
 
@@ -108,7 +108,7 @@ falsepositives:
 level: high
 ```
 
-**What it detects:** A **process create** where PowerShell has an encoded command line **and** the parent is `wscript`/`cscript`. Same story as **1.1.1** Example 2.
+**What it detects:** A **process create** where PowerShell has an encoded command line **and** the parent is `wscript`/`cscript`. Same story as **1.1.2** Example 2.
 
 **SIEM shape (not deployed):**  
 `DeviceProcessEvents` / Sysmon 1 → `FileName == powershell.exe` and command line contains `-enc` and `InitiatingProcessFileName` in (`wscript.exe`, `cscript.exe`).
@@ -148,7 +148,7 @@ detection:
 
 **What it detects:** As written, **nothing reliable**. `uri` is an HTTP field (**1.2.5**), not a process-create field. The 1.2.5 beacon was `POST` + PowerShell UA on the **wire**.
 
-**Interpretation:** Lead. Name the mismatch. A correct SIGMA for that *host* story would use process + command line (1.1.1) or wait for **1.3.4** / a network logsource — do not invent a Zeek field on this Windows category. Do not write a Suricata rule here (**1.3.2**).
+**Interpretation:** Lead. Name the mismatch. A correct SIGMA for that *host* story would use process + command line (1.1.2) or wait for **1.3.4** / a network logsource — do not invent a Zeek field on this Windows category. Do not write a Suricata rule here (**1.3.2**).
 
 ---
 
@@ -178,7 +178,7 @@ detection:
   condition: selection
 ```
 
-3. **Modify** Example 2 **or create** a basic rule that detects **script-host or Office** creating `powershell.exe` / `cmd.exe` (reuse **1.1.1**). Include `logsource`, `detection`, `condition`, and one `falsepositives` line.
+3. **Modify** Example 2 **or create** a basic rule that detects **script-host or Office** creating `powershell.exe` / `cmd.exe` (reuse **1.1.2**). Include `logsource`, `detection`, `condition`, and one `falsepositives` line.
 4. In two sentences, translate *your* rule (or Example 1) into a SIEM-style pseudo-query. Do not deploy anything. Do not write Suricata or YARA.
 
 **Expected Outcome:**
@@ -213,7 +213,7 @@ detection:
 
 - SIGMA specification (rule format) — as used in class
 - Related modules:
-  - 1.1.1 – Process activity
+  - 1.1.2 – Process activity
   - 1.3.2 – Suricata rules (next)
   - 1.3.4 – SIEM rules
   - 1.4.1 – Alert context and investigation

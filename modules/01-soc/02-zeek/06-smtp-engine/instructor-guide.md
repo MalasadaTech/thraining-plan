@@ -111,7 +111,7 @@ Teach analysts to read the Zeek `smtp` log, describe the transaction, write a sp
 | Zeek smtp jlee → finance | **SMTP event** | `smtp` log |
 | Zeek http POST beacon | **Not this log** | **1.2.5** |
 | Zeek files SHA256 | **Not this log** | **1.2.7** |
-| MDE outlook → :587 | **Not this log** | **1.1.3** |
+| MDE outlook → :587 | **Not this log** | **1.1.4** |
 
 **Pseudo-queries:**
 

@@ -101,7 +101,7 @@ Output: Timestamp, DeviceName, AccountName, ProcessCommandLine,
         InitiatingProcessCommandLine
 ```
 
-**What it detects:** The **1.1.1** Example 2 create. Mapped from SIGMA, not freehand magic.
+**What it detects:** The **1.1.2** Example 2 create. Mapped from SIGMA, not freehand magic.
 
 **Interpretation:** Expected *as a rule*. Propose this. Do not deploy. Do not open the alert console (**1.4**).
 

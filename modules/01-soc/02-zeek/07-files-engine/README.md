@@ -13,7 +13,7 @@
 | 1.2.7.2 | T | Analyze a Zeek files log and accurately describe what occurred | 1.2.13 |
 | 1.2.7.3 | T | Create a SIEM query to detect specific file transfer activity | 1.2.13 |
 
-The teaching-unit ID is **1.2.7** (matrix). Outline headings `1.2.12` / `1.2.13` are the K/T pair. This is **network-sensor** file transfer, not host file activity (**1.1.2**). Connection linking uses `conn_uids` (and `uid` on the related protocol log).
+The teaching-unit ID is **1.2.7** (matrix). Outline headings `1.2.12` / `1.2.13` are the K/T pair. This is **network-sensor** file transfer, not host file activity (**1.1.3**). Connection linking uses `conn_uids` (and `uid` on the related protocol log).
 
 ## Concepts taught
 

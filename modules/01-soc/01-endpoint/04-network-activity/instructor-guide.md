@@ -1,10 +1,10 @@
-# Instructor Guide – Module 1.1.3 – Network Activity (Endpoint)
+# Instructor Guide – Module 1.1.4 – Network Activity (Endpoint)
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.3.1 A / B / C · 1.1.3.2 2b / 3c / 4c · 1.1.3.3 2b / 3c / 4c  
-- Hunter: 1.1.3.1 A / B / B · 1.1.3.2 1a / 2b / 3c · 1.1.3.3 1a / 2b / 3c  
-- CTI: 1.1.3.1 A / A / A · 1.1.3.2 1a / 1a / 1a · 1.1.3.3 1a / 1a / 1a  
+- SOC: 1.1.4.1 A / B / C · 1.1.4.2 2b / 3c / 4c · 1.1.4.3 2b / 3c / 4c  
+- Hunter: 1.1.4.1 A / B / B · 1.1.4.2 1a / 2b / 3c · 1.1.4.3 1a / 2b / 3c  
+- CTI: 1.1.4.1 A / A / A · 1.1.4.2 1a / 1a / 1a · 1.1.4.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 **Delivery Method:** Instructor-led with hands-on analysis
 
@@ -16,11 +16,11 @@
 Teach analysts to read host-observed network telemetry (Sysmon 3 / 22 and MDE `DeviceNetworkEvents`), describe what occurred, and write a SIEM query for a specific host-network pattern.
 
 **Key Teaching Points:**
-- Endpoint network rows, not Zeek (**1.2**), not Sysmon install, not process/file create (**1.1.1** / **1.1.2**).
+- Endpoint network rows, not Zeek (**1.2**), not Sysmon install, not process/file create (**1.1.2** / **1.1.3**).
 - The initiating process is why this lesson exists next to Zeek.
 - Source/dest IP and port, protocol, direction; domain/URL only when logged.
 - Sysmon 3 = connect. Sysmon 22 = DNS (if in the feed). MDE `DeviceNetworkEvents` carries both shapes when the tenant logs them.
-- Stay out of registry / image-load (1.1.4–1.1.5), persistence how-to (2.6), and protocol deep-dive (1.2).
+- Stay out of registry / image-load (1.1.5–1.1.6), persistence how-to (2.6), and protocol deep-dive (1.2).
 
 **Common Student Challenges:**
 - Treating every outbound 443 as expected (initiator is the story).
@@ -46,9 +46,9 @@ Teach analysts to read host-observed network telemetry (Sysmon 3 / 22 and MDE `D
 3. Write a SIEM query that finds a *specific* host-network pattern — not “all connections.”
 
 **Mapped Items:**
-- K: 1.1.3.1 – Network activity (endpoint) concepts
-- T: 1.1.3.2 – Analyze an endpoint network event (Sysmon or MDE)
-- T: 1.1.3.3 – Create a SIEM query to detect specific endpoint network activity
+- K: 1.1.4.1 – Network activity (endpoint) concepts
+- T: 1.1.4.2 – Analyze an endpoint network event (Sysmon or MDE)
+- T: 1.1.4.3 – Create a SIEM query to detect specific endpoint network activity
 
 ---
 
@@ -138,8 +138,8 @@ Good dest port, bad initiator. Empty URL is a visibility note. Process create is
 | Sysmon 3 Chrome → 443 | **Connect** | Event 3 |
 | Sysmon 22 PowerShell query | **DNS query** | Event 22 |
 | MDE ConnectionSuccess powershell -enc | **Connect** | MDE connect |
-| DeviceProcessEvents ProcessCreated | **Not a host network event** | **1.1.1** |
-| DeviceFileEvents Temp file | **Not a host network event** | **1.1.2** |
+| DeviceProcessEvents ProcessCreated | **Not a host network event** | **1.1.2** |
+| DeviceFileEvents Temp file | **Not a host network event** | **1.1.3** |
 | Zeek `conn` to 443 | **Not a host network event** | **1.2** |
 
 **Pseudo-queries (equivalent is fine):**
@@ -179,7 +179,7 @@ Fail the card if they only write “C2 on 443,” call Event 22 a connect, or ad
 
 2. **Why initiating process vs Zeek?**  
    **Answer:** This row names **which process on the host** opened the socket or issued the query. Zeek (**1.2**) sees the wire and does not give you `Image` / `InitiatingProcess*`.  
-   **Explanation:** That is the point of 1.1.3.
+   **Explanation:** That is the point of 1.1.4.
 
 3. **`Initiated=true`? MDE direction?**  
    **Answer:** Sysmon `Initiated=true` = this process **started** the connection (outbound from the host). On MDE, `ConnectionSuccess` / outbound remote fields show a completed connect the process made; listen / inbound `ActionType` values are the other direction.  
@@ -198,5 +198,5 @@ Fail the card if they only write “C2 on 443,” call Event 22 a connect, or ad
 ## Additional Instructor Resources
 
 - Local expected browser / Office dest names if you have a list
-- Escalation: process → 1.1.1; file → 1.1.2; Zeek → 1.2; persistence → 2.6
-- Next recommended module: Registry activity (1.1.4)
+- Escalation: process → 1.1.2; file → 1.1.3; Zeek → 1.2; persistence → 2.6
+- Next recommended module: Registry activity (1.1.5)

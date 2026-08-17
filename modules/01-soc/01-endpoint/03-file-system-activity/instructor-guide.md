@@ -1,10 +1,10 @@
-# Instructor Guide – Module 1.1.2 – File System Activity
+# Instructor Guide – Module 1.1.3 – File System Activity
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.2.1 A / B / C · 1.1.2.2 2b / 3c / 4c · 1.1.2.3 2b / 3c / 4c  
-- Hunter: 1.1.2.1 A / B / B · 1.1.2.2 1a / 2b / 3c · 1.1.2.3 1a / 2b / 3c  
-- CTI: 1.1.2.1 A / A / A · 1.1.2.2 1a / 1a / 1a · 1.1.2.3 1a / 1a / 1a  
+- SOC: 1.1.3.1 A / B / C · 1.1.3.2 2b / 3c / 4c · 1.1.3.3 2b / 3c / 4c  
+- Hunter: 1.1.3.1 A / B / B · 1.1.3.2 1a / 2b / 3c · 1.1.3.3 1a / 2b / 3c  
+- CTI: 1.1.3.1 A / A / A · 1.1.3.2 1a / 1a / 1a · 1.1.3.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 **Delivery Method:** Instructor-led with hands-on analysis
 
@@ -16,17 +16,17 @@
 Teach analysts to read host file telemetry (Sysmon 11 / 23 / 26 and MDE `DeviceFileEvents`), describe what occurred, and write a SIEM query for a specific file operation.
 
 **Key Teaching Points:**
-- Endpoint file rows, not Zeek (**1.2**), not Sysmon install, not process create (**1.1.1**).
+- Endpoint file rows, not Zeek (**1.2**), not Sysmon install, not process create (**1.1.2**).
 - Create vs rename-move vs delete vs modify vs read (where logged).
 - Sysmon 11 / 23 / 26 cover create and delete. Rename, modify, and read are MDE `ActionType` when present.
 - Path + name + extension; hash when present; initiating process is who touched the file.
-- Stay out of host-network / registry / image-load (1.1.3–1.1.5) and persistence how-to (2.6).
+- Stay out of host-network / registry / image-load (1.1.4–1.1.6) and persistence how-to (2.6).
 
 **Common Student Challenges:**
 - Treating every `.exe` under Temp as an incident (describe first).
 - Calling Event 11 a rename, or Event 26 a create.
 - Writing `DeviceFileEvents` with no filter.
-- Rewriting the file row as a **1.1.1** process-create card.
+- Rewriting the file row as a **1.1.2** process-create card.
 - Asking how to deploy Sysmon or why read is not in the Sysmon feed.
 - Calling AppData `svchost.exe` persistence without a Run-key story.
 
@@ -46,9 +46,9 @@ Teach analysts to read host file telemetry (Sysmon 11 / 23 / 26 and MDE `DeviceF
 3. Write a SIEM query that finds a *specific* file operation — not “all file events.”
 
 **Mapped Items:**
-- K: 1.1.2.1 – File system activity concepts
-- T: 1.1.2.2 – Analyze a file event (Sysmon or MDE)
-- T: 1.1.2.3 – Create a SIEM query to detect specific file operations
+- K: 1.1.3.1 – File system activity concepts
+- T: 1.1.3.2 – Analyze a file event (Sysmon or MDE)
+- T: 1.1.3.3 – Create a SIEM query to detect specific file operations
 
 ---
 
@@ -56,7 +56,7 @@ Teach analysts to read host file telemetry (Sysmon 11 / 23 / 26 and MDE `DeviceF
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction & Objectives      | 4 min    | Host vs Zeek; not install; not 1.1.1 |
+| Introduction & Objectives      | 4 min    | Host vs Zeek; not install; not 1.1.2 |
 | What a file event is           | 8 min    | Five operations; “where logged” |
 | Fields + how logged            | 16 min   | a–e on the board; MDE name map |
 | Walkthrough Examples           | 14 min   | Students describe first |
@@ -140,7 +140,7 @@ Create, not a process start. Hash missing is a visibility note, not a pass.
 | Sysmon 26 wscript deleted `invoice.vbs` | **Delete** | Event 26 |
 | MDE FileCreated Word → Documents `.docx` | **Create** | MDE create |
 | MDE FileRenamed `invoice.pdf.exe` → AppData `svchost.exe` | **Rename-move** | `FileRenamed` |
-| DeviceProcessEvents ProcessCreated wscript → powershell | **Not a file event** | **1.1.1** |
+| DeviceProcessEvents ProcessCreated wscript → powershell | **Not a file event** | **1.1.2** |
 | Zeek `files` or `conn` | **Not a file event** | **1.2** |
 
 **Pseudo-queries (equivalent is fine):**
@@ -186,7 +186,7 @@ Fail the card if they only write “malicious dropper,” call Event 11 a rename
    **Explanation:** One field is not a story.
 
 3. **MDE `InitiatingProcess*` on a file event vs a process event?**  
-   **Answer:** On `DeviceFileEvents` it is **who performed the file operation**. On `DeviceProcessEvents` it is the **parent** of the created process (**1.1.1**).  
+   **Answer:** On `DeviceFileEvents` it is **who performed the file operation**. On `DeviceProcessEvents` it is the **parent** of the created process (**1.1.2**).  
    **Explanation:** Same names, different job.
 
 4. **Event 23 vs 26? What 11 often omits?**  
@@ -202,5 +202,5 @@ Fail the card if they only write “malicious dropper,” call Event 11 a rename
 ## Additional Instructor Resources
 
 - Local expected Word / browser / installer paths if you have a list
-- Escalation: process → 1.1.1; host network → 1.1.3; Zeek → 1.2; persistence → 2.6
-- Next recommended module: Network activity (endpoint) (1.1.3)
+- Escalation: process → 1.1.2; host network → 1.1.4; Zeek → 1.2; persistence → 2.6
+- Next recommended module: Network activity (endpoint) (1.1.4)

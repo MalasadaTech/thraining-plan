@@ -37,7 +37,7 @@ This is **not** mailbox forensics and **not** a full `.eml`. You get protocol me
 |-------------|---------------|
 | Envelope + headers Zeek logged | File hashes of attachments — **1.2.7** |
 | Cleartext or still-parsed SMTP | Detection rules — **1.3** |
-| Sensor SMTP | Host process that spoke on 25/587 — **1.1.3** |
+| Sensor SMTP | Host process that spoke on 25/587 — **1.1.4** |
 
 If subject or message ID is empty, say so. Do not invent it.
 
@@ -185,7 +185,7 @@ msg_id: -
 
 - Zeek smtp.log documentation: https://docs.zeek.org/en/current/scripts/base/protocols/smtp/main.zeek.html
 - Related modules:
-  - 1.1.3 – Network activity (endpoint)
+  - 1.1.4 – Network activity (endpoint)
   - 1.2.2 – Conn engine
   - 1.2.4 – TLS engine
   - 1.2.5 – HTTP engine (previous)

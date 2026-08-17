@@ -1,10 +1,10 @@
-# Module 1.1.5 – Image and Driver Load Activity
+# Module 1.1.6 – Image and Driver Load Activity
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.5.1 A / B / C · 1.1.5.2 2b / 3c / 4c · 1.1.5.3 2b / 3c / 4c  
-- Hunter: 1.1.5.1 A / B / B · 1.1.5.2 1a / 2b / 3c · 1.1.5.3 1a / 2b / 3c  
-- CTI: 1.1.5.1 A / A / A · 1.1.5.2 1a / 1a / 1a · 1.1.5.3 1a / 1a / 1a  
+- SOC: 1.1.6.1 A / B / C · 1.1.6.2 2b / 3c / 4c · 1.1.6.3 2b / 3c / 4c  
+- Hunter: 1.1.6.1 A / B / B · 1.1.6.2 1a / 2b / 3c · 1.1.6.3 1a / 2b / 3c  
+- CTI: 1.1.6.1 A / A / A · 1.1.6.2 1a / 1a / 1a · 1.1.6.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 
 ---
@@ -18,9 +18,9 @@ By the end of this module, you will be able to:
 3. Write a SIEM query that finds a *specific* image or driver load pattern — not “all image loads.”
 
 **Mapped Proficiency Items:**
-- K: 1.1.5.1 – Image and driver load activity concepts
-- T: 1.1.5.2 – Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred
-- T: 1.1.5.3 – Create a SIEM query to detect specific image or driver load activity
+- K: 1.1.6.1 – Image and driver load activity concepts
+- T: 1.1.6.2 – Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred
+- T: 1.1.6.3 – Create a SIEM query to detect specific image or driver load activity
 
 ---
 
@@ -30,13 +30,13 @@ By the end of this module, you will be able to:
 
 **Image and driver load activity** is host telemetry that a **module was mapped into a process** (user-mode image, usually a DLL) or that a **kernel driver** was loaded.
 
-This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**). It is **not** how to install or configure Sysmon. It is **not** a file-create row (**1.1.2**) and **not** a process-create row (**1.1.1**). A DLL can be created in one event and loaded in another.
+This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**). It is **not** how to install or configure Sysmon. It is **not** a file-create row (**1.1.3**) and **not** a process-create row (**1.1.2**). A DLL can be created in one event and loaded in another.
 
 | This lesson | Later / other |
 |-------------|---------------|
 | What was loaded, into whom, signed or not (where logged) | Persistence / BYOVD *how-to* (**2.6**) |
 | Sysmon Event IDs and MDE table names as they appear in a SIEM | Sysmon XML / “should we enable Event 7?” |
-| Path, hash, signature fields on the load row | Registry (**1.1.4**) already taught |
+| Path, hash, signature fields on the load row | Registry (**1.1.5**) already taught |
 
 **Most critical distinction for daily work:**  
 A load event is **this image entered that process (or the kernel)**. A file create of the same `.dll` / `.sys` is a different row.
@@ -78,7 +78,7 @@ Event **7** is noisy. Many tenants log it only for some processes, or not at all
 
 **Initiating process:** On a **7** / MDE image-load row, `Image` / `InitiatingProcess*` is **which process loaded the module**. On Event **6**, describe the driver path and signature; do not invent a user-mode parent.
 
-Stay on the load row. File create of the DLL is **1.1.2**. Persistence and BYOVD methodology are **2.6**.
+Stay on the load row. File create of the DLL is **1.1.3**. Persistence and BYOVD methodology are **2.6**.
 
 ---
 
@@ -100,7 +100,7 @@ Stay on the load row. File create of the DLL is **1.1.2**. Persistence and BYOVD
 
 **What occurred:** Word loaded a signed Office DLL from its own Program Files directory. Path, initiator, hash, and signature agree. Expected.
 
-**Not done:** Did not call it an incident. Did not hunt persistence. Did not rewrite this as a process-create lesson on `WINWORD.EXE` (**1.1.1**).
+**Not done:** Did not call it an incident. Did not hunt persistence. Did not rewrite this as a process-create lesson on `WINWORD.EXE` (**1.1.2**).
 
 ### Example 2: Office Loads Unsigned DLL from Temp (Lead)
 
@@ -118,7 +118,7 @@ Stay on the load row. File create of the DLL is **1.1.2**. Persistence and BYOVD
 
 Compare a file row that is *not* this event:
 
-> Sysmon **11**: `WINWORD.EXE` created `C:\Users\jlee\AppData\Local\Temp\helper.dll`. That is a **file create** (**1.1.2**). This row is the **image load**.
+> Sysmon **11**: `WINWORD.EXE` created `C:\Users\jlee\AppData\Local\Temp\helper.dll`. That is a **file create** (**1.1.3**). This row is the **image load**.
 
 **What occurred:** Word **loaded** an unsigned `helper.dll` from Temp. The file create is a different event. Signature is present and false — not “not logged.”
 
@@ -188,7 +188,7 @@ Compare a user-mode load that is *not* this event:
 - Image/driver load = a module entered a process, or a driver entered the kernel — on the **host**.
 - Read path, hash if present, signed vs unsigned if present, and initiating process (user-mode).
 - Sysmon **6 / 7** and MDE `DeviceImageLoadEvents` are the same story in different shapes. 7 is often missing or sampled.
-- Event 7 is user-mode. Event 6 is a driver. A file create is **1.1.2**.
+- Event 7 is user-mode. Event 6 is a driver. A file create is **1.1.3**.
 - A missing signature field is a visibility note. A signed binary in Temp is still a path lead.
 - This closes unit **1.1**. Protocol deep-dive is **1.2**.
 
@@ -197,10 +197,10 @@ Compare a user-mode load that is *not* this event:
 ## 6. References & Further Reading
 
 - Related modules:
-  - 1.1.1 – Process activity
-  - 1.1.2 – File system activity
-  - 1.1.3 – Network activity (endpoint)
-  - 1.1.4 – Registry activity (previous)
+  - 1.1.2 – Process activity
+  - 1.1.3 – File system activity
+  - 1.1.4 – Network activity (endpoint)
+  - 1.1.5 – Registry activity (previous)
   - 1.2.1 – Zeek concepts (next unit)
   - 2.6.1 – Persistence techniques
 - Local Sysmon / MDE field guide used in class (optional)

@@ -1,6 +1,6 @@
 # Network Activity (Endpoint)
 
-**Path:** `modules/01-soc/01-endpoint/03-network-activity`  
+**Path:** `modules/01-soc/01-endpoint/04-network-activity`  
 **Primary role:** SOC Analyst  
 **Secondary:** Threat Hunter, CTI Analyst  
 **Time:** 60–75 minutes
@@ -9,11 +9,11 @@
 
 | Matrix ID | Type | Item | Outline heading |
 |-----------|------|------|-----------------|
-| 1.1.3.1 | K | Network activity (endpoint) concepts | 1.1.3 a–e |
-| 1.1.3.2 | T | Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred | 1.1.3.1 task 1 |
-| 1.1.3.3 | T | Create a SIEM query to detect specific endpoint network activity | 1.1.3.1 task 2 |
+| 1.1.4.1 | K | Network activity (endpoint) concepts | 1.1.4 a–e |
+| 1.1.4.2 | T | Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred | 1.1.4.1 task 1 |
+| 1.1.4.3 | T | Create a SIEM query to detect specific endpoint network activity | 1.1.4.1 task 2 |
 
-The teaching-unit ID is **1.1.3**. Process activity is **1.1.1**. File system activity is **1.1.2**. Registry is **1.1.4**. Image/driver load is **1.1.5**. Zeek protocol deep-dive is **1.2**. This lesson does not teach Sysmon install or config.
+The teaching-unit ID is **1.1.4**. Process activity is **1.1.2**. File system activity is **1.1.3**. Registry is **1.1.5**. Image/driver load is **1.1.6**. Zeek protocol deep-dive is **1.2**. This lesson does not teach Sysmon install or config.
 
 ## Concepts taught
 

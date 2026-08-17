@@ -63,9 +63,21 @@ d. After the lessons, a companion story retells this same flow as one PRD/DYA in
 
 **1.1 [K/T] Endpoint Logs**
 
-Endpoint telemetry (Sysmon / MDE) vs network-sensor telemetry (Zeek, unit 1.2). Sysmon Event IDs and MDE tables encode the same activities; this unit is not Sysmon installation or configuration. Five activity units. Write only the asked child. `1.1.3` is **host-observed** network (initiating process → IP/port/domain). Protocol deep-dive is `1.2`. Do not merge the two.
+Endpoint telemetry (Sysmon / MDE) vs network-sensor telemetry (Zeek, unit 1.2). Sysmon Event IDs and MDE tables encode the same activities; this unit is not Sysmon installation or configuration. One map hour, then five activity units. Write only the asked child. `1.1.4` is **host-observed** network (initiating process → IP/port/domain). Protocol deep-dive is `1.2`. Do not merge the two.
 
-**1.1.1 [K] Process activity**  
+**1.1.1 [K] Endpoint activity (the map)**  
+Stay in this lesson: name the five kinds of host rows. Do not teach process fields, Sysmon install, or Zeek (**1.2**). One activity type per later child.
+
+a. A host leaves **rows** when something happens on it — a program runs, a file changes, a registry key is written, the host talks, or an image/driver loads  
+b. **Sysmon** and **MDE** are two encodings of those same activities, not two different stories. This course uses both as examples  
+c. You will learn **one activity type at a time**. This hour is only the map  
+d. This is **endpoint** telemetry. Protocol deep-dive is Zeek (**1.2**)  
+e. An alert will point at a host. You need to know **which kind of row** you are looking at before you describe it  
+
+**1.1.1.1 [T] Tasks**  
+1. Given a one-line description, name the activity type: process, file, registry, host-network, or image/driver load  
+
+**1.1.2 [K] Process activity**  
 a. Process create / terminate  
 b. PID, name, command line  
 c. Parent-child (PPID, parent name, parent command line)  
@@ -74,50 +86,50 @@ e. Hashes and original filename (where logged)
 f. Process access (Sysmon Event ID 10) as “who touched whom,” not a separate unit  
 g. How this shows up: Sysmon 1 / 5 / 10; MDE `DeviceProcessEvents` (key fields: `ActionType` — `ProcessCreated`, `OpenProcess`; `InitiatingProcess*`, `ProcessCommandLine`, SHA256). The full `ActionType` list is in the Defender portal schema — do not invent values.  
 
-**1.1.1.1 [T] Process activity tasks**  
+**1.1.2.1 [T] Process activity tasks**  
 1. Analyze a process event (Sysmon or MDE) and accurately describe what occurred  
 2. Create a SIEM query to detect specific process activity  
 
-**1.1.2 [K] File system activity**  
+**1.1.3 [K] File system activity**  
 a. Create / rename-move / delete / modify / read (where logged)  
 b. Path, name, extension  
 c. Hashes  
 d. Initiating process  
 e. How this shows up: Sysmon 11 / 23 / 26; MDE `DeviceFileEvents` (`ActionType`, `FolderPath`, `FileName`, SHA256, `InitiatingProcess*`)  
 
-**1.1.2.1 [T] File system activity tasks**  
+**1.1.3.1 [T] File system activity tasks**  
 1. Analyze a file event (Sysmon or MDE) and accurately describe what occurred  
 2. Create a SIEM query to detect specific file operations  
 
-**1.1.3 [K] Network activity (endpoint)**  
+**1.1.4 [K] Network activity (endpoint)**  
 a. Source / dest IP and port, protocol, direction  
 b. Domain / URL when the endpoint logged them  
 c. Initiating process (this is the point of 1.1 vs Zeek)  
 d. How this shows up: Sysmon 3 (and 22 if DNS is logged here); MDE `DeviceNetworkEvents`  
 e. This is host-observed activity. Protocol deep-dive is 1.2  
 
-**1.1.3.1 [T] Network activity tasks**  
+**1.1.4.1 [T] Network activity tasks**  
 1. Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred  
 2. Create a SIEM query to detect specific endpoint network activity  
 
-**1.1.4 [K] Registry activity**  
+**1.1.5 [K] Registry activity**  
 a. Hives and key → value  
 b. Set / delete / rename  
 c. Common persistence locations (Run, Services) as examples, not a 2.6 dump  
 d. Initiating process  
 e. How this shows up: Sysmon 12 / 13 / 14; MDE `DeviceRegistryEvents`  
 
-**1.1.4.1 [T] Registry activity tasks**  
+**1.1.5.1 [T] Registry activity tasks**  
 1. Analyze a registry event (Sysmon or MDE) and accurately describe what occurred  
 2. Create a SIEM query to detect specific registry operations  
 
-**1.1.5 [K] Image and driver load activity**  
+**1.1.6 [K] Image and driver load activity**  
 a. User-mode image load vs kernel driver load  
 b. Path, hashes, signed vs unsigned (where logged)  
 c. Initiating process  
 d. How this shows up: Sysmon 6 / 7; MDE `DeviceImageLoadEvents`  
 
-**1.1.5.1 [T] Image and driver load tasks**  
+**1.1.6.1 [T] Image and driver load tasks**  
 1. Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred  
 2. Create a SIEM query to detect specific image or driver load activity  
 

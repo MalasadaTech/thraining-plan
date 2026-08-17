@@ -31,7 +31,7 @@ By the end of this module, you will be able to:
 
 Zeek’s HTTP engine writes the **`http` log**. Each row is one HTTP request/response pair that the sensor saw **on the wire** (or reconstructed from the stream).
 
-This is **not** host-observed network (**1.1.3**). A Sysmon 3 / `DeviceNetworkEvents` row names the process. An `http` row names **method, host, URI, User-Agent, and status**. It does not name `chrome.exe`.
+This is **not** host-observed network (**1.1.4**). A Sysmon 3 / `DeviceNetworkEvents` row names the process. An `http` row names **method, host, URI, User-Agent, and status**. It does not name `chrome.exe`.
 
 You usually do **not** get the full body. You get metadata. Body *lengths* may be present; extracted files are **1.2.7**.
 
@@ -173,7 +173,7 @@ Compare a miss that is *not* this row:
 
 ## 4. Knowledge Check
 
-1. What is the primary purpose of the Zeek `http` log? How is it different from host-observed network (**1.1.3**)?
+1. What is the primary purpose of the Zeek `http` log? How is it different from host-observed network (**1.1.4**)?
 2. Which fields do you combine to describe the **URL**?
 3. Why is User-Agent useful, and why is it not an identity?
 4. Why is `status_code` 200 not a verdict?
@@ -196,7 +196,7 @@ Compare a miss that is *not* this row:
 
 - Zeek http.log documentation: https://docs.zeek.org/en/current/scripts/base/protocols/http/main.zeek.html
 - Related modules:
-  - 1.1.3 – Network activity (endpoint)
+  - 1.1.4 – Network activity (endpoint)
   - 1.2.2 – Conn engine
   - 1.2.3 – DNS engine
   - 1.2.4 – TLS engine

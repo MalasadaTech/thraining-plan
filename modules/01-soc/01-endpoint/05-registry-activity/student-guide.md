@@ -1,10 +1,10 @@
-# Module 1.1.4 – Registry Activity
+# Module 1.1.5 – Registry Activity
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.4.1 A / B / C · 1.1.4.2 2b / 3c / 4c · 1.1.4.3 2b / 3c / 4c  
-- Hunter: 1.1.4.1 A / B / B · 1.1.4.2 1a / 2b / 3c · 1.1.4.3 1a / 2b / 3c  
-- CTI: 1.1.4.1 A / A / A · 1.1.4.2 1a / 1a / 1a · 1.1.4.3 1a / 1a / 1a  
+- SOC: 1.1.5.1 A / B / C · 1.1.5.2 2b / 3c / 4c · 1.1.5.3 2b / 3c / 4c  
+- Hunter: 1.1.5.1 A / B / B · 1.1.5.2 1a / 2b / 3c · 1.1.5.3 1a / 2b / 3c  
+- CTI: 1.1.5.1 A / A / A · 1.1.5.2 1a / 1a / 1a · 1.1.5.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 
 ---
@@ -18,9 +18,9 @@ By the end of this module, you will be able to:
 3. Write a SIEM query that finds a *specific* registry operation — not “all registry events.”
 
 **Mapped Proficiency Items:**
-- K: 1.1.4.1 – Registry activity concepts
-- T: 1.1.4.2 – Analyze a registry event (Sysmon or MDE) and accurately describe what occurred
-- T: 1.1.4.3 – Create a SIEM query to detect specific registry operations
+- K: 1.1.5.1 – Registry activity concepts
+- T: 1.1.5.2 – Analyze a registry event (Sysmon or MDE) and accurately describe what occurred
+- T: 1.1.5.3 – Create a SIEM query to detect specific registry operations
 
 ---
 
@@ -30,11 +30,11 @@ By the end of this module, you will be able to:
 
 **Registry activity** is host telemetry about the Windows registry: a **key or value** was **created/set**, **deleted**, or **renamed**.
 
-This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**). It is **not** how to install or configure Sysmon. It is **not** a persistence-technique catalog (**2.6**). Process, file, and host-network rows are **1.1.1–1.1.3**.
+This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**). It is **not** how to install or configure Sysmon. It is **not** a persistence-technique catalog (**2.6**). Process, file, and host-network rows are **1.1.2–1.1.4**.
 
 | This lesson | Later |
 |-------------|-------|
-| What happened to which key/value, by which process | Image / driver load (**1.1.5**) |
+| What happened to which key/value, by which process | Image / driver load (**1.1.6**) |
 | Run and Services as **locations you will see** | Persistence *how-to* and hunt techniques (**2.6.1**) |
 | Sysmon Event IDs and MDE table names as they appear in a SIEM | Sysmon XML / deployment |
 
@@ -114,7 +114,7 @@ Stay on the registry row. Do not inventory every persistence method. That is **2
 
 **What occurred:** Explorer set a user Explorer preference under HKCU. Initiator and key agree. Expected.
 
-**Not done:** Did not call it persistence. Did not hunt Run keys. Did not rewrite this as a process-create lesson (**1.1.1**).
+**Not done:** Did not call it persistence. Did not hunt Run keys. Did not rewrite this as a process-create lesson (**1.1.2**).
 
 ### Example 2: PowerShell Sets HKCU Run (Lead)
 
@@ -130,7 +130,7 @@ Stay on the registry row. Do not inventory every persistence method. That is **2
 
 Compare a file row that is *not* this event:
 
-> Sysmon **11**: `wscript.exe` created `C:\Users\jlee\AppData\Local\Temp\update.exe`. That is a **file create** (**1.1.2**). This row is the **registry set**.
+> Sysmon **11**: `wscript.exe` created `C:\Users\jlee\AppData\Local\Temp\update.exe`. That is a **file create** (**1.1.3**). This row is the **registry set**.
 
 **What occurred:** `powershell.exe` **set** HKCU Run value `Updater` to a Temp `.exe`. Hive is that user’s (`\REGISTRY\USER\...`). The file create is a different event.
 
@@ -201,17 +201,17 @@ Compare a rename that is *not* a create:
 - Sysmon **12 / 13 / 14** and MDE `DeviceRegistryEvents` are the same story in different shapes.
 - Event 13 is SetValue. Event 12 is create/delete of a key. Event 14 is rename.
 - Run and Services are locations you will see. Persistence techniques are **2.6**.
-- Next: image and driver load (**1.1.5**).
+- Next: image and driver load (**1.1.6**).
 
 ---
 
 ## 6. References & Further Reading
 
 - Related modules:
-  - 1.1.1 – Process activity
-  - 1.1.2 – File system activity
-  - 1.1.3 – Network activity (endpoint) (previous)
-  - 1.1.5 – Image and driver load (next)
+  - 1.1.2 – Process activity
+  - 1.1.3 – File system activity
+  - 1.1.4 – Network activity (endpoint) (previous)
+  - 1.1.6 – Image and driver load (next)
   - 2.6.1 – Persistence techniques
 - Local Sysmon / MDE field guide used in class (optional)
 - Sysmon Event ID reference (12 / 13 / 14) and MDE `DeviceRegistryEvents` schema — as deployed, not as a config lesson

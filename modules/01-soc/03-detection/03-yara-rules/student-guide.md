@@ -57,7 +57,7 @@ A rule with strings and no condition (or `condition: true`) is not a useful prop
 
 | This lesson | Other |
 |-------------|-------|
-| Pattern match on bytes | Host file *event* — **1.1.2** |
+| Pattern match on bytes | Host file *event* — **1.1.3** |
 | Scan a file Zeek extracted | `files` log fields — **1.2.7** |
 | Mention of memory scan | Memory-acquisition how-to — out of scope |
 
@@ -204,7 +204,7 @@ rule BuildingC_Train_InvoiceJpgName
 
 - YARA documentation (writing rules) — as used in class
 - Related modules:
-  - 1.1.2 – File system activity
+  - 1.1.3 – File system activity
   - 1.2.7 – Files engine
   - 1.3.2 – Suricata rules (previous)
   - 1.3.4 – SIEM rules (next)

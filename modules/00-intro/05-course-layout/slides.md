@@ -98,7 +98,7 @@ Intro is done. Next hour starts the SOC analyst block.
 ### Slide 8 – Next
 **Title:** Next
 
-**1.1** Process activity
+**1.1.1** Endpoint activity
 
 **Speaker Notes:**  
-That is the start of the SOC analyst block. Host process logs. Not Zeek. Not alerts yet.
+That is the start of the SOC analyst block. First the map of host rows, then process. Not Zeek. Not alerts yet.

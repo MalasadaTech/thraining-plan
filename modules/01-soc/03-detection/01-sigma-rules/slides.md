@@ -136,7 +136,7 @@ Outline c. Map Image → FileName live.
 Useful, explainable. Expected *as a rule*.
 
 **Speaker Notes:**  
-Tie to 1.1.1 Example 2.
+Tie to 1.1.2 Example 2.
 
 ---
 

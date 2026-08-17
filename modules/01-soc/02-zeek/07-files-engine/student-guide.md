@@ -29,13 +29,13 @@ By the end of this module, you will be able to:
 
 ### 1.1 Purpose of the files Log
 
-Zeek’s files engine writes the **`files` log**. Each row is a **file Zeek saw transferred on the network** (HTTP download, SMTP attachment, and similar). It is **not** a host file-create row (**1.1.2** `DeviceFileEvents` / Sysmon 11).
+Zeek’s files engine writes the **`files` log**. Each row is a **file Zeek saw transferred on the network** (HTTP download, SMTP attachment, and similar). It is **not** a host file-create row (**1.1.3** `DeviceFileEvents` / Sysmon 11).
 
 You get a name (when Zeek had one), a MIME type, hashes (when calculated), who sent and who received, and one or more **connection UIDs** that join this file to `conn` and the protocol log that carried it.
 
 | This lesson | Other |
 |-------------|-------|
-| File *on the wire* | File *on the host* — **1.1.2** |
+| File *on the wire* | File *on the host* — **1.1.3** |
 | `conn_uids` → `http` / `smtp` / `ssl` / `conn` | Weird types — **1.2.8** |
 | Hashes Zeek computed | YARA on extracted bytes — **1.3** |
 
@@ -71,7 +71,7 @@ There is often **no** single `uid` column like `http` / `smtp`. The link is **`c
 
 **MIME type:** What Zeek *thinks* the bytes are. A mismatch with the name is a lead, not automatic malware.
 
-**Hashes:** SHA256 / SHA1 / MD5 of the transferred bytes **when Zeek hashed them**. Empty ≠ clean. This is not the host `DeviceFileEvents` SHA256 from **1.1.2** — same idea, different sensor.
+**Hashes:** SHA256 / SHA1 / MD5 of the transferred bytes **when Zeek hashed them**. Empty ≠ clean. This is not the host `DeviceFileEvents` SHA256 from **1.1.3** — same idea, different sensor.
 
 **tx_hosts / rx_hosts:** Source and destination of the *file*, not always identical to a single 5-tuple if Zeek attached the file to more than one connection.
 
@@ -133,7 +133,7 @@ sha256: (not in catalog)
 
 **What occurred:** An SMTP transfer named the file `invoice.jpg` but Zeek’s MIME type is **executable**. Sender is the internet IP from **1.2.6** Example 2. Receiver is the internal mail server.
 
-**Interpretation:** Lead. Name vs MIME mismatch. Pivot `conn_uids` to `smtp` and `conn`. Write hashes if present. Do not call it a host file create (**1.1.2**).
+**Interpretation:** Lead. Name vs MIME mismatch. Pivot `conn_uids` to `smtp` and `conn`. Write hashes if present. Do not call it a host file create (**1.1.3**).
 
 ---
 
@@ -164,7 +164,7 @@ sha256: (not in catalog)
 
 ## 4. Knowledge Check
 
-1. What is the primary purpose of the Zeek `files` log? How is it different from host file activity (**1.1.2**)?
+1. What is the primary purpose of the Zeek `files` log? How is it different from host file activity (**1.1.3**)?
 2. Which fields carry **filename**, **MIME type**, and **hashes**?
 3. What are `tx_hosts` and `rx_hosts`?
 4. How do you join a `files` row to `conn` / `http` / `smtp`? What is `fuid`?
@@ -186,7 +186,7 @@ sha256: (not in catalog)
 
 - Zeek files.log documentation: https://docs.zeek.org/en/current/scripts/base/files/main.zeek.html
 - Related modules:
-  - 1.1.2 – File system activity (host)
+  - 1.1.3 – File system activity (host)
   - 1.2.2 – Conn engine
   - 1.2.5 – HTTP engine
   - 1.2.6 – SMTP engine (previous)

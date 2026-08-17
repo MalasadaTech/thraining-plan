@@ -13,7 +13,7 @@
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Zeek `http` log. Metadata, not body dump. Not 1.1.3 process.
+Zeek `http` log. Metadata, not body dump. Not 1.1.4 process.
 
 ---
 
@@ -53,7 +53,7 @@ Hunter starts at B / 3c. CTI is A / B / B and 1a / 2b / 3c.
 ### Slide 4 – Not This Lesson
 **Title:** Not This Hour
 
-Host process on port 80 (**1.1.3**)  
+Host process on port 80 (**1.1.4**)  
 TLS SNI / JA3 (**1.2.4**)  
 File hash / extract (**1.2.7**)  
 HTTP *body* content  
@@ -217,7 +217,7 @@ Review with the Instructor Guide key.
 ### Slide 15 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Purpose of `http` vs 1.1.3?
+1. Purpose of `http` vs 1.1.4?
 2. Which fields make the URL?
 3. Why User-Agent is not an identity?
 4. Why 200 is not a verdict?

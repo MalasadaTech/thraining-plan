@@ -80,7 +80,7 @@ You may attach a second ID if a second row supports it. Do not stack five IDs on
 
 **Map:** **Execution** / **T1059.001** Command and Scripting Interpreter: PowerShell.  
 **Evidence:** Child is PowerShell with `-enc`.  
-**Neighbor you reject:** Command and Control — this *row* is a process create, not a C2 channel. (A later **1.1.3** / **1.2.5** connect can be mapped separately.)
+**Neighbor you reject:** Command and Control — this *row* is a process create, not a C2 channel. (A later **1.1.4** / **1.2.5** connect can be mapped separately.)
 
 ### Example 2: Wrong Tactic (Lead)
 
@@ -109,8 +109,8 @@ You may attach a second ID if a second row supports it. Do not stack five IDs on
 1. One sentence each for Examples 1–3: tactic, ID, evidence, rejected neighbor.
 2. Map each case. Write **tactic**, **technique or sub-technique (ID + name)**, **cite**, **rejected neighbor**.
 
-   - A. Sysmon 11 / **1.1.2** Ex 2: `wscript.exe` creates `Temp\update.exe`.
-   - B. Sysmon 13: PowerShell sets HKCU `Run\Updater` = Temp `update.exe` (**1.1.4** Ex 2).
+   - A. Sysmon 11 / **1.1.3** Ex 2: `wscript.exe` creates `Temp\update.exe`.
+   - B. Sysmon 13: PowerShell sets HKCU `Run\Updater` = Temp `update.exe` (**1.1.5** Ex 2).
    - C. MDE: `powershell.exe -enc` as **SYSTEM** after a service start (**1.4.4** exercise B).
    - D. Zeek `http` POST `/api/v1/beacon` with PowerShell UA (**1.2.5** Ex 2).
 

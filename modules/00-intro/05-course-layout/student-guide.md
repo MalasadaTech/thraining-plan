@@ -55,12 +55,12 @@ By the end of this module, you will be able to:
 
 SOC, then CTI, then hunting, then detections. Detections before the alert queue. Site-specific later. DYA and PRD are course fiction; the companion story retells this flow as one incident. Name the next hand-off and the product — not the ticket.
 
-**Next:** **1.1** Process activity (start of the SOC analyst block).
+**Next:** **1.1.1** Endpoint activity (start of the SOC analyst block).
 
 ---
 
 ## 4. Related modules
 
 - 0.4 – Where the jobs lightly overlap
-- 1.1 – Process activity
+- 1.1.1 – Endpoint activity (the map)
 - [docs/story-bible.md](../../../docs/story-bible.md) – DYA / PRD names

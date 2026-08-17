@@ -24,7 +24,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-This hour is **where things sit** on the site. How you **download** PCAP is **1.8.2**. Tool URLs are **1.8.3**. Zeek field reading is **1.2**. Host-observed network is **1.1.3**.
+This hour is **where things sit** on the site. How you **download** PCAP is **1.8.2**. Tool URLs are **1.8.3**. Zeek field reading is **1.2**. Host-observed network is **1.1.4**.
 
 **Classroom site card — Harbor (this lesson only, not a live org policy):**
 
@@ -132,6 +132,6 @@ The task is **fact + rejected neighbor**, not “describe the network.”
 - Related modules:
   - 1.7.2 – Changeover report content (previous unit)
   - 1.8.2 – PCAP handling (next)
-  - 1.1.3 – Host-observed network
+  - 1.1.4 – Host-observed network
   - 1.2.2 – Conn engine
 - Local environment / architecture card (optional — substitutes Harbor)

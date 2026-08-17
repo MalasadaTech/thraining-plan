@@ -53,7 +53,7 @@ Attachments are 1.2.7.
 
 Mailbox / `.eml` forensics  
 Attachment SHA256 (**1.2.7**)  
-Host process on 587 (**1.1.3**)  
+Host process on 587 (**1.1.4**)  
 BEC playbook  
 Zeek scripts
 

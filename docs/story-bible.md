@@ -121,10 +121,10 @@ Do not invent a second plot. Extra classroom rows (`helpdesk.exe`, Word → `hel
 
 | Beat (already in “Main incident”) | First teach / plant | First *use* in the flow | Do **not** dump it in |
 |-----------------------------------|---------------------|-------------------------|------------------------|
-| `wscript` → hidden `powershell -enc` on **WS-JLEE** / `jlee` | **1.1.1** process | **1.4** the alert (this is what fired) | — |
-| `invoice.vbs` in Temp (file row, hash) | **1.1.2** file | **1.4.1** investigation; **1.6** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
-| HKCU Run **`Updater`** → `%TEMP%\update.exe` | **1.1.4** registry | **2.x** hunt (more hosts the alert missed) | Not in the first alert. Not required on the leadership notify |
-| Host GET `update.exe` :8080 to PRD domain / `203.0.113.88` | **1.1.3** host-network + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **3.11.3** RFI seed (the domain) | Not all of this in the leadership notify |
+| `wscript` → hidden `powershell -enc` on **WS-JLEE** / `jlee` | **1.1.2** process | **1.4** the alert (this is what fired) | — |
+| `invoice.vbs` in Temp (file row, hash) | **1.1.3** file | **1.4.1** investigation; **1.6** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
+| HKCU Run **`Updater`** → `%TEMP%\update.exe` | **1.1.5** registry | **2.x** hunt (more hosts the alert missed) | Not in the first alert. Not required on the leadership notify |
+| Host GET `update.exe` :8080 to PRD domain / `203.0.113.88` | **1.1.4** host-network + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **3.11.3** RFI seed (the domain) | Not all of this in the leadership notify |
 | Sibling `login-prd.net`, same NS, same A, SOA | **3.5** / **3.6** / **3.8** | **3.x** enrichment; extra infra → **block** (0.3 e) | Not a SOC notify field |
 | Hunt package: look for `Updater` / `update.exe` / more `invoice.vbs` | **2.x** | Hunt product; same package can go to **4.x** DE | Not a rewrite of the SOC ticket |
 | Nomination / tune / new rule | **4.x** | After the hunt or SOC “we keep missing this” | Not invented in 1.1 |

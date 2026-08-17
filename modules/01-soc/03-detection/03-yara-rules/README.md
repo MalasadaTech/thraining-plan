@@ -13,7 +13,7 @@
 | 1.3.3.2 | T | Analyze an existing YARA rule and describe what it detects | 1.3.6 task 1 |
 | 1.3.3.3 | T | Create or modify a basic YARA rule | 1.3.6 task 2 |
 
-The teaching-unit ID is **1.3.3**. Outline headings `1.3.5` / `1.3.6` are the K/T pair. Files-log hashes are **1.2.7**. Host file events are **1.1.2**. SOC create/modify is **1a / 2b / 3c** (propose, do not deploy).
+The teaching-unit ID is **1.3.3**. Outline headings `1.3.5` / `1.3.6` are the K/T pair. Files-log hashes are **1.2.7**. Host file events are **1.1.3**. SOC create/modify is **1a / 2b / 3c** (propose, do not deploy).
 
 ## Concepts taught
 

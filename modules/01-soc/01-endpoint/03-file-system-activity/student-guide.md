@@ -1,10 +1,10 @@
-# Module 1.1.2 – File System Activity
+# Module 1.1.3 – File System Activity
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.2.1 A / B / C · 1.1.2.2 2b / 3c / 4c · 1.1.2.3 2b / 3c / 4c  
-- Hunter: 1.1.2.1 A / B / B · 1.1.2.2 1a / 2b / 3c · 1.1.2.3 1a / 2b / 3c  
-- CTI: 1.1.2.1 A / A / A · 1.1.2.2 1a / 1a / 1a · 1.1.2.3 1a / 1a / 1a  
+- SOC: 1.1.3.1 A / B / C · 1.1.3.2 2b / 3c / 4c · 1.1.3.3 2b / 3c / 4c  
+- Hunter: 1.1.3.1 A / B / B · 1.1.3.2 1a / 2b / 3c · 1.1.3.3 1a / 2b / 3c  
+- CTI: 1.1.3.1 A / A / A · 1.1.3.2 1a / 1a / 1a · 1.1.3.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 
 ---
@@ -18,9 +18,9 @@ By the end of this module, you will be able to:
 3. Write a SIEM query that finds a *specific* file operation — not “all file events.”
 
 **Mapped Proficiency Items:**
-- K: 1.1.2.1 – File system activity concepts
-- T: 1.1.2.2 – Analyze a file event (Sysmon or MDE) and accurately describe what occurred
-- T: 1.1.2.3 – Create a SIEM query to detect specific file operations
+- K: 1.1.3.1 – File system activity concepts
+- T: 1.1.3.2 – Analyze a file event (Sysmon or MDE) and accurately describe what occurred
+- T: 1.1.3.3 – Create a SIEM query to detect specific file operations
 
 ---
 
@@ -30,11 +30,11 @@ By the end of this module, you will be able to:
 
 **File system activity** is host telemetry about a file: it was **created**, **renamed or moved**, **deleted**, **modified**, or **read** (where that action is logged).
 
-This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**), including Zeek’s `files` log. It is **not** how to install or configure Sysmon. Process create / terminate / access is **1.1.1** — a different row.
+This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**), including Zeek’s `files` log. It is **not** how to install or configure Sysmon. Process create / terminate / access is **1.1.2** — a different row.
 
 | This lesson | Later |
 |-------------|-------|
-| What happened to a file, where, by which process | Host network (**1.1.3**), registry (**1.1.4**), image load (**1.1.5**) |
+| What happened to a file, where, by which process | Host network (**1.1.4**), registry (**1.1.5**), image load (**1.1.6**) |
 | Fields on the file event | Persistence *how-to* (**2.6**) |
 | Sysmon Event IDs and MDE table names as they appear in a SIEM | Sysmon XML / deployment |
 
@@ -53,7 +53,7 @@ If a field is empty in your tenant (no hash, no read events), say so. Do not inv
 | **Modify / read** | MDE `FileModified` / `FileRead` **where logged** | Content or timestamp change; a read. Often missing. Not Sysmon 11 / 23 / 26. |
 | **Path / name / extension** | `TargetFilename` (Sysmon); `FolderPath` + `FileName` (MDE) | Path is where. Name can lie. Extension can lie (`.txt`, `invoice.pdf.exe`). |
 | **Hash** | SHA256 (and MD5/SHA1 if present) | Bytes of *this* file, when the event carries them. Empty ≠ clean. |
-| **Initiating process** | Sysmon `Image`; MDE `InitiatingProcess*` | Who performed the file operation. Same field family as **1.1.1**, different job. |
+| **Initiating process** | Sysmon `Image`; MDE `InitiatingProcess*` | Who performed the file operation. Same field family as **1.1.2**, different job. |
 
 **How this shows up (outline e)**
 
@@ -76,7 +76,7 @@ MDE file rows use **initiating** process = who touched the file and **FileName /
 
 **Hashes:** SHA256 is the file bytes when present. Sysmon **11** often has no hash; **23 / 26** and MDE `FileCreated` more often do. A catalogued hash does not make an unexpected initiator + user-writable path “expected.”
 
-**Initiating process:** On a file row, `InitiatingProcess*` / Sysmon `Image` is **who did this to the file**. It is not a process-create parent-child story. Do not turn the file row into a **1.1.1** write-up.
+**Initiating process:** On a file row, `InitiatingProcess*` / Sysmon `Image` is **who did this to the file**. It is not a process-create parent-child story. Do not turn the file row into a **1.1.2** write-up.
 
 **Where logged:** Rename-move, modify, and read are MDE `ActionType` values when the tenant records them. If your Sysmon feed is only 11 / 23 / 26, you will not see those actions there. Write “not logged,” not “did not happen.”
 
@@ -101,7 +101,7 @@ Process creates, host DNS, registry Run keys, and DLL loads are other **1.1** / 
 
 **What occurred:** User `jlee` saved a Word document in Documents. Initiator, path, and name agree. Expected.
 
-**Not done:** Did not call it an incident. Did not hunt persistence. Did not rewrite this as a process-create lesson on `WINWORD.EXE` (**1.1.1**).
+**Not done:** Did not call it an incident. Did not hunt persistence. Did not rewrite this as a process-create lesson on `WINWORD.EXE` (**1.1.2**).
 
 ### Example 2: Script Host → Temp Executable (Lead)
 
@@ -117,7 +117,7 @@ Process creates, host DNS, registry Run keys, and DLL loads are other **1.1** / 
 
 Compare a process row that is *not* this event:
 
-> Sysmon **1**: `wscript.exe` created from `explorer.exe` running `invoice.vbs`. That is a **process create** (**1.1.1**). This row is the **file create**.
+> Sysmon **1**: `wscript.exe` created from `explorer.exe` running `invoice.vbs`. That is a **process create** (**1.1.2**). This row is the **file create**.
 
 **What occurred:** `wscript.exe` created `update.exe` under Temp. No hash on the Event 11. User-writable path. The process create is a different event.
 
@@ -142,7 +142,7 @@ Compare a delete on the same host:
 
 **What occurred:** `powershell.exe` **renamed/moved** a double-extension download to `svchost.exe` under AppData\Roaming. That is not a create and not a delete. The Event **26** is a **delete** of the `.vbs`. Neither row is a process create.
 
-**Interpretation:** Lead. Name `FileRenamed` and the previous vs new path/name. The delete is a separate action. Do not call it persistence without a Run-key / startup story (**1.1.4** / **2.6**). Do not treat `svchost.exe` in AppData as the real `svchost` under `C:\Windows\System32\`.
+**Interpretation:** Lead. Name `FileRenamed` and the previous vs new path/name. The delete is a separate action. Do not call it persistence without a Run-key / startup story (**1.1.5** / **2.6**). Do not treat `svchost.exe` in AppData as the real `svchost` under `C:\Windows\System32\`.
 
 ---
 
@@ -188,19 +188,19 @@ Compare a delete on the same host:
 - File system activity = create, rename-move, delete, modify, or read (where logged) — on the **host**.
 - Read path, name, extension, hash if present, and initiating process (`Image` / `InitiatingProcess*`).
 - Sysmon **11 / 23 / 26** and MDE `DeviceFileEvents` are the same story in different shapes. Rename, modify, and read are MDE `ActionType` values when logged.
-- Event 11 is create, not rename. Event 23/26 are delete. A process create is **1.1.1**.
+- Event 11 is create, not rename. Event 23/26 are delete. A process create is **1.1.2**.
 - A missing hash is a visibility note. A good hash does not make a Temp drop + script-host initiator “expected.”
-- Next: network activity on the endpoint (**1.1.3**). Zeek is **1.2**.
+- Next: network activity on the endpoint (**1.1.4**). Zeek is **1.2**.
 
 ---
 
 ## 6. References & Further Reading
 
 - Related modules:
-  - 1.1.1 – Process activity (previous)
-  - 1.1.3 – Network activity (endpoint) (next)
-  - 1.1.4 – Registry activity
-  - 1.1.5 – Image and driver load
+  - 1.1.2 – Process activity (previous)
+  - 1.1.4 – Network activity (endpoint) (next)
+  - 1.1.5 – Registry activity
+  - 1.1.6 – Image and driver load
   - 1.2.1 – Zeek concepts
 - Local Sysmon / MDE field guide used in class (optional)
 - Sysmon Event ID reference (11 / 23 / 26) and MDE `DeviceFileEvents` schema — as deployed, not as a config lesson

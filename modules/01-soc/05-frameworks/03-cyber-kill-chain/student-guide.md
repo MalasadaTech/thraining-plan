@@ -77,7 +77,7 @@ Do not force every alert into Actions on Objectives because “they must want so
 
 **Stage:** **Delivery** — the payload is being brought to the host.  
 **Not Exploitation:** You have no exploit-trigger row.  
-**Not Installation:** You have not shown a persist or a confirmed foothold file+autorun. (If **1.1.2** also shows `Temp\update.exe` created, you may say Delivery *and* a *second* row is Installation.)
+**Not Installation:** You have not shown a persist or a confirmed foothold file+autorun. (If **1.1.3** also shows `Temp\update.exe` created, you may say Delivery *and* a *second* row is Installation.)
 
 ### Example 2: Installation, Not C2 (Lead)
 

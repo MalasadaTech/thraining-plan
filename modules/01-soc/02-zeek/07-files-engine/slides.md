@@ -13,7 +13,7 @@
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Wire file, not host 1.1.2. Join is conn_uids.
+Wire file, not host 1.1.3. Join is conn_uids.
 
 ---
 
@@ -51,7 +51,7 @@ YARA is 1.3.
 ### Slide 4 – Not This Lesson
 **Title:** Not This Hour
 
-Sysmon 11 / `DeviceFileEvents` (**1.1.2**)  
+Sysmon 11 / `DeviceFileEvents` (**1.1.3**)  
 HTTP URI without the files row (**1.2.5**)  
 YARA (**1.3**)  
 How to enable extract-to-disk  
@@ -88,7 +88,7 @@ Empty hash → “not logged,” not clean.
 Name vs MIME mismatch = lead.
 
 **Speaker Notes:**  
-Same hash-is-bytes rule as 1.1.2, different sensor.
+Same hash-is-bytes rule as 1.1.3, different sensor.
 
 ---
 
@@ -208,7 +208,7 @@ Instructor Guide key.
 ### Slide 15 – Knowledge Check
 **Title:** Knowledge Check
 
-1. `files` vs 1.1.2?
+1. `files` vs 1.1.3?
 2. Filename, MIME, hash fields?
 3. tx_hosts / rx_hosts?
 4. How do you join to `conn`? What is `fuid`?

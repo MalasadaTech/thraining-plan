@@ -23,11 +23,12 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 0.3 | [modules/00-intro/03-how-work-moves](../modules/00-intro/03-how-work-moves/) |
 | 0.4 | [modules/00-intro/04-where-jobs-overlap](../modules/00-intro/04-where-jobs-overlap/) |
 | 0.5 | [modules/00-intro/05-course-layout](../modules/00-intro/05-course-layout/) |
-| 1.1.1 | [modules/01-soc/01-endpoint/01-process-activity](../modules/01-soc/01-endpoint/01-process-activity/) |
-| 1.1.2 | [modules/01-soc/01-endpoint/02-file-system-activity](../modules/01-soc/01-endpoint/02-file-system-activity/) |
-| 1.1.3 | [modules/01-soc/01-endpoint/03-network-activity](../modules/01-soc/01-endpoint/03-network-activity/) |
-| 1.1.4 | [modules/01-soc/01-endpoint/04-registry-activity](../modules/01-soc/01-endpoint/04-registry-activity/) |
-| 1.1.5 | [modules/01-soc/01-endpoint/05-image-driver-load](../modules/01-soc/01-endpoint/05-image-driver-load/) |
+| 1.1.1 | [modules/01-soc/01-endpoint/01-endpoint-activity](../modules/01-soc/01-endpoint/01-endpoint-activity/) |
+| 1.1.2 | [modules/01-soc/01-endpoint/02-process-activity](../modules/01-soc/01-endpoint/02-process-activity/) |
+| 1.1.3 | [modules/01-soc/01-endpoint/03-file-system-activity](../modules/01-soc/01-endpoint/03-file-system-activity/) |
+| 1.1.4 | [modules/01-soc/01-endpoint/04-network-activity](../modules/01-soc/01-endpoint/04-network-activity/) |
+| 1.1.5 | [modules/01-soc/01-endpoint/05-registry-activity](../modules/01-soc/01-endpoint/05-registry-activity/) |
+| 1.1.6 | [modules/01-soc/01-endpoint/06-image-driver-load](../modules/01-soc/01-endpoint/06-image-driver-load/) |
 | 1.2.1 | [modules/01-soc/02-zeek/01-concepts](../modules/01-soc/02-zeek/01-concepts/) |
 | 1.2.2 | [modules/01-soc/02-zeek/02-conn-engine](../modules/01-soc/02-zeek/02-conn-engine/) |
 | 1.2.3 | [modules/01-soc/02-zeek/03-dns-engine](../modules/01-soc/02-zeek/03-dns-engine/) |

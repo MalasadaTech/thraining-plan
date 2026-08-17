@@ -1,10 +1,10 @@
-# Instructor Guide – Module 1.1.4 – Registry Activity
+# Instructor Guide – Module 1.1.5 – Registry Activity
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.4.1 A / B / C · 1.1.4.2 2b / 3c / 4c · 1.1.4.3 2b / 3c / 4c  
-- Hunter: 1.1.4.1 A / B / B · 1.1.4.2 1a / 2b / 3c · 1.1.4.3 1a / 2b / 3c  
-- CTI: 1.1.4.1 A / A / A · 1.1.4.2 1a / 1a / 1a · 1.1.4.3 1a / 1a / 1a  
+- SOC: 1.1.5.1 A / B / C · 1.1.5.2 2b / 3c / 4c · 1.1.5.3 2b / 3c / 4c  
+- Hunter: 1.1.5.1 A / B / B · 1.1.5.2 1a / 2b / 3c · 1.1.5.3 1a / 2b / 3c  
+- CTI: 1.1.5.1 A / A / A · 1.1.5.2 1a / 1a / 1a · 1.1.5.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 **Delivery Method:** Instructor-led with hands-on analysis
 
@@ -16,11 +16,11 @@
 Teach analysts to read host registry telemetry (Sysmon 12 / 13 / 14 and MDE `DeviceRegistryEvents`), describe what occurred, and write a SIEM query for a specific registry operation.
 
 **Key Teaching Points:**
-- Endpoint registry rows, not Zeek (**1.2**), not Sysmon install, not 1.1.1–1.1.3.
+- Endpoint registry rows, not Zeek (**1.2**), not Sysmon install, not 1.1.2–1.1.4.
 - Hive + key → value. Set vs delete vs rename.
 - Run and Services are **example locations**, not a **2.6** dump.
 - Initiating process is who changed the registry.
-- Stay out of image-load (**1.1.5**) and persistence how-to (**2.6**).
+- Stay out of image-load (**1.1.6**) and persistence how-to (**2.6**).
 
 **Common Student Challenges:**
 - Treating every Run write as a closed incident.
@@ -46,9 +46,9 @@ Teach analysts to read host registry telemetry (Sysmon 12 / 13 / 14 and MDE `Dev
 3. Write a SIEM query that finds a *specific* registry operation — not “all registry events.”
 
 **Mapped Items:**
-- K: 1.1.4.1 – Registry activity concepts
-- T: 1.1.4.2 – Analyze a registry event (Sysmon or MDE)
-- T: 1.1.4.3 – Create a SIEM query to detect specific registry operations
+- K: 1.1.5.1 – Registry activity concepts
+- T: 1.1.5.2 – Analyze a registry event (Sysmon or MDE)
+- T: 1.1.5.3 – Create a SIEM query to detect specific registry operations
 
 ---
 
@@ -95,7 +95,7 @@ Teach analysts to read host registry telemetry (Sysmon 12 / 13 / 14 and MDE `Dev
 
 **What to emphasize:**
 - A Run value pointing at Temp is a **described lead**, not a 2.6 sign-off.
-- Image load is **1.1.5**. Park it.
+- Image load is **1.1.6**. Park it.
 
 **Question to ask:**  
 “If I only give you the string `Run`, do you have a story yet?”
@@ -139,7 +139,7 @@ CreateKey ≠ SetValue. Rename is Event 14. Services is an example location. Not
 | Sysmon 12 helpdesk Services key | **Create** | Event 12 CreateKey |
 | Sysmon 14 RenameValue Run\Updater → OneDrive | **Rename** | Event 14 |
 | MDE RegistryValueSet Explorer preference | **Set** | MDE set |
-| DeviceFileEvents Temp `update.exe` | **Not a registry event** | **1.1.2** |
+| DeviceFileEvents Temp `update.exe` | **Not a registry event** | **1.1.3** |
 | Zeek `conn` 443 | **Not a registry event** | **1.2** |
 
 If a student marks Event 12 as “delete,” correct them: 12 is create **or** delete; this row is `CreateKey`.
@@ -184,7 +184,7 @@ Fail the card if they only write “persistence,” call Event 13 a rename, or l
 
 3. **MDE `InitiatingProcess*` on a registry event?**  
    **Answer:** **Who performed the registry operation.** The object is `RegistryKey` / `RegistryValueName` / data.  
-   **Explanation:** Same names as 1.1.1–1.1.3, different job.
+   **Explanation:** Same names as 1.1.2–1.1.4, different job.
 
 4. **Why Run / Services as examples?**  
    **Answer:** They are locations that often appear on important rows. This lesson is how to **read the event**. Persistence techniques and how to hunt them are **2.6.1**.  
@@ -199,5 +199,5 @@ Fail the card if they only write “persistence,” call Event 13 a rename, or l
 ## Additional Instructor Resources
 
 - Local expected installer / `msiexec` service-key patterns if you have a list
-- Escalation: file → 1.1.2; host network → 1.1.3; persistence hunt → 2.6.1
-- Next recommended module: Image and driver load (1.1.5)
+- Escalation: file → 1.1.3; host network → 1.1.4; persistence hunt → 2.6.1
+- Next recommended module: Image and driver load (1.1.6)

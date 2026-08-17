@@ -145,7 +145,7 @@ Infrastructure: **empty**.
 Weakest: Infrastructure (or Adversary).
 
 **Speaker Notes:**  
-Next: 1.1.3 / 1.2, not a name.
+Next: 1.1.4 / 1.2, not a name.
 
 ---
 

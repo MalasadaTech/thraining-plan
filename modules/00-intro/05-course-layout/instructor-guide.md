@@ -20,7 +20,7 @@ Name the order of the rest of the course, put DYA and PRD back on the board, and
 
 - What this hour is for: The map of the rest of the course, plus one look at the hand-off task. DYA and PRD get named again so they stay the course story, not a name from hour one.
 - How it hooks to the hour before: 0.4 was same evidence, different product, and two hats.
-- How it hooks to the hour after: the SOC analyst block starts (process activity).
+- How it hooks to the hour after: the SOC analyst block starts (endpoint activity map, then process rows).
 - Why we are doing it this way: You wanted PRD and DYA highlighted again. You also wanted detections before alerts, and the later story to be this same flow as one incident.
 - What we are *not* doing this hour: Writing the companion story. Telling the PRD plot. Inventing tickets. No lab. Not teaching 1.1.
 - Extra step: none.
@@ -89,5 +89,5 @@ For 0.5.1, walk the two “given” lines in the student guide. Stop. If they in
 
 ## Additional Instructor Resources
 
-- Next: 1.1 Process activity
+- Next: 1.1.1 Endpoint activity (the map)
 - [docs/story-bible.md](../../../docs/story-bible.md) — names only; do not read the plot this hour

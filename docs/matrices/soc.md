@@ -29,47 +29,54 @@ Shared intro. Same idea on the hunter, CTI, and DE sheets. Not site policy.
 
 ## 1.1 Endpoint Logs
 
-Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive is 1.2.
+Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive is 1.2. Map hour is 1.1.1; activity units are 1.1.2–1.1.6.
 
-### 1.1.1 Process activity
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.1.1.1 | Process activity concepts | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level analyzes and draws conclusions. |
-| 1.1.1.2 | Analyze a process event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | 3-level can do most of the task with guidance. 5-level is competent. 7-level can train others. |
-| 1.1.1.3 | Create a SIEM query to detect specific process activity | T | 2b | 3c | 4c | Same progression as analysis. |
-
-### 1.1.2 File system activity
+### 1.1.1 Endpoint activity (the map)
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.1.2.1 | File system activity concepts | K | A | B | C | Same knowledge progression as Process activity. |
-| 1.1.2.2 | Analyze a file event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as process analysis. |
-| 1.1.2.3 | Create a SIEM query to detect specific file operations | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
+| 1.1.1.1 | Endpoint activity (the map) | K | A | B | B | Map hour. Facts at 3. Principles at 5/7. Not an analysis item. |
+| 1.1.1.2 | Given a one-line description, name the activity type | T | 1a | 2b | 2b | Name the kind of row. Do not describe the event. No 4d. |
 
-### 1.1.3 Network activity (endpoint)
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.1.3.1 | Network activity (endpoint) concepts | K | A | B | C | Host-observed connect/DNS. Zeek protocol depth is 1.2. |
-| 1.1.3.2 | Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as previous analysis tasks. |
-| 1.1.3.3 | Create a SIEM query to detect specific endpoint network activity | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
-
-### 1.1.4 Registry activity
+### 1.1.2 Process activity
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.1.4.1 | Registry activity concepts | K | A | B | C | Same knowledge progression. Persistence locations are examples; hunt techniques are 2.6. |
-| 1.1.4.2 | Analyze a registry event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as previous analysis tasks. |
-| 1.1.4.3 | Create a SIEM query to detect specific registry operations | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
+| 1.1.2.1 | Process activity concepts | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level analyzes and draws conclusions. |
+| 1.1.2.2 | Analyze a process event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | 3-level can do most of the task with guidance. 5-level is competent. 7-level can train others. |
+| 1.1.2.3 | Create a SIEM query to detect specific process activity | T | 2b | 3c | 4c | Same progression as analysis. |
 
-### 1.1.5 Image and driver load activity
+### 1.1.3 File system activity
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.1.5.1 | Image and driver load activity concepts | K | A | B | C | Same knowledge progression. Sysmon 6/7; MDE DeviceImageLoadEvents. |
-| 1.1.5.2 | Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as previous analysis tasks. |
-| 1.1.5.3 | Create a SIEM query to detect specific image or driver load activity | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
+| 1.1.3.1 | File system activity concepts | K | A | B | C | Same knowledge progression as Process activity. |
+| 1.1.3.2 | Analyze a file event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as process analysis. |
+| 1.1.3.3 | Create a SIEM query to detect specific file operations | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
+
+### 1.1.4 Network activity (endpoint)
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.1.4.1 | Network activity (endpoint) concepts | K | A | B | C | Host-observed connect/DNS. Zeek protocol depth is 1.2. |
+| 1.1.4.2 | Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as previous analysis tasks. |
+| 1.1.4.3 | Create a SIEM query to detect specific endpoint network activity | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
+
+### 1.1.5 Registry activity
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.1.5.1 | Registry activity concepts | K | A | B | C | Same knowledge progression. Persistence locations are examples; hunt techniques are 2.6. |
+| 1.1.5.2 | Analyze a registry event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as previous analysis tasks. |
+| 1.1.5.3 | Create a SIEM query to detect specific registry operations | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
+
+### 1.1.6 Image and driver load activity
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.1.6.1 | Image and driver load activity concepts | K | A | B | C | Same knowledge progression. Sysmon 6/7; MDE DeviceImageLoadEvents. |
+| 1.1.6.2 | Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as previous analysis tasks. |
+| 1.1.6.3 | Create a SIEM query to detect specific image or driver load activity | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
 
 ---
 

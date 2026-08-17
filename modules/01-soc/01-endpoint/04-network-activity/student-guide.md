@@ -1,10 +1,10 @@
-# Module 1.1.3 – Network Activity (Endpoint)
+# Module 1.1.4 – Network Activity (Endpoint)
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.1.3.1 A / B / C · 1.1.3.2 2b / 3c / 4c · 1.1.3.3 2b / 3c / 4c  
-- Hunter: 1.1.3.1 A / B / B · 1.1.3.2 1a / 2b / 3c · 1.1.3.3 1a / 2b / 3c  
-- CTI: 1.1.3.1 A / A / A · 1.1.3.2 1a / 1a / 1a · 1.1.3.3 1a / 1a / 1a  
+- SOC: 1.1.4.1 A / B / C · 1.1.4.2 2b / 3c / 4c · 1.1.4.3 2b / 3c / 4c  
+- Hunter: 1.1.4.1 A / B / B · 1.1.4.2 1a / 2b / 3c · 1.1.4.3 1a / 2b / 3c  
+- CTI: 1.1.4.1 A / A / A · 1.1.4.2 1a / 1a / 1a · 1.1.4.3 1a / 1a / 1a  
 **Estimated Time:** 60–75 minutes  
 
 ---
@@ -18,9 +18,9 @@ By the end of this module, you will be able to:
 3. Write a SIEM query that finds a *specific* host-network pattern — not “all connections.”
 
 **Mapped Proficiency Items:**
-- K: 1.1.3.1 – Network activity (endpoint) concepts
-- T: 1.1.3.2 – Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred
-- T: 1.1.3.3 – Create a SIEM query to detect specific endpoint network activity
+- K: 1.1.4.1 – Network activity (endpoint) concepts
+- T: 1.1.4.2 – Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred
+- T: 1.1.4.3 – Create a SIEM query to detect specific endpoint network activity
 
 ---
 
@@ -30,16 +30,16 @@ By the end of this module, you will be able to:
 
 **Network activity (endpoint)** is host telemetry that a **process on this device** connected (or tried to) or issued a **DNS query** (when that is logged here).
 
-This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**). It is **not** how to install or configure Sysmon. Process create is **1.1.1**. File create is **1.1.2**. Those are different rows.
+This unit is **endpoint** telemetry (Sysmon / Microsoft Defender for Endpoint). It is **not** Zeek (**1.2**). It is **not** how to install or configure Sysmon. Process create is **1.1.2**. File create is **1.1.3**. Those are different rows.
 
 | This lesson | Later |
 |-------------|-------|
 | Which process talked to which IP/port (or queried which name) | Protocol fields, `uid`, JA3, TLS/HTTP bodies (**1.2**) |
-| Fields on the host network event | Registry (**1.1.4**), image load (**1.1.5**) |
+| Fields on the host network event | Registry (**1.1.5**), image load (**1.1.6**) |
 | Sysmon Event IDs and MDE table names as they appear in a SIEM | Sysmon XML / deployment |
 
 **Most critical distinction for daily work:**  
-The point of **1.1.3** vs **1.2** is the **initiating process**. Zeek sees the wire. This row sees **who on the host** opened the socket or asked DNS.
+The point of **1.1.4** vs **1.2** is the **initiating process**. Zeek sees the wire. This row sees **who on the host** opened the socket or asked DNS.
 
 If a field is empty in your tenant (no hostname, no URL, no Event 22), say so. Do not invent it.
 
@@ -77,7 +77,7 @@ This is **host-observed** activity. Protocol deep-dive — `conn` / `dns` / `ssl
 
 **Initiating process:** On this row, `InitiatingProcess*` / `Image` is **who talked**. It is not a file create and not a process-create parent. A Zeek `conn` row will not give you this field.
 
-Stay on the host network row. File drops are **1.1.2**. Registry Run keys are **1.1.4**. Zeek is **1.2**.
+Stay on the host network row. File drops are **1.1.3**. Registry Run keys are **1.1.5**. Zeek is **1.2**.
 
 ---
 
@@ -99,7 +99,7 @@ Stay on the host network row. File drops are **1.1.2**. Registry Run keys are **
 
 **What occurred:** Chrome on `jlee`’s workstation started an outbound TCP/443 connection to an internal office CDN name. Initiator, direction, and dest agree. Expected.
 
-**Not done:** Did not call it an incident. Did not open a Zeek `ssl` lesson on the certificate (**1.2.4**). Did not rewrite this as a process-create card (**1.1.1**).
+**Not done:** Did not call it an incident. Did not open a Zeek `ssl` lesson on the certificate (**1.2.4**). Did not rewrite this as a process-create card (**1.1.2**).
 
 ### Example 2: Encoded PowerShell → Outbound 443 (Lead)
 
@@ -119,7 +119,7 @@ Stay on the host network row. File drops are **1.1.2**. Registry Run keys are **
 
 Compare a process row that is *not* this event:
 
-> MDE `DeviceProcessEvents` `ProcessCreated`: `wscript.exe` → this `powershell.exe -enc …`. That is a **process create** (**1.1.1**). This row is the **connection**.
+> MDE `DeviceProcessEvents` `ProcessCreated`: `wscript.exe` → this `powershell.exe -enc …`. That is a **process create** (**1.1.2**). This row is the **connection**.
 
 **What occurred:** Hidden, encoded PowerShell **successfully connected** outbound TCP/443 to `203.0.113.88`. No `RemoteUrl`. The process create is a different event.
 
@@ -192,17 +192,17 @@ Compare a Zeek row that is *not* this event:
 - Sysmon **3 / 22** and MDE `DeviceNetworkEvents` are the same story in different shapes. 22 is present only if logged.
 - Event 3 is a connect. Event 22 is a DNS query. A Zeek `conn` / `dns` row is **1.2** and has no process.
 - A missing name is a visibility note. An expected port (443) does not make an unexpected initiator “expected.”
-- Next: registry activity (**1.1.4**). Zeek is **1.2**.
+- Next: registry activity (**1.1.5**). Zeek is **1.2**.
 
 ---
 
 ## 6. References & Further Reading
 
 - Related modules:
-  - 1.1.1 – Process activity
-  - 1.1.2 – File system activity (previous)
-  - 1.1.4 – Registry activity (next)
-  - 1.1.5 – Image and driver load
+  - 1.1.2 – Process activity
+  - 1.1.3 – File system activity (previous)
+  - 1.1.5 – Registry activity (next)
+  - 1.1.6 – Image and driver load
   - 1.2.1 – Zeek concepts
   - 1.2.2 – Conn engine
   - 1.2.3 – DNS engine

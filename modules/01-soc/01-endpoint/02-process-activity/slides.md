@@ -1,4 +1,4 @@
-# Module 1.1.1 – Process Activity  
+# Module 1.1.2 – Process Activity  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.1.1 – Process Activity  
+**Title:** Module 1.1.2 – Process Activity  
 **Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
@@ -108,7 +108,7 @@ Create, terminate, or access.
 Command line and parent tell the story.  
 A query is specific.
 
-**Next:** **1.1.2** File system activity
+**Next:** **1.1.3** File system activity
 
 **Speaker Notes:**  
 That hour is the file row on the same host telemetry. Not this process row.

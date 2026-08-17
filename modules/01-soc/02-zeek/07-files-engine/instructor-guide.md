@@ -16,7 +16,7 @@
 Teach analysts to read the Zeek `files` log, describe a network file transfer, write a specific query, and pivot with `conn_uids`.
 
 **Key Teaching Points:**
-- Wire file, not host **1.1.2**.
+- Wire file, not host **1.1.3**.
 - filename, MIME, hashes (where calculated), tx/rx hosts, `source`.
 - Join is **`conn_uids`**, not a `uid` column. `fuid` is the file id.
 - Stay out of YARA (**1.3**) and extract-to-disk admin.
@@ -112,7 +112,7 @@ Reuse uids from HTTP/SMTP examples so the pivot is tangible.
 | Item | Answer | Why |
 |------|--------|-----|
 | Zeek files PDF | **files-log event** | `files` |
-| Sysmon 11 Temp update.exe | **Not this log** | **1.1.2** |
+| Sysmon 11 Temp update.exe | **Not this log** | **1.1.3** |
 | Zeek http GET update.exe | **Not this log** | **1.2.5** — join via conn_uids |
 | Zeek smtp invoice subject | **Not this log** | **1.2.6** |
 
@@ -141,8 +141,8 @@ Watchlisted-hash variant is also fine: `sha256 == "<watchlist>"`.
 
 ## Knowledge Check – Answer Key
 
-1. **Purpose vs 1.1.2?**  
-   **Answer:** `files` is a file Zeek saw **transferred on the network**. **1.1.2** is a file operation **on the host** (Sysmon / MDE).  
+1. **Purpose vs 1.1.3?**  
+   **Answer:** `files` is a file Zeek saw **transferred on the network**. **1.1.3** is a file operation **on the host** (Sysmon / MDE).  
    **Explanation:** Sensor vs endpoint.
 
 2. **Name, MIME, hashes?**  

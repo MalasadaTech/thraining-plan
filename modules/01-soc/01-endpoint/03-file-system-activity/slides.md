@@ -1,4 +1,4 @@
-# Module 1.1.2 – File System Activity  
+# Module 1.1.3 – File System Activity  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
@@ -8,12 +8,12 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.1.2 – File System Activity  
+**Title:** Module 1.1.3 – File System Activity  
 **Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Host file telemetry. Sysmon 11 / 23 / 26 and MDE DeviceFileEvents. Not install. Not Zeek. Not 1.1.1.
+Host file telemetry. Sysmon 11 / 23 / 26 and MDE DeviceFileEvents. Not install. Not Zeek. Not 1.1.2.
 
 ---
 
@@ -27,7 +27,7 @@ By the end of this module, you will be able to:
 3. Write a SIEM query for *specific* file operations
 
 **Mapped Items:**  
-K: 1.1.2.1 | T: 1.1.2.2 | T: 1.1.2.3
+K: 1.1.3.1 | T: 1.1.3.2 | T: 1.1.3.3
 
 **Speaker Notes:**  
 SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
@@ -45,7 +45,7 @@ SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
 - Knowledge check
 
 **Speaker Notes:**  
-1.1.1 process and 1.2 Zeek are other rows. Stay on the file row.
+1.1.2 process and 1.2 Zeek are other rows. Stay on the file row.
 
 ---
 
@@ -53,9 +53,9 @@ SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
 **Title:** Not This Hour
 
 Sysmon install / XML  
-Process create of `wscript.exe` (**1.1.1**)  
+Process create of `wscript.exe` (**1.1.2**)  
 Zeek `files` / `conn` (**1.2**)  
-Registry Run keys (**1.1.4** / **2.6**)  
+Registry Run keys (**1.1.5** / **2.6**)  
 “Every Temp `.exe` is an incident”
 
 **Key Point:** Describe *this* file row.
@@ -107,7 +107,7 @@ Empty field → write “not logged.” Do not invent.
 A known hash does not clear a bad path + initiator.
 
 **Speaker Notes:**  
-Same rule as 1.1.1: hash is bytes, not a verdict.
+Same rule as 1.1.2: hash is bytes, not a verdict.
 
 ---
 
@@ -117,7 +117,7 @@ Same rule as 1.1.1: hash is bytes, not a verdict.
 Sysmon: `Image`  
 MDE: `InitiatingProcess*` = **actor of the file operation**
 
-**Not** the parent of a child process (**1.1.1**). Same names, different job.
+**Not** the parent of a child process (**1.1.2**). Same names, different job.
 
 **Expected:** `WINWORD.EXE` → Documents `.docx`  
 **Lead:** `wscript.exe` / Office / `powershell.exe` → Temp `.exe`
@@ -185,7 +185,7 @@ Force: missing hash ≠ clean. Event 11 ≠ process create.
 Rename-move lead. Delete is a second action. Not a create of `svchost`.
 
 **Speaker Notes:**  
-Park 1.1.4 / 2.6 unless they invent a Run key.
+Park 1.1.5 / 2.6 unless they invent a Run key.
 
 ---
 
@@ -241,10 +241,10 @@ Run through answers interactively.
 - Path + name + extension + initiator; hash when present.
 - Sysmon 11 / 23 / 26 ↔ `DeviceFileEvents`.
 - 11 = create. 23/26 = delete. Rename is MDE.
-- Next: host-observed network (**1.1.3**).
+- Next: host-observed network (**1.1.4**).
 
 **Speaker Notes:**  
-Do not open a 1.1.3 network lab.
+Do not open a 1.1.4 network lab.
 
 ---
 
@@ -259,6 +259,6 @@ Do not open a 1.1.3 network lab.
 | Actor (MDE) | `InitiatingProcess*` |
 | Object | `FolderPath` + `FileName` |
 
-**Coming next:** Module 1.1.3 – Network activity (endpoint)
+**Coming next:** Module 1.1.4 – Network activity (endpoint)
 
 **Footer:** SOC / Hunter / CTI Training Program

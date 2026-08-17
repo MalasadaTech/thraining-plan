@@ -10,7 +10,8 @@ Do these first (course order and story):
 - [x] Write 0.4 Where the jobs lightly overlap (after 0.3 is reviewed)
 - [x] Write 0.5 How this course is laid out (after 0.4 is reviewed; DYA / PRD highlighted)
 - [ ] Teach in this order (lesson IDs can stay as they are): intro → SOC analyst → CTI → hunting → detection engineers
-- [x] Revise 1.1.1 Process activity (first 1.x review; 0/4 voice; no lab)
+- [x] Revise 1.1.2 Process activity (first 1.x review; 0/4 voice; no lab)
+- [x] Add 1.1.1 Endpoint activity map hour (bump process–image to 1.1.2–1.1.6)
 - [ ] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
 - [x] Add a detection-engineers section after the threat hunters section (outline 4.x; matrix/lessons later)
 - [x] Write 4.x stay-in-lesson notes in generate-module.md
