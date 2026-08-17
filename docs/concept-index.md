@@ -1100,6 +1100,56 @@ Also: smaller shop, one person two jobs, products stay clear
 
 See also: [the product is different](#the-product-is-different), [jobs in one sentence](#jobs-in-one-sentence)
 
+### how this course is laid out
+
+Also: SOC then CTI then hunting then detection engineers
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+
+See also: [detections before the alert queue](#detections-before-the-alert-queue), [site-specific comes later](#site-specific-comes-later)
+
+### detections before the alert queue
+
+Also: learn what detections are first, 1.3 before 1.4
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+
+See also: [how this course is laid out](#how-this-course-is-laid-out)
+
+### site-specific comes later
+
+Also: how we do it here differs by shop
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+
+See also: [how this course is laid out](#how-this-course-is-laid-out)
+
+### PRD / DYA companion story
+
+Also: one PRD DYA incident after the lessons, same flow
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+
+See also: [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction), [how work can move from an alert](#how-work-can-move-from-an-alert)
+
+### name the next hand-off and whose product it is
+
+Also: 0.5.1, not how the site files the ticket
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+
+See also: [the product is different](#the-product-is-different), [how work can move from an alert](#how-work-can-move-from-an-alert)
+
 ### what a SOC is
 
 Also: Security Operations Center, watch and start the response
@@ -1127,8 +1177,9 @@ Also: Dixon Yamada and Associates, Pink River Dolphin, not site policy
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
+| Used | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
 
-See also: [what a SOC is](#what-a-soc-is)
+See also: [what a SOC is](#what-a-soc-is), [PRD / DYA companion story](#prd--dya-companion-story)
 
 ### what an IOC is versus a TTP
 

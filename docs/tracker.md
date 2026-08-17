@@ -22,6 +22,7 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 0.2 | [modules/00-intro/02-jobs-in-one-sentence](../modules/00-intro/02-jobs-in-one-sentence/) |
 | 0.3 | [modules/00-intro/03-how-work-moves](../modules/00-intro/03-how-work-moves/) |
 | 0.4 | [modules/00-intro/04-where-jobs-overlap](../modules/00-intro/04-where-jobs-overlap/) |
+| 0.5 | [modules/00-intro/05-course-layout](../modules/00-intro/05-course-layout/) |
 | 1.1.1 | [modules/01-soc/01-endpoint/01-process-activity](../modules/01-soc/01-endpoint/01-process-activity/) |
 | 1.1.2 | [modules/01-soc/01-endpoint/02-file-system-activity](../modules/01-soc/01-endpoint/02-file-system-activity/) |
 | 1.1.3 | [modules/01-soc/01-endpoint/03-network-activity](../modules/01-soc/01-endpoint/03-network-activity/) |
