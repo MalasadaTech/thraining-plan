@@ -1189,6 +1189,7 @@ Also: new change retire deploy, the set of detections
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
+| Used | [4.2 Making a detection sound and meeting shop requirements](../modules/04-de/02-sound-and-shop-requirements/) | DE, SOC, Hunter, CTI |
 
 See also: [nominations need not be perfect](#nominations-need-not-be-perfect), [a block is not a DE deploy](#a-block-is-not-a-de-deploy)
 
@@ -1231,6 +1232,46 @@ Also: 4.1.1, reject rough is not DE, reject block as deploy
 | Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
 
 See also: [what DE owns](#what-de-owns), [nominations need not be perfect](#nominations-need-not-be-perfect)
+
+### sound (fires / must not fire)
+
+Also: intended activity, must not fire
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.2 Making a detection sound and meeting shop requirements](../modules/04-de/02-sound-and-shop-requirements/) | DE, SOC, Hunter, CTI |
+
+See also: [test before it goes live](#test-before-it-goes-live)
+
+### test before it goes live
+
+Also: must fire and must not fire, 4.2.1
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.2 Making a detection sound and meeting shop requirements](../modules/04-de/02-sound-and-shop-requirements/) | DE, SOC, Hunter, CTI |
+
+See also: [sound (fires / must not fire)](#sound-fires--must-not-fire)
+
+### shop requirements (list is local)
+
+Also: meta fields naming IDs tags logging, do not invent the list
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.2 Making a detection sound and meeting shop requirements](../modules/04-de/02-sound-and-shop-requirements/) | DE, SOC, Hunter, CTI |
+
+See also: [close the loop with the nominator](#close-the-loop-with-the-nominator)
+
+### close the loop with the nominator
+
+Also: shipped changed sent back retired
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.2 Making a detection sound and meeting shop requirements](../modules/04-de/02-sound-and-shop-requirements/) | DE, SOC, Hunter, CTI |
+
+See also: [shop requirements (list is local)](#shop-requirements-list-is-local), [what DE owns](#what-de-owns)
 
 ### what an IOC is versus a TTP
 
