@@ -1,251 +1,106 @@
 # Module 1.2.6 – SMTP Engine  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 25–30 minutes  
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.2.6 – SMTP Engine  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Zeek `smtp` log. Envelope metadata, not a mailbox. CTI bar is A / 1a until 7-level.
+Envelope and a few headers. Not a mailbox. Not the attachment hash.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Explain mail from, rcpt to, subject, message ID, and source/destination
-2. Analyze a Zeek `smtp` log entry and describe what occurred
-3. Write a SIEM query for *specific* SMTP activity
-4. Pivot with `uid` to `conn`
+SOC analysts read the Zeek **`smtp`** log: who the session claimed mail was from and to.
 
-**Mapped Items:**  
-K: 1.2.6.1 | T: 1.2.6.2 | T: 1.2.6.3
+It does **not** name the initiating process.  
+That was **1.1.4**.
 
 **Speaker Notes:**  
-SOC A/2b → C/4c. Do not grade CTI as SOC 5.
+1.2.5 was HTTP. This is mail on the wire.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Envelope
+**Title:** Mail from, rcpt to
 
-- Purpose of the smtp log
-- Fields (outline a–e)
-- Three worked examples
-- uid pivot
-- Two queries
-- Knowledge check
+**`mailfrom`** — envelope MAIL FROM.  
+**`rcptto`** — envelope RCPT TO (can be a list).
 
 **Speaker Notes:**  
-Attachments are 1.2.7.
+Outline a–b. Envelope, not a From header course.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – Subject, message ID, who
+**Title:** Subject, message ID, addresses
 
-Mailbox / `.eml` forensics  
-Attachment SHA256 (**1.2.7**)  
-Host process on 587 (**1.1.4**)  
-BEC playbook  
-Zeek scripts
+**`subject`** — easy to spoof. Empty = not logged.  
+**`msg_id`** — Message-ID when logged. Not a file hash.
 
-**Key Point:** Describe *this* `smtp` row.
+**`id.orig_*` → `id.resp_*`** — who talked to whom (often 25 / 587).
 
 **Speaker Notes:**  
-Park BEC extras.
+Outline c–e. Do not invent an MX name.
 
 ---
 
-### Slide 5 – Purpose of the smtp Log
-**Title:** Purpose of the smtp Log
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-- Written by Zeek’s SMTP engine
-- Envelope + selected headers the sensor saw
-- Complements `conn` (who talked) and later `files` (what was attached)
-
-**Key Point:** Not the full message.
+No process name.  
+No attachment hash (**1.2.7**).  
+No phishing playbook.
 
 **Speaker Notes:**  
-Ask: “Who did the envelope name?”
+Encrypted submission may have no SMTP fields (1.2.4).
 
 ---
 
-### Slide 6 – Envelope
-**Title:** Mail From and Rcpt To
+### Slide 6 – What good looks like
+**Title:** Describe it. Query something specific.
 
-**mailfrom** — SMTP MAIL FROM (envelope sender)  
-**rcptto** — SMTP RCPT TO (often a list)
+One sentence: envelope from, envelope to, subject if logged.
 
-These are commands, not proof of the real person.  
-Count of `rcptto` matters.
+**Given:** outside `mailfrom`, `rcptto` a user, subject present.
+
+A query names a **specific** pattern — `mailfrom`, `rcptto`, subject, or dest.  
+Not “all `smtp` rows.”
 
 **Speaker Notes:**  
-One minute on envelope vs header if they ask. Then stop.
+That client sent envelope mail from A to B with that subject. Do not tell the PRD plot.
 
 ---
 
-### Slide 7 – Subject and Message ID
-**Title:** Subject and Message ID
-
-**subject** — useful, easy to spoof, can be empty  
-**msg_id** — identifies the *message* when logged
-
-Empty → write “not logged.”  
-`msg_id` ≠ `uid`. Different joins.
-
-**Speaker Notes:**  
-“Invoice” is not a verdict.
-
----
-
-### Slide 8 – Source, Dest, uid
-**Title:** Who Spoke SMTP
-
-`id.orig_h` — who opened the session  
-`id.resp_h` / `id.resp_p` — mail server (25 / 587 / 465)  
-`uid` → `conn`
-
-**Expected:** gateway → internal SMTP  
-**Lead:** workstation → internet SMTP
-
-**Speaker Notes:**  
-Same 5-tuple habit.
-
----
-
-### Slide 9 – Example 1: Expected
-**Title:** Example 1 – Internal Mail
-
-- `jlee@buildingc.internal` → `finance@…`
-- Subject: Q3 notes
-- orig `10.10.8.40` → `:25`
-
-**Interpretation:**  
-Expected.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2: External Orig
-**Title:** Example 2 – Internet Client, Internal Envelope
-
-- orig `203.0.113.88`
-- mailfrom still `jlee@buildingc.internal`
-- msg_id `@nightowl-updates.net`
-
-**Interpretation:**  
-Lead. Not an automatic BEC.
-
-**Speaker Notes:**  
-Orig IP + envelope + msg_id together.
-
----
-
-### Slide 11 – Example 3: Spray / Empty
-**Title:** Example 3 – Null From, Many Rcpt To
-
-- Workstation → internet `:587`
-- `mailfrom` `<>`
-- Several `rcptto`; subject and msg_id not logged
-
-**Interpretation:**  
-Lead. Write the empties.
-
-**Speaker Notes:**  
-Park 1.2.7.
-
----
-
-### Slide 12 – Pivoting with uid
-**Title:** Pivoting with the uid Field
-
-1. Interesting `smtp` row  
-2. Copy `uid`  
-3. Search `conn`  
-4. If `fuids` exist → **1.2.7** `files` log  
-
-**Speaker Notes:**  
-Demonstrate once.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Envelope from = real sender  
-- “Invoice” = phishing  
-- Query with no filter  
-- Hashing the attachment here  
-- Forgetting `uid`
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize each example.
-2. Two queries: internal envelope from + external orig; many rcptto / null from / empty subject.
-3. Explain the `uid` pivot.
-4. Identify the four items.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Purpose of the `smtp` log?
-2. Envelope vs header?
-3. Why subject is not a verdict?
-4. `msg_id` vs `uid`?
-5. Why `uid`?
+1. `mailfrom` is the attachment hash. True or false?  
+2. Envelope from an outside address, `rcptto` a user, subject present. In one sentence, what occurred?  
+3. A SIEM query that matches every `smtp` row is a good “specific SMTP activity” query. True or false?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 8 – Summary
+**Title:** Summary
 
-- `smtp` = mailfrom, rcptto, subject, msg_id, 5-tuple.
-- Empty fields → “not logged.”
-- Leads: orig vs envelope, null from, recipient spray.
-- Pivot `uid` → `conn`. Attachments → **1.2.7**.
-- Next: Files engine.
+Envelope from/to, subject, message ID, who talked to whom.  
+The process and the hash are not on this row.  
+A query is specific.
+
+**Next:** **1.2.7** Files engine
 
 **Speaker Notes:**  
-Do not open files lab unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** SMTP — Quick Reference
-
-| Need | Look at |
-|------|---------|
-| Envelope | `mailfrom` `rcptto` |
-| Label | `subject` |
-| Message join | `msg_id` |
-| Session join | `uid` → `conn` |
-
-**Coming next:** Module 1.2.7 – Files Engine
-
-**Footer:** SOC / Hunter / CTI Training Program
+Name, MIME, hash next.
