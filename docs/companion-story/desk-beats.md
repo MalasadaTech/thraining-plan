@@ -27,4 +27,4 @@ Instructor card. Same facts as the [story bible](../story-bible.md) “when each
 
 ## Not in A12
 
-OT, `pay-db-01`, vendor VPN, `checkin` / beacon POST, `helpdesk.exe`, Word → `helper.dll`. Extra classroom rows may reuse `jlee` / **WS-JLEE**. They are not this plot.
+OT, `pay-db-01`, vendor VPN, `checkin` / beacon POST, `helpdesk.exe`, Word → `helper.dll`. Extra example rows may reuse `jlee` / **WS-JLEE**. They are not this plot.

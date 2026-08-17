@@ -1,6 +1,6 @@
 # A12 — the same incident from four desks
 
-Dixon, Yamada, & Associates is a law firm. This course uses it as classroom fiction, not as live policy. The adversary name on the vendor PDF is **Pink River Dolphin** (**PRD**). That label is a name on a page, not proof of who they are.
+Dixon, Yamada, & Associates is a law firm. This course uses it as the firm in the scenario, not as live policy. The adversary name on the vendor PDF is **Pink River Dolphin** (**PRD**). That label is a name on a page, not proof of who they are.
 
 Building C has a user workstation **WS-JLEE** (`10.10.8.40`). The account is `jlee` / `BUILDINGC\jlee`.
 
@@ -53,13 +53,13 @@ SOC opens the incident product and routes it (**1.5**).
 
 **Type:** incident. Not an RFI. Not a second case.
 
-**Route (classroom chart — not a live shop matrix):** recipients are the SOC queue and **IR**. Leadership awareness is **yes** — the duty SOC lead. Approved channel is the **ticket**. Personal chat to the IR analyst only is the wrong path.
+**Route (training chart — not a live shop matrix):** recipients are the SOC queue and **IR**. Leadership awareness is **yes** — the duty SOC lead. Approved channel is the **ticket**. Personal chat to the IR analyst only is the wrong path.
 
 **Sam** has the host.
 
 The leadership product is one sentence: **WS-JLEE** / `jlee`, `wscript` → encoded PowerShell, Temp `invoice.vbs`. It does not need the file hash. It does not need the Run key. It does not need the sibling domain.
 
-Classroom clocks exist in **1.5.2**. This story does not invent DYA SLAs.
+The clocks in **1.5.2** are for this course. This story does not invent DYA SLAs.
 
 ---
 

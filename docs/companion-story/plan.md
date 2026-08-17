@@ -14,7 +14,7 @@ For each numbered beat:
 - Use only facts already in the bible or already planted in that lesson.
 - End on the hand-off the next beat reads.
 
-Do not write a lab. Do not write a ticket number. Classroom clocks and the 1.5.3 chart stay labeled classroom.
+Do not write a lab. Do not write a ticket number. Course clocks and the 1.5.3 chart stay labeled as training stand-ins.
 
 ## 3. Write the finished story
 
