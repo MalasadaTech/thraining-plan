@@ -137,6 +137,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/04-de/01-what-de-owns` | `4.1` / `4.1.1` | `4.1` a–d + `4.1.1` |
 | `modules/04-de/02-sound-and-shop-requirements` | `4.2` / `4.2.1`–`4.2.3` | `4.2` a–d + `4.2.1` |
 | `modules/04-de/03-nominations` | `4.3` / `4.3.1` | `4.3` a–e + `4.3.1` |
+| `modules/04-de/04-tune-requests` | `4.4` / `4.4.1`–`4.4.2` | `4.4` a–d + `4.4.1` |
 
 Record the mapping in each module `README.md`.
 

@@ -16,6 +16,7 @@ Do these first (course order and story):
 - [x] Write 4.1 What DE owns (first DE review cycle)
 - [x] Write 4.2 Making a detection sound and meeting shop requirements
 - [x] Write 4.3 Nominations from SOC, hunt, and CTI
+- [x] Write 4.4 Tune requests from SOC
 - [ ] Put the full incident flow in the companion story: SOC alert → triage → IR + leadership notify → RFI to intel → hunt package, block list to firewall/IA, and a request to write detections. Firewall/IA is a hand-off, not a new course unless we decide we want that track.
 - [ ] As we review and revise the outline, make the outline follow that same flow, so the companion story is a re-read of the outline as one combined story
 

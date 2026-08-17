@@ -1324,6 +1324,56 @@ Also: need plus pointer, investigation number, intel report title and URL, draft
 
 See also: [accept, send back, or reject](#accept-send-back-or-reject), [nomination need not be production-ready](#nomination-need-not-be-production-ready)
 
+### tune request on a live rule
+
+Also: noisy brittle missing context, not a new nomination
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.4 Tune requests from SOC](../modules/04-de/04-tune-requests/) | DE, SOC, Hunter, CTI |
+
+See also: [same desk, different inbox](#same-desk-different-inbox), [tune request need and reference](#tune-request-need-and-reference)
+
+### same desk, different inbox
+
+Also: tune inbox vs nomination inbox
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.4 Tune requests from SOC](../modules/04-de/04-tune-requests/) | DE, SOC, Hunter, CTI |
+
+See also: [tune request on a live rule](#tune-request-on-a-live-rule)
+
+### tune / exception / replace / leave / retire
+
+Also: five answers to a tune request
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.4 Tune requests from SOC](../modules/04-de/04-tune-requests/) | DE, SOC, Hunter, CTI |
+
+See also: [tune request on a live rule](#tune-request-on-a-live-rule), [reject investigation, block, or IR as a tune](#reject-investigation-block-or-ir-as-a-tune)
+
+### reject investigation, block, or IR as a tune
+
+Also: 4.4.2, not a tune
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.4 Tune requests from SOC](../modules/04-de/04-tune-requests/) | DE, SOC, Hunter, CTI |
+
+See also: [a block is not a DE deploy](#a-block-is-not-a-de-deploy), [tune / exception / replace / leave / retire](#tune--exception--replace--leave--retire)
+
+### tune request need and reference
+
+Also: which live rule plus pointer, investigation number, intel report title and URL
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.4 Tune requests from SOC](../modules/04-de/04-tune-requests/) | DE, SOC, Hunter, CTI |
+
+See also: [nomination need and reference](#nomination-need-and-reference), [tune request on a live rule](#tune-request-on-a-live-rule)
+
 ### what an IOC is versus a TTP
 
 Also: IOC vs TTP, observable vs behavior

@@ -76,7 +76,7 @@ This section is how detections are **run as a service**. Rule *syntax* and a fir
 - `4.1` What DE owns — the set (new / change / retire / deploy). Sort work to DE, nominator, `1.3`, or a block. Reject “rough is not DE” and “block request is a deploy.” Sound/test is `4.2`. Nomination review depth is `4.3`. Tunes are `4.4`. Packages are `4.5`. When to modify/retire/leave is `4.6`.
 - `4.2` Sound + test + shop requirements + close the loop. The *field list* is `4.8`. Do not invent fields.
 - `4.3` Nominations — who can nominate; accept / send back / reject; nominator bar is “clear enough to review.” Clear enough means the **need** plus **context or a reference** (investigation or intel report — number, or title and URL). A drafted rule if they have one — **not** required. Do not invent a DYA form or ticket name.
-- `4.4` Tune requests on *live* rules. Same desk, different inbox. Reject investigation, block, or IR containment dressed as a tune.
+- `4.4` Tune requests on *live* rules. Same desk, different inbox. Reject investigation, block, or IR containment dressed as a tune. Clear enough means **which live rule** plus **context or a reference** (investigation or intel report — number, or title and URL). “Missing context” in 4.4.a is about the *rule*, not the pointer. Do not invent a DYA form or ticket name.
 - `4.5` Hunt and intel packages. Both are inputs. “No new rule” is valid. Treat like a nomination (`4.3`). Reject turning the package into a block list.
 - `4.6` Lifecycle — modify / retire / leave, and why. “We blocked it” is not automatically retire.
 - `4.7` Sensors — lighter. Sometimes DE. Dead sensor is not “no threat.” Not vendor admin or architecture.

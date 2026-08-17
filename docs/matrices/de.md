@@ -68,7 +68,7 @@ Shared intro. Same idea on the SOC, hunter, and CTI sheets. Not site policy.
 
 | # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
 |---|------|------|------|------|------|---------------|
-| 4.4 | Tune requests from SOC | K | B | C | C | Live rules. Different inbox from nominations. |
+| 4.4 | Tune requests from SOC | K | B | C | C | Live rules. Different inbox. Which rule + pointer. |
 | 4.4.1 | Pick tune / exception / replace / leave / retire and cite why | T | 3c | 4c | 4d | Judgment on a live rule. |
 | 4.4.2 | Reject a request that is investigation, a block, or IR containment | T | 3c | 4c | 4c | Stay on the DE product. |
 

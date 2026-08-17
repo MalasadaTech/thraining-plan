@@ -112,3 +112,4 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 4.1 | [modules/04-de/01-what-de-owns](../modules/04-de/01-what-de-owns/) |
 | 4.2 | [modules/04-de/02-sound-and-shop-requirements](../modules/04-de/02-sound-and-shop-requirements/) |
 | 4.3 | [modules/04-de/03-nominations](../modules/04-de/03-nominations/) |
+| 4.4 | [modules/04-de/04-tune-requests](../modules/04-de/04-tune-requests/) |

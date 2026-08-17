@@ -942,6 +942,7 @@ e. A nomination that is clear enough to review names the need and points at cont
 a. Requests on *live* rules (noisy, brittle, missing context)  
 b. Same desk as nominations; different inbox  
 c. Possible answers: tune the logic, add an exception, replace the rule, leave it, or retire it  
+d. A tune request that is clear enough to review names which live rule and points at context or a reference (investigation or intel report). Do not invent a DYA form.  
 
 **4.4.1 [T] Tasks**  
 1. Given a SOC tune request, pick tune / exception / replace / leave / retire and cite why  
