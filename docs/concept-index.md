@@ -1374,6 +1374,46 @@ Also: which live rule plus pointer, investigation number, intel report title and
 
 See also: [nomination need and reference](#nomination-need-and-reference), [tune request on a live rule](#tune-request-on-a-live-rule)
 
+### packages from CTI and hunters
+
+Also: hunt package, intel package, both are inputs
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.5 Hunt and intel packages](../modules/04-de/05-hunt-and-intel-packages/) | DE, SOC, Hunter, CTI |
+
+See also: [treat a package like a nomination](#treat-a-package-like-a-nomination), [hunt package and block list as later hand-offs](#hunt-package-and-block-list-as-later-hand-offs)
+
+### treat a package like a nomination
+
+Also: not a finished detection, need plus pointer
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.5 Hunt and intel packages](../modules/04-de/05-hunt-and-intel-packages/) | DE, SOC, Hunter, CTI |
+
+See also: [accept, send back, or reject](#accept-send-back-or-reject), [nomination need and reference](#nomination-need-and-reference)
+
+### add, change, or no new rule
+
+Also: no new rule is valid, 4.5.1
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.5 Hunt and intel packages](../modules/04-de/05-hunt-and-intel-packages/) | DE, SOC, Hunter, CTI |
+
+See also: [treat a package like a nomination](#treat-a-package-like-a-nomination)
+
+### reject a package as a block list
+
+Also: 4.5.2, extra infrastructure is not a DE deploy
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.5 Hunt and intel packages](../modules/04-de/05-hunt-and-intel-packages/) | DE, SOC, Hunter, CTI |
+
+See also: [a block is not a DE deploy](#a-block-is-not-a-de-deploy), [add, change, or no new rule](#add-change-or-no-new-rule)
+
 ### what an IOC is versus a TTP
 
 Also: IOC vs TTP, observable vs behavior
