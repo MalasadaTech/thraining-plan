@@ -270,13 +270,6 @@ Shift-change reports are 1.7. Alert SLA clocks are 1.4.5. Tasks apply the knowle
 
 ---
 
-## 1.8 Environment / signal flow
+## 1.8 Environment / signal flow — retired ID
 
-Taught in `00` before SOC. **Rewrite later:** infrastructure and signal flow for every role — do not invent a site card. **Retired:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
-
-### 1.8.1 Environment orientation
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.8.1.1 | Environment orientation | K | A | B | C | Seven orientation facts. 3-level needs the card. 5-level relates the pieces. 7-level can analyze gaps. |
-| 1.8.1.2 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b | 3c | 4c | Extends listing a–g — name the fact and reject the neighbor. |
+Taught as **0.8** in `00-intro` before SOC (combined.md `0.8` / `0.8.1`). Do not generate `1.8.1`. Do not invent a site card. **Retired:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.

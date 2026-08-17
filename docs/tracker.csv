@@ -1,119 +1,119 @@
 Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,Status - Instructor Guide,Status - Slide Deck,Status - Exercise,Status - Answer Key,Status - Quiz,Owner,Target Completion,Notes
-0,Front door,SOC / Hunter / CTI / DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 0.1–0.5 plus shared floor in 00-intro"
-0.1,How this course is laid out,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,First hour; rewritten; no hand-off task; no lab
-0.2,What a SOC is,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.1; retagged; DYA/PRD live here
-0.3,Jobs in one sentence,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.2; retagged
-0.4,How work can move,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.3; includes 0.4.1 hand-off task
-0.5,Where the jobs lightly overlap,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.4; retagged
-1.1.1,Endpoint Activity (the map),SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,New map hour; ready for review; no lab
-1.1.2,Process Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.1.3,File System Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.1.4,Network Activity (Endpoint),SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.1.5,Registry Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.1.6,Image and Driver Load Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.1,Zeek Concepts,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; K only; PCAP mention only; ready for review; no lab
-1.2.2,Conn Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.3,DNS Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.4,TLS Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.5,HTTP Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.6,SMTP Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.7,Files Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.8,Weird Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.3.1,SIGMA Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.3.2,Suricata Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.3.3,YARA Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.3.4,SIEM Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.4.1,Alert Context and Investigation,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.4.2,Alert Classification,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.4.3,Common False Positive Causes,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.4.4,Common Alert Categorizations,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.4.5,SLA / Response Time Goals,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-0.6.1,MITRE ATT&CK,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-0.6.2,Diamond Model,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-0.6.3,Cyber Kill Chain,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-0.7,External Tools,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab; was 2.3.2
-0.8,Environment / signal flow,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; obtain from your shop; no invented site card; ready for review; no lab
-1.5.1,Report Types,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.5.2,Reporting Timelines,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.5.3,Notification and Distribution,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+0,Front door,SOC / Hunter / CTI / DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 0.1–0.5 plus shared floor in 00-intro
+0.1,How this course is laid out,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,First hour; rewritten; no hand-off task; no lab; Accepted 2026-08-16
+0.2,What a SOC is,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.1; retagged; DYA/PRD live here; Accepted 2026-08-16
+0.3,Jobs in one sentence,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.2; retagged; Accepted 2026-08-16
+0.4,How work can move,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.3; includes 0.4.1 hand-off task; Accepted 2026-08-16
+0.5,Where the jobs lightly overlap,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.4; retagged; Accepted 2026-08-16
+1.1.1,Endpoint Activity (the map),SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,New map hour; no lab; Accepted 2026-08-16
+1.1.2,Process Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.1.3,File System Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.1.4,Network Activity (Endpoint),SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.1.5,Registry Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.1.6,Image and Driver Load Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.2.1,Zeek Concepts,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,K only; PCAP mention only; no lab; Accepted 2026-08-16
+1.2.2,Conn Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.2.3,DNS Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.2.4,TLS Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.2.5,HTTP Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.2.6,SMTP Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.2.7,Files Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.2.8,Weird Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.3.1,SIGMA Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.3.2,Suricata Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.3.3,YARA Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.3.4,SIEM Rules,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.4.1,Alert Context and Investigation,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.4.2,Alert Classification,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.4.3,Common False Positive Causes,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.4.4,Common Alert Categorizations,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.4.5,SLA / Response Time Goals,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+0.6.1,MITRE ATT&CK,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+0.6.2,Diamond Model,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+0.6.3,Cyber Kill Chain,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+0.7,External Tools,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; was 2.3.2; Accepted 2026-08-16
+0.8,Environment / signal flow,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,obtain from your shop; no invented site card; no lab; Accepted 2026-08-16
+1.5.1,Report Types,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.5.2,Reporting Timelines,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+1.5.3,Notification and Distribution,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
 1.7.1,Shift Changeover Process,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
 1.7.2,Changeover Report Content,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
 1.8.2,PCAP Handling,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired
 1.8.3,Tool Access and Requests,SOC / Hunter / CTI / DE,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
 1.8.4,Investigation Documentation,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
 1.8.5,Incident Response Processes,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
-3.1,Purpose of Threat Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.2,Hunt Methodology,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Remaining 3.2 items after 3.2.1 and 3.2.2"
-3.2.1,Hunt Types,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.2.2,Hunt Development Concepts,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.3.1,Tool Capabilities for Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.1,Purpose of Threat Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.2,Hunt Methodology,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Remaining 3.2 items after 3.2.1 and 3.2.2
+3.2.1,Hunt Types,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.2.2,Hunt Development Concepts,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.3.1,Tool Capabilities for Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
 3.4,CTI for Hunters,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"No remaining 3.4 children after 3.4.1, 3.4.2, and 3.4.3"
-3.4.1,Assessing CTI for Hunting Value,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.4.2,Extracting Hunt Leads from CTI,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.4.3,STIX as Hunt Input,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.5.1,Using MITRE ATT&CK for Hunt Planning,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.6,Attacker Techniques,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.6.1–3.6.3"
-3.6.1,Persistence Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.6.2,Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.6.3,Hunt for Specific Persistence or Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.7,Site-Specific Hunt Knowledge and Tasks,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.7.1–3.7.3"
-3.7.1,Hunt Control and Lead Management,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.7.2,Hunt Documentation Standards,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-3.7.3,Hunt Outputs and Hand-off,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab; hunt 3.x ends
-2.1,Core Intelligence Concepts,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.1.1–2.1.8"
-2.1.1,Data Information and Intelligence,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.1.2,Intelligence Lifecycle,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.1.3,Intelligence Types,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.1.4,Intelligence Requirements,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.1.5,Actionable Intelligence,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.1.6,Tailoring Output to the Audience,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.1.7,Attribution,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.1.8,Collection Sources and Methods,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.2,Analytic Tradecraft,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.2.1–2.2.4"
-2.2.1,Estimative Language,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.2.2,Structured Analytic Techniques,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.2.3,Admiralty Code,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.2.4,Cognitive Biases and Mitigation,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.3,Tools,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.3.1; survey is 0.7"
-2.3.1,Internal Threat Intelligence Platform,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.4,File Similarity & Hashing Techniques,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.4.1"
-2.4.1,Hashing and Similarity Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.5,RDAP / WHOIS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.5.1"
-2.5.1,RDAP and WHOIS Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.6,Advanced DNS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.6.1"
-2.6.1,Advanced DNS Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.7,Frameworks,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.7.1–2.7.4"
-2.7.1,MITRE ATT&CK for CTI Analysis and Reporting,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.7.2,Diamond Model Application in CTI,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.7.3,Cyber Kill Chain in Intelligence Analysis,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.7.4,MalasadaTech Defender's ThreatMesh Framework (DTF),CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; official PTA/P; ready for review; no lab
-2.8,Enrichment & Analysis,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.8.1–2.8.4"
-2.8.1,Identifying Additional Adversary Infrastructure from Seed Indicators,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.8.2,Extracting Applicable TTPs from Intelligence Reports,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.8.3,IOC Handling and Enrichment Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.8.4,Threat Relevance and Organizational Impact,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.9,Platform-Specific Skills,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.9.1–2.9.4"
-2.9.1,VirusTotal (Relations and Behavior Tabs),CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.9.2,AnyRun,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.9.3,Silent Push,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.9.4,URLScan,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.10,Common STIX Objects,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.10.1–2.10.2"
-2.10.1,Core STIX Objects,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.10.2,How STIX Objects Are Used in Intelligence Production,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.11,Intelligence Production & Dissemination,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.11.1–2.11.3"
-2.11.1,Creating Finished Intelligence Products,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.11.2,Disseminating Intelligence to the Correct Audiences,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.11.3,Handling RFIs,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.12,Site-Specific CTI Knowledge and Tasks,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.12.1–2.12.3"
-2.12.1,Local Intelligence Requirements and Priorities,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; obtain-and-follow; ready for review; no lab
-2.12.2,Local Production and Approval Processes,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; obtain-and-follow; ready for review; no lab
-2.12.3,Local Dissemination Channels and Customers,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; obtain-and-follow; ready for review; no lab
-4,Detection Engineer,DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 4.1–4.8"
-4.1,What DE Owns,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short first DE lesson; ready for review; no lab
-4.2,Making a Detection Sound and Meeting Shop Requirements,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab; field list is 4.8
-4.3,Nominations from SOC Hunt and CTI,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab
-4.4,Tune Requests from SOC,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab
-4.5,Hunt and Intel Packages,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab
-4.6,Detection Lifecycle,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab; block is not automatic retire
-4.7,Sensor Availability and Performance,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; lighter; ready for review; no lab; not vendor admin
-4.8,Site-Specific DE Knowledge,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,One unit (4.8.1–4.8.2); ready for review; obtain-and-follow; do not invent policy
+3.4.1,Assessing CTI for Hunting Value,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.4.2,Extracting Hunt Leads from CTI,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.4.3,STIX as Hunt Input,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.5.1,Using MITRE ATT&CK for Hunt Planning,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.6,Attacker Techniques,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 3.6.1–3.6.3
+3.6.1,Persistence Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.6.2,Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.6.3,Hunt for Specific Persistence or Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.7,Site-Specific Hunt Knowledge and Tasks,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 3.7.1–3.7.3
+3.7.1,Hunt Control and Lead Management,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.7.2,Hunt Documentation Standards,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+3.7.3,Hunt Outputs and Hand-off,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; hunt 3.x ends; Accepted 2026-08-16
+2.1,Core Intelligence Concepts,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.1.1–2.1.8
+2.1.1,Data Information and Intelligence,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.1.2,Intelligence Lifecycle,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.1.3,Intelligence Types,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.1.4,Intelligence Requirements,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.1.5,Actionable Intelligence,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.1.6,Tailoring Output to the Audience,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.1.7,Attribution,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.1.8,Collection Sources and Methods,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.2,Analytic Tradecraft,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.2.1–2.2.4
+2.2.1,Estimative Language,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.2.2,Structured Analytic Techniques,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.2.3,Admiralty Code,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.2.4,Cognitive Biases and Mitigation,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.3,Tools,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — child is 2.3.1; survey is 0.7
+2.3.1,Internal Threat Intelligence Platform,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.4,File Similarity & Hashing Techniques,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — child is 2.4.1
+2.4.1,Hashing and Similarity Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.5,RDAP / WHOIS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — child is 2.5.1
+2.5.1,RDAP and WHOIS Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.6,Advanced DNS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — child is 2.6.1
+2.6.1,Advanced DNS Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.7,Frameworks,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.7.1–2.7.4
+2.7.1,MITRE ATT&CK for CTI Analysis and Reporting,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.7.2,Diamond Model Application in CTI,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.7.3,Cyber Kill Chain in Intelligence Analysis,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.7.4,MalasadaTech Defender's ThreatMesh Framework (DTF),CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,official PTA/P; no lab; Accepted 2026-08-16
+2.8,Enrichment & Analysis,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.8.1–2.8.4
+2.8.1,Identifying Additional Adversary Infrastructure from Seed Indicators,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.8.2,Extracting Applicable TTPs from Intelligence Reports,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.8.3,IOC Handling and Enrichment Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.8.4,Threat Relevance and Organizational Impact,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.9,Platform-Specific Skills,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.9.1–2.9.4
+2.9.1,VirusTotal (Relations and Behavior Tabs),CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.9.2,AnyRun,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.9.3,Silent Push,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.9.4,URLScan,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.10,Common STIX Objects,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.10.1–2.10.2
+2.10.1,Core STIX Objects,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.10.2,How STIX Objects Are Used in Intelligence Production,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.11,Intelligence Production & Dissemination,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.11.1–2.11.3
+2.11.1,Creating Finished Intelligence Products,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.11.2,Disseminating Intelligence to the Correct Audiences,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.11.3,Handling RFIs,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+2.12,Site-Specific CTI Knowledge and Tasks,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 2.12.1–2.12.3
+2.12.1,Local Intelligence Requirements and Priorities,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,obtain-and-follow; no lab; Accepted 2026-08-16
+2.12.2,Local Production and Approval Processes,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,obtain-and-follow; no lab; Accepted 2026-08-16
+2.12.3,Local Dissemination Channels and Customers,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,obtain-and-follow; no lab; Accepted 2026-08-16
+4,Detection Engineer,DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only — children are 4.1–4.8
+4.1,What DE Owns,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+4.2,Making a Detection Sound and Meeting Shop Requirements,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; field list is 4.8; Accepted 2026-08-16
+4.3,Nominations from SOC Hunt and CTI,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+4.4,Tune Requests from SOC,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+4.5,Hunt and Intel Packages,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
+4.6,Detection Lifecycle,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; block is not automatic retire; Accepted 2026-08-16
+4.7,Sensor Availability and Performance,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; not vendor admin; Accepted 2026-08-16
+4.8,Site-Specific DE Knowledge,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,One unit (4.8.1–4.8.2); obtain-and-follow; do not invent policy; Accepted 2026-08-16

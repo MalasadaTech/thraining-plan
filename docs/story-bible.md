@@ -81,13 +81,13 @@ Reuse the numbers. They are classroom stand-ins.
 | Domain controller | `dc-01` `10.10.20.10` |
 | PCAP | `span-1` on fw-edge; `span-2` on user↔server |
 
-**Open (law firm vs old Harbor map):**
+**Decided (law firm vs old Harbor map):**
 
-- **OT** (`10.10.50.0/24`, `fw-ot`, `ot-hist-01`, no span on OT) does not fit a law firm. Keep in lessons until we decide to drop or replace it.
-- **`pay-db-01`** (payroll) can stay or become a client/billing system. Not decided.
-- Vendor VPN and payroll SaaS via SAML are still on the old card. Not decided.
+- **OT** (`10.10.50.0/24`, `fw-ot`, `ot-hist-01`, no span on OT) is **not** DYA plot. A law firm does not run that plant network. Do not use OT in the companion story. Leftover classroom rows may still say OT until a rename pass; they are not architecture policy.
+- **`pay-db-01`** is **not** this incident. A law firm can have payroll; it is not A12.
+- Vendor VPN and payroll SaaS via SAML are **not** this incident.
 
-Users still do not initiate to OT **if** we keep OT. If we drop OT, delete that rule when we update 1.8.1.
+Do not invent those as DYA policy. Environment questions still go to **your shop** (**0.8**).
 
 ---
 
@@ -139,13 +139,13 @@ When we revise a 1.1 / 1.2 / 1.4 / 1.5 lesson, plant or read only that row’s b
 
 ---
 
-## Companion story (later)
+## Companion story
 
-Not written yet. It retells **this table** from more than one desk. Same facts. Not a different plot.
+Written. It retells **this table** from more than one desk. Same facts. Not a different plot.
 
 Spine: SOC gets the alert → triages → IR + leadership notify → RFI to intel → enrich / extra infra to block → hunt package → DE.
 
-Do not add new plot to that story until it is in this bible.
+Files: [companion-story/](companion-story/). Do not add new plot there until it is in this bible.
 
 ---
 

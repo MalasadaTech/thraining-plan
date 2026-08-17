@@ -13,7 +13,7 @@ Do these first (course order and story):
 - [x] Teach in this order (lesson IDs can stay as they are): intro → shared floor → SOC analyst → CTI → hunting → detection engineers
 - [x] Revise 1.1.2 Process activity (first 1.x review; 0/4 voice; no lab)
 - [x] Add 1.1.1 Endpoint activity map hour (bump process–image to 1.1.2–1.1.6)
-- [ ] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
+- [x] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
 - [x] Add a detection-engineers section after the threat hunters section (outline 4.x; matrix/lessons later)
 - [x] Write 4.x stay-in-lesson notes in generate-module.md
 - [x] Write 4.1 What DE owns (first DE review cycle)
@@ -24,36 +24,24 @@ Do these first (course order and story):
 - [x] Write 4.6 Detection lifecycle
 - [x] Write 4.7 Sensor availability and performance
 - [x] Write 4.8 Site-specific DE knowledge (4.8.1 + 4.8.2 lumped; obtain-and-follow)
-- [ ] Put the full incident flow in the companion story: SOC alert → triage → IR + leadership notify → RFI to intel → hunt package, block list to firewall/IA, and a request to write detections. Firewall/IA is a hand-off, not a new course unless we decide we want that track.
-- [ ] As we review and revise the outline, make the outline follow that same flow, so the companion story is a re-read of the outline as one combined story
+- [x] Put the full incident flow in the companion story: SOC alert → triage → IR + leadership notify → RFI to intel → hunt package, block list to firewall/IA, and a request to write detections. Firewall/IA is a hand-off, not a new course unless we decide we want that track.
+- [x] As we review and revise the outline, make the outline follow that same flow, so the companion story is a re-read of the outline as one combined story
 
 Then:
 
 - [x] Explore a fictional back story — an ongoing theme, like the Night Owl story and Harbor company already in the lessons
 - [x] Review for chances to re-order things
 - [x] Put a “when each fact appears” map in the story bible (alert vs notify vs CTI vs hunt vs DE)
-- [ ] Keep [docs/story-bible.md](story-bible.md) current as training develops
-- [ ] Decide leftover Harbor map items that do not fit a law firm (OT, payroll)
+- [x] Keep [docs/story-bible.md](story-bible.md) current as training develops
+- [x] Decide leftover Harbor map items that do not fit a law firm (OT, payroll) — OT and payroll are not A12 plot; see story bible
 - [ ] Rename Night Owl → Pink River Dolphin (PRD) and Harbor → Dixon, Yamada, & Associates (DYA) in the lessons
-- [ ] Write the companion story (see the outline below)
+- [x] Write the companion story (see [companion-story/](companion-story/))
 - [x] Shared floor in `00-intro`, taught before SOC: frameworks, tool survey, environment. Retired `1.7`, `1.8.2`–`1.8.5`. SOC ends at 1.5.
 - [x] Rewrite `0.8` (00.08): why every role must understand infrastructure and signal flow. Do **not** invent a site card / Harbor architecture.
 - [ ] Review everything and make sure it makes sense
 - [ ] Check the reference links that are already there
 - [ ] Look for places to add more reference links
 
-## Companion story outline (for later)
+## Companion story
 
-Saved here so we do not lose the flow. Use [docs/story-bible.md](story-bible.md) for names and facts (PRD, DYA, `jlee`, `WS-JLEE`). Do not invent hunt tickets, PIR lists, or approval chains.
-
-When we revise the training outline, it should follow this same sequence. The companion story comes after the outline. It should feel like reading the outline again, but as one combined story — not a different plot.
-
-1. A SOC analyst gets an alert.
-2. They triage it.
-3. They forward it to incident response and do their leadership notifications.
-4. They RFI the CTI team for more work on that alert.
-5. The CTI analyst works the RFI.
-6. While doing that, they enrich it and find more adversary infrastructure.
-7. That extra infrastructure goes to a firewall or IA team to block / blacklist.
-8. CTI also gives the hunt team a hunt package so they can look for more of the same activity.
-9. The hunt package also goes to detection engineers so they can write the right rules (MDE, YARA, Suricata, SIGMA, and so on).
+Moved to [companion-story/](companion-story/). The nine-beat spine is in [companion-story/outline.md](companion-story/outline.md). The finished retelling is [companion-story/story.md](companion-story/story.md).

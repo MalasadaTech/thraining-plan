@@ -58,7 +58,7 @@ Also: rewrite for audience, keep cut format
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.6 Tailoring Output to the Audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
+| Taught | [2.1.6 Tailoring Output to the Audience](../modules/02-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
 
 See also: [audience analysis](#audience-analysis), [adjusting content, format, and detail for consumers](#adjusting-content-format-and-detail-for-consumers)
 
@@ -68,7 +68,7 @@ Also: content format detail, tailor product shape
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.6 Tailoring Output to the Audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
+| Taught | [2.1.6 Tailoring Output to the Audience](../modules/02-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
 
 See also: [audience analysis](#audience-analysis), [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience)
 
@@ -78,7 +78,7 @@ Also: over-claim, supported attribution, assess the claim
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+| Taught | [2.1.7 Attribution](../modules/02-cti/01-core-intel/07-attribution/) | CTI, Hunter |
 
 See also: [levels of confidence in attribution](#levels-of-confidence-in-attribution), [types of attribution (activity group vs nation-state)](#types-of-attribution-activity-group-vs-nation-state)
 
@@ -88,8 +88,8 @@ Also: who owns the decision, audience questions
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.6 Tailoring Output to the Audience](../modules/03-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
-| Used | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+| Taught | [2.1.6 Tailoring Output to the Audience](../modules/02-cti/01-core-intel/06-tailoring-audience/) | CTI, Hunter |
+| Used | [2.11.2 Disseminating Intelligence to the Correct Audiences](../modules/02-cti/11-production/02-dissemination/) | CTI, Hunter |
 
 See also: [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience), [tailor products to different audiences](#tailor-products-to-different-audiences)
 
@@ -99,7 +99,7 @@ Also: who owns the next decision, SOC vs leadership audience
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+| Taught | [2.11.2 Disseminating Intelligence to the Correct Audiences](../modules/02-cti/11-production/02-dissemination/) | CTI, Hunter |
 
 See also: [audience analysis](#audience-analysis), [disseminate through approved channels](#disseminate-through-approved-channels)
 
@@ -109,7 +109,7 @@ Also: classroom TLP, TLP:AMBER, approved intel channel
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+| Taught | [2.11.2 Disseminating Intelligence to the Correct Audiences](../modules/02-cti/11-production/02-dissemination/) | CTI, Hunter |
 
 Classroom TLP/channel cards are lesson-only, not live org policy.
 
@@ -121,7 +121,7 @@ Also: technical vs leadership product, two sends same facts
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+| Taught | [2.11.2 Disseminating Intelligence to the Correct Audiences](../modules/02-cti/11-production/02-dissemination/) | CTI, Hunter |
 
 See also: [adjust an intelligence product for a specified audience](#adjust-an-intelligence-product-for-a-specified-audience), [audience identification for dissemination](#audience-identification-for-dissemination)
 
@@ -131,8 +131,8 @@ Also: send on TIP or ticket or brief, reject Slack and public post
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
-| Used | [3.12.3 Local Dissemination Channels and Customers](../modules/03-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
+| Taught | [2.11.2 Disseminating Intelligence to the Correct Audiences](../modules/02-cti/11-production/02-dissemination/) | CTI, Hunter |
+| Used | [2.12.3 Local Dissemination Channels and Customers](../modules/02-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
 
 See also: [approved dissemination methods and handling markings](#approved-dissemination-methods-and-handling-markings), [local customers and channels are site-specific](#local-customers-and-channels-are-site-specific)
 
@@ -142,7 +142,7 @@ Also: classroom 3.11.2 channels are not the local list, do not invent a customer
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.3 Local Dissemination Channels and Customers](../modules/03-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
+| Taught | [2.12.3 Local Dissemination Channels and Customers](../modules/02-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
 
 See also: [disseminate using the correct local list](#disseminate-using-the-correct-local-list), [disseminate through approved channels](#disseminate-through-approved-channels)
 
@@ -152,7 +152,7 @@ Also: reject sending without checking local customers, send only from a shown li
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.3 Local Dissemination Channels and Customers](../modules/03-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
+| Taught | [2.12.3 Local Dissemination Channels and Customers](../modules/02-cti/12-site-specific/03-local-dissemination/) | CTI, Hunter |
 
 See also: [local customers and channels are site-specific](#local-customers-and-channels-are-site-specific), [disseminate through approved channels](#disseminate-through-approved-channels)
 
@@ -204,7 +204,7 @@ Also: rate source and report, write B3 F1
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+| Taught | [2.2.3 Admiralty Code](../modules/02-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
 
 See also: [source reliability scale](#source-reliability-scale), [information credibility scale](#information-credibility-scale)
 
@@ -224,7 +224,7 @@ Also: analysis, production, analytic production, finished intelligence productio
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [intelligence](#intelligence)
 
@@ -234,7 +234,7 @@ Also: ACH matrix, fewest inconsistent, competing hypotheses
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+| Taught | [2.2.2 Structured Analytic Techniques](../modules/02-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [Key Assumptions Check](#key-assumptions-check), [when to apply ACH vs Key Assumptions Check](#when-to-apply-ach-vs-key-assumptions-check)
 
@@ -244,7 +244,7 @@ Also: concrete bias mitigation, not be aware
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+| Taught | [2.2.4 Cognitive Biases and Mitigation](../modules/02-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
 
 See also: [identify potential cognitive bias in a judgment](#identify-potential-cognitive-bias-in-a-judgment), [techniques to mitigate cognitive biases](#techniques-to-mitigate-cognitive-biases)
 
@@ -254,7 +254,7 @@ Also: fill a mini ACH, fill a KAC table
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+| Taught | [2.2.2 Structured Analytic Techniques](../modules/02-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [select the right structured analytic technique for a scenario](#select-the-right-structured-analytic-technique-for-a-scenario), [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach)
 
@@ -264,7 +264,7 @@ Also: Diamond on a report, Diamond activity-set card, CTI Diamond line
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Taught | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 Incident / indicator cards are [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
 
@@ -316,7 +316,7 @@ Also: AnyRun for intelligence, detonate a sample
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
-| Used | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
+| Used | [2.9.2 AnyRun](../modules/02-cti/09-platforms/02-anyrun/) | CTI, Hunter |
 
 See also: [AnyRun for hunting](#anyrun-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -326,7 +326,7 @@ Also: AnyRun search types, search AnyRun submissions
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
+| Taught | [2.9.2 AnyRun](../modules/02-cti/09-platforms/02-anyrun/) | CTI, Hunter |
 
 See also: [reviewing an AnyRun submission for actionable intelligence](#reviewing-an-anyrun-submission-for-actionable-intelligence), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
 
@@ -336,7 +336,7 @@ Also: extract actionable intelligence from an AnyRun submission, AnyRun R1 vs R2
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
+| Taught | [2.9.2 AnyRun](../modules/02-cti/09-platforms/02-anyrun/) | CTI, Hunter |
 
 See also: [searching AnyRun by tag, IP, domain, or hash](#searching-anyrun-by-tag-ip-domain-or-hash), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
 
@@ -357,7 +357,7 @@ Also: ATT&CK tactic, why column, TA0002 Execution
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
-| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
 
@@ -368,7 +368,7 @@ Also: ATT&CK technique, sub-technique, T1059.001
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
-| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK tactics](#attck-tactics), [MITRE ATT&CK purpose and structure](#mitre-attck-purpose-and-structure)
 
@@ -388,8 +388,8 @@ Also: ATT&CK in intel products, advanced ATT&CK for CTI, supported ATT&CK IDs in
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
-| Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt coverage is [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/).
 
@@ -483,7 +483,7 @@ Also: five actionable checks, who what timely confidence
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.5 Ensuring Intelligence Is Actionable](../modules/03-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
+| Taught | [2.1.5 Ensuring Intelligence Is Actionable](../modules/02-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
 
 See also: [evaluate whether intelligence is actionable](#evaluate-whether-intelligence-is-actionable), [common reasons intelligence fails to be actionable](#common-reasons-intelligence-fails-to-be-actionable)
 
@@ -494,7 +494,7 @@ Also: `subject`, `issuer`, CN, certificate name
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.2.4 TLS Engine](../modules/01-soc/02-zeek/04-tls-engine/) | SOC, Hunter |
-| Used | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+| Used | [2.4.1 Hashing and Similarity Concepts](../modules/02-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [self-signed certificate](#self-signed-certificate), [certificate / code-signing information](#certificate--code-signing-information)
 
@@ -504,7 +504,7 @@ Also: signed vs unsigned, issuer not subject, stolen cert serial
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+| Taught | [2.4.1 Hashing and Similarity Concepts](../modules/02-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [extract and interpret certificate information from a file](#extract-and-interpret-certificate-information-from-a-file), [certificate subject / issuer](#certificate-subject--issuer)
 
@@ -526,9 +526,9 @@ Also: collect, intelligence collection, raw intake
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
-Collection *sources* (OSINT, commercial, internal) are [3.1.8 Collection Sources](../modules/03-cti/01-core-intel/08-collection-sources/), not this module.
+Collection *sources* (OSINT, commercial, internal) are [2.1.8 Collection Sources](../modules/02-cti/01-core-intel/08-collection-sources/), not this module.
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal)
 
@@ -538,7 +538,7 @@ Also: OSINT, commercial TIP, internal telemetry as collection class
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
+| Taught | [2.1.8 Collection Sources and Methods](../modules/02-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
 
 See also: [identify collection source classes for a requirement](#identify-collection-source-classes-for-a-requirement), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
 
@@ -548,7 +548,7 @@ Also: letter plus number, B2 F6 A1 rare
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+| Taught | [2.2.3 Admiralty Code](../modules/02-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
 
 See also: [assign Admiralty Code ratings](#assign-admiralty-code-ratings), [explain an Admiralty Code rating](#explain-an-admiralty-code-rating)
 
@@ -558,7 +558,7 @@ Also: classify by type, intelligence type classification
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Taught | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types)
 
@@ -598,7 +598,7 @@ Also: confirmation anchoring availability premature closure
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+| Taught | [2.2.4 Cognitive Biases and Mitigation](../modules/02-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
 
 See also: [impact of biases on intelligence products](#impact-of-biases-on-intelligence-products), [techniques to mitigate cognitive biases](#techniques-to-mitigate-cognitive-biases)
 
@@ -608,9 +608,9 @@ Also: RDAP SOA PDNS TIP as infra sources, classroom infra source set
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-How to *read* those sources was taught in [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/), [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/), and [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/).
+How to *read* those sources was taught in [2.5.1 RDAP and WHOIS Concepts](../modules/02-cti/05-rdap-whois/), [2.6.1 Advanced DNS Concepts](../modules/02-cti/06-advanced-dns/), and [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/).
 
 See also: [pivoting concepts and techniques](#pivoting-concepts-and-techniques), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
@@ -620,7 +620,7 @@ Also: likely, even chance, remote, estimative term card
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+| Taught | [2.2.1 Estimative Language](../modules/02-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [purpose of estimative language](#purpose-of-estimative-language), [use estimative language in an analytic judgment](#use-estimative-language-in-an-analytic-judgment)
 
@@ -630,7 +630,7 @@ Also: IOC list only, too late, no so-what, not actionable
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.5 Ensuring Intelligence Is Actionable](../modules/03-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
+| Taught | [2.1.5 Ensuring Intelligence Is Actionable](../modules/02-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
 
 See also: [characteristics of actionable intelligence](#characteristics-of-actionable-intelligence), [evaluate whether intelligence is actionable](#evaluate-whether-intelligence-is-actionable)
 
@@ -717,7 +717,7 @@ Also: Harbor platform and path, applicable vs relevant TTP, classroom apply crit
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+| Taught | [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
 Organizational impact is later (`3.8.4`). Kinds of site facts (obtain from your shop) are [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/).
 
@@ -739,8 +739,8 @@ Also: advanced Kill Chain for CTI, Kill Chain in intel products, supported Kill 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
-| Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Used | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC single-row staging is [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
 
@@ -753,7 +753,7 @@ Also: Kill Chain, Lockheed Martin Kill Chain
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
-| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Used | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
 
@@ -767,7 +767,7 @@ Also: draft a PIR, refine a requirement
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+| Taught | [2.1.4 Intelligence Requirements](../modules/02-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
 
 See also: [purpose of intelligence requirements](#purpose-of-intelligence-requirements), [translate stakeholder questions into clear intelligence requirements](#translate-stakeholder-questions-into-clear-intelligence-requirements)
 
@@ -777,8 +777,8 @@ Also: advanced Diamond for CTI, Diamond in intel products
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
-| Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Used | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 SOC incident cards are [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
 
@@ -791,7 +791,7 @@ Also: Diamond Model, intrusion diamond
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
-| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Used | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [Diamond Model application in CTI](#diamond-model-application-in-cti)
 
@@ -802,7 +802,7 @@ Also: Adversary vertex, Capability vertex, Infrastructure vertex, Victim vertex
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
-| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Used | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
 
@@ -812,7 +812,7 @@ Also: PTA0001 Domain, PTA0002 IP, P0101.010, real DTF IDs
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 Source of truth: [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). No scoring methodology.
 
@@ -825,8 +825,8 @@ Also: raw data, raw observation, unprocessed fact
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
-| Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
-| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Used | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [information](#information), [intelligence](#intelligence)
 
@@ -860,7 +860,7 @@ Also: data vs information vs intelligence, three terms
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
-| Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [data](#data), [information](#information), [intelligence](#intelligence)
 
@@ -870,10 +870,10 @@ Also: disseminate, deliver intelligence, intelligence dissemination
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
-| Used | [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [2.11.2 Disseminating Intelligence to the Correct Audiences](../modules/02-cti/11-production/02-dissemination/) | CTI, Hunter |
 
-Production and dissemination *process* depth is [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) and [3.11.2 Disseminating Intelligence to the Correct Audiences](../modules/03-cti/11-production/02-dissemination/).
+Production and dissemination *process* depth is [2.11.1 Creating Finished Intelligence Products](../modules/02-cti/11-production/01-finished-products/) and [2.11.2 Disseminating Intelligence to the Correct Audiences](../modules/02-cti/11-production/02-dissemination/).
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [disseminate through approved channels](#disseminate-through-approved-channels)
 
@@ -963,8 +963,8 @@ Also: one hop, classroom pivot, not Relations graph. Survey select is [0.7 Exter
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
-| Used | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
+| Taught | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Used | [2.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/02-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -974,7 +974,7 @@ Also: feedback, evaluation, intelligence feedback loop
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle)
 
@@ -984,7 +984,7 @@ Also: score the five checks, actionable pass fail
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.5 Ensuring Intelligence Is Actionable](../modules/03-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
+| Taught | [2.1.5 Ensuring Intelligence Is Actionable](../modules/02-cti/01-core-intel/05-actionable-intelligence/) | CTI, Hunter |
 
 See also: [characteristics of actionable intelligence](#characteristics-of-actionable-intelligence), [actionable for a hunt](#actionable-for-a-hunt)
 
@@ -994,7 +994,7 @@ Also: what C3 means, what F1 means
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+| Taught | [2.2.3 Admiralty Code](../modules/02-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
 
 See also: [combining Admiralty ratings](#combining-admiralty-ratings), [source reliability scale](#source-reliability-scale)
 
@@ -1004,7 +1004,7 @@ Also: what the PIR stops you collecting, drive collection and analysis
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+| Taught | [2.1.4 Intelligence Requirements](../modules/02-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
 
 See also: [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis), [develop or refine intelligence requirements](#develop-or-refine-intelligence-requirements)
 
@@ -1014,7 +1014,7 @@ Also: interpret signer issuer validity, signed is not trusted
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+| Taught | [2.4.1 Hashing and Similarity Concepts](../modules/02-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [certificate / code-signing information](#certificate--code-signing-information), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
@@ -1024,7 +1024,7 @@ Also: redacted is not empty, cloud org is not the actor
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+| Taught | [2.5.1 RDAP and WHOIS Concepts](../modules/02-cti/05-rdap-whois/) | CTI, Hunter |
 
 See also: [key RDAP/WHOIS fields for enrichment and attribution](#key-rdapwhois-fields-for-enrichment-and-attribution), [query RDAP/WHOIS for a domain or IP](#query-rdapwhois-for-a-domain-or-ip)
 
@@ -1042,9 +1042,9 @@ Also: applicable TTP line, dual-gate TTP extract, Harbor-applicable IDs
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+| Taught | [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
-Evidence-bound mapping is [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
+Evidence-bound mapping is [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/).
 
 See also: [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment), [reject a TTP that does not apply here](#reject-a-ttp-that-does-not-apply-here)
 
@@ -1570,7 +1570,7 @@ Also: IOC vs TTP, observable vs behavior
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+| Taught | [2.8.3 IOC Handling and Enrichment Concepts](../modules/02-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
 
 See also: [IOC handling rules (keep, expire, reject)](#ioc-handling-rules-keep-expire-reject), [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report)
 
@@ -1580,7 +1580,7 @@ Also: keep cited IOC, expire stale IOC, reject uncited IOC
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+| Taught | [2.8.3 IOC Handling and Enrichment Concepts](../modules/02-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
 
 See also: [what an IOC is versus a TTP](#what-an-ioc-is-versus-a-ttp), [record an enrichment without re-teaching the tool](#record-an-enrichment-without-re-teaching-the-tool)
 
@@ -1590,9 +1590,9 @@ Also: enrich line, name the next lookup, 3.8.3.1
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+| Taught | [2.8.3 IOC Handling and Enrichment Concepts](../modules/02-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
 
-The generic hop sentence is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
+The generic hop sentence is [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/).
 
 See also: [IOC handling rules (keep, expire, reject)](#ioc-handling-rules-keep-expire-reject), [link analysis and campaign tracking](#link-analysis-and-campaign-tracking)
 
@@ -1602,7 +1602,7 @@ Also: same activity set, link line, not a group name
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+| Taught | [2.8.3 IOC Handling and Enrichment Concepts](../modules/02-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
 
 See also: [reject a vendor group name with no shared objects](#reject-a-vendor-group-name-with-no-shared-objects), [IOC handling rules (keep, expire, reject)](#ioc-handling-rules-keep-expire-reject)
 
@@ -1623,10 +1623,10 @@ Also: TTP extract to ATT&CK, extract behavior onto T-ID, evidence-bound ATT&CK m
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
-| Used | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+| Taught | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
-Copying printed IDs from a hunt-facing skim is [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/). Which extracted TTPs apply here is [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/).
+Copying printed IDs from a hunt-facing skim is [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/). Which extracted TTPs apply here is [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/).
 
 See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [reject a neighbor ATT&CK ID](#reject-a-neighbor-attck-id), [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report)
 
@@ -1662,7 +1662,7 @@ Also: weakest Diamond vertex, honest empty vertex
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
-| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Used | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [weakest vertex constrains the intel product](#weakest-vertex-constrains-the-intel-product)
 
@@ -1775,7 +1775,7 @@ Also: intelligence cycle flow, lifecycle loop, not a one-way pipeline
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle)
 
@@ -1863,7 +1863,7 @@ Also: STIX bundle seeds a hunt, bundle as hunt seed, not how to author STIX
 |----------|--------|-------|
 | Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
-Authoring STIX is [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) and [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/), not this module.
+Authoring STIX is [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/) and [2.10.2 How STIX Objects Are Used in Intelligence Production](../modules/02-cti/10-stix/02-stix-production/), not this module.
 
 See also: [STIX as hunt input](#stix-as-hunt-input), [turning STIX objects into hunt leads](#turning-stix-objects-into-hunt-leads)
 
@@ -1904,7 +1904,7 @@ Also: likelihood vs confidence, two axes estimative
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+| Taught | [2.2.1 Estimative Language](../modules/02-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [levels of confidence in attribution](#levels-of-confidence-in-attribution)
 
@@ -1914,7 +1914,7 @@ Also: requirement drives work, PIR drives collect and analyze
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+| Taught | [2.1.4 Intelligence Requirements](../modules/02-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
 
 See also: [explain how a given requirement drives analytic work](#explain-how-a-given-requirement-drives-analytic-work), [purpose of intelligence requirements](#purpose-of-intelligence-requirements)
 
@@ -1924,7 +1924,7 @@ Also: stack SOA NS TXT, cluster on MNAME
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+| Taught | [2.6.1 Advanced DNS Concepts](../modules/02-cti/06-advanced-dns/) | CTI, Hunter |
 
 See also: [SOA records](#soa-records), [use advanced DNS records to enrich or pivot](#use-advanced-dns-records-to-enrich-or-pivot)
 
@@ -1934,7 +1934,7 @@ Also: DTF vs ATT&CK, DTF discovery not behavior, DTF does not replace Diamond
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 See also: [purpose of DTF (discover additional adversary infrastructure)](#purpose-of-dtf-discover-additional-adversary-infrastructure), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
 
@@ -1944,7 +1944,7 @@ Also: TIP sighting, attach TIP object to draft
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+| Taught | [2.3.1 Internal Threat Intelligence Platform](../modules/02-cti/03-tools/01-internal-tip/) | CTI, Hunter |
 
 See also: [search and retrieve from the internal TIP](#search-and-retrieve-from-the-internal-tip), [use the TIP for enrichment or analysis](#use-the-tip-for-enrichment-or-analysis)
 
@@ -2187,7 +2187,7 @@ Also: DTF line, PTA plus P-ID, cite the shared characteristic
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 See also: [DTF pivot tactics and pivots](#dtf-pivot-tactics-and-pivots), [reject a weak DTF pivot](#reject-a-weak-dtf-pivot)
 
@@ -2197,7 +2197,7 @@ Also: stage a report span, Kill Chain stage from a report, CTI Kill Chain stage 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Taught | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 Single-row staging is [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
 
@@ -2210,7 +2210,7 @@ Also: Kill Chain neighbor stage, not previous not next
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
-| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Used | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Kill Chain stages](#kill-chain-stages), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity)
 
@@ -2240,7 +2240,7 @@ Also: relevant TTP in a report, TTP with a how, gate 1 TTP extract
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+| Taught | [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
 See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
 
@@ -2251,7 +2251,7 @@ Also: orientation neighbor, egress vs email vs sensor gap
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
-| Used | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+| Used | [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
 
@@ -2261,7 +2261,7 @@ Also: which collection class, OSINT vs internal first
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
+| Taught | [2.1.8 Collection Sources and Methods](../modules/02-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
 
 See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
 
@@ -2271,7 +2271,7 @@ Also: name the tilt, textual tell of bias
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+| Taught | [2.2.4 Cognitive Biases and Mitigation](../modules/02-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
 
 See also: [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis), [apply a mitigation technique](#apply-a-mitigation-technique)
 
@@ -2281,7 +2281,7 @@ Also: MNAME RNAME serial, serial is not a hash
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+| Taught | [2.6.1 Advanced DNS Concepts](../modules/02-cti/06-advanced-dns/) | CTI, Hunter |
 
 See also: [SOA records](#soa-records), [how advanced DNS supports enrichment and infrastructure analysis](#how-advanced-dns-supports-enrichment-and-infrastructure-analysis)
 
@@ -2291,7 +2291,7 @@ Also: read an estimative term, interpret likely vs high confidence
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+| Taught | [2.2.1 Estimative Language](../modules/02-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [use estimative language in an analytic judgment](#use-estimative-language-in-an-analytic-judgment)
 
@@ -2301,7 +2301,7 @@ Also: omitted evidence, stuck first label, isolate too early
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+| Taught | [2.2.4 Cognitive Biases and Mitigation](../modules/02-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
 
 See also: [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis), [identify potential cognitive bias in a judgment](#identify-potential-cognitive-bias-in-a-judgment)
 
@@ -2311,7 +2311,7 @@ Also: import hash, PE import table hash
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+| Taught | [2.4.1 Hashing and Similarity Concepts](../modules/02-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [ssdeep](#ssdeep), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
@@ -2342,8 +2342,8 @@ Also: organized data, context, parsed alert, rewritten log story
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
-| Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
-| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Used | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [data](#data), [intelligence](#intelligence)
 
@@ -2353,7 +2353,7 @@ Also: Admiralty 1–6, confirmed probably possibly
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+| Taught | [2.2.3 Admiralty Code](../modules/02-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
 
 See also: [source reliability scale](#source-reliability-scale), [combining Admiralty ratings](#combining-admiralty-ratings)
 
@@ -2417,8 +2417,8 @@ Also: analytic judgment, decision support, finished intelligence, so what
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
-| Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
-| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Used | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [data](#data), [information](#information), [transformation from raw data to information to intelligence](#transformation-from-raw-data-to-information-to-intelligence)
 
@@ -2428,8 +2428,8 @@ Also: intelligence cycle, intel lifecycle, intelligence process
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
-| Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [stages of the intelligence lifecycle](#stages-of-the-intelligence-lifecycle), [flow of the intelligence lifecycle](#flow-of-the-intelligence-lifecycle)
 
@@ -2439,7 +2439,7 @@ Also: types of intelligence, intel types, four intelligence types
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Taught | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [strategic intelligence](#strategic-intelligence), [operational intelligence](#operational-intelligence), [tactical intelligence](#tactical-intelligence), [technical intelligence](#technical-intelligence)
 
@@ -2491,7 +2491,7 @@ Also: KAC, must-be-true claims, if assumption false
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+| Taught | [2.2.2 Structured Analytic Techniques](../modules/02-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach), [purpose of structured analytic techniques](#purpose-of-structured-analytic-techniques)
 
@@ -2502,7 +2502,7 @@ Also: Reconnaissance Delivery Exploitation Installation C2 Actions on Objectives
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
-| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Used | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
 
@@ -2522,7 +2522,7 @@ Also: RDAP first, structured vs free text, HTTPS vs port 43
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+| Taught | [2.5.1 RDAP and WHOIS Concepts](../modules/02-cti/05-rdap-whois/) | CTI, Hunter |
 
 See also: [purpose of WHOIS and RDAP](#purpose-of-whois-and-rdap), [query RDAP/WHOIS for a domain or IP](#query-rdapwhois-for-a-domain-or-ip)
 
@@ -2532,7 +2532,7 @@ Also: created registrar nameservers, IP CIDR org
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+| Taught | [2.5.1 RDAP and WHOIS Concepts](../modules/02-cti/05-rdap-whois/) | CTI, Hunter |
 
 See also: [extract and interpret RDAP/WHOIS fields](#extract-and-interpret-rdapwhois-fields), [purpose of WHOIS and RDAP](#purpose-of-whois-and-rdap)
 
@@ -2556,7 +2556,7 @@ Also: low medium high attribution, classroom confidence scale
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+| Taught | [2.1.7 Attribution](../modules/02-cti/01-core-intel/07-attribution/) | CTI, Hunter |
 
 See also: [assess attribution statements for confidence and evidence](#assess-attribution-statements-for-confidence-and-evidence), [purpose and challenges of attribution](#purpose-and-challenges-of-attribution)
 
@@ -2588,7 +2588,7 @@ Also: map a report to ATT&CK, map an activity set to ATT&CK, CTI ATT&CK map line
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Taught | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 Alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt planning maps are [3.5.1](../modules/03-hunter/05-framework-application/).
 
@@ -2601,9 +2601,9 @@ Also: map an alert to ATT&CK, tactic plus technique plus cite
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
-| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
-Hunt planning maps are [3.5.1](../modules/03-hunter/05-framework-application/). Report / activity-set maps are [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
+Hunt planning maps are [3.5.1](../modules/03-hunter/05-framework-application/). Report / activity-set maps are [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/).
 
 See also: [ATT&CK tactics](#attck-tactics), [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck)
 
@@ -2676,7 +2676,7 @@ Also: ATT&CK matrix, ATT&CK Enterprise
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
-| Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Used | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK tactics](#attck-tactics), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
 
@@ -2694,7 +2694,7 @@ Also: Harbor TIP search, indicator type filter
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+| Taught | [2.3.1 Internal Threat Intelligence Platform](../modules/02-cti/03-tools/01-internal-tip/) | CTI, Hunter |
 
 See also: [purpose and core functions of the internal TIP](#purpose-and-core-functions-of-the-internal-tip), [search and retrieve from the internal TIP](#search-and-retrieve-from-the-internal-tip)
 
@@ -2784,7 +2784,7 @@ Also: operational intel, campaign intelligence, operational type
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Taught | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types)
 
@@ -2814,7 +2814,7 @@ Also: NS MX TXT SRV intel value
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+| Taught | [2.6.1 Advanced DNS Concepts](../modules/02-cti/06-advanced-dns/) | CTI, Hunter |
 
 See also: [SOA records](#soa-records), [use advanced DNS records to enrich or pivot](#use-advanced-dns-records-to-enrich-or-pivot)
 
@@ -2848,7 +2848,7 @@ Also: impact if true, so what here, not because clause
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+| Taught | [2.8.4 Threat Relevance and Organizational Impact](../modules/02-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
 
 See also: [relevance to this environment](#relevance-to-this-environment), [reject impact that skips the path](#reject-impact-that-skips-the-path)
 
@@ -2858,9 +2858,9 @@ Also: so what here, relevant to Harbor estate, mission asset platform
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+| Taught | [2.8.4 Threat Relevance and Organizational Impact](../modules/02-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
 
-TTP apply is [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/).
+TTP apply is [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/).
 
 See also: [potential organizational impact](#potential-organizational-impact), [reject impact that skips the path](#reject-impact-that-skips-the-path)
 
@@ -2959,9 +2959,9 @@ Also: infra hop from a seed, additional adversary domain or IP, CTI pivot line
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-DTF records the PTA/P pivot from that seed in [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/). The product here is the generic hop sentence, not a DTF ID line. Zeek `uid` joins are [uid](#uid).
+DTF records the PTA/P pivot from that seed in [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/). The product here is the generic hop sentence, not a DTF ID line. Zeek `uid` joins are [uid](#uid).
 
 See also: [pivoting concepts and techniques](#pivoting-concepts-and-techniques), [reject a weak or uncited infra pivot](#reject-a-weak-or-uncited-infra-pivot)
 
@@ -2971,7 +2971,7 @@ Also: seed shared property additional infra, one cited hop, stop rule
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 See also: [common data sources for infrastructure enrichment](#common-data-sources-for-infrastructure-enrichment), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
@@ -2981,7 +2981,7 @@ Also: place a report on the Kill Chain, activity-set progression, CTI Kill Chain
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Taught | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression)
 
@@ -3001,8 +3001,8 @@ Also: collection plan line, first collection class, what you will not collect
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.8 Collection Sources and Methods](../modules/03-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
-| Used | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
+| Taught | [2.1.8 Collection Sources and Methods](../modules/02-cti/01-core-intel/08-collection-sources/) | CTI, Hunter |
+| Used | [2.12.2 Local Production and Approval Processes](../modules/02-cti/12-site-specific/02-local-production/) | CTI, Hunter |
 
 See also: [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal), [follow the local collection-request or approval path](#follow-the-local-collection-request-or-approval-path)
 
@@ -3012,7 +3012,7 @@ Also: do not invent a local workflow, produce approve collect-request archive
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
+| Taught | [2.12.2 Local Production and Approval Processes](../modules/02-cti/12-site-specific/02-local-production/) | CTI, Hunter |
 
 See also: [follow the local collection-request or approval path](#follow-the-local-collection-request-or-approval-path), [document and archive products to local standards](#document-and-archive-products-to-local-standards)
 
@@ -3022,7 +3022,7 @@ Also: no send without the shown path, collection request is not a 3.1.8 plan
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
+| Taught | [2.12.2 Local Production and Approval Processes](../modules/02-cti/12-site-specific/02-local-production/) | CTI, Hunter |
 
 See also: [local production and approval processes](#local-production-and-approval-processes), [plan collection against an intelligence requirement](#plan-collection-against-an-intelligence-requirement)
 
@@ -3062,7 +3062,7 @@ Also: official copy not personal folder, local archive path
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.2 Local Production and Approval Processes](../modules/03-cti/12-site-specific/02-local-production/) | CTI, Hunter |
+| Taught | [2.12.2 Local Production and Approval Processes](../modules/02-cti/12-site-specific/02-local-production/) | CTI, Hunter |
 
 See also: [local production and approval processes](#local-production-and-approval-processes), [follow the local collection-request or approval path](#follow-the-local-collection-request-or-approval-path)
 
@@ -3072,9 +3072,9 @@ Also: direction, intelligence planning, requirements direction
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
-How to write PIRs is [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/), not this module.
+How to write PIRs is [2.1.4 Intelligence Requirements](../modules/02-cti/01-core-intel/04-intelligence-requirements/), not this module.
 
 See also: [intelligence lifecycle](#intelligence-lifecycle)
 
@@ -3103,10 +3103,10 @@ Also: PIR, ranked intelligence requirement
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
-| Used | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+| Taught | [2.1.4 Intelligence Requirements](../modules/02-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+| Used | [2.12.1 Local Intelligence Requirements and Priorities](../modules/02-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
 
-Writing PIRs is 3.1.4. Obtaining *this section's current* list is [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/).
+Writing PIRs is 2.1.4. Obtaining *this section's current* list is [2.12.1 Local Intelligence Requirements and Priorities](../modules/02-cti/12-site-specific/01-local-priorities/).
 
 See also: [purpose of intelligence requirements](#purpose-of-intelligence-requirements), [local PIRs are site-specific](#local-pirs-are-site-specific)
 
@@ -3116,7 +3116,7 @@ Also: every section has its own PIRs, do not invent a PIR list
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+| Taught | [2.12.1 Local Intelligence Requirements and Priorities](../modules/02-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
 
 See also: [identify current local intelligence priorities](#identify-current-local-intelligence-priorities), [Priority Intelligence Requirements (PIRs)](#priority-intelligence-requirements-pirs)
 
@@ -3156,7 +3156,7 @@ Also: in focus vs parked vs ask, interesting is not assigned
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+| Taught | [2.12.1 Local Intelligence Requirements and Priorities](../modules/02-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
 
 See also: [align analytic work to a stated local requirement](#align-analytic-work-to-a-stated-local-requirement), [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis)
 
@@ -3166,7 +3166,7 @@ Also: orientation line, obtain the current PIR list, do not invent PIRs
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+| Taught | [2.12.1 Local Intelligence Requirements and Priorities](../modules/02-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
 
 See also: [local PIRs are site-specific](#local-pirs-are-site-specific), [align analytic work to a stated local requirement](#align-analytic-work-to-a-stated-local-requirement)
 
@@ -3176,7 +3176,7 @@ Also: align Night Owl to a shown PIR, cannot mark in focus without a list
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.12.1 Local Intelligence Requirements and Priorities](../modules/03-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
+| Taught | [2.12.1 Local Intelligence Requirements and Priorities](../modules/02-cti/12-site-specific/01-local-priorities/) | CTI, Hunter |
 
 See also: [how local requirements drive analytic focus](#how-local-requirements-drive-analytic-focus), [identify current local intelligence priorities](#identify-current-local-intelligence-priorities)
 
@@ -3226,7 +3226,7 @@ Also: processing, exploitation, process and exploit
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [information](#information)
 
@@ -3250,7 +3250,7 @@ Also: purpose of each lifecycle stage, activities in each stage
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [stages of the intelligence lifecycle](#stages-of-the-intelligence-lifecycle)
 
@@ -3260,8 +3260,8 @@ Also: why attribute, attribution challenges, false flags shared infra
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
-| Used | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+| Taught | [2.1.7 Attribution](../modules/02-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+| Used | [2.11.1 Creating Finished Intelligence Products](../modules/02-cti/11-production/01-finished-products/) | CTI, Hunter |
 
 See also: [levels of confidence in attribution](#levels-of-confidence-in-attribution), [produce a threat actor profile](#produce-a-threat-actor-profile)
 
@@ -3271,7 +3271,7 @@ Also: honest Night Owl profile, unattributed actor profile, 3.11.1.2
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+| Taught | [2.11.1 Creating Finished Intelligence Products](../modules/02-cti/11-production/01-finished-products/) | CTI, Hunter |
 
 See also: [types of finished intelligence products](#types-of-finished-intelligence-products), [purpose and challenges of attribution](#purpose-and-challenges-of-attribution)
 
@@ -3281,7 +3281,7 @@ Also: activity note, assessment, defensive note, finished intel product types
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+| Taught | [2.11.1 Creating Finished Intelligence Products](../modules/02-cti/11-production/01-finished-products/) | CTI, Hunter |
 
 See also: [structure and quality standards for a finished product](#structure-and-quality-standards-for-a-finished-product), [draft and evaluate a finished intelligence product](#draft-and-evaluate-a-finished-intelligence-product)
 
@@ -3291,7 +3291,7 @@ Also: BLUF facts assessment gaps action, quality fail T1486 and certainty
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+| Taught | [2.11.1 Creating Finished Intelligence Products](../modules/02-cti/11-production/01-finished-products/) | CTI, Hunter |
 
 See also: [types of finished intelligence products](#types-of-finished-intelligence-products), [use estimative language in an analytic judgment](#use-estimative-language-in-an-analytic-judgment)
 
@@ -3301,7 +3301,7 @@ Also: draft line, eval line, fail unearned who
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.1 Creating Finished Intelligence Products](../modules/03-cti/11-production/01-finished-products/) | CTI, Hunter |
+| Taught | [2.11.1 Creating Finished Intelligence Products](../modules/02-cti/11-production/01-finished-products/) | CTI, Hunter |
 
 See also: [structure and quality standards for a finished product](#structure-and-quality-standards-for-a-finished-product), [produce a threat actor profile](#produce-a-threat-actor-profile)
 
@@ -3311,7 +3311,7 @@ Also: intel store, have we seen this, Harbor TIP
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+| Taught | [2.3.1 Internal Threat Intelligence Platform](../modules/02-cti/03-tools/01-internal-tip/) | CTI, Hunter |
 
 See also: [navigating and searching the internal TIP](#navigating-and-searching-the-internal-tip), [collection source classes (OSINT, commercial, internal)](#collection-source-classes-osint-commercial-internal)
 
@@ -3331,7 +3331,7 @@ Also: why DTF, ThreatMesh purpose, communicate and record pivots
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
 See also: [DTF pivot tactics and pivots](#dtf-pivot-tactics-and-pivots), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -3341,7 +3341,7 @@ Also: why estimative terms, comparable uncertainty
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+| Taught | [2.2.1 Estimative Language](../modules/02-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [how estimative language communicates confidence and uncertainty](#how-estimative-language-communicates-confidence-and-uncertainty)
 
@@ -3351,7 +3351,7 @@ Also: why write a requirement, focus collection on a decision
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+| Taught | [2.1.4 Intelligence Requirements](../modules/02-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
 
 See also: [Priority Intelligence Requirements (PIRs)](#priority-intelligence-requirements-pirs), [how requirements drive collection and analysis](#how-requirements-drive-collection-and-analysis)
 
@@ -3361,7 +3361,7 @@ Also: why SAT, make thinking visible, do not lock first story
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+| Taught | [2.2.2 Structured Analytic Techniques](../modules/02-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach), [Key Assumptions Check](#key-assumptions-check)
 
@@ -3383,7 +3383,7 @@ Also: registration lookup, who holds the block
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
+| Taught | [2.5.1 RDAP and WHOIS Concepts](../modules/02-cti/05-rdap-whois/) | CTI, Hunter |
 
 See also: [key differences between WHOIS and RDAP](#key-differences-between-whois-and-rdap), [key RDAP/WHOIS fields for enrichment and attribution](#key-rdapwhois-fields-for-enrichment-and-attribution)
 
@@ -3401,7 +3401,7 @@ Also: DNS query type, `qtype`
 
 Types taught: A, AAAA, CNAME, MX, TXT, NS, PTR, SOA, SRV, NULL.
 
-SOA *field interpretation* and intel pivot are [3.6.1 Advanced DNS](../modules/03-cti/06-advanced-dns/).
+SOA *field interpretation* and intel pivot are [2.6.1 Advanced DNS](../modules/02-cti/06-advanced-dns/).
 
 ### query
 
@@ -3417,8 +3417,8 @@ Also: RDAP first, WHOIS fallback
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/) | CTI, Hunter |
-| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [2.5.1 RDAP and WHOIS Concepts](../modules/02-cti/05-rdap-whois/) | CTI, Hunter |
+| Used | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 See also: [extract and interpret RDAP/WHOIS fields](#extract-and-interpret-rdapwhois-fields), [purpose of WHOIS and RDAP](#purpose-of-whois-and-rdap)
 
@@ -3496,7 +3496,7 @@ Also: reject the neighbor ID, neighbor technique reject, T1059.001 vs T1059.003
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
+| Taught | [2.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/02-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques)
 
@@ -3506,7 +3506,7 @@ Also: reject Unix TTP on Windows Harbor, reject ESXi T1486, platform-miss TTP
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
+| Taught | [2.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/02-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
 See also: [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
 
@@ -3516,7 +3516,7 @@ Also: APT name is not a link, Night Owl APT is not glue
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.3 IOC Handling and Enrichment Concepts](../modules/03-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
+| Taught | [2.8.3 IOC Handling and Enrichment Concepts](../modules/02-cti/08-enrichment/03-ioc-handling/) | CTI, Hunter |
 
 See also: [link analysis and campaign tracking](#link-analysis-and-campaign-tracking)
 
@@ -3546,7 +3546,7 @@ Also: reject pay-db-01 outage from WS-JLEE, jewel needs a path
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+| Taught | [2.8.4 Threat Relevance and Organizational Impact](../modules/02-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
 
 See also: [potential organizational impact](#potential-organizational-impact), [relevance to this environment](#relevance-to-this-environment)
 
@@ -3556,7 +3556,7 @@ Also: impact line is not a PIR, impact line is not 3.1.7
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.4 Threat Relevance and Organizational Impact](../modules/03-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
+| Taught | [2.8.4 Threat Relevance and Organizational Impact](../modules/02-cti/08-enrichment/04-relevance-impact/) | CTI, Hunter |
 
 See also: [relevance to this environment](#relevance-to-this-environment), [local PIRs are site-specific](#local-pirs-are-site-specific)
 
@@ -3566,9 +3566,9 @@ Also: reject P0202 /24, reject invented P-code, distinctive NS vs shared hosting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Taught | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-The generic hop reject (no PTA/P IDs) is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
+The generic hop reject (no PTA/P IDs) is [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/).
 
 See also: [apply DTF from a known-bad seed](#apply-dtf-from-a-known-bad-seed), [reject a weak or uncited infra pivot](#reject-a-weak-or-uncited-infra-pivot)
 
@@ -3578,7 +3578,7 @@ Also: reject cloud /24 as infra, reject public NS hop, uncited vendor domain
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 The DTF-ID reject is [reject a weak DTF pivot](#reject-a-weak-dtf-pivot).
 
@@ -3590,7 +3590,7 @@ Also: unobserved Weaponization, uncited Actions on Objectives, reject a Kill Cha
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Taught | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next)
 
@@ -3600,7 +3600,7 @@ Also: vendor-name Adversary, Night Owl APT is not Adversary, reject vendor clust
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Taught | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
 
@@ -3696,7 +3696,7 @@ Also: ask intel for more work on that alert
 |----------|--------|-------|
 | Taught | [0.3 How work can move](../modules/00-intro/04-how-work-moves/) | SOC, Hunter, CTI, DE |
 
-SOC ticket-type depth is [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/). CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/).
+SOC ticket-type depth is [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/). CTI receive/answer is [2.11.3 Handling RFIs](../modules/02-cti/11-production/03-rfi/).
 
 See also: [how work can move from an alert](#how-work-can-move-from-an-alert), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -3707,9 +3707,9 @@ Also: RFI, information request to another team
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
-| Used | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
+| Used | [2.11.3 Handling RFIs](../modules/02-cti/11-production/03-rfi/) | CTI, Hunter |
 
-CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/). This heading is the SOC ticket type.
+CTI receive/answer is [2.11.3 Handling RFIs](../modules/02-cti/11-production/03-rfi/). This heading is the SOC ticket type.
 
 See also: [incident report](#incident-report), [purpose and lifecycle of an RFI](#purpose-and-lifecycle-of-an-rfi)
 
@@ -3719,7 +3719,7 @@ Also: intelligence RFI inbox, receive evaluate prioritize respond
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
+| Taught | [2.11.3 Handling RFIs](../modules/02-cti/11-production/03-rfi/) | CTI, Hunter |
 
 See also: [evaluate and prioritize an RFI](#evaluate-and-prioritize-an-rfi), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -3729,7 +3729,7 @@ Also: produce a response to an RFI, reject an out-of-scope or duplicate RFI
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
+| Taught | [2.11.3 Handling RFIs](../modules/02-cti/11-production/03-rfi/) | CTI, Hunter |
 
 See also: [purpose and lifecycle of an RFI](#purpose-and-lifecycle-of-an-rfi), [produce a threat actor profile](#produce-a-threat-actor-profile)
 
@@ -3801,7 +3801,7 @@ Also: KAC vs ACH vs neither, pick the SAT
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+| Taught | [2.2.2 Structured Analytic Techniques](../modules/02-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [when to apply ACH vs Key Assumptions Check](#when-to-apply-ach-vs-key-assumptions-check), [apply a structured analytic technique](#apply-a-structured-analytic-technique)
 
@@ -3821,7 +3821,7 @@ Also: retrieve line, open IND-1882
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+| Taught | [2.3.1 Internal Threat Intelligence Platform](../modules/02-cti/03-tools/01-internal-tip/) | CTI, Hunter |
 
 See also: [navigating and searching the internal TIP](#navigating-and-searching-the-internal-tip), [use the TIP for enrichment or analysis](#use-the-tip-for-enrichment-or-analysis)
 
@@ -3933,8 +3933,8 @@ Also: Silent Push for intelligence, historical PDNS
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
-| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
-| Used | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
+| Used | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Used | [2.9.3 Silent Push](../modules/02-cti/09-platforms/03-silent-push/) | CTI, Hunter |
 
 See also: [Silent Push for hunting](#silent-push-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -3944,7 +3944,7 @@ Also: how to pivot and enrich indicators in Silent Push, Silent Push PDNS siblin
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
+| Taught | [2.9.3 Silent Push](../modules/02-cti/09-platforms/03-silent-push/) | CTI, Hunter |
 
 See also: [enrich an indicator using Silent Push](#enrich-an-indicator-using-silent-push), [purpose, strengths, and weaknesses of Silent Push](#purpose-strengths-and-weaknesses-of-silent-push)
 
@@ -3954,7 +3954,7 @@ Also: Silent Push enrich line, pivot within Silent Push to identify additional i
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
+| Taught | [2.9.3 Silent Push](../modules/02-cti/09-platforms/03-silent-push/) | CTI, Hunter |
 
 See also: [Silent Push core capabilities and use cases](#silent-push-core-capabilities-and-use-cases), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
@@ -4013,7 +4013,7 @@ Also: Admiralty A–F, usually reliable, cannot be judged
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.3 Admiralty Code](../modules/03-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
+| Taught | [2.2.3 Admiralty Code](../modules/02-cti/02-tradecraft/03-admiralty-code/) | CTI, Hunter |
 
 See also: [information credibility scale](#information-credibility-scale), [assign Admiralty Code ratings](#assign-admiralty-code-ratings)
 
@@ -4031,7 +4031,7 @@ Also: fuzzy hash, ssdeep score, classroom 50
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+| Taught | [2.4.1 Hashing and Similarity Concepts](../modules/02-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [TLSH](#tlsh), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
@@ -4041,7 +4041,7 @@ Also: Start of Authority, MNAME, RNAME, zone serial
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
+| Taught | [2.6.1 Advanced DNS Concepts](../modules/02-cti/06-advanced-dns/) | CTI, Hunter |
 | Used | [1.2.3 DNS Engine](../modules/01-soc/02-zeek/03-dns-engine/) | SOC, Hunter |
 
 See also: [interpret an SOA record](#interpret-an-soa-record), [qtype_name](#qtype_name)
@@ -4056,7 +4056,7 @@ Also: lifecycle stages, six stages, intelligence cycle stages
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Taught | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [intelligence lifecycle](#intelligence-lifecycle), [purpose and activities in each stage](#purpose-and-activities-in-each-stage)
 
@@ -4087,7 +4087,7 @@ Also: STIX for hunters, read STIX for hunting, STIX report or bundle
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
-| Used | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+| Used | [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 See also: [hunt-relevant STIX objects](#hunt-relevant-stix-objects), [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt)
 
@@ -4098,9 +4098,9 @@ Also: indicator attack-pattern observed-data malware threat-actor intrusion-set 
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
-| Used | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+| Used | [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
-Core STIX object inventory for production is [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/).
+Core STIX object inventory for production is [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/).
 
 See also: [hunt-relevant STIX objects](#hunt-relevant-stix-objects), [STIX as hunt input](#stix-as-hunt-input)
 
@@ -4110,7 +4110,7 @@ Also: STIX indicator vs observed-data, STIX malware object
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+| Taught | [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 See also: [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report), [STIX objects a hunter uses](#stix-objects-a-hunter-uses)
 
@@ -4120,7 +4120,7 @@ Also: STIX attack-pattern, empty threat-actor, intrusion-set vs campaign
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+| Taught | [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 See also: [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report), [reject filling Adversary from a vendor name](#reject-filling-adversary-from-a-vendor-name)
 
@@ -4130,7 +4130,7 @@ Also: STIX course-of-action, STIX sighting vs indicator, STIX identity
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+| Taught | [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 See also: [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report), [linking STIX objects to represent threat activity](#linking-stix-objects-to-represent-threat-activity)
 
@@ -4140,7 +4140,7 @@ Also: label a STIX type, reject the neighbor STIX type
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
+| Taught | [2.10.1 Core STIX Objects](../modules/02-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 See also: [Indicator, Observed Data, and Malware (STIX)](#indicator-observed-data-and-malware-stix), [STIX as hunt input](#stix-as-hunt-input)
 
@@ -4150,7 +4150,7 @@ Also: STIX bundle for sharing, STIX for automation
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+| Taught | [2.10.2 How STIX Objects Are Used in Intelligence Production](../modules/02-cti/10-stix/02-stix-production/) | CTI, Hunter |
 
 See also: [use TAXII for sharing and consumption of intelligence](#use-taxii-for-sharing-and-consumption-of-intelligence), [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt)
 
@@ -4160,7 +4160,7 @@ Also: STIX relationship_type, Night Owl STIX graph, explain a STIX scenario
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+| Taught | [2.10.2 How STIX Objects Are Used in Intelligence Production](../modules/02-cti/10-stix/02-stix-production/) | CTI, Hunter |
 
 See also: [create and validate STIX objects](#create-and-validate-stix-objects), [Course of Action, Identity, Relationship, and Sighting (STIX)](#course-of-action-identity-relationship-and-sighting-stix)
 
@@ -4170,7 +4170,7 @@ Also: valid STIX pattern, missing relationship_type, unearned threat-actor objec
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+| Taught | [2.10.2 How STIX Objects Are Used in Intelligence Production](../modules/02-cti/10-stix/02-stix-production/) | CTI, Hunter |
 
 See also: [linking STIX objects to represent threat activity](#linking-stix-objects-to-represent-threat-activity), [identify and label common STIX objects in a report](#identify-and-label-common-stix-objects-in-a-report)
 
@@ -4180,7 +4180,7 @@ Also: TAXII collection, publish STIX bundle, consume STIX, harbor-cti classroom 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/) | CTI, Hunter |
+| Taught | [2.10.2 How STIX Objects Are Used in Intelligence Production](../modules/02-cti/10-stix/02-stix-production/) | CTI, Hunter |
 
 TAXII is the channel. The bundle is the payload. Emailing a PDF is not TAXII.
 
@@ -4192,7 +4192,7 @@ Also: strategic intel, strategic type, posture intelligence
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Taught | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types)
 
@@ -4328,7 +4328,7 @@ Also: tactical intel, tactical type
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Taught | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types), [technical intelligence](#technical-intelligence)
 
@@ -4348,7 +4348,7 @@ Also: trend locality sensitive hash, TLSH distance
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+| Taught | [2.4.1 Hashing and Similarity Concepts](../modules/02-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [ssdeep](#ssdeep), [use file similarity hashes to identify related samples](#use-file-similarity-hashes-to-identify-related-samples)
 
@@ -4358,7 +4358,7 @@ Also: rewrite a messy ask, translate are we safe
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.4 Intelligence Requirements](../modules/03-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
+| Taught | [2.1.4 Intelligence Requirements](../modules/02-cti/01-core-intel/04-intelligence-requirements/) | CTI, Hunter |
 
 See also: [develop or refine intelligence requirements](#develop-or-refine-intelligence-requirements), [purpose of intelligence requirements](#purpose-of-intelligence-requirements)
 
@@ -4368,7 +4368,7 @@ Also: activity group, cluster vs country, nation-state claim
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.7 Attribution](../modules/03-cti/01-core-intel/07-attribution/) | CTI, Hunter |
+| Taught | [2.1.7 Attribution](../modules/02-cti/01-core-intel/07-attribution/) | CTI, Hunter |
 
 See also: [assess attribution statements for confidence and evidence](#assess-attribution-statements-for-confidence-and-evidence), [purpose and challenges of attribution](#purpose-and-challenges-of-attribution)
 
@@ -4378,7 +4378,7 @@ Also: technical intel, technical type, technical observables
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
+| Taught | [2.1.3 Intelligence Types](../modules/02-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
 See also: [intelligence types](#intelligence-types), [tactical intelligence](#tactical-intelligence)
 
@@ -4388,7 +4388,7 @@ Also: ACH to hunt an I, KAC a must-be, rewrite without the anchor
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.4 Cognitive Biases and Mitigation](../modules/03-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
+| Taught | [2.2.4 Cognitive Biases and Mitigation](../modules/02-cti/02-tradecraft/04-cognitive-biases/) | CTI, Hunter |
 
 See also: [apply a mitigation technique](#apply-a-mitigation-technique), [common cognitive biases that affect analysis](#common-cognitive-biases-that-affect-analysis)
 
@@ -4420,7 +4420,7 @@ Also: data to information to intelligence, how raw data becomes intelligence
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
-| Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
+| Used | [2.1.2 Intelligence Lifecycle](../modules/02-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [data](#data), [information](#information), [intelligence](#intelligence)
 
@@ -4592,7 +4592,7 @@ Also: URLScan for intelligence, live page scan
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
-| Used | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
+| Used | [2.9.4 URLScan](../modules/02-cti/09-platforms/04-urlscan/) | CTI, Hunter |
 
 See also: [URLScan for hunting](#urlscan-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -4602,7 +4602,7 @@ Also: interpreting URLScan results for intelligence value, this page load
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
+| Taught | [2.9.4 URLScan](../modules/02-cti/09-platforms/04-urlscan/) | CTI, Hunter |
 
 See also: [submit or retrieve a URLScan result](#submit-or-retrieve-a-urlscan-result), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
 
@@ -4612,7 +4612,7 @@ Also: retrieve existing URLScan, extract actionable intelligence from a URLScan 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
+| Taught | [2.9.4 URLScan](../modules/02-cti/09-platforms/04-urlscan/) | CTI, Hunter |
 
 See also: [URLScan core capabilities and use cases](#urlscan-core-capabilities-and-use-cases), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
 
@@ -4622,7 +4622,7 @@ Also: write a likely judgment, banned is will could
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.1 Estimative Language](../modules/03-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
+| Taught | [2.2.1 Estimative Language](../modules/02-cti/02-tradecraft/01-estimative-language/) | CTI, Hunter |
 
 See also: [common estimative terms and their meaning](#common-estimative-terms-and-their-meaning), [interpret the likelihood expressed in an estimative statement](#interpret-the-likelihood-expressed-in-an-estimative-statement)
 
@@ -4632,8 +4632,8 @@ Also: pivot on NS and MNAME, unique TXT token
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/) | CTI, Hunter |
-| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [2.6.1 Advanced DNS Concepts](../modules/02-cti/06-advanced-dns/) | CTI, Hunter |
+| Used | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 See also: [SOA records](#soa-records), [other advanced DNS record types of intelligence value](#other-advanced-dns-record-types-of-intelligence-value), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
@@ -4643,10 +4643,10 @@ Also: DTF lookup line, P0101.010 to RDAP NS, do not re-teach 3.5
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
-| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [2.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/02-cti/07-frameworks/04-dtf/) | CTI, Hunter |
+| Used | [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-The generic hop sentence is [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/).
+The generic hop sentence is [2.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/02-cti/08-enrichment/01-infra-pivot/).
 
 See also: [apply DTF from a known-bad seed](#apply-dtf-from-a-known-bad-seed), [DTF pivot tactics and pivots](#dtf-pivot-tactics-and-pivots)
 
@@ -4656,7 +4656,7 @@ Also: related vs identical, ssdeep 50, same imphash different SHA256
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.4.1 Hashing and Similarity Concepts](../modules/03-cti/04-file-similarity/) | CTI, Hunter |
+| Taught | [2.4.1 Hashing and Similarity Concepts](../modules/02-cti/04-file-similarity/) | CTI, Hunter |
 
 See also: [imphash](#imphash), [ssdeep](#ssdeep), [TLSH](#tlsh)
 
@@ -4666,7 +4666,7 @@ Also: add a sighting, link related indicator in TIP
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.1 Internal Threat Intelligence Platform](../modules/03-cti/03-tools/01-internal-tip/) | CTI, Hunter |
+| Taught | [2.3.1 Internal Threat Intelligence Platform](../modules/02-cti/03-tools/01-internal-tip/) | CTI, Hunter |
 
 See also: [how the TIP supports enrichment, analysis, and production](#how-the-tip-supports-enrichment-analysis-and-production), [search and retrieve from the internal TIP](#search-and-retrieve-from-the-internal-tip)
 
@@ -4697,7 +4697,7 @@ Also: Diamond attribution, unknown adversary vertex
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
-| Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Used | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond Model purpose](#diamond-model-purpose), [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [Diamond Model application in CTI](#diamond-model-application-in-cti)
 
@@ -4708,7 +4708,7 @@ Also: Kill Chain progression, where you are in the intrusion
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
-| Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
+| Used | [2.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/02-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain)
 
@@ -4783,7 +4783,7 @@ Also: VT for intelligence, hash reputation, not Relations
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
-| Used | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
+| Used | [2.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/02-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [VirusTotal for hunting](#virustotal-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -4793,7 +4793,7 @@ Also: use the Relations tab to identify additional adversary infrastructure, VT 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
+| Taught | [2.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/02-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [VirusTotal Behavior tab for host and network events](#virustotal-behavior-tab-for-host-and-network-events), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
@@ -4803,7 +4803,7 @@ Also: extract file, network, registry, and process events from the Behavior tab,
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
+| Taught | [2.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/02-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [VirusTotal Relations tab for infrastructure pivoting](#virustotal-relations-tab-for-infrastructure-pivoting), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
@@ -4817,7 +4817,7 @@ Also: Diamond product constraint, weakest vertex drops a claim, Adversary empty 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
+| Taught | [2.7.2 Diamond Model Application in CTI](../modules/02-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 Naming the weakest on an incident card is [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
 
@@ -4850,7 +4850,7 @@ Also: locked story vs competing hyps, neither collect first
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.2.2 Structured Analytic Techniques](../modules/03-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
+| Taught | [2.2.2 Structured Analytic Techniques](../modules/02-cti/02-tradecraft/02-structured-techniques/) | CTI, Hunter |
 
 See also: [Analysis of Competing Hypotheses (ACH)](#analysis-of-competing-hypotheses-ach), [Key Assumptions Check](#key-assumptions-check)
 

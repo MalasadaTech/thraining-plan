@@ -31,7 +31,7 @@ Use knowledge codes `A`–`D`, task codes such as `2b` / `3c` / `4c`, or `—`. 
 
 **Suggested teaching-unit ID:** _(or “assign on approval”)_  
 **Suggested outline headings:** _(K and T, or “assign on approval”)_  
-**Shared vs role-specific:** `modules/00-intro/` / `01-soc` / `02-hunter` / `03-cti`
+**Shared vs role-specific:** `modules/00-intro/` / `01-soc` / `02-cti` / `03-hunter` / `04-de`
 
 ## Already signed off
 
