@@ -1,225 +1,94 @@
-# Module 1.5.2 – Reporting Timelines  
+# Module 1.5.2 – Reporting Timeline Requirements  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.5.2 – Reporting Timelines  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Title:** Module 1.5.2 – Reporting Timeline Requirements  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Report clocks, not alert 15/45. Name the clock.
+Report clocks, not alert 15 / 45. Name which one. Say if it is at risk.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Submit timelines by type + escalate-when-blocked
-2. Given timestamps: which clock, met / at risk / breached
+Watch the **report** clock.
 
-**Mapped Items:**  
-K: 1.5.2.1 | T: 1.5.2.2
+Name **which** clock.  
+Say whether it is **at risk**.
 
 **Speaker Notes:**  
-Hunter K is A/B/B.
+Type is already picked. Do not route. Do not use alert SLA.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Two kinds of clock
+**Title:** Submit vs escalate-for-more-info
 
-- Not 1.4.5
-- Submit vs blocked
-- Three examples
-- Four timestamp rows
-- Knowledge check
+**Submit — incident** — from the decision. Classroom **30 min**.  
+**Submit — RFI** — from the question. Classroom **60 min**.  
+**Escalate-for-more-info** — from the moment you are blocked. Classroom **15 min**.
 
 **Speaker Notes:**  
-1.5.3 next.
+Outline a–b. 30 / 60 / 15 are this lesson only. Do not invent an informational clock.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Which clock + at risk
 
-Alert start/close (**1.4.5**)  
-Which *type* (**1.5.1**)  
-Who gets the report (**1.5.3**)  
-“Work faster”
-
-**Key Point:** Name the **report** clock.
-
-**Speaker Notes:**  
-Fence.
-
----
-
-### Slide 5 – Submit Clocks
-**Title:** Submit by Type (Classroom)
-
-Incident — **30 min** from *decision*  
-RFI — **60 min** from *question*  
-Informational — before changeover (**16:00** in exercises)
-
-**Speaker Notes:**  
-Outline a.
-
----
-
-### Slide 6 – Blocked Clock
-**Title:** Escalate-for-More-Info
-
-Starts when you are **blocked**.  
-Classroom: **15 min** to escalate the blocker.
-
-Still not the alert-close clock.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Status Words
-**Title:** Met / At Risk / Breached
-
-**Met** — inside the window (or sent)  
-**At risk** — last third (optional)  
-**Breached** — past the number  
-
-Always name the clock.
-
-**Speaker Notes:**  
-Task.
-
----
-
-### Slide 8 – Example 1: Met
-**Title:** Example 1 – Incident 14:00 → 14:22
-
-**Submit — incident.**  
-**Met** (22 of 30).
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 9 – Example 2: RFI Late
-**Title:** Example 2 – Question 13:30, Now 14:40
-
-**Submit — RFI.**  
-**Breached** (70 of 60).  
+**Submit — RFI, at risk** — question `13:30`, still unsent at `14:40`.  
 Not the 30-minute incident clock.
 
+**Escalate-for-more-info, at risk** — blocked at `14:10`, still blocked at `14:28`.  
+Submit is still running. Act on the blocker.
+
 **Speaker Notes:**  
-Type drives the number.
+A12 is the case they already opened. The RFI is the update domain. Do not retell the plot.
 
 ---
 
-### Slide 10 – Example 3: Blocked
-**Title:** Example 3 – Blocked 14:10, Now 14:28
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-**Escalate-for-more-info.**  
-**Breached** (18 of 15).  
-Submit-incident is still running — act on blocked first.
+No alert 15 / 45 (**1.4.5**).  
+No type pick (**1.5.1**).  
+No recipients or channel (**1.5.3**).  
+No invented DYA minutes.  
+**1.7** is retired.
 
 **Speaker Notes:**  
-Two clocks can be live.
+If they write changeover as a report clock, stop.
 
 ---
 
-### Slide 11 – Site Numbers
-**Title:** Classroom vs Site
-
-30 / 60 / 15 are **this lesson**.  
-Overlay a site card if you have one.  
-Keep **submit** vs **blocked**.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Alert 15/45  
-- RFI scored as 30  
-- Sitting on submit while blocked  
-- “Late” with no clock name  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Now = 15:00
-**Title:** Exercise Clock
-
-Incident 30 · RFI 60 · FYI by 16:00 · blocked 15  
-Now **15:00**
-
-**Speaker Notes:**  
-Leave up.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize Ex 1–3.
-2. A–D: clock + status + elapsed.
-3. No routing.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Submit clocks vs 1.4.5?
-2. When does blocked-escalate start?
-3. Why name the clock?
-4. Both clocks live — which first?
-5. Who owns live-org minutes?
+1. This hour is the same 15 / 45 clocks as **1.4.5**. True or false?  
+2. When does the **escalate-for-more-info** clock start?  
+3. RFI question at `13:30`, still unsent at `14:40`. Which clock, and is it at risk?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Submit-by-type. Blocked → escalate in 15.
-- Name the clock. Not alert SLA.
-- Next: notification (**1.5.3**).
+Submit-by-type. Blocked → escalate.  
+Name the clock. Not the alert SLA.
+
+**Next:** **1.5.3** Notification and distribution
 
 **Speaker Notes:**  
-Do not open 1.5.3 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Report Clocks — Quick Reference
-
-| Clock | From | Classroom |
-|-------|------|-----------|
-| Incident submit | Decision | 30 min |
-| RFI submit | Question | 60 min |
-| Informational | Decision | Before changeover |
-| Blocked escalate | Became blocked | 15 min |
-
-**Coming next:** Module 1.5.3 – Notification and distribution
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open routing unless that hour is scheduled.
