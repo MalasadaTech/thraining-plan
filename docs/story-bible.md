@@ -113,11 +113,37 @@ Those stay “ask your real site.”
 
 ---
 
+## When each fact appears
+
+One chain. Each lesson plants or reads a beat. The **alert** is not the whole incident. The **notification** is not the whole investigation. CTI and hunt add facts the SOC product did not owe.
+
+Do not invent a second plot. Extra classroom rows (`helpdesk.exe`, Word → `helper.dll`) stay off this table.
+
+| Beat (already in “Main incident”) | First teach / plant | First *use* in the flow | Do **not** dump it in |
+|-----------------------------------|---------------------|-------------------------|------------------------|
+| `wscript` → hidden `powershell -enc` on **WS-JLEE** / `jlee` | **1.1.1** process | **1.4** the alert (this is what fired) | — |
+| `invoice.vbs` in Temp (file row, hash) | **1.1.2** file | **1.4.1** investigation; **1.6** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
+| HKCU Run **`Updater`** → `%TEMP%\update.exe` | **1.1.4** registry | **2.x** hunt (more hosts the alert missed) | Not in the first alert. Not required on the leadership notify |
+| Host GET `update.exe` :8080 to PRD domain / `203.0.113.88` | **1.1.3** host-network + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **3.11.3** RFI seed (the domain) | Not all of this in the leadership notify |
+| Sibling `login-prd.net`, same NS, same A, SOA | **3.5** / **3.6** / **3.8** | **3.x** enrichment; extra infra → **block** (0.3 e) | Not a SOC notify field |
+| Hunt package: look for `Updater` / `update.exe` / more `invoice.vbs` | **2.x** | Hunt product; same package can go to **4.x** DE | Not a rewrite of the SOC ticket |
+| Nomination / tune / new rule | **4.x** | After the hunt or SOC “we keep missing this” | Not invented in 1.1 |
+
+**Alert (1.4):** only what a detection would fire on first — the process create (`wscript` → encoded PowerShell).
+
+**Notify / escalate (1.6):** what SOC knows at hand-off — host, user, process chain, the `.vbs` they pulled. One sentence for leadership. The RFI asks intel to work the domain / file, not to rewrite the notify.
+
+**CTI:** more infrastructure and “so what.” **Hunt:** activity the alerts missed. **DE:** lasting rule. Same evidence can sit on more than one desk (**0.4**); the *product* is different.
+
+When we revise a 1.1 / 1.2 / 1.4 / 1.6 lesson, plant or read only that row’s beat. Do not retell the whole chain.
+
+---
+
 ## Companion story (later)
 
-Not written yet. Planned shape: one short story, same facts as this file, told from more than one desk. Starting spine (from existing A12 / RFI / Sam):
+Not written yet. It retells **this table** from more than one desk. Same facts. Not a different plot.
 
-SOC gets the alert → triages → sends to IR and does leadership notification → RFI to intel for more work.
+Spine: SOC gets the alert → triages → IR + leadership notify → RFI to intel → enrich / extra infra to block → hunt package → DE.
 
 Do not add new plot to that story until it is in this bible.
 

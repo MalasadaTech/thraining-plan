@@ -29,6 +29,7 @@ Then:
 
 - [x] Explore a fictional back story — an ongoing theme, like the Night Owl story and Harbor company already in the lessons
 - [x] Review for chances to re-order things
+- [x] Put a “when each fact appears” map in the story bible (alert vs notify vs CTI vs hunt vs DE)
 - [ ] Keep [docs/story-bible.md](story-bible.md) current as training develops
 - [ ] Decide leftover Harbor map items that do not fit a law firm (OT, payroll)
 - [ ] Rename Night Owl → Pink River Dolphin (PRD) and Harbor → Dixon, Yamada, & Associates (DYA) in the lessons
