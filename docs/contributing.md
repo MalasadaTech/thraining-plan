@@ -47,7 +47,7 @@ Only after Gate 1. If Gate 1 said “add to an existing module,” amend that mo
 
 ### Coverage (required)
 
-The module must cover **every** outline knowledge bullet and task that belongs to this teaching unit. Those items go in the student guide and in **Concepts taught**.
+The module must cover **every** outline knowledge bullet and task that belongs to this teaching unit. Those items go in the student guide and in **Concepts taught**. Follow the outline’s **stay-in-this-lesson** note for that ID. How to write the files is [generate-module.md](generate-module.md).
 
 Length follows the outline, not a clock. **Do not add optional content to fill.** If a section is marked optional and this lesson does not need it, omit it.
 

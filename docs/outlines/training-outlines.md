@@ -8,11 +8,15 @@
 
 These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection Engineer roles.
 
+**Stay in this lesson:** a short note under a unit or child says what this hour is *not*. It is not extra syllabus. Follow it when writing or revising the lesson. How to write the lesson is [generate-module.md](../generate-module.md).
+
 ---
 
 # 0. How a SOC can operate
 
 A short front door. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
+
+Five children (`0.1`–`0.5`). Write only the asked child unless asked for the whole intro. All four roles sit this (SOC, Hunter, CTI, DE). DYA / PRD are course fiction, not site policy.
 
 The rest of the course follows this same sequence. The companion story at the end is this outline again, as one incident.
 
@@ -59,7 +63,7 @@ d. After the lessons, a companion story retells this same flow as one PRD/DYA in
 
 **1.1 [K/T] Endpoint Logs**
 
-Endpoint telemetry (Sysmon / MDE) vs network-sensor telemetry (Zeek, unit 1.2). Sysmon Event IDs and MDE tables encode the same activities; this unit is not Sysmon installation or configuration.
+Endpoint telemetry (Sysmon / MDE) vs network-sensor telemetry (Zeek, unit 1.2). Sysmon Event IDs and MDE tables encode the same activities; this unit is not Sysmon installation or configuration. Five activity units. Write only the asked child. `1.1.3` is **host-observed** network (initiating process → IP/port/domain). Protocol deep-dive is `1.2`. Do not merge the two.
 
 **1.1.1 [K] Process activity**  
 a. Process create / terminate  
@@ -204,6 +208,8 @@ c. Connection UID (linking to other Zeek logs)
 
 **1.3 [T] Detection Engineering**
 
+Rule *syntax* and a first read/write. How detections are run as a service is **4.x**. Write only the asked child (SIGMA, Suricata, YARA, or SIEM).
+
 **1.3.1 [K] SIGMA rules**  
 a. Purpose and structure of a SIGMA rule  
 b. Common fields / selectors used in SIGMA  
@@ -244,7 +250,7 @@ c. Matching techniques: regex and wildcards
 
 **1.4 [K/T] Alerts**
 
-Alert handling. Detection *authoring* is 1.3. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it.
+Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it.
 
 **1.4.1 [K] Alert context and investigation**  
 a. Viewing the context provided by the alert  
@@ -296,7 +302,7 @@ b. Required time to process an alert (close or escalate)
 
 **1.5 [K/T] Frameworks**
 
-Shared analysis frameworks. Hunt *planning* with ATT&CK is 2.5. Attribution products are 3.11. Each framework has its own applying task.
+Shared analysis frameworks. Write only the asked child. Hunt *planning* with ATT&CK is 2.5. Attribution products are 3.11. Shared write-once text is `modules/shared/frameworks/` — do not copy it into a role folder. Each framework has its own applying task.
 
 **1.5.1 [K] MITRE ATT&CK**  
 a. Purpose and structure of the ATT&CK framework  
@@ -325,7 +331,7 @@ c. How the Kill Chain is used to understand attack progression
 
 **1.6 [K/T] Reporting**
 
-SOC reporting. Shift-change reports are **1.7**. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task.
+SOC reporting. Three units — do not collapse them. Shift-change reports are **1.7**. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task.
 
 **1.6.1 [K] Report types**  
 a. Incident report  
@@ -352,7 +358,7 @@ c. Approved reporting channels
 
 **1.7 [K/T] Shift Change**
 
-SOC shift change. Reporting products are **1.6**. Site-specific tools and IR process are **1.8**. Each knowledge item has its own applying task.
+SOC shift change. Two units — do not collapse them. Reporting products are **1.6**. Site-specific tools and IR process are **1.8**. Each knowledge item has its own applying task.
 
 **1.7.1 [K] Shift changeover process**  
 a. Purpose and importance of a structured shift change  
@@ -374,7 +380,7 @@ e. Urgent process or policy items
 
 **1.8 [K/T] Site-Specific Knowledge**
 
-Classroom stand-ins only — overlay the live site card. Not reporting products (**1.6**), not shift change (**1.7**), not Zeek log reading (**1.2**). Each heading is its own teaching unit. Tasks apply the knowledge they sit under.
+Classroom stand-ins only — overlay the live site card. Not live org policy. Not reporting products (**1.6**), not shift change (**1.7**), not Zeek log reading (**1.2**). `1.8.2` is PCAP handling, not Zeek. `1.8.5` is IR process, not report routing (**1.6.3**). Do not collapse IR into notes. Each heading is its own teaching unit. Tasks apply the knowledge they sit under.
 
 **1.8.1 [K] Environment orientation**  
 a. Path to the internet / network egress points  
@@ -493,6 +499,8 @@ c. Using ATT&CK to prioritize hunt topics
 
 **2.6 [K/T] Attacker Techniques**  
 
+Three children. Write only the asked child. Recognition of persistence is `2.6.1`; recognition of privilege escalation is `2.6.2`. `2.6.3` is a scoped hunt for **one named** technique — not “hunt persistence.” Hunt-type execute is `2.2.1`. Hunt card format is `2.2.2`. ATT&CK remapping is `2.5`. Local hunt control is `2.7`.
+
 **2.6.1 [K] Persistence techniques**  
 a. Registry-based persistence  
 b. Start menu / startup folder persistence  
@@ -509,6 +517,8 @@ b. Indicators associated with privilege escalation
 3. Hunt for specific persistence or privilege escalation techniques  
 
 **2.7 [T] Site-Specific Hunt Knowledge and Tasks**  
+
+Write only the asked child unless asked for all of `2.7`. Do **not** invent local hunt tickets, templates, output lists, or hand-off charts. Every site has its own; a new hunter obtains them early. Classroom stand-ins are lesson-only — not live org policy. Hunt *development* is `2.2.2`. Hunt-for-specific is `2.6.3`. SOC tickets / IR are `1.6` / `1.8.5`.
 
 **2.7.1 [K] Hunt control and lead management**  
 a. How hunts are initiated and controlled  
@@ -532,6 +542,9 @@ b. Hand-off process to SOC, IR, or CTI
 # 3. CTI Analyst
 
 **3.1 [K] Core Intelligence Concepts**  
+
+Eight children (`3.1.1`–`3.1.8`). Write only the asked child unless asked for the rest of `3.1`. Collection *source classes* are `3.1.8` (not the lifecycle collection *stage* in `3.1.2`). Audience tailoring is `3.1.6`; finished production is `3.11`. Actor profile is `3.11.1.2`. Local collection *request process* is `3.12.2.1`.
+
 **3.1.1 [K] Difference between data, information, and intelligence**  
 a. Definitions and distinctions  
 b. How raw data becomes information and then intelligence  
@@ -600,6 +613,9 @@ c. Internal
 Local request *process* (tickets, approval) is **3.12**. Tool *operation* is **3.3** / **2.3**.
 
 **3.2 [K] Analytic Tradecraft**  
+
+Four children. Write only the asked child. Attribution *confidence* (low/medium/high) is `3.1.7`; this unit is *likelihood terms*. Source letters are `3.2.3`.
+
 **3.2.1 [K] Estimative language**  
 a. Purpose of estimative language  
 b. Common estimative terms and their meaning  
@@ -637,6 +653,9 @@ c. Techniques to mitigate cognitive biases
 2. Apply a mitigation technique to reduce bias in analysis  
 
 **3.3 [T] Tools**  
+
+Two children. Write only the asked child. Do not turn `3.3.1` into VirusTotal / Silent Push (`3.3.2`, `3.9`) or STIX authoring (`3.10`). Classroom TIP names are stand-ins.
+
 **3.3.1 [K] Internal threat intelligence platform**  
 a. Purpose and core functions of the internal TIP  
 b. How to navigate and search the platform  
@@ -655,6 +674,9 @@ b. When to use each tool in the intelligence process
 2. Perform advanced enrichment and pivoting using external tools  
 
 **3.4 [K/T] File Similarity & Hashing Techniques**  
+
+One teaching unit (`3.4.1`) — imphash, ssdeep, TLSH, and code-signing. Not VT Relations (`3.9`). Not cryptographic identity-only hashes (`1.2.7` MD5/SHA). Classroom match thresholds are stand-ins.
+
 **3.4.1 [K] Hashing and similarity concepts**  
 a. imphash  
 b. ssdeep  
@@ -667,6 +689,9 @@ d. Certificate / code-signing certificate information
 3. Extract and interpret certificate information from a file  
 
 **3.5 [K/T] RDAP / WHOIS**  
+
+One teaching unit (`3.5.1`). Not SOA / advanced DNS (`3.6`). Not Silent Push PDNS (`3.3.2`). Redacted registrant is not “no intel” and is not nation-state attribution (`3.1.7`).
+
 **3.5.1 [K] RDAP and WHOIS concepts**  
 a. Purpose of WHOIS and RDAP  
 b. Key differences between WHOIS and RDAP  
@@ -677,6 +702,9 @@ c. Key fields useful for enrichment and attribution
 2. Extract and interpret relevant fields for enrichment or attribution  
 
 **3.6 [K/T] Advanced DNS**  
+
+One teaching unit (`3.6.1`) — interpret SOA and use other records for enrichment/pivot. Do not re-teach Zeek `dns` fields or DGA (`1.2.3`). Not RDAP (`3.5`). Not Silent Push PDNS (`3.3.2`).
+
 **3.6.1 [K] Advanced DNS concepts**  
 a. SOA records  
 b. Other advanced DNS record types and their intelligence value  
@@ -687,6 +715,9 @@ c. How advanced DNS data supports enrichment and infrastructure analysis
 2. Use advanced DNS records to support enrichment or pivoting  
 
 **3.7 [K/T] Frameworks**  
+
+Four children. Write only the asked child. Do not write lumped outline `3.7.5` as one module. Do not re-teach SOC floor (`1.5`) or hunt planning (`2.5`). Shared write-once text is `modules/shared/frameworks/`. DTF is real PTA/P discovery IDs from [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Product is the DTF ID line. No scoring. Do not invent P-codes. Do not teach every P-code. Generic hop sentence is `3.8.1`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
+
 **3.7.1 [K] MITRE ATT&CK**  
 a. Advanced application for intelligence analysis and TTP extraction  
 
@@ -728,6 +759,9 @@ e. Relationship of DTF to ATT&CK, Diamond Model, and Cyber Kill Chain (discovery
 4. Explain how DTF integrates with or complements other frameworks  
 
 **3.8 [T] Enrichment & Analysis**  
+
+Write only the asked child. `3.8.1` writes the generic hop sentence from a seed — not RDAP (`3.5`), SOA (`3.6`), or Silent Push tool choice (`3.3.2`). The DTF ID line is `3.7.4`. `3.8.2` is apply-to-this-environment, not ATT&CK mapping (`3.7.1`) and not organizational impact (`3.8.4`). `3.8.3` handles the IOC as an object (keep / expire / enrich / link). `3.8.4` is the “so what here” line. Use only real ATT&CK IDs. VT Relations depth is `3.9`. Actor profile is `3.11`.
+
 **3.8.1 [K] Identifying additional adversary infrastructure from seed indicators**  
 a. Pivoting concepts and techniques  
 b. Common data sources used for infrastructure enrichment  
@@ -764,6 +798,8 @@ c. Relevance and impact are not TTP applicability (3.8.2), not a PIR (3.1.4 / 3.
 
 **3.9 [K/T] Platform-Specific Skills**  
 
+Four children. Write only the asked child unless asked for all of `3.9`. Do not re-teach the `3.3.2` survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `2.3.1`. Conceptual infra hop is `3.8.1`. File-similarity hashes are `3.4`. Applicable TTPs are `3.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
+
 **3.9.1 [K] VirusTotal**  
 a. Relations tab for infrastructure pivoting  
 b. Behavior tab for extracting file, network, registry, and process events  
@@ -797,6 +833,9 @@ b. How to interpret scan results for intelligence value
 2. Extract actionable intelligence from a URLScan report  
 
 **3.10 [K] Common STIX Objects**  
+
+Two children. Write only the asked child unless asked for all of `3.10`. Do not write lumped outline `3.10.3` as one module. Hunt-facing STIX *input* is `2.4.3`. Finished narrative products are `3.11`. TIP retrieve is `3.3.1`. Use real STIX 2.1 object and relationship types. Do not invent types. Classroom bundles/collections are lesson-only — do not stand up a TAXII server.
+
 **3.10.1 [K] Core STIX Objects**  
 a. Indicator  
 b. Observed Data  
@@ -833,6 +872,9 @@ b. Linking objects to represent complex threat activity
 3. Explain how a set of STIX objects represents a threat scenario  
 
 **3.11 [K/T] Intelligence Production & Dissemination**  
+
+Three children. Write only the asked child unless asked for all of `3.11`. Audience *rewrite* floor is `3.1.6`. Attribution *assessment* is `3.1.7`. STIX bundle/TAXII is `3.10`. SOC ticket types/routing are `1.6`. Local approval and customer lists are `3.12`. Classroom markings/channels/RFI queue are lesson-only — not live org policy.
+
 **3.11.1 [K] Creating finished intelligence products**  
 a. Types of finished intelligence products  
 b. Structure and required elements of a finished product  
@@ -869,6 +911,9 @@ b. How to evaluate, prioritize, and respond to an RFI
 2. Produce a response to an RFI  
 
 **3.12 [K/T] Site-Specific CTI Knowledge and Tasks**  
+
+Write only the asked child unless asked for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Every org/section has its own; a new analyst obtains them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. SOC site orientation is `1.8`.
+
 **3.12.1 [K] Local intelligence requirements and priorities**  
 a. Current Priority Intelligence Requirements (PIRs) / intelligence priorities  
 b. How local requirements drive analytic focus  
@@ -904,7 +949,7 @@ SOC, hunt, and CTI may **nominate** a detection. The nomination does not need to
 
 Extra adversary infrastructure from intel is a **block** for firewall / IA, not a DE job. “We blocked X — do we still need a rule?” is lifecycle, not running the firewall.
 
-Do not invent DYA meta-field lists, change boards, or deploy tickets. Those vary by site (**4.8**).
+Do not invent DYA meta-field lists, change boards, or deploy tickets. Those vary by site (**4.8**). Write only the asked `4.1`–`4.7` child. `4.8` is one teaching unit when asked for `4.8` or both children.
 
 **4.1 [K] What DE owns**  
 a. DE owns the set of detections: new, change, retire, deploy  
@@ -939,6 +984,9 @@ e. A nomination that is clear enough to review names the need and points at cont
 2. Name what the nominator still owes vs what DE will finish  
 
 **4.4 [K] Tune requests from SOC**  
+
+Same desk as nominations, different inbox. “Missing context” in **a** is about the *rule*, not the pointer in **d**. Not investigation, a block, or IR containment. Not a new nomination (**4.3**).
+
 a. Requests on *live* rules (noisy, brittle, missing context)  
 b. Same desk as nominations; different inbox  
 c. Possible answers: tune the logic, add an exception, replace the rule, leave it, or retire it  
@@ -959,6 +1007,9 @@ d. A package is not a finished detection — treat it like a nomination (**4.3**
 2. Reject turning the package into a block list (that is firewall / IA)  
 
 **4.6 [K] Detection lifecycle**  
+
+Standing call on a live rule you already own. Not the tune *inbox* (**4.4**). A block is not automatic retire. “Sensor gone” is a reason here; how to check a dead sensor is **4.7**.
+
 a. When to modify  
 b. When to retire  
 c. When to leave a rule alone  
@@ -969,6 +1020,9 @@ d. Reasons: still useful, too noisy, threat gone, sensor gone, a nomination repl
 2. Given “we blocked this infrastructure,” decide whether the matching rule still earns its keep  
 
 **4.7 [K] Sensor availability and performance**  
+
+Lighter. Sometimes DE. Not a vendor-admin or architecture course.
+
 a. Sometimes DE watches whether sensors are up and seeing the right place (MDE, Zeek, IDS)  
 b. A dead or blind sensor is not “no threat”  
 c. This is not a vendor admin or architecture course  
@@ -978,6 +1032,9 @@ c. This is not a vendor admin or architecture course
 2. Reject treating a down sensor as proof the activity did not happen  
 
 **4.8 [K/T] Site-specific DE knowledge**  
+
+One teaching unit when asked for `4.8` or both children. Local **policy** exists and varies by shop. Obtain-and-follow. Do **not** invent a field list, change board, ticket name, or DYA policy.
+
 **4.8.1 [K] Local detection requirements**  
 a. Required meta fields, naming, and other deploy checks  
 b. These vary by shop; obtain the current list — do not invent one  
