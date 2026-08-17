@@ -3,17 +3,17 @@
 **Path:** `modules/01-soc/01-endpoint/06-image-driver-load`  
 **Primary role:** SOC Analyst  
 **Secondary:** Threat Hunter, CTI Analyst  
-**Time:** 60–75 minutes
+**Time:** about 25–30 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 1.1.6.1 | K | Image and driver load activity concepts | 1.1.6 a–d |
-| 1.1.6.2 | T | Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred | 1.1.6.1 task 1 |
-| 1.1.6.3 | T | Create a SIEM query to detect specific image or driver load activity | 1.1.6.1 task 2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 1.1.6.1 | K | Image and driver load activity concepts | 1.1.6 a–d | A / B / C | A / B / B | A / A / A |
+| 1.1.6.2 | T | Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred | 1.1.6.1 task 1 | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
+| 1.1.6.3 | T | Create a SIEM query to detect specific image or driver load activity | 1.1.6.1 task 2 | 2b / 3c / 4c | 1a / 2b / 3c | 1a / 1a / 1a |
 
-The teaching-unit ID is **1.1.6**. Process activity is **1.1.2**. File system activity is **1.1.3**. Host-observed network is **1.1.4**. Registry is **1.1.5**. This lesson does not teach Sysmon install or config. Persistence / BYOVD hunt methodology is **2.6**.
+The teaching-unit ID is **1.1.6**. Registry is **1.1.5**. Zeek is **1.2**. File create is **1.1.3**. Persistence / BYOVD is **2.6**. Not Sysmon install. No lab.
 
 ## Concepts taught
 
@@ -28,4 +28,4 @@ The teaching-unit ID is **1.1.6**. Process activity is **1.1.2**. File system ac
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

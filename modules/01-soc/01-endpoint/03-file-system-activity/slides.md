@@ -1,264 +1,112 @@
 # Module 1.1.3 – File System Activity  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 25–30 minutes  
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.1.3 – File System Activity  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Host file telemetry. Sysmon 11 / 23 / 26 and MDE DeviceFileEvents. Not install. Not Zeek. Not 1.1.2.
+Host file rows. Not Zeek. Not Sysmon install. Not the process create from last hour.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-By the end of this module, you will be able to:
+SOC analysts read **host** file rows: what happened to a file, where, by whom.
 
-1. Explain create, rename-move, delete, modify, and read (where logged), plus path/name/extension, hash, and initiating process
-2. Analyze a Sysmon or MDE file event and describe what occurred
-3. Write a SIEM query for *specific* file operations
-
-**Mapped Items:**  
-K: 1.1.3.1 | T: 1.1.3.2 | T: 1.1.3.3
+Not a process create (**1.1.2**).  
+Not Zeek (**1.2**). Not how to install Sysmon.
 
 **Speaker Notes:**  
-SOC 3 is A / 2b. CTI is nomenclature only (A / 1a).
+Daily alert work: describe the file row. Host-network waits.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – The actions
+**Title:** Create, rename-move, delete, modify, read
 
-- What a file event is
-- Operations and fields (outline a–d)
-- Sysmon 11 / 23 / 26 and DeviceFileEvents
-- Three worked examples
-- Identification + two queries
-- Knowledge check
+**Create** — a file appeared. Sysmon **11**.  
+**Rename-move** — same object, new name or folder.  
+**Delete** — Sysmon **23** / **26**.  
+**Modify / read** — where logged.
 
 **Speaker Notes:**  
-1.1.2 process and 1.2 Zeek are other rows. Stay on the file row.
+Outline a. Event 11 is not a rename.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – Path, hash, who touched it
+**Title:** Path, hash, initiating process
 
-Sysmon install / XML  
-Process create of `wscript.exe` (**1.1.2**)  
-Zeek `files` / `conn` (**1.2**)  
-Registry Run keys (**1.1.5** / **2.6**)  
-“Every Temp `.exe` is an incident”
-
-**Key Point:** Describe *this* file row.
+**Path / name / extension** — where it sits. Name can lie.  
+**Hash** — bytes when present. Event **11** often has none.  
+**Initiating process** — who did this *to the file*.
 
 **Speaker Notes:**  
-Park deploy questions on the board.
+Outline b–d. Do not turn this into a 1.1.2 parent-child write-up.
 
 ---
 
-### Slide 5 – Five Operations
-**Title:** Create, Rename-Move, Delete, Modify, Read
+### Slide 5 – How it shows up
+**Title:** Sysmon and MDE
 
-| Action | Sysmon | MDE |
-|--------|--------|-----|
-| Created / overwritten | **11** | `FileCreated` |
-| Renamed or moved | *(not 11 / 23 / 26)* | `FileRenamed` |
-| Deleted | **23** archived / **26** detected | `FileDeleted` |
-| Modified / read | *(not 11 / 23 / 26)* | `FileModified` / `FileRead` where logged |
+Sysmon **11** / **23** / **26**.
 
-**Analyst Tip:** Missing ActionType ≠ “did not happen.”
+MDE `DeviceFileEvents` `ActionType`:  
+**FileCreated**. **FileRenamed**. **FileDeleted**.  
+**FileModified** / **FileRead** where logged.
+
+Same story. Different names. Full `ActionType` list is in the Defender portal — do not invent values.
 
 **Speaker Notes:**  
-Ask: “Did it appear, change name, or go away?”
+Outline e. Write “not logged,” not “did not happen.”
 
 ---
 
-### Slide 6 – Path, Name, Extension
-**Title:** Where It Is, What It Is Called
+### Slide 6 – What good looks like
+**Title:** Describe it. Query something specific.
 
-**Path** — `Documents` vs `Temp` vs `AppData` vs `Program Files`  
-**Name** — can lie (`svchost.exe` in AppData)  
-**Extension** — can lie (`invoice.pdf.exe`, `.txt` that is an executable)
+One sentence: what happened to which file, by whom.
 
-**Key Point:** Read all three. One field is not a story.
+**Given:** Sysmon **11**, `wscript.exe` → Temp `update.exe`, no hash.
+
+A query names a **specific** pattern — initiator + path + extension.  
+Not “all file events.”
 
 **Speaker Notes:**  
-Write a double-extension name on the board.
+They should see this row before the knowledge check. Script host created update.exe under Temp. Hash not logged. Do not tell the PRD plot.
 
 ---
 
-### Slide 7 – Hashes
-**Title:** File Bytes, When Logged
-
-**SHA256** — the file, not the process  
-Sysmon **11** — often **no** hash  
-Sysmon **23 / 26** and MDE creates — more often yes
-
-Empty field → write “not logged.” Do not invent.  
-A known hash does not clear a bad path + initiator.
-
-**Speaker Notes:**  
-Same rule as 1.1.2: hash is bytes, not a verdict.
-
----
-
-### Slide 8 – Initiating Process
-**Title:** Who Touched the File
-
-Sysmon: `Image`  
-MDE: `InitiatingProcess*` = **actor of the file operation**
-
-**Not** the parent of a child process (**1.1.2**). Same names, different job.
-
-**Expected:** `WINWORD.EXE` → Documents `.docx`  
-**Lead:** `wscript.exe` / Office / `powershell.exe` → Temp `.exe`
-
-**Speaker Notes:**  
-Map the MDE names live. Students reuse the process-create story.
-
----
-
-### Slide 9 – How It Is Logged
-**Title:** Sysmon 11 / 23 / 26 ↔ DeviceFileEvents
-
-| Need | Look at |
-|------|---------|
-| Create | 11 / `FileCreated` |
-| Delete | 23 or 26 / `FileDeleted` |
-| Rename-move | `FileRenamed` + Previous* |
-| Object | `TargetFilename` or `FolderPath` + `FileName` |
-| Actor | `Image` or `InitiatingProcess*` |
-
-**Speaker Notes:**  
-23 archived a copy. 26 only logged the delete.
-
----
-
-### Slide 10 – Example 1: Expected Create
-**Title:** Example 1 – Word → Documents
-
-- MDE `FileCreated`
-- `Q3-notes.docx` under Documents
-- Initiator `WINWORD.EXE`
-- Hash present (document save)
-
-**Interpretation:**  
-Create. Expected. Not an incident.
-
-**Speaker Notes:**  
-Students describe the row before you reveal.
-
----
-
-### Slide 11 – Example 2: Temp Drop
-**Title:** Example 2 – wscript → Temp `update.exe`
-
-- Sysmon **11**
-- `TargetFilename` under `AppData\Local\Temp\`
-- Hash **not** on this Event 11
-- Matching Sysmon **1** is a **different** row
-
-**Interpretation:**  
-Create **lead** because of initiator + path + `.exe`.
-
-**Speaker Notes:**  
-Force: missing hash ≠ clean. Event 11 ≠ process create.
-
----
-
-### Slide 12 – Example 3: Rename + Delete
-**Title:** Example 3 – FileRenamed vs Event 26
-
-**Renamed:** `invoice.pdf.exe` (Downloads) → `svchost.exe` (AppData\Roaming)  
-**26:** `wscript.exe` deleted `invoice.vbs`
-
-**Interpretation:**  
-Rename-move lead. Delete is a second action. Not a create of `svchost`.
-
-**Speaker Notes:**  
-Park 1.1.5 / 2.6 unless they invent a Run key.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Event 11 = rename
-- Event 26 = create
-- Query with no filter
-- Hash-only verdict
-- Process or Zeek row as “file”
-- Asking how to deploy Sysmon
-- Persistence hunt instead of description
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. One-sentence summary of each example.
-2. Identify the six items in the student guide.
-3. Two queries: initiator+path+extension create; rename to a Windows binary name outside Windows/Program Files.
-4. One analysis card (Example 2 or 3).
-
-**Speaker Notes:**  
-Park process, Zeek, install. Review with the Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Create vs rename-move vs delete? Which Sysmon IDs?
-2. Why path, name, and extension together?
-3. `InitiatingProcess*` on a file event vs a process event?
-4. Event 23 vs 26? What does 11 often omit?
-5. Missing SHA256 / no FileRead — what do you write?
+1. Sysmon Event 11 is a rename. True or false?  
+2. `wscript.exe` creates Temp `update.exe` (Sysmon 11, no hash). In one sentence, what occurred?  
+3. A SIEM query that matches every `DeviceFileEvents` row is a good “specific file operation” query. True or false?
 
 **Speaker Notes:**  
-Run through answers interactively.
+Answers only in the instructor guide. Three questions for the whole lesson. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 8 – Summary
+**Title:** Summary
 
-- Host file row: create, rename-move, delete, modify, or read (where logged).
-- Path + name + extension + initiator; hash when present.
-- Sysmon 11 / 23 / 26 ↔ `DeviceFileEvents`.
-- 11 = create. 23/26 = delete. Rename is MDE.
-- Next: host-observed network (**1.1.4**).
+What happened to which file, by whom.  
+Path and initiator tell the story.  
+A missing hash is a gap.  
+A query is specific.
+
+**Next:** **1.1.4** Network activity (endpoint)
 
 **Speaker Notes:**  
-Do not open a 1.1.4 network lab.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** File System Activity — Quick Reference
-
-| Need | Look at |
-|------|---------|
-| Created | Sysmon 11 / `FileCreated` |
-| Renamed | `FileRenamed` + Previous* |
-| Deleted | Sysmon 23 / 26 / `FileDeleted` |
-| Actor (MDE) | `InitiatingProcess*` |
-| Object | `FolderPath` + `FileName` |
-
-**Coming next:** Module 1.1.4 – Network activity (endpoint)
-
-**Footer:** SOC / Hunter / CTI Training Program
+That hour is host-observed network. Not Zeek.
