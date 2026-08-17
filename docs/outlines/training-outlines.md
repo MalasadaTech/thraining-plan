@@ -10,6 +10,8 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 **Stay in this lesson:** a short note under a unit or child says what this hour is *not*. It is not extra syllabus. Follow it when writing or revising the lesson. How to write the lesson is [generate-module.md](../generate-module.md).
 
+**Teach order** (IDs stay): `0` → shared floor → SOC `1` → **CTI `3`** → hunt `2` → DE `4`. This file is in that order. Folder names still follow IDs (`03-cti`, `02-hunter`).
+
 ---
 
 # 0. Front door
@@ -127,7 +129,7 @@ g. PCAP collection points / sensors
 
 # 1. SOC Analyst Fundamentals
 
-After the full `00` block (front door + shared floor). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.6**. **SOC ends at 1.6 reporting.** The RFI is the door into CTI.
+After the full `00` block (front door + shared floor). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.6**. **SOC ends at 1.6 reporting.** The RFI is the door into CTI. Next section in this file is **3. CTI** (not 2. Hunt).
 
 **1.1 [K/T] Endpoint Logs**
 
@@ -416,135 +418,9 @@ c. Approved reporting channels
 
 ---
 
-# 2. Threat Hunter
-
-**2.1 [K] Purpose of Threat Hunting**  
-a. Identify malicious or suspicious activity missed by existing security mechanisms  
-b. Identify detection and visibility gaps  
-
-**2.1.1 [T] Tasks**  
-1. Explain the purpose of threat hunting in the context of the security program  
-2. Identify examples of activity that existing controls might miss  
-
-**2.2 [K/T] Hunt Methodology**  
-
-**2.2.1 [K] Hunt types**  
-a. Intel-driven hunts  
-b. Hypothesis-driven hunts  
-c. Reactive hunts  
-d. Anomaly-based hunts  
-
-**2.2.2 [K] Hunt development concepts**  
-a. Developing a hunt hypothesis  
-b. Scoping a hunt  
-c. Prioritizing hunts  
-d. Identifying unique patterns or behaviors for internal searches  
-
-**2.2.3 [T] Hunt methodology tasks**  
-1. Develop and document a hunt hypothesis  
-2. Scope and prioritize a hunt  
-3. Identify unique patterns or behaviors suitable for hunting  
-4. Execute an intel-driven hunt  
-5. Execute a hypothesis-driven hunt  
-6. Execute a reactive hunt  
-7. Execute an anomaly-based hunt  
-
-**2.3 [T] Online Tools & Enrichment**  
-
-**2.3.1 [K] Tool capabilities for hunting**  
-a. VirusTotal – strengths and limitations for hunting  
-b. AnyRun – strengths and limitations for hunting  
-c. URLScan – strengths and limitations for hunting  
-d. Silent Push – strengths and limitations for hunting  
-
-**2.3.2 [T] Online tools & enrichment tasks**  
-1. Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push  
-2. Extract actionable hunting leads from external tool results  
-3. Convert external findings into precise internal SIEM or Zeek queries  
-
-**2.4 [K/T] CTI for Hunters**  
-
-**2.4.1 [K] Assessing CTI for hunting value**  
-a. Hunt-worthy vs awareness-only vs hand off to detections / IR  
-b. Rapid triage of a report  
-c. What “actionable for a hunt” means (question, telemetry, scope)  
-
-**2.4.1.1 [T] Tasks**  
-1. Triage a CTI report: hunt / don’t hunt / hand off, and say why  
-
-**2.4.2 [K] Extracting hunt leads from CTI**  
-a. TTPs vs IOCs vs behaviors — which can drive a hunt  
-b. What to drop (no telemetry, expired IOCs, noise)  
-c. Record ATT&CK IDs if the report has them (mapping hunts is 2.5)  
-
-**2.4.2.1 [T] Tasks**  
-1. Extract hunt-suitable TTPs from a CTI report  
-2. Extract hunt-suitable artifacts (IOCs, patterns, behaviors)  
-3. State the hunt question those leads support  
-
-**2.4.3 [K] STIX as hunt input**  
-a. Objects a hunter actually uses (indicator, attack-pattern, observed-data, malware, threat-actor / intrusion-set, relationship)  
-b. How a STIX bundle seeds a hunt (not how to author STIX)  
-
-**2.4.3.1 [T] Tasks**  
-1. Identify hunt-relevant objects in a report or bundle  
-2. Turn those objects into hunt leads  
-
-**2.5 [K/T] Framework Application for Hunting**  
-
-**2.5.1 [K] Using MITRE ATT&CK for hunt planning and coverage analysis**  
-a. Mapping hunts to ATT&CK tactics and techniques  
-b. Using ATT&CK to identify coverage gaps  
-c. Using ATT&CK to prioritize hunt topics  
-
-**2.5.2 [T] Framework application tasks**  
-1. Map a hunt plan or hunt findings to MITRE ATT&CK  
-2. Use ATT&CK to identify detection or visibility gaps  
-3. Use ATT&CK to support hunt prioritization  
-
-**2.6 [K/T] Attacker Techniques**  
-
-Three children. Write only the asked child. Recognition of persistence is `2.6.1`; recognition of privilege escalation is `2.6.2`. `2.6.3` is a scoped hunt for **one named** technique — not “hunt persistence.” Hunt-type execute is `2.2.1`. Hunt card format is `2.2.2`. ATT&CK remapping is `2.5`. Local hunt control is `2.7`.
-
-**2.6.1 [K] Persistence techniques**  
-a. Registry-based persistence  
-b. Start menu / startup folder persistence  
-c. Scheduled tasks  
-d. Other common persistence methods  
-
-**2.6.2 [K] Privilege escalation techniques**  
-a. Common Windows privilege escalation methods  
-b. Indicators associated with privilege escalation  
-
-**2.6.3 [T] Attacker technique tasks**  
-1. Recognize persistence techniques in logs or telemetry  
-2. Recognize privilege escalation techniques in logs or telemetry  
-3. Hunt for specific persistence or privilege escalation techniques  
-
-**2.7 [T] Site-Specific Hunt Knowledge and Tasks**  
-
-Write only the asked child unless asked for all of `2.7`. Do **not** invent local hunt tickets, templates, output lists, or hand-off charts. Every site has its own; a new hunter obtains them early. Classroom stand-ins are lesson-only — not live org policy. Hunt *development* is `2.2.2`. Hunt-for-specific is `2.6.3`. SOC tickets / IR are `1.6` / `1.8.5`.
-
-**2.7.1 [K] Hunt control and lead management**  
-a. How hunts are initiated and controlled  
-b. Lead management process  
-
-**2.7.2 [K] Hunt documentation standards**  
-a. Required elements of hunt documentation  
-b. Where and how hunts are documented  
-
-**2.7.3 [K] Hunt outputs and hand-off**  
-a. Expected outputs of a hunt  
-b. Hand-off process to SOC, IR, or CTI  
-
-**2.7.4 [T] Site-specific hunt tasks**  
-1. Follow the local process for initiating and controlling a hunt  
-2. Document a hunt according to local standards  
-3. Produce required hunt outputs and perform proper hand-off  
-
----
-
 # 3. CTI Analyst
+
+Taught after SOC reporting (`1.6`). Hunt is **2.x** and comes after this section. IDs stay `3.x`.
 
 **3.1 [K] Core Intelligence Concepts**  
 
@@ -942,9 +818,139 @@ b. Approved dissemination channels and methods
 
 ---
 
+# 2. Threat Hunter
+
+Taught after CTI (`3.x`). IDs stay `2.x`.
+
+**2.1 [K] Purpose of Threat Hunting**  
+a. Identify malicious or suspicious activity missed by existing security mechanisms  
+b. Identify detection and visibility gaps  
+
+**2.1.1 [T] Tasks**  
+1. Explain the purpose of threat hunting in the context of the security program  
+2. Identify examples of activity that existing controls might miss  
+
+**2.2 [K/T] Hunt Methodology**  
+
+**2.2.1 [K] Hunt types**  
+a. Intel-driven hunts  
+b. Hypothesis-driven hunts  
+c. Reactive hunts  
+d. Anomaly-based hunts  
+
+**2.2.2 [K] Hunt development concepts**  
+a. Developing a hunt hypothesis  
+b. Scoping a hunt  
+c. Prioritizing hunts  
+d. Identifying unique patterns or behaviors for internal searches  
+
+**2.2.3 [T] Hunt methodology tasks**  
+1. Develop and document a hunt hypothesis  
+2. Scope and prioritize a hunt  
+3. Identify unique patterns or behaviors suitable for hunting  
+4. Execute an intel-driven hunt  
+5. Execute a hypothesis-driven hunt  
+6. Execute a reactive hunt  
+7. Execute an anomaly-based hunt  
+
+**2.3 [T] Online Tools & Enrichment**  
+
+**2.3.1 [K] Tool capabilities for hunting**  
+a. VirusTotal – strengths and limitations for hunting  
+b. AnyRun – strengths and limitations for hunting  
+c. URLScan – strengths and limitations for hunting  
+d. Silent Push – strengths and limitations for hunting  
+
+**2.3.2 [T] Online tools & enrichment tasks**  
+1. Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push  
+2. Extract actionable hunting leads from external tool results  
+3. Convert external findings into precise internal SIEM or Zeek queries  
+
+**2.4 [K/T] CTI for Hunters**  
+
+**2.4.1 [K] Assessing CTI for hunting value**  
+a. Hunt-worthy vs awareness-only vs hand off to detections / IR  
+b. Rapid triage of a report  
+c. What “actionable for a hunt” means (question, telemetry, scope)  
+
+**2.4.1.1 [T] Tasks**  
+1. Triage a CTI report: hunt / don’t hunt / hand off, and say why  
+
+**2.4.2 [K] Extracting hunt leads from CTI**  
+a. TTPs vs IOCs vs behaviors — which can drive a hunt  
+b. What to drop (no telemetry, expired IOCs, noise)  
+c. Record ATT&CK IDs if the report has them (mapping hunts is 2.5)  
+
+**2.4.2.1 [T] Tasks**  
+1. Extract hunt-suitable TTPs from a CTI report  
+2. Extract hunt-suitable artifacts (IOCs, patterns, behaviors)  
+3. State the hunt question those leads support  
+
+**2.4.3 [K] STIX as hunt input**  
+a. Objects a hunter actually uses (indicator, attack-pattern, observed-data, malware, threat-actor / intrusion-set, relationship)  
+b. How a STIX bundle seeds a hunt (not how to author STIX)  
+
+**2.4.3.1 [T] Tasks**  
+1. Identify hunt-relevant objects in a report or bundle  
+2. Turn those objects into hunt leads  
+
+**2.5 [K/T] Framework Application for Hunting**  
+
+**2.5.1 [K] Using MITRE ATT&CK for hunt planning and coverage analysis**  
+a. Mapping hunts to ATT&CK tactics and techniques  
+b. Using ATT&CK to identify coverage gaps  
+c. Using ATT&CK to prioritize hunt topics  
+
+**2.5.2 [T] Framework application tasks**  
+1. Map a hunt plan or hunt findings to MITRE ATT&CK  
+2. Use ATT&CK to identify detection or visibility gaps  
+3. Use ATT&CK to support hunt prioritization  
+
+**2.6 [K/T] Attacker Techniques**  
+
+Three children. Write only the asked child. Recognition of persistence is `2.6.1`; recognition of privilege escalation is `2.6.2`. `2.6.3` is a scoped hunt for **one named** technique — not “hunt persistence.” Hunt-type execute is `2.2.1`. Hunt card format is `2.2.2`. ATT&CK remapping is `2.5`. Local hunt control is `2.7`.
+
+**2.6.1 [K] Persistence techniques**  
+a. Registry-based persistence  
+b. Start menu / startup folder persistence  
+c. Scheduled tasks  
+d. Other common persistence methods  
+
+**2.6.2 [K] Privilege escalation techniques**  
+a. Common Windows privilege escalation methods  
+b. Indicators associated with privilege escalation  
+
+**2.6.3 [T] Attacker technique tasks**  
+1. Recognize persistence techniques in logs or telemetry  
+2. Recognize privilege escalation techniques in logs or telemetry  
+3. Hunt for specific persistence or privilege escalation techniques  
+
+**2.7 [T] Site-Specific Hunt Knowledge and Tasks**  
+
+Write only the asked child unless asked for all of `2.7`. Do **not** invent local hunt tickets, templates, output lists, or hand-off charts. Every site has its own; a new hunter obtains them early. Classroom stand-ins are lesson-only — not live org policy. Hunt *development* is `2.2.2`. Hunt-for-specific is `2.6.3`. SOC tickets / IR are `1.6` / `1.8.5`.
+
+**2.7.1 [K] Hunt control and lead management**  
+a. How hunts are initiated and controlled  
+b. Lead management process  
+
+**2.7.2 [K] Hunt documentation standards**  
+a. Required elements of hunt documentation  
+b. Where and how hunts are documented  
+
+**2.7.3 [K] Hunt outputs and hand-off**  
+a. Expected outputs of a hunt  
+b. Hand-off process to SOC, IR, or CTI  
+
+**2.7.4 [T] Site-specific hunt tasks**  
+1. Follow the local process for initiating and controlling a hunt  
+2. Document a hunt according to local standards  
+3. Produce required hunt outputs and perform proper hand-off  
+
+---
+
 # 4. Detection Engineer
 
-Taught last: intro → shared floor → SOC → CTI → hunting → this section. Rule *syntax* and a first read/write are **1.3**. This section is how detections are run as a service. Environment orientation (`1.8.1`) and tool access (`1.8.3`) were on the shared floor.
+Taught last: intro → shared floor → SOC → CTI → hunting → this section. Rule *syntax* and a first read/write are **1.3**. This section is how detections are run as a service. Environment orientation (`1.8.1`) was on the shared floor.
 
 SOC, hunt, and CTI may **nominate** a detection. The nomination does not need to be perfect. DE reviews it, makes it sound, tunes it, meets shop requirements (meta fields and the like), and deploys.
 

@@ -32,6 +32,21 @@ Everyone. Taught before SOC. Same idea on the SOC, hunter, and DE sheets. Not si
 
 ---
 
+## 1.5 Frameworks (shared floor)
+
+Taught in `00` before SOC. Advanced CTI application is **3.7**. Codes match combined.
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.5.1.1 | MITRE ATT&CK | K | B | C | C | Shared floor. Raised application is 3.7.1. |
+| 1.5.1.2 | Map an alert or observed activity to MITRE ATT&CK tactics/techniques | T | 3c | 4c | 4c | Map + cite. Not 3.7 product. |
+| 1.5.2.1 | Diamond Model | K | B | C | C | Shared floor. Advanced fill is 3.7.2. |
+| 1.5.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 3c | 4c | 4d | Weakest vertex. 7-level when vertices compete. |
+| 1.5.3.1 | Cyber Kill Chain | K | B | C | C | Shared floor. Advanced staging is 3.7.3. |
+| 1.5.3.2 | Identify the Kill Chain stage of observed activity | T | 3c | 4c | 4c | Stage + reject neighbor. |
+
+---
+
 ## 3.1 Core Intelligence Concepts
 
 | # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |

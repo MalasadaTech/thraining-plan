@@ -41,7 +41,8 @@ Lockheed Martin Cyber Kill Chain. Do not add extra stages.
 ### Slide 4 – This row only
 **Title:** This row only
 
-A `.vbs` in email that ran is **Delivery** (and maybe Exploitation).  
+A `.vbs` in email is **Delivery**.  
+Not Exploitation — you did not see it run.  
 Not Command and Control — no callback.
 
 **Speaker Notes:**  
@@ -54,7 +55,7 @@ Reject the neighbor they did not see.
 
 1. What is the Kill Chain for?  
 2. Name the seven stages in order.  
-3. A user received a `.vbs` in email and it ran. Why is that not Command and Control?
+3. A user received a `.vbs` in email. Why is that Delivery, and why is it not Exploitation?
 
 **Speaker Notes:**  
 Answers only in the instructor guide.

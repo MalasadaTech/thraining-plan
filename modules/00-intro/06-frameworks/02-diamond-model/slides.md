@@ -49,7 +49,7 @@ That is the next question.
 Not a guess you write as fact.
 
 **Speaker Notes:**  
-Walk WS-JLEE + encoded PowerShell + domain. Adversary is empty.
+Walk workstation + encoded PowerShell + domain. Adversary is empty.
 
 ---
 

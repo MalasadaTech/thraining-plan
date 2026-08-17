@@ -15,9 +15,9 @@
 - Non-primary roles receive minimal awareness ratings: **A** (Knowledge) or **1a** (Task) unless the skill has clear shared value.
 - "—" means the item is not applicable / no requirement for that role.
 
-Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `2.1`, `3.1`, `4.1`, …). Those match the `#` column. Do not assign work by old display numbers (there is no “section 7 = all hunting”).
+Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `3.1`, `2.1`, `4.1`, …). Those match the `#` column. **Teach order** is SOC `1` → CTI `3` → hunt `2` → DE `4` (IDs stay). Do not assign work by old display numbers.
 
-Section **0** includes Detection Engineer (same codes as the other roles). The **shared floor** (`1.5`, `3.3.2`, `1.8.1`, `1.8.3`) is taught after **0** and also includes DE (ratings on those tables and on `de.md`). Other **1–3** rows stay three columns until we rate DE on them. Section **4** has a Detection Engineer column. **1.8.2** (PCAP download / view) is retired.
+Section **0** includes Detection Engineer (same codes as the other roles). The **shared floor** (`1.5`, `3.3.2`, `1.8.1`) is taught after **0** and also includes DE. Other **1–3** rows stay three columns until we rate DE on them. Section **4** has a Detection Engineer column. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 ---
 
@@ -177,96 +177,9 @@ Three teaching units. Tasks apply the knowledge they sit under. Alert SLA clocks
 
 ---
 
-## 2.1 Purpose of Threat Hunting
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.1.1 | Purpose of Threat Hunting | K | A / B / B | B / C / C | A / B / B |
-| 2.1.1.1 | Explain the purpose of threat hunting in the context of the security program | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.1.1.2 | Identify examples of activity that existing controls might miss | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-
----
-
-## 2.2 Hunt Methodology
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.2.1 | Hunt types | K | A / B / B | B / C / C | A / B / B |
-| 2.2.1.1 | Execute an intel-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.2.1.2 | Execute a hypothesis-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.2.1.3 | Execute a reactive hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.2.1.4 | Execute an anomaly-based hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.2.2 | Hunt development concepts | K | A / B / B | B / C / C | A / B / B |
-| 2.2.2.1 | Develop and document a hunt hypothesis | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.2.2.2 | Scope and prioritize a hunt | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.2.2.3 | Identify unique patterns or behaviors suitable for hunting | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-
----
-
-## 2.3 Online Tools & Enrichment
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.3.1 | Tool capabilities for hunting | K | A / B / B | B / C / C | A / B / B |
-| 2.3.1.1 | Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.3.1.2 | Extract actionable hunting leads from external tool results | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.3.1.3 | Convert external findings into precise internal SIEM or Zeek queries | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-
----
-
-## 2.4 CTI for Hunters
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.4.1 | Assessing CTI for hunting value | K | A / B / B | B / C / C | A / B / B |
-| 2.4.1.1 | Triage a CTI report: hunt / don’t hunt / hand off, and say why | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.4.2 | Extracting hunt leads from CTI | K | A / B / B | B / C / C | A / B / B |
-| 2.4.2.1 | Extract hunt-suitable TTPs from a CTI report | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.4.2.2 | Extract hunt-suitable artifacts (IOCs, patterns, behaviors) | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-| 2.4.2.3 | State the hunt question those leads support | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
-| 2.4.3 | STIX as hunt input | K | A / A / B | B / C / C | A / B / B |
-| 2.4.3.1 | Identify hunt-relevant objects in a report or bundle | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.4.3.2 | Turn those objects into hunt leads | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
-
----
-
-## 2.5 Framework Application for Hunting
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.5.1 | Using MITRE ATT&CK for hunt planning and coverage analysis | K | A / B / B | B / C / C | B / C / C |
-| 2.5.1.1 | Map a hunt plan or hunt findings to MITRE ATT&CK | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 2.5.1.2 | Use ATT&CK to identify detection or visibility gaps | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 2.5.1.3 | Use ATT&CK to support hunt prioritization | T | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
-
----
-
-## 2.6 Attacker Techniques
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.6.1 | Persistence techniques | K | A / B / B | B / C / C | A / B / B |
-| 2.6.1.1 | Recognize persistence techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.6.2 | Privilege escalation techniques | K | A / B / B | B / C / C | A / B / B |
-| 2.6.2.1 | Recognize privilege escalation techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 2.6.3 | Hunt for specific persistence or privilege escalation techniques | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
-
----
-
-## 2.7 Site-Specific Hunt Knowledge and Tasks
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.7.1 | Hunt control and lead management | K | A / A / B | B / C / C | A / A / B |
-| 2.7.1.1 | Follow the local process for initiating and controlling a hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.7.2 | Hunt documentation standards | K | A / A / B | B / C / C | A / A / B |
-| 2.7.2.1 | Document a hunt according to local standards | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-| 2.7.3 | Hunt outputs and hand-off | K | A / A / B | B / C / C | A / A / B |
-| 2.7.3.1 | Produce required hunt outputs and perform proper hand-off | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-
----
-
 ## 3.1 Core Intelligence Concepts
+
+Taught after SOC. Hunt `2.x` is after this block. IDs stay `3.x`.
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
@@ -436,6 +349,97 @@ Three teaching units. Tasks apply the knowledge they sit under. Alert SLA clocks
 | 3.12.2.2 | Document and archive intelligence products according to local standards | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
 | 3.12.3 | Local dissemination channels and customers | K | A / A / A | A / A / B | B / C / C |
 | 3.12.3.1 | Disseminate a product using the correct local channels and customers | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+
+---
+
+## 2.1 Purpose of Threat Hunting
+
+Taught after CTI. IDs stay `2.x`.
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 2.1.1 | Purpose of Threat Hunting | K | A / B / B | B / C / C | A / B / B |
+| 2.1.1.1 | Explain the purpose of threat hunting in the context of the security program | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.1.1.2 | Identify examples of activity that existing controls might miss | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+
+---
+
+## 2.2 Hunt Methodology
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 2.2.1 | Hunt types | K | A / B / B | B / C / C | A / B / B |
+| 2.2.1.1 | Execute an intel-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.1.2 | Execute a hypothesis-driven hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.1.3 | Execute a reactive hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.1.4 | Execute an anomaly-based hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.2.2 | Hunt development concepts | K | A / B / B | B / C / C | A / B / B |
+| 2.2.2.1 | Develop and document a hunt hypothesis | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.2.2.2 | Scope and prioritize a hunt | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.2.2.3 | Identify unique patterns or behaviors suitable for hunting | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
+
+---
+
+## 2.3 Online Tools & Enrichment
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 2.3.1 | Tool capabilities for hunting | K | A / B / B | B / C / C | A / B / B |
+| 2.3.1.1 | Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.3.1.2 | Extract actionable hunting leads from external tool results | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.3.1.3 | Convert external findings into precise internal SIEM or Zeek queries | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+
+---
+
+## 2.4 CTI for Hunters
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 2.4.1 | Assessing CTI for hunting value | K | A / B / B | B / C / C | A / B / B |
+| 2.4.1.1 | Triage a CTI report: hunt / don’t hunt / hand off, and say why | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.4.2 | Extracting hunt leads from CTI | K | A / B / B | B / C / C | A / B / B |
+| 2.4.2.1 | Extract hunt-suitable TTPs from a CTI report | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.4.2.2 | Extract hunt-suitable artifacts (IOCs, patterns, behaviors) | T | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
+| 2.4.2.3 | State the hunt question those leads support | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
+| 2.4.3 | STIX as hunt input | K | A / A / B | B / C / C | A / B / B |
+| 2.4.3.1 | Identify hunt-relevant objects in a report or bundle | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.4.3.2 | Turn those objects into hunt leads | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
+
+---
+
+## 2.5 Framework Application for Hunting
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 2.5.1 | Using MITRE ATT&CK for hunt planning and coverage analysis | K | A / B / B | B / C / C | B / C / C |
+| 2.5.1.1 | Map a hunt plan or hunt findings to MITRE ATT&CK | T | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 2.5.1.2 | Use ATT&CK to identify detection or visibility gaps | T | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
+| 2.5.1.3 | Use ATT&CK to support hunt prioritization | T | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
+
+---
+
+## 2.6 Attacker Techniques
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 2.6.1 | Persistence techniques | K | A / B / B | B / C / C | A / B / B |
+| 2.6.1.1 | Recognize persistence techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.6.2 | Privilege escalation techniques | K | A / B / B | B / C / C | A / B / B |
+| 2.6.2.1 | Recognize privilege escalation techniques in logs or telemetry | T | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| 2.6.3 | Hunt for specific persistence or privilege escalation techniques | T | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
+
+---
+
+## 2.7 Site-Specific Hunt Knowledge and Tasks
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|------|------|-----------|--------------|-----------|
+| 2.7.1 | Hunt control and lead management | K | A / A / B | B / C / C | A / A / B |
+| 2.7.1.1 | Follow the local process for initiating and controlling a hunt | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.7.2 | Hunt documentation standards | K | A / A / B | B / C / C | A / A / B |
+| 2.7.2.1 | Document a hunt according to local standards | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
+| 2.7.3 | Hunt outputs and hand-off | K | A / A / B | B / C / C | A / A / B |
+| 2.7.3.1 | Produce required hunt outputs and perform proper hand-off | T | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 
 ---
 

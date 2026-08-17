@@ -18,8 +18,10 @@ By the end of this module, you will be able to:
 2. Map a one-line activity to a tactic and a technique (or sub-technique) and cite the evidence.
 
 **Mapped Proficiency Items:**
-- K: 1.5.1.1 – MITRE ATT&CK
-- T: 1.5.1.2 – Map an alert or observed activity to MITRE ATT&CK tactics/techniques
+- K: 1.5.1.1 – MITRE ATT&CK  
+  SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B
+- T: 1.5.1.2 – Map an alert or observed activity to MITRE ATT&CK tactics/techniques  
+  SOC 2b / 3c / 4c · Hunter 3c / 4c / 4c · CTI 3c / 4c / 4c · DE 1a / 2b / 2b
 
 ---
 

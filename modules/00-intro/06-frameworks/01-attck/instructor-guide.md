@@ -36,7 +36,11 @@
 
 Same as the student guide.
 
-**Mapped Items:** K 1.5.1.1 ; T 1.5.1.2
+**Mapped Items:**  
+- K: 1.5.1.1 – MITRE ATT&CK  
+  SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B  
+- T: 1.5.1.2 – Map an alert or observed activity to MITRE ATT&CK tactics/techniques  
+  SOC 2b / 3c / 4c · Hunter 3c / 4c / 4c · CTI 3c / 4c / 4c · DE 1a / 2b / 2b
 
 ---
 

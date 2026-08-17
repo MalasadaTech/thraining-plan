@@ -7,10 +7,10 @@
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 1.5.3.1 | K | Cyber Kill Chain | 1.5.3 a–c |
-| 1.5.3.2 | T | Identify the Kill Chain stage of observed activity | 1.5.3.1 task 1 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|----------|
+| 1.5.3.1 | K | Cyber Kill Chain | 1.5.3 a–c | A / B / C | B / C / C | B / C / C | A / B / B |
+| 1.5.3.2 | T | Identify the Kill Chain stage of observed activity | 1.5.3.1 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c | 1a / 2b / 2b |
 
 Stay in this lesson: stage of what you saw, and why it is not the neighbor. ATT&CK is **1.5.1**. Diamond is **1.5.2**. Next shared hour is the tool survey (**3.3.2**).
 

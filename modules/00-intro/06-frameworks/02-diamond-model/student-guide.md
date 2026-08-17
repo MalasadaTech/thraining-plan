@@ -18,8 +18,10 @@ By the end of this module, you will be able to:
 2. Fill the four vertices from a short activity set and say which vertex is weakest.
 
 **Mapped Proficiency Items:**
-- K: 1.5.2.1 – Diamond Model
-- T: 1.5.2.2 – Apply the Diamond Model to an incident or set of indicators
+- K: 1.5.2.1 – Diamond Model  
+  SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B
+- T: 1.5.2.2 – Apply the Diamond Model to an incident or set of indicators  
+  SOC 2b / 3c / 4c · Hunter 3c / 4c / 4d · CTI 3c / 4c / 4d · DE 1a / 2b / 2b
 
 ---
 
@@ -40,7 +42,7 @@ ATT&CK named the **behavior**. You still have four holes in the story: who, with
 
 **How you use it.** Fill all four from what you actually have. Name the **weakest** vertex — the one with the least evidence. That is the next question, not a guess you write as fact.
 
-**What good looks like (1.5.2.2):** encoded PowerShell on `WS-JLEE` talking to a domain. Victim = `WS-JLEE`. Capability = encoded PowerShell. Infrastructure = that domain. Adversary = weakest (you have no actor evidence). Do not put “PRD” in Adversary because the course story used that name.
+**What good looks like (1.5.2.2):** encoded PowerShell on a workstation talking to a domain. Victim = that host. Capability = encoded PowerShell. Infrastructure = that domain. Adversary = weakest (you have no actor evidence). Do not put a course-fiction name in Adversary.
 
 Kill Chain is next (**1.5.3**).
 

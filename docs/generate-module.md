@@ -17,7 +17,9 @@ Stop and say what is missing if any of these fail:
 - You were given that ID, not a vague topic and not an old display number (`section 7`, `section 8`).
 - Gate 1 is done. You are not proposing a new matrix row.
 
-**Assign work by ID prefix:** `0.x` and shared-floor IDs live under `modules/00-intro/` and are taught **before SOC**: `0.1`–`0.5`, then `1.5`, `3.3.2`, `1.8.1`. `1.x` SOC content is `1.1`–`1.4` and `1.6` (`modules/01-soc/`). `2.x` = Hunt (`modules/02-hunter/`), `3.x` = CTI (`modules/03-cti/`). `4.x` = Detection Engineer (`modules/04-de/`). **Retired — do not generate:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
+**Teach order** (IDs stay): `0` → shared floor → SOC `1` → **CTI `3`** → hunt `2` → DE `4`. Folders still follow IDs (`modules/03-cti/`, `modules/02-hunter/`).
+
+**Assign work by ID prefix:** `0.x` and shared-floor IDs live under `modules/00-intro/` and are taught **before SOC**: `0.1`–`0.5`, then `1.5`, `3.3.2`, `1.8.1`. `1.x` SOC content is `1.1`–`1.4` and `1.6` (`modules/01-soc/`). `3.x` = CTI (`modules/03-cti/`). `2.x` = Hunt (`modules/02-hunter/`). `4.x` = Detection Engineer (`modules/04-de/`). **Retired — do not generate:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
 
 **How big is one lesson**
 

@@ -35,7 +35,11 @@
 
 Same as the student guide.
 
-**Mapped Items:** K 1.5.2.1 ; T 1.5.2.2
+**Mapped Items:**  
+- K: 1.5.2.1 – Diamond Model  
+  SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B  
+- T: 1.5.2.2 – Apply the Diamond Model to an incident or set of indicators  
+  SOC 2b / 3c / 4c · Hunter 3c / 4c / 4d · CTI 3c / 4c / 4d · DE 1a / 2b / 2b
 
 ---
 
@@ -55,7 +59,7 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Walk the `WS-JLEE` + encoded PowerShell + domain fill. Fail “Adversary = PRD” with no evidence.
+Walk the workstation + encoded PowerShell + domain fill. Fail putting a course-fiction name in Adversary.
 
 ---
 

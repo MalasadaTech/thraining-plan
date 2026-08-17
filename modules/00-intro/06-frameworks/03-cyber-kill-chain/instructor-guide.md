@@ -35,7 +35,11 @@
 
 Same as the student guide.
 
-**Mapped Items:** K 1.5.3.1 ; T 1.5.3.2
+**Mapped Items:**  
+- K: 1.5.3.1 – Cyber Kill Chain  
+  SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B  
+- T: 1.5.3.2 – Identify the Kill Chain stage of observed activity  
+  SOC 2b / 3c / 4c · Hunter 3c / 4c / 4c · CTI 3c / 4c / 4c · DE 1a / 2b / 2b
 
 ---
 
@@ -55,7 +59,7 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write the seven stages. Walk the `.vbs` in email. Fail “C2” with no callback.
+Write the seven stages. Walk the `.vbs` in email as Delivery. Fail Exploitation (no run) and C2 (no callback).
 
 ---
 
@@ -69,8 +73,8 @@ Write the seven stages. Walk the `.vbs` in email. Fail “C2” with no callback
    **Answer:** Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command and Control, Actions on Objectives.  
    **Explanation:** Outline b.
 
-3. **`.vbs` in email that ran — why not C2?**  
-   **Answer:** You saw delivery / run on the host. You did not see a callback.  
+3. **`.vbs` in email — why Delivery, not Exploitation?**  
+   **Answer:** You saw it arrive. You did not see it run. Exploitation is the next stage you do not have.  
    **Explanation:** Outline c / task.
 
 ---

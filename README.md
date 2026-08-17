@@ -21,8 +21,8 @@ templates/                        # proposal + module writing templates
 modules/
   00-intro/<unit>/<module>/       # front door + shared hours (everyone, before SOC)
   01-soc/<unit>/<module>/
-  02-hunter/<unit>/<module>/
-  03-cti/<unit>/<module>/
+  03-cti/<unit>/<module>/         # taught after SOC; IDs stay 3.x
+  02-hunter/<unit>/<module>/      # taught after CTI; IDs stay 2.x
   04-de/<module>/                 # Detection Engineer
 labs/                             # reusable sample logs and PCAP
 ```
@@ -79,20 +79,6 @@ Folder names are not dotted IDs:
 | `modules/01-soc/05-reporting/02-reporting-timelines` | `1.6.2.1`–`1.6.2.2` | `1.6.2` + `1.6.2.1` |
 | `modules/01-soc/05-reporting/03-notification-distribution` | `1.6.3.1`–`1.6.3.2` | `1.6.3` + `1.6.3.1` |
 | `modules/00-intro/08-environment/01-orientation` | `1.8.1.1`–`1.8.1.2` | `1.8.1` + `1.8.1.1` (00, before SOC; rewrite later) |
-| `modules/02-hunter/01-purpose` | `2.1.1` / `2.1.1.1` / `2.1.1.2` | `2.1` + `2.1.1` |
-| `modules/02-hunter/02-methodology/01-hunt-types` | `2.2.1` / `2.2.1.1`–`2.2.1.4` | `2.2.1` + `2.2.3` tasks 4–7 |
-| `modules/02-hunter/02-methodology/02-hunt-development` | `2.2.2` / `2.2.2.1`–`2.2.2.3` | `2.2.2` + `2.2.3` tasks 1–3 |
-| `modules/02-hunter/03-online-tools` | `2.3.1` / `2.3.1.1`–`2.3.1.3` | `2.3.1` + `2.3.2` tasks 1–3 |
-| `modules/02-hunter/04-cti-for-hunters/01-assessing-cti` | `2.4.1` / `2.4.1.1` | `2.4.1` + `2.4.1.1` |
-| `modules/02-hunter/04-cti-for-hunters/02-extracting-leads` | `2.4.2` / `2.4.2.1`–`2.4.2.3` | `2.4.2` + `2.4.2.1` tasks 1–3 |
-| `modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input` | `2.4.3` / `2.4.3.1`–`2.4.3.2` | `2.4.3` + `2.4.3.1` tasks 1–2 |
-| `modules/02-hunter/05-framework-application` | `2.5.1` / `2.5.1.1`–`2.5.1.3` | `2.5.1` + `2.5.2` tasks 1–3 |
-| `modules/02-hunter/06-attacker-techniques/01-persistence` | `2.6.1` / `2.6.1.1` | `2.6.1` + `2.6.3` task 1 |
-| `modules/02-hunter/06-attacker-techniques/02-privilege-escalation` | `2.6.2` / `2.6.2.1` | `2.6.2` + `2.6.3` task 2 |
-| `modules/02-hunter/06-attacker-techniques/03-hunt-specific` | `2.6.3` | `2.6.3` task 3 |
-| `modules/02-hunter/07-site-specific/01-hunt-control` | `2.7.1` / `2.7.1.1` | `2.7.1` + `2.7.4` task 1 |
-| `modules/02-hunter/07-site-specific/02-hunt-documentation` | `2.7.2` / `2.7.2.1` | `2.7.2` + `2.7.4` task 2 |
-| `modules/02-hunter/07-site-specific/03-hunt-outputs` | `2.7.3` / `2.7.3.1` | `2.7.3` + `2.7.4` task 3 |
 | `modules/03-cti/01-core-intel/01-data-info-intel` | `3.1.1` / `3.1.1.1` | `3.1.1` + `3.1.1.1` |
 | `modules/03-cti/01-core-intel/02-intelligence-lifecycle` | `3.1.2` / `3.1.2.1` | `3.1.2` + `3.1.2.1` |
 | `modules/03-cti/01-core-intel/03-intelligence-types` | `3.1.3` / `3.1.3.1` | `3.1.3` + `3.1.3.1` |
@@ -130,6 +116,20 @@ Folder names are not dotted IDs:
 | `modules/03-cti/12-site-specific/01-local-priorities` | `3.12.1` / `3.12.1.1` | `3.12.1` + `3.12.1.1` |
 | `modules/03-cti/12-site-specific/02-local-production` | `3.12.2` / `3.12.2.1`–`3.12.2.2` | `3.12.2` + `3.12.2.1` |
 | `modules/03-cti/12-site-specific/03-local-dissemination` | `3.12.3` / `3.12.3.1` | `3.12.3` + `3.12.3.1` |
+| `modules/02-hunter/01-purpose` | `2.1.1` / `2.1.1.1` / `2.1.1.2` | `2.1` + `2.1.1` |
+| `modules/02-hunter/02-methodology/01-hunt-types` | `2.2.1` / `2.2.1.1`–`2.2.1.4` | `2.2.1` + `2.2.3` tasks 4–7 |
+| `modules/02-hunter/02-methodology/02-hunt-development` | `2.2.2` / `2.2.2.1`–`2.2.2.3` | `2.2.2` + `2.2.3` tasks 1–3 |
+| `modules/02-hunter/03-online-tools` | `2.3.1` / `2.3.1.1`–`2.3.1.3` | `2.3.1` + `2.3.2` tasks 1–3 |
+| `modules/02-hunter/04-cti-for-hunters/01-assessing-cti` | `2.4.1` / `2.4.1.1` | `2.4.1` + `2.4.1.1` |
+| `modules/02-hunter/04-cti-for-hunters/02-extracting-leads` | `2.4.2` / `2.4.2.1`–`2.4.2.3` | `2.4.2` + `2.4.2.1` tasks 1–3 |
+| `modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input` | `2.4.3` / `2.4.3.1`–`2.4.3.2` | `2.4.3` + `2.4.3.1` tasks 1–2 |
+| `modules/02-hunter/05-framework-application` | `2.5.1` / `2.5.1.1`–`2.5.1.3` | `2.5.1` + `2.5.2` tasks 1–3 |
+| `modules/02-hunter/06-attacker-techniques/01-persistence` | `2.6.1` / `2.6.1.1` | `2.6.1` + `2.6.3` task 1 |
+| `modules/02-hunter/06-attacker-techniques/02-privilege-escalation` | `2.6.2` / `2.6.2.1` | `2.6.2` + `2.6.3` task 2 |
+| `modules/02-hunter/06-attacker-techniques/03-hunt-specific` | `2.6.3` | `2.6.3` task 3 |
+| `modules/02-hunter/07-site-specific/01-hunt-control` | `2.7.1` / `2.7.1.1` | `2.7.1` + `2.7.4` task 1 |
+| `modules/02-hunter/07-site-specific/02-hunt-documentation` | `2.7.2` / `2.7.2.1` | `2.7.2` + `2.7.4` task 2 |
+| `modules/02-hunter/07-site-specific/03-hunt-outputs` | `2.7.3` / `2.7.3.1` | `2.7.3` + `2.7.4` task 3 |
 | `modules/04-de/01-what-de-owns` | `4.1` / `4.1.1` | `4.1` a–d + `4.1.1` |
 | `modules/04-de/02-sound-and-shop-requirements` | `4.2` / `4.2.1`–`4.2.3` | `4.2` a–d + `4.2.1` |
 | `modules/04-de/03-nominations` | `4.3` / `4.3.1` | `4.3` a–e + `4.3.1` |
