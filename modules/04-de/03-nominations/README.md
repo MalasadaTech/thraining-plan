@@ -9,10 +9,10 @@
 
 | Matrix ID | Type | Item | Outline heading |
 |-----------|------|------|-----------------|
-| 4.3 | K | Nominations from SOC, hunt, and CTI | 4.3 a–d |
+| 4.3 | K | Nominations from SOC, hunt, and CTI | 4.3 a–e |
 | 4.3.1 | T | Review a nomination: accept, send back, or reject, and say who finishes what | 4.3.1 tasks 1–2 |
 
-The lesson ID is **4.3**. Sound/test is **4.2**. Tunes are **4.4**. Packages are **4.5**. No lab. Do not invent tickets.
+The lesson ID is **4.3**. Sound/test is **4.2**. Tunes are **4.4**. Packages are **4.5**. No lab. Do not invent tickets or a DYA form.
 
 ## Concepts taught
 
@@ -20,6 +20,7 @@ The lesson ID is **4.3**. Sound/test is **4.2**. Tunes are **4.4**. Packages are
 - nomination need not be production-ready
 - accept, send back, or reject
 - nominator owes vs DE finishes
+- nomination need and reference
 
 ## Artifacts
 

@@ -21,11 +21,11 @@ Last hour was sound and the close-the-loop note. This hour is the nomination its
 **Title:** What this hour is
 
 Who can **nominate**.  
-**Accept**, **send back**, or **reject**.  
-Who still owes what.
+What the nomination must **contain**.  
+**Accept**, **send back**, or **reject**.
 
 **Speaker Notes:**  
-Packages are 4.5. Tunes are 4.4. Today is only the nomination.
+You wanted a need plus a pointer. A drafted rule only if they have one. Packages are 4.5. Tunes are 4.4.
 
 ---
 
@@ -34,34 +34,36 @@ Packages are 4.5. Tunes are 4.4. Today is only the nomination.
 
 SOC analyst. Hunter. CTI analyst.
 
-A draft, a sketch, or “we need something on this” is enough. Not production-ready.
+A draft, a sketch, or “we need something on this” is allowed. Not production-ready.
 
 **Speaker Notes:**  
 IR and firewall / IA do not nominate. They are neighbors from 0.2.
 
 ---
 
-### Slide 4 – Three reviews
-**Title:** Accept, send back, reject
+### Slide 4 – What it must contain
+**Title:** Clear enough to review
 
-**Accept** for work — DE will finish.  
-**Send back** — say what is missing.  
-**Reject** — say why (not DE work).
+The **need** — what activity, where.
+
+**Context or a reference** — investigation or intel report. Pointer: investigation number, or report title and URL.
+
+A **drafted rule** if they have one. **Not** required.
 
 **Speaker Notes:**  
-Walk the three student-guide givens if you need them. “Block this IP” is reject. “Make a rule” with no activity is send back.
+That is the bar. Not “ready to deploy.” Do not invent a DYA form.
 
 ---
 
-### Slide 5 – The bar
-**Title:** Clear enough to review
+### Slide 5 – Three reviews
+**Title:** Accept, send back, reject
 
-Not “ready to deploy.”
-
-Name what the **nominator** still owes vs what **DE** will finish.
+**Accept** for work — need + pointer. DE will finish.  
+**Send back** — say what is missing (need, pointer, or both).  
+**Reject** — say why (not DE work).
 
 **Speaker Notes:**  
-That is the whole task. Do not invent a ticket.
+Walk the three student-guide givens if you need them. No pointer → send back. No drafted rule → still accept. Block this IP → reject.
 
 ---
 
@@ -69,8 +71,8 @@ That is the whole task. Do not invent a ticket.
 **Title:** Knowledge Check
 
 1. Who can nominate?  
-2. The nominator bar is “ready to deploy.” True or false?  
-3. Someone says “Make a rule” and names no activity. Accept, send back, or reject? Who still owes what?
+2. A nomination names the need and points at a report, but has no drafted rule. Accept or send back?  
+3. A nomination names the activity but has no investigation or report pointer. Accept, send back, or reject? Who still owes what?
 
 **Speaker Notes:**  
 Answers only in the instructor guide. Three questions for the whole lesson. Stop.
@@ -81,7 +83,7 @@ Answers only in the instructor guide. Three questions for the whole lesson. Stop
 **Title:** Summary
 
 SOC, hunt, CTI nominate.  
-Sketch is allowed.  
+Need + pointer. Drafted rule is optional.  
 Accept, send back, or reject — and say who finishes what.
 
 **Speaker Notes:**  

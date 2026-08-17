@@ -1302,7 +1302,7 @@ Also: accept for work, clear enough to review
 |----------|--------|-------|
 | Taught | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
 
-See also: [nominator owes vs DE finishes](#nominator-owes-vs-de-finishes), [close the loop with the nominator](#close-the-loop-with-the-nominator)
+See also: [nominator owes vs DE finishes](#nominator-owes-vs-de-finishes), [nomination need and reference](#nomination-need-and-reference), [close the loop with the nominator](#close-the-loop-with-the-nominator)
 
 ### nominator owes vs DE finishes
 
@@ -1312,7 +1312,17 @@ Also: 4.3.1, who finishes what
 |----------|--------|-------|
 | Taught | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
 
-See also: [accept, send back, or reject](#accept-send-back-or-reject)
+See also: [accept, send back, or reject](#accept-send-back-or-reject), [nomination need and reference](#nomination-need-and-reference)
+
+### nomination need and reference
+
+Also: need plus pointer, investigation number, intel report title and URL, drafted rule optional
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
+
+See also: [accept, send back, or reject](#accept-send-back-or-reject), [nomination need not be production-ready](#nomination-need-not-be-production-ready)
 
 ### what an IOC is versus a TTP
 

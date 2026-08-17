@@ -59,7 +59,7 @@ Shared intro. Same idea on the SOC, hunter, and CTI sheets. Not site policy.
 
 | # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
 |---|------|------|------|------|------|---------------|
-| 4.3 | Nominations from SOC, hunt, and CTI | K | B | C | C | Draft need not be perfect. Bar is “clear enough to review.” |
+| 4.3 | Nominations from SOC, hunt, and CTI | K | B | C | C | Draft need not be perfect. Bar is need + pointer, not a finished rule. |
 | 4.3.1 | Review a nomination: accept, send back, or reject, and say who finishes what | T | 3c | 4c | 4d | Distinctive vs weak nomination. 7-level judges what DE should finish. |
 
 ---

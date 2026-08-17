@@ -932,6 +932,7 @@ a. Who can nominate (SOC analyst, hunter, CTI analyst)
 b. A nomination can be a draft, a sketch, or “we need something on this” — it does not have to be production-ready  
 c. DE review: accept for work, send back with what is missing, or reject with why  
 d. The bar for the nominator is “clear enough to review,” not “ready to deploy”  
+e. A nomination that is clear enough to review names the need and points at context or a reference (investigation or intel report). A drafted rule is included if the nominator has one — it is not required.  
 
 **4.3.1 [T] Tasks**  
 1. Review a nomination and accept it for work, send it back, or reject it — and say why  
