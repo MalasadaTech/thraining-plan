@@ -1,220 +1,95 @@
 # Module 1.5.3 – Notification and Distribution  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.5.3 – Notification and Distribution  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Who and how. Closes 1.5. Overlay site chart if you have one.
+Who and how. Closes 1.5. SOC ends. Next is CTI, not 1.7.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Read the notification chart
-2. Leadership awareness yes/no
-3. Approved channel vs rejected
-4. Route: recipients + leadership + channel
+Put the record on an **approved path**.
 
-**Mapped Items:**  
-K: 1.5.3.1 | T: 1.5.3.2
+**Who** gets it.  
+**Leadership** yes or no.  
+**Which channel** — and reject the wrong one.
 
 **Speaker Notes:**  
-Hunter K is A/B/B.
+Type and clock are done. Do not write the body.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Classroom chart
+**Title:** Who, leadership, channel
 
-- Classroom chart
-- Leadership and channels
-- Three examples
-- Four route lines
-- Knowledge check — close 1.5
+**Incident** — SOC + IR. Lead **yes**. **Ticket**.  
+**RFI** — named team. Lead **no**. Ticket or RFI form.
 
 **Speaker Notes:**  
-1.7 is next unit.
+Outline a–c. This chart is this lesson only. Overlay a real shop chart if they have one. No invented informational row.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Route + reject
 
-Which type (**1.5.1**)  
-Which clock (**1.5.2**)  
-Where the changeover log lives (**1.7**)  
-Personal SMS “because it’s faster”
+**Incident** — **A12** to IR. Lead yes. Ticket.  
+Reject personal email or chat.
 
-**Key Point:** Chart + route line.
+**RFI** — CTI on the update domain. Lead no. Form or ticket.  
+Reject texting a CTI friend.
 
 **Speaker Notes:**  
-Fence.
+Right people, wrong path still fails. Do not retell the plot.
 
 ---
 
-### Slide 5 – The Chart
-**Title:** Classroom Notification Chart
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Incident → SOC + **IR**, lead **yes**, **ticket**  
-RFI → named team, lead **no**, ticket/form  
-Informational → distro, lead **yes**, email/distro  
+No type pick (**1.5.1**).  
+No 30 / 60 clock (**1.5.2**).  
+No report body.  
+No invented DYA distro.  
+**1.7** is retired.
 
 **Speaker Notes:**  
-Outline a.
+If the ticket system is down, that is a 1.5.2 blocker. They do not invent SMS.
 
 ---
 
-### Slide 6 – Leadership
-**Title:** Awareness, Not “Email the CEO”
-
-Duty **SOC lead** unless the site chart says otherwise.  
-Incident and informational: **yes**.  
-RFI: **no** unless asked.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Channels
-**Title:** Approved vs Not
-
-**Approved:** ticket, RFI form, named distro  
-**Not:** personal SMS, private chat, off-domain mail  
-
-Right people + wrong path still fails.
-
-**Speaker Notes:**  
-Outline c.
-
----
-
-### Slide 8 – Route Line
-**Title:** Five Fields
-
-`type | recipients | leadership | channel | rejected`
-
-**Speaker Notes:**  
-Task.
-
----
-
-### Slide 9 – Example 1: Incident
-**Title:** Example 1 – Ticket to IR
-
-IR + lead, ticket.  
-Reject personal email only.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2: SMS
-**Title:** Example 2 – CTI Text
-
-Right team. **Wrong channel.**  
-Use ticket / RFI form.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3: Hunter Chat Only
-**Title:** Example 3 – Missing IR and Lead
-
-Incident needs **ticket** to IR + leadership.  
-Hunter chat is not enough.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Unofficial path  
-- No IR on an incident  
-- WhatsApp for “speed”  
-- Using 1.7’s log as the channel  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Use the site matrix if posted.  
-Keep: who / lead yes-no / approved channel.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize Ex 1–3.
-2. A–D: route line + rejected channel.
-3. No clocks. No new type.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. What three things does the chart tell you?
-2. Leadership — when yes?
-3. One approved and one not-approved channel?
-4. Why hunter chat fails for an incident?
-5. Where is changeover *recorded*?
+1. This hour is when the report is due. True or false?  
+2. What three things does the notification chart tell you?  
+3. First IR handoff for **A12**. Recipients, leadership yes/no, channel, and one rejected channel?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Chart: who, leadership, channel.
-- Reject the unofficial path.
-- Unit **1.5** ends. Next unit: **1.7** Shift change.
+Chart: who, leadership, channel.  
+Reject the unofficial path.
+
+**Next:** **3.1.1** Data, information, and intelligence.  
+Unit **1.5** ends. SOC ends. The RFI is the door into CTI.
 
 **Speaker Notes:**  
-Do not open 1.7 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Routing — Quick Reference
-
-| Type | Who | Lead | Channel |
-|------|-----|------|---------|
-| Incident | SOC + IR | Yes | Ticket |
-| RFI | Named team | No | Ticket / form |
-| Informational | Distro | Yes | Approved email |
-
-**Coming next:** Module 1.7 – Shift change
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open 3.1 unless that hour is scheduled. Do not open 1.7.

@@ -1,121 +1,95 @@
 # Instructor Guide – Module 1.5.3 – Notification and Distribution
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.5.3.1 A / B / C · 1.5.3.2 2b / 3c / 4c  
-- Hunter: 1.5.3.1 A / B / B · 1.5.3.2 2b / 3c / 4c  
-- CTI: 1.5.3.1 B / C / C · 1.5.3.2 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- SOC: 1.5.3.1 A / B / C ; 1.5.3.2 2b / 3c / 4c  
+- Hunter: 1.5.3.1 A / B / B ; 1.5.3.2 2b / 3c / 4c  
+- CTI: 1.5.3.1 B / C / C ; 1.5.3.2 3c / 4c / 4c  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach the chart, leadership flag, and approved channels. Force a **route line** plus a rejected channel. Close **1.5**.
+Route a report from the chart: who, leadership yes/no, approved channel, rejected channel. Closes **1.5**. SOC ends.
+
+**Context (plain language):**
+
+- What this hour is for: SOC analysts put the case and the CTI question on an approved path so IR and leadership actually see them.
+- How it hooks to the hour before: 1.5.2 was when it is due. This hour is who and how.
+- How it hooks to the hour after: CTI starts at 3.1.1. The RFI is the door. Do not open 1.7.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c. Classroom chart so the route task has a stand-in. Not a live DYA matrix. Hunter K is A / B / B. CTI works the task at 3-level (3c).
+- What we are *not* doing this hour: Pick the type. Score the clock. Write the body. Invent an informational row. Invent DYA distro names. Open **1.7** (retired). No lab.
+- Extra step: none.
+
+Do not invent a Harbor or DYA notification card. Do not tell the PRD plot. Do not dump the Run key. IR has the host (**Sam** is the classroom IR name if you need one). Leadership gets a short awareness flag, not the hash.
 
 **Key Teaching Points:**
-- Classroom chart is a stand-in. Overlay the site matrix if you have one.
-- Leadership = duty SOC lead, not “email the CISO” unless the chart says so.
-- SMS / private chat is the usual wrong channel.
-- Hunter K is A/B/B. CTI task 3c at 3-level.
-
-**Common Student Challenges:**
-- Right people, unofficial path.
-- Incident with no IR and no lead.
-- Using 1.7’s log location as the channel.
-- Scoring the 1.5.2 clock.
+- Chart: who, leadership yes/no, approved channel.
+- Right people, wrong path still fails.
+- Incident needs IR + lead via ticket. RFI needs the named team via ticket or form, not SMS.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional site notification matrix
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Read the chart.
-2. Leadership yes/no.
-3. Approved vs rejected channel.
-4. Route line.
+Same as the student guide.
 
-**Mapped Items:** K 1.5.3.1 · T 1.5.3.2
+**Mapped Items:** K 1.5.3.1 ; T 1.5.3.2
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & chart           | 12 min   | a–c |
-| Route line                     | 8 min    | |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 16 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | Close 1.5 |
-| **Total**                      | **~62 min** | Stretch Ex 2 if they defend SMS |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Who and how; SOC ends |
+| Key Concepts            | 12 min    | Chart; two routes |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | Close 1.5; next is 3.1.1 |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- SOC 3: copy the chart row + name one rejected channel.
-- Overlay site names (IR queue, “CIRT”, etc.) if you can.
+### 1. Key Concepts
 
-**Question:**  
-“If the ticket system is down, which *approved* fallback does the chart allow?” (If none, they escalate that as blocked — **1.5.2** — they do not invent SMS.)
+Write the two classroom rows. Walk **A12** as **IR + lead + ticket**. Walk the domain RFI as **CTI + no lead + form**, reject SMS.
 
----
+If they score 30 / 60: “1.5.2.”  
+If they rewrite the type: “1.5.1 is done.”  
+If they defend SMS: “Right team, wrong path.”  
+If they send the incident only to hunter chat: “IR and lead via ticket.”  
+If they invent a DYA distro: “Other is a shop row. Overlay their real chart if they have one.”  
+If they ask where the changeover log lives: “1.7 is retired. Not this hour.”
 
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail WhatsApp as approved. Fail hunter-chat-only for incidents.
-
-**Summaries:**
-- Ex 1: IR + lead, ticket; reject personal email only.
-- Ex 2: CTI, leadership no, form/ticket; reject SMS.
-- Ex 3: missing IR + lead; hunter chat not enough.
-
-**Cases:**
-
-| Item | Recipients | Lead | Channel | Reject |
-|------|------------|------|---------|--------|
-| A | SOC queue + IR | Yes | Ticket | Chat-only |
-| B | IT | No | Ticket / RFI form | SMS |
-| C | soc-aware distro | Yes | Approved email | IR ticket (wrong type path) |
-| D | Leadership *and* IR still need **ticket**; WhatsApp is **rejected** even if “faster” | Yes (but via approved path) | Ticket | WhatsApp |
+If the ticket system is down: they escalate that as blocked (**1.5.2**). They do not invent SMS.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Chart tells you?**  
-   **Answer:** Who receives which type, whether leadership gets awareness, which channel is approved.  
+1. **This hour is when the report is due. True or false?**  
+   **Answer:** False. That is 1.5.2. This hour is who and how.  
+   **Explanation:** Stay-in / vs 1.5.2.
+
+2. **What three things does the chart tell you?**  
+   **Answer:** Who receives which type. Whether leadership gets awareness. Which channel is approved.  
    **Explanation:** Outline a–c.
 
-2. **Leadership in classroom?**  
-   **Answer:** **Yes** for incident and informational. **No** for RFI unless the chart says so. Duty SOC lead.  
-   **Explanation:** Outline b.
-
-3. **Approved vs not?**  
-   **Answer:** Approved: ticket, RFI form, named distro. Not: personal SMS, private chat, off-domain mail.  
-   **Explanation:** Outline c.
-
-4. **Hunter chat not enough?**  
-   **Answer:** Incident chart requires IR + leadership via **ticket**. Chat is not the approved channel.  
-   **Explanation:** Example 3.
-
-5. **Changeover record location?**  
-   **Answer:** **1.7**, not this chart.  
-   **Explanation:** Fence.
+3. **First IR handoff for A12. Route and one rejected channel?**  
+   **Answer:** Recipients **SOC + IR**. Leadership **yes**. Channel **ticket**. Reject personal email, SMS, or private chat.  
+   **Explanation:** Outline a–c / task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- Site notification matrix
-- Next recommended module: 1.7.1 Shift changeover process
+- Next: 3.1.1 Data, information, and intelligence
