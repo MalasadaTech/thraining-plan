@@ -1,22 +1,22 @@
-# What a SOC is
+# How work can move
 
-**Path:** `modules/00-intro/01-what-a-soc-is`  
+**Path:** `modules/00-intro/03-how-work-moves`  
 **Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
-**Time:** about 15–20 minutes
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
 | Matrix ID | Type | Item | Outline heading |
 |-----------|------|------|-----------------|
-| 0.1 | K | What a SOC is | 0.1 a–c |
+| 0.3 | K | How work can move | 0.3 a–g |
 
-The lesson ID is **0.1**. Jobs are **0.2**. How work moves is **0.3**. DYA and PRD are course fiction, not site policy.
+The lesson ID is **0.3**. Jobs are **0.2**. Overlap / two hats is **0.4**. One possible path, not every shop’s policy. No lab.
 
 ## Concepts taught
 
-- what a SOC is
-- a SOC is a team sport
-- DYA and PRD are course fiction
+- how work can move from an alert
+- RFI to intel
+- hunt package and block list as later hand-offs
 
 ## Artifacts
 

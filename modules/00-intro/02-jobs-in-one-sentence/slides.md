@@ -1,7 +1,7 @@
 # Module 0.2 – Jobs in one sentence  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst (shared intro)  
+**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
 **Estimated Delivery Time:** 15–20 minutes  
 **Total Suggested Slides:** 8
 
@@ -9,8 +9,8 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 0.2 – Jobs in one sentence  
-**Subtitle:** Shared intro (SOC / Hunter / CTI)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Shared intro (SOC / Hunter / CTI / DE)  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
 Last hour we said the SOC is a team sport. This hour names the jobs. One sentence each. How work moves is next (0.3).

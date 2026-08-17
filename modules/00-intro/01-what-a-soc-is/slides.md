@@ -1,7 +1,7 @@
 # Module 0.1 – What a SOC is  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst (shared intro)  
+**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
 **Estimated Delivery Time:** 15–20 minutes  
 **Total Suggested Slides:** 8
 
@@ -9,8 +9,8 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 0.1 – What a SOC is  
-**Subtitle:** Shared intro (SOC / Hunter / CTI)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Shared intro (SOC / Hunter / CTI / DE)  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
 First hour of the course. We only name what a SOC is. We do not walk an alert yet. SOC means Security Operations Center.

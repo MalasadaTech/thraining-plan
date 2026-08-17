@@ -13,13 +13,13 @@
 **Baseline for Threat Hunter**
 - Knowledge items generally start at **B**
 - Task items generally start at **3c**
-- Section **0** is the shared intro (same codes as SOC and CTI), not hunter-primary work
+- Section **0** is the shared intro (same codes as SOC, CTI, and DE), not hunter-primary work
 
 ---
 
 ## 0 How a SOC can operate
 
-Shared intro. Same idea on the SOC and CTI sheets. Not site policy.
+Shared intro. Same idea on the SOC, CTI, and DE sheets. Not site policy.
 
 | # | Item | Type | Hunter 3 | Hunter 5 | Hunter 7 | Justification |
 |---|------|------|----------|----------|----------|---------------|

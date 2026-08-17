@@ -1,7 +1,7 @@
 # Jobs in one sentence
 
 **Path:** `modules/00-intro/02-jobs-in-one-sentence`  
-**Primary role:** SOC Analyst, Threat Hunter, CTI Analyst (shared intro)  
+**Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
 **Time:** about 15–20 minutes
 
 ## Mapped proficiency items

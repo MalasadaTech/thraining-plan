@@ -14,7 +14,7 @@
 
 ## 0 How a SOC can operate
 
-Shared intro. Same idea on the hunter and CTI sheets. Not site policy.
+Shared intro. Same idea on the hunter, CTI, and DE sheets. Not site policy.
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|

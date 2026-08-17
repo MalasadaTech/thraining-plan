@@ -44,6 +44,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 |--------|----------------|------------------|
 | `modules/00-intro/01-what-a-soc-is` | `0.1` | `0.1` a–c |
 | `modules/00-intro/02-jobs-in-one-sentence` | `0.2` | `0.2` a–f |
+| `modules/00-intro/03-how-work-moves` | `0.3` | `0.3` a–g |
 | `modules/01-soc/01-endpoint/01-process-activity` | `1.1.1.1`–`1.1.1.3` | `1.1.1` + `1.1.1.1` |
 | `modules/01-soc/01-endpoint/02-file-system-activity` | `1.1.2.1`–`1.1.2.3` | `1.1.2` + `1.1.2.1` |
 | `modules/01-soc/01-endpoint/03-network-activity` | `1.1.3.1`–`1.1.3.3` | `1.1.3` + `1.1.3.1` |

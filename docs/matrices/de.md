@@ -13,9 +13,25 @@
 **Baseline for Detection Engineer**
 - Knowledge items generally start at **B**
 - Task items generally start at **3c**
+- Section **0** is the shared intro (same codes as SOC, Hunter, and CTI), not DE-primary work. Do not start 0.x at B/3c.
 - Sensor work (**4.7**) is lighter
 - Site-specific (**4.8**) is obtain-and-follow, not invented DYA process
 - Rule syntax / first read-write is **1.3**, not this sheet
+
+---
+
+## 0 How a SOC can operate
+
+Shared intro. Same idea on the SOC, hunter, and CTI sheets. Not site policy.
+
+| # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
+|---|------|------|------|------|------|---------------|
+| 0.1 | What a SOC is | K | A | B | B | Shared intro. Not DE-primary; do not start at B/3c. |
+| 0.2 | Jobs in one sentence | K | A | B | B | DE is one desk among several. |
+| 0.3 | How work can move | K | A | B | B | Hunt package to DE is a later beat. |
+| 0.4 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
+| 0.5 | How this course is laid out | K | A | B | B | Detection engineers sit this after hunting. |
+| 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a ticket path. No 4d. |
 
 ---
 

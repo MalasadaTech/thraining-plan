@@ -13,13 +13,13 @@
 **Baseline for CTI Analyst**
 - Knowledge items generally start at **B**
 - Task items generally start at **3c**
-- Section **0** is the shared intro (same codes as SOC and Hunter), not CTI-primary work
+- Section **0** is the shared intro (same codes as SOC, Hunter, and DE), not CTI-primary work
 
 ---
 
 ## 0 How a SOC can operate
 
-Shared intro. Same idea on the SOC and hunter sheets. Not site policy.
+Shared intro. Same idea on the SOC, hunter, and DE sheets. Not site policy.
 
 | # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|

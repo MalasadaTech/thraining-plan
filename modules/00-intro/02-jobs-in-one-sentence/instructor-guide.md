@@ -1,10 +1,11 @@
 # Instructor Guide – Module 0.2 – Jobs in one sentence
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst (shared intro)  
+**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
 **Proficiency Focus:**  
 - SOC: 0.2 A / B / B  
 - Hunter: 0.2 A / B / B  
 - CTI: 0.2 A / B / B  
+- DE: 0.2 A / B / B  
 **Estimated Time:** 15–20 minutes  
 **Delivery Method:** Instructor-led
 

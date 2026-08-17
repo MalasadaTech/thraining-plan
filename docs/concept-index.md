@@ -1054,9 +1054,10 @@ Also: SOC analyst, CTI, hunter, detection engineer, IR, firewall IA one-liners
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.2 Jobs in one sentence](../modules/00-intro/02-jobs-in-one-sentence/) | SOC, Hunter, CTI |
+| Taught | [0.2 Jobs in one sentence](../modules/00-intro/02-jobs-in-one-sentence/) | SOC, Hunter, CTI, DE |
+| Used | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
 
-See also: [what a SOC is](#what-a-soc-is)
+See also: [what a SOC is](#what-a-soc-is), [how work can move from an alert](#how-work-can-move-from-an-alert)
 
 ### what a SOC is
 
@@ -1064,7 +1065,7 @@ Also: Security Operations Center, watch and start the response
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI |
+| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
 See also: [a SOC is a team sport](#a-soc-is-a-team-sport), [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction)
 
@@ -1074,7 +1075,7 @@ Also: more than one job next to the SOC
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI |
+| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
 See also: [what a SOC is](#what-a-soc-is)
 
@@ -1084,7 +1085,7 @@ Also: Dixon Yamada and Associates, Pink River Dolphin, not site policy
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI |
+| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
 See also: [what a SOC is](#what-a-soc-is)
 
@@ -1369,6 +1370,16 @@ Also: http.host, Host header
 
 See also: [http log](#http-log), [URI / URL](#uri--url)
 
+### how work can move from an alert
+
+Also: path after an alert, one possible path, not every shop
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
+
+See also: [jobs in one sentence](#jobs-in-one-sentence), [RFI to intel](#rfi-to-intel), [hunt package and block list as later hand-offs](#hunt-package-and-block-list-as-later-hand-offs)
+
 ### how a STIX bundle seeds a hunt
 
 Also: STIX bundle seeds a hunt, bundle as hunt seed, not how to author STIX
@@ -1502,6 +1513,16 @@ Also: status_code, HTTP 200, HTTP 404, HTTP 401
 | Taught | [1.2.5 HTTP Engine](../modules/01-soc/02-zeek/05-http-engine/) | SOC, Hunter, CTI |
 
 See also: [http log](#http-log), [HTTP method](#http-method)
+
+### hunt package and block list as later hand-offs
+
+Also: extra infrastructure to firewall IA, hunt package to hunters and detection engineers
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
+
+See also: [how work can move from an alert](#how-work-can-move-from-an-alert), [RFI to intel](#rfi-to-intel)
 
 ### hunt development concepts
 
@@ -3181,6 +3202,18 @@ Also: Run key persistence, RunOnce, Winlogon persistence, registry autorun
 | Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [start menu / startup folder persistence](#start-menu--startup-folder-persistence), [common persistence locations (Run, Services)](#common-persistence-locations-run-services)
+
+### RFI to intel
+
+Also: ask intel for more work on that alert
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
+
+SOC ticket-type depth is [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/). CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/).
+
+See also: [how work can move from an alert](#how-work-can-move-from-an-alert), [Request for Information (RFI)](#request-for-information-rfi)
 
 ### Request for Information (RFI)
 
