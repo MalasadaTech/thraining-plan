@@ -151,12 +151,12 @@ Host-observed activity (Sysmon / MDE). Protocol deep-dive is 1.2 Zeek.
 
 ## 1.4 Alert Handling (Primarily SOC)
 
-Five teaching units. Tasks apply the knowledge item they sit under. False-positive *causes* are **1.4.3**, not a second K row under classification. Detection authoring is 1.3.
+Five teaching units. Tasks apply the knowledge item they sit under. False-positive *causes* are **1.4.3**, not a second K row under classification. Detection authoring is 1.3. **1.4.1** context includes a VirusTotal lookup of a hash, IP, or domain you already have (`0.7`). Not Relations (`3.9`).
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
 | 1.4.1.1 | Alert context and investigation | K | A / B / C | B / C / C | A / A / B |
-| 1.4.1.2 | Review an alert and identify which context is present and which is missing | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 1a / 2b |
+| 1.4.1.2 | Review an alert and identify which context is present and which is missing (include VirusTotal on a hash, IP, or domain you have) | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 1a / 2b |
 | 1.4.1.3 | Review the alert configuration and explain what would fire | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 1a / 2b |
 | 1.4.1.4 | Trace an alert to its upstream detection logic and name each hop | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 1a / 2b |
 | 1.4.1.5 | Collect related endpoint logs and state what they add (or fail to add) | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 1a / 1a |

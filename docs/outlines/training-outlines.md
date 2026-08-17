@@ -329,14 +329,16 @@ c. Matching techniques: regex and wildcards
 Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it. **1.4.1.e** applies PCAP against the alert. Why you pull PCAP is **1.2.1**. Sensors are **0.8.g**. Download / view is **1.8.3** if the shop lists them.
 
 **1.4.1 [K] Alert context and investigation**  
-a. Viewing the context provided by the alert  
+Stay in this lesson: gather context, including VirusTotal on a hash, IP, or domain you already have (**0.7**). Not platform depth / Relations (**3.9**). Not a live-account lab.
+
+a. Viewing the context provided by the alert, and looking up a hash, IP, or domain you have on VirusTotal  
 b. Reviewing the alert configuration  
 c. Understanding upstream alerting (e.g., Suricata rule → SIEM correlation search → SIEM alert)  
 d. Pulling related endpoint logs that led up to the event  
 e. Pulling and reviewing PCAP for the network traffic that triggered the alert  
 
 **1.4.1.1 [T] Alert investigation tasks**  
-1. Review an alert and identify which context is present and which is missing  
+1. Review an alert and identify which context is present and which is missing (include VirusTotal on a hash, IP, or domain you have)  
 2. Review the alert configuration and explain what would fire  
 3. Trace an alert to its upstream detection logic and name each hop  
 4. Collect related endpoint logs and state what they add (or fail to add)  

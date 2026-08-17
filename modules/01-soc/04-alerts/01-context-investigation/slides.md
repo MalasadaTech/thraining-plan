@@ -1,248 +1,111 @@
 # Module 1.4.1 – Alert Context and Investigation  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 30 minutes  
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.4.1 – Alert Context and Investigation  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Work the alert object. Do not classify. Do not author rules.
+The object that fired. Not a new rule. Not TP/FP.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Present vs missing context
-2. What the configuration would fire
-3. Name each upstream hop
-4. What endpoint logs add or fail to add
-5. What PCAP adds versus the alert (or N/A)
+The first alert is **`wscript` → encoded PowerShell**.
 
-**Mapped Items:**  
-K: 1.4.1.1 | T: 1.4.1.2–1.4.1.6
+Investigate that object.  
+Do **not** write the rule. Do **not** classify.
 
 **Speaker Notes:**  
-CTI is 1a on logs/PCAP.
+1.3.4 proposed the SIEM rule. It fired.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Context and config
+**Title:** Present, missing, what would fire
 
-- Context and configuration
-- Hops, logs, PCAP
-- Three worked examples
-- Five-line cards
-- Knowledge check
+**Context** — two columns: present / missing.  
+Hash, IP, or domain you have → **VirusTotal** (**0.7**).  
+Missing is a gap, not benign. Not Relations (**3.9**).
+
+**Config** — one sentence: what would fire.
 
 **Speaker Notes:**  
-1.4.2 is next.
+Outline a–b. Do not invent a command line.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – Hops, host rows, PCAP
+**Title:** Upstream, endpoint logs, PCAP
 
-Writing SIGMA / Suricata / SIEM (**1.3**)  
-TP / FP / TN / FN (**1.4.2**)  
-FP *causes* (**1.4.3**)  
-Inventing a missing command line  
-PCAP on a process-only alert
+**Hops** — name each. SIEM-only is allowed. Do not invent Suricata.
 
-**Key Point:** Five sentences. Not “I opened the alert.”
+**Endpoint logs** — what they **add** or **fail to add**. Temp `invoice.vbs` can add. Run key waits.
+
+**PCAP** — what it adds versus alert fields. Process-only → **not applicable**.
 
 **Speaker Notes:**  
-Park classify.
+Outline c–e. Why PCAP is 1.2.1. Sensors are 0.8.
 
 ---
 
-### Slide 5 – Context
-**Title:** Present vs Missing
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-**Context** = what arrived with the alert  
-Two columns: present | missing  
-
-Missing ≠ benign. Do not invent the field.
+No TP/FP (**1.4.2**).  
+No new SIGMA.  
+No invented capture.
 
 **Speaker Notes:**  
-Outline a. Task 1.
+Hunt the Run key later.
 
 ---
 
-### Slide 6 – Configuration
-**Title:** What Would Fire
+### Slide 6 – What good looks like
+**Title:** Five products
 
-Read the SIEM rule / sid / translated SIGMA.  
-One sentence: what would fire.  
-
-You are not proposing a new rule.
+Present: host, user, `-enc`, parent `wscript`.  
+VT: hash of `invoice.vbs` and/or `203.0.113.88` — one-line result.  
+Config: that trio fires.  
+Hops: SIEM rule → SIEM alert.  
+Host logs: **add** Temp `invoice.vbs`.  
+PCAP: **not applicable** on this first alert.
 
 **Speaker Notes:**  
-Outline b. Task 2.
+Do not tell the PRD plot.
 
 ---
 
-### Slide 7 – Upstream Hops
-**Title:** Name Each Hop
-
-Classroom chain:  
-`Suricata sid` → `SIEM correlation` → `SIEM alert`
-
-SIEM-only is one hop. Say so. Do not invent Suricata.
-
-**Speaker Notes:**  
-Outline c. Task 3.
-
----
-
-### Slide 8 – Logs and PCAP
-**Title:** What They Add
-
-**Endpoint logs** — what they add or **fail to add**  
-**PCAP** — contrast with alert fields, or **N/A**
-
-“I queried” is not the task.
-
-**Speaker Notes:**  
-Outline d–e. Tasks 4–5.
-
----
-
-### Slide 9 – Example 1: Complete
-**Title:** Example 1 – Encoded PS Alert
-
-- Context has parent + `-enc`
-- Config matches 1.3.1 Example 1
-- SIEM-only hop
-- Logs add Temp `invoice.vbs`
-- PCAP N/A
-
-**Interpretation:**  
-Complete investigation card. Not a verdict.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2: Thin
-**Title:** Example 2 – Any PowerShell
-
-- Missing cmdline, parent, user
-- Config: any powershell create
-- Logs **add** explorer + Get-Help
-
-**Interpretation:**  
-Lead as an investigation. Park FP / rewrite.
-
-**Speaker Notes:**  
-Force “what logs add.”
-
----
-
-### Slide 11 – Example 3: Network
-**Title:** Example 3 – GET update.exe
-
-- Hops: sid 1000001 → SIEM → alert
-- Logs **fail** to add a process
-- PCAP **adds** the URI
-
-**Interpretation:**  
-Lead. Three hops. Contrast PCAP vs IP:port.
-
-**Speaker Notes:**  
-URI was missing on the pane.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Inventing missing fields  
-- “That’s an FP” in this hour  
-- Rewriting SIGMA  
-- Fake Suricata hop  
-- PCAP on a process alert  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Card Template
-**Title:** Five-Line Card
-
-1. Present / missing  
-2. Config would fire …  
-3. Hops: …  
-4. Logs add / fail to add …  
-5. PCAP adds … / N/A  
-
-**Speaker Notes:**  
-Leave this up for the exercise.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize each example.
-2. Five-line cards for Ex 2 and Ex 3.
-3. Five-line card for Office → cmd.
-4. No TP/FP. No new rule.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Context vs configuration?
-2. What does “missing” mean?
-3. Three-hop vs one-hop chain?
-4. What must the logs sentence contain?
-5. When is PCAP N/A?
+1. Missing parent process means the activity was benign. True or false?  
+2. Name the hops for a SIEM-only process alert.  
+3. You have the hash of Temp `invoice.vbs` and IP `203.0.113.88`. What do you look up on VirusTotal, and what is **not** this hour?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 8 – Summary
+**Title:** Summary
 
-- Present vs missing. What would fire. Named hops.
-- Logs/PCAP must add or fail to add.
-- Next: classification (**1.4.2**).
+Present vs missing. Hash / IP / domain → **VT**.  
+What the config would fire.  
+Name each hop.  
+Logs and PCAP must add — or you say they failed.
+
+**Next:** **1.4.2** Alert classification
 
 **Speaker Notes:**  
-Do not open a classify lab unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Investigation — Quick Reference
-
-| Need | Write |
-|------|--------|
-| Context | present / missing |
-| Config | what would fire |
-| Chain | each hop |
-| Host | logs add / fail |
-| Wire | PCAP vs alert / N/A |
-
-**Coming next:** Module 1.4.2 – Alert classification
-
-**Footer:** SOC / Hunter / CTI Training Program
+TP / FP / TN / FN next.
