@@ -1,119 +1,90 @@
 # Instructor Guide – Module 1.4.3 – Common False Positive Causes
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.4.3.1 A / B / C · 1.4.3.2 2b / 3c / 4c  
-- Hunter: 1.4.3.1 B / C / C · 1.4.3.2 2b / 3c / 4c  
-- CTI: 1.4.3.1 A / A / B · 1.4.3.2 1a / 1a / 2b  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- SOC: 1.4.3.1 A / B / C ; 1.4.3.2 2b / 3c / 4c  
+- Hunter: 1.4.3.1 B / C / C ; 1.4.3.2 2b / 3c / 4c  
+- CTI: 1.4.3.1 A / A / B ; 1.4.3.2 1a / 1a / 2b  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-On an already-labeled FP, pick cause class **a** or **b** and name a change. Do not reclassify. Do not deploy.
+On a case already labeled FP, name the cause class and one change.
+
+**Context (plain language):**
+
+- What this hour is for: SOC analysts say *why* this FP happened and what they would change — not the label again.
+- How it hooks to the hour before: 1.4.2 put FP on any-PowerShell / Get-Help.
+- How it hooks to the hour after: 1.4.4 is category (scan, root, user), not cause.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b only. Name the change; DE deploys.
+- What we are *not* doing this hour: Reclassify. Deploy. Invent a third official class. No lab.
+- Extra step: none.
+
+Do not invent Harbor scanner IPs as policy. Do not tell the PRD plot.
 
 **Key Teaching Points:**
-- Starts after **1.4.2**.
-- Two classes only (plus “other — not a/b”).
-- Change = one concrete sentence.
-- Example 3: primary class is the event in front of you.
-
-**Common Student Challenges:**
-- Relitigating TP.
-- “Tune it” with no selector.
-- Calling live user activity “analyst.”
-- Writing a full SIGMA and calling that this lesson.
-- Opening **1.4.4**.
+- Two classes: analyst/tool vs overly broad.
+- A change is one concrete sentence.
+- Pick a primary class if both could apply.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Name classes a and b.
-2. Given an FP: class + change.
+Same as the student guide.
 
-**Mapped Items:** K 1.4.3.1 · T 1.4.3.2
+**Mapped Items:** K 1.4.3.1 ; T 1.4.3.2
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | After FP |
-| Two classes                    | 12 min   | a–b |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~62 min** | Stretch Ex 3 if they force both equally |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | After the label |
+| Key Concepts            | 12 min    | Two classes; two givens |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- SOC 3: name a vs b and a templated change.
-- Hunter: 2b at 3-level — primary class + a usable change.
-- CTI: 1a / 1a / 2b. 7-level can name a change.
+### 1. Key Concepts
 
-**Question:**  
-“If we removed the analyst from this story, would this still fire on a user?”
+Write a vs b. Walk Get-Help as **b**, replay as **a**.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail TP. Fail “tune it.” Fail a category.
-
-**Summaries:**
-- Ex 1: **a** — exclude/tag replay; keep the sid.
-- Ex 2: **b** — add `-enc` + script-host parent.
-- Ex 3: primary **a** — don’t test in prod; optional second ticket for export filter (**b**).
-
-**Cases:**
-
-| Item | Class | Change (equivalent is fine) |
-|------|-------|------------------------------|
-| A | **b** | Use `http.method` + `http.uri` (or drop raw TCP GET). |
-| B | **a** | Hunter sample-download: lab net / allow-list hunter workstation during the run. |
-| C | **b** | Do not alert on MZ-only; require a second string or detach YARA from the SIEM rule. |
-| D | **a** | Allow-list scanner `10.10.8.90` (documented). Mention **b** only if they also want the Office rule tighter — not required. |
+If they reclassify TP: “Already FP. 1.4.2 is done.”  
+If they say “tune it”: “Name the selector.”  
+If they want to deploy: “4.x / DE.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Two classes?**  
-   **Answer:** (a) analyst or tool activity; (b) untuned or overly broad logic.  
+1. **This hour is TP vs FP. True or false?**  
+   **Answer:** False. The label is done. This hour is cause + change.  
+   **Explanation:** Stay-in / vs 1.4.2.
+
+2. **Two syllabus classes?**  
+   **Answer:** Analyst or tool activity. Untuned or overly broad logic.  
    **Explanation:** Outline a–b.
 
-2. **Why not classify again?**  
-   **Answer:** The case is already an FP. This unit is cause + change.  
-   **Explanation:** Fence with 1.4.2.
-
-3. **Acceptable change?**  
-   **Answer:** One concrete action (add selector, exclude lab range, detach MZ-only). Not “tune it.”  
-   **Explanation:** Task.
-
-4. **Other?**  
-   **Answer:** When it is not a/b (clock skew, bad intel). Say “other — not a/b” and still name a change. Do not invent a third official class.  
-   **Explanation:** Stay inside syllabus.
-
-5. **Who deploys?**  
-   **Answer:** Detection Engineering. SOC proposes (**1.3** ceiling).  
-   **Explanation:** Same as 1.3.
+3. **Any-PowerShell on Get-Help. Class and change?**  
+   **Answer:** **b**. Require `-enc` and a script-host parent.  
+   **Explanation:** Outline b / task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- Next recommended module: 1.4.4 Common alert categorizations
+- Next: 1.4.4 Common alert categorizations

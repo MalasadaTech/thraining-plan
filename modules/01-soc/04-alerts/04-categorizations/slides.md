@@ -1,226 +1,95 @@
 # Module 1.4.4 – Common Alert Categorizations  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.4.4 – Common Alert Categorizations  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Site buckets. Assign + reject neighbor. CTI is A/1a.
+Site bucket plus rejected neighbor. Not TP/FP. Not ATT&CK.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Name scan / root / user / unsuccessful / other
-2. Assign a category and justify why it is **not** the adjacent one
+Put a **site bucket** on a working alert.
 
-**Mapped Items:**  
-K: 1.4.4.1 | T: 1.4.4.2
+Pick a category.  
+Say why the **neighbor** is wrong.
 
 **Speaker Notes:**  
-Not TP/FP. Not ATT&CK.
+Next desk needs the kind of activity, not the label again.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Five names
+**Title:** Scan, root, user, unsuccessful, other
 
-- Four buckets + other
-- Adjacent pairs
-- Three worked examples
-- Four alerts
-- Knowledge check
+**Scanning / reconnaissance** — wide probe, no access attempt.  
+**Root-level** — SYSTEM / admin / service control.  
+**User-level** — normal user token.  
+**Unsuccessful** — a failed access attempt.  
+**Other** — a name your shop already uses.
 
 **Speaker Notes:**  
-1.4.5 next.
+Outline a–e. Other is not a new DYA list.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Category + not the neighbor
 
-TP / FP (**1.4.2**)  
-FP causes (**1.4.3**)  
-ATT&CK IDs (**0.6**)  
-“Looks like malware so root”
+**User-level, not root** — `wscript` + `-enc` as Medium `jlee`.  
+Encoded does not upgrade the token.
 
-**Key Point:** Bucket + rejected neighbor.
+**Scanning, not unsuccessful** — many unanswered SYN, no login.  
+A sweep is not a failed logon.
 
 **Speaker Notes:**  
-Fence.
+Two sentences. Same command as SYSTEM would be root.
 
 ---
 
-### Slide 5 – The Buckets
-**Title:** Classroom Categories
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Scanning / reconnaissance  
-Root-level access  
-User-level access  
-Unsuccessful activity  
-**Other** — local list only
+No TP / FP (**1.4.2**).  
+No FP cause (**1.4.3**).  
+No ATT&CK ID as the category (**0.6**).  
+No SLA clocks (**1.4.5**).
 
 **Speaker Notes:**  
-Outline a–e.
+If they write T1059, send it back to 0.6.
 
 ---
 
-### Slide 6 – Neighbors
-**Title:** Adjacent Pairs
-
-Scan ↔ unsuccessful  
-User-level ↔ root-level  
-
-Token, not file path.  
-Failed login ≠ port sweep.
-
-**Speaker Notes:**  
-The whole task.
-
----
-
-### Slide 7 – Other
-**Title:** Other (Local)
-
-Only names your site already uses.  
-Still reject a neighbor.  
-Do not invent tactics as categories.
-
-**Speaker Notes:**  
-Show local list if you have one.
-
----
-
-### Slide 8 – Example 1: Scan
-**Title:** Example 1 – 150 Ports, No Auth
-
-**Scanning.**  
-Not unsuccessful — no access attempt.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 9 – Example 2: User
-**Title:** Example 2 – jlee Medium -enc
-
-**User-level.**  
-Not root — token is Medium.
-
-**Speaker Notes:**  
-Scary ≠ SYSTEM.
-
----
-
-### Slide 10 – Example 3: Unsuccessful
-**Title:** Example 3 – 40× 401 One Mailbox
-
-**Unsuccessful.**  
-Not scanning — one app, failed auth.
-
-**Speaker Notes:**  
-HKLM service create = root, not user.
-
----
-
-### Slide 11 – Root Nearby
-**Title:** Nearby Root
-
-Temp `helpdesk.exe` creates HKLM Services key.  
-
-**Root-level** (service/HKLM).  
-Not user-level — path is not the token.
-
-**Speaker Notes:**  
-One beat.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Encoded = root  
-- Failed logon = scan  
-- Scanner sweep argued as FP here  
-- T1059 as the category  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Sentence Shape
-**Title:** Two Sentences
-
-“Category: …”  
-“Not … because …”
-
-**Speaker Notes:**  
-Leave up.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize Ex 1–3.
-2. A–D: category + rejected neighbor + why.
-3. No TP/FP. No ATT&CK.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Four buckets + other?
-2. Scan vs unsuccessful?
-3. User vs root?
-4. Why not “assign appropriate” only?
-5. Where does ATT&CK belong?
+1. This hour is for deciding TP vs FP. True or false?  
+2. Name the four syllabus categories plus **other**.  
+3. `wscript` + `-enc` as Medium `jlee`. Category, and why not the adjacent one?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Site buckets. Reject the neighbor.
-- Token ≠ path. Failed auth ≠ sweep.
-- Next: SLA clocks (**1.4.5**).
+Site bucket + rejected neighbor.  
+Scan is not failed auth. User token is not root.
+
+**Next:** **1.4.5** Service Level Agreements / Response Time Goals
 
 **Speaker Notes:**  
-Do not open 1.4.5 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Categories — Quick Reference
-
-| Bucket | Reject |
-|--------|--------|
-| Scan | Unsuccessful |
-| Unsuccessful | Scan |
-| User-level | Root-level |
-| Root-level | User-level |
-| Other | Name it; still reject a neighbor |
-
-**Coming next:** Module 1.4.5 – SLA / response time goals
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open the clocks unless that hour is scheduled.

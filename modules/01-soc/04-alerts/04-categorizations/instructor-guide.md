@@ -1,121 +1,92 @@
 # Instructor Guide – Module 1.4.4 – Common Alert Categorizations
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.4.4.1 A / B / C · 1.4.4.2 2b / 3c / 4c  
-- Hunter: 1.4.4.1 B / C / C · 1.4.4.2 2b / 3c / 4c  
-- CTI: 1.4.4.1 A / A / A · 1.4.4.2 1a / 1a / 1a  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- SOC: 1.4.4.1 A / B / C ; 1.4.4.2 2b / 3c / 4c  
+- Hunter: 1.4.4.1 B / C / C ; 1.4.4.2 2b / 3c / 4c  
+- CTI: 1.4.4.1 A / A / A ; 1.4.4.2 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach site categories and force **assign + reject the adjacent**. CTI is nomenclature only (A / 1a).
+On a working alert, name the site category and say why the neighbor is wrong.
+
+**Context (plain language):**
+
+- What this hour is for: SOC analysts bucket the activity so the next desk can see what kind of thing it was — not the TP/FP label again, and not an ATT&CK ID.
+- How it hooks to the hour before: 1.4.3 was why an FP fired and what you would change.
+- How it hooks to the hour after: 1.4.5 is the start clock and the close/escalate clock.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–e. Assign plus reject the neighbor. CTI names the words (A / 1a).
+- What we are *not* doing this hour: Reclassify. Name an FP cause. Map ATT&CK. Invent a DYA category list. No lab.
+- Extra step: none.
+
+Do not invent Harbor or DYA architecture as policy. Do not tell the PRD plot. The first alert is still `wscript` → encoded PowerShell as `jlee`.
 
 **Key Teaching Points:**
-- Not TP/FP. Not ATT&CK.
-- Neighbors: scan ↔ unsuccessful; user ↔ root.
-- User-writable path ≠ user-level if the token is SYSTEM / HKLM service.
-- **Other** = local list only.
-
-**Common Student Challenges:**
-- Encoded PS → root because “malware.”
-- Failed logon → scan.
-- Scanner sweep categorized as FP instead of scan (wrong unit).
-- Writing T1059.
-- Grading CTI as SOC 5.
+- Five names: scan / recon, root, user, unsuccessful, other (shop list).
+- Adjacent pairs: scan ↔ unsuccessful; user ↔ root.
+- Token, not “looks scary.” Failed auth is not a sweep.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Local extra buckets if the site has them
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Name the categories including other.
-2. Assign + reject the neighbor.
+Same as the student guide.
 
-**Mapped Items:** K 1.4.4.1 · T 1.4.4.2
+**Mapped Items:** K 1.4.4.1 ; T 1.4.4.2
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 1.4.2 / 0.6 |
-| Categories + neighbors         | 14 min   | a–e |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 16 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~62 min** | Stretch Ex 2 if they say root |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Bucket, not label |
+| Key Concepts            | 12 min    | Five names; two givens |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- SOC 3: A / 2b — pick the bucket and name the neighbor.
-- Hunter: B / 2b at 3-level.
-- CTI: A / 1a only — they should recognize the words.
+### 1. Key Concepts
 
-**Question:**  
-“If I forbade your first choice, which wrong bucket would people pick?”
+Write the five names. Walk `jlee` Medium `-enc` as **user, not root**. Walk the unanswered SYN sweep as **scan, not unsuccessful**.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail T1059. Fail TP/FP. Fail “appropriate category” with no neighbor.
-
-**Summaries:**
-- Ex 1: **scan**, not unsuccessful.
-- Ex 2: **user-level**, not root.
-- Ex 3: **unsuccessful**, not scan.
-
-**Cases:**
-
-| Item | Category | Reject | Why |
-|------|----------|--------|-----|
-| A | **Scanning** | Unsuccessful | Wide unauthenticated 80s, no 401/logon story. |
-| B | **Root-level** | User-level | Token is SYSTEM. |
-| C | **Unsuccessful** | Scan | One jump box, failed ssh, no wide probe. |
-| D | **Scanning** | Unsuccessful (or other) | Activity type is a sweep. Authorized scanner is **1.4.3**, not a different category. |
+If they write TP/FP: “Label is 1.4.2. This hour is the bucket.”  
+If they write T1059: “0.6. Not a category.”  
+If they upgrade encoded to root: “Token is Medium. Encoded does not change the bucket.”  
+If they call a 401 burst a scan: “One app, failed auth — unsuccessful.”  
+If they invent a DYA list: “Other is a name their real shop already uses.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Categories?**  
-   **Answer:** Scanning/reconnaissance; root-level access; user-level access; unsuccessful activity; other (local).  
+1. **This hour is TP vs FP. True or false?**  
+   **Answer:** False. The label is a different hour. This hour is category + rejected neighbor.  
+   **Explanation:** Stay-in / vs 1.4.2.
+
+2. **Four syllabus categories plus other?**  
+   **Answer:** Scanning / reconnaissance; root-level access; user-level access; unsuccessful activity; other (as the shop uses it).  
    **Explanation:** Outline a–e.
 
-2. **Scan vs unsuccessful?**  
-   **Answer:** Sweep / no auth attempt vs a failed access attempt.  
-   **Explanation:** Adjacent pair.
-
-3. **User vs root?**  
-   **Answer:** User token vs SYSTEM/admin/service-level control. Path of the binary is not the token.  
-   **Explanation:** Adjacent pair.
-
-4. **Why not “assign appropriate”?**  
-   **Answer:** That restates the K. Sign-off is reject the neighbor.  
-   **Explanation:** Task rewrite.
-
-5. **ATT&CK?**  
-   **Answer:** **0.6**, not a category bucket.  
-   **Explanation:** Fence.
+3. **`wscript` + `-enc` as Medium `jlee`. Category and why not adjacent?**  
+   **Answer:** **User-level.** Not root: the token is a standard user. Encoded does not upgrade it.  
+   **Explanation:** Outline c / task 1. Adjacent pair is user ↔ root.
 
 ---
 
 ## Additional Instructor Resources
 
-- Local “other” list
-- Next recommended module: 1.4.5 SLA / response time goals
+- Next: 1.4.5 Service Level Agreements / Response Time Goals

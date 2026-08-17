@@ -1,227 +1,94 @@
 # Module 1.4.5 – SLA / Response Time Goals  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.4.5 – SLA / Response Time Goals  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Two clocks. Classroom 15 / 45. Closes 1.4. CTI is A/1a.
+Two clocks. Name which one. Record closed or escalated. Closes 1.4.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Explain start clock vs close/escalate clock
-2. Given timestamps, which clock is at risk
-3. Record close or escalate against the correct clock
+Watch **two clocks** on a queue row.
 
-**Mapped Items:**  
-K: 1.4.5.1 | T: 1.4.5.2 | T: 1.4.5.3
+Name **which** clock is in danger.  
+Record **closed** or **escalated** against it.
 
 **Speaker Notes:**  
-Hunter 3 is A / 1a.
+Not “work faster.” Not a report. Not a live shop SLA.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Two clocks
+**Title:** Start vs close / escalate
 
-- Two clocks
-- Classroom 15 / 45
-- Three worked examples
-- Four timestamp cards
-- Knowledge check — close 1.4
+**Start** — created → first touch. Classroom **15 min**.  
+**Close / escalate** — first touch → closed or escalated. Classroom **45 min**.
+
+Untouched → only **start** exists.
 
 **Speaker Notes:**  
-0.6 is next unit.
+Outline a–b. 15 / 45 are this lesson only.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Which clock + one line
 
-Investigation how-to (**1.4.1**)  
-TP / FP / category  
-Ticketing-product admin  
-“Work faster”  
-One blended “we’re late”
+**Start at risk** — created `14:00`, no start, now `14:18`.  
+Record `started`. Do not close yet.
 
-**Key Point:** Name the clock. Record the disposition.
+**Close/escalate at risk** — **A12** started `13:28`, still open at `14:20`.  
+Record `escalated` (or `closed` if done).
 
 **Speaker Notes:**  
-Fence.
+A12 is the encoded-PowerShell alert they already started. Do not retell the plot.
 
 ---
 
-### Slide 5 – Start Clock
-**Title:** Clock A — Begin Investigation
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-From **created** → first touch (`started`).  
-Classroom: **15 minutes**.
-
-Untouched → this is the only clock that exists.
+No re-investigate (**1.4.1**).  
+No TP / FP or category (**1.4.2** / **1.4.4**).  
+No report, no report clocks (**1.6**).  
+No invented DYA minutes.
 
 **Speaker Notes:**  
-Outline a.
+Report timelines are a different hour.
 
 ---
 
-### Slide 6 – Close / Escalate Clock
-**Title:** Clock B — Process the Alert
-
-From **started** → `closed` or `escalated`.  
-Classroom: **45 minutes**.
-
-Start already met (or already breached). This is the remaining clock.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – The Record
-**Title:** Four Fields
-
-`alert_id | closed or escalated (or started) | which clock | timestamp`
-
-Not a CMDB class.
-
-**Speaker Notes:**  
-Task 2.
-
----
-
-### Slide 8 – Example 1: Both OK
-**Title:** Example 1 – A12
-
-Created 14:00 · started 14:08 · closed 14:40
-
-Start OK (8). Close OK (32).
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 9 – Example 2: Start
-**Title:** Example 2 – A13 Untouched
-
-Created 14:00 · now 14:18 · no start
-
-**Start** breached. Do not close yet.  
-Record **started**.
-
-**Speaker Notes:**  
-No close-escalate origin.
-
----
-
-### Slide 10 – Example 3: Close/Escalate
-**Title:** Example 3 – A14 Open Too Long
-
-Started 13:28 · now 14:20 (52 min)
-
-**Close/escalate** breached. Escalate or close.  
-Start already met.
-
-**Speaker Notes:**  
-Name the clock.
-
----
-
-### Slide 11 – Site Numbers
-**Title:** Classroom vs Site
-
-15 / 45 are **this lesson**.  
-If you have a site card, overlay it.  
-Keep **two clocks**.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- “Late” with no clock  
-- Close without a start  
-- Close-escalate measured from created  
-- Relitigating TP  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Now = 15:00
-**Title:** Exercise Clock
-
-Start 15 · close/escalate 45  
-Now **15:00**
-
-**Speaker Notes:**  
-Leave up.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize Ex 1–3.
-2. A–D: which clock + one record line.
-3. No investigation rewrite.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Two clocks — when does each start?
-2. Untouched — which clock?
-3. Why not “work faster”?
-4. Four record fields?
-5. Who owns live-org numbers?
+1. If nobody has touched the alert, which clock can be at risk?  
+2. What are the two clocks, and when does each start?  
+3. Started `13:28`, still open at `14:20`. Which clock, and what do you record?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Start from created. Close/escalate from first touch.
-- Name the clock. Record the disposition.
-- Unit **1.4** ends. Next unit: **0.6** Frameworks.
+Start from created. Close/escalate from first touch.  
+Name the clock. Record the disposition.
+
+**Next:** **1.6.1** Report types. Unit **1.4** ends.
 
 **Speaker Notes:**  
-Do not open ATT&CK unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** SLA — Quick Reference
-
-| Clock | From → to | Classroom |
-|-------|-----------|-----------|
-| Start | created → started | 15 min |
-| Close/escalate | started → closed/escalated | 45 min |
-
-**Coming next:** Module 0.6.1 – MITRE ATT&CK
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open 1.6 unless that hour is scheduled. 1.7 is retired.

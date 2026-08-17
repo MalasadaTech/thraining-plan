@@ -1,239 +1,94 @@
 # Module 1.4.2 – Alert Classification  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.4.2 – Alert Classification  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Four labels + evidence. FN is a miss. Causes are 1.4.3.
+Label plus cite. Not why the FP fired.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Define TP, FP, TN, FN
-2. Classify *cases* and cite evidence
-3. Treat FN as a missed detection
+Classify the case you just investigated.  
+**Cite** the evidence.
 
-**Mapped Items:**  
-K: 1.4.2.1 | T: 1.4.2.2
+Do **not** explain why an FP fired. That is **1.4.3**.
 
 **Speaker Notes:**  
-CTI is 1a / 1a / 2b on the task.
+1.4.1 gathered context.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Four labels
+**Title:** TP, FP, TN, FN
 
-- The 2×2
-- Evidence
-- Three worked examples (plus a TN)
-- Five cases
-- Knowledge check
+**TP** — alert, activity is what the rule is for.  
+**FP** — alert, activity is benign.  
+**TN** — no alert, ordinary activity.  
+**FN** — no alert, bad activity that should have fired.
 
 **Speaker Notes:**  
-Park 1.4.3.
+Outline a–d. TN and FN usually have no queue row.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – FN and evidence
+**Title:** A miss, and a cite
 
-Why this FP fired (**1.4.3**)  
-Scan / root / user category (**1.4.4**)  
-Rewriting the rule (**1.3**)  
-“FN = I don’t like this alert”
+**FN** is not a fired alert you dislike. It is a **miss**.
 
-**Key Point:** Label the **case**. Cite.
+**Evidence** — parent + `-enc`, dest + URI, “no alert on that GET.”  
+A slogan is not a cite.
 
 **Speaker Notes:**  
-Draw the fence.
+Why the FP fired waits.
 
 ---
 
-### Slide 5 – The 2×2
-**Title:** Detection × Reality
+### Slide 5 – What good looks like
+**Title:** Four cases
 
-|  | Reality bad | Reality benign |
-|--|-------------|----------------|
-| Fired | **TP** | **FP** |
-| Quiet | **FN** | **TN** |
-
-TN and FN usually have **no** queue row.
+**TP** — encoded PowerShell from `wscript`.  
+**FP** — any-PowerShell on `Get-Help`.  
+**TN** — ordinary browse, no alert.  
+**FN** — `GET /update.exe` to `203.0.113.88:8080`, no alert.
 
 **Speaker Notes:**  
-Outline a–d.
+Do not tell the PRD plot.
 
 ---
 
-### Slide 6 – False Negative
-**Title:** FN Is a Miss
-
-Something bad happened.  
-No alert fired.  
-
-You meet it in logs, PCAP, or a hunt — not by relabeling a ticket.
-
-**Speaker Notes:**  
-Say this twice.
-
----
-
-### Slide 7 – Evidence
-**Title:** Cite, Don’t Slogan
-
-Good: `wscript` + `-enc`; URI `/payload/update.exe`; “no sid on 8080”  
-Bad: “malicious”; “looks like C2”
-
-**Speaker Notes:**  
-Task wording.
-
----
-
-### Slide 8 – Example 1: TP
-**Title:** Example 1 – Encoded PS
-
-- Alert fired
-- wscript + Temp vbs + `-enc`
-
-**Interpretation:**  
-**TP.** Cite the chain.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 9 – Example 2: FP
-**Title:** Example 2 – Get-Help
-
-- Any-PowerShell fired
-- explorer + `Get-Help`
-
-**Interpretation:**  
-**FP.** Cite the cmdline. Cause class is **1.4.3**.
-
-**Speaker Notes:**  
-Stop them if they start “over-broad.”
-
----
-
-### Slide 10 – Example 3: FN
-**Title:** Example 3 – update.exe, No Alert
-
-- PCAP/Zeek: GET on **8080**
-- Queue empty
-
-**Interpretation:**  
-**FN.** Miss. Not an FP.
-
-**Speaker Notes:**  
-Intranet PDF with no alert = **TN**.
-
----
-
-### Slide 11 – True Negative
-**Title:** Nearby TN
-
-Chrome GET intranet PDF.  
-No alert.  
-
-**TN** — correctly quiet. Never a ticket.
-
-**Speaker Notes:**  
-One beat only.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Miss labeled FP  
-- Phantom alert on a TN  
-- No cite  
-- Writing the FP cause  
-- Categories in this hour  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Case Setup
-**Title:** Five Cases (Exercise)
-
-A Office → unexpected cmd (alert)  
-B Documented export script (no alert)  
-C update.exe on another host (no alert)  
-D Lab PCAP replay (alert)  
-E Intranet PDF (no alert)  
-
-**Speaker Notes:**  
-Leave up.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. Classify A–E with one cite each.
-3. At least one FN.
-4. No cause class. No category.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Define the four labels.
-2. Why is FN not a queue row?
-3. What counts as evidence?
-4. A TN that is never a ticket?
-5. Where does this lesson stop on an FP?
+1. FN is a bad alert sitting in the queue. True or false?  
+2. Alert `Encoded PowerShell from script host`, `wscript` + `-enc` confirmed. Classify and cite.  
+3. `GET /update.exe` to `203.0.113.88:8080`, no alert. Classify and cite.
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- 2×2. Cite evidence.
-- FN = miss. TN = correctly quiet.
-- Next: FP **causes** (**1.4.3**).
+Four labels. Cite the evidence.  
+TN and FN usually have no queue row.  
+Why an FP fired is next.
+
+**Next:** **1.4.3** Common false positive causes
 
 **Speaker Notes:**  
-Do not open 1.4.3 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Classification — Quick Reference
-
-| Label | Fired? | Bad? |
-|-------|--------|------|
-| TP | Yes | Yes |
-| FP | Yes | No |
-| TN | No | No |
-| FN | No | Yes |
-
-**Coming next:** Module 1.4.3 – Common false positive causes
-
-**Footer:** SOC / Hunter / CTI Training Program
+Cause class next, not another label.
