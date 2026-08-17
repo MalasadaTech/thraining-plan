@@ -14,7 +14,7 @@
 - Knowledge items generally start at **B**
 - Task items generally start at **3c**
 - Section **0** is the shared intro (same codes as SOC, Hunter, and CTI), not DE-primary work. Do not start 0.x at B/3c.
-- Shared floor after **0** (`0.6`, `3.3.2`, `1.8.1`) is also not DE-primary. Do not start those at B/3c.
+- Shared floor after **0** (`0.6`, `0.7`, `0.8`) is also not DE-primary. Do not start those at B/3c.
 - Sensor work (**4.7**) is lighter
 - Site-specific (**4.8**) is obtain-and-follow, not invented DYA process
 - Rule syntax / first read-write is **1.3**, not this sheet
@@ -42,16 +42,16 @@ Taught after **0**, before SOC **1.1**. Same IDs as the SOC/CTI sheets. Not DE-p
 
 | # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
 |---|------|------|------|------|------|---------------|
-| 0.6.1.1 | MITRE ATT&CK | K | A | B | B | Shared floor. Hunt planning is 2.5. DTF is 3.7.4. |
+| 0.6.1.1 | MITRE ATT&CK | K | A | B | B | Shared floor. Hunt planning is 3.5. DTF is 2.7.4. |
 | 0.6.1.2 | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | T | 1a | 2b | 2b | Awareness map. Do not start at 3c. |
 | 0.6.2.1 | Diamond Model | K | A | B | B | Shared floor. |
 | 0.6.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 1a | 2b | 2b | Awareness apply. |
 | 0.6.3.1 | Cyber Kill Chain | K | A | B | B | Shared floor. |
 | 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 1a | 2b | 2b | Awareness apply. |
-| 3.3.2 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A | B | B | Purpose and when to pick. Platform depth is 3.9. |
-| 3.3.2.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a | 2b | 3c | Select. Not a 3.9 pivot. Matches SOC awareness. |
-| 1.8.1.1 | Environment orientation | K | A | B | B | Seven facts including PCAP sensors. Sensor *health* is 4.7. |
-| 1.8.1.2 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b | 3c | 4c | Same apply-task as SOC. Needed for 4.7. |
+| 0.7 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A | B | B | Purpose and when to pick. Platform depth is 2.9. |
+| 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a | 2b | 3c | Select. Not a 2.9 pivot. Matches SOC awareness. |
+| 0.8 | Environment orientation | K | A | B | B | Seven facts including PCAP sensors. Sensor *health* is 4.7. |
+| 0.8.1 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b | 3c | 4c | Same apply-task as SOC. Needed for 4.7. |
 
 ---
 

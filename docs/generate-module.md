@@ -13,13 +13,13 @@ This is a procedure for **every** lesson. Stay-in-this-lesson notes live in [tra
 
 Stop and say what is missing if any of these fail:
 
-- The ID already exists as a combined.md heading **or** a `#` cell (for example `1.2.5`, `2.1`, `3.1.1`).
+- The ID already exists as a combined.md heading **or** a `#` cell (for example `1.2.5`, `3.1`, `2.1.1`).
 - You were given that ID, not a vague topic and not an old display number (`section 7`, `section 8`).
 - Gate 1 is done. You are not proposing a new matrix row.
 
-**Teach order** (IDs stay): `0` → shared floor → SOC `1` → **CTI `3`** → hunt `2` → DE `4`. Folders still follow IDs (`modules/03-cti/`, `modules/02-hunter/`).
+**Teach order:** `0` → shared floor → SOC `1` → **CTI `2`** → hunt `3` → DE `4`. Folders: `modules/02-cti/`, `modules/03-hunter/`.
 
-**Assign work by ID prefix:** `0.x` and shared-floor IDs live under `modules/00-intro/` and are taught **before SOC**: `0.1`–`0.5`, then `0.6`, `3.3.2`, `1.8.1`. `1.x` SOC content is `1.1`–`1.4` and `1.5` (`modules/01-soc/`). `3.x` = CTI (`modules/03-cti/`). `2.x` = Hunt (`modules/02-hunter/`). `4.x` = Detection Engineer (`modules/04-de/`). **Retired — do not generate:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
+**Assign work by ID prefix:** `0.x` and shared-floor IDs live under `modules/00-intro/` and are taught **before SOC**: `0.1`–`0.5`, then `0.6`, `0.7`, `0.8`. `1.x` SOC content is `1.1`–`1.4` and `1.5` (`modules/01-soc/`). `2.x` = CTI (`modules/02-cti/`). `3.x` = Hunt (`modules/03-hunter/`). `4.x` = Detection Engineer (`modules/04-de/`). **Retired — do not generate:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
 
 **How big is one lesson**
 

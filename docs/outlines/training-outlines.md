@@ -10,7 +10,7 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 **Stay in this lesson:** a short note under a unit or child says what this hour is *not*. It is not extra syllabus. Follow it when writing or revising the lesson. How to write the lesson is [generate-module.md](../generate-module.md).
 
-**Teach order** (IDs stay): `0` (includes `0.6`–`0.8`) → SOC `1` → **CTI `3`** → hunt `2` → DE `4`. This file is in that order. Folder names still follow IDs (`03-cti`, `02-hunter`).
+**Teach order:** `0` (includes `0.6`–`0.8`) → SOC `1` → **CTI `2`** → hunt `3` → DE `4`. This file is in that order. Folders: `02-cti`, `03-hunter`.
 
 ---
 
@@ -60,10 +60,10 @@ c. Asking the next desk is not doing that desk’s whole job
 d. A smaller shop may have one person fill more than one of these jobs. This outline still names the jobs separately so each *product* stays clear, even if the same person writes two of them.  
 
 **0.6 [K/T] Frameworks**  
-Taught after `0.5`, still before SOC. All four roles. Lessons live under `modules/00-intro/06-frameworks/`. Do not copy them into a role folder. Write only the asked child. Hunt *planning* is **2.5**. CTI depth is **3.7**. Actor products are **3.11**. DTF is **3.7.4**. This hour is a one-line activity, not an alert pane (**1.4**).
+Taught after `0.5`, still before SOC. All four roles. Lessons live under `modules/00-intro/06-frameworks/`. Do not copy them into a role folder. Write only the asked child. Hunt *planning* is **3.5**. CTI depth is **2.7**. Actor products are **2.11**. DTF is **2.7.4**. This hour is a one-line activity, not an alert pane (**1.4**).
 
 **0.6.1.1 [K] MITRE ATT&CK**  
-Stay in this lesson: purpose, structure, and one map with a cited field. Not hunt planning (**2.5**). Not **3.7.1**. Not Diamond (**0.6.2**). Not Kill Chain (**0.6.3**).
+Stay in this lesson: purpose, structure, and one map with a cited field. Not hunt planning (**3.5**). Not **2.7.1**. Not Diamond (**0.6.2**). Not Kill Chain (**0.6.3**).
 
 a. Purpose: a shared language for adversary **behavior** (label what you saw)  
 b. Structure: Enterprise matrix — tactics as columns, techniques and sub-techniques as cells  
@@ -74,7 +74,7 @@ d. How to map: read the row; name tactic + technique or sub-technique; cite one 
 1. Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
 
 **0.6.2.1 [K] Diamond Model**  
-Stay in this lesson: four vertices and the weakest one. Not attribution (**3.11**). Not **3.7.2**. Not ATT&CK IDs (**0.6.1**).
+Stay in this lesson: four vertices and the weakest one. Not attribution (**2.11**). Not **2.7.2**. Not ATT&CK IDs (**0.6.1**).
 
 a. Purpose: organize what you know so you can see what you do **not** know. Not a verdict  
 b. The four vertices: Adversary, Capability, Infrastructure, Victim  
@@ -84,7 +84,7 @@ c. Fill all four from evidence you have. Name the **weakest** vertex (least evid
 1. Apply the Diamond Model to an incident or set of indicators: fill the four vertices and state which vertex is weakest  
 
 **0.6.3.1 [K] Cyber Kill Chain**  
-Stay in this lesson: this row’s stage, and why it is not the previous or next. Not ATT&CK (**0.6.1**). Not Diamond (**0.6.2**). Not **3.7.3**.
+Stay in this lesson: this row’s stage, and why it is not the previous or next. Not ATT&CK (**0.6.1**). Not Diamond (**0.6.2**). Not **2.7.3**.
 
 a. Purpose: stage attack **progression**. A staging tool, not a complete model of every intrusion  
 b. The seven stages, in order: Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command and Control, Actions on Objectives  
@@ -94,7 +94,7 @@ c. Place **this row** on one stage. Reject the previous or next stage you did no
 1. Identify the Kill Chain stage of observed activity and why it is not the previous or next stage  
 
 **0.7 [K] External tools (VirusTotal, AnyRun, Silent Push, URLScan)**  
-Taught after `0.6`, still before SOC. All four roles. Lessons live under `modules/00-intro/07-tool-survey/`. Stay in this lesson: purpose, strengths, weaknesses, and when to pick. Do not teach TIP nav (`3.3.1`) or platform depth (`3.9`). Not a live vendor account.
+Taught after `0.6`, still before SOC. All four roles. Lessons live under `modules/00-intro/07-tool-survey/`. Stay in this lesson: purpose, strengths, weaknesses, and when to pick. Do not teach TIP nav (`2.3.1`) or platform depth (`2.9`). Not a live vendor account.
 
 a. Primary purpose, strengths, and weaknesses of each tool  
 b. When to use each tool  
@@ -176,7 +176,7 @@ e. This is host-observed activity. Protocol deep-dive is 1.2
 **1.1.5 [K] Registry activity**  
 a. Hives and key → value  
 b. Set / delete / rename  
-c. Common persistence locations (Run, Services) as examples, not a 2.6 dump  
+c. Common persistence locations (Run, Services) as examples, not a 3.6 dump  
 d. Initiating process  
 e. How this shows up: Sysmon 12 / 13 / 14; MDE `DeviceRegistryEvents`  
 
@@ -329,7 +329,7 @@ c. Matching techniques: regex and wildcards
 Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it. **1.4.1.e** applies PCAP against the alert. Why you pull PCAP is **1.2.1**. Sensors are **0.8.g**. Download / view is **1.8.3** if the shop lists them.
 
 **1.4.1 [K] Alert context and investigation**  
-Stay in this lesson: gather context, including VirusTotal on a hash, IP, or domain you already have (**0.7**). Not platform depth / Relations (**3.9**). Not a live-account lab.
+Stay in this lesson: gather context, including VirusTotal on a hash, IP, or domain you already have (**0.7**). Not platform depth / Relations (**2.9**). Not a live-account lab.
 
 a. Viewing the context provided by the alert, and looking up a hash, IP, or domain you have on VirusTotal  
 b. Reviewing the alert configuration  
@@ -380,7 +380,7 @@ b. Required time to process an alert (close or escalate)
 
 **1.5 [K/T] Reporting**
 
-Last SOC hour. Sits at the **SOC / CTI seam** after alerts (`1.4`). Three units — do not collapse them. The RFI type is the door into CTI. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task. **`1.7` is retired.**
+Last SOC hour. Sits at the **SOC / CTI seam** after alerts (`1.4`). Three units — do not collapse them. The RFI type is the door into CTI. Finished intel products are **2.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task. **`1.7` is retired.**
 
 **1.5.1 [K] Report types**  
 a. Incident report  
@@ -407,298 +407,298 @@ c. Approved reporting channels
 
 ---
 
-# 3. CTI Analyst
+# 2. CTI Analyst
 
-Taught after SOC reporting (`1.5`). Hunt is **2.x** and comes after this section. IDs stay `3.x`.
+Taught after SOC reporting (`1.5`). Hunt is **3.x** and comes after this section.
 
-**3.1 [K] Core Intelligence Concepts**  
+**2.1 [K] Core Intelligence Concepts**  
 
-Eight children (`3.1.1`–`3.1.8`). Write only the asked child unless asked for the rest of `3.1`. Collection *source classes* are `3.1.8` (not the lifecycle collection *stage* in `3.1.2`). Audience tailoring is `3.1.6`; finished production is `3.11`. Actor profile is `3.11.1.2`. Local collection *request process* is `3.12.2.1`.
+Eight children (`2.1.1`–`2.1.8`). Write only the asked child unless asked for the rest of `2.1`. Collection *source classes* are `2.1.8` (not the lifecycle collection *stage* in `2.1.2`). Audience tailoring is `2.1.6`; finished production is `2.11`. Actor profile is `2.11.1.2`. Local collection *request process* is `2.12.2.1`.
 
-**3.1.1 [K] Difference between data, information, and intelligence**  
+**2.1.1 [K] Difference between data, information, and intelligence**  
 a. Definitions and distinctions  
 b. How raw data becomes information and then intelligence  
 
-**3.1.1.1 [T] Tasks**  
+**2.1.1.1 [T] Tasks**  
 1. Correctly categorize examples as data, information, or intelligence  
 
-**3.1.2 [K] Intelligence lifecycle**  
+**2.1.2 [K] Intelligence lifecycle**  
 a. Stages of the intelligence lifecycle  
 b. Purpose and activities in each stage  
 
-**3.1.2.1 [T] Tasks**  
+**2.1.2.1 [T] Tasks**  
 1. Identify which stage of the intelligence lifecycle a given activity belongs to  
 2. Describe the flow of the intelligence lifecycle  
 
-**3.1.3 [K] Intelligence types**  
+**2.1.3 [K] Intelligence types**  
 a. Strategic  
 b. Operational  
 c. Tactical  
 d. Technical  
 
-**3.1.3.1 [T] Tasks**  
+**2.1.3.1 [T] Tasks**  
 1. Correctly classify an intelligence product or requirement by type  
 
-**3.1.4 [K] Intelligence requirements**  
+**2.1.4 [K] Intelligence requirements**  
 a. Purpose of intelligence requirements  
 b. Types of requirements (e.g., Priority Intelligence Requirements)  
 c. How requirements drive collection and analysis  
 
-**3.1.4.1 [T] Tasks**  
+**2.1.4.1 [T] Tasks**  
 1. Identify or draft (develop or refine) a basic intelligence requirement  
 2. Translate stakeholder questions into clear intelligence requirements  
 3. Explain how a given requirement drives analytic work  
 
-**3.1.5 [K] Ensuring intelligence is actionable**  
+**2.1.5 [K] Ensuring intelligence is actionable**  
 a. Characteristics of actionable intelligence  
 b. Common reasons intelligence fails to be actionable  
 
-**3.1.5.1 [T] Tasks**  
+**2.1.5.1 [T] Tasks**  
 1. Evaluate whether a piece of intelligence is actionable and explain why  
 
-**3.1.6 [K] Tailoring output to the audience**  
+**2.1.6 [K] Tailoring output to the audience**  
 a. Importance of audience analysis  
 b. Adjusting content, format, and detail level for different consumers  
 
-**3.1.6.1 [T] Tasks**  
+**2.1.6.1 [T] Tasks**  
 1. Adjust an intelligence product for a specified audience  
 
-**3.1.7 [K] Attribution**  
+**2.1.7 [K] Attribution**  
 a. Purpose and challenges of attribution  
 b. Levels of confidence in attribution  
 c. Types of attribution (e.g., activity group vs. nation-state)  
 
-**3.1.7.1 [T] Tasks**  
+**2.1.7.1 [T] Tasks**  
 1. Assess attribution statements for confidence and supporting evidence  
 
-**3.1.8 [K] Collection sources and methods**  
+**2.1.8 [K] Collection sources and methods**  
 a. OSINT  
 b. Commercial  
 c. Internal  
 
-**3.1.8.1 [T] Tasks**  
+**2.1.8.1 [T] Tasks**  
 1. Identify appropriate collection source classes for a given requirement  
 2. Plan collection against an intelligence requirement  
 
-Local request *process* (tickets, approval) is **3.12**. Tool *operation* is **3.3** / **2.3**.
+Local request *process* (tickets, approval) is **2.12**. Tool *operation* is **2.3** / **3.3**.
 
-**3.2 [K] Analytic Tradecraft**  
+**2.2 [K] Analytic Tradecraft**  
 
-Four children. Write only the asked child. Attribution *confidence* (low/medium/high) is `3.1.7`; this unit is *likelihood terms*. Source letters are `3.2.3`.
+Four children. Write only the asked child. Attribution *confidence* (low/medium/high) is `2.1.7`; this unit is *likelihood terms*. Source letters are `2.2.3`.
 
-**3.2.1 [K] Estimative language**  
+**2.2.1 [K] Estimative language**  
 a. Purpose of estimative language  
 b. Common estimative terms and their meaning  
 c. How estimative language communicates confidence and uncertainty  
 
-**3.2.1.1 [T] Tasks**  
+**2.2.1.1 [T] Tasks**  
 1. Correctly use estimative language when writing an analytic judgment  
 2. Interpret the confidence level expressed in an estimative statement  
 
-**3.2.2 [K] Structured analytic techniques**  
+**2.2.2 [K] Structured analytic techniques**  
 a. Purpose of structured analytic techniques  
 b. Common techniques (e.g., Analysis of Competing Hypotheses, Key Assumptions Check)  
 c. When to apply different techniques  
 
-**3.2.2.1 [T] Tasks**  
+**2.2.2.1 [T] Tasks**  
 1. Apply a basic structured analytic technique to a given problem set  
 2. Identify which structured analytic technique is most appropriate for a scenario  
 
-**3.2.3 [K] Admiralty Code / source reliability & information credibility**  
+**2.2.3 [K] Admiralty Code / source reliability & information credibility**  
 a. Source reliability scale  
 b. Information credibility scale  
 c. How to combine reliability and credibility ratings  
 
-**3.2.3.1 [T] Tasks**  
+**2.2.3.1 [T] Tasks**  
 1. Assign Admiralty Code ratings to a source and a piece of information  
 2. Explain the meaning of a given Admiralty Code rating  
 
-**3.2.4 [K] Cognitive biases and mitigation**  
+**2.2.4 [K] Cognitive biases and mitigation**  
 a. Common cognitive biases that affect analysis  
 b. Impact of biases on intelligence products  
 c. Techniques to mitigate cognitive biases  
 
-**3.2.4.1 [T] Tasks**  
+**2.2.4.1 [T] Tasks**  
 1. Identify potential cognitive bias in an analytic judgment  
 2. Apply a mitigation technique to reduce bias in analysis  
 
-**3.3 [T] Tools**  
+**2.3 [T] Tools**  
 
-The external-tool survey is **`0.7`**. Do not re-teach it here. Write only the asked child. Do not turn `3.3.1` into VirusTotal / Silent Push (`0.7`, `3.9`) or STIX authoring (`3.10`). Classroom TIP names are stand-ins. Advanced enrichment / pivot is **3.9**.
+The external-tool survey is **`0.7`**. Do not re-teach it here. Write only the asked child. Do not turn `2.3.1` into VirusTotal / Silent Push (`0.7`, `2.9`) or STIX authoring (`2.10`). Classroom TIP names are stand-ins. Advanced enrichment / pivot is **2.9**.
 
-**3.3.1 [K] Internal threat intelligence platform**  
+**2.3.1 [K] Internal threat intelligence platform**  
 a. Purpose and core functions of the internal TIP  
 b. How to navigate and search the platform  
 c. How the platform supports enrichment, analysis, and production  
 
-**3.3.1.1 [T] Internal TIP tasks**  
+**2.3.1.1 [T] Internal TIP tasks**  
 1. Search and retrieve relevant intelligence from the internal platform  
 2. Use the platform to support enrichment or analysis of an indicator or report
 
-**3.4 [K/T] File Similarity & Hashing Techniques**  
+**2.4 [K/T] File Similarity & Hashing Techniques**  
 
-One teaching unit (`3.4.1`) — imphash, ssdeep, TLSH, and code-signing. Not VT Relations (`3.9`). Not cryptographic identity-only hashes (`1.2.7` MD5/SHA). Classroom match thresholds are stand-ins.
+One teaching unit (`2.4.1`) — imphash, ssdeep, TLSH, and code-signing. Not VT Relations (`2.9`). Not cryptographic identity-only hashes (`1.2.7` MD5/SHA). Classroom match thresholds are stand-ins.
 
-**3.4.1 [K] Hashing and similarity concepts**  
+**2.4.1 [K] Hashing and similarity concepts**  
 a. imphash  
 b. ssdeep  
 c. TLSH  
 d. Certificate / code-signing certificate information  
 
-**3.4.1.1 [T] Tasks**  
+**2.4.1.1 [T] Tasks**  
 1. Explain the purpose and use case of imphash, ssdeep, and TLSH  
 2. Use file similarity hashes to identify related samples  
 3. Extract and interpret certificate information from a file  
 
-**3.5 [K/T] RDAP / WHOIS**  
+**2.5 [K/T] RDAP / WHOIS**  
 
-One teaching unit (`3.5.1`). Not SOA / advanced DNS (`3.6`). Not Silent Push PDNS (`0.7`). Redacted registrant is not “no intel” and is not nation-state attribution (`3.1.7`).
+One teaching unit (`2.5.1`). Not SOA / advanced DNS (`2.6`). Not Silent Push PDNS (`0.7`). Redacted registrant is not “no intel” and is not nation-state attribution (`2.1.7`).
 
-**3.5.1 [K] RDAP and WHOIS concepts**  
+**2.5.1 [K] RDAP and WHOIS concepts**  
 a. Purpose of WHOIS and RDAP  
 b. Key differences between WHOIS and RDAP  
 c. Key fields useful for enrichment and attribution  
 
-**3.5.1.1 [T] Tasks**  
+**2.5.1.1 [T] Tasks**  
 1. Query RDAP/WHOIS for a domain or IP  
 2. Extract and interpret relevant fields for enrichment or attribution  
 
-**3.6 [K/T] Advanced DNS**  
+**2.6 [K/T] Advanced DNS**  
 
-One teaching unit (`3.6.1`) — interpret SOA and use other records for enrichment/pivot. Do not re-teach Zeek `dns` fields or DGA (`1.2.3`). Not RDAP (`3.5`). Not Silent Push PDNS (`0.7`).
+One teaching unit (`2.6.1`) — interpret SOA and use other records for enrichment/pivot. Do not re-teach Zeek `dns` fields or DGA (`1.2.3`). Not RDAP (`2.5`). Not Silent Push PDNS (`0.7`).
 
-**3.6.1 [K] Advanced DNS concepts**  
+**2.6.1 [K] Advanced DNS concepts**  
 a. SOA records  
 b. Other advanced DNS record types and their intelligence value  
 c. How advanced DNS data supports enrichment and infrastructure analysis  
 
-**3.6.1.1 [T] Tasks**  
+**2.6.1.1 [T] Tasks**  
 1. Interpret an SOA record  
 2. Use advanced DNS records to support enrichment or pivoting  
 
-**3.7 [K/T] Frameworks**  
+**2.7 [K/T] Frameworks**  
 
-Four children. Write only the asked child. Do not write lumped outline `3.7.5` as one module. Do not re-teach the shared-floor frameworks (`0.6`) or hunt planning (`2.5`). DTF is real PTA/P discovery IDs from [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Product is the DTF ID line. No scoring. Do not invent P-codes. Do not teach every P-code. Generic hop sentence is `3.8.1`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
+Four children. Write only the asked child. Do not write lumped outline `2.7.5` as one module. Do not re-teach the shared-floor frameworks (`0.6`) or hunt planning (`3.5`). DTF is real PTA/P discovery IDs from [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Product is the DTF ID line. No scoring. Do not invent P-codes. Do not teach every P-code. Generic hop sentence is `2.8.1`. Applicable-to-environment TTP extract is `2.8.2`. Actor profile is `2.11`.
 
-**3.7.1 [K] MITRE ATT&CK**  
+**2.7.1 [K] MITRE ATT&CK**  
 a. Advanced application for intelligence analysis and TTP extraction  
 
-**3.7.1.1 [T] Tasks**  
+**2.7.1.1 [T] Tasks**  
 1. Map activity or reports to MITRE ATT&CK (tactic, technique or sub-technique, evidence; reject the neighbor ID)  
 
-**3.7.2 [K] Diamond Model**  
+**2.7.2 [K] Diamond Model**  
 a. Advanced application for analysis and attribution  
 
-**3.7.2.1 [T] Tasks**  
+**2.7.2.1 [T] Tasks**  
 1. Apply the Diamond Model to an intelligence problem (fill vertices from a report or activity set; name the weakest; reject a vendor-name Adversary fill)  
 
-**3.7.3 [K] Cyber Kill Chain**  
+**2.7.3 [K] Cyber Kill Chain**  
 a. Advanced application for understanding attack progression  
 
-**3.7.3.1 [T] Tasks**  
+**2.7.3.1 [T] Tasks**  
 1. Identify the Kill Chain stage of observed or reported activity (stage, reject previous/next; list only supported stages in the product; reject an unobserved stage)  
 
-**3.7.4 [K] MalasadaTech Defender’s ThreatMesh Framework (DTF)**  
+**2.7.4 [K] MalasadaTech Defender’s ThreatMesh Framework (DTF)**  
 a. Purpose of DTF (discover additional adversary infrastructure; communicate and record pivots)  
 b. Core components: pivot tactics (PTA) and pivots (P), ATT&CK-like structure  
 c. How DTF identifies related infrastructure from a known-bad seed (shared registration, domain, DNS, IP, SSL, or HTTP characteristics)  
 d. How a selected DTF pivot guides the next enrichment or lookup  
 e. Relationship of DTF to ATT&CK, Diamond Model, and Cyber Kill Chain (discovery vs behavior vs know/don’t-know vs progression)  
 
-**3.7.4.1 [T] Tasks**  
+**2.7.4.1 [T] Tasks**  
 1. Apply DTF: pick tactic + pivot (or sub-pivot), cite the characteristic, reject the weak neighbor  
 
-**3.7.4.2 [T] Tasks**  
+**2.7.4.2 [T] Tasks**  
 1. Use a selected DTF pivot to name the next enrichment or lookup  
 
-**3.7.4.3 [T] Tasks**  
+**2.7.4.3 [T] Tasks**  
 1. Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain  
 
-**3.7.5 [T] Framework application tasks**  
+**2.7.5 [T] Framework application tasks**  
 1. Apply MITRE ATT&CK, Diamond Model, and/or Cyber Kill Chain at an advanced level to an intelligence problem set  
 2. Apply DTF: pick tactic + pivot, cite the characteristic, reject the weak neighbor  
 3. Use a selected DTF pivot to name the next enrichment or lookup  
 4. Explain how DTF integrates with or complements other frameworks  
 
-**3.8 [T] Enrichment & Analysis**  
+**2.8 [T] Enrichment & Analysis**  
 
-Write only the asked child. `3.8.1` writes the generic hop sentence from a seed — not RDAP (`3.5`), SOA (`3.6`), or Silent Push tool choice (`0.7`). The DTF ID line is `3.7.4`. `3.8.2` is apply-to-this-environment, not ATT&CK mapping (`3.7.1`) and not organizational impact (`3.8.4`). `3.8.3` handles the IOC as an object (keep / expire / enrich / link). `3.8.4` is the “so what here” line. Use only real ATT&CK IDs. VT Relations depth is `3.9`. Actor profile is `3.11`.
+Write only the asked child. `2.8.1` writes the generic hop sentence from a seed — not RDAP (`2.5`), SOA (`2.6`), or Silent Push tool choice (`0.7`). The DTF ID line is `2.7.4`. `2.8.2` is apply-to-this-environment, not ATT&CK mapping (`2.7.1`) and not organizational impact (`2.8.4`). `2.8.3` handles the IOC as an object (keep / expire / enrich / link). `2.8.4` is the “so what here” line. Use only real ATT&CK IDs. VT Relations depth is `2.9`. Actor profile is `2.11`.
 
-**3.8.1 [K] Identifying additional adversary infrastructure from seed indicators**  
+**2.8.1 [K] Identifying additional adversary infrastructure from seed indicators**  
 a. Pivoting concepts and techniques  
 b. Common data sources used for infrastructure enrichment  
 
-**3.8.1.1 [T] Tasks**  
+**2.8.1.1 [T] Tasks**  
 1. Pivot from a seed indicator to identify additional adversary infrastructure  
 
-**3.8.2 [K] Extracting applicable TTPs from intelligence reports**  
+**2.8.2 [K] Extracting applicable TTPs from intelligence reports**  
 a. How to identify relevant TTPs in a report  
 b. Criteria for determining which TTPs are applicable to the environment  
 
-**3.8.2.1 [T] Tasks**  
+**2.8.2.1 [T] Tasks**  
 1. Extract applicable TTPs from an intelligence report  
 
-**3.8.3 [K] IOC handling and enrichment concepts**  
+**2.8.3 [K] IOC handling and enrichment concepts**  
 a. What an IOC is (an observable you record, enrich, or expire) versus a TTP  
 b. Handling rules: keep cited current IOCs; reject stale, uncited, or shared-infrastructure noise  
 c. Enrichment uses internal and external tools already taught — this hour selects and records the enrichment; it does not re-teach the tool  
 d. Link analysis and campaign tracking: connect handled IOCs into one activity set or keep them apart  
 
-**3.8.3.1 [T] Tasks**  
+**2.8.3.1 [T] Tasks**  
 1. Enrich and pivot on IOCs using internal and external tools (name the tool/field and what you hope to learn)  
 
-**3.8.3.2 [T] Tasks**  
+**2.8.3.2 [T] Tasks**  
 1. Perform link analysis / campaign tracking: same activity set vs separate (cite the shared objects; reject a vendor group name with no link)  
 
-**3.8.4 [K] Threat relevance and organizational impact**  
+**2.8.4 [K] Threat relevance and organizational impact**  
 a. Relevance: does this finding apply to this environment (mission / assets / platform)  
 b. Potential impact: what would change here if the finding is true  
-c. Relevance and impact are not TTP applicability (3.8.2), not a PIR (3.1.4 / 3.12.1), and not attribution (3.1.7)  
+c. Relevance and impact are not TTP applicability (2.8.2), not a PIR (2.1.4 / 2.12.1), and not attribution (2.1.7)  
 
-**3.8.4.1 [T] Tasks**  
+**2.8.4.1 [T] Tasks**  
 1. Assess threat relevance and potential impact to the organization  
 
-**3.9 [K/T] Platform-Specific Skills**  
+**2.9 [K/T] Platform-Specific Skills**  
 
-Four children. Write only the asked child unless asked for all of `3.9`. Do not re-teach the `0.7` survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `2.3.1`. Conceptual infra hop is `3.8.1`. File-similarity hashes are `3.4`. Applicable TTPs are `3.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
+Four children. Write only the asked child unless asked for all of `2.9`. Do not re-teach the `0.7` survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `3.3.1`. Conceptual infra hop is `2.8.1`. File-similarity hashes are `2.4`. Applicable TTPs are `2.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
 
-**3.9.1 [K] VirusTotal**  
+**2.9.1 [K] VirusTotal**  
 a. Relations tab for infrastructure pivoting  
 b. Behavior tab for extracting file, network, registry, and process events  
 
-**3.9.1.1 [T] VirusTotal tasks**  
+**2.9.1.1 [T] VirusTotal tasks**  
 1. Use the Relations tab to identify additional adversary infrastructure from a seed indicator  
 2. Use the Behavior tab to extract file, network, registry, and process events  
 
-**3.9.2 [K] AnyRun**  
+**2.9.2 [K] AnyRun**  
 a. Searching submissions by tag, IP, domain, or hash  
 b. Reviewing submissions for actionable intelligence  
 
-**3.9.2.1 [T] AnyRun tasks**  
+**2.9.2.1 [T] AnyRun tasks**  
 1. Search AnyRun submissions by tag, IP, domain, or hash  
 2. Review an AnyRun submission and extract actionable intelligence  
 
-**3.9.3 [K] Silent Push**  
+**2.9.3 [K] Silent Push**  
 a. Core capabilities and primary use cases  
 b. How to pivot and enrich indicators  
 
-**3.9.3.1 [T] Silent Push tasks**  
+**2.9.3.1 [T] Silent Push tasks**  
 1. Enrich an indicator using Silent Push  
 2. Pivot within Silent Push to identify additional infrastructure  
 
-**3.9.4 [K] URLScan**  
+**2.9.4 [K] URLScan**  
 a. Core capabilities and primary use cases  
 b. How to interpret scan results for intelligence value  
 
-**3.9.4.1 [T] URLScan tasks**  
+**2.9.4.1 [T] URLScan tasks**  
 1. Submit or retrieve a URLScan result  
 2. Extract actionable intelligence from a URLScan report  
 
-**3.10 [K] Common STIX Objects**  
+**2.10 [K] Common STIX Objects**  
 
-Two children. Write only the asked child unless asked for all of `3.10`. Do not write lumped outline `3.10.3` as one module. Hunt-facing STIX *input* is `2.4.3`. Finished narrative products are `3.11`. TIP retrieve is `3.3.1`. Use real STIX 2.1 object and relationship types. Do not invent types. Classroom bundles/collections are lesson-only — do not stand up a TAXII server.
+Two children. Write only the asked child unless asked for all of `2.10`. Do not write lumped outline `2.10.3` as one module. Hunt-facing STIX *input* is `3.4.3`. Finished narrative products are `2.11`. TIP retrieve is `2.3.1`. Use real STIX 3.1 object and relationship types. Do not invent types. Classroom bundles/collections are lesson-only — do not stand up a TAXII server.
 
-**3.10.1 [K] Core STIX Objects**  
+**2.10.1 [K] Core STIX Objects**  
 a. Indicator  
 b. Observed Data  
 c. Malware  
@@ -711,125 +711,125 @@ i. Identity
 j. Relationship  
 k. Sighting  
 
-**3.10.1.1 [T] Tasks**  
+**2.10.1.1 [T] Tasks**  
 1. Correctly identify and label common STIX objects in an intelligence report  
 
-**3.10.2 [K] How STIX objects are used in intelligence production**  
+**2.10.2 [K] How STIX objects are used in intelligence production**  
 a. Structuring intelligence for sharing and automation  
 b. Linking objects to represent complex threat activity  
 
-**3.10.2.1 [T] Tasks**  
+**2.10.2.1 [T] Tasks**  
 1. Create basic STIX-aligned relationships between objects  
 2. Explain how a set of STIX objects represents a threat scenario  
 
-**3.10.2.2 [T] Tasks**  
+**2.10.2.2 [T] Tasks**  
 1. Create and validate STIX objects  
 
-**3.10.2.3 [T] Tasks**  
+**2.10.2.3 [T] Tasks**  
 1. Use TAXII for sharing and consumption of intelligence  
 
-**3.10.3 [T] STIX tasks**  
+**2.10.3 [T] STIX tasks**  
 1. Correctly identify and label common STIX objects in an intelligence report  
 2. Create basic STIX-aligned relationships between objects  
 3. Explain how a set of STIX objects represents a threat scenario  
 
-**3.11 [K/T] Intelligence Production & Dissemination**  
+**2.11 [K/T] Intelligence Production & Dissemination**  
 
-Three children. Write only the asked child unless asked for all of `3.11`. Audience *rewrite* floor is `3.1.6`. Attribution *assessment* is `3.1.7`. STIX bundle/TAXII is `3.10`. SOC ticket types/routing are `1.5`. Local approval and customer lists are `3.12`. Classroom markings/channels/RFI queue are lesson-only — not live org policy.
+Three children. Write only the asked child unless asked for all of `2.11`. Audience *rewrite* floor is `2.1.6`. Attribution *assessment* is `2.1.7`. STIX bundle/TAXII is `2.10`. SOC ticket types/routing are `1.5`. Local approval and customer lists are `2.12`. Classroom markings/channels/RFI queue are lesson-only — not live org policy.
 
-**3.11.1 [K] Creating finished intelligence products**  
+**2.11.1 [K] Creating finished intelligence products**  
 a. Types of finished intelligence products  
 b. Structure and required elements of a finished product  
 c. Quality and analytic standards  
 
-**3.11.1.1 [T] Tasks**  
+**2.11.1.1 [T] Tasks**  
 1. Draft a basic finished intelligence product  
 2. Evaluate a finished product against quality and analytic standards  
 
-**3.11.1.2 [T] Tasks**  
+**2.11.1.2 [T] Tasks**  
 1. Produce a threat actor profile  
 
-**3.11.2 [K] Disseminating intelligence to the correct audiences**  
+**2.11.2 [K] Disseminating intelligence to the correct audiences**  
 a. Audience identification  
 b. Approved dissemination methods and channels  
 c. Handling caveats and handling markings  
 
-**3.11.2.1 [T] Tasks**  
+**2.11.2.1 [T] Tasks**  
 1. Select the appropriate audience and dissemination method for a product  
 2. Apply correct handling markings and caveats  
 
-**3.11.2.2 [T] Tasks**  
+**2.11.2.2 [T] Tasks**  
 1. Tailor products to different audiences (technical, leadership, etc.)  
 
-**3.11.2.3 [T] Tasks**  
+**2.11.2.3 [T] Tasks**  
 1. Disseminate intelligence products through approved channels  
 
-**3.11.3 [K] Handling RFIs**  
+**2.11.3 [K] Handling RFIs**  
 a. Purpose and lifecycle of an RFI  
 b. How to evaluate, prioritize, and respond to an RFI  
 
-**3.11.3.1 [T] Tasks**  
+**2.11.3.1 [T] Tasks**  
 1. Evaluate and prioritize an RFI  
 2. Produce a response to an RFI  
 
-**3.12 [K/T] Site-Specific CTI Knowledge and Tasks**  
+**2.12 [K/T] Site-Specific CTI Knowledge and Tasks**  
 
-Write only the asked child unless asked for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Every org/section has its own; a new analyst obtains them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. Environment / signal flow is **`0.8`**. Tool access (`1.8.3`) is retired.
+Write only the asked child unless asked for all of `2.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Every org/section has its own; a new analyst obtains them early. PIR *concept* is `2.1.4`. Collection *planning* is `2.1.8`. Finished draft is `2.11.1`. Classroom TLP/channels are `2.11.2`. Environment / signal flow is **`0.8`**. Tool access (`1.8.3`) is retired.
 
-**3.12.1 [K] Local intelligence requirements and priorities**  
+**2.12.1 [K] Local intelligence requirements and priorities**  
 a. Current Priority Intelligence Requirements (PIRs) / intelligence priorities  
 b. How local requirements drive analytic focus  
 
-**3.12.1.1 [T] Tasks**  
+**2.12.1.1 [T] Tasks**  
 1. Identify current local intelligence priorities  
 2. Align analytic work to a stated local requirement  
 
-**3.12.2 [K] Local production and approval processes**  
+**2.12.2 [K] Local production and approval processes**  
 a. Workflow for producing intelligence products  
 b. Required reviews and approval authorities  
 
-**3.12.2.1 [T] Tasks**  
+**2.12.2.1 [T] Tasks**  
 1. Follow the local process for requesting collection or producing and approving an intelligence product  
 
-**3.12.2.2 [T] Tasks**  
+**2.12.2.2 [T] Tasks**  
 1. Document and archive intelligence products according to local standards  
 
-**3.12.3 [K] Local dissemination channels and customers**  
+**2.12.3 [K] Local dissemination channels and customers**  
 a. Primary internal and external customers  
 b. Approved dissemination channels and methods  
 
-**3.12.3.1 [T] Tasks**  
+**2.12.3.1 [T] Tasks**  
 1. Disseminate a product using the correct local channels and customers  
 
 ---
 
-# 2. Threat Hunter
+# 3. Threat Hunter
 
-Taught after CTI (`3.x`). IDs stay `2.x`.
+Taught after CTI (`2.x`).
 
-**2.1 [K] Purpose of Threat Hunting**  
+**3.1 [K] Purpose of Threat Hunting**  
 a. Identify malicious or suspicious activity missed by existing security mechanisms  
 b. Identify detection and visibility gaps  
 
-**2.1.1 [T] Tasks**  
+**3.1.1 [T] Tasks**  
 1. Explain the purpose of threat hunting in the context of the security program  
 2. Identify examples of activity that existing controls might miss  
 
-**2.2 [K/T] Hunt Methodology**  
+**3.2 [K/T] Hunt Methodology**  
 
-**2.2.1 [K] Hunt types**  
+**3.2.1 [K] Hunt types**  
 a. Intel-driven hunts  
 b. Hypothesis-driven hunts  
 c. Reactive hunts  
 d. Anomaly-based hunts  
 
-**2.2.2 [K] Hunt development concepts**  
+**3.2.2 [K] Hunt development concepts**  
 a. Developing a hunt hypothesis  
 b. Scoping a hunt  
 c. Prioritizing hunts  
 d. Identifying unique patterns or behaviors for internal searches  
 
-**2.2.3 [T] Hunt methodology tasks**  
+**3.2.3 [T] Hunt methodology tasks**  
 1. Develop and document a hunt hypothesis  
 2. Scope and prioritize a hunt  
 3. Identify unique patterns or behaviors suitable for hunting  
@@ -838,95 +838,95 @@ d. Identifying unique patterns or behaviors for internal searches
 6. Execute a reactive hunt  
 7. Execute an anomaly-based hunt  
 
-**2.3 [T] Online Tools & Enrichment**  
+**3.3 [T] Online Tools & Enrichment**  
 
-**2.3.1 [K] Tool capabilities for hunting**  
+**3.3.1 [K] Tool capabilities for hunting**  
 a. VirusTotal – strengths and limitations for hunting  
 b. AnyRun – strengths and limitations for hunting  
 c. URLScan – strengths and limitations for hunting  
 d. Silent Push – strengths and limitations for hunting  
 
-**2.3.2 [T] Online tools & enrichment tasks**  
+**3.3.2 [T] Online tools & enrichment tasks**  
 1. Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push  
 2. Extract actionable hunting leads from external tool results  
 3. Convert external findings into precise internal SIEM or Zeek queries  
 
-**2.4 [K/T] CTI for Hunters**  
+**3.4 [K/T] CTI for Hunters**  
 
-**2.4.1 [K] Assessing CTI for hunting value**  
+**3.4.1 [K] Assessing CTI for hunting value**  
 a. Hunt-worthy vs awareness-only vs hand off to detections / IR  
 b. Rapid triage of a report  
 c. What “actionable for a hunt” means (question, telemetry, scope)  
 
-**2.4.1.1 [T] Tasks**  
+**3.4.1.1 [T] Tasks**  
 1. Triage a CTI report: hunt / don’t hunt / hand off, and say why  
 
-**2.4.2 [K] Extracting hunt leads from CTI**  
+**3.4.2 [K] Extracting hunt leads from CTI**  
 a. TTPs vs IOCs vs behaviors — which can drive a hunt  
 b. What to drop (no telemetry, expired IOCs, noise)  
-c. Record ATT&CK IDs if the report has them (mapping hunts is 2.5)  
+c. Record ATT&CK IDs if the report has them (mapping hunts is 3.5)  
 
-**2.4.2.1 [T] Tasks**  
+**3.4.2.1 [T] Tasks**  
 1. Extract hunt-suitable TTPs from a CTI report  
 2. Extract hunt-suitable artifacts (IOCs, patterns, behaviors)  
 3. State the hunt question those leads support  
 
-**2.4.3 [K] STIX as hunt input**  
+**3.4.3 [K] STIX as hunt input**  
 a. Objects a hunter actually uses (indicator, attack-pattern, observed-data, malware, threat-actor / intrusion-set, relationship)  
 b. How a STIX bundle seeds a hunt (not how to author STIX)  
 
-**2.4.3.1 [T] Tasks**  
+**3.4.3.1 [T] Tasks**  
 1. Identify hunt-relevant objects in a report or bundle  
 2. Turn those objects into hunt leads  
 
-**2.5 [K/T] Framework Application for Hunting**  
+**3.5 [K/T] Framework Application for Hunting**  
 
-**2.5.1 [K] Using MITRE ATT&CK for hunt planning and coverage analysis**  
+**3.5.1 [K] Using MITRE ATT&CK for hunt planning and coverage analysis**  
 a. Mapping hunts to ATT&CK tactics and techniques  
 b. Using ATT&CK to identify coverage gaps  
 c. Using ATT&CK to prioritize hunt topics  
 
-**2.5.2 [T] Framework application tasks**  
+**3.5.2 [T] Framework application tasks**  
 1. Map a hunt plan or hunt findings to MITRE ATT&CK  
 2. Use ATT&CK to identify detection or visibility gaps  
 3. Use ATT&CK to support hunt prioritization  
 
-**2.6 [K/T] Attacker Techniques**  
+**3.6 [K/T] Attacker Techniques**  
 
-Three children. Write only the asked child. Recognition of persistence is `2.6.1`; recognition of privilege escalation is `2.6.2`. `2.6.3` is a scoped hunt for **one named** technique — not “hunt persistence.” Hunt-type execute is `2.2.1`. Hunt card format is `2.2.2`. ATT&CK remapping is `2.5`. Local hunt control is `2.7`.
+Three children. Write only the asked child. Recognition of persistence is `3.6.1`; recognition of privilege escalation is `3.6.2`. `3.6.3` is a scoped hunt for **one named** technique — not “hunt persistence.” Hunt-type execute is `3.2.1`. Hunt card format is `3.2.2`. ATT&CK remapping is `3.5`. Local hunt control is `3.7`.
 
-**2.6.1 [K] Persistence techniques**  
+**3.6.1 [K] Persistence techniques**  
 a. Registry-based persistence  
 b. Start menu / startup folder persistence  
 c. Scheduled tasks  
 d. Other common persistence methods  
 
-**2.6.2 [K] Privilege escalation techniques**  
+**3.6.2 [K] Privilege escalation techniques**  
 a. Common Windows privilege escalation methods  
 b. Indicators associated with privilege escalation  
 
-**2.6.3 [T] Attacker technique tasks**  
+**3.6.3 [T] Attacker technique tasks**  
 1. Recognize persistence techniques in logs or telemetry  
 2. Recognize privilege escalation techniques in logs or telemetry  
 3. Hunt for specific persistence or privilege escalation techniques  
 
-**2.7 [T] Site-Specific Hunt Knowledge and Tasks**  
+**3.7 [T] Site-Specific Hunt Knowledge and Tasks**  
 
-Write only the asked child unless asked for all of `2.7`. Do **not** invent local hunt tickets, templates, output lists, or hand-off charts. Every site has its own; a new hunter obtains them early. Classroom stand-ins are lesson-only — not live org policy. Hunt *development* is `2.2.2`. Hunt-for-specific is `2.6.3`. SOC tickets / IR are `1.5` / `1.8.5`.
+Write only the asked child unless asked for all of `3.7`. Do **not** invent local hunt tickets, templates, output lists, or hand-off charts. Every site has its own; a new hunter obtains them early. Classroom stand-ins are lesson-only — not live org policy. Hunt *development* is `3.2.2`. Hunt-for-specific is `3.6.3`. SOC tickets / IR are `1.5` / `1.8.5`.
 
-**2.7.1 [K] Hunt control and lead management**  
+**3.7.1 [K] Hunt control and lead management**  
 a. How hunts are initiated and controlled  
 b. Lead management process  
 
-**2.7.2 [K] Hunt documentation standards**  
+**3.7.2 [K] Hunt documentation standards**  
 a. Required elements of hunt documentation  
 b. Where and how hunts are documented  
 
-**2.7.3 [K] Hunt outputs and hand-off**  
+**3.7.3 [K] Hunt outputs and hand-off**  
 a. Expected outputs of a hunt  
 b. Hand-off process to SOC, IR, or CTI  
 
-**2.7.4 [T] Site-specific hunt tasks**  
+**3.7.4 [T] Site-specific hunt tasks**  
 1. Follow the local process for initiating and controlling a hunt  
 2. Document a hunt according to local standards  
 3. Produce required hunt outputs and perform proper hand-off  

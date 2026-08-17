@@ -66,7 +66,7 @@ Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive i
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.1.5.1 | Registry activity concepts | K | A | B | C | Same knowledge progression. Persistence locations are examples; hunt techniques are 2.6. |
+| 1.1.5.1 | Registry activity concepts | K | A | B | C | Same knowledge progression. Persistence locations are examples; hunt techniques are 3.6. |
 | 1.1.5.2 | Analyze a registry event (Sysmon or MDE) and accurately describe what occurred | T | 2b | 3c | 4c | Same performance progression as previous analysis tasks. |
 | 1.1.5.3 | Create a SIEM query to detect specific registry operations | T | 2b | 3c | 4c | Same progression as other query-creation tasks. |
 
@@ -230,7 +230,7 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 
 ## 0.6 Frameworks
 
-Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 2.5. DTF is 3.7.4.
+Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 3.5. DTF is 2.7.4.
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
