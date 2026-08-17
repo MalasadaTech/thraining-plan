@@ -1200,6 +1200,7 @@ Also: rough nomination still DE, sketch is enough to review
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
+| Used | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
 
 See also: [what DE owns](#what-de-owns), [sort work to DE, nominator, 1.3, or a block](#sort-work-to-de-nominator-13-or-a-block)
 
@@ -1272,6 +1273,46 @@ Also: shipped changed sent back retired
 | Taught | [4.2 Making a detection sound and meeting shop requirements](../modules/04-de/02-sound-and-shop-requirements/) | DE, SOC, Hunter, CTI |
 
 See also: [shop requirements (list is local)](#shop-requirements-list-is-local), [what DE owns](#what-de-owns)
+
+### who can nominate
+
+Also: SOC hunter CTI nominate
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
+
+See also: [nomination need not be production-ready](#nomination-need-not-be-production-ready), [nominations need not be perfect](#nominations-need-not-be-perfect)
+
+### nomination need not be production-ready
+
+Also: draft sketch we need something on this
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
+
+See also: [who can nominate](#who-can-nominate), [accept, send back, or reject](#accept-send-back-or-reject)
+
+### accept, send back, or reject
+
+Also: accept for work, clear enough to review
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
+
+See also: [nominator owes vs DE finishes](#nominator-owes-vs-de-finishes), [close the loop with the nominator](#close-the-loop-with-the-nominator)
+
+### nominator owes vs DE finishes
+
+Also: 4.3.1, who finishes what
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.3 Nominations from SOC, hunt, and CTI](../modules/04-de/03-nominations/) | DE, SOC, Hunter, CTI |
+
+See also: [accept, send back, or reject](#accept-send-back-or-reject)
 
 ### what an IOC is versus a TTP
 
