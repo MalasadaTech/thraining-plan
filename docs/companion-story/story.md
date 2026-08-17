@@ -27,7 +27,7 @@ The analyst does not write a new rule. They investigate the fired object (**1.4.
 
 Present on the row: host, user, time, rule name, parent, the encoded command line. Missing until they pull more: dest IP, URI, file hash. Missing is a gap, not “benign.”
 
-They do not invent a command line. They do not open VirusTotal Relations. If they later have a hash or an IP, they may look that object up (**0.7**) and write the one-line result. They do not need the Run key on this first pass.
+They do not invent a command line. They do not need the Run key on this first pass.
 
 ---
 
@@ -37,13 +37,13 @@ They put a label on what they have, and they cite it (**1.4.2**).
 
 **True positive.** The rule said this process chain was bad. The activity is the activity the rule is for: `wscript` launched encoded PowerShell on **WS-JLEE**. Cite: parent + `-enc`. A slogan is not evidence.
 
-Endpoint logs for that host and window add the dropper path: Temp `invoice.vbs`. That is what they pulled. If the tenant has no parent process, they write that the logs **fail to add** it. Opening the table is not the task.
+Endpoint logs for that host and window add the dropper path: Temp `invoice.vbs`. That is what they pulled. The file row has a hash. They look that hash up on VirusTotal (**1.4.1** / **0.7**) during this first pass and write the one-line result — what VT adds, or that the hash is not in VT. They do not open Relations. If the tenant has no parent process, they write that the logs **fail to add** it. Opening the table is not the task.
 
 They also see a miss. Zeek or PCAP — if they have a flow — shows `GET /update.exe` to `203.0.113.88:8080`. Nothing in the queue fired on that download. That is a **false negative**. FN is not a fired alert they dislike. It is activity that should have been detected and was not.
 
 HKCU Run **`Updater`** is already on the host. It is **not** on this first alert, and it is not required to close the triage. Hunt will use it.
 
-They do not classify the case as a nation-state. They do not pick a scan/root/user category as the whole story. They have a TP process alert, a file path, and a named miss on the download.
+They do not classify the case as a nation-state. They do not pick a scan/root/user category as the whole story. They have a TP process alert, a file path, a VT line on the hash, and a named miss on the download.
 
 ---
 
@@ -156,7 +156,7 @@ Four products. One chain.
 
 | Desk | Product |
 |------|---------|
-| SOC | TP process alert on **A12**; incident to **Sam**; leadership one-liner; RFI to **Jordan** |
+| SOC | TP process alert on **A12**; VT line on the `invoice.vbs` hash; incident to **Sam**; leadership one-liner; RFI to **Jordan** |
 | CTI | Answer: likely the payload host. Hop: `login-prd.net`. Extra name to block. |
 | Hunt | Package: **`Updater`** / `update.exe` / more `invoice.vbs`. Not a rewritten ticket. |
 | DE | Nomination review. Add or not. Not a block list. |

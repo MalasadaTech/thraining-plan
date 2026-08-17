@@ -43,7 +43,7 @@ These are the same nine steps from the course todo. Each beat maps to teaching-u
 | # | Beat | Desk | Product | Teach / read |
 |---|------|------|---------|--------------|
 | 1 | A SOC analyst gets an alert | SOC | Queue row | **1.3** wrote the rule. **1.4.1** is the fired object: `wscript` → `powershell -enc` on **WS-JLEE** / `jlee`. |
-| 2 | They triage it | SOC | Label + cite | **1.4.2** TP on the process alert. **1.4.1** file row can add Temp `invoice.vbs`. **FN:** `GET /update.exe` `:8080` with no queue row. Run key is **not** required on this pass. |
+| 2 | They triage it | SOC | Label + cite | **1.4.2** TP on the process alert. **1.4.1** file row adds Temp `invoice.vbs` and its hash. SOC looks that hash up on **VirusTotal** (one line: what it adds, or not in VT). Not Relations. **FN:** `GET /update.exe` `:8080` with no queue row. Run key is **not** required on this pass. |
 | 3 | Forward to IR and leadership notify | SOC | Incident route | **1.5.1** type = incident. **1.5.2** clocks (training). **1.5.3** SOC + **IR Sam**; leadership **yes**; approved **ticket**. One sentence for leadership: host, user, process chain, the `.vbs`. Not the hash. Not the Run key. |
 | 4 | RFI to CTI | SOC | Question, not a second case | **1.5.1** type = RFI. **1.5.3** recipients **CTI**; leadership **no**; ticket or approved RFI form. Question: is the update domain / `203.0.113.88` the payload host? **Jordan** owns it. |
 | 5 | CTI works the RFI | CTI | Answer | **2.11.3** receive → evaluate → answer. Open incident + IR has the host → work now. Response: **likely** yes — treat it as the payload host. No country. No second incident. |
@@ -75,7 +75,7 @@ The reader already sat **0.x** before SOC. The story may *name* those hours. It 
 - **0.3** jobs in one sentence; extra infra → block.
 - **0.4** same evidence, different products; one person may wear two hats.
 - **0.6.1** ATT&CK map of *this* hunt is **3.5**, not the first alert.
-- **0.7** VT is context on a hash/IP/domain you already have, not a Relations hour.
+- **0.7** VT is context on a hash/IP/domain you already have. SOC uses it on the first pass in **1.4.1**, not as a Relations hour.
 - **0.8** ask your shop; do not invent spans or a DYA site card.
 
 ---
