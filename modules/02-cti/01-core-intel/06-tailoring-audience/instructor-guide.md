@@ -1,120 +1,89 @@
-# Instructor Guide – Module 3.1.6 – Tailoring Output to the Audience
+# Instructor Guide – Module 2.1.6 – Tailoring Output to the Audience
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.1.6 A / A / B · 3.1.6.1 1a / 1a / 2b  
-- Hunter: 3.1.6 A / B / B · 3.1.6.1 1a / 2b / 3c  
-- CTI: 3.1.6 B / C / C · 3.1.6.1 3c / 4c / 4d  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.1.6 B / C / C ; 2.1.6.1 3c / 4c / 4d  
+- Hunter: 2.1.6 A / B / B ; 2.1.6.1 1a / 2b / 3c  
+- SOC: 2.1.6 A / A / B ; 2.1.6.1 1a / 1a / 2b  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach audience analysis and force an actual **rewrite**. Do not teach 3.11 channels or markings.
+Same facts, different content / format / detail for a named consumer.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts change how they say it so the reader can use it.
+- How it hooks to the hour before: 2.1.5 was whether the product can be acted on.
+- How it hooks to the hour after: 2.1.7 is attribution. Not a rewrite.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Leadership one-liner has no hash.
+- What we are *not* doing this hour: Change the judgment. Actor profile. SOC ticket type. Channel list. No lab.
+- Extra step: none.
+
+Do not invent a DYA style guide.
 
 **Key Teaching Points:**
-- Same facts, different product.
-- Keep / cut / format is the skill.
-- SOC 3-level task is **1a / 1a / 2b**. CTI is **3c / 4d**. Do not collapse.
-- 3.11.2.2 is the production-depth version of this skill.
-
-**Common Student Challenges:**
-- Saying “it depends” without writing the sentence.
-- Sending JA3 to leadership.
-- One blob for all audiences.
-- Opening 3.11 dissemination.
+- Facts stay. Detail changes.
+- Leadership: no hash.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional local audience catalog
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Audience analysis.
-2. Adjust content, format, detail.
-3. Rewrite for a named audience.
+Same as the student guide.
 
-**Mapped Items:** K 3.1.6 · T 3.1.6.1
+**Mapped Items:** K 2.1.6 ; T 2.1.6.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 3.11 / 3.1.5 rescore |
-| Analysis + adjust              | 14 min   | a–b |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | They write four sentences |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~64 min** | Stretch Ex 2 if they defend the JA3 |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Same facts |
+| Key Concepts            | 12 min    | Leadership vs IR |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- CTI 3: 3c — they produce two usable sentences from one fact set.
-- Accept paraphrase of Example 1 if keep/cut is right.
+### 1. Key Concepts
 
-**Question:**  
-“If leadership asks ‘so what do I *click*?,’ what did you fail to cut or add?”
+Write content / format / detail. Walk leadership one-liner vs IR detail on **A12**.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail JA3-in-the-exec-body. Fail one-blob. Accept D as technical fields.
-
-**Summaries:**
-- Ex 1: two products, same facts.
-- Ex 2: facts OK, audience fail.
-- Ex 3: split the memo.
-
-**Cases:**
-
-| Item | Keep | Cut | Format | Sentence (accept paraphrase) |
-|------|------|-----|--------|------------------------------|
-| A | Host, isolate + hunt, medium | Budget | Ticket line | Isolate WS-JLEE with IR concurrence; hunt SNI/JA3 this shift. |
-| B | Cluster, 10-day lab→finance, IR owns victims | Exec spend para | Operational note | Run ten days on Night Owl (lab then finance); IR takes confirmed victims. |
-| C | Implication + fund/defer + residual risk | JA3, hash | Short para | Fund extra TLS this quarter or accept more missed beacons like WS-JLEE. |
-| D | SNI, JA3, hash, port | Isolate/budget | Technical note | `nightowl-updates.net` / JA3 `a0e9f5…` / hash `6734f374…` — detect/pivot fields. |
+If they drop the judgment: “Same assess.”  
+If they add the hash for leadership: “Bible. No hash.”  
+If they pick email vs ticket: “2.11.2.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Four analysis questions?**  
-   **Answer:** Decision they own; time they have; vocabulary they can use; what they must not have to ask next.  
-   **Explanation:** Outline a.
+1. **Tailoring changes the judgment so leadership likes it. True or false?**  
+   **Answer:** False. Facts and judgment stay.  
+   **Explanation:** Stay-in.
 
-2. **Three adjusts?**  
+2. **Three things you adjust?**  
    **Answer:** Content, format, detail.  
    **Explanation:** Outline b.
 
-3. **Why not JA3 to leadership?**  
-   **Answer:** They cannot execute a fingerprint. They need implication + a decision.  
-   **Explanation:** Example 2.
-
-4. **Why not one memo?**  
-   **Answer:** Each audience owns a different decision. One blob forces someone to mine their line.  
-   **Explanation:** Example 3.
-
-5. **Channel / marking?**  
-   **Answer:** **3.11.2**, not this lesson.  
-   **Explanation:** Fence.
+3. **A12 for leadership vs IR?**  
+   **Answer:** Leadership: host / user / encoded PowerShell; IR has the host. No hash. IR: add Temp `invoice.vbs` and the update domain.  
+   **Explanation:** Task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- Local audience catalog
-- Next recommended module: 3.1.7 Attribution
+- Next: 2.1.7 Attribution

@@ -1,215 +1,92 @@
-# Module 3.1.7 – Attribution  
+# Module 2.1.7 – Attribution  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.1.7 – Attribution  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.1.7 – Attribution  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Assess the statement. Overlay site confidence scale if you have one.
+Name the cluster you can defend. A PDF label is not a country.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Purpose and challenges
-2. Confidence levels and types
-3. Assess claim vs evidence
+Name **who or what cluster** — at a type and a confidence.
 
-**Mapped Items:**  
-K: 3.1.7 | T: 3.1.7.1
+Assess the claim against the evidence.  
+Do not invent a nation-state.
 
 **Speaker Notes:**  
-SOC 3-level is 1a. CTI is 3c / 4d.
+Not the actor profile. Not the estimative word list.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Type and confidence
+**Title:** Activity group vs nation-state
 
-- Purpose, confidence, types
-- Three examples
-- Four assess lines
-- Knowledge check
+**Activity group** — a cluster you can defend.  
+**Nation-state** — a government sponsor. Needs more than a vendor name.
+
+**Low / medium / high** — classroom only. High needs several independent lines.
 
 **Speaker Notes:**  
-3.1.8 is next.
+Outline a–c. “PRD APT” is a vendor label.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Assess the claim
 
-Finished **actor profile** (**3.11.1.2**)  
-Estimative lexicon (**3.2.1**)  
-Admiralty letters (**3.2.3**)
+**Fail** — “Vendor PDF says PRD APT, so high-confidence nation-state.”  
+Label ≠ country.
 
-**Key Point:** Assess the sentence in front of you.
+**A12** internals support an **activity cluster**.  
+They do not prove a government.
 
 **Speaker Notes:**  
-Fence.
+Task 1. Do not tell the plot as proof.
 
 ---
 
-### Slide 5 – Purpose and Challenges
-**Title:** Why Attribute — Why It’s Hard
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Focus hunt and defense.  
-Shared infra · false flags · vendor names · thin sources
+No estimative word list (**2.2.1**).  
+No actor profile (**2.11.1.2**).  
+No invented country.
 
 **Speaker Notes:**  
-Outline a.
+Shared hosting is not “theirs.”
 
 ---
 
-### Slide 6 – Confidence
-**Title:** Classroom Scale
-
-**Low** — thin / single-source  
-**Medium** — more than one line, alternatives remain  
-**High** — several independent lines  
-
-**Speaker Notes:**  
-Outline b. Stand-in only.
-
----
-
-### Slide 7 – Types
-**Title:** Group ≠ State
-
-Activity group / cluster  
-Named intrusion set  
-Nation-state — **higher** claim
-
-**Speaker Notes:**  
-Outline c.
-
----
-
-### Slide 8 – Assess Line
-**Title:** Five Fields
-
-`claim | type | confidence | evidence | supported / over-claim / wrong type`
-
-**Speaker Notes:**  
-Task.
-
----
-
-### Slide 9 – Example 1: Cluster
-**Title:** Example 1 – Medium Night Owl
-
-SNI/JA3 + tradecraft on two hosts.  
-Supported. Not a country.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2: Flag
-**Title:** Example 2 – Blog = Country
-
-High + nation-state on one headline.  
-Over-claim.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3: Inflated
-**Title:** Example 3 – Right Type, Wrong High
-
-One SNI hit is not high.  
-Downgrade confidence.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Cluster = country  
-- High on one blog  
-- Writing the 3.11 profile now  
-- Admiralty letters  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Use the site scale if posted.  
-Keep: type + stated confidence + evidence.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize Ex 1–3.
-2. A–D: assess line.
-3. No profile.
-
-**Speaker Notes:**  
-Instructor Guide key. D is supported-low.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Purpose — and one challenge?
-2. Medium vs high?
-3. Why group ≠ nation-state?
-4. Why not high on a blog flag?
-5. Where is the actor profile taught?
+1. A vendor “APT” name is high-confidence nation-state attribution. True or false?  
+2. What is the difference between an activity group and a nation-state?  
+3. “Vendor PDF says PRD APT — high confidence nation-state.” Assess the claim.
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Type + confidence + evidence.
-- Over-claim fails.
-- Next: **3.1.8** collection source classes.
+Cluster you can defend. Type + confidence. A label is not high nation-state.
+
+**Next:** **2.1.8** Collection sources and methods
 
 **Speaker Notes:**  
-Do not open 3.1.8 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Attribution — Quick Reference
-
-| Type | Claim size |
-|------|------------|
-| Activity group | Cluster of behavior / infra |
-| Named set | Stable label |
-| Nation-state | Government — needs more |
-
-**Coming next:** Module 3.1.8 – Collection sources
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open source classes unless that hour is scheduled.

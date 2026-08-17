@@ -1,121 +1,89 @@
-# Instructor Guide – Module 3.1.4 – Intelligence Requirements
+# Instructor Guide – Module 2.1.4 – Intelligence Requirements
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.1.4 A / A / B · 3.1.4.1 1a / 1a / 1a · 3.1.4.2 1a / 1a / 1a · 3.1.4.3 1a / 1a / 1a  
-- Hunter: 3.1.4 A / B / B · 3.1.4.1 1a / 2b / 3c · 3.1.4.2 1a / 2b / 3c · 3.1.4.3 1a / 2b / 3c  
-- CTI: 3.1.4 B / C / C · 3.1.4.1 3c / 4c / 4d · 3.1.4.2 3c / 4c / 4d · 3.1.4.3 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.1.4 B / C / C ; 2.1.4.1 3c / 4c / 4d ; 2.1.4.2 3c / 4c / 4d ; 2.1.4.3 3c / 4c / 4c  
+- Hunter: 2.1.4 A / B / B ; 2.1.4.1 1a / 2b / 3c ; 2.1.4.2 1a / 2b / 3c ; 2.1.4.3 1a / 2b / 3c  
+- SOC: 2.1.4 A / A / B ; 2.1.4.1 1a / 1a / 1a ; 2.1.4.2 1a / 1a / 1a ; 2.1.4.3 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach purpose, PIR vs IR, and force **write / translate / trace**. Do not open the actionable checklist or source-class plan.
+Turn a messy question into a requirement that drives work — and say what you will not chase.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts write the question so they do not collect “everything interesting.”
+- How it hooks to the hour before: 2.1.3 was the type of answer. This hour is the question.
+- How it hooks to the hour after: 2.1.5 is whether the *product* can be used. Not whether the question is a PIR.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c. No invented DYA PIR list.
+- What we are *not* doing this hour: Source classes. Actionable test. Local standing list. No lab.
+- Extra step: none.
+
+Do not invent PIR-01. The **A12** RFI question is enough.
 
 **Key Teaching Points:**
-- Classroom line is a stand-in. Overlay site PIR IDs if you have them.
-- “Everything on APTs” is the usual fail — task 2 is the rewrite.
-- Drive work includes what you will **not** chase.
-- SOC 3-level tasks are **1a**. Hunter 3-level is **1a**. CTI 3-level is already **3c**. Do not collapse those.
-
-**Common Student Challenges:**
-- Defining PIR and never writing one.
-- Leaving “are we safe?” untranslated.
-- Collecting blogs against an internal-presence PIR.
-- Opening 3.1.5 / 3.1.8 / 3.12.
+- PIR = ranked. Not every IR is a PIR.
+- Translate the slogan. Name what you will not chase.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional local PIR list
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Purpose + PIR vs IR.
-2. Develop or refine.
-3. Translate a messy ask.
-4. Trace how it drives work.
+Same as the student guide.
 
-**Mapped Items:** K 3.1.4 · T 3.1.4.1 · T 3.1.4.2 · T 3.1.4.3
+**Mapped Items:** K 2.1.4 ; T 2.1.4.1 ; T 2.1.4.2 ; T 2.1.4.3
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 3.1.5 / 3.1.8 / 3.12 |
-| Purpose, PIR, drive            | 14 min   | a–c |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | Three tasks |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~64 min** | Stretch Ex 2 if they accept “APTs” |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | The question |
+| Key Concepts            | 12 min    | PIR vs IR; A12 translate |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- CTI 3: 3c — they should *write* a line, not recite a definition.
-- Type (3.1.3) is a field on the line, not this lesson’s classify drill.
+### 1. Key Concepts
 
-**Question:**  
-“If the PIR is internal presence this week, is a vendor APT blog *collection* or a *distraction*?” (Distraction unless it changes the *question*.)
+Write purpose / PIR / drives work. Walk “are we seeing them?” → A12 payload-host question.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail untranslated “are we safe?” Fail blogs-only against an internal PIR.
-
-**Summaries:**
-- Ex 1: usable tactical PIR; drives internal query.
-- Ex 2: must translate; original is not a requirement.
-- Ex 3: PIR good; work did not follow it.
-
-**Cases:**
-
-| Item | Requirement (accept paraphrase) | Drives | Reject |
-|------|--------------------------------|--------|--------|
-| A | Hunt lead \| Night Owl 10-day series vs scanner FP pile \| this window \| where hunt time goes \| **Operational** | Scope hunt; do not write a board paper | “Hunt everything” |
-| B | **Must translate.** e.g. Leadership \| Does Night Owl change extra TLS spend this quarter? \| **Strategic** | Posture evidence, not a host list | Leaving “are we safe?” |
-| C | SOC \| If WS-JLEE is Night Owl, isolate tonight? \| **Tactical** | Host evidence + IR concurrence (**1.8.5**) | Nation-state essay |
-| D | Not a PIR — no decision. Refine or reject | — | “Collect all OSINT on ransomware” as PIR-7 |
+If they invent PIR-01: “2.12.1. Obtain. Do not invent.”  
+If they pick VT vs RDAP: “2.1.8.”  
+If they score the product: “2.1.5.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **What problem does a requirement prevent?**  
-   **Answer:** Collection and analysis that do not support a decision (“everything interesting”).  
-   **Explanation:** Outline a.
-
-2. **PIR vs IR?**  
-   **Answer:** A PIR is an IR that leadership or the program **ranked**. Not every IR is a PIR.  
+1. **Every requirement is a PIR. True or false?**  
+   **Answer:** False. A PIR is a *priority* requirement.  
    **Explanation:** Outline b.
 
-3. **Why not “tell me about APTs”?**  
-   **Answer:** No decision, window, or “what would change.” Translate it (task 2).  
-   **Explanation:** Example 2.
+2. **What does a PIR add?**  
+   **Answer:** Rank — leadership or the program put it first.  
+   **Explanation:** Outline b.
 
-4. **What does Ex 1 stop you collecting?**  
-   **Answer:** Nation-state papers and unrelated APT blogs. The question is internal presence this week.  
-   **Explanation:** Outline c / task 3.
-
-5. **Standing local PIRs?**  
-   **Answer:** **3.12.1**, not this classroom line.  
-   **Explanation:** Fence.
+3. **“Are we seeing them?” Translate; name one thing not to chase.**  
+   **Answer:** “Is the update domain the payload host for **A12** in this window?” Do not chase the sibling domain on this requirement.  
+   **Explanation:** Tasks 1–3.
 
 ---
 
 ## Additional Instructor Resources
 
-- Local PIR list
-- Next recommended module: 3.1.5 Ensuring intelligence is actionable
+- Next: 2.1.5 Ensuring intelligence is actionable

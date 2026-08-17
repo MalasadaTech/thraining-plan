@@ -696,7 +696,7 @@ b. How to interpret scan results for intelligence value
 
 **2.10 [K] Common STIX Objects**  
 
-Two children. Write only the asked child unless asked for all of `2.10`. Do not write lumped outline `2.10.3` as one module. Hunt-facing STIX *input* is `3.4.3`. Finished narrative products are `2.11`. TIP retrieve is `2.3.1`. Use real STIX 3.1 object and relationship types. Do not invent types. Classroom bundles/collections are lesson-only — do not stand up a TAXII server.
+Two children. Write only the asked child unless asked for all of `2.10`. Do not write lumped outline `2.10.3` as one module. Hunt-facing STIX *input* is `3.4.3`. Finished narrative products are `2.11`. TIP retrieve is `2.3.1`. Use real STIX 2.1 object and relationship types. Do not invent types. Classroom bundles/collections are lesson-only — do not stand up a TAXII server.
 
 **2.10.1 [K] Core STIX Objects**  
 a. Indicator  

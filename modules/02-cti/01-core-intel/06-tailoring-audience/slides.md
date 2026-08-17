@@ -1,217 +1,91 @@
-# Module 3.1.6 – Tailoring Output to the Audience  
+# Module 2.1.6 – Tailoring Output to the Audience  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.1.6 – Tailoring to the Audience  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.1.6 – Tailoring Output to the Audience  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Same facts, different product. Overlay audience catalog if you have one.
+Same facts. Different reader.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Analyze the audience
-2. Adjust content, format, detail
-3. Rewrite for a specified audience
+Change **how you say it**.
 
-**Mapped Items:**  
-K: 3.1.6 | T: 3.1.6.1
+Not the judgment.  
+Content, format, detail.
 
 **Speaker Notes:**  
-CTI 3-level is 3c / 4d. SOC 3-level task is 1a.
+Actionable was last hour. This hour is who is reading.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Three adjustments
+**Title:** Content, format, detail
 
-- Analysis + adjust
-- Three examples
-- Four rewrites
-- Knowledge check
+**Content** — which facts this person needs.  
+**Format** — one line vs a short para.  
+**Detail** — hash and path vs no hash.
 
 **Speaker Notes:**  
-3.1.7 is next.
+Outline a–b. Leadership does not need the hash.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Same A12, two readers
 
-Score actionable (**3.1.5**)  
-Approved **channel** / markings (**3.11.2**)  
-Actor profile (**3.11.1.2**)
+**Leadership** — **WS-JLEE** / `jlee` ran encoded PowerShell; IR has the host.  
+No hash.
 
-**Key Point:** Rewrite. Do not only say “it depends.”
+**IR / SOC** — add Temp `invoice.vbs` and the update domain.
 
 **Speaker Notes:**  
-Fence.
+Same assess. Not a different plot.
 
 ---
 
-### Slide 5 – Analyze
-**Title:** Four Questions
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Decision they own  
-Time they have  
-Vocabulary they can use  
-What they must not ask next
+No change to the judgment.  
+No actor profile (**2.11**).  
+No SOC ticket type (**1.5**).  
+No channel list (**2.11.2**).
 
 **Speaker Notes:**  
-Outline a.
+Do not invent a style guide.
 
 ---
 
-### Slide 6 – Adjust
-**Title:** Content · Format · Detail
-
-SOC: ticket line  
-Hunt: operational note  
-Leadership: implication + decision  
-Detections: fields
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Rewrite Line
-**Title:** Five Fields
-
-`audience | keep | cut | format | usable sentence`
-
-**Speaker Notes:**  
-Task.
-
----
-
-### Slide 8 – Shared Facts
-**Title:** Night Owl Set
-
-WS-JLEE · SNI · JA3 · medium  
-Extra TLS sensor would see the next one
-
-**Speaker Notes:**  
-Same inputs for every rewrite.
-
----
-
-### Slide 9 – Example 1: Split
-**Title:** Example 1 – Two Products
-
-SOC: isolate + hunt tonight.  
-Leadership: fund TLS this quarter.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2: JA3 to CEO
-**Title:** Example 2 – Wrong Body
-
-Facts OK.  
-Audience fail. Annex the JA3.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3: One Blob
-**Title:** Example 3 – Not Tailoring
-
-Split the memo.  
-Three audiences, three products.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- “It depends” with no sentence  
-- JA3 in the exec body  
-- One memo for all  
-- Teaching 3.11 channels now  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Use the site catalog if posted.  
-Keep: keep / cut / format / usable sentence.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. A–D: rewrite line + sentence.
-3. No channel pick.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Four analysis questions?
-2. Three things you adjust?
-3. Why not JA3 to leadership?
-4. Why not one memo?
-5. Where are channel and markings taught?
+1. Tailoring means you change the judgment so leadership likes it. True or false?  
+2. What three things do you adjust?  
+3. **A12** for leadership (no hash) versus for IR (what you add).
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Analyze. Rewrite keep / cut / format.
-- Next: **3.1.7** attribution.
+Same facts. Different detail. Leadership: no hash.
+
+**Next:** **2.1.7** Attribution
 
 **Speaker Notes:**  
-Do not open 3.1.7 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Tailor — Quick Reference
-
-| Audience | Body |
-|----------|------|
-| SOC | Host + action |
-| Hunt | Scope + days |
-| Leadership | Decision + residual risk |
-| Detections | Observables |
-
-**Coming next:** Module 3.1.7 – Attribution
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open attribution unless that hour is scheduled.

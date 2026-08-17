@@ -1,28 +1,28 @@
 # Ensuring Intelligence Is Actionable
 
-**Path:** `modules/03-cti/01-core-intel/05-actionable-intelligence`  
+**Path:** `modules/02-cti/01-core-intel/05-actionable-intelligence`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.1.5 | K | Ensuring intelligence is actionable | 3.1.5 a–b |
-| 3.1.5.1 | T | Evaluate whether a piece of intelligence is actionable and explain why | 3.1.5.1 task 1 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.1.5 | K | Ensuring intelligence is actionable | 2.1.5 a–b | A / A / B | A / B / B | B / C / C |
+| 2.1.5.1 | T | Evaluate whether a piece of intelligence is actionable and explain why | 2.1.5.1 task 1 | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The lesson ID is **3.1.5**. Requirements are **3.1.4**. Audience rewrite is **3.1.6**. Hunt-actionable CTI is **2.4.1** (different test). Finished production standards are **3.11**.
+The teaching-unit ID is **2.1.5**. Requirements are **2.1.4**. Audience rewrite is **2.1.6**. Hunt-useful is **3.4.1**. No lab.
 
 ## Concepts taught
 
 - characteristics of actionable intelligence
-- common reasons intelligence fails to be actionable
-- evaluate whether intelligence is actionable
+- why intelligence fails to be actionable
+- evaluating whether a product is actionable
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

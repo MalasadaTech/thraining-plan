@@ -1,11 +1,11 @@
-# Module 3.1.4 – Intelligence Requirements
+# Module 2.1.4 – Intelligence Requirements
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.1.4 A / A / B · 3.1.4.1 1a / 1a / 1a · 3.1.4.2 1a / 1a / 1a · 3.1.4.3 1a / 1a / 1a  
-- Hunter: 3.1.4 A / B / B · 3.1.4.1 1a / 2b / 3c · 3.1.4.2 1a / 2b / 3c · 3.1.4.3 1a / 2b / 3c  
-- CTI: 3.1.4 B / C / C · 3.1.4.1 3c / 4c / 4d · 3.1.4.2 3c / 4c / 4d · 3.1.4.3 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
+- CTI: 2.1.4 B / C / C ; 2.1.4.1 3c / 4c / 4d ; 2.1.4.2 3c / 4c / 4d ; 2.1.4.3 3c / 4c / 4c  
+- Hunter: 2.1.4 A / B / B ; 2.1.4.1 1a / 2b / 3c ; 2.1.4.2 1a / 2b / 3c ; 2.1.4.3 1a / 2b / 3c  
+- SOC: 2.1.4 A / A / B ; 2.1.4.1 1a / 1a / 1a ; 2.1.4.2 1a / 1a / 1a ; 2.1.4.3 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes
 
 ---
 
@@ -13,128 +13,55 @@
 
 By the end of this module, you will be able to:
 
-1. Explain **why** intelligence requirements exist and what a **PIR** is.
-2. **Develop or refine** a basic requirement.
-3. **Translate** a messy stakeholder question into a clear requirement.
-4. Explain **how** a given requirement drives collection and analysis.
+1. Say why a requirement exists, and what a **PIR** is versus any other requirement.
+2. Refine or translate a question into a clear requirement, and say what work it drives.
 
 **Mapped Proficiency Items:**
-- K: 3.1.4 – Intelligence requirements and PIRs
-- T: 3.1.4.1 – Develop or refine intelligence requirements
-- T: 3.1.4.2 – Translate stakeholder questions into clear intelligence requirements
-- T: 3.1.4.3 – Explain how a given requirement drives analytic work
+- K: 2.1.4 – Intelligence requirements and Priority Intelligence Requirements (PIRs)
+- T: 2.1.4.1 – Develop or refine intelligence requirements
+- T: 2.1.4.2 – Translate stakeholder questions into clear intelligence requirements
+- T: 2.1.4.3 – Explain how a given requirement drives analytic work
 
 ---
 
 ## 1. Key Concepts
 
-A requirement is the **question the work exists to answer**. Types (**3.1.3**) name the *kind* of answer. This hour is the *question*. Actionable criteria are **3.1.5**. Local standing PIRs are **3.12.1**.
+CTI analysts write the **question the work exists to answer** so collection does not become “everything interesting.” Type (**2.1.3**) is the kind of answer. This hour is the **question**. You do **not** score actionable (**2.1.5**). You do **not** pick OSINT vs commercial (**2.1.8**). You do **not** invent a shop PIR list (**2.12.1**).
 
-**Classroom requirement line (this lesson only):**
+| Idea | Meaning |
+|------|---------|
+| **Purpose** | Focus collection and analysis on a decision |
+| **PIR** | A *priority* requirement — leadership or the program ranked it. Standing and ad-hoc IRs are still requirements; they are not all PIRs |
+| **Drives work** | Names what you collect, what you analyze, and what you will **not** chase |
 
-`decision-maker | question | time window | what would change if we knew | type (from 3.1.3)`
+A clear requirement is a **question** plus **whose decision** plus **what you will not chase**. If your shop publishes PIR IDs, use those. Do not invent a DYA list here.
 
-| Piece | Outline | Meaning |
-|-------|---------|---------|
-| **Purpose** | a | Focus collection and analysis on a decision, not “everything interesting” |
-| **PIR / types of requirements** | b | A **PIR** is a *priority* requirement — leadership or the program ranked it. Standing IRs and ad-hoc IRs are still requirements; they are not all PIRs |
-| **Drives work** | c | The requirement names what you collect, what you analyze, and what you will *not* chase |
+**What good looks like:**
 
-If your site publishes a PIR list, use those IDs. The obligation is **clear question + drive work**, not this template.
-
-| This lesson | Other |
-|-------------|-------|
-| Write / refine the question | Classify the *type* — **3.1.3** |
-| How the question drives *this* analysis | Which *source class* (OSINT / commercial / internal) — **3.1.8** |
-| Not the local standing list / ticket | **3.12** |
-| Not “is the product actionable?” | **3.1.5** |
-
-The tasks extend the K: you **write**, **translate**, and **trace work** — you do not only define “PIR.”
-
-| Expected (usually) | Lead (usually) |
-|--------------------|----------------|
-| “Are we seeing Night Owl SNI internally this week?” + what you will query | “Tell me about APTs” left as-is |
-| Translate “are we good?” into a yes/no decision question | Collecting random blogs with no link to the question |
-| Name what the PIR *stops* you from doing | Shipping a hash dump because a PIR exists somewhere |
+- **Translate:** Stakeholder: “Are we seeing them?” Refine: “Is the update domain the payload host for **A12** in this window?” Not a PIR ID you made up.
+- **Drives work:** Collect the A record / file you already have. Analyze whether it answers that question. Do **not** chase the sibling domain — that is later enrichment (**2.5** / **2.8**), not this requirement.
 
 ---
 
-## 2. Detailed Walkthrough / Examples
+## 2. Knowledge Check
 
-### Example 1: Draft a Usable PIR (Expected)
-
-**Stakeholder:** SOC lead. “Are we seeing that Night Owl fake-update thing?”
-
-**Requirement line:**  
-SOC lead | Are we seeing `nightowl-updates.net` / JA3 `a0e9f5…` on Harbor hosts **this week**? | 7 days | If yes → Sev2 IR path on those hosts; if no → no fleet isolate | **Tactical** (technical layer)
-
-**Drives:** Internal Zeek/SIEM for that SNI/JA3 (collection). Analyze hits vs scanner/FP (**1.4.3**). Do **not** write a nation-state paper.
-
-### Example 2: “Tell Me About APTs” (Lead)
-
-**Stakeholder:** “I need everything on APTs for the board Friday.”
-
-**Not a requirement yet.** No decision, no window, no “what would change.”  
-**Translate:** Leadership | Does the Night Owl *cluster* change whether we fund extra TLS sensors **this quarter**? | this quarter | fund / defer | **Strategic**  
-**Lead:** Do not accept the original as 3.1.4.1. Task 2 is the rewrite.
-
-### Example 3: Good PIR, Random Collection (Lead)
-
-**Requirement:** Example 1 (Night Owl this week).  
-**Work shipped:** Three vendor blogs on “APT of the week,” no internal query.
-
-**Drive test fails.** The PIR required *internal presence*. Blogs can *inform* a strategic question; they do not answer this one.  
-**Lead:** The PIR was fine. The *work* did not follow it (task 3).
+1. Every intelligence requirement is a PIR. True or false?
+2. What does a PIR add that a standing or ad-hoc IR may not have?
+3. “Are we seeing them?” Translate it for **A12**, and name one thing the requirement tells you **not** to chase.
 
 ---
 
-## 3. Hands-On Exercise
+## 3. Summary
 
-**Objective:** Write, translate, and trace.
+A requirement is the question. A PIR is a *ranked* one. It drives what you collect and what you skip. Do not invent the shop list.
 
-**Instructions:**
-
-1. One sentence each for Examples 1–3: requirement vs what failed.
-2. For each item, write the **requirement line** and **what work it drives** (collect / analyze / do not chase).
-
-   - A. Hunt lead: “Should we spend the next ten days on Night Owl or on the scanner FP pile?”
-   - B. Executive: “Are we safe?”
-   - C. SOC: “If `WS-JLEE` is Night Owl, what do I do tonight?”
-   - D. Someone files PIR-7 as “collect all OSINT on ransomware” with no decision.
-
-3. Do not evaluate actionability (**3.1.5**). Do not pick OSINT vs TIP as the *lesson* (**3.1.8** — you may *name* internal vs public as what the question drives).
-4. If B is unusable until translated, say so and write the translation.
-
-**Expected Outcome:**
-- Three example summaries
-- Four requirement lines + drive notes
-- No actionable checklist, no 3.11 product
+**Next:** **2.1.5** Ensuring intelligence is actionable.
 
 ---
 
-## 4. Knowledge Check
+## 4. Related modules
 
-1. What problem does a requirement prevent?
-2. What makes a requirement a **PIR** vs just an IR?
-3. Why is “tell me about APTs” not a requirement yet?
-4. How does Example 1’s PIR change what you **do not** collect?
-5. Where do **standing local** PIRs live in this syllabus?
-
----
-
-## 5. Summary
-
-- Requirement = the decision question. PIR = a ranked one.
-- Write it, translate the messy ask, trace the work.
-- Next: whether the *product* is actionable (**3.1.5**).
-
----
-
-## 6. References & Further Reading
-
-- Related modules:
-  - 3.1.3 – Intelligence types (previous)
-  - 3.1.5 – Ensuring intelligence is actionable (next)
-  - 3.1.8 – Collection sources and methods
-  - 3.12.1 – Local intelligence requirements
-- Local PIR list (optional — substitutes classroom lines)
+- 2.1.3 – Intelligence types (previous)
+- 2.1.5 – Actionable intelligence
+- 2.1.8 – Collection source classes
+- 2.12.1 – Local PIR list (obtain, do not invent)
