@@ -824,7 +824,7 @@ Also: raw data, raw observation, unprocessed fact
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+| Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 | Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
@@ -859,7 +859,7 @@ Also: data vs information vs intelligence, three terms
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+| Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [data](#data), [information](#information), [intelligence](#intelligence)
@@ -2341,7 +2341,7 @@ Also: organized data, context, parsed alert, rewritten log story
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+| Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 | Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
@@ -2416,7 +2416,7 @@ Also: analytic judgment, decision support, finished intelligence, so what
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+| Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 | Used | [3.1.3 Intelligence Types](../modules/03-cti/01-core-intel/03-intelligence-types/) | CTI, Hunter |
 
@@ -4419,7 +4419,7 @@ Also: data to information to intelligence, how raw data becomes intelligence
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.1.1 Data, Information, and Intelligence](../modules/03-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter |
+| Taught | [2.1.1 Data, Information, and Intelligence](../modules/02-cti/01-core-intel/01-data-info-intel/) | CTI, Hunter, SOC |
 | Used | [3.1.2 Intelligence Lifecycle](../modules/03-cti/01-core-intel/02-intelligence-lifecycle/) | CTI, Hunter |
 
 See also: [data](#data), [information](#information), [intelligence](#intelligence)

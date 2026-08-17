@@ -1,18 +1,18 @@
-# Data, Information, and Intelligence
+# Difference between Data, Information, and Intelligence
 
-**Path:** `modules/03-cti/01-core-intel/01-data-info-intel`  
+**Path:** `modules/02-cti/01-core-intel/01-data-info-intel`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.1.1 | K | Difference between data, information, and intelligence | 3.1.1 |
-| 3.1.1.1 | T | Correctly categorize examples as data, information, or intelligence | 3.1.1.1 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.1.1 | K | Difference between data, information, and intelligence | 2.1.1 a–b | A / A / A | A / B / B | B / C / C |
+| 2.1.1.1 | T | Correctly categorize examples as data, information, or intelligence | 2.1.1.1 task 1 | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
 
-The lesson ID is **3.1.1**. The categorize task is **3.1.1.1**. Later Core Intelligence Concepts items (lifecycle, types, requirements) are **not** this module.
+The teaching-unit ID is **2.1.1**. Lifecycle is **2.1.2**. Requirements are **2.1.4**. Finished products are **2.11**. No lab.
 
 ## Concepts taught
 
@@ -27,4 +27,4 @@ The lesson ID is **3.1.1**. The categorize task is **3.1.1.1**. Later Core Intel
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty
