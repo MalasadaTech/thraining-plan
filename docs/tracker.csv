@@ -108,7 +108,7 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 3.12.2,Local Production and Approval Processes,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 3.12.3,Local Dissemination Channels and Customers,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 4,Detection Engineer,DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 4.1–4.8"
-4.1,What DE Owns,DE / SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only
+4.1,What DE Owns,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short first DE lesson; ready for review; no lab
 4.2,Making a Detection Sound and Meeting Shop Requirements,DE / SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only
 4.3,Nominations from SOC Hunt and CTI,DE / SOC / Hunter / CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only
 4.4,Tune Requests from SOC,DE / SOC,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Outline + matrix only

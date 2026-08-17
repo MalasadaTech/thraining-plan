@@ -1057,6 +1057,7 @@ Also: SOC analyst, CTI, hunter, detection engineer, IR, firewall IA one-liners
 | Taught | [0.2 Jobs in one sentence](../modules/00-intro/02-jobs-in-one-sentence/) | SOC, Hunter, CTI, DE |
 | Used | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
 | Used | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+| Used | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
 
 See also: [what a SOC is](#what-a-soc-is), [how work can move from an alert](#how-work-can-move-from-an-alert), [the product is different](#the-product-is-different)
 
@@ -1158,7 +1159,7 @@ Also: Security Operations Center, watch and start the response
 |----------|--------|-------|
 | Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
-See also: [a SOC is a team sport](#a-soc-is-a-team-sport), [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction)
+See also: [a SOC is a team sport](#a-soc-is-a-team-sport), [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction), [what DE owns](#what-de-owns)
 
 ### a SOC is a team sport
 
@@ -1180,6 +1181,56 @@ Also: Dixon Yamada and Associates, Pink River Dolphin, not site policy
 | Used | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
 
 See also: [what a SOC is](#what-a-soc-is), [PRD / DYA companion story](#prd--dya-companion-story)
+
+### what DE owns
+
+Also: new change retire deploy, the set of detections
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
+
+See also: [nominations need not be perfect](#nominations-need-not-be-perfect), [a block is not a DE deploy](#a-block-is-not-a-de-deploy)
+
+### nominations need not be perfect
+
+Also: rough nomination still DE, sketch is enough to review
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
+
+See also: [what DE owns](#what-de-owns), [sort work to DE, nominator, 1.3, or a block](#sort-work-to-de-nominator-13-or-a-block)
+
+### 1.3 is how a rule works
+
+Also: this section is how we run them, not SIGMA authoring
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
+
+See also: [what DE owns](#what-de-owns), [sort work to DE, nominator, 1.3, or a block](#sort-work-to-de-nominator-13-or-a-block)
+
+### a block is not a DE deploy
+
+Also: firewall IA blocks, block request is not deploy
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
+
+See also: [what DE owns](#what-de-owns), [hunt package and block list as later hand-offs](#hunt-package-and-block-list-as-later-hand-offs)
+
+### sort work to DE, nominator, 1.3, or a block
+
+Also: 4.1.1, reject rough is not DE, reject block as deploy
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
+
+See also: [what DE owns](#what-de-owns), [nominations need not be perfect](#nominations-need-not-be-perfect)
 
 ### what an IOC is versus a TTP
 

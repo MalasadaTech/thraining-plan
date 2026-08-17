@@ -17,7 +17,7 @@ Stop and say what is missing if any of these fail:
 - You were given that ID, not a vague topic and not an old display number (`section 7`, `section 8`).
 - Gate 1 is done. You are not proposing a new matrix row.
 
-**Assign work by ID prefix:** `0.x` = shared intro (`modules/00-intro/`). `1.x` = SOC (`modules/01-soc/`), `2.x` = Hunt (`modules/02-hunter/`), `3.x` = CTI (`modules/03-cti/`). `4.x` = Detection Engineer (folder when that track is built).
+**Assign work by ID prefix:** `0.x` = shared intro (`modules/00-intro/`). `1.x` = SOC (`modules/01-soc/`), `2.x` = Hunt (`modules/02-hunter/`), `3.x` = CTI (`modules/03-cti/`). `4.x` = Detection Engineer (`modules/04-de/`).
 
 **`0.x` intro lessons:** five children (`0.1`–`0.5`). Generate only the asked child. Do not write cluster `0` as one module unless the human asks for the whole intro in one folder. Audience is all four roles (SOC, Hunter, CTI, DE). Proficiency Focus must list DE — same `A / B / B` (and `1a / 2b / 2b` on `0.5.1`) as the other roles. `0.1` is what a SOC *is*. Job one-liners are `0.2`. How work moves is `0.3`. Overlap is `0.4`. Course layout and the hand-off task are `0.5` / `0.5.1`. DYA / PRD are course fiction, not site policy. Do not invent tickets, PIR lists, or approval chains.
 
@@ -69,6 +69,19 @@ Stop and say what is missing if any of these fail:
 
 **`3.12.x` CTI site-specific lessons:** three children — local priorities (`3.12.1`), local production/approval/archive (`3.12.2`), local customers/channels (`3.12.3`). Generate only the asked child unless the caller asks for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Teach that every org/section has its own, and a new analyst must obtain them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. SOC site orientation is `1.8`.
 
+**`4.x` Detection Engineer lessons:** generate only the asked child (`4.1`–`4.7` each with its T row(s); `4.8.1` or `4.8.2` for site). Do **not** write cluster `4` as one module. DE is primary. Copy 3/5/7 from combined.md for **all four roles** (SOC / Hunter / CTI awareness is on combined only — do not add 4.x rows to those role sheets). Folder is `modules/04-de/<nn-short-name>/`. Voice: latest `04-de/` sibling; if none, clone `00-intro` (short, no pad), not an old hour-long SOC lesson.
+
+This section is how detections are **run as a service**. Rule *syntax* and a first read/write are **`1.3`**. Do not teach SIGMA / Suricata / YARA / SIEM authoring here. Nominations from SOC, hunt, and CTI need not be perfect. Extra infrastructure is a **block** (firewall / IA), not a DE deploy. Do **not** invent DYA meta-field lists, change boards, or deploy tickets — those vary by site (`4.8`); obtain the list, do not make one up. DYA / PRD are course fiction, not site policy.
+
+- `4.1` What DE owns — the set (new / change / retire / deploy). Sort work to DE, nominator, `1.3`, or a block. Reject “rough is not DE” and “block request is a deploy.” Sound/test is `4.2`. Nomination review depth is `4.3`. Tunes are `4.4`. Packages are `4.5`. When to modify/retire/leave is `4.6`.
+- `4.2` Sound + test + shop requirements + close the loop. The *field list* is `4.8`. Do not invent fields.
+- `4.3` Nominations — who can nominate; accept / send back / reject; nominator bar is “clear enough to review.”
+- `4.4` Tune requests on *live* rules. Same desk, different inbox. Reject investigation, block, or IR containment dressed as a tune.
+- `4.5` Hunt and intel packages. Both are inputs. “No new rule” is valid. Treat like a nomination (`4.3`). Reject turning the package into a block list.
+- `4.6` Lifecycle — modify / retire / leave, and why. “We blocked it” is not automatically retire.
+- `4.7` Sensors — lighter. Sometimes DE. Dead sensor is not “no threat.” Not vendor admin or architecture.
+- `4.8.x` Site-specific — generate only the asked child (`4.8.1` local requirements, `4.8.2` review/deploy/retire paths). Obtain-and-follow. Do not invent the list or a ticket name.
+
 **IDs and ratings come from the matrix. Content floor is the outline** for *this* lesson only. Teach every outline `a/b/c` and task that belong to these rows. Expand only to support that syllabus. Do not invent a new matrix obligation. Do not pull in the rest of cluster `3.1` when asked for `3.1.1`.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).
@@ -85,7 +98,7 @@ If the user wants a **new** requirement, stop and point them at [templates/requi
 6. [templates/student-guide.md](../templates/student-guide.md), [instructor-guide.md](../templates/instructor-guide.md), [slides.md](../templates/slides.md)
 7. The **previous sibling module** in the same unit — full `README.md`, `student-guide.md`, `instructor-guide.md`, `slides.md`
 
-Siblings: Zeek → latest `modules/01-soc/02-zeek/`. CTI `3.1.x` → `modules/03-cti/01-core-intel/01-data-info-intel/` (shape + how to stay inside one child item). Other first-of-prefix modules may clone TLS for package shape only.
+Siblings: Zeek → latest `modules/01-soc/02-zeek/`. CTI `3.1.x` → `modules/03-cti/01-core-intel/01-data-info-intel/` (shape + how to stay inside one child item). DE `4.x` → latest `modules/04-de/` (if none, clone `00-intro` voice only). Other first-of-prefix modules may clone TLS for package shape only.
 
 Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) before you write.
 
@@ -195,6 +208,7 @@ Do not set tracker status to `Complete` for the module as a whole if that column
 ## 6. Do not
 
 - Generate all of cluster `3.1` when asked for `3.1` or `3.1.1`
+- Generate all of cluster `4` when asked for `4` or `4.1`
 - Skip an outline bullet because the matrix row is shorter
 - Invent matrix IDs, outline headings, or proficiency codes
 - Collapse or invent 3/5/7 codes (instructor and student headers must match the matrix)

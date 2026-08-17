@@ -12,6 +12,8 @@ Do these first (course order and story):
 - [ ] Teach in this order (lesson IDs can stay as they are): intro → SOC analyst → CTI → hunting → detection engineers
 - [ ] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
 - [x] Add a detection-engineers section after the threat hunters section (outline 4.x; matrix/lessons later)
+- [x] Write 4.x stay-in-lesson notes in generate-module.md
+- [x] Write 4.1 What DE owns (first DE review cycle)
 - [ ] Put the full incident flow in the companion story: SOC alert → triage → IR + leadership notify → RFI to intel → hunt package, block list to firewall/IA, and a request to write detections. Firewall/IA is a hand-off, not a new course unless we decide we want that track.
 - [ ] As we review and revise the outline, make the outline follow that same flow, so the companion story is a re-read of the outline as one combined story
 
