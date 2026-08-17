@@ -1056,8 +1056,49 @@ Also: SOC analyst, CTI, hunter, detection engineer, IR, firewall IA one-liners
 |----------|--------|-------|
 | Taught | [0.2 Jobs in one sentence](../modules/00-intro/02-jobs-in-one-sentence/) | SOC, Hunter, CTI, DE |
 | Used | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
+| Used | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
 
-See also: [what a SOC is](#what-a-soc-is), [how work can move from an alert](#how-work-can-move-from-an-alert)
+See also: [what a SOC is](#what-a-soc-is), [how work can move from an alert](#how-work-can-move-from-an-alert), [the product is different](#the-product-is-different)
+
+### same host, log, or domain
+
+Also: same evidence on more than one desk
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+
+See also: [the product is different](#the-product-is-different)
+
+### the product is different
+
+Also: close or escalate an alert, intel note, hunt, rule
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+
+See also: [same host, log, or domain](#same-host-log-or-domain), [two hats still two products](#two-hats-still-two-products)
+
+### asking the next desk is not that desk’s whole job
+
+Also: asking is not doing, RFI is not the intel note
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+
+See also: [the product is different](#the-product-is-different), [RFI to intel](#rfi-to-intel)
+
+### two hats still two products
+
+Also: smaller shop, one person two jobs, products stay clear
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+
+See also: [the product is different](#the-product-is-different), [jobs in one sentence](#jobs-in-one-sentence)
 
 ### what a SOC is
 

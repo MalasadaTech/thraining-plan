@@ -7,6 +7,7 @@ Do these first (course order and story):
 - [x] Write 0.1 What a SOC is (first small review cycle)
 - [x] Write 0.2 Jobs in one sentence (first after 0.1; path is now 0.3)
 - [x] Write 0.3 How work can move (after 0.2 is reviewed)
+- [x] Write 0.4 Where the jobs lightly overlap (after 0.3 is reviewed)
 - [ ] Teach in this order (lesson IDs can stay as they are): intro → SOC analyst → CTI → hunting → detection engineers
 - [ ] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
 - [x] Add a detection-engineers section after the threat hunters section (outline 4.x; matrix/lessons later)
