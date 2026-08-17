@@ -276,7 +276,7 @@ Also: ticket channel, RFI form, approved distro
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [notification chart / matrix](#notification-chart--matrix), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
 
@@ -949,7 +949,7 @@ Also: blocked escalate clock, escalate-for-more-info
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+| Taught | [1.5.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
 
 See also: [submit timelines by report type](#submit-timelines-by-report-type), [identifying which report timeline applies and whether it is at risk](#identifying-which-report-timeline-applies-and-whether-it-is-at-risk)
 
@@ -2167,7 +2167,7 @@ Also: incident vs RFI, reject neighbor report type
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 
 See also: [incident report](#incident-report), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -2177,7 +2177,7 @@ Also: report clock at risk, submit vs blocked clock
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+| Taught | [1.5.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
 
 See also: [submit timelines by report type](#submit-timelines-by-report-type), [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed)
 
@@ -2321,7 +2321,7 @@ Also: incident case record, IR case report
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 
 See also: [Request for Information (RFI)](#request-for-information-rfi), [other common report types](#other-common-report-types)
 
@@ -2546,7 +2546,7 @@ Also: duty SOC lead awareness, notify leadership
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [notification chart / matrix](#notification-chart--matrix), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
 
@@ -2732,7 +2732,7 @@ Also: who gets which report, notification matrix
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [leadership awareness](#leadership-awareness), [approved reporting channels](#approved-reporting-channels)
 
@@ -2824,7 +2824,7 @@ Also: informational report, awareness note, local report types
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 
 See also: [incident report](#incident-report), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -3696,7 +3696,7 @@ Also: ask intel for more work on that alert
 |----------|--------|-------|
 | Taught | [0.3 How work can move](../modules/00-intro/04-how-work-moves/) | SOC, Hunter, CTI, DE |
 
-SOC ticket-type depth is [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/). CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/).
+SOC ticket-type depth is [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/). CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/).
 
 See also: [how work can move from an alert](#how-work-can-move-from-an-alert), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -3706,7 +3706,7 @@ Also: RFI, information request to another team
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 | Used | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
 
 CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/). This heading is the SOC ticket type.
@@ -3759,7 +3759,7 @@ Also: route line, reject wrong reporting channel
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [notification chart / matrix](#notification-chart--matrix), [approved reporting channels](#approved-reporting-channels)
 
@@ -4226,7 +4226,7 @@ Also: incident submit 30, RFI submit 60, informational before changeover
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+| Taught | [1.5.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
 
 See also: [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed), [identifying which report timeline applies and whether it is at risk](#identifying-which-report-timeline-applies-and-whether-it-is-at-risk)
 

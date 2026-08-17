@@ -29,7 +29,7 @@ This hour is the **map of the course**. It is not what a SOC is. It is not the j
 
 **Order:** this front door, then shared hours that apply to every role, then four tracks — SOC analyst, then CTI, then hunting, then detection engineers.
 
-**Inside SOC:** you learn what detections *are* before you live in the alert queue. SOC **ends at reporting (`1.6`)**. The RFI is the door into CTI.
+**Inside SOC:** you learn what detections *are* before you live in the alert queue. SOC **ends at reporting (`1.5`)**. The RFI is the door into CTI.
 
 **Still before SOC, for everyone:** frameworks, tool survey, and environment / signal flow. Those are not SOC-only. Role-local hunt / CTI / DE lists come later and differ by shop. Do not invent your shop’s ticket names here.
 

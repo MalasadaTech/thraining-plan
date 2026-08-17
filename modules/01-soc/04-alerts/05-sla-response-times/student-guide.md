@@ -26,7 +26,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts watch **two clocks** on a queue row so a case does not sit untouched, and so it does not sit open with no disposition. You name **which** clock is in danger. “Work faster” is not the task. You do **not** re-investigate (**1.4.1**). You do **not** re-label TP/FP or category (**1.4.2** / **1.4.4**). You do **not** write a report (**1.6**).
+SOC analysts watch **two clocks** on a queue row so a case does not sit untouched, and so it does not sit open with no disposition. You name **which** clock is in danger. “Work faster” is not the task. You do **not** re-investigate (**1.4.1**). You do **not** re-label TP/FP or category (**1.4.2** / **1.4.4**). You do **not** write a report (**1.5**).
 
 **Classroom numbers (this lesson only — not a live shop policy):**
 
@@ -60,13 +60,13 @@ If your real shop uses different minutes, use those. The obligation is **two clo
 
 Two clocks: **start** from created; **close/escalate** from first touch. Name the clock. Record closed or escalated against it.
 
-**Next:** **1.6.1** Report types. This closes unit **1.4**.
+**Next:** **1.5.1** Report types. This closes unit **1.4**.
 
 ---
 
 ## 4. Related modules
 
 - 1.4.4 – Common alert categorizations (previous)
-- 1.6.1 – Report types
+- 1.5.1 – Report types
 - 1.4.1 – Alert context and investigation
-- 1.6.2 – Reporting timeline requirements (not these alert clocks)
+- 1.5.2 – Reporting timeline requirements (not these alert clocks)

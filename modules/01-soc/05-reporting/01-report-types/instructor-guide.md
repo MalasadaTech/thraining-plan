@@ -1,118 +1,94 @@
-# Instructor Guide – Module 1.6.1 – Report Types
+# Instructor Guide – Module 1.5.1 – Report Types
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.6.1.1 A / B / C · 1.6.1.2 2b / 3c / 4c  
-- Hunter: 1.6.1.1 B / C / C · 1.6.1.2 2b / 3c / 4c  
-- CTI: 1.6.1.1 B / C / C · 1.6.1.2 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- SOC: 1.5.1.1 A / B / C ; 1.5.1.2 2b / 3c / 4c  
+- Hunter: 1.5.1.1 B / C / C ; 1.5.1.2 2b / 3c / 4c  
+- CTI: 1.5.1.1 B / C / C ; 1.5.1.2 3c / 4c / 4c  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach incident vs RFI vs other, and force **type + rejected neighbor**. Do not teach clocks or routing.
+Pick the kind of record — incident, RFI, or a shop-named other — and say why the neighbor is wrong.
+
+**Context (plain language):**
+
+- What this hour is for: SOC analysts choose a case record or a question so the next desk is not handed a mixed product. The RFI is the door into CTI.
+- How it hooks to the hour before: 1.4.5 closed the alert clocks. This hour opens reporting.
+- How it hooks to the hour after: 1.5.2 is when the report is due, not which type it is.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c. Type plus reject the neighbor. CTI already works the task at 3-level (3c).
+- What we are *not* doing this hour: Write the body. Assign a report clock. Route it. Write an intel product. Invent a DYA type list. Open **1.7** (retired). No lab.
+- Extra step: none.
+
+Do not invent Harbor or DYA report names as policy. Do not tell the PRD plot. Do not dump the Run key or the sibling domain. The first case is **A12** (`wscript` → encoded PowerShell, Temp `invoice.vbs`). The RFI asks intel to work the update domain / file.
 
 **Key Teaching Points:**
-- Incident = case record. RFI = question. Other = named local (classroom: informational).
-- RFI can sit beside an incident.
-- Shift change is **1.7**. Intel product is **3.11**.
-- Hunter/CTI start at B; CTI task is **3c** at 3-level.
-
-**Common Student Challenges:**
-- Every question becomes a new incident.
-- Shift changeover as “other.”
-- Writing the report body.
-- Opening 1.6.2/1.6.3.
+- Incident = case. RFI = question. Other = a name the shop already uses.
+- An RFI can sit beside an incident. It is not a second case.
+- Adjacent pair is incident ↔ RFI.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Local extra types if the site has them
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Name the types.
-2. Identify type + reject neighbor.
+Same as the student guide.
 
-**Mapped Items:** K 1.6.1.1 · T 1.6.1.2
+**Mapped Items:** K 1.5.1.1 ; T 1.5.1.2
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 1.7 / 3.11 |
-| Three types                    | 14 min   | a–c |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 16 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~62 min** | Stretch Ex 2 if they open a second incident |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Case vs question |
+| Key Concepts            | 12 min    | Three names; two givens |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- SOC 3: A / 2b — pick the bucket and name the neighbor.
-- CTI 3: already 3c on the task.
+### 1. Key Concepts
 
-**Question:**  
-“Are you recording a case or asking a question?”
+Write incident vs RFI vs other. Walk **A12** first record as **incident, not RFI**. Walk the domain question as **RFI, not a second incident**.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail a 1.7 answer as a 1.6 type. Fail a full report draft.
-
-**Summaries:**
-- Ex 1: Incident, not RFI.
-- Ex 2: RFI to CTI, not a second incident.
-- Ex 3: Informational, not incident.
-
-**Cases:**
-
-| Item | Type | Reject | Why |
-|------|------|--------|-----|
-| A | **Incident** | RFI | First case record for a real miss/download. |
-| B | **RFI** (IT) | Incident | Question about scanner identity. |
-| C | **Not 1.6** — **1.7** changeover | Incident / other | Shift handoff is its own unit. |
-| D | **RFI** or **Informational** | Incident | No internal case. If they ask CTI “have we seen this?”, RFI. If lead wants FYI only, Informational. Accept either with a clean neighbor reject. |
+If they write the body: “Type only.”  
+If they assign a clock: “1.5.2.”  
+If they name recipients: “1.5.3.”  
+If they open a second incident for the domain: “Question, not a new case.”  
+If they invent a DYA type: “Other is a name their real shop already uses.”  
+If they write a shift-change log as “other”: “Not a 1.5 type. 1.7 is retired — do not send them there.”  
+If they write T1059 or an intel paper: “0.6 / 3.11.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Incident vs RFI?**  
-   **Answer:** Incident records a case. RFI asks another party for information.  
+1. **This hour is who gets the report and which channel. True or false?**  
+   **Answer:** False. That is 1.5.3. This hour is which type.  
+   **Explanation:** Stay-in / vs 1.5.3.
+
+2. **Incident vs RFI?**  
+   **Answer:** Incident records a case. RFI asks another desk for information.  
    **Explanation:** Outline a–b.
 
-2. **Other / not parked there?**  
-   **Answer:** Named local types (classroom: informational). Do not park shift change (**1.7**) or intel products (**3.11**).  
-   **Explanation:** Outline c.
-
-3. **RFI beside incident?**  
-   **Answer:** The incident is the case. The RFI is a question that supports it. Different type.  
-   **Explanation:** Example 2.
-
-4. **Why not “appropriate”?**  
-   **Answer:** That restates the K. Sign-off is reject the neighbor.  
-   **Explanation:** Task.
-
-5. **Shift-change write-up?**  
-   **Answer:** **1.7**, not a 1.6 report type.  
-   **Explanation:** Fence.
+3. **A12 exists; CTI to work the update domain. Type and why not adjacent?**  
+   **Answer:** **RFI.** Not incident: the case is already open; this product is the question.  
+   **Explanation:** Outline b / task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- Next recommended module: 1.6.2 Reporting timelines
+- Next: 1.5.2 Reporting timeline requirements

@@ -80,7 +80,7 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 - Quiz (tracker column exists; not part of sign-off yet)
 - “Related modules” / next-steps links in sibling guides
 
-Front door and shared hours live under `modules/00-intro/` and are taught before SOC: `0.1`–`0.5`, `0.6`, `3.3.2`, `1.8.1`. SOC ends at `1.6`. Do not copy those lessons into each role. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+Front door and shared hours live under `modules/00-intro/` and are taught before SOC: `0.1`–`0.5`, `0.6`, `3.3.2`, `1.8.1`. SOC ends at `1.5`. Do not copy those lessons into each role. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 ### Concept index rules
 

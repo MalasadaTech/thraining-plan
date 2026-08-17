@@ -173,18 +173,18 @@ Five teaching units. Tasks apply the knowledge item they sit under. False-positi
 
 ---
 
-## 1.6 Reporting (Primarily SOC)
+## 1.5 Reporting (Primarily SOC)
 
 Three teaching units. Tasks apply the knowledge they sit under. Alert SLA clocks are **1.4.5**. **`1.7` is retired.**
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
-| 1.6.1.1 | Report types | K | A / B / C | B / C / C | B / C / C |
-| 1.6.1.2 | Identify the correct report type for a given situation and why it is not the adjacent type | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
-| 1.6.2.1 | Reporting timeline requirements | K | A / B / C | A / B / B | B / C / C |
-| 1.6.2.2 | Given timestamps, identify which report timeline applies and whether it is at risk | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
-| 1.6.3.1 | Notification and distribution | K | A / B / C | A / B / B | B / C / C |
-| 1.6.3.2 | Route a report: name recipients, leadership awareness, and the approved channel | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
+| 1.5.1.1 | Report types | K | A / B / C | B / C / C | B / C / C |
+| 1.5.1.2 | Identify the correct report type for a given situation and why it is not the adjacent type | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
+| 1.5.2.1 | Reporting timeline requirements | K | A / B / C | A / B / B | B / C / C |
+| 1.5.2.2 | Given timestamps, identify which report timeline applies and whether it is at risk | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
+| 1.5.3.1 | Notification and distribution | K | A / B / C | A / B / B | B / C / C |
+| 1.5.3.2 | Route a report: name recipients, leadership awareness, and the approved channel | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
 
 ---
 
@@ -491,7 +491,7 @@ Taught last. **1.3** is rule syntax / first read-write. Nominations from SOC, hu
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
 - Section `0` is the front door (`0.1` layout; `0.2`–`0.5` operate; `0.4.1` T). Same codes for SOC, Hunter, CTI, and DE. Shared floor after that, still before SOC.
-- Section `0` includes `0.6` frameworks, `0.7` tool survey, and `0.8` environment / signal flow. Those tables include a DE column. SOC ends at `1.6`. Other `1`–`3` rows stay three columns until we rate DE on them.
+- Section `0` includes `0.6` frameworks, `0.7` tool survey, and `0.8` environment / signal flow. Those tables include a DE column. SOC ends at `1.5`. Other `1`–`3` rows stay three columns until we rate DE on them.
 - **`1.8.2` is retired.** PCAP why/when is `1.2.1`. Apply-versus-alert is `1.4.1.6`. Sensors are `0.8.g`. Download/view is `1.8.3` if the shop lists them.
 - Section `4` is Detection Engineer (`4.1`–`4.8`). DE is primary (`docs/matrices/de.md`). Cross-role awareness lives **only** on this combined sheet — not on the SOC, hunter, or CTI sheets. Sensor unit `4.7` is lighter. Site unit `4.8` is obtain-and-follow.
-- Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`) at the SOC/CTI seam. Shift change is two units (`1.7.1`–`1.7.2`). Leftover SOC site is `1.8.4` notes and `1.8.5` IR. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.
+- Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.5.1`–`1.5.3`) at the SOC/CTI seam. Shift change is two units (`1.7.1`–`1.7.2`). Leftover SOC site is `1.8.4` notes and `1.8.5` IR. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.

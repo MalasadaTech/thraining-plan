@@ -36,7 +36,7 @@ Then:
 - [ ] Decide leftover Harbor map items that do not fit a law firm (OT, payroll)
 - [ ] Rename Night Owl → Pink River Dolphin (PRD) and Harbor → Dixon, Yamada, & Associates (DYA) in the lessons
 - [ ] Write the companion story (see the outline below)
-- [x] Shared floor in `00-intro`, taught before SOC: frameworks, tool survey, environment. Retired `1.7`, `1.8.2`–`1.8.5`. SOC ends at 1.6.
+- [x] Shared floor in `00-intro`, taught before SOC: frameworks, tool survey, environment. Retired `1.7`, `1.8.2`–`1.8.5`. SOC ends at 1.5.
 - [x] Rewrite `0.8` (00.08): why every role must understand infrastructure and signal flow. Do **not** invent a site card / Harbor architecture.
 - [ ] Review everything and make sure it makes sense
 - [ ] Check the reference links that are already there

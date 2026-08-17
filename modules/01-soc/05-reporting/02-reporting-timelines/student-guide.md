@@ -1,10 +1,10 @@
-# Module 1.6.2 – Reporting Timelines
+# Module 1.5.2 – Reporting Timelines
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.6.2.1 A / B / C · 1.6.2.2 2b / 3c / 4c  
-- Hunter: 1.6.2.1 A / B / B · 1.6.2.2 2b / 3c / 4c  
-- CTI: 1.6.2.1 B / C / C · 1.6.2.2 3c / 4c / 4c  
+- SOC: 1.5.2.1 A / B / C · 1.5.2.2 2b / 3c / 4c  
+- Hunter: 1.5.2.1 A / B / B · 1.5.2.2 2b / 3c / 4c  
+- CTI: 1.5.2.1 B / C / C · 1.5.2.2 3c / 4c / 4c  
 **Estimated Time:** 60–75 minutes  
 
 ---
@@ -17,14 +17,14 @@ By the end of this module, you will be able to:
 2. Given a situation and timestamps, identify **which clock applies** and whether it is **at risk**.
 
 **Mapped Proficiency Items:**
-- K: 1.6.2.1 – Reporting timeline requirements
-- T: 1.6.2.2 – Identify which report timeline applies and whether it is at risk
+- K: 1.5.2.1 – Reporting timeline requirements
+- T: 1.5.2.2 – Identify which report timeline applies and whether it is at risk
 
 ---
 
 ## 1. Key Concepts
 
-These clocks are for **reports**, not for touching an alert. Alert start / close-escalate is **1.4.5**. You already know the **type** from **1.6.1**. This hour is **which report clock** and **met vs at risk**.
+These clocks are for **reports**, not for touching an alert. Alert start / close-escalate is **1.4.5**. You already know the **type** from **1.5.1**. This hour is **which report clock** and **met vs at risk**.
 
 **Classroom timelines (this lesson only — not a live org policy):**
 
@@ -40,7 +40,7 @@ If your site uses different numbers, substitute them. The obligation is **submit
 | This lesson | Other |
 |-------------|-------|
 | Report clocks | Alert 15 / 45 — **1.4.5** |
-| Which clock / at risk | Who to send it to — **1.6.3** |
+| Which clock / at risk | Who to send it to — **1.5.3** |
 | Escalation *of the report* because you are blocked | Escalating the *alert* on the close clock — **1.4.5** |
 
 **At risk** = now is inside the last third of the window, or already past it (**breached**). You must **name the clock**. “We’re late” is not the task.
@@ -123,7 +123,7 @@ The incident *submit* clock (30 from 14:00) is still running — but the syllabu
 
 - Submit-by-type vs escalate-when-blocked. Not alert SLA.
 - Name the clock. Met / at risk / breached.
-- Next: notification and distribution (**1.6.3**).
+- Next: notification and distribution (**1.5.3**).
 
 ---
 
@@ -131,6 +131,6 @@ The incident *submit* clock (30 from 14:00) is still running — but the syllabu
 
 - Related modules:
   - 1.4.5 – SLA / response time goals (alert clocks)
-  - 1.6.1 – Report types (previous)
-  - 1.6.3 – Notification and distribution (next)
+  - 1.5.1 – Report types (previous)
+  - 1.5.3 – Notification and distribution (next)
 - Local reporting-SLA card (optional — substitutes classroom numbers)

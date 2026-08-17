@@ -243,30 +243,30 @@ Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 2.5. DTF is
 
 ---
 
-## 1.6 Reporting
+## 1.5 Reporting
 
 Shift-change reports are 1.7. Alert SLA clocks are 1.4.5. Tasks apply the knowledge they sit under.
 
-### 1.6.1 Report types
+### 1.5.1 Report types
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.6.1.1 | Report types | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level can analyze and apply. |
-| 1.6.1.2 | Identify the correct report type for a given situation and why it is not the adjacent type | T | 2b | 3c | 4c | Extends labeling — must reject the neighbor type (incident vs RFI vs other). |
+| 1.5.1.1 | Report types | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level can analyze and apply. |
+| 1.5.1.2 | Identify the correct report type for a given situation and why it is not the adjacent type | T | 2b | 3c | 4c | Extends labeling — must reject the neighbor type (incident vs RFI vs other). |
 
-### 1.6.2 Reporting timeline requirements
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.6.2.1 | Reporting timeline requirements | K | A | B | C | Submit clocks vs escalate-for-more-info clocks. Not 1.4.5 alert SLA. |
-| 1.6.2.2 | Given timestamps, identify which report timeline applies and whether it is at risk | T | 2b | 3c | 4c | Extends “know the times” — name the clock and at-risk vs met. |
-
-### 1.6.3 Notification and distribution
+### 1.5.2 Reporting timeline requirements
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.6.3.1 | Notification and distribution | K | A | B | C | Chart, leadership awareness, approved channels. |
-| 1.6.3.2 | Route a report: name recipients, leadership awareness, and the approved channel | T | 2b | 3c | 4c | Extends the chart — route plus reject the wrong channel. |
+| 1.5.2.1 | Reporting timeline requirements | K | A | B | C | Submit clocks vs escalate-for-more-info clocks. Not 1.4.5 alert SLA. |
+| 1.5.2.2 | Given timestamps, identify which report timeline applies and whether it is at risk | T | 2b | 3c | 4c | Extends “know the times” — name the clock and at-risk vs met. |
+
+### 1.5.3 Notification and distribution
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 1.5.3.1 | Notification and distribution | K | A | B | C | Chart, leadership awareness, approved channels. |
+| 1.5.3.2 | Route a report: name recipients, leadership awareness, and the approved channel | T | 2b | 3c | 4c | Extends the chart — route plus reject the wrong channel. |
 
 ---
 

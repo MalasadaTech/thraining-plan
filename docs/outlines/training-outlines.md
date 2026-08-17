@@ -24,7 +24,7 @@ Write only the asked child unless asked for the whole intro. Frameworks are **`0
 Stay in this lesson: the map of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
 
 a. Front door, then shared hours that apply to every role, then four tracks: SOC analyst, CTI, hunting, detection engineers  
-b. Inside SOC, detections *are* before the alert queue. SOC ends at reporting (`1.6`). The RFI is the door into CTI  
+b. Inside SOC, detections *are* before the alert queue. SOC ends at reporting (`1.5`). The RFI is the door into CTI  
 c. After this intro and still before SOC: frameworks, tool survey, and environment / signal flow. Those apply to everyone. Role-local hunt / CTI / DE lists come later and differ by shop  
 d. This course uses one company and one adversary as fiction. Those names come in the next hour. After the lessons, a companion story retells the same flow as one incident  
 
@@ -120,7 +120,7 @@ g. PCAP collection points / sensors
 
 # 1. SOC Analyst Fundamentals
 
-After the full `00` block (`0.1`–`0.8`). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.6**. **SOC ends at 1.6 reporting.** The RFI is the door into CTI. Next section in this file is **3. CTI** (not 2. Hunt).
+After the full `00` block (`0.1`–`0.8`). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.5**. **SOC ends at 1.5 reporting.** The RFI is the door into CTI. Next section in this file is **3. CTI** (not 2. Hunt).
 
 **1.1 [K/T] Endpoint Logs**
 
@@ -378,38 +378,38 @@ b. Required time to process an alert (close or escalate)
 1. Given timestamps, identify whether the start clock or the close/escalate clock is at risk  
 2. Close or escalate an alert and record it against the correct clock  
 
-**1.6 [K/T] Reporting**
+**1.5 [K/T] Reporting**
 
 Last SOC hour. Sits at the **SOC / CTI seam** after alerts (`1.4`). Three units — do not collapse them. The RFI type is the door into CTI. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task. **`1.7` is retired.**
 
-**1.6.1 [K] Report types**  
+**1.5.1 [K] Report types**  
 a. Incident report  
 b. Request for Information (RFI)  
 c. Other common report types used in the environment  
 
-**1.6.1.1 [T] Report type tasks**  
+**1.5.1.1 [T] Report type tasks**  
 1. Identify the correct report type for a given situation and why it is not the adjacent type  
 
-**1.6.2 [K] Reporting timeline requirements**  
+**1.5.2 [K] Reporting timeline requirements**  
 a. Required timelines for submitting different report types  
 b. Escalation timelines when additional information or actions are needed  
 
-**1.6.2.1 [T] Reporting timeline tasks**  
+**1.5.2.1 [T] Reporting timeline tasks**  
 1. Given a situation and timestamps, identify which report timeline applies (submit vs escalate-for-more-info) and whether it is at risk  
 
-**1.6.3 [K] Notification and distribution**  
+**1.5.3 [K] Notification and distribution**  
 a. Notification chart / matrix (which teams or sections receive which reports)  
 b. Requirement to notify leadership for awareness  
 c. Approved reporting channels  
 
-**1.6.3.1 [T] Notification and distribution tasks**  
+**1.5.3.1 [T] Notification and distribution tasks**  
 1. Route a report: name the recipients, whether leadership gets awareness, and the approved channel (and reject the wrong channel)  
 
 ---
 
 # 3. CTI Analyst
 
-Taught after SOC reporting (`1.6`). Hunt is **2.x** and comes after this section. IDs stay `3.x`.
+Taught after SOC reporting (`1.5`). Hunt is **2.x** and comes after this section. IDs stay `3.x`.
 
 **3.1 [K] Core Intelligence Concepts**  
 
@@ -735,7 +735,7 @@ b. Linking objects to represent complex threat activity
 
 **3.11 [K/T] Intelligence Production & Dissemination**  
 
-Three children. Write only the asked child unless asked for all of `3.11`. Audience *rewrite* floor is `3.1.6`. Attribution *assessment* is `3.1.7`. STIX bundle/TAXII is `3.10`. SOC ticket types/routing are `1.6`. Local approval and customer lists are `3.12`. Classroom markings/channels/RFI queue are lesson-only — not live org policy.
+Three children. Write only the asked child unless asked for all of `3.11`. Audience *rewrite* floor is `3.1.6`. Attribution *assessment* is `3.1.7`. STIX bundle/TAXII is `3.10`. SOC ticket types/routing are `1.5`. Local approval and customer lists are `3.12`. Classroom markings/channels/RFI queue are lesson-only — not live org policy.
 
 **3.11.1 [K] Creating finished intelligence products**  
 a. Types of finished intelligence products  
@@ -912,7 +912,7 @@ b. Indicators associated with privilege escalation
 
 **2.7 [T] Site-Specific Hunt Knowledge and Tasks**  
 
-Write only the asked child unless asked for all of `2.7`. Do **not** invent local hunt tickets, templates, output lists, or hand-off charts. Every site has its own; a new hunter obtains them early. Classroom stand-ins are lesson-only — not live org policy. Hunt *development* is `2.2.2`. Hunt-for-specific is `2.6.3`. SOC tickets / IR are `1.6` / `1.8.5`.
+Write only the asked child unless asked for all of `2.7`. Do **not** invent local hunt tickets, templates, output lists, or hand-off charts. Every site has its own; a new hunter obtains them early. Classroom stand-ins are lesson-only — not live org policy. Hunt *development* is `2.2.2`. Hunt-for-specific is `2.6.3`. SOC tickets / IR are `1.5` / `1.8.5`.
 
 **2.7.1 [K] Hunt control and lead management**  
 a. How hunts are initiated and controlled  

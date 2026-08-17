@@ -1,10 +1,10 @@
-# Module 1.6.3 – Notification and Distribution
+# Module 1.5.3 – Notification and Distribution
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.6.3.1 A / B / C · 1.6.3.2 2b / 3c / 4c  
-- Hunter: 1.6.3.1 A / B / B · 1.6.3.2 2b / 3c / 4c  
-- CTI: 1.6.3.1 B / C / C · 1.6.3.2 3c / 4c / 4c  
+- SOC: 1.5.3.1 A / B / C · 1.5.3.2 2b / 3c / 4c  
+- Hunter: 1.5.3.1 A / B / B · 1.5.3.2 2b / 3c / 4c  
+- CTI: 1.5.3.1 B / C / C · 1.5.3.2 3c / 4c / 4c  
 **Estimated Time:** 60–75 minutes  
 
 ---
@@ -19,14 +19,14 @@ By the end of this module, you will be able to:
 4. **Route** a report: recipients + leadership yes/no + channel.
 
 **Mapped Proficiency Items:**
-- K: 1.6.3.1 – Notification and distribution
-- T: 1.6.3.2 – Route a report: name recipients, leadership awareness, and the approved channel
+- K: 1.5.3.1 – Notification and distribution
+- T: 1.5.3.2 – Route a report: name recipients, leadership awareness, and the approved channel
 
 ---
 
 ## 1. Key Concepts
 
-You already know the **type** (**1.6.1**) and the **clock** (**1.6.2**). This hour is **who** and **how**. Shift-change recording location is **1.7**.
+You already know the **type** (**1.5.1**) and the **clock** (**1.5.2**). This hour is **who** and **how**. Shift-change recording location is **1.7**.
 
 **Classroom notification chart (this lesson only):**
 
@@ -45,8 +45,8 @@ If your site has a real chart, use it. The obligation is **chart + leadership fl
 
 | This lesson | Other |
 |-------------|-------|
-| Who / channel | Type — **1.6.1**; when — **1.6.2** |
-| Route the *report* | Escalate a blocked *clock* — **1.6.2** |
+| Who / channel | Type — **1.5.1**; when — **1.5.2** |
+| Route the *report* | Escalate a blocked *clock* — **1.5.2** |
 | Not where the changeover log lives | **1.7** |
 
 The task is a **route line**:
@@ -127,14 +127,14 @@ The task is a **route line**:
 
 - Chart: who, leadership yes/no, approved channel.
 - Route line + reject the wrong path.
-- This closes unit **1.6**. Next unit: **1.7** Shift change.
+- This closes unit **1.5**. Next unit: **1.7** Shift change.
 
 ---
 
 ## 6. References & Further Reading
 
 - Related modules:
-  - 1.6.1 – Report types
-  - 1.6.2 – Reporting timelines (previous)
+  - 1.5.1 – Report types
+  - 1.5.2 – Reporting timelines (previous)
   - 1.7.1 – Shift changeover process (next)
 - Local notification matrix (optional — substitutes the classroom chart)

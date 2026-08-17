@@ -19,7 +19,7 @@ Name which of two clocks is at risk, then record a close or escalate against tha
 
 - What this hour is for: SOC analysts keep a queue row from sitting untouched, and from sitting open with no disposition. They name the clock and write closed or escalated against it.
 - How it hooks to the hour before: 1.4.4 was the site bucket (scan / root / user).
-- How it hooks to the hour after: 1.6 is reports. Those have their own timelines. This hour is the alert clocks only.
+- How it hooks to the hour after: 1.5 is reports. Those have their own timelines. This hour is the alert clocks only.
 - Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Classroom 15 / 45 so the timestamp task has numbers. Not a live shop SLA. Hunter 3 is A / 1a. CTI names the words (A / 1a).
 - What we are *not* doing this hour: Re-investigate. Re-label TP/FP or category. Write a report. Invent DYA minutes. No lab. **1.7** is retired — do not open shift change.
 - Extra step: none.
@@ -52,7 +52,7 @@ Same as the student guide.
 | Introduction (required) | 3 min     | Two clocks, not “work faster” |
 | Key Concepts            | 12 min    | 15 / 45 classroom; two givens |
 | Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | Close 1.4; next is 1.6 |
+| Summary                 | 1 min     | Close 1.4; next is 1.5 |
 | **Total**               | **~20 min** | |
 
 ---
@@ -89,4 +89,4 @@ If they ask for DYA minutes: “Classroom 15 / 45. Their real shop substitutes.�
 
 ## Additional Instructor Resources
 
-- Next: 1.6.1 Report types
+- Next: 1.5.1 Report types

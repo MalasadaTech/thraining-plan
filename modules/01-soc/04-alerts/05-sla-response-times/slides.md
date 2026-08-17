@@ -62,7 +62,7 @@ A12 is the encoded-PowerShell alert they already started. Do not retell the plot
 
 No re-investigate (**1.4.1**).  
 No TP / FP or category (**1.4.2** / **1.4.4**).  
-No report, no report clocks (**1.6**).  
+No report, no report clocks (**1.5**).  
 No invented DYA minutes.
 
 **Speaker Notes:**  
@@ -88,7 +88,7 @@ Answers only in the instructor guide. Three questions. Stop.
 Start from created. Close/escalate from first touch.  
 Name the clock. Record the disposition.
 
-**Next:** **1.6.1** Report types. Unit **1.4** ends.
+**Next:** **1.5.1** Report types. Unit **1.4** ends.
 
 **Speaker Notes:**  
-Do not open 1.6 unless that hour is scheduled. 1.7 is retired.
+Do not open 1.5 unless that hour is scheduled. 1.7 is retired.

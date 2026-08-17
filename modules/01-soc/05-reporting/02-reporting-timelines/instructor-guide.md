@@ -1,10 +1,10 @@
-# Instructor Guide – Module 1.6.2 – Reporting Timelines
+# Instructor Guide – Module 1.5.2 – Reporting Timelines
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.6.2.1 A / B / C · 1.6.2.2 2b / 3c / 4c  
-- Hunter: 1.6.2.1 A / B / B · 1.6.2.2 2b / 3c / 4c  
-- CTI: 1.6.2.1 B / C / C · 1.6.2.2 3c / 4c / 4c  
+- SOC: 1.5.2.1 A / B / C · 1.5.2.2 2b / 3c / 4c  
+- Hunter: 1.5.2.1 A / B / B · 1.5.2.2 2b / 3c / 4c  
+- CTI: 1.5.2.1 B / C / C · 1.5.2.2 3c / 4c / 4c  
 **Estimated Time:** 60–75 minutes  
 **Delivery Method:** Instructor-led with hands-on analysis
 
@@ -39,7 +39,7 @@ Teach report **submit** clocks by type and **blocked → escalate**. Force **whi
 1. Submit-by-type and escalate-when-blocked.
 2. Which clock + at risk.
 
-**Mapped Items:** K 1.6.2.1 · T 1.6.2.2
+**Mapped Items:** K 1.5.2.1 · T 1.5.2.2
 
 ---
 
@@ -116,4 +116,4 @@ Fail 1.4.5 answers. Fail “late” with no clock name.
 
 ## Additional Instructor Resources
 
-- Next recommended module: 1.6.3 Notification and distribution
+- Next recommended module: 1.5.3 Notification and distribution

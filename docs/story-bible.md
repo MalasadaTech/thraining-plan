@@ -122,7 +122,7 @@ Do not invent a second plot. Extra classroom rows (`helpdesk.exe`, Word → `hel
 | Beat (already in “Main incident”) | First teach / plant | First *use* in the flow | Do **not** dump it in |
 |-----------------------------------|---------------------|-------------------------|------------------------|
 | `wscript` → hidden `powershell -enc` on **WS-JLEE** / `jlee` | **1.1.2** process | **1.4** the alert (this is what fired) | — |
-| `invoice.vbs` in Temp (file row, hash) | **1.1.3** file | **1.4.1** investigation; **1.6** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
+| `invoice.vbs` in Temp (file row, hash) | **1.1.3** file | **1.4.1** investigation; **1.5** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
 | HKCU Run **`Updater`** → `%TEMP%\update.exe` | **1.1.5** registry | **2.x** hunt (more hosts the alert missed) | Not in the first alert. Not required on the leadership notify |
 | Host GET `update.exe` :8080 to PRD domain / `203.0.113.88` | **1.1.4** host-network + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **3.11.3** RFI seed (the domain) | Not all of this in the leadership notify |
 | Sibling `login-prd.net`, same NS, same A, SOA | **3.5** / **3.6** / **3.8** | **3.x** enrichment; extra infra → **block** (0.3 e) | Not a SOC notify field |
@@ -131,11 +131,11 @@ Do not invent a second plot. Extra classroom rows (`helpdesk.exe`, Word → `hel
 
 **Alert (1.4):** only what a detection would fire on first — the process create (`wscript` → encoded PowerShell).
 
-**Notify / escalate (1.6):** what SOC knows at hand-off — host, user, process chain, the `.vbs` they pulled. One sentence for leadership. The RFI asks intel to work the domain / file, not to rewrite the notify.
+**Notify / escalate (1.5):** what SOC knows at hand-off — host, user, process chain, the `.vbs` they pulled. One sentence for leadership. The RFI asks intel to work the domain / file, not to rewrite the notify.
 
 **CTI:** more infrastructure and “so what.” **Hunt:** activity the alerts missed. **DE:** lasting rule. Same evidence can sit on more than one desk (**0.4**); the *product* is different.
 
-When we revise a 1.1 / 1.2 / 1.4 / 1.6 lesson, plant or read only that row’s beat. Do not retell the whole chain.
+When we revise a 1.1 / 1.2 / 1.4 / 1.5 lesson, plant or read only that row’s beat. Do not retell the whole chain.
 
 ---
 

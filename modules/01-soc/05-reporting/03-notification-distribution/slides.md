@@ -1,4 +1,4 @@
-# Module 1.6.3 – Notification and Distribution  
+# Module 1.5.3 – Notification and Distribution  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
@@ -8,12 +8,12 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.6.3 – Notification and Distribution  
+**Title:** Module 1.5.3 – Notification and Distribution  
 **Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Who and how. Closes 1.6. Overlay site chart if you have one.
+Who and how. Closes 1.5. Overlay site chart if you have one.
 
 ---
 
@@ -26,7 +26,7 @@ Who and how. Closes 1.6. Overlay site chart if you have one.
 4. Route: recipients + leadership + channel
 
 **Mapped Items:**  
-K: 1.6.3.1 | T: 1.6.3.2
+K: 1.5.3.1 | T: 1.5.3.2
 
 **Speaker Notes:**  
 Hunter K is A/B/B.
@@ -40,7 +40,7 @@ Hunter K is A/B/B.
 - Leadership and channels
 - Three examples
 - Four route lines
-- Knowledge check — close 1.6
+- Knowledge check — close 1.5
 
 **Speaker Notes:**  
 1.7 is next unit.
@@ -50,8 +50,8 @@ Hunter K is A/B/B.
 ### Slide 4 – Not This Lesson
 **Title:** Not This Hour
 
-Which type (**1.6.1**)  
-Which clock (**1.6.2**)  
+Which type (**1.5.1**)  
+Which clock (**1.5.2**)  
 Where the changeover log lives (**1.7**)  
 Personal SMS “because it’s faster”
 
@@ -199,7 +199,7 @@ Interactive.
 
 - Chart: who, leadership, channel.
 - Reject the unofficial path.
-- Unit **1.6** ends. Next unit: **1.7** Shift change.
+- Unit **1.5** ends. Next unit: **1.7** Shift change.
 
 **Speaker Notes:**  
 Do not open 1.7 unless scheduled.

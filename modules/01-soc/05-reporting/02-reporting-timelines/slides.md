@@ -1,4 +1,4 @@
-# Module 1.6.2 – Reporting Timelines  
+# Module 1.5.2 – Reporting Timelines  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.6.2 – Reporting Timelines  
+**Title:** Module 1.5.2 – Reporting Timelines  
 **Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
 **Footer:** SOC / Hunter / CTI Training Program
 
@@ -24,7 +24,7 @@ Report clocks, not alert 15/45. Name the clock.
 2. Given timestamps: which clock, met / at risk / breached
 
 **Mapped Items:**  
-K: 1.6.2.1 | T: 1.6.2.2
+K: 1.5.2.1 | T: 1.5.2.2
 
 **Speaker Notes:**  
 Hunter K is A/B/B.
@@ -41,7 +41,7 @@ Hunter K is A/B/B.
 - Knowledge check
 
 **Speaker Notes:**  
-1.6.3 next.
+1.5.3 next.
 
 ---
 
@@ -49,8 +49,8 @@ Hunter K is A/B/B.
 **Title:** Not This Hour
 
 Alert start/close (**1.4.5**)  
-Which *type* (**1.6.1**)  
-Who gets the report (**1.6.3**)  
+Which *type* (**1.5.1**)  
+Who gets the report (**1.5.3**)  
 “Work faster”
 
 **Key Point:** Name the **report** clock.
@@ -203,10 +203,10 @@ Interactive.
 
 - Submit-by-type. Blocked → escalate in 15.
 - Name the clock. Not alert SLA.
-- Next: notification (**1.6.3**).
+- Next: notification (**1.5.3**).
 
 **Speaker Notes:**  
-Do not open 1.6.3 unless scheduled.
+Do not open 1.5.3 unless scheduled.
 
 ---
 
@@ -220,6 +220,6 @@ Do not open 1.6.3 unless scheduled.
 | Informational | Decision | Before changeover |
 | Blocked escalate | Became blocked | 15 min |
 
-**Coming next:** Module 1.6.3 – Notification and distribution
+**Coming next:** Module 1.5.3 – Notification and distribution
 
 **Footer:** SOC / Hunter / CTI Training Program

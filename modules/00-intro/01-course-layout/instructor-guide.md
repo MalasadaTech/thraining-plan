@@ -73,7 +73,7 @@ If they ask about local tickets or shift process: those lists come later and dif
    **Explanation:** Outline a and c.
 
 2. **Where does SOC end? Door into CTI?**  
-   **Answer:** Reporting (`1.6`). The RFI.  
+   **Answer:** Reporting (`1.5`). The RFI.  
    **Explanation:** Outline b.
 
 3. **Two hours that apply to everyone before SOC?**  

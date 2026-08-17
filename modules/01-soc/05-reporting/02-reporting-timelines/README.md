@@ -9,10 +9,10 @@
 
 | Matrix ID | Type | Item | Outline heading |
 |-----------|------|------|-----------------|
-| 1.6.2.1 | K | Reporting timeline requirements | 1.6.2 a–b |
-| 1.6.2.2 | T | Given timestamps, identify which report timeline applies and whether it is at risk | 1.6.2.1 task 1 |
+| 1.5.2.1 | K | Reporting timeline requirements | 1.5.2 a–b |
+| 1.5.2.2 | T | Given timestamps, identify which report timeline applies and whether it is at risk | 1.5.2.1 task 1 |
 
-The teaching-unit ID is **1.6.2**. Report *types* are **1.6.1**. Routing is **1.6.3**. Alert start/close clocks are **1.4.5**. Classroom numbers below are for this lesson only.
+The teaching-unit ID is **1.5.2**. Report *types* are **1.5.1**. Routing is **1.5.3**. Alert start/close clocks are **1.4.5**. Classroom numbers below are for this lesson only.
 
 ## Concepts taught
 
