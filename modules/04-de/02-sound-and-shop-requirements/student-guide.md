@@ -28,7 +28,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**4.1** said DE owns new, change, retire, and deploy. This hour is what “good enough to ship” looks like. Not how to write the rule (**1.3**).
+Once work is on DE’s desk, you do not ship it until it is **sound** and meets the shop list you were shown. This hour is what “good enough to ship” looks like. Not how to write the rule (**1.3**).
+
+**4.1** said DE owns new, change, retire, and deploy.
 
 **Sound** means two things: it **fires** on the intended activity, and it does **not** fire on what it must not.
 

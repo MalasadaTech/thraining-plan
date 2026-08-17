@@ -18,7 +18,7 @@ Treat a hunt or intel package like a nomination, pick add / change / no new rule
 
 **Context (plain language):**
 
-- What this hour is for: Packages from CTI and hunters. Same bar as a nomination. Add, change, or no new rule. Not a block list.
+- What this hour is for: Hunters and intel send DE packages. Those are inputs, not finished detections. Same bar as a nomination. Add, change, or no new rule. Not a block list.
 - How it hooks to the hour before: 4.4 was a tune on a live rule. This hour is an inbound package, not a noisy alert.
 - How it hooks to the hour after: 4.6 is when to modify, retire, or leave a live rule.
 - Why we are doing it this way: You wanted both hunt and intel packages as inputs. “No new rule” is a real product. Blocks stay with firewall / IA.

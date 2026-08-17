@@ -25,7 +25,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**4.2** was sound, the shop list, and closing the loop. This hour is the **nomination** itself.
+Other desks send DE work. That hand-off is a **nomination**. This hour is what it must contain, and how you **accept**, **send back**, or **reject** it.
+
+**4.2** was sound, the shop list, and closing the loop.
 
 **Who can nominate:** a **SOC analyst**, a **hunter**, or a **CTI analyst**.
 

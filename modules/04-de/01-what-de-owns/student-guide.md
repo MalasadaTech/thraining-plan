@@ -25,7 +25,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**0.2** said the detection engineer turns what we learned into lasting rules. This hour is what that desk **owns**.
+DE’s normal work starts with knowing what is **yours**. Before you write or tune anything, you sort: this is DE, this is a nominator, this is how a rule works (**1.3**), or this is a **block**. This hour names that split.
+
+**0.2** said the detection engineer turns what we learned into lasting rules.
 
 DE owns the **set of detections**: **new**, **change**, **retire**, **deploy**.
 

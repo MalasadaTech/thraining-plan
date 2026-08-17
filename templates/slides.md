@@ -5,7 +5,7 @@
 | Slide # | Slide Title                        | Required? | Content Guidance |
 |---------|------------------------------------|-----------|------------------|
 | 1       | Title Slide                        | Yes       | Module number + title + roles |
-| 2       | What this hour is                  | Yes       | Intro — same idea as instructor Context |
+| 2       | What this hour is                  | Yes       | Student **Intro** — why this hour exists in the job, then what you will name |
 |         | Learning Objectives                | If useful | Only the objectives you actually have |
 |         | Agenda / Roadmap                   | Optional  | Skip on a short lesson |
 |         | Key Concepts                       | Yes       | One idea per slide |

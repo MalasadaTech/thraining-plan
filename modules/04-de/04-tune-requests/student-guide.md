@@ -26,7 +26,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**4.3** was a **nomination** (something new). This hour is a **tune request** on a rule that is already **live** — noisy, brittle, or missing context.
+After rules are **live**, SOC will ask DE to change them. That ask is a **tune request**, not a new nomination. This hour is that inbox.
+
+**4.3** was a **nomination** (something new). A tune is about a rule that is already live — noisy, brittle, or missing context.
 
 “Missing context” here means the **rule** fires without enough of the picture. It is not the pointer below.
 

@@ -20,12 +20,13 @@ Last hour was a nomination — something new. This hour is a rule that is alread
 ### Slide 2 – What this hour is
 **Title:** What this hour is
 
-A **tune request** on a *live* rule.  
-Same desk. **Different inbox.**  
+After rules are **live**, SOC asks DE to change them.
+
+A **tune request**. Same desk. **Different inbox.**  
 Which rule + a **pointer**. Then five answers.
 
 **Speaker Notes:**  
-You wanted context on the tune request, same idea as 4.3. Do not invent a ticket name.
+This is regular live-rule work, not a new nomination. Same kind of pointer as 4.3. Do not invent a ticket name.
 
 ---
 

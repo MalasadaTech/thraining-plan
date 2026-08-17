@@ -18,7 +18,7 @@ Who can nominate, what the nomination must contain, and how DE reviews: accept, 
 
 **Context (plain language):**
 
-- What this hour is for: The nomination. Need + pointer. Three reviews. Who finishes what.
+- What this hour is for: Other desks send DE work. That hand-off is a nomination. Need + pointer. Three reviews. Who finishes what.
 - How it hooks to the hour before: 4.2 was sound, the shop list, and the close-the-loop note.
 - How it hooks to the hour after: 4.4 is a tune request on a *live* rule. Same desk, different inbox.
 - Why we are doing it this way: You wanted a nomination to name the need and point at an investigation or intel report. A drafted rule only if they have one — not required. Still not “ready to deploy.”

@@ -23,6 +23,8 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
+**Intro (required).** First paragraph, before the outline ideas. Ordinary words. Why this hour exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last hour was X.” If you cannot finish “in this job they do this because ___,” you do not have an intro.
+
 Teach every outline bullet for this lesson. No extra concept sections to look complete.
 
 ### 1.1 [Concept Name]

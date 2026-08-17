@@ -132,7 +132,7 @@ Match the sibling’s **voice and fences** (plain words, same names, stay in thi
 | Time | As long as the outline needs. A short intro may be 15–20 minutes. A log-reading lesson may be an hour. Never stretch a short topic to fill 60–75 minutes. |
 | Audience | Primary + secondary roles from the matrix |
 | Proficiency | 3/5/7 codes from the matrix, per role, identical in student + instructor headers |
-| Student guide | Objectives → key concepts that cover the outline, including what each **task** looks like when done well. **No labs, demos, or hands-on exercises** until the human asks. **Knowledge check: 1–3 questions per lesson** that has slides. Short summary. |
+| Student guide | Objectives → **Intro** (why this hour exists in the job) → key concepts that cover the outline, including what each **task** looks like when done well. **No labs, demos, or hands-on exercises** until the human asks. **Knowledge check: 1–3 questions per lesson** that has slides. Short summary. |
 | Instructor guide | **Intro required** (Context + what this hour is). No demo or lab write-up until the human asks. Timing table lists only sections you actually teach. Answers for the 1–3 lesson questions. |
 | Slides | As many as you need. Intro + concepts + **knowledge check (1–3 questions for the lesson)** are required. No demo or exercise slides until the human asks. Face of each slide is short enough to read alone. **Speaker Notes** on every slide: a few plain sentences (why this slide, how it connects). |
 | Answers | Only in the instructor guide. No standalone `answer-key.md`. No quiz. |
@@ -147,9 +147,11 @@ Examples: use them when they help. Do not invent fail-stories to hit a count.
 
 Voice: direct, instructional, short paragraphs, tables for fields. Do not lecture about decrypting traffic, writing Zeek scripts, or other later modules.
 
+**Student Intro (required).** First paragraph of Key Concepts, before the outline ideas. Ordinary words. Why this hour exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last hour was X.” Put the same idea on slide 2. If you cannot finish “in this job they do this because ___,” you do not have an intro.
+
 **Context (required). Challenges (only if real):**
 
-Write **Context (plain language)** as the first block in the instructor overview, before Key Teaching Points. Anyone who was not in the planning chat should still see the connection. Use ordinary words. No outline letters, no matrix codes in this block.
+Write **Context (plain language)** as the first block in the instructor overview, before Key Teaching Points. Anyone who was not in the planning chat should still see the connection. Use ordinary words. No outline letters, no matrix codes in this block. The “what this hour is for” line must match the student Intro.
 
 Include:
 
@@ -219,6 +221,7 @@ Do not set tracker status to `Complete` for the module as a whole if that column
 - Mark the module human-accepted (`Complete` on the whole package) — stop for review
 - Write Gate 1 proposal files unless asked
 - Skip **Context (plain language)**
+- Skip the student **Intro** (why this hour exists in the job)
 - Invent Common Student Challenges to fill a quota, or leave a listed challenge as a label with no example
 - Leave a slide without plain-language speaker notes
 - Jump ahead of what the human asked without saying why in Context
@@ -233,6 +236,6 @@ Do not set tracker status to `Complete` for the module as a whole if that column
 
 ## 7. When you finish
 
-List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) Concepts taught matches the index, (3) Context is in the instructor guide, (4) any challenges have examples (or the list is omitted), (5) every slide has plain speaker notes, (6) **fluff review done** — nothing is there only to fill, (7) 1–3 knowledge-check questions for the lesson, (8) no new lab/demo unless asked, (9) status stays at review until they accept the lesson.
+List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) Concepts taught matches the index, (3) Context is in the instructor guide, (4) the student **Intro** says why this hour exists in the job, (5) any challenges have examples (or the list is omitted), (6) every slide has plain speaker notes, (7) **fluff review done** — nothing is there only to fill, (8) 1–3 knowledge-check questions for the lesson, (9) no new lab/demo unless asked, (10) status stays at review until they accept the lesson.
 
 **Fluff review (required, you and the human):** For each extra example, table, slide, lab step, or question, say which outline bullet it serves. If you cannot, delete it.

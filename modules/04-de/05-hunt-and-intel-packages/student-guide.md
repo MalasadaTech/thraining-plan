@@ -26,7 +26,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**4.4** was a tune on a *live* rule. This hour is a **package** from **CTI** or from **hunters**. Both are inputs.
+Hunters and intel will send DE **packages**. Those are inputs, not finished detections. This hour is how you review them.
+
+**4.4** was a tune on a *live* rule. Packages come from **CTI** or from **hunters**. Both are inputs.
 
 A package is **not** a finished detection. Treat it like a **nomination** (**4.3**): it must be clear enough to review — the **need**, and a **pointer**. The package itself is often the pointer (the hunt package, or the intel **report** title and URL). A drafted rule if they have one — not required. If the need or pointer is missing, **send it back**.
 

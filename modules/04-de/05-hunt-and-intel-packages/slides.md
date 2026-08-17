@@ -20,12 +20,13 @@ Last hour was a tune on a live rule. This hour is a package from hunt or intel. 
 ### Slide 2 – What this hour is
 **Title:** What this hour is
 
-Packages from **CTI** and from **hunters**.  
+Hunters and intel send DE **packages**. Inputs, not finished detections.
+
 Treat like a **nomination**.  
 **Add**, **change**, or **no new rule**. Not a **block** list.
 
 **Speaker Notes:**  
-You wanted both inputs, and “no new rule” as a real product. Blocks stay with firewall / IA.
+This is regular inbound work from those two desks. “No new rule” is a real product. Blocks stay with firewall / IA.
 
 ---
 

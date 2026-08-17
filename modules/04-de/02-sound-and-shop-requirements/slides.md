@@ -20,12 +20,14 @@ Last hour named what DE owns. This hour is what good enough to ship looks like. 
 ### Slide 2 – What this hour is
 **Title:** What this hour is
 
+Once work is on the desk, you do not ship it until it is **sound**.
+
 **Sound.** Test before live.  
 The shop list you were **shown**.  
 **Close the loop.**
 
 **Speaker Notes:**  
-The field list is 4.8. Today we only say: check the list you have, or say you do not have it.
+This is regular ship work, not how to write the rule. The field list is 4.8. Check the list you have, or say you do not have it.
 
 ---
 

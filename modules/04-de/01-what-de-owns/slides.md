@@ -20,11 +20,12 @@ This is the first Detection Engineering hour. We only name what the desk owns. N
 ### Slide 2 – What this hour is
 **Title:** What this hour is
 
-What DE **owns**.  
-Sort work: DE, nominator, **1.3**, or a **block**.
+Normal DE work starts with knowing what is **yours**.
+
+Sort: DE, nominator, **1.3**, or a **block**. Then own the set.
 
 **Speaker Notes:**  
-Later hours stay on one kind of work because this hour draws the line. No tickets. No field lists.
+This hour is the front door so later hours stay on one kind of work. No tickets. No field lists.
 
 ---
 

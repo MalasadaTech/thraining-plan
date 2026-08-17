@@ -20,12 +20,13 @@ Last hour was sound and the close-the-loop note. This hour is the nomination its
 ### Slide 2 – What this hour is
 **Title:** What this hour is
 
-Who can **nominate**.  
-What the nomination must **contain**.  
+Other desks send DE work. That hand-off is a **nomination**.
+
+Who can nominate. What it must **contain**.  
 **Accept**, **send back**, or **reject**.
 
 **Speaker Notes:**  
-You wanted a need plus a pointer. A drafted rule only if they have one. Packages are 4.5. Tunes are 4.4.
+This is regular inbound work, not a live-rule tune. Need plus a pointer. A drafted rule only if they have one.
 
 ---
 

@@ -18,7 +18,7 @@ What “sound” means, what you state before a rule goes live, how you treat th
 
 **Context (plain language):**
 
-- What this hour is for: Fire / must-not-fire, the list you were shown, and a short note back to the nominator.
+- What this hour is for: Once work is on the desk, you do not ship it until it is sound and meets the list you were shown. Fire / must-not-fire, that list, and a short note back to the nominator.
 - How it hooks to the hour before: 4.1 named what DE owns. This hour is what good enough to ship looks like.
 - How it hooks to the hour after: 4.3 is how you review a nomination (accept, send back, or reject).
 - Why we are doing it this way: You wanted sound, test, shop requirements, and close-the-loop in one hour. The field *list* waits for 4.8.

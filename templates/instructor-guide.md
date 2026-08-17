@@ -15,7 +15,7 @@
 **Context (plain language):**  
 [One block. Ordinary words. No outline letters or matrix codes.]
 
-- What this hour is for:
+- What this hour is for: (same job-context idea as the student **Intro**)
 - How it hooks to the hour before:
 - How it hooks to the hour after:
 - Why we are doing it this way:

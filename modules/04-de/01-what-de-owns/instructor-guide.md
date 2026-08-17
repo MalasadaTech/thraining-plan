@@ -18,7 +18,7 @@ Name what DE owns, and sort a piece of work to DE, a nominator, 1.3, or a block.
 
 **Context (plain language):**
 
-- What this hour is for: The front door of Detection Engineering. Own the set. Sort the work.
+- What this hour is for: Normal DE work starts with knowing what is yours. Sort: DE, nominator, 1.3, or a block. Then own the set.
 - How it hooks to the hour before: 0.2 named the job in one sentence. 0.3 said a hunt package can go to DE. 0.5 said this track sits last.
 - How it hooks to the hour after: 4.2 is making a detection sound and meeting shop requirements.
 - Why we are doing it this way: You wanted DE built with the new short rules. This hour only names the desk so later hours can stay on one kind of work.

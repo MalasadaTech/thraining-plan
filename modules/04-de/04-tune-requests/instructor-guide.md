@@ -18,7 +18,7 @@ Name the tune inbox, require which live rule plus a pointer, pick one of five an
 
 **Context (plain language):**
 
-- What this hour is for: Live-rule tune requests. Which rule + pointer. Five answers. Reject the three mixes.
+- What this hour is for: After rules are live, SOC asks DE to change them. That is a tune request, not a new nomination. Which rule + pointer. Five answers. Reject the three mixes.
 - How it hooks to the hour before: 4.3 was a nomination (something new, with a need + pointer). This hour is a rule that is already live — same kind of pointer.
 - How it hooks to the hour after: 4.5 is hunt and intel packages.
 - Why we are doing it this way: You wanted a tune request to include context, the same idea as a nomination: point at an investigation or intel report.
