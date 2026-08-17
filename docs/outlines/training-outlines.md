@@ -72,7 +72,7 @@ c. Parent-child (PPID, parent name, parent command line)
 d. Integrity / user context (where logged)  
 e. Hashes and original filename (where logged)  
 f. Process access (Sysmon Event ID 10) as “who touched whom,” not a separate unit  
-g. How this shows up: Sysmon 1 / 5 / 10; MDE `DeviceProcessEvents` (key fields: `ActionType`, `InitiatingProcess*`, `ProcessCommandLine`, SHA256)  
+g. How this shows up: Sysmon 1 / 5 / 10; MDE `DeviceProcessEvents` (key fields: `ActionType` — `ProcessCreated`, `OpenProcess`; `InitiatingProcess*`, `ProcessCommandLine`, SHA256). The full `ActionType` list is in the Defender portal schema — do not invent values.  
 
 **1.1.1.1 [T] Process activity tasks**  
 1. Analyze a process event (Sysmon or MDE) and accurately describe what occurred  
