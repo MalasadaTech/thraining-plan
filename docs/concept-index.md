@@ -1414,6 +1414,36 @@ Also: 4.5.2, extra infrastructure is not a DE deploy
 
 See also: [a block is not a DE deploy](#a-block-is-not-a-de-deploy), [add, change, or no new rule](#add-change-or-no-new-rule)
 
+### when to modify, retire, or leave
+
+Also: lifecycle call, standing call on a live rule
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.6 Detection lifecycle](../modules/04-de/06-detection-lifecycle/) | DE, SOC, Hunter, CTI |
+
+See also: [lifecycle reasons](#lifecycle-reasons), [tune / exception / replace / leave / retire](#tune--exception--replace--leave--retire)
+
+### lifecycle reasons
+
+Also: still useful, too noisy, threat gone, sensor gone, nomination replaced it
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.6 Detection lifecycle](../modules/04-de/06-detection-lifecycle/) | DE, SOC, Hunter, CTI |
+
+See also: [when to modify, retire, or leave](#when-to-modify-retire-or-leave), [a block is not automatic retire](#a-block-is-not-automatic-retire)
+
+### a block is not automatic retire
+
+Also: earns its keep, 4.6.2
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.6 Detection lifecycle](../modules/04-de/06-detection-lifecycle/) | DE, SOC, Hunter, CTI |
+
+See also: [a block is not a DE deploy](#a-block-is-not-a-de-deploy), [lifecycle reasons](#lifecycle-reasons)
+
 ### what an IOC is versus a TTP
 
 Also: IOC vs TTP, observable vs behavior
