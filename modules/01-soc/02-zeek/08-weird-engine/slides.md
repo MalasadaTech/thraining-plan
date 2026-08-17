@@ -1,246 +1,107 @@
 # Module 1.2.8 – Weird Engine  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.2.8 – Weird Engine  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Last 1.2 unit. Lead generator, not a verdict. CTI is A / 1a only.
+Last 1.2 hour. Lead, not verdict. Not notice.log.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Explain `name`, the `notice` flag, source/destination, and `uid` linking
-2. Analyze a Zeek `weird` log entry and describe what occurred
-3. Write a SIEM query for *specific* weird activity
-4. Pivot with `uid` to `conn`
+SOC analysts read the Zeek **`weird`** log: protocol behavior that is off-spec or uncommon.
 
-**Mapped Items:**  
-K: 1.2.8.1 | T: 1.2.8.2 | T: 1.2.8.3
+A row is a **lead**, not a verdict.
 
 **Speaker Notes:**  
-Do not grade CTI as SOC 5.
+1.2.7 was the file. This is “the session looked off.”
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Type and notice
+**Title:** Name, notice flag
 
-- Purpose of the weird log
-- Fields (outline a–c)
-- Noise vs lead
-- Three worked examples
-- Two queries
-- Knowledge check — close 1.2
+**`name`** — the weird type. The string you query.
+
+**`notice`** — whether *this* type was also raised as a notice.  
+Not a `notice.log` course.
 
 **Speaker Notes:**  
-1.3 is next unit.
+Outline a. Do not memorize the catalog.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – Who, and the UID
+**Title:** Addresses and UID
 
-The `notice` log (policy notices)  
-Writing Zeek scripts  
-Memorizing every weird `name`  
-Host process rows (**1.1**)  
-“Weird = incident”
+**`id.orig_*` → `id.resp_*`** — who talked to whom.
 
-**Key Point:** Describe *this* `weird` row.
+**`uid`** — same join as `conn` / `http` / `files`.  
+Empty → write “no uid.” Use IP/port/time.
 
 **Speaker Notes:**  
-Park notice-framework questions.
+Outline b–c.
 
 ---
 
-### Slide 5 – Purpose of the weird Log
-**Title:** Purpose of the weird Log
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-- Zeek saw something **off-spec or uncommon**
-- A **lead**, often noise
-- Complements `conn` (what the session did)
-
-**Key Point:** The word “weird” is not a verdict.
+No process name.  
+No Zeek script authoring.  
+No “all weird is bad.”
 
 **Speaker Notes:**  
-Ask: “What was off, and who was talking?”
+1.3 is rule syntax.
 
 ---
 
-### Slide 6 – The Type
-**Title:** Weird Activity Type = name
+### Slide 6 – What good looks like
+**Title:** Describe it. Query something specific.
 
-**name** — the type string you query  
-**addl** — extra detail when present  
+One sentence: Zeek flagged this `name` between these IPs.
 
-Describe the string you have.  
-Do not inventory the whole catalog this hour.
+**Given:** `data_before_established`, dest `203.0.113.88:8080`, `uid` present.
+
+A query names a **specific** `name` (or dest).  
+Not “all `weird` rows.”
 
 **Speaker Notes:**  
-Outline a.
+Data before handshake on the same dest as the HTTP GET. Look at conn. Do not tell the PRD plot.
 
 ---
 
-### Slide 7 – notice Flag vs notice Log
-**Title:** Two Different Things
-
-**`weird.notice`** — boolean on this row  
-**`notice.log`** — a different log (policy notices)
-
-This lesson signs off on **`weird`**.  
-`notice=true` means “this type was also raised,” not “read the notice course.”
-
-**Speaker Notes:**  
-Two boxes on the board.
-
----
-
-### Slide 8 – Addresses and uid
-**Title:** Source, Dest, Pivot
-
-`id.orig_*` / `id.resp_*` — same 5-tuple as Conn  
-`uid` → `conn`, then `http` / `dns` / `ssl` / `files`
-
-No `uid` → write “no connection uid.” Use IP/port/time/`name`.
-
-**Speaker Notes:**  
-Outline b and c.
-
----
-
-### Slide 9 – Example 1: Noise
-**Title:** Example 1 – dns_unmatched_reply
-
-- Resolver `10.10.8.53` ↔ workstation
-- `notice: false`
-
-**Interpretation:**  
-Often noise. Do not ticket a single row.
-
-**Speaker Notes:**  
-Students first. Volume would change the story.
-
----
-
-### Slide 10 – Example 2: Timing Weird
-**Title:** Example 2 – data_before_established
-
-- `10.10.50.88` → `203.0.113.88:80`
-- Same pair as the HTTP POST beacon *if uid matches*
-
-**Interpretation:**  
-Lead. Stack with `conn` / `http`. Not C2 by itself.
-
-**Speaker Notes:**  
-Force the pivot.
-
----
-
-### Slide 11 – Example 3: notice true
-**Title:** Example 3 – HTTP Line Ending
-
-- `line_terminated_with_single_CR`
-- Dest `:8080` (update.exe session)
-- `notice: true`
-
-**Interpretation:**  
-Lead. Name the type and the flag. Pivot.
-
-**Speaker Notes:**  
-Do not teach notice policy.
-
----
-
-### Slide 12 – Pivoting with uid
-**Title:** Pivoting with the uid Field
-
-1. Interesting `weird` row  
-2. Copy `uid`  
-3. Search `conn` (`history`, `conn_state`, bytes)  
-4. Then the protocol log that matches the dest port  
-
-**Speaker Notes:**  
-Same habit as every 1.2 engine.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- All weird = incident  
-- Query with no `name`  
-- `weird.notice` = notice log  
-- Forgetting `uid`  
-- Asking for every Zeek `name`  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize each example (noise vs lead).
-2. Two queries: specific `name` from user subnets; volume (or `notice==true`).
-3. Explain the `uid` pivot (and empty uid).
-4. Identify the four items.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Purpose of `weird`? Why not an incident?
-2. Type field? `notice` field?
-3. `weird` vs `notice` log?
-4. Source / dest fields?
-5. `uid` — and if it is missing?
+1. A single `weird` row is an incident. True or false?  
+2. `name` `data_before_established`, dest `203.0.113.88:8080`, `uid` present. In one sentence, what occurred?  
+3. A SIEM query that matches every `weird` row is a good “specific weird activity” query. True or false?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 8 – Summary
+**Title:** Summary
 
-- `weird` = Zeek thought something was off. Lead, not verdict.
-- Query `name` (and volume). Read 5-tuple + `uid`.
-- `notice` on this row is a flag.
-- Unit **1.2** ends here. Next unit: **1.3** Detection Engineering.
+Type, two endpoints, UID.  
+A lead, not a verdict.  
+A query names a specific type.
+
+**Next:** **1.3.1** SIGMA rules
 
 **Speaker Notes:**  
-Do not open a SIGMA lab unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Weird — Quick Reference
-
-| Need | Look at |
-|------|---------|
-| Type | `name` (+ `addl`) |
-| Who | `id.orig_*` / `id.resp_*` |
-| Raised? | `notice` flag |
-| Session | `uid` → `conn` |
-
-**Coming next:** Module 1.3.1 – SIGMA rules
-
-**Footer:** SOC / Hunter / CTI Training Program
+1.2 is done. Detection syntax next. 4.x is how detections run as a service.

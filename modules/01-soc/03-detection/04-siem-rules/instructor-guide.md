@@ -1,168 +1,91 @@
 # Instructor Guide – Module 1.3.4 – SIEM Rules
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 1.3.4.1 A / B / C · 1.3.4.2 2b / 3c / 4c · 1.3.4.3 1a / 2b / 3c  
-- Hunter: 1.3.4.1 B / C / C · 1.3.4.2 2b / 3c / 4c · 1.3.4.3 2b / 3c / 4c  
-- CTI: 1.3.4.1 A / B / B · 1.3.4.2 1a / 2b / 3c · 1.3.4.3 1a / 1a / 2b  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- SOC: 1.3.4.1 A / B / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 1a / 2b / 3c  
+- Hunter: 1.3.4.1 B / C / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 2b / 3c / 4c  
+- CTI: 1.3.4.1 A / B / B ; 1.3.4.2 1a / 2b / 3c ; 1.3.4.3 1a / 1a / 2b  
+**Estimated Time:** 25–30 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach analysts to read a SIEM detection / correlation search, build one from **fields** or from **SIGMA**, and use wildcards/regex on purpose. Close unit **1.3**. Do not open **1.4**.
+Read a SIEM detection and propose a basic create from log fields or from SIGMA. Do not deploy it.
+
+**Context (plain language):**
+
+- What this hour is for: SOC analysts turn fields they already know into a named rule that can fire an alert.
+- How it hooks to the hour before: 1.3.1 wrote the SIGMA; 1.3.3 was bytes. This hour is the SIEM object.
+- How it hooks to the hour after: 1.4.1 is the alert that object creates — context and investigation, not more syntax.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c only. SOC create is 1a/2b/3c. This closes 1.3.
+- What we are *not* doing this hour: Deploy. Alert queue. Converter lab. Invented SIEM product names as policy. No lab.
+- Extra step: none.
+
+Use the encoded PowerShell + wscript translation. Do not tell the PRD plot.
 
 **Key Teaching Points:**
 - Name, table, logic, window, output.
-- Fields → filters (+ optional count/join).
+- Fields → where. SIGMA → the same mapping, then wrap it.
 - Wildcard vs regex.
-- SIGMA → table + `where` + wrap as a named rule.
-- SOC create **1a / 2b / 3c**. Propose, do not deploy.
-
-**Common Student Challenges:**
-- Unfiltered table as a “rule.”
-- Regex for a simple suffix.
-- Leaving SIGMA `uri` on `DeviceProcessEvents`.
-- Writing the alert-triage playbook.
-- Asking how to click Publish in the SIEM.
-- Grading SOC 3 as detection engineer.
+- Empty table is not a detection.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- 1.3.1 Example 1 YAML (or the student guide copy)
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Explain SIEM rule / correlation structure.
-2. Turn log fields into detections; regex vs wildcards.
-3. Analyze an existing SIEM rule.
-4. Create a basic rule from fields **or** SIGMA (propose only).
+Same as the student guide.
 
-**Mapped Items:**
-- K: 1.3.4.1 – SIEM rules
-- T: 1.3.4.2 – Analyze an existing SIEM rule
-- T: 1.3.4.3 – Create a basic SIEM detection from log fields or a SIGMA rule
+**Mapped Items:** K 1.3.4.1 ; T 1.3.4.2 ; T 1.3.4.3
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & Objectives      | 4 min    | Last 1.3 unit |
-| Structure                      | 10 min   | a |
-| Fields, regex/wildcards, SIGMA | 14 min   | b–c + task 2 paths |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 16 min   | One path is enough |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | Close 1.3 → 1.4 |
-| **Total**                      | **~70 min** | Stretch Example 2 if they ship no-filter |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | The object that fires the alert |
+| Key Concepts            | 16 min    | Structure, fields, SIGMA path |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 2 min     | |
+| **Total**               | **~25 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-### 1. Structure
+### 1. Key Concepts
 
-**Talking Points:**
-- Same 3/5/7 split. CTI create 1a / 1a / 2b.
-- Correlation = optional join/threshold. Single-table rules count.
-- Window is part of the rule. 24h no-filter is a warehouse, not a detection.
+Walk name / table / logic / window / output. Translate the 1.3.1 SIGMA in one breath.
 
-**Question to ask:**  
-“What table, and what would an analyst see in the output?”
-
-### 2. Fields, matching, SIGMA
-
-**Talking Points:**
-- Walk b–c. Map SIGMA selectors live if they have 1.3.1 notes.
-- Wildcard for `\Temp\` and `*.exe`. Regex only for `-e` / `-enc` / `-EncodedCommand` style variation.
-- Task 2 accepts **either** path. Do not require both.
-
-**Question to ask:**  
-“Did you need a regex, or would `has` / `endswith` do?”
-
-### 3. Examples
-
-**Example 1:** SIGMA → SIEM. Gold path.  
-**Example 2:** No filter.  
-**Example 3:** Field-based wildcard + count. Untuned threshold = lead.
-
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** 14–16 minutes. Either create path passes. Fail deploy. Fail 1.4 playbook.
-
-**Summaries:**
-- Example 1: Encoded PS from script host; from SIGMA; expected as a rule.
-- Example 2: All DeviceProcessEvents / 24h; not a detection; lead.
-- Example 3: GET `*.exe` count by orig; field-based; lead if threshold untested.
-
-**Office to shell analysis:**  
-`DeviceProcessEvents`, 5 min. Parent Office, child cmd/powershell. Fires on Office → shell. No `-enc` required. Output not listed — call that a gap.
-
-**Create — from fields (equivalent is fine):**
-
-```
-Name: PowerShell UA POST
-Source: Zeek http
-Window: 5 minutes
-Logic: method == "POST" and user_agent has "PowerShell"
-Output: ts, uid, id.orig_h, host, uri, user_agent
-```
-
-**Create — from SIGMA (equivalent is fine):**
-
-```
-Name: Office Spawns Cmd
-Source: DeviceProcessEvents
-Window: 5 minutes
-Logic:
-  InitiatingProcessFileName in ("winword.exe","excel.exe","outlook.exe")
-  and FileName in ("cmd.exe","powershell.exe")
-Output: Timestamp, DeviceName, FileName, ProcessCommandLine,
-        InitiatingProcessFileName
-```
-
-Matching note: `has "PowerShell"` = substring, not regex. `matches @"*.exe*"` = wildcard.
-
-SOC 3 pass: names table + two field filters + a window. SOC 5: coherent proposal + output fields.
+If they open the alert console: “1.4.”  
+If they want to deploy: “4.x / DE.”  
+If they put `uri` on DeviceProcessEvents: “Wrong table.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Pieces?**  
-   **Answer:** Name/description, source table, logic (filters / join / threshold), time window / schedule, output fields (and severity).  
+1. **A SIEM table with no filter is a detection. True or false?**  
+   **Answer:** False. You need logic (and a name, window, outputs).  
    **Explanation:** Outline a.
 
-2. **Fields → detection?**  
-   **Answer:** Pick the table, constrain the fields you already know, add enough specificity (and optional count/join) that it is not “all events.”  
-   **Explanation:** Outline b.
+2. **The given rule — what does it detect?**  
+   **Answer:** Process create of PowerShell with -enc and parent wscript.  
+   **Explanation:** Outline b and 1.3.8 task 1.
 
-3. **Wildcard vs regex?**  
-   **Answer:** Wildcard / `has` for a simple path or suffix. Regex when the token actually varies. Do not regex an `endswith`.  
+3. **When wildcard instead of regex?**  
+   **Answer:** When a substring or path is enough. Regex when the token actually varies.  
    **Explanation:** Outline c.
-
-4. **From SIGMA?**  
-   **Answer:** logsource → table, selectors → `where`, condition → boolean, then wrap with name, window, and outputs.  
-   **Explanation:** Task 2 + 1.3.1.
-
-5. **Deploy? Unfiltered table?**  
-   **Answer:** DE deploys. SOC proposes (1a / 2b / 3c). A table with no logic matches everything and is not a detection.  
-   **Explanation:** Example 2 + matrix.
 
 ---
 
 ## Additional Instructor Resources
 
-- Local analytics-rule template / required output fields
-- Next recommended module: 1.4.1 Alert context and investigation
+- Next: 1.4.1 Alert context and investigation

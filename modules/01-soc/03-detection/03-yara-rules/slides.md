@@ -1,246 +1,109 @@
 # Module 1.3.3 – YARA Rules  
 ## Slide Deck Content
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Estimated Delivery Time:** 25–30 minutes  
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.3.3 – YARA Rules  
-**Subtitle:** SOC Analyst Training (Hunter / CTI secondary)  
+**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Bytes in a file or memory. No dump lab. Propose, don’t deploy.
+Byte patterns. Propose, do not deploy. Not SIGMA. Not Suricata.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Explain purpose and `meta` / `strings` / `condition`
-2. Read ASCII, hex, and regex strings
-3. File scan vs memory scan
-4. Analyze an existing rule
-5. Create or modify a *basic* rule
+SOC analysts **read** a byte-pattern rule and **propose** a basic one.
 
-**Mapped Items:**  
-K: 1.3.3.1 | T: 1.3.3.2 | T: 1.3.3.3
+Scan a file you already have (**1.2.7**), or memory the shop already collects.
 
 **Speaker Notes:**  
-SOC create is 1a/2b/3c.
+Do not dump memory this hour.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Structure
+**Title:** Purpose and structure
 
-- Purpose and structure
-- Strings and conditions
-- Files vs memory
-- Three worked examples
-- Analyze + create/modify
-- Knowledge check
+**YARA** — match bytes in a file or in memory.
+
+Need **`strings`** and a real **`condition`**.  
+**`meta`** is notes, not the match.
 
 **Speaker Notes:**  
-1.3.4 SIEM is next.
+Outline a. `condition: true` is not a proposal.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – Matching and where
+**Title:** ASCII, hex, regex; file vs memory
 
-SIGMA / Suricata syntax  
-How to dump process memory  
-Malware authoring  
-Host Event 11 as “the YARA hit”  
-Deploying the rule pack
+**ASCII** — `"update.exe" ascii nocase`.  
+**Hex** — `{ 4D 5A }` (`MZ`).  
+**Regex** — `/pattern/`. Easy to over-match.
 
-**Key Point:** Read the rule. Propose a basic pattern.
+**File** — `at 0` and `filesize` can apply.  
+**Memory** — usually drop those.
 
 **Speaker Notes:**  
-Park dump questions.
+Outline b–d. Same three techniques as Suricata, different syntax.
 
 ---
 
-### Slide 5 – Purpose
-**Title:** What YARA Is
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-- Pattern match on **bytes**
-- Scan a file or memory your site already has
-- Not a log query. Not a packet signature.
+No memory-acquisition how-to.  
+No YARA on a log row.  
+No production push.
 
 **Speaker Notes:**  
-Outline a.
+SIEM next.
 
 ---
 
-### Slide 6 – Structure
-**Title:** meta, strings, condition
+### Slide 6 – What good looks like
+**Title:** Read it. Propose a basic one.
 
-`rule Name { meta: ... strings: ... condition: ... }`
+**Given:** MZ at 0 **and** `"update.exe"`, `filesize < 5MB`.
 
-**meta** — notes, not a match  
-**strings** — `$mz`, `$s1`  
-**condition** — when it fires  
+**Detects:** a PE that contains that name. Fits the **1.2.7** extract.
 
-**Analyst Tip:** Strings without a real condition are not a proposal.
+`MZ at 0` alone matches Notepad.
 
 **Speaker Notes:**  
-Outline a/b.
+Do not tell the PRD plot.
 
 ---
 
-### Slide 7 – ASCII, Hex, Regex
-**Title:** Three Matching Techniques
-
-| Kind | YARA shape |
-|------|------------|
-| ASCII | `$s = "update.exe" ascii nocase` |
-| Hex | `$mz = { 4D 5A }` |
-| Regex | `$r = /checkin\.[a-z0-9-]+/` |
-
-Different syntax from Suricata. Same three words.
-
-**Speaker Notes:**  
-Outline c.
-
----
-
-### Slide 8 – Files vs Memory
-**Title:** How YARA Is Used
-
-**File** — extract (**1.2.7**), disk path → `at 0`, `filesize` OK  
-**Memory** — process space your platform scans → often **drop** `at 0` / `filesize`  
-
-If the tenant has no memory YARA, say so.
-
-**Speaker Notes:**  
-Outline d. No dump demo.
-
----
-
-### Slide 9 – Example 1: Useful File
-**Title:** Example 1 – MZ + update.exe
-
-- `$mz at 0 and $name and filesize < 5MB`
-
-**Interpretation:**  
-Useful file rule. Expected *as a rule*. Not a verdict.
-
-**Speaker Notes:**  
-Tie to 1.2.7 Ex 2.
-
----
-
-### Slide 10 – Example 2: MZ Only
-**Title:** Example 2 – Any PE
-
-- `{ 4D 5A }` at 0 only
-
-**Interpretation:**  
-Lead about the rule. Notepad matches.
-
-**Speaker Notes:**  
-Hex is fine. Condition is not.
-
----
-
-### Slide 11 – Example 3: Target Matters
-**Title:** Example 3 – nightowl string
-
-- String-only condition
-- File **or** memory depending on the scanner
-
-**Interpretation:**  
-Say the target. Do not bolt `at 0` onto a memory scan.
-
-**Speaker Notes:**  
-Students pick a target.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- MZ-only  
-- File conditions on memory  
-- Regex that matches everything  
-- Asking how to dump memory  
-- Treating YARA as SIGMA  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Proposal Ideas
-**Title:** Useful Starting Points
-
-- MZ + distinctive name (`update.exe`, `invoice.jpg`)  
-- Distinctive domain string  
-- Always: `meta.description` + a size cap on **file** rules  
-
-**Speaker Notes:**  
-No packer/exploit lab.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 14–16 minutes
-
-1. Summarize each example.
-2. Analyze MZ + `invoice.jpg`.
-3. Modify Example 2 **or** create MZ + one training string + filesize.
-4. File vs memory: what would you drop?
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. YARA vs SIGMA vs Suricata?
-2. meta / strings / condition?
-3. ASCII vs hex vs regex in YARA?
-4. File vs memory conditions?
-5. Who deploys? Why not MZ-only?
+1. YARA is a SIEM query language. True or false?  
+2. The given rule — what does it detect, in one sentence?  
+3. Why is `{ 4D 5A } at 0` alone a poor proposal?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 8 – Summary
+**Title:** Summary
 
-- Bytes: meta + strings + condition.
-- ASCII / hex / regex.
-- File ≠ memory in the condition.
-- Propose only. Next: SIEM rules (**1.3.4**).
+Meta + strings + condition.  
+ASCII / hex / regex.  
+File vs memory.  
+You propose. You do not deploy.
+
+**Next:** **1.3.4** SIEM rules
 
 **Speaker Notes:**  
-Do not open a SIEM lab unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** YARA — Quick Reference
-
-| Need | Look at |
-|------|---------|
-| Notes | `meta` |
-| Patterns | `strings` |
-| Logic | `condition` |
-| File | `at 0`, `filesize` |
-| Memory | string-first; drop file offsets |
-
-**Coming next:** Module 1.3.4 – SIEM rules
-
-**Footer:** SOC / Hunter / CTI Training Program
+Log fields or a SIGMA rule next.
