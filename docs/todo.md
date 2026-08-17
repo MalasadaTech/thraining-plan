@@ -36,6 +36,7 @@ Then:
 - [x] Decide leftover Harbor map items that do not fit a law firm (OT, payroll) — OT and payroll are not A12 plot; see story bible
 - [ ] Rename Night Owl → Pink River Dolphin (PRD) and Harbor → Dixon, Yamada, & Associates (DYA) in the lessons
 - [x] Write the companion story (see [companion-story/](companion-story/))
+- [ ] Add common **initial access** material (malspam / phishing, CVE exploits, watering hole, SEO poisoning, drive-by download, and the like). Gate 1 first — do not invent IDs. Then develop it into the [companion story](companion-story/) (bible first, then the story; do not invent a second plot)
 - [x] Shared floor in `00-intro`, taught before SOC: frameworks, tool survey, environment. Retired `1.7`, `1.8.2`–`1.8.5`. SOC ends at 1.5.
 - [x] Rewrite `0.8` (00.08): why every role must understand infrastructure and signal flow. Do **not** invent a site card / Harbor architecture.
 - [ ] Review everything and make sure it makes sense
@@ -45,3 +46,5 @@ Then:
 ## Companion story
 
 Moved to [companion-story/](companion-story/). The nine-beat spine is in [companion-story/outline.md](companion-story/outline.md). The finished retelling is [companion-story/story.md](companion-story/story.md).
+
+Later: fold common initial access (malspam / phishing, CVE exploits, watering hole, SEO poisoning, drive-by download) into the story after it is on the outline and in the [story bible](story-bible.md).
