@@ -719,7 +719,7 @@ Also: Harbor platform and path, applicable vs relevant TTP, classroom apply crit
 |----------|--------|-------|
 | Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
-Organizational impact is later (`3.8.4`). Harbor facts are [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/).
+Organizational impact is later (`3.8.4`). Kinds of site facts (obtain from your shop) are [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/).
 
 See also: [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report), [identifying relevant TTPs in a report](#identifying-relevant-ttps-in-a-report)
 
@@ -729,7 +729,7 @@ Also: pay-db-01, crown jewel host, critical asset
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
 See also: [key network segments and data flow](#key-network-segments-and-data-flow), [site-specific incident response processes](#site-specific-incident-response-processes)
 
@@ -929,7 +929,7 @@ Also: fw-edge, fw-ot, network choke point
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors)
 
@@ -939,7 +939,7 @@ Also: mail-edge, MX path, email flow vs egress
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [identifying which orientation fact applies and rejecting the adjacent fact](#identifying-which-orientation-fact-applies-and-rejecting-the-adjacent-fact)
 
@@ -2250,7 +2250,7 @@ Also: orientation neighbor, egress vs email vs sensor gap
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 | Used | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
@@ -2512,7 +2512,7 @@ Also: user VLAN, OT segment, Harbor segments
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [crown jewel / critical assets](#crown-jewel--critical-assets)
 
@@ -2884,7 +2884,7 @@ Also: span-1, span-2, no OT span, where sensors sit
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
 See also: [PCAP verifies or expands a Zeek log](#pcap-verifies-or-expands-a-zeek-log), [edge firewall / choke points](#edge-firewall--choke-points)
 
@@ -2924,7 +2924,7 @@ Also: fw-edge-01, fw-guest, NAT egress
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
 See also: [email flow and related systems](#email-flow-and-related-systems), [edge firewall / choke points](#edge-firewall--choke-points)
 
@@ -4338,7 +4338,7 @@ Also: vpn-vendor, idp-corp, federation access
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
+| Taught | [0.8 Environment / signal flow](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
 See also: [key network segments and data flow](#key-network-segments-and-data-flow), [identifying which orientation fact applies and rejecting the adjacent fact](#identifying-which-orientation-fact-applies-and-rejecting-the-adjacent-fact)
 

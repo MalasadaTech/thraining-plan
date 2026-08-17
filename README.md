@@ -38,7 +38,7 @@ Two ID systems exist. Do not mix them in filenames.
 | **Matrix item** (canonical) | `1.2.2.1`, `1.2.2.2` | Proficiency tracking, mapped items in guides |
 | **Outline heading** | `1.2.2` Conn knowledge, `1.2.3` Conn tasks | Curriculum design only |
 
-A **module** is a teaching unit. It may cover one outline knowledge item plus its matching tasks. **Teach order** (IDs stay): full `00-intro` first (`0.1` layout → `0.2`–`0.5` → `0.6` / `0.7` / `1.8.1`) → SOC `1.1`–`1.4` → **SOC ends at `1.6` reporting** → CTI → hunt → DE. Map: [modules/00-intro/README.md](modules/00-intro/README.md). **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+A **module** is a teaching unit. It may cover one outline knowledge item plus its matching tasks. **Teach order** (IDs stay): full `00-intro` first (`0.1` layout → `0.2`–`0.5` → `0.6` / `0.7` / `0.8`) → SOC `1.1`–`1.4` → **SOC ends at `1.6` reporting** → CTI → hunt → DE. Map: [modules/00-intro/README.md](modules/00-intro/README.md). **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 Folder names are not dotted IDs:
 
@@ -78,7 +78,7 @@ Folder names are not dotted IDs:
 | `modules/01-soc/05-reporting/01-report-types` | `1.6.1.1`–`1.6.1.2` | `1.6.1` + `1.6.1.1` |
 | `modules/01-soc/05-reporting/02-reporting-timelines` | `1.6.2.1`–`1.6.2.2` | `1.6.2` + `1.6.2.1` |
 | `modules/01-soc/05-reporting/03-notification-distribution` | `1.6.3.1`–`1.6.3.2` | `1.6.3` + `1.6.3.1` |
-| `modules/00-intro/08-environment/01-orientation` | `1.8.1.1`–`1.8.1.2` | `1.8.1` + `1.8.1.1` (00, before SOC; rewrite later) |
+| `modules/00-intro/08-environment/01-orientation` | `0.8` / `0.8.1` | `0.8` + `0.8.1` (00.08) |
 | `modules/03-cti/01-core-intel/01-data-info-intel` | `3.1.1` / `3.1.1.1` | `3.1.1` + `3.1.1.1` |
 | `modules/03-cti/01-core-intel/02-intelligence-lifecycle` | `3.1.2` / `3.1.2.1` | `3.1.2` + `3.1.2.1` |
 | `modules/03-cti/01-core-intel/03-intelligence-types` | `3.1.3` / `3.1.3.1` | `3.1.3` + `3.1.3.1` |

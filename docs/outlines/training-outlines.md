@@ -10,7 +10,7 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 **Stay in this lesson:** a short note under a unit or child says what this hour is *not*. It is not extra syllabus. Follow it when writing or revising the lesson. How to write the lesson is [generate-module.md](../generate-module.md).
 
-**Teach order** (IDs stay): `0` → shared floor → SOC `1` → **CTI `3`** → hunt `2` → DE `4`. This file is in that order. Folder names still follow IDs (`03-cti`, `02-hunter`).
+**Teach order** (IDs stay): `0` (includes `0.6`–`0.8`) → SOC `1` → **CTI `3`** → hunt `2` → DE `4`. This file is in that order. Folder names still follow IDs (`03-cti`, `02-hunter`).
 
 ---
 
@@ -18,7 +18,7 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 Everyone (SOC, Hunter, CTI, DE). Lessons live under `modules/00-intro/`. This whole section is taught **before SOC 1.1**. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
 
-Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`**. Tool survey is **`0.7`**. Shared-floor ID that stays: `1.8.1`. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
+Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`**. Tool survey is **`0.7`**. Environment / signal flow is **`0.8`**. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
 
 **0.1 [K] How this course is laid out**  
 Stay in this lesson: the map of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
@@ -102,21 +102,9 @@ b. When to use each tool
 **0.7.1 [T] External tools tasks**  
 1. Select the appropriate external tool for a given enrichment or analysis need  
 
----
+**0.8 [K] Environment / signal flow**  
+Taught after `0.7`, still before SOC. All four roles. Lessons live under `modules/00-intro/08-environment/`. Stay in this lesson: why every role must know the site’s infrastructure and how signal flows, and how to tell two *kinds* of fact apart. These are questions you take to **your shop**. Do **not** invent a site card, spans, ticket names, or DYA / Harbor architecture. Not Zeek field reading (`1.2`). Not host-observed network (`1.1.4`). **Retired:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
 
-# Shared floor (still `00`, still before SOC)
-
-Taught after `0.1`–`0.7`, **before SOC 1.1**. All four roles. Lessons live under `modules/00-intro/08-environment/`.
-
-Write only the asked child. Not DTF (`3.7.4`). Not hunt planning (`2.5`). Not actor products (`3.11`). Not TIP nav (`3.3.1`). Not VT Relations / platform depth (`3.9`). Not reporting products (`1.6` — last SOC hour). Not a PCAP analysis course. Role-local lists stay at `2.7` / `3.12` / `4.8`.
-
-**Retired (do not teach):** `1.7` shift change, `1.8.2` PCAP handling, `1.8.3` tool access, `1.8.4` notes, `1.8.5` IR process.
-
-**Environment / signal flow** — ID `1.8.1`.  
-
-**Rewrite later (earmarked):** this hour should teach *why every role must understand the site’s infrastructure and how signal flows* (where visibility comes from, where it does not). Do **not** invent a site card, spans, ticket names, or Harbor/DYA architecture as policy. Current lesson still has a classroom card — leave it until that rewrite. Not Zeek field reading (`1.2`). Not host-observed network (`1.1.4`).
-
-**1.8.1 [K] Environment orientation**  
 a. Path to the internet / network egress points  
 b. Key network segments and data flow  
 c. Email flow and related systems  
@@ -125,14 +113,14 @@ e. Trusted third-party access / federation
 f. Crown jewel / critical assets  
 g. PCAP collection points / sensors  
 
-**1.8.1.1 [T] Environment orientation tasks**  
-1. Identify which orientation fact applies to a given situation and why it is not the adjacent fact  
+**0.8.1 [T] Environment / signal flow tasks**  
+1. Identify which kind of fact applies to a given situation and why it is not the adjacent kind  
 
 ---
 
 # 1. SOC Analyst Fundamentals
 
-After the full `00` block (front door + shared floor). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.6**. **SOC ends at 1.6 reporting.** The RFI is the door into CTI. Next section in this file is **3. CTI** (not 2. Hunt).
+After the full `00` block (`0.1`–`0.8`). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.6**. **SOC ends at 1.6 reporting.** The RFI is the door into CTI. Next section in this file is **3. CTI** (not 2. Hunt).
 
 **1.1 [K/T] Endpoint Logs**
 
@@ -208,7 +196,7 @@ d. How this shows up: Sysmon 6 / 7; MDE `DeviceImageLoadEvents`
 
 **1.2 [K/T] Zeek and Zeek Engines**
 
-Network-sensor telemetry. Host-observed process/file/network/registry/image activity is 1.1. Stay in this lesson: this is not a PCAP analysis course. PCAP is mentioned on **1.2.1** (why you pull it). Applying PCAP against an alert is **1.4.1**. Where sensors sit is **1.8.1.g**. Download / view is **1.8.3** if the shop lists them.
+Network-sensor telemetry. Host-observed process/file/network/registry/image activity is 1.1. Stay in this lesson: this is not a PCAP analysis course. PCAP is mentioned on **1.2.1** (why you pull it). Applying PCAP against an alert is **1.4.1**. Where sensors sit is **0.8.g**. Download / view is **1.8.3** if the shop lists them.
 
 **1.2.1 [K] Zeek concepts**  
 Stay in this lesson: what Zeek is, how engines extract, and that PCAP is the usual next artifact. Not Wireshark. Not site download path. Not **1.4.1**.
@@ -338,7 +326,7 @@ c. Matching techniques: regex and wildcards
 
 **1.4 [K/T] Alerts**
 
-Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it. **1.4.1.e** applies PCAP against the alert. Why you pull PCAP is **1.2.1**. Sensors are **1.8.1.g**. Download / view is **1.8.3** if the shop lists them.
+Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it. **1.4.1.e** applies PCAP against the alert. Why you pull PCAP is **1.2.1**. Sensors are **0.8.g**. Download / view is **1.8.3** if the shop lists them.
 
 **1.4.1 [K] Alert context and investigation**  
 a. Viewing the context provided by the alert  
@@ -784,7 +772,7 @@ b. How to evaluate, prioritize, and respond to an RFI
 
 **3.12 [K/T] Site-Specific CTI Knowledge and Tasks**  
 
-Write only the asked child unless asked for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Every org/section has its own; a new analyst obtains them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. Environment orientation and tool access are on the **shared floor** (`1.8.1`, `1.8.3`).
+Write only the asked child unless asked for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Every org/section has its own; a new analyst obtains them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. Environment / signal flow is **`0.8`**. Tool access (`1.8.3`) is retired.
 
 **3.12.1 [K] Local intelligence requirements and priorities**  
 a. Current Priority Intelligence Requirements (PIRs) / intelligence priorities  
@@ -945,7 +933,7 @@ b. Hand-off process to SOC, IR, or CTI
 
 # 4. Detection Engineer
 
-Taught last: intro → shared floor → SOC → CTI → hunting → this section. Rule *syntax* and a first read/write are **1.3**. This section is how detections are run as a service. Environment orientation (`1.8.1`) was on the shared floor.
+Taught last: intro → shared floor → SOC → CTI → hunting → this section. Rule *syntax* and a first read/write are **1.3**. This section is how detections are run as a service. Environment / signal flow (`0.8`) was in the `00` block.
 
 SOC, hunt, and CTI may **nominate** a detection. The nomination does not need to be perfect. DE reviews it, makes it sound, tunes it, meets shop requirements (meta fields and the like), and deploys.
 

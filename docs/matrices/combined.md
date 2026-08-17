@@ -17,7 +17,7 @@
 
 Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `3.1`, `2.1`, `4.1`, …). Those match the `#` column. **Teach order** is SOC `1` → CTI `3` → hunt `2` → DE `4` (IDs stay). Do not assign work by old display numbers.
 
-Section **0** includes Detection Engineer (same codes as the other roles), **`0.6` frameworks**, and **`0.7` tool survey**. The **shared floor** (`1.8.1`) is taught after **0.7** and also includes DE. Other **1–3** rows stay three columns until we rate DE on them. Section **4** has a Detection Engineer column. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+Section **0** includes Detection Engineer (same codes as the other roles), **`0.6` frameworks**, **`0.7` tool survey**, and **`0.8` environment / signal flow**. Other **1–3** rows stay three columns until we rate DE on them. Section **4** has a Detection Engineer column. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 ---
 
@@ -62,6 +62,17 @@ Taught after **0.6**, before SOC **1.1** (`00.07`). Outline K/T IDs match this t
 
 ---
 
+## 0.8 Environment / signal flow (all four roles)
+
+Taught after **0.7**, before SOC **1.1** (`00.08`). Outline K/T IDs match this table (`0.8` K, `0.8.1` T). Kinds of facts to obtain from **your shop**. Do not invent a site card. Not Zeek (`1.2`). Not host-observed network (`1.1.4`). DE codes match the shared-intro pattern (not DE-primary).
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
+|---|------|------|-----------|--------------|-----------|----------|
+| 0.8 | Environment / signal flow | K | A / B / C | B / C / C | A / B / B | A / B / B |
+| 0.8.1 | Identify which kind of fact applies and why it is not the adjacent kind | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 2b / 3c | 2b / 3c / 4c |
+
+---
+
 ## 1.1 Endpoint Logs & Telemetry Analysis (Primarily SOC)
 
 Host-observed activity (Sysmon / MDE). Protocol deep-dive is 1.2 Zeek.
@@ -90,7 +101,7 @@ Host-observed activity (Sysmon / MDE). Protocol deep-dive is 1.2 Zeek.
 
 ## 1.2 Zeek & Network Telemetry (Primarily SOC + Hunter)
 
-`1.2.1` includes a mention that PCAP is normally pulled to verify or expand a Zeek log. Apply-versus-alert is `1.4.1.6`. Sensors are `1.8.1.g`.
+`1.2.1` includes a mention that PCAP is normally pulled to verify or expand a Zeek log. Apply-versus-alert is `1.4.1.6`. Sensors are `0.8.g`.
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
@@ -174,17 +185,6 @@ Three teaching units. Tasks apply the knowledge they sit under. Alert SLA clocks
 | 1.6.2.2 | Given timestamps, identify which report timeline applies and whether it is at risk | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
 | 1.6.3.1 | Notification and distribution | K | A / B / C | A / B / B | B / C / C |
 | 1.6.3.2 | Route a report: name recipients, leadership awareness, and the approved channel | T | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
-
----
-
-## 1.8 Environment / signal flow (`00`, before SOC)
-
-`1.8.1` stays. **Rewrite later:** why every role must understand infrastructure and signal flow — do not invent a site card. **Retired:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
-|---|------|------|-----------|--------------|-----------|----------|
-| 1.8.1.1 | Environment orientation | K | A / B / C | B / C / C | A / B / B | A / B / B |
-| 1.8.1.2 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 2b / 3c | 2b / 3c / 4c |
 
 ---
 
@@ -491,7 +491,7 @@ Taught last. **1.3** is rule syntax / first read-write. Nominations from SOC, hu
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
 - Section `0` is the front door (`0.1` layout; `0.2`–`0.5` operate; `0.4.1` T). Same codes for SOC, Hunter, CTI, and DE. Shared floor after that, still before SOC.
-- Shared floor after `0.7`, still before SOC: `1.8.1`. `0.6` frameworks and `0.7` tool survey live in section `0`. Those tables include a DE column where already rated. SOC ends at `1.6`. Other `1`–`3` rows stay three columns until we rate DE on them.
-- **`1.8.2` is retired.** PCAP why/when is `1.2.1`. Apply-versus-alert is `1.4.1.6`. Sensors are `1.8.1.g`. Download/view is `1.8.3` if the shop lists them.
+- Section `0` includes `0.6` frameworks, `0.7` tool survey, and `0.8` environment / signal flow. Those tables include a DE column. SOC ends at `1.6`. Other `1`–`3` rows stay three columns until we rate DE on them.
+- **`1.8.2` is retired.** PCAP why/when is `1.2.1`. Apply-versus-alert is `1.4.1.6`. Sensors are `0.8.g`. Download/view is `1.8.3` if the shop lists them.
 - Section `4` is Detection Engineer (`4.1`–`4.8`). DE is primary (`docs/matrices/de.md`). Cross-role awareness lives **only** on this combined sheet — not on the SOC, hunter, or CTI sheets. Sensor unit `4.7` is lighter. Site unit `4.8` is obtain-and-follow.
 - Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`) at the SOC/CTI seam. Shift change is two units (`1.7.1`–`1.7.2`). Leftover SOC site is `1.8.4` notes and `1.8.5` IR. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.

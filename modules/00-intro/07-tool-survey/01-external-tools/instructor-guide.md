@@ -82,4 +82,4 @@ Walk the four-row table. Do not open a vendor tab. For the select: hash + reputa
 
 ## Additional Instructor Resources
 
-- Next: 1.8.1 Environment / signal flow
+- Next: 0.8 Environment / signal flow

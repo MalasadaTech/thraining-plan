@@ -72,13 +72,13 @@ Platform depth and a Relations graph are later (**3.9**). You do not need a live
 
 Four tools. Match the need. Reject the neighbor. Do not open the sandbox when the question is history, and do not treat a page scan as PDNS.
 
-**Next:** **1.8.1** Environment / signal flow.
+**Next:** **0.8** Environment / signal flow.
 
 ---
 
 ## 4. Related modules
 
 - 0.6.3 – Cyber Kill Chain (previous)
-- 1.8.1 – Environment / signal flow (next)
+- 0.8 – Environment / signal flow (next)
 - 3.3.1 – Internal TIP (later)
 - 3.9 – Platform depth (later)

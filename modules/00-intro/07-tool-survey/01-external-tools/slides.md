@@ -83,7 +83,7 @@ Answers only in the instructor guide.
 ### Slide 7 – Next
 **Title:** Next
 
-**1.8.1** Environment / signal flow
+**0.8** Environment / signal flow
 
 **Speaker Notes:**  
 Where visibility comes from. Not a site-card invention hour.

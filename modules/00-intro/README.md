@@ -11,5 +11,5 @@ Everyone. Taught **before SOC**. Folder order is teach order.
 | [05-where-jobs-overlap](05-where-jobs-overlap/) | `0.5` | Where the jobs lightly overlap |
 | [06-frameworks](06-frameworks/) | `0.6` | ATT&CK, Diamond, Kill Chain |
 | [07-tool-survey](07-tool-survey/) | `0.7` | VT / AnyRun / Silent Push / URLScan |
-| [08-environment](08-environment/) | `1.8.1` | Environment / signal flow (rewrite later) |
+| [08-environment](08-environment/) | `0.8` | Environment / signal flow |
 
