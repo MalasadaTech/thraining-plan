@@ -160,4 +160,4 @@ An ATT&CK tactic name is **not** a Kill Chain stage. A GET of `update.exe` can b
   - 3.7.1 – ATT&CK for CTI
   - 3.7.4 – DTF (next)
 - Intelligence-Driven Computer Network Defense (Hutchins, Cloppert, Amin)
-- `modules/shared/frameworks/` (reference; do not copy here)
+- `modules/00-intro/06-frameworks/` (reference; do not copy here)

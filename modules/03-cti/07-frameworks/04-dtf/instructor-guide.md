@@ -21,7 +21,7 @@ Real DTF: pick **PTA + P**, cite the characteristic, name candidate infra, name 
 - SOC K is **A / A / B**. Hunter K is **A / B / B**. CTI **4d** on 3.7.4.1–2 = distinctive vs weak pivot (NS+substring vs /24), not a number. 3.7.4.3 is **4c**.
 - Survey four tactics. Apply Domain + IP. SSL/HTTP stay named unless you overlay a cert/page card.
 - 3.8.1 still owns the generic hop sentence. This hour’s product is the **ID line**.
-- Do not copy `modules/shared/frameworks/` into this folder.
+- Do not copy `modules/00-intro/06-frameworks/` into this folder.
 
 **Common Student Challenges:**
 - Reaching for the old mesh+recency+reach card.

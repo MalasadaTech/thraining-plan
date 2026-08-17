@@ -14,7 +14,7 @@
 | 3.7.4.2 | T | Use a selected DTF pivot to guide the next enrichment or lookup | 3.7.4.2 task 1 |
 | 3.7.4.3 | T | Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain | 3.7.4.3 task 1 |
 
-The lesson ID is **3.7.4**. Source of truth: [MalasadaTech/defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Use **only real PTA/P IDs**. Do not invent scores or P-codes. ATT&CK IDs are **3.7.1**. Diamond is **3.7.2**. Kill Chain is **3.7.3**. Generic hop without DTF IDs is **3.8.1**. RDAP/SOA/Silent Push *reading* is **3.5 / 3.6 / 3.9.3**. Do not copy `modules/shared/frameworks/` into this folder.
+The lesson ID is **3.7.4**. Source of truth: [MalasadaTech/defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Use **only real PTA/P IDs**. Do not invent scores or P-codes. ATT&CK IDs are **3.7.1**. Diamond is **3.7.2**. Kill Chain is **3.7.3**. Generic hop without DTF IDs is **3.8.1**. RDAP/SOA/Silent Push *reading* is **3.5 / 3.6 / 3.9.3**. Do not copy `modules/00-intro/06-frameworks/` into this folder.
 
 ## Concepts taught
 

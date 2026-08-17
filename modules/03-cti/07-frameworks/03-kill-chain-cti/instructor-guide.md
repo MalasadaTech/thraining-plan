@@ -19,7 +19,7 @@ Advanced Kill Chain for CTI: place a **report/activity set** on the seven stages
 - Do not re-teach the 1.5.3 seven-stage tour. One recap sentence, then the excerpt.
 - GET `update.exe` is **Delivery** on the chain even if **3.7.1** mapped it to T1105 / T1071.001. Frameworks do not share labels.
 - SOC K is **A / B / B** (not A/B/C). Task **2b / 3c / 4c**. Hunter/CTI **3c / 4c / 4c** (not 4d — that is Diamond / DTF). Do not collapse.
-- Do not copy `modules/shared/frameworks/` into this folder.
+- Do not copy `modules/00-intro/06-frameworks/` into this folder.
 
 **Common Student Challenges:**
 - Collapsing the whole set to Actions on Objectives.

@@ -9,7 +9,8 @@ Do these first (course order and story):
 - [x] Write 0.3 How work can move (after 0.2 is reviewed)
 - [x] Write 0.4 Where the jobs lightly overlap (after 0.3 is reviewed)
 - [x] Write 0.5 How this course is laid out (after 0.4 is reviewed; DYA / PRD highlighted)
-- [ ] Teach in this order (lesson IDs can stay as they are): intro → SOC analyst → CTI → hunting → detection engineers
+- [x] Reorg `00-intro`: `0.1` is layout; shared hours taught before SOC; `00-shared` removed
+- [x] Teach in this order (lesson IDs can stay as they are): intro → shared floor → SOC analyst → CTI → hunting → detection engineers
 - [x] Revise 1.1.2 Process activity (first 1.x review; 0/4 voice; no lab)
 - [x] Add 1.1.1 Endpoint activity map hour (bump process–image to 1.1.2–1.1.6)
 - [ ] Keep detections before alerts inside the SOC analyst block (current 1.3 then 1.4)
@@ -35,7 +36,8 @@ Then:
 - [ ] Decide leftover Harbor map items that do not fit a law firm (OT, payroll)
 - [ ] Rename Night Owl → Pink River Dolphin (PRD) and Harbor → Dixon, Yamada, & Associates (DYA) in the lessons
 - [ ] Write the companion story (see the outline below)
-- [ ] Review for chances to combine content (for example, ATT&CK in every role — one frameworks section up front, with role-specific parts underneath)
+- [x] Shared floor in `00-intro`, taught before SOC: frameworks, tool survey, environment. Retired `1.7`, `1.8.2`–`1.8.5`. SOC ends at 1.6.
+- [ ] Rewrite `1.8.1` (00.08): why every role must understand infrastructure and signal flow. Do **not** invent a site card / Harbor architecture. Current lesson still has a classroom card.
 - [ ] Review everything and make sure it makes sense
 - [ ] Check the reference links that are already there
 - [ ] Look for places to add more reference links

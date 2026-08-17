@@ -18,11 +18,13 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 
 | Module ID | Folder |
 |-----------|--------|
-| 0.1 | [modules/00-intro/01-what-a-soc-is](../modules/00-intro/01-what-a-soc-is/) |
-| 0.2 | [modules/00-intro/02-jobs-in-one-sentence](../modules/00-intro/02-jobs-in-one-sentence/) |
-| 0.3 | [modules/00-intro/03-how-work-moves](../modules/00-intro/03-how-work-moves/) |
-| 0.4 | [modules/00-intro/04-where-jobs-overlap](../modules/00-intro/04-where-jobs-overlap/) |
-| 0.5 | [modules/00-intro/05-course-layout](../modules/00-intro/05-course-layout/) |
+| 0.1 | [modules/00-intro/01-course-layout](../modules/00-intro/01-course-layout/) |
+| 0.2 | [modules/00-intro/02-what-a-soc-is](../modules/00-intro/02-what-a-soc-is/) |
+| 0.3 | [modules/00-intro/03-jobs-in-one-sentence](../modules/00-intro/03-jobs-in-one-sentence/) |
+| 0.4 | [modules/00-intro/04-how-work-moves](../modules/00-intro/04-how-work-moves/) |
+| 0.5 | [modules/00-intro/05-where-jobs-overlap](../modules/00-intro/05-where-jobs-overlap/) |
+
+All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `1.5`, `3.3.2`, `1.8.1`. **Retired:** `1.7`, `1.8.2`–`1.8.5`. SOC ends at `1.6`.
 | 1.1.1 | [modules/01-soc/01-endpoint/01-endpoint-activity](../modules/01-soc/01-endpoint/01-endpoint-activity/) |
 | 1.1.2 | [modules/01-soc/01-endpoint/02-process-activity](../modules/01-soc/01-endpoint/02-process-activity/) |
 | 1.1.3 | [modules/01-soc/01-endpoint/03-file-system-activity](../modules/01-soc/01-endpoint/03-file-system-activity/) |
@@ -46,19 +48,13 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 1.4.3 | [modules/01-soc/04-alerts/03-false-positive-causes](../modules/01-soc/04-alerts/03-false-positive-causes/) |
 | 1.4.4 | [modules/01-soc/04-alerts/04-categorizations](../modules/01-soc/04-alerts/04-categorizations/) |
 | 1.4.5 | [modules/01-soc/04-alerts/05-sla-response-times](../modules/01-soc/04-alerts/05-sla-response-times/) |
-| 1.5.1 | [modules/01-soc/05-frameworks/01-attck](../modules/01-soc/05-frameworks/01-attck/) |
-| 1.5.2 | [modules/01-soc/05-frameworks/02-diamond-model](../modules/01-soc/05-frameworks/02-diamond-model/) |
-| 1.5.3 | [modules/01-soc/05-frameworks/03-cyber-kill-chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) |
-| 1.6.1 | [modules/01-soc/06-reporting/01-report-types](../modules/01-soc/06-reporting/01-report-types/) |
-| 1.6.2 | [modules/01-soc/06-reporting/02-reporting-timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) |
-| 1.6.3 | [modules/01-soc/06-reporting/03-notification-distribution](../modules/01-soc/06-reporting/03-notification-distribution/) |
-| 1.7.1 | [modules/01-soc/07-shift-change/01-changeover-process](../modules/01-soc/07-shift-change/01-changeover-process/) |
-| 1.7.2 | [modules/01-soc/07-shift-change/02-changeover-report](../modules/01-soc/07-shift-change/02-changeover-report/) |
-| 1.8.1 | [modules/01-soc/08-site-specific/01-environment-orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) |
-| 1.8.2 | [modules/01-soc/08-site-specific/02-pcap-handling](../modules/01-soc/08-site-specific/02-pcap-handling/) |
-| 1.8.3 | [modules/01-soc/08-site-specific/03-tool-access](../modules/01-soc/08-site-specific/03-tool-access/) |
-| 1.8.4 | [modules/01-soc/08-site-specific/04-investigation-notes](../modules/01-soc/08-site-specific/04-investigation-notes/) |
-| 1.8.5 | [modules/01-soc/08-site-specific/05-incident-response](../modules/01-soc/08-site-specific/05-incident-response/) |
+| 1.5.1 | [modules/00-intro/06-frameworks/01-attck](../modules/00-intro/06-frameworks/01-attck/) |
+| 1.5.2 | [modules/00-intro/06-frameworks/02-diamond-model](../modules/00-intro/06-frameworks/02-diamond-model/) |
+| 1.5.3 | [modules/00-intro/06-frameworks/03-cyber-kill-chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) |
+| 1.6.1 | [modules/01-soc/05-reporting/01-report-types](../modules/01-soc/05-reporting/01-report-types/) |
+| 1.6.2 | [modules/01-soc/05-reporting/02-reporting-timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) |
+| 1.6.3 | [modules/01-soc/05-reporting/03-notification-distribution](../modules/01-soc/05-reporting/03-notification-distribution/) |
+| 1.8.1 | [modules/00-intro/08-environment/01-orientation](../modules/00-intro/08-environment/01-orientation/) |
 | 2.1 | [modules/02-hunter/01-purpose](../modules/02-hunter/01-purpose/) |
 | 2.2.1 | [modules/02-hunter/02-methodology/01-hunt-types](../modules/02-hunter/02-methodology/01-hunt-types/) |
 | 2.2.2 | [modules/02-hunter/02-methodology/02-hunt-development](../modules/02-hunter/02-methodology/02-hunt-development/) |
@@ -86,7 +82,7 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 3.2.3 | [modules/03-cti/02-tradecraft/03-admiralty-code](../modules/03-cti/02-tradecraft/03-admiralty-code/) |
 | 3.2.4 | [modules/03-cti/02-tradecraft/04-cognitive-biases](../modules/03-cti/02-tradecraft/04-cognitive-biases/) |
 | 3.3.1 | [modules/03-cti/03-tools/01-internal-tip](../modules/03-cti/03-tools/01-internal-tip/) |
-| 3.3.2 | [modules/03-cti/03-tools/02-external-tools](../modules/03-cti/03-tools/02-external-tools/) |
+| 3.3.2 | [modules/00-intro/07-tool-survey/01-external-tools](../modules/00-intro/07-tool-survey/01-external-tools/) |
 | 3.4.1 | [modules/03-cti/04-file-similarity](../modules/03-cti/04-file-similarity/) |
 | 3.5.1 | [modules/03-cti/05-rdap-whois](../modules/03-cti/05-rdap-whois/) |
 | 3.6.1 | [modules/03-cti/06-advanced-dns](../modules/03-cti/06-advanced-dns/) |

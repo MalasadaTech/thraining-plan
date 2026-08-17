@@ -12,20 +12,26 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 ---
 
-# 0. How a SOC can operate
+# 0. Front door
 
-A short front door. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
+Everyone (SOC, Hunter, CTI, DE). Lessons live under `modules/00-intro/`. This whole section is taught **before SOC 1.1**. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
 
-Five children (`0.1`–`0.5`). Write only the asked child unless asked for the whole intro. All four roles sit this (SOC, Hunter, CTI, DE). DYA / PRD are course fiction, not site policy.
+Write only the asked child unless asked for the whole intro. Shared-floor IDs that stay: `1.5`, `3.3.2`, `1.8.1`. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
 
-The rest of the course follows this same sequence. The companion story at the end is this outline again, as one incident.
+**0.1 [K] How this course is laid out**  
+Stay in this lesson: the map of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
 
-**0.1 [K] What a SOC is**  
+a. Front door, then shared hours that apply to every role, then four tracks: SOC analyst, CTI, hunting, detection engineers  
+b. Inside SOC, detections *are* before the alert queue. SOC ends at reporting (`1.6`). The RFI is the door into CTI  
+c. After this intro and still before SOC: frameworks, tool survey, and environment / signal flow. Those apply to everyone. Role-local hunt / CTI / DE lists come later and differ by shop  
+d. This course uses one company and one adversary as fiction. Those names come in the next hour. After the lessons, a companion story retells the same flow as one incident  
+
+**0.2 [K] What a SOC is**  
 a. A place that watches for bad or suspicious activity and starts the response  
 b. It is a team sport: more than one job sits in or next to the SOC  
 c. This course uses one company (DYA) and one adversary (PRD). Those are fiction, not your site’s policy  
 
-**0.2 [K] Jobs in one sentence**  
+**0.3 [K] Jobs in one sentence**  
 a. **SOC analyst** — work the alert in front of you; start the hand-offs  
 b. **Incident response** — contain and recover (this course points at them; it does not train IR)  
 c. **CTI analyst** — answer the RFI; add context; find more of the adversary  
@@ -33,7 +39,7 @@ d. **Threat hunter** — look for more activity the alerts missed, from a hunt p
 e. **Detection engineer** — turn what we learned into lasting rules  
 f. **Firewall / IA** — block what intel names (a hand-off, not a track in this course)  
 
-**0.3 [K] How work can move**  
+**0.4 [K] How work can move**  
 a. An analyst gets an alert and triages it  
 b. They send it to incident response and notify leadership  
 c. They ask intel for more work on that alert (an RFI)  
@@ -42,24 +48,86 @@ e. Extra infrastructure can go to whoever blocks (firewall / IA)
 f. Intel can also hand hunters a hunt package  
 g. That same package can go to detection engineers to write or tune rules (MDE, YARA, Suricata, SIGMA, and so on)  
 
-**0.4 [K] Where the jobs lightly overlap**  
+**0.4.1 [T] Tasks**  
+1. Given a step in the flow, name the next hand-off and whose product it is (not how your site files the ticket)
+
+**0.5 [K] Where the jobs lightly overlap**  
 a. Everyone may look at the same host, log, or domain  
 b. The *product* is different: close/escalate an alert vs an intel note vs a hunt vs a rule  
 c. Asking the next desk is not doing that desk’s whole job  
 d. A smaller shop may have one person fill more than one of these jobs. This outline still names the jobs separately so each *product* stays clear, even if the same person writes two of them.  
 
-**0.5 [K] How this course is laid out**  
-a. After this intro: SOC analyst, then CTI, then hunting, then detection engineers  
-b. Inside SOC, you learn what detections *are* before you live in the alert queue  
-c. Site-specific “how we do it here” comes later and will differ by shop  
-d. After the lessons, a companion story retells this same flow as one PRD/DYA incident  
+---
 
-**0.5.1 [T] Tasks**  
-1. Given a step in the flow, name the next hand-off and whose product it is (not how your site files the ticket)
+# Shared floor (still `00`, still before SOC)
+
+Taught after `0.1`–`0.5`, **before SOC 1.1**. All four roles. Lessons live under `modules/00-intro/` (`06-frameworks` through `08-environment`).
+
+Write only the asked child. Not DTF (`3.7.4`). Not hunt planning (`2.5`). Not actor products (`3.11`). Not TIP nav (`3.3.1`). Not VT Relations / platform depth (`3.9`). Not reporting products (`1.6` — last SOC hour). Not a PCAP analysis course. Role-local lists stay at `2.7` / `3.12` / `4.8`.
+
+**Retired (do not teach):** `1.7` shift change, `1.8.2` PCAP handling, `1.8.3` tool access, `1.8.4` notes, `1.8.5` IR process.
+
+**Frameworks** — IDs `1.5.1`–`1.5.3`. Lessons live under `modules/00-intro/06-frameworks/`. Do not copy them into a role folder. Each framework has its own applying task.
+
+**1.5.1 [K] MITRE ATT&CK**  
+Stay in this lesson: purpose, structure, and one map. Hunt *planning* with ATT&CK is **2.5**. Attribution products are **3.11**.
+
+a. Purpose and structure of the ATT&CK framework  
+b. Tactics  
+c. Techniques and Sub-techniques  
+d. How to map observed activity to ATT&CK  
+
+**1.5.1.1 [T] ATT&CK tasks**  
+1. Map an alert or observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
+
+**1.5.2 [K] Diamond Model**  
+a. Purpose of the Diamond Model  
+b. The four core features (Adversary, Capability, Infrastructure, Victim)  
+c. How the Diamond Model is used for analysis and attribution  
+
+**1.5.2.1 [T] Diamond Model tasks**  
+1. Apply the Diamond Model to an incident or set of indicators: fill the four vertices and state which vertex is weakest  
+
+**1.5.3 [K] Cyber Kill Chain**  
+a. Purpose of the Cyber Kill Chain  
+b. The stages of the Kill Chain  
+c. How the Kill Chain is used to understand attack progression  
+
+**1.5.3.1 [T] Kill Chain tasks**  
+1. Identify the Kill Chain stage of observed activity and why it is not the previous or next stage  
+
+**Tool survey** — ID `3.3.2`. Purpose and when to pick. Not a live vendor account. Advanced enrichment / pivot is **3.9**. Internal TIP is **3.3.1**.
+
+**3.3.2 [K] External tools (VirusTotal, AnyRun, Silent Push, URLScan)**  
+Stay in this lesson: purpose, strengths, weaknesses, and when to pick. Do not teach TIP nav (`3.3.1`) or platform depth (`3.9`).
+
+a. Primary purpose, strengths, and weaknesses of each tool  
+b. When to use each tool  
+
+**3.3.2.1 [T] External tools tasks**  
+1. Select the appropriate external tool for a given enrichment or analysis need  
+
+**Environment / signal flow** — ID `1.8.1`.  
+
+**Rewrite later (earmarked):** this hour should teach *why every role must understand the site’s infrastructure and how signal flows* (where visibility comes from, where it does not). Do **not** invent a site card, spans, ticket names, or Harbor/DYA architecture as policy. Current lesson still has a classroom card — leave it until that rewrite. Not Zeek field reading (`1.2`). Not host-observed network (`1.1.4`).
+
+**1.8.1 [K] Environment orientation**  
+a. Path to the internet / network egress points  
+b. Key network segments and data flow  
+c. Email flow and related systems  
+d. Edge firewall architecture and key choke points  
+e. Trusted third-party access / federation  
+f. Crown jewel / critical assets  
+g. PCAP collection points / sensors  
+
+**1.8.1.1 [T] Environment orientation tasks**  
+1. Identify which orientation fact applies to a given situation and why it is not the adjacent fact  
 
 ---
 
 # 1. SOC Analyst Fundamentals
+
+After the full `00` block (front door + shared floor). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.6**. **SOC ends at 1.6 reporting.** The RFI is the door into CTI.
 
 **1.1 [K/T] Endpoint Logs**
 
@@ -135,12 +203,15 @@ d. How this shows up: Sysmon 6 / 7; MDE `DeviceImageLoadEvents`
 
 **1.2 [K/T] Zeek and Zeek Engines**
 
-Network-sensor telemetry. Host-observed process/file/network/registry/image activity is 1.1.
+Network-sensor telemetry. Host-observed process/file/network/registry/image activity is 1.1. Stay in this lesson: this is not a PCAP analysis course. PCAP is mentioned on **1.2.1** (why you pull it). Applying PCAP against an alert is **1.4.1**. Where sensors sit is **1.8.1.g**. Download / view is **1.8.3** if the shop lists them.
 
 **1.2.1 [K] Zeek concepts**  
+Stay in this lesson: what Zeek is, how engines extract, and that PCAP is the usual next artifact. Not Wireshark. Not site download path. Not **1.4.1**.
+
 a. Zeek as a network analysis framework  
 b. How Zeek uses engines (scripts/analyzers) to classify and extract protocol data  
 c. How engines surface relevant applications and protocols  
+d. PCAP is normally pulled to verify a Zeek log or to expand / provide context the log does not carry  
 
 **1.2.2 [K] Conn engine**  
 a. Source IP (orig_h)  
@@ -262,7 +333,7 @@ c. Matching techniques: regex and wildcards
 
 **1.4 [K/T] Alerts**
 
-Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it.
+Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it. **1.4.1.e** applies PCAP against the alert. Why you pull PCAP is **1.2.1**. Sensors are **1.8.1.g**. Download / view is **1.8.3** if the shop lists them.
 
 **1.4.1 [K] Alert context and investigation**  
 a. Viewing the context provided by the alert  
@@ -314,36 +385,11 @@ b. Required time to process an alert (close or escalate)
 
 **1.5 [K/T] Frameworks**
 
-Shared analysis frameworks. Write only the asked child. Hunt *planning* with ATT&CK is 2.5. Attribution products are 3.11. Shared write-once text is `modules/shared/frameworks/` — do not copy it into a role folder. Each framework has its own applying task.
-
-**1.5.1 [K] MITRE ATT&CK**  
-a. Purpose and structure of the ATT&CK framework  
-b. Tactics  
-c. Techniques and Sub-techniques  
-d. How to map observed activity to ATT&CK  
-
-**1.5.1.1 [T] ATT&CK tasks**  
-1. Map an alert or observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
-
-**1.5.2 [K] Diamond Model**  
-a. Purpose of the Diamond Model  
-b. The four core features (Adversary, Capability, Infrastructure, Victim)  
-c. How the Diamond Model is used for analysis and attribution  
-
-**1.5.2.1 [T] Diamond Model tasks**  
-1. Apply the Diamond Model to an incident or set of indicators: fill the four vertices and state which vertex is weakest  
-
-**1.5.3 [K] Cyber Kill Chain**  
-a. Purpose of the Cyber Kill Chain  
-b. The stages of the Kill Chain  
-c. How the Kill Chain is used to understand attack progression  
-
-**1.5.3.1 [T] Kill Chain tasks**  
-1. Identify the Kill Chain stage of observed activity and why it is not the previous or next stage  
+Taught on the **shared floor** after **0** (IDs unchanged). Hunt *planning* with ATT&CK is still **2.5**. Attribution products are still **3.11**. DTF is **3.7.4**.
 
 **1.6 [K/T] Reporting**
 
-SOC reporting. Three units — do not collapse them. Shift-change reports are **1.7**. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task.
+Last SOC hour. Sits at the **SOC / CTI seam** after alerts (`1.4`). Three units — do not collapse them. The RFI type is the door into CTI. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task. **`1.7` is retired.**
 
 **1.6.1 [K] Report types**  
 a. Incident report  
@@ -367,59 +413,6 @@ c. Approved reporting channels
 
 **1.6.3.1 [T] Notification and distribution tasks**  
 1. Route a report: name the recipients, whether leadership gets awareness, and the approved channel (and reject the wrong channel)  
-
-**1.7 [K/T] Shift Change**
-
-SOC shift change. Two units — do not collapse them. Reporting products are **1.6**. Site-specific tools and IR process are **1.8**. Each knowledge item has its own applying task.
-
-**1.7.1 [K] Shift changeover process**  
-a. Purpose and importance of a structured shift change  
-b. Who should participate in the shift change  
-c. Where the changeover report is recorded  
-
-**1.7.1.1 [T] Shift changeover process tasks**  
-1. Conduct or participate in a shift changeover  
-
-**1.7.2 [K] Required content of the changeover report**  
-a. Current open / in-progress investigations  
-b. Newly opened, updated, or closed reports that occurred during the shift  
-c. Upcoming planned service outages  
-d. Ongoing service outages or outages that occurred during the shift  
-e. Urgent process or policy items  
-
-**1.7.2.1 [T] Changeover report content tasks**  
-1. Produce a complete changeover report that includes all required elements  
-
-**1.8 [K/T] Site-Specific Knowledge**
-
-Classroom stand-ins only — overlay the live site card. Not live org policy. Not reporting products (**1.6**), not shift change (**1.7**), not Zeek log reading (**1.2**). `1.8.2` is PCAP handling, not Zeek. `1.8.5` is IR process, not report routing (**1.6.3**). Do not collapse IR into notes. Each heading is its own teaching unit. Tasks apply the knowledge they sit under.
-
-**1.8.1 [K] Environment orientation**  
-a. Path to the internet / network egress points  
-b. Key network segments and data flow  
-c. Email flow and related systems  
-d. Edge firewall architecture and key choke points  
-e. Trusted third-party access / federation  
-f. Crown jewel / critical assets  
-g. PCAP collection points / sensors  
-
-**1.8.1.1 [T] Environment orientation tasks**  
-1. Identify which orientation fact applies to a given situation and why it is not the adjacent fact  
-
-**1.8.2 [T] PCAP handling**  
-1. How to download PCAP  
-2. What tool to use to view PCAP  
-
-**1.8.3 [T] Tool access and requests**  
-1. How to access required tools and their URLs  
-2. How to request tools to be installed (e.g., Wireshark)  
-3. How to request access (e.g., SIEM or other platforms)  
-
-**1.8.4 [T] Investigation documentation**  
-1. Where and how to save investigation notes  
-
-**1.8.5 [T] Incident response processes**  
-1. Follow site-specific incident response processes  
 
 ---
 
@@ -666,7 +659,7 @@ c. Techniques to mitigate cognitive biases
 
 **3.3 [T] Tools**  
 
-Two children. Write only the asked child. Do not turn `3.3.1` into VirusTotal / Silent Push (`3.3.2`, `3.9`) or STIX authoring (`3.10`). Classroom TIP names are stand-ins.
+Two children. Write only the asked child. **`3.3.2` (purpose and when to pick) is taught on the shared floor** after **0**. Do not re-teach the survey here. Do not turn `3.3.1` into VirusTotal / Silent Push (`3.3.2`, `3.9`) or STIX authoring (`3.10`). Classroom TIP names are stand-ins. Advanced enrichment / pivot is **3.9**.
 
 **3.3.1 [K] Internal threat intelligence platform**  
 a. Purpose and core functions of the internal TIP  
@@ -678,12 +671,8 @@ c. How the platform supports enrichment, analysis, and production
 2. Use the platform to support enrichment or analysis of an indicator or report  
 
 **3.3.2 [K] External tools (VirusTotal, AnyRun, Silent Push, URLScan)**  
-a. Primary purpose, strengths, and weaknesses of each tool  
-b. When to use each tool in the intelligence process  
 
-**3.3.2.1 [T] External tools tasks**  
-1. Select the appropriate external tool for a given enrichment or analysis need  
-2. Perform advanced enrichment and pivoting using external tools  
+Taught on the **shared floor** after **0** (purpose and when to pick; IDs unchanged). Advanced enrichment and pivoting is **3.9**. Do not re-teach the survey in CTI.
 
 **3.4 [K/T] File Similarity & Hashing Techniques**  
 
@@ -728,7 +717,7 @@ c. How advanced DNS data supports enrichment and infrastructure analysis
 
 **3.7 [K/T] Frameworks**  
 
-Four children. Write only the asked child. Do not write lumped outline `3.7.5` as one module. Do not re-teach SOC floor (`1.5`) or hunt planning (`2.5`). Shared write-once text is `modules/shared/frameworks/`. DTF is real PTA/P discovery IDs from [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Product is the DTF ID line. No scoring. Do not invent P-codes. Do not teach every P-code. Generic hop sentence is `3.8.1`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
+Four children. Write only the asked child. Do not write lumped outline `3.7.5` as one module. Do not re-teach the shared-floor frameworks (`1.5`) or hunt planning (`2.5`). DTF is real PTA/P discovery IDs from [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Product is the DTF ID line. No scoring. Do not invent P-codes. Do not teach every P-code. Generic hop sentence is `3.8.1`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
 
 **3.7.1 [K] MITRE ATT&CK**  
 a. Advanced application for intelligence analysis and TTP extraction  
@@ -810,7 +799,7 @@ c. Relevance and impact are not TTP applicability (3.8.2), not a PIR (3.1.4 / 3.
 
 **3.9 [K/T] Platform-Specific Skills**  
 
-Four children. Write only the asked child unless asked for all of `3.9`. Do not re-teach the `3.3.2` survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `2.3.1`. Conceptual infra hop is `3.8.1`. File-similarity hashes are `3.4`. Applicable TTPs are `3.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
+Four children. Write only the asked child unless asked for all of `3.9`. Do not re-teach the shared-floor `3.3.2` survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `2.3.1`. Conceptual infra hop is `3.8.1`. File-similarity hashes are `3.4`. Applicable TTPs are `3.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
 
 **3.9.1 [K] VirusTotal**  
 a. Relations tab for infrastructure pivoting  
@@ -924,7 +913,7 @@ b. How to evaluate, prioritize, and respond to an RFI
 
 **3.12 [K/T] Site-Specific CTI Knowledge and Tasks**  
 
-Write only the asked child unless asked for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Every org/section has its own; a new analyst obtains them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. SOC site orientation is `1.8`.
+Write only the asked child unless asked for all of `3.12`. Do **not** invent PIRs, approval chains, archive paths, or customer lists. Every org/section has its own; a new analyst obtains them early. PIR *concept* is `3.1.4`. Collection *planning* is `3.1.8`. Finished draft is `3.11.1`. Classroom TLP/channels are `3.11.2`. Environment orientation and tool access are on the **shared floor** (`1.8.1`, `1.8.3`).
 
 **3.12.1 [K] Local intelligence requirements and priorities**  
 a. Current Priority Intelligence Requirements (PIRs) / intelligence priorities  
@@ -955,7 +944,7 @@ b. Approved dissemination channels and methods
 
 # 4. Detection Engineer
 
-Taught last: intro → SOC → CTI → hunting → this section. Rule *syntax* and a first read/write are **1.3**. This section is how detections are run as a service.
+Taught last: intro → shared floor → SOC → CTI → hunting → this section. Rule *syntax* and a first read/write are **1.3**. This section is how detections are run as a service. Environment orientation (`1.8.1`) and tool access (`1.8.3`) were on the shared floor.
 
 SOC, hunt, and CTI may **nominate** a detection. The nomination does not need to be perfect. DE reviews it, makes it sound, tunes it, meets shop requirements (meta fields and the like), and deploys.
 

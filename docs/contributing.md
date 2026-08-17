@@ -25,7 +25,7 @@ A 7-level (or equivalent) proposes the change. The review board approves or reje
 - Roles and 3/5/7 codes (`A/B/C`, `2b/3c/4c`, or `—`) — see [proficiency-legend.md](proficiency-legend.md)
 - **New module** vs **add to an existing module**
 - Suggested teaching-unit ID and outline headings, or “assign on approval”
-- Shared (`modules/shared/`) vs role-specific
+- Shared (`modules/00-intro/`) vs role-specific
 - What already-signed-off analysts must do (delta lesson, brief, or next recert)
 
 ### On approval, update these files before any guides
@@ -80,7 +80,7 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 - Quiz (tracker column exists; not part of sign-off yet)
 - “Related modules” / next-steps links in sibling guides
 
-Shared topics go under `modules/shared/`, not copied into each role.
+Front door and shared hours live under `modules/00-intro/` and are taught before SOC: `0.1`–`0.5`, `1.5`, `3.3.2`, `1.8.1`. SOC ends at `1.6`. Do not copy those lessons into each role. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 ### Concept index rules
 

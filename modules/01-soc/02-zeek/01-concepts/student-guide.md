@@ -85,6 +85,12 @@ You do **not** need to memorize every field yet. In later modules we will go dee
 - **Complementary to alerts**: When an IDS/SIEM alert fires, Zeek logs often provide the surrounding context that makes triage much faster.
 - **Long-term visibility**: Even if no alert fired, the Zeek logs remain available for retrospective investigation.
 
+### 1.5 PCAP and Zeek logs
+
+A Zeek log is an **extract**. When you need to **verify** a Zeek row or **expand** what the log does not carry, you pull the **PCAP** for that flow. That is the usual reason to open packets.
+
+This is not a PCAP analysis course. Where the sensors sit is environment orientation. How this shop downloads or views a file is tool access. Applying PCAP against an alert comes later.
+
 ---
 
 ## 2. Detailed Walkthrough / Examples
@@ -147,6 +153,7 @@ This is significantly more useful for triage than a generic “HTTP traffic dete
 - Its architecture consists of an event engine, a scripting layer, and a logging framework.
 - The most commonly used logs include `conn`, `dns`, `http`, `ssl/tls`, `files`, and `weird`.
 - Zeek provides high-fidelity visibility that supports both alert triage and proactive threat hunting.
+- PCAP is normally pulled to verify a Zeek log or to expand context the log does not carry.
 
 ---
 

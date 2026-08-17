@@ -12,18 +12,18 @@
 
 ---
 
-## 0 How a SOC can operate
+## 0 Front door
 
-Shared intro. Same idea on the hunter, CTI, and DE sheets. Not site policy.
+Everyone. Taught before SOC. Same idea on the hunter, CTI, and DE sheets. Not site policy.
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 0.1 | What a SOC is | K | A | B | B | Facts at 3. Principles at 5/7. Not an analysis item. |
-| 0.2 | Jobs in one sentence | K | A | B | B | Name the desk. Do not teach that desk’s full job. |
-| 0.3 | How work can move | K | A | B | B | One possible flow. Not “how DYA files tickets.” |
-| 0.4 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
-| 0.5 | How this course is laid out | K | A | B | B | Order of the course, not a qualification on tools. |
-| 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a ticket path. No 4d. |
+| 0.1 | How this course is laid out | K | A | B | B | Course map. Facts at 3. Principles at 5/7. |
+| 0.2 | What a SOC is | K | A | B | B | Facts at 3. Principles at 5/7. Not an analysis item. |
+| 0.3 | Jobs in one sentence | K | A | B | B | Name the desk. Do not teach that desk’s full job. |
+| 0.4 | How work can move | K | A | B | B | One possible flow. Not “how DYA files tickets.” |
+| 0.4.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a ticket path. No 4d. |
+| 0.5 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
 
 ---
 
@@ -86,7 +86,7 @@ Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive i
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.2.1.1 | Zeek concepts | K | A | B | C | 3-level needs basic facts. 5-level should understand principles. 7-level should analyze and apply. |
+| 1.2.1.1 | Zeek concepts | K | A | B | C | Includes PCAP as the usual next artifact (verify / expand a Zeek log). Not a PCAP analysis course. |
 
 ### 1.2.2 Conn Engine
 
@@ -195,7 +195,7 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 | 1.4.1.3 | Review the alert configuration and explain what would fire | T | 2b | 3c | 4c | Knowledge *b* had no task before. |
 | 1.4.1.4 | Trace an alert to its upstream detection logic and name each hop | T | 2b | 3c | 4c | Extends upstream knowledge — name the chain, not “look at the rule.” |
 | 1.4.1.5 | Collect related endpoint logs and state what they add (or fail to add) | T | 2b | 3c | 4c | Extends collection — say what the logs change about the story. |
-| 1.4.1.6 | Collect related PCAP and state what it adds versus the alert fields | T | 2b | 3c | 4c | Extends PCAP — contrast with the alert, not “open a pcap.” |
+| 1.4.1.6 | Collect related PCAP and state what it adds versus the alert fields | T | 2b | 3c | 4c | Contrast with the alert, not “open a pcap.” Why/when is 1.2.1. Download/view is 1.8.3 if listed. |
 
 ### 1.4.2 Alert classification
 
@@ -229,6 +229,8 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 ---
 
 ## 1.5 Frameworks
+
+Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 2.5. DTF is 3.7.4.
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
@@ -268,29 +270,9 @@ Shift-change reports are 1.7. Alert SLA clocks are 1.4.5. Tasks apply the knowle
 
 ---
 
-## 1.7 Shift Change
+## 1.8 Environment / signal flow
 
-Reporting products are 1.6. Site-specific ops are 1.8. Tasks apply the knowledge they sit under.
-
-### 1.7.1 Shift changeover process
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.7.1.1 | Shift changeover process | K | A | B | C | 3-level needs basic facts. 5-level understands principles. 7-level can analyze and improve the process. |
-| 1.7.1.2 | Conduct or participate in a shift changeover | T | 2b | 3c | 4c | Extends “know the process” — name who runs it, who attends, your role, and the record location. |
-
-### 1.7.2 Required content of the changeover report
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.7.2.1 | Required content of the changeover report | K | A | B | C | Five required buckets. Same knowledge progression. |
-| 1.7.2.2 | Produce a complete changeover report that includes all required elements | T | 2b | 3c | 4c | Extends listing the buckets — write all five (or explicit none) and reject a missing-element draft. |
-
----
-
-## 1.8 Site-Specific Knowledge
-
-Classroom cards are stand-ins. Reporting products are 1.6. Shift change is 1.7. IR process is 1.8.5, not notes.
+Taught in `00` before SOC. **Rewrite later:** infrastructure and signal flow for every role — do not invent a site card. **Retired:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
 
 ### 1.8.1 Environment orientation
 
@@ -298,30 +280,3 @@ Classroom cards are stand-ins. Reporting products are 1.6. Shift change is 1.7. 
 |---|------|------|-------|-------|-------|---------------|
 | 1.8.1.1 | Environment orientation | K | A | B | C | Seven orientation facts. 3-level needs the card. 5-level relates the pieces. 7-level can analyze gaps. |
 | 1.8.1.2 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b | 3c | 4c | Extends listing a–g — name the fact and reject the neighbor. |
-
-### 1.8.2 PCAP handling
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.8.2.1 | How to download PCAP | T | 2b | 3c | 4c | Name the site path for this case and reject the wrong store. |
-| 1.8.2.2 | What tool to use to view PCAP | T | 2b | 3c | 4c | Name the viewer and reject the wrong tool. Not Zeek log reading (1.2). |
-
-### 1.8.3 Tool access and requests
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.8.3.1 | How to access required tools and their URLs | T | 2b | 3c | 4c | Open the named URL from the site card. |
-| 1.8.3.2 | How to request tools to be installed | T | 2b | 3c | 4c | Install ticket — not a random download. |
-| 1.8.3.3 | How to request access (e.g., SIEM) | T | 2b | 3c | 4c | Access ticket — not a shared password. |
-
-### 1.8.4 Investigation documentation
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.8.4.1 | Where and how to save investigation notes | T | 2b | 3c | 4c | Approved location + reject desktop / chat-only. |
-
-### 1.8.5 Incident response processes
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 1.8.5.1 | Follow site-specific incident response processes | T | 2b | 3c | 4c | Next process step + reject freelance containment. Not 1.6.3 routing alone. |

@@ -48,7 +48,7 @@ Also: tool URL, open the SIEM URL
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.3 Tool Access and Requests](../modules/01-soc/08-site-specific/03-tool-access/) | SOC, Hunter, CTI |
+| Taught | [1.8.3 Tool Access and Requests](../modules/00-intro/09-tool-access/01-tool-access/) | SOC, Hunter, CTI |
 
 See also: [requesting access (e.g., SIEM)](#requesting-access-eg-siem), [requesting a tool to be installed](#requesting-a-tool-to-be-installed)
 
@@ -266,7 +266,7 @@ Also: Diamond on a report, Diamond activity-set card, CTI Diamond line
 |----------|--------|-------|
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
-Incident / indicator cards are [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/).
+Incident / indicator cards are [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
 
 See also: [Diamond Model application in CTI](#diamond-model-application-in-cti), [weakest vertex constrains the intel product](#weakest-vertex-constrains-the-intel-product)
 
@@ -276,7 +276,7 @@ Also: ticket channel, RFI form, approved distro
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [notification chart / matrix](#notification-chart--matrix), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
 
@@ -305,7 +305,7 @@ Also: Any.Run, AnyRun sandbox, interactive sandbox for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
 
@@ -315,7 +315,7 @@ Also: AnyRun for intelligence, detonate a sample
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 | Used | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
 
 See also: [AnyRun for hunting](#anyrun-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
@@ -356,7 +356,7 @@ Also: ATT&CK tactic, why column, TA0002 Execution
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
@@ -367,7 +367,7 @@ Also: ATT&CK technique, sub-technique, T1059.001
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK tactics](#attck-tactics), [MITRE ATT&CK purpose and structure](#mitre-attck-purpose-and-structure)
@@ -391,7 +391,7 @@ Also: ATT&CK in intel products, advanced ATT&CK for CTI, supported ATT&CK IDs in
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 | Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-SOC alert mapping is [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
+SOC alert mapping is [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
 See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -473,7 +473,7 @@ Also: SOC-CHANGEOVER, shift change log, system of record for changeover
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+| Taught | [1.7.1 Shift Changeover Process](../modules/00-intro/10-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
 
 See also: [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
@@ -610,7 +610,7 @@ Also: RDAP SOA PDNS TIP as infra sources, classroom infra source set
 |----------|--------|-------|
 | Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-How to *read* those sources was taught in [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/), [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/), and [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/).
+How to *read* those sources was taught in [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/), [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/), and [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/).
 
 See also: [pivoting concepts and techniques](#pivoting-concepts-and-techniques), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
@@ -652,7 +652,7 @@ Also: handoff line, who runs the changeover, reject informal shift change
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+| Taught | [1.7.1 Shift Changeover Process](../modules/00-intro/10-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
 
 See also: [shift change participants](#shift-change-participants), [changeover report record location](#changeover-report-record-location)
 
@@ -719,7 +719,7 @@ Also: Harbor platform and path, applicable vs relevant TTP, classroom apply crit
 |----------|--------|-------|
 | Taught | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
-Organizational impact is later (`3.8.4`). Harbor facts are [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/).
+Organizational impact is later (`3.8.4`). Harbor facts are [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/).
 
 See also: [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report), [identifying relevant TTPs in a report](#identifying-relevant-ttps-in-a-report)
 
@@ -729,7 +729,7 @@ Also: pay-db-01, crown jewel host, critical asset
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
 
 See also: [key network segments and data flow](#key-network-segments-and-data-flow), [site-specific incident response processes](#site-specific-incident-response-processes)
 
@@ -742,7 +742,7 @@ Also: advanced Kill Chain for CTI, Kill Chain in intel products, supported Kill 
 | Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 | Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-SOC single-row staging is [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/).
+SOC single-row staging is [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
 
 See also: [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -752,7 +752,7 @@ Also: Kill Chain, Lockheed Martin Kill Chain
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
@@ -780,7 +780,7 @@ Also: advanced Diamond for CTI, Diamond in intel products
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 | Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-SOC incident cards are [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
+SOC incident cards are [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
 
 See also: [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem), [reject filling Adversary from a vendor name](#reject-filling-adversary-from-a-vendor-name), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -790,7 +790,7 @@ Also: Diamond Model, intrusion diamond
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [Diamond Model application in CTI](#diamond-model-application-in-cti)
@@ -801,7 +801,7 @@ Also: Adversary vertex, Capability vertex, Infrastructure vertex, Victim vertex
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
@@ -929,7 +929,7 @@ Also: fw-edge, fw-ot, network choke point
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors)
 
@@ -939,7 +939,7 @@ Also: mail-edge, MX path, email flow vs egress
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [identifying which orientation fact applies and rejecting the adjacent fact](#identifying-which-orientation-fact-applies-and-rejecting-the-adjacent-fact)
 
@@ -949,7 +949,7 @@ Also: blocked escalate clock, escalate-for-more-info
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
 
 See also: [submit timelines by report type](#submit-timelines-by-report-type), [identifying which report timeline applies and whether it is at risk](#identifying-which-report-timeline-applies-and-whether-it-is-at-risk)
 
@@ -963,7 +963,7 @@ Also: one hop, classroom pivot, not Relations graph
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 | Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
 See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
@@ -1054,9 +1054,9 @@ Also: SOC analyst, CTI, hunter, detection engineer, IR, firewall IA one-liners
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.2 Jobs in one sentence](../modules/00-intro/02-jobs-in-one-sentence/) | SOC, Hunter, CTI, DE |
-| Used | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
-| Used | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+| Taught | [0.2 Jobs in one sentence](../modules/00-intro/03-jobs-in-one-sentence/) | SOC, Hunter, CTI, DE |
+| Used | [0.3 How work can move](../modules/00-intro/04-how-work-moves/) | SOC, Hunter, CTI, DE |
+| Used | [0.4 Where the jobs lightly overlap](../modules/00-intro/05-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
 | Used | [4.1 What DE owns](../modules/04-de/01-what-de-owns/) | DE, SOC, Hunter, CTI |
 
 See also: [what a SOC is](#what-a-soc-is), [how work can move from an alert](#how-work-can-move-from-an-alert), [the product is different](#the-product-is-different)
@@ -1067,7 +1067,7 @@ Also: same evidence on more than one desk
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/05-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
 
 See also: [the product is different](#the-product-is-different)
 
@@ -1077,7 +1077,7 @@ Also: close or escalate an alert, intel note, hunt, rule
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/05-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
 
 See also: [same host, log, or domain](#same-host-log-or-domain), [two hats still two products](#two-hats-still-two-products)
 
@@ -1087,7 +1087,7 @@ Also: asking is not doing, RFI is not the intel note
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/05-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
 
 See also: [the product is different](#the-product-is-different), [RFI to intel](#rfi-to-intel)
 
@@ -1097,19 +1097,19 @@ Also: smaller shop, one person two jobs, products stay clear
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/04-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
+| Taught | [0.4 Where the jobs lightly overlap](../modules/00-intro/05-where-jobs-overlap/) | SOC, Hunter, CTI, DE |
 
 See also: [the product is different](#the-product-is-different), [jobs in one sentence](#jobs-in-one-sentence)
 
 ### how this course is laid out
 
-Also: SOC then CTI then hunting then detection engineers
+Also: shared floor then SOC then CTI then hunting then detection engineers
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 How this course is laid out](../modules/00-intro/01-course-layout/) | SOC, Hunter, CTI, DE |
 
-See also: [detections before the alert queue](#detections-before-the-alert-queue), [site-specific comes later](#site-specific-comes-later)
+See also: [detections before the alert queue](#detections-before-the-alert-queue), [environment map and tool access come early](#environment-map-and-tool-access-come-early)
 
 ### detections before the alert queue
 
@@ -1117,19 +1117,19 @@ Also: learn what detections are first, 1.3 before 1.4
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 How this course is laid out](../modules/00-intro/01-course-layout/) | SOC, Hunter, CTI, DE |
 
 See also: [how this course is laid out](#how-this-course-is-laid-out)
 
-### site-specific comes later
+### environment map and tool access come early
 
-Also: how we do it here differs by shop
+Also: role-local process lists come later, how we do it here differs by shop, site-specific comes later
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 How this course is laid out](../modules/00-intro/01-course-layout/) | SOC, Hunter, CTI, DE |
 
-See also: [how this course is laid out](#how-this-course-is-laid-out)
+See also: [how this course is laid out](#how-this-course-is-laid-out), [PCAP collection points / sensors](#pcap-collection-points--sensors), [accessing required tools and their URLs](#accessing-required-tools-and-their-urls)
 
 ### PRD / DYA companion story
 
@@ -1137,7 +1137,7 @@ Also: one PRD DYA incident after the lessons, same flow
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 How this course is laid out](../modules/00-intro/01-course-layout/) | SOC, Hunter, CTI, DE |
 
 See also: [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction), [how work can move from an alert](#how-work-can-move-from-an-alert)
 
@@ -1147,7 +1147,7 @@ Also: 0.5.1, not how the site files the ticket
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 How this course is laid out](../modules/00-intro/01-course-layout/) | SOC, Hunter, CTI, DE |
 
 See also: [the product is different](#the-product-is-different), [how work can move from an alert](#how-work-can-move-from-an-alert)
 
@@ -1197,7 +1197,7 @@ Also: Security Operations Center, watch and start the response
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
 See also: [a SOC is a team sport](#a-soc-is-a-team-sport), [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction), [what DE owns](#what-de-owns)
 
@@ -1207,7 +1207,7 @@ Also: more than one job next to the SOC
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
 See also: [what a SOC is](#what-a-soc-is)
 
@@ -1217,8 +1217,8 @@ Also: Dixon Yamada and Associates, Pink River Dolphin, not site policy
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/01-what-a-soc-is/) | SOC, Hunter, CTI, DE |
-| Used | [0.5 How this course is laid out](../modules/00-intro/05-course-layout/) | SOC, Hunter, CTI, DE |
+| Taught | [0.1 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
+| Used | [0.1 How this course is laid out](../modules/00-intro/01-course-layout/) | SOC, Hunter, CTI, DE |
 
 See also: [what a SOC is](#what-a-soc-is), [PRD / DYA companion story](#prd--dya-companion-story)
 
@@ -1661,7 +1661,7 @@ Also: weakest Diamond vertex, honest empty vertex
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [weakest vertex constrains the intel product](#weakest-vertex-constrains-the-intel-product)
@@ -1851,7 +1851,7 @@ Also: path after an alert, one possible path, not every shop
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
+| Taught | [0.3 How work can move](../modules/00-intro/04-how-work-moves/) | SOC, Hunter, CTI, DE |
 
 See also: [jobs in one sentence](#jobs-in-one-sentence), [RFI to intel](#rfi-to-intel), [hunt package and block list as later hand-offs](#hunt-package-and-block-list-as-later-hand-offs)
 
@@ -1890,13 +1890,13 @@ See also: [Suricata rules](#suricata-rules), [http log](#http-log)
 
 ### how to download PCAP
 
-Also: PCAP-REQ, pcap.harbor.internal, hot vs warm PCAP
+Also: PCAP-REQ, pcap.harbor.internal, hot vs warm PCAP. **1.8.2 is retired.** If the shop lists a store, that is tool access.
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.2 PCAP Handling](../modules/01-soc/08-site-specific/02-pcap-handling/) | SOC, Hunter, CTI |
+| Used | [1.8.3 Tool Access and Requests](../modules/00-intro/09-tool-access/01-tool-access/) | SOC, Hunter, CTI, DE |
 
-See also: [what tool to use to view PCAP](#what-tool-to-use-to-view-pcap), [PCAP collection points / sensors](#pcap-collection-points--sensors)
+See also: [PCAP verifies or expands a Zeek log](#pcap-verifies-or-expands-a-zeek-log), [PCAP collection points / sensors](#pcap-collection-points--sensors), [accessing required tools and their URLs](#accessing-required-tools-and-their-urls)
 
 ### how estimative language communicates confidence and uncertainty
 
@@ -1995,7 +1995,7 @@ Also: extra infrastructure to firewall IA, hunt package to hunters and detection
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
+| Taught | [0.3 How work can move](../modules/00-intro/04-how-work-moves/) | SOC, Hunter, CTI, DE |
 
 See also: [how work can move from an alert](#how-work-can-move-from-an-alert), [RFI to intel](#rfi-to-intel)
 
@@ -2167,7 +2167,7 @@ Also: incident vs RFI, reject neighbor report type
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 
 See also: [incident report](#incident-report), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -2177,7 +2177,7 @@ Also: report clock at risk, submit vs blocked clock
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
 
 See also: [submit timelines by report type](#submit-timelines-by-report-type), [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed)
 
@@ -2199,7 +2199,7 @@ Also: stage a report span, Kill Chain stage from a report, CTI Kill Chain stage 
 |----------|--------|-------|
 | Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
-Single-row staging is [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/).
+Single-row staging is [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
 
 See also: [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain)
 
@@ -2209,7 +2209,7 @@ Also: Kill Chain neighbor stage, not previous not next
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Kill Chain stages](#kill-chain-stages), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity)
@@ -2250,7 +2250,7 @@ Also: orientation neighbor, egress vs email vs sensor gap
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
 | Used | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [PCAP collection points / sensors](#pcap-collection-points--sensors), [criteria for TTP applicability to the environment](#criteria-for-ttp-applicability-to-the-environment)
@@ -2321,7 +2321,7 @@ Also: incident case record, IR case report
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 
 See also: [Request for Information (RFI)](#request-for-information-rfi), [other common report types](#other-common-report-types)
 
@@ -2501,7 +2501,7 @@ Also: Reconnaissance Delivery Exploitation Installation C2 Actions on Objectives
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
@@ -2512,7 +2512,7 @@ Also: user VLAN, OT segment, Harbor segments
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
 
 See also: [path to the internet / network egress](#path-to-the-internet--network-egress), [crown jewel / critical assets](#crown-jewel--critical-assets)
 
@@ -2546,7 +2546,7 @@ Also: duty SOC lead awareness, notify leadership
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [notification chart / matrix](#notification-chart--matrix), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
 
@@ -2590,7 +2590,7 @@ Also: map a report to ATT&CK, map an activity set to ATT&CK, CTI ATT&CK map line
 |----------|--------|-------|
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
-Alert mapping is [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/). Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
+Alert mapping is [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
 
 See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
 
@@ -2600,7 +2600,7 @@ Also: map an alert to ATT&CK, tactic plus technique plus cite
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/). Report / activity-set maps are [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
@@ -2675,7 +2675,7 @@ Also: ATT&CK matrix, ATT&CK Enterprise
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/01-soc/05-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK tactics](#attck-tactics), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
@@ -2714,7 +2714,7 @@ Also: what changed this shift, opened updated closed this shift
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/00-intro/10-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
 
 See also: [open / in-progress investigations (changeover)](#open--in-progress-investigations-changeover), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
@@ -2732,7 +2732,7 @@ Also: who gets which report, notification matrix
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [leadership awareness](#leadership-awareness), [approved reporting channels](#approved-reporting-channels)
 
@@ -2764,7 +2764,7 @@ Also: sensor down this shift, occurred outage, lost visibility this shift
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/00-intro/10-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
 
 See also: [planned service outages](#planned-service-outages), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
@@ -2774,7 +2774,7 @@ Also: still-open cases at changeover, in-progress investigations
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/00-intro/10-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
 
 See also: [newly opened, updated, or closed reports (changeover)](#newly-opened-updated-or-closed-reports-changeover), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
@@ -2824,7 +2824,7 @@ Also: informational report, awareness note, local report types
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 
 See also: [incident report](#incident-report), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -2884,9 +2884,19 @@ Also: span-1, span-2, no OT span, where sensors sit
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI, DE |
 
-See also: [how to download PCAP](#how-to-download-pcap), [edge firewall / choke points](#edge-firewall--choke-points)
+See also: [PCAP verifies or expands a Zeek log](#pcap-verifies-or-expands-a-zeek-log), [edge firewall / choke points](#edge-firewall--choke-points)
+
+### PCAP verifies or expands a Zeek log
+
+Also: pull PCAP to verify Zeek, expand Zeek context, not a PCAP analysis course
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [1.2.1 Zeek Concepts](../modules/01-soc/02-zeek/01-concepts/) | SOC, Hunter, CTI |
+
+See also: [related PCAP versus alert fields](#related-pcap-versus-alert-fields), [PCAP collection points / sensors](#pcap-collection-points--sensors)
 
 ### path, hashes, signed vs unsigned
 
@@ -2914,7 +2924,7 @@ Also: fw-edge-01, fw-guest, NAT egress
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
 
 See also: [email flow and related systems](#email-flow-and-related-systems), [edge firewall / choke points](#edge-firewall--choke-points)
 
@@ -2981,7 +2991,7 @@ Also: upcoming maintenance, planned outage window
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/00-intro/10-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
 
 See also: [ongoing / occurred-during-shift outages](#ongoing--occurred-during-shift-outages), [producing a complete changeover report](#producing-a-complete-changeover-report)
 
@@ -3226,7 +3236,7 @@ Also: five-bucket changeover, explicit none, reject missing-element draft
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/00-intro/10-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
 
 See also: [open / in-progress investigations (changeover)](#open--in-progress-investigations-changeover), [urgent process or policy items](#urgent-process-or-policy-items)
 
@@ -3311,7 +3321,7 @@ Also: why structure changeover, prevent dropped cases at shift change
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+| Taught | [1.7.1 Shift Changeover Process](../modules/00-intro/10-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
 
 See also: [shift change participants](#shift-change-participants), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
 
@@ -3612,7 +3622,7 @@ Also: PCAP vs alert, what PCAP adds
 |----------|--------|-------|
 | Taught | [1.4.1 Alert Context and Investigation](../modules/01-soc/04-alerts/01-context-investigation/) | SOC, Hunter, CTI |
 
-See also: [related endpoint logs for an alert](#related-endpoint-logs-for-an-alert), [http log](#http-log)
+See also: [related endpoint logs for an alert](#related-endpoint-logs-for-an-alert), [PCAP verifies or expands a Zeek log](#pcap-verifies-or-expands-a-zeek-log)
 
 ### rcode_name
 
@@ -3684,9 +3694,9 @@ Also: ask intel for more work on that alert
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.3 How work can move](../modules/00-intro/03-how-work-moves/) | SOC, Hunter, CTI, DE |
+| Taught | [0.3 How work can move](../modules/00-intro/04-how-work-moves/) | SOC, Hunter, CTI, DE |
 
-SOC ticket-type depth is [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/). CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/).
+SOC ticket-type depth is [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/). CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/).
 
 See also: [how work can move from an alert](#how-work-can-move-from-an-alert), [Request for Information (RFI)](#request-for-information-rfi)
 
@@ -3696,7 +3706,7 @@ Also: RFI, information request to another team
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.1 Report Types](../modules/01-soc/06-reporting/01-report-types/) | SOC, Hunter, CTI |
+| Taught | [1.6.1 Report Types](../modules/01-soc/05-reporting/01-report-types/) | SOC, Hunter, CTI |
 | Used | [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/) | CTI, Hunter |
 
 CTI receive/answer is [3.11.3 Handling RFIs](../modules/03-cti/11-production/03-rfi/). This heading is the SOC ticket type.
@@ -3729,7 +3739,7 @@ Also: SOFT-REQ, install Wireshark ticket
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.3 Tool Access and Requests](../modules/01-soc/08-site-specific/03-tool-access/) | SOC, Hunter, CTI |
+| Taught | [1.8.3 Tool Access and Requests](../modules/00-intro/09-tool-access/01-tool-access/) | SOC, Hunter, CTI |
 
 See also: [accessing required tools and their URLs](#accessing-required-tools-and-their-urls), [requesting access (e.g., SIEM)](#requesting-access-eg-siem)
 
@@ -3739,7 +3749,7 @@ Also: ACCESS-REQ, SIEM 403, entitlement ticket
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.3 Tool Access and Requests](../modules/01-soc/08-site-specific/03-tool-access/) | SOC, Hunter, CTI |
+| Taught | [1.8.3 Tool Access and Requests](../modules/00-intro/09-tool-access/01-tool-access/) | SOC, Hunter, CTI |
 
 See also: [accessing required tools and their URLs](#accessing-required-tools-and-their-urls), [requesting a tool to be installed](#requesting-a-tool-to-be-installed)
 
@@ -3749,7 +3759,7 @@ Also: route line, reject wrong reporting channel
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/06-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
+| Taught | [1.6.3 Notification and Distribution](../modules/01-soc/05-reporting/03-notification-distribution/) | SOC, Hunter, CTI |
 
 See also: [notification chart / matrix](#notification-chart--matrix), [approved reporting channels](#approved-reporting-channels)
 
@@ -3801,7 +3811,7 @@ Also: pick VT AnyRun Silent Push URLScan, reject neighbor tool
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process), [enrich or pivot using an external tool](#enrich-or-pivot-using-an-external-tool)
 
@@ -3861,7 +3871,7 @@ Also: outgoing lead, incoming lead, who attends changeover
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.1 Shift Changeover Process](../modules/01-soc/07-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
+| Taught | [1.7.1 Shift Changeover Process](../modules/00-intro/10-shift-change/01-changeover-process/) | SOC, Hunter, CTI |
 
 See also: [purpose of a structured shift change](#purpose-of-a-structured-shift-change), [conducting or participating in a shift changeover](#conducting-or-participating-in-a-shift-changeover)
 
@@ -3912,7 +3922,7 @@ Also: Silent Push, passive DNS for hunting, infra clustering for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of Silent Push](#purpose-strengths-and-weaknesses-of-silent-push)
 
@@ -3922,7 +3932,7 @@ Also: Silent Push for intelligence, historical PDNS
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 | Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 | Used | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
 
@@ -3954,7 +3964,7 @@ Also: IR card, Sev1 Sev2 Sev3, reject freelance containment
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.5 Incident Response Processes](../modules/01-soc/08-site-specific/05-incident-response/) | SOC, Hunter, CTI |
+| Taught | [1.8.5 Incident Response Processes](../modules/00-intro/12-ir/01-incident-response/) | SOC, Hunter, CTI |
 
 See also: [crown jewel / critical assets](#crown-jewel--critical-assets), [routing a report (recipients, leadership, channel)](#routing-a-report-recipients-leadership-channel)
 
@@ -4216,7 +4226,7 @@ Also: incident submit 30, RFI submit 60, informational before changeover
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/06-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
+| Taught | [1.6.2 Reporting Timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) | SOC, Hunter, CTI |
 
 See also: [escalation timeline when more information is needed](#escalation-timeline-when-more-information-is-needed), [identifying which report timeline applies and whether it is at risk](#identifying-which-report-timeline-applies-and-whether-it-is-at-risk)
 
@@ -4328,7 +4338,7 @@ Also: vpn-vendor, idp-corp, federation access
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.1 Environment Orientation](../modules/01-soc/08-site-specific/01-environment-orientation/) | SOC, Hunter, CTI |
+| Taught | [1.8.1 Environment Orientation](../modules/00-intro/08-environment/01-orientation/) | SOC, Hunter, CTI |
 
 See also: [key network segments and data flow](#key-network-segments-and-data-flow), [identifying which orientation fact applies and rejecting the adjacent fact](#identifying-which-orientation-fact-applies-and-rejecting-the-adjacent-fact)
 
@@ -4550,7 +4560,7 @@ Also: urgent policy at changeover, do-not-close without IR
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.7.2 Required Content of the Changeover Report](../modules/01-soc/07-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
+| Taught | [1.7.2 Required Content of the Changeover Report](../modules/00-intro/10-shift-change/02-changeover-report/) | SOC, Hunter, CTI |
 
 See also: [producing a complete changeover report](#producing-a-complete-changeover-report), [open / in-progress investigations (changeover)](#open--in-progress-investigations-changeover)
 
@@ -4571,7 +4581,7 @@ Also: urlscan.io, URLScan page scan, URLScan for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
 
@@ -4581,7 +4591,7 @@ Also: URLScan for intelligence, live page scan
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 | Used | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
 
 See also: [URLScan for hunting](#urlscan-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
@@ -4686,7 +4696,7 @@ Also: Diamond attribution, unknown adversary vertex
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond Model purpose](#diamond-model-purpose), [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [Diamond Model application in CTI](#diamond-model-application-in-cti)
@@ -4697,7 +4707,7 @@ Also: Kill Chain progression, where you are in the intrusion
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/01-soc/05-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain)
@@ -4762,7 +4772,7 @@ Also: VT, VirusTotal Relations, VirusTotal for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
@@ -4772,7 +4782,7 @@ Also: VT for intelligence, hash reputation, one hop not Relations
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 | Used | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [VirusTotal for hunting](#virustotal-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
@@ -4809,7 +4819,7 @@ Also: Diamond product constraint, weakest vertex drops a claim, Adversary empty 
 |----------|--------|-------|
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
-Naming the weakest on an incident card is [1.5.2 Diamond Model](../modules/01-soc/05-frameworks/02-diamond-model/).
+Naming the weakest on an incident card is [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem)
 
@@ -4826,13 +4836,13 @@ See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [vi
 
 ### what tool to use to view PCAP
 
-Also: Wireshark viewer, tshark, not Zeek-as-PCAP
+Also: Wireshark viewer, tshark, not Zeek-as-PCAP. **1.8.2 is retired.** If the shop lists a viewer, that is tool access (install request).
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.2 PCAP Handling](../modules/01-soc/08-site-specific/02-pcap-handling/) | SOC, Hunter, CTI |
+| Used | [1.8.3 Tool Access and Requests](../modules/00-intro/09-tool-access/01-tool-access/) | SOC, Hunter, CTI, DE |
 
-See also: [how to download PCAP](#how-to-download-pcap), [requesting a tool to be installed](#requesting-a-tool-to-be-installed)
+See also: [how to download PCAP](#how-to-download-pcap), [requesting a tool to be installed](#requesting-a-tool-to-be-installed), [PCAP verifies or expands a Zeek log](#pcap-verifies-or-expands-a-zeek-log)
 
 ### when to apply ACH vs Key Assumptions Check
 
@@ -4850,7 +4860,7 @@ Also: first external tool, hash vs sample vs history vs live URL
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/03-cti/03-tools/02-external-tools/) | CTI, Hunter |
+| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
@@ -4860,7 +4870,7 @@ Also: ticket worklog, fact vs hypothesis, reject desktop notes
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.8.4 Investigation Documentation](../modules/01-soc/08-site-specific/04-investigation-notes/) | SOC, Hunter, CTI |
+| Taught | [1.8.4 Investigation Documentation](../modules/00-intro/11-notes/01-investigation-notes/) | SOC, Hunter, CTI |
 
 See also: [changeover report record location](#changeover-report-record-location), [site-specific incident response processes](#site-specific-incident-response-processes)
 

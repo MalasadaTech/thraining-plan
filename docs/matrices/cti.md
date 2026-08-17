@@ -17,18 +17,18 @@
 
 ---
 
-## 0 How a SOC can operate
+## 0 Front door
 
-Shared intro. Same idea on the SOC, hunter, and DE sheets. Not site policy.
+Everyone. Taught before SOC. Same idea on the SOC, hunter, and DE sheets. Not site policy.
 
 | # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 0.1 | What a SOC is | K | A | B | B | Shared intro. Not CTI-primary; do not start at B/3c. |
-| 0.2 | Jobs in one sentence | K | A | B | B | CTI is one desk among several. |
-| 0.3 | How work can move | K | A | B | B | RFI and enrich are named, not taught. |
-| 0.4 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
-| 0.5 | How this course is laid out | K | A | B | B | CTI sits this after the SOC analyst block. |
-| 0.5.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a PIR or ticket. No 4d. |
+| 0.1 | How this course is laid out | K | A | B | B | Course map. Not CTI-primary. |
+| 0.2 | What a SOC is | K | A | B | B | Shared intro. Not CTI-primary; do not start at B/3c. |
+| 0.3 | Jobs in one sentence | K | A | B | B | CTI is one desk among several. |
+| 0.4 | How work can move | K | A | B | B | RFI and enrich are named, not taught. |
+| 0.4.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a PIR or ticket. No 4d. |
+| 0.5 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
 
 ---
 
@@ -79,8 +79,8 @@ Shared intro. Same idea on the SOC, hunter, and DE sheets. Not site policy.
 |---|------|------|-------|-------|-------|---------------|
 | 3.3.1 | Internal threat intelligence platform | K | B | C | C | CTI 3 should understand purpose, navigation, and how the TIP supports work. |
 | 3.3.1.1 | Search, retrieve, and use the internal TIP for enrichment or analysis | T | 3c | 4c | 4d | Core platform skill. 7-level develops more sophisticated workflows. |
-| 3.3.2 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | B | C | C | Strengths, weaknesses, and when to use each. Platform depth is 3.9. |
-| 3.3.2.1 | Select the appropriate external tool and perform enrichment or pivoting | T | 3c | 4c | 4d | Core research skill. Senior analysts develop more sophisticated methods. |
+| 3.3.2 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | B | C | C | Shared floor: purpose and when to pick. Platform depth is 3.9. |
+| 3.3.2.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 3c | 4c | 4d | Select on the shared floor. Advanced pivot is 3.9. |
 
 ---
 

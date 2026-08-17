@@ -20,7 +20,7 @@ Advanced ATT&CK for CTI: extract TTPs from a **report/activity set**, map to **r
 - Do not invent T-IDs. Blank is better than `T9999`.
 - Vendor ID dumps fail without local evidence.
 - SOC 3-level K is **A / B / B** (not A/B/C). Task **2b / 3c / 4c**. Hunter/CTI **3c / 4c / 4c**. Do not collapse.
-- Do not copy `modules/shared/frameworks/` into this folder.
+- Do not copy `modules/00-intro/06-frameworks/` into this folder.
 
 **Common Student Challenges:**
 - Mapping motive / “APT” to a tactic.

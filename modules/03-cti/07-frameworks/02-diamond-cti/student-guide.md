@@ -152,4 +152,4 @@ Social-political and technology meta-features exist in the paper. They are **not
   - 3.7.3 – Cyber Kill Chain in CTI (next)
   - 3.11 – Actor profile
 - Diamond Model of Intrusion Analysis (Caltagirone, Pendergast, Betz)
-- `modules/shared/frameworks/` (reference; do not copy here)
+- `modules/00-intro/06-frameworks/` (reference; do not copy here)

@@ -1,0 +1,28 @@
+# Cyber Kill Chain
+
+**Path:** `modules/00-intro/06-frameworks/03-cyber-kill-chain`  
+**Taught:** `00` block, before SOC  
+**Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
+**Time:** about 15 minutes
+
+## Mapped proficiency items
+
+| Matrix ID | Type | Item | Outline heading |
+|-----------|------|------|-----------------|
+| 1.5.3.1 | K | Cyber Kill Chain | 1.5.3 a–c |
+| 1.5.3.2 | T | Identify the Kill Chain stage of observed activity | 1.5.3.1 task 1 |
+
+Stay in this lesson: stage of what you saw, and why it is not the neighbor. ATT&CK is **1.5.1**. Diamond is **1.5.2**. Next shared hour is the tool survey (**3.3.2**).
+
+## Concepts taught
+
+- Cyber Kill Chain purpose
+- Kill Chain stages
+- identify the stage and reject the previous or next stage
+
+## Artifacts
+
+- [instructor-guide.md](instructor-guide.md)
+- [student-guide.md](student-guide.md)
+- [slides.md](slides.md)
+- `assets/` — empty

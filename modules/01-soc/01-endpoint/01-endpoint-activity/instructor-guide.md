@@ -18,7 +18,7 @@ Name the five kinds of host rows so the next hours can stay on one kind each.
 **Context (plain language):**
 
 - What this hour is for: An alert will point at a host. Before you describe a row, you need to know which kind of row it is. This hour is that map.
-- How it hooks to the hour before: 0.5 laid out the course. This is the start of the SOC analyst block.
+- How it hooks to the hour before: the full `00` block (front door, frameworks, tools, environment). This is the start of the SOC analyst block.
 - How it hooks to the hour after: 1.1.2 is the process row — who ran what.
 - Why we are doing it this way: You wanted a front door for 1.1 so process / file / registry / host-network / image-load are named before we read one.
 - What we are *not* doing this hour: Process fields. Sysmon install. Zeek. The PRD plot. No lab.
@@ -49,7 +49,7 @@ Same as the student guide.
 
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | After 0.5 |
+| Introduction (required) | 3 min     | After the shared floor |
 | Key Concepts            | 10 min    | Five kinds; three givens |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 2 min     | |

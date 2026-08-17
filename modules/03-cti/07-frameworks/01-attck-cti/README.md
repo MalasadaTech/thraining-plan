@@ -12,7 +12,7 @@
 | 3.7.1 | K | MITRE ATT&CK for CTI analysis and reporting | 3.7.1 a |
 | 3.7.1.1 | T | Map activity or reports to MITRE ATT&CK | 3.7.1.1 task 1 |
 
-The lesson ID is **3.7.1**. SOC alert mapping is **1.5.1**. Hunt planning / coverage is **2.5**. Recording IDs from a hunt-facing CTI skim is **2.4.2**. Which TTPs apply to *this environment* is **3.8.2**. Diamond is **3.7.2**. Kill Chain is **3.7.3**. DTF is **3.7.4**. Actor profile is **3.11**. Do not copy `modules/shared/frameworks/` into this folder.
+The lesson ID is **3.7.1**. SOC alert mapping is **1.5.1**. Hunt planning / coverage is **2.5**. Recording IDs from a hunt-facing CTI skim is **2.4.2**. Which TTPs apply to *this environment* is **3.8.2**. Diamond is **3.7.2**. Kill Chain is **3.7.3**. DTF is **3.7.4**. Actor profile is **3.11**. Do not copy `modules/00-intro/06-frameworks/` into this folder.
 
 ## Concepts taught
 

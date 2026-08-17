@@ -28,6 +28,7 @@
 - `notice` log
 - `x509` log
 - TAP / SPAN placement
+- PCAP verifies or expands a Zeek log
 
 ## Artifacts
 

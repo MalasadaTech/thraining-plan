@@ -151,9 +151,10 @@ Highlight that `weird` is often under-used but very valuable for detecting anoma
 - **Hunting friendly** – Structured and consistent data
 - **Complements alerts** – Provides surrounding context for triage
 - **Retrospective power** – Data remains available even when no alert fired
+- **PCAP** – pulled to verify a Zeek log or expand what the log does not carry
 
 **Speaker Notes:**  
-Connect each point to real work. Example: “When a Suricata alert fires, the first place many analysts look is the corresponding Zeek http or conn log.”
+Connect each point to real work. Example: “When a Suricata alert fires, the first place many analysts look is the corresponding Zeek http or conn log.” PCAP is the usual next artifact — not a Wireshark hour, not the site download path.
 
 ---
 

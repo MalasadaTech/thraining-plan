@@ -158,4 +158,4 @@ Do **not** invent T-IDs. If you cannot find the cell, write the behavior and lea
   - 3.7.2 – Diamond Model in CTI (next)
   - 3.8.2 – Applicable TTPs from reports
 - MITRE ATT&CK Enterprise (lookup only — do not invent cells)
-- `modules/shared/frameworks/` (reference; do not copy here)
+- `modules/00-intro/06-frameworks/` (reference; do not copy here)

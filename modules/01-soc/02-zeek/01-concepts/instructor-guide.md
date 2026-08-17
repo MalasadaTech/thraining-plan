@@ -17,6 +17,7 @@ Establish a solid conceptual foundation for Zeek before students dive into indiv
 - Focus on the mental model: Traffic → Events → Scripts → Logs → SIEM.
 - Students only need a high-level understanding of log types at this stage; depth comes in later modules.
 - Tie everything back to practical value for triage and hunting.
+- Mention PCAP once: normally pulled to verify or expand a Zeek log. Not a Wireshark hour. Not the site download path.
 
 **Common Student Challenges:**
 - Confusing Zeek with Snort/Suricata (signature-based tools).

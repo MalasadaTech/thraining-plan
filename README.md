@@ -19,12 +19,11 @@ docs/
 
 templates/                        # proposal + module writing templates
 modules/
-  00-intro/<module>/              # shared section 0
+  00-intro/<unit>/<module>/       # front door + shared hours (everyone, before SOC)
   01-soc/<unit>/<module>/
   02-hunter/<unit>/<module>/
   03-cti/<unit>/<module>/
   04-de/<module>/                 # Detection Engineer
-  shared/frameworks/              # write once (MITRE, Diamond, Kill Chain)
 labs/                             # reusable sample logs and PCAP
 ```
 
@@ -39,15 +38,17 @@ Two ID systems exist. Do not mix them in filenames.
 | **Matrix item** (canonical) | `1.2.2.1`, `1.2.2.2` | Proficiency tracking, mapped items in guides |
 | **Outline heading** | `1.2.2` Conn knowledge, `1.2.3` Conn tasks | Curriculum design only |
 
-A **module** is a teaching unit. It may cover one outline knowledge item plus its matching tasks. Folder names are not dotted IDs:
+A **module** is a teaching unit. It may cover one outline knowledge item plus its matching tasks. **Teach order** (IDs stay): full `00-intro` first (`0.1` layout → `0.2`–`0.5` → `1.5` / `3.3.2` / `1.8.1`) → SOC `1.1`–`1.4` → **SOC ends at `1.6` reporting** → CTI → hunt → DE. Map: [modules/00-intro/README.md](modules/00-intro/README.md). **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+
+Folder names are not dotted IDs:
 
 | Folder | Matrix items | Outline headings |
 |--------|----------------|------------------|
-| `modules/00-intro/01-what-a-soc-is` | `0.1` | `0.1` a–c |
-| `modules/00-intro/02-jobs-in-one-sentence` | `0.2` | `0.2` a–f |
-| `modules/00-intro/03-how-work-moves` | `0.3` | `0.3` a–g |
-| `modules/00-intro/04-where-jobs-overlap` | `0.4` | `0.4` a–d |
-| `modules/00-intro/05-course-layout` | `0.5` / `0.5.1` | `0.5` a–d + `0.5.1` |
+| `modules/00-intro/01-course-layout` | `0.1` | `0.1` a–d |
+| `modules/00-intro/02-what-a-soc-is` | `0.2` | `0.2` a–c |
+| `modules/00-intro/03-jobs-in-one-sentence` | `0.3` | `0.3` a–f |
+| `modules/00-intro/04-how-work-moves` | `0.4` / `0.4.1` | `0.4` a–g + `0.4.1` |
+| `modules/00-intro/05-where-jobs-overlap` | `0.5` | `0.5` a–d |
 | `modules/01-soc/01-endpoint/01-endpoint-activity` | `1.1.1.1`–`1.1.1.2` | `1.1.1` + `1.1.1.1` |
 | `modules/01-soc/01-endpoint/02-process-activity` | `1.1.2.1`–`1.1.2.3` | `1.1.2` + `1.1.2.1` |
 | `modules/01-soc/01-endpoint/03-file-system-activity` | `1.1.3.1`–`1.1.3.3` | `1.1.3` + `1.1.3.1` |
@@ -71,19 +72,13 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/01-soc/04-alerts/03-false-positive-causes` | `1.4.3.1`–`1.4.3.2` | `1.4.3` + `1.4.3.1` |
 | `modules/01-soc/04-alerts/04-categorizations` | `1.4.4.1`–`1.4.4.2` | `1.4.4` + `1.4.4.1` |
 | `modules/01-soc/04-alerts/05-sla-response-times` | `1.4.5.1`–`1.4.5.3` | `1.4.5` + `1.4.5.1` |
-| `modules/01-soc/05-frameworks/01-attck` | `1.5.1.1`–`1.5.1.2` | `1.5.1` + `1.5.1.1` |
-| `modules/01-soc/05-frameworks/02-diamond-model` | `1.5.2.1`–`1.5.2.2` | `1.5.2` + `1.5.2.1` |
-| `modules/01-soc/05-frameworks/03-cyber-kill-chain` | `1.5.3.1`–`1.5.3.2` | `1.5.3` + `1.5.3.1` |
-| `modules/01-soc/06-reporting/01-report-types` | `1.6.1.1`–`1.6.1.2` | `1.6.1` + `1.6.1.1` |
-| `modules/01-soc/06-reporting/02-reporting-timelines` | `1.6.2.1`–`1.6.2.2` | `1.6.2` + `1.6.2.1` |
-| `modules/01-soc/06-reporting/03-notification-distribution` | `1.6.3.1`–`1.6.3.2` | `1.6.3` + `1.6.3.1` |
-| `modules/01-soc/07-shift-change/01-changeover-process` | `1.7.1.1`–`1.7.1.2` | `1.7.1` + `1.7.1.1` |
-| `modules/01-soc/07-shift-change/02-changeover-report` | `1.7.2.1`–`1.7.2.2` | `1.7.2` + `1.7.2.1` |
-| `modules/01-soc/08-site-specific/01-environment-orientation` | `1.8.1.1`–`1.8.1.2` | `1.8.1` + `1.8.1.1` |
-| `modules/01-soc/08-site-specific/02-pcap-handling` | `1.8.2.1`–`1.8.2.2` | `1.8.2` tasks 1–2 |
-| `modules/01-soc/08-site-specific/03-tool-access` | `1.8.3.1`–`1.8.3.3` | `1.8.3` tasks 1–3 |
-| `modules/01-soc/08-site-specific/04-investigation-notes` | `1.8.4.1` | `1.8.4` task 1 |
-| `modules/01-soc/08-site-specific/05-incident-response` | `1.8.5.1` | `1.8.5` task 1 |
+| `modules/00-intro/06-frameworks/01-attck` | `1.5.1.1`–`1.5.1.2` | `1.5.1` + `1.5.1.1` (00, before SOC) |
+| `modules/00-intro/06-frameworks/02-diamond-model` | `1.5.2.1`–`1.5.2.2` | `1.5.2` + `1.5.2.1` (00, before SOC) |
+| `modules/00-intro/06-frameworks/03-cyber-kill-chain` | `1.5.3.1`–`1.5.3.2` | `1.5.3` + `1.5.3.1` (00, before SOC) |
+| `modules/01-soc/05-reporting/01-report-types` | `1.6.1.1`–`1.6.1.2` | `1.6.1` + `1.6.1.1` |
+| `modules/01-soc/05-reporting/02-reporting-timelines` | `1.6.2.1`–`1.6.2.2` | `1.6.2` + `1.6.2.1` |
+| `modules/01-soc/05-reporting/03-notification-distribution` | `1.6.3.1`–`1.6.3.2` | `1.6.3` + `1.6.3.1` |
+| `modules/00-intro/08-environment/01-orientation` | `1.8.1.1`–`1.8.1.2` | `1.8.1` + `1.8.1.1` (00, before SOC; rewrite later) |
 | `modules/02-hunter/01-purpose` | `2.1.1` / `2.1.1.1` / `2.1.1.2` | `2.1` + `2.1.1` |
 | `modules/02-hunter/02-methodology/01-hunt-types` | `2.2.1` / `2.2.1.1`–`2.2.1.4` | `2.2.1` + `2.2.3` tasks 4–7 |
 | `modules/02-hunter/02-methodology/02-hunt-development` | `2.2.2` / `2.2.2.1`–`2.2.2.3` | `2.2.2` + `2.2.3` tasks 1–3 |
@@ -111,7 +106,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/03-cti/02-tradecraft/03-admiralty-code` | `3.2.3` / `3.2.3.1` | `3.2.3` + `3.2.3.1` |
 | `modules/03-cti/02-tradecraft/04-cognitive-biases` | `3.2.4` / `3.2.4.1` | `3.2.4` + `3.2.4.1` |
 | `modules/03-cti/03-tools/01-internal-tip` | `3.3.1` / `3.3.1.1` | `3.3.1` + `3.3.1.1` |
-| `modules/03-cti/03-tools/02-external-tools` | `3.3.2` / `3.3.2.1` | `3.3.2` + `3.3.2.1` |
+| `modules/00-intro/07-tool-survey/01-external-tools` | `3.3.2` / `3.3.2.1` | `3.3.2` + `3.3.2.1` task 1 (early shared) |
 | `modules/03-cti/04-file-similarity` | `3.4.1` / `3.4.1.1`–`3.4.1.2` | `3.4.1` + `3.4.1.1` |
 | `modules/03-cti/05-rdap-whois` | `3.5.1` / `3.5.1.1` | `3.5.1` + `3.5.1.1` |
 | `modules/03-cti/06-advanced-dns` | `3.6.1` / `3.6.1.1` | `3.6.1` + `3.6.1.1` |
@@ -154,4 +149,4 @@ Do not start with a student guide. Approve the requirement first, then build the
 2. Follow the two gates in [docs/contributing.md](docs/contributing.md) (matrix/outline/tracker, then guides, concepts, and the index).
 3. To generate a lesson with an AI tool, use the matrix ID for **that lesson** (a unit such as `1.2.5`, or a cluster child such as `3.1.1` — not cluster `3.1`): `Follow docs/generate-module.md and generate teaching-unit <ID> (<Title>) for me to review. Do not invent IDs.`
 
-Shared topics (frameworks, cross-role primers) go under `modules/shared/`, not copied into each role.
+Shared topics live under `modules/00-intro/`. Do not copy those lessons into each role.

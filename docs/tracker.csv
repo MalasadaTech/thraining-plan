@@ -1,17 +1,17 @@
 Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,Status - Instructor Guide,Status - Slide Deck,Status - Exercise,Status - Answer Key,Status - Quiz,Owner,Target Completion,Notes
-0,How a SOC can operate,SOC / Hunter / CTI / DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 0.1–0.5"
-0.1,What a SOC is,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Trimmed short intro; ready for review; no lab on purpose
-0.2,Jobs in one sentence,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short intro; ready for review; no lab
-0.3,How work can move,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short intro; ready for review; no lab
-0.4,Where the jobs lightly overlap,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short intro; ready for review; no lab
-0.5,How this course is laid out,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short intro; includes 0.5.1; ready for review; no lab
+0,Front door,SOC / Hunter / CTI / DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 0.1–0.5 plus shared floor in 00-intro"
+0.1,How this course is laid out,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,First hour; rewritten; no hand-off task; no lab
+0.2,What a SOC is,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.1; retagged; DYA/PRD live here
+0.3,Jobs in one sentence,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.2; retagged
+0.4,How work can move,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.3; includes 0.4.1 hand-off task
+0.5,Where the jobs lightly overlap,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Was 0.4; retagged
 1.1.1,Endpoint Activity (the map),SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,New map hour; ready for review; no lab
 1.1.2,Process Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 1.1.3,File System Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.1.4,Network Activity (Endpoint),SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.1.5,Registry Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.1.6,Image and Driver Load Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.2.1,Zeek Concepts,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
+1.2.1,Zeek Concepts,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,PCAP mention added (verify/expand Zeek logs); not a PCAP course
 1.2.2,Conn Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
 1.2.3,DNS Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
 1.2.4,TLS Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
@@ -28,19 +28,19 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 1.4.3,Common False Positive Causes,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.4.4,Common Alert Categorizations,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.4.5,SLA / Response Time Goals,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.5.1,MITRE ATT&CK,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.5.2,Diamond Model,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.5.3,Cyber Kill Chain,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+1.5.1,MITRE ATT&CK,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+1.5.2,Diamond Model,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+1.5.3,Cyber Kill Chain,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 1.6.1,Report Types,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.6.2,Reporting Timelines,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.6.3,Notification and Distribution,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.7.1,Shift Changeover Process,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.7.2,Changeover Report Content,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.8.1,Environment Orientation,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.8.2,PCAP Handling,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.8.3,Tool Access and Requests,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.8.4,Investigation Documentation,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-1.8.5,Incident Response Processes,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+1.7.1,Shift Changeover Process,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
+1.7.2,Changeover Report Content,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
+1.8.1,Environment Orientation,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Rewrite later: infrastructure + signal flow; do not invent a site card
+1.8.2,PCAP Handling,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired
+1.8.3,Tool Access and Requests,SOC / Hunter / CTI / DE,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
+1.8.4,Investigation Documentation,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
+1.8.5,Incident Response Processes,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
 2.1,Purpose of Threat Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 2.2,Hunt Methodology,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Remaining 2.2 items after 2.2.1 and 2.2.2"
 2.2.1,Hunt Types,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
@@ -75,7 +75,7 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 3.2.4,Cognitive Biases and Mitigation,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 3.3,Tools,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.3.1–3.3.2"
 3.3.1,Internal Threat Intelligence Platform,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.3.2,External Tools,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.3.2,External Tools,SOC / Hunter / CTI / DE,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Shared floor after 0 — purpose and when to pick; 3.9 is depth; folder stays until revised
 3.4,File Similarity & Hashing Techniques,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 3.4.1"
 3.4.1,Hashing and Similarity Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 3.5,RDAP / WHOIS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 3.5.1"

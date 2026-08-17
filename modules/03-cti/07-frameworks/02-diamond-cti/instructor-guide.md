@@ -20,7 +20,7 @@ Advanced Diamond for CTI: fill vertices from a **report/activity set**, name the
 - Adversary unknown is a *success*, not a failed card.
 - Hunter/CTI task goes to **4d** — the 7-level move is the *product constraint*, not a prettier table.
 - SOC K is **A / B / B** (not A/B/C). Task **1a / 2b / 3c**. Do not collapse.
-- Do not copy `modules/shared/frameworks/` into this folder.
+- Do not copy `modules/00-intro/06-frameworks/` into this folder.
 
 **Common Student Challenges:**
 - Pasting the vendor cluster name into Adversary.
