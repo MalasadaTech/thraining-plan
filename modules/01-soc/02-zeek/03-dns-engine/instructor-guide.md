@@ -1,165 +1,91 @@
 # Instructor Guide – Module 1.2.3 – DNS Engine
 
-**Target Audience:** SOC Analyst (primary), Threat Hunter (secondary)  
-**Proficiency Focus:** SOC A/2b → B/3c → C/4c | Hunter B/3c → C/4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
+**Proficiency Focus:**  
+- SOC: 1.2.3.1 A / B / C ; 1.2.3.2 2b / 3c / 4c ; 1.2.3.3 2b / 3c / 4c  
+- Hunter: 1.2.3.1 B / C / C ; 1.2.3.2 3c / 4c / 4c ; 1.2.3.3 3c / 4c / 4c  
+- CTI: 1.2.3.1 A / B / B ; 1.2.3.2 1a / 2b / 3c ; 1.2.3.3 1a / 2b / 3c  
+**Estimated Time:** 25–30 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach students how to read, interpret, and hunt with the Zeek `dns` log. DNS is one of the highest-value data sources for both triage and proactive detection.
+Read a Zeek `dns` row and describe it. Say what a specific SIEM query looks like.
+
+**Context (plain language):**
+
+- What this hour is for: SOC analysts read the dns log to see the name that was asked and what answered.
+- How it hooks to the hour before: 1.2.2 was who talked to 203.0.113.88:443. This hour is the lookup that can sit next to that flow.
+- How it hooks to the hour after: 1.2.4 is TLS — SNI / cert on the same wire, not DNS.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–d only. No lab this pass.
+- What we are *not* doing this hour: Process name (1.1.4). DGA / tunneling hunt. uid-pivot as a unit. No lab.
+- Extra step: none.
+
+Continue `203.0.113.88` as the A answer. Do not invent Night Owl / Harbor resolver names. Do not tell the PRD plot.
 
 **Key Teaching Points:**
-- DNS is often the first network activity associated with malware and C2.
-- Focus on `query`, `qtype_name`, `rcode_name`, and `answers`.
-- NXDOMAIN spikes and unusual query types are classic leads.
-- Always reinforce the `uid` pivot back to the `conn` log.
-
-**Common Student Challenges:**
-- Treating every NXDOMAIN as malicious (context and volume matter).
-- Not knowing which query types are commonly abused (TXT, NULL, etc.).
-- Forgetting to pivot with `uid` to see the full connection.
+- Question vs answer.
+- Record types: A, AAAA, MX, CNAME, NS, TXT.
+- orig_h asked; resp_h is the resolver, not the A record.
+- A query is specific.
 
 **Required Materials:**
 - Student Guide
-- Sample DNS log entries (examples in the guide are sufficient for classroom use)
-- Optional: Live SIEM access for query practice
+- Slide Deck
 
 ---
 
 ## Learning Objectives
 
-1. Explain the purpose of the Zeek `dns` log.
-2. Identify and interpret the most important fields.
-3. Recognize common query types and response codes.
-4. Analyze a `dns` log entry and accurately describe what occurred.
-5. Create basic SIEM queries for suspicious DNS activity.
+Same as the student guide.
 
-**Mapped Items:**
-- K: 1.2.3.1 – DNS engine
-- T: 1.2.3.2 – Analyze a Zeek DNS log
-- T: 1.2.3.3 – Create a SIEM query for DNS activity
+**Mapped Items:** K 1.2.3.1 ; T 1.2.3.2 ; T 1.2.3.3
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & Objectives      | 4 min    | |
-| Purpose of the dns log         | 6 min    | |
-| Key Fields                     | 12 min   | Focus on query, qtype, rcode, answers |
-| Query Types & Response Codes   | 12 min   | |
-| Walkthrough Examples           | 12 min   | Interactive |
-| Hands-On Exercise              | 15 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 3 min    | |
-| **Total**                      | **~72 min** | |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Name lookup, not conn |
+| Key Concepts            | 16 min    | Fields a–d; two products |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 2 min     | |
+| **Total**               | **~25 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-### 1. Purpose of the dns Log
+### 1. Key Concepts
 
-**Talking Points:**
-- Nearly every connection starts with a DNS query.
-- Excellent source for detecting:
-  - Malicious domains / C2
-  - DGAs
-  - DNS tunneling
-  - Phishing infrastructure
-- Often available even when full packet capture is not.
+Write query / answers / qtype / orig vs resp. Stop on resp_h: resolver, not the A.
 
-**Question to ask:**  
-“Why might DNS be more valuable than the connection log alone when hunting for C2?”
-
-### 2. Key Fields
-
-**Teaching approach:**
-- Project a sample DNS log entry.
-- Spend the majority of time on:
-  - `query` (the domain)
-  - `qtype_name`
-  - `rcode_name`
-  - `answers`
-  - `id.orig_h` and `uid`
-
-**Important reminder:**  
-The `uid` links this DNS activity to the corresponding `conn` record (and any related http/ssl/files logs).
-
-### 3. Query Types & Response Codes
-
-**Focus list:**
-- Query types: A, AAAA, CNAME, TXT, MX, PTR
-- Response codes: NOERROR, NXDOMAIN, SERVFAIL
-
-**Teaching tip:**  
-Emphasize that a single NXDOMAIN is rarely interesting. Patterns and volume are what matter.
-
-### 4. Examples
-
-Work through all three examples interactively. Ask students to interpret before revealing the explanation.
-
-**Extra point for Example 2 (NXDOMAIN):**  
-Discuss how DGAs produce high rates of NXDOMAIN responses and why that is a strong hunting signal.
-
-**Extra point for Example 3 (TXT):**  
-Note that legitimate use of TXT records exists (SPF, domain verification), so context and frequency are required before calling something suspicious.
-
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:**
-- Give 12–15 minutes.
-- Allow use of the Student Guide.
-- Review answers as a group afterward.
-
-**What good answers look like:**
-
-**Summaries:**
-- Example 1: Normal successful A record lookup.
-- Example 2: Query for a non-existent domain (possible DGA or typo).
-- Example 3: TXT query that could be associated with tunneling or covert channel activity.
-
-**Queries (pseudo examples):**
-```
-rcode_name = "NXDOMAIN" | stats count by id.orig_h | where count > threshold
-```
-```
-qtype_name = "TXT" | stats count by id.orig_h | sort by count desc
-```
-
-**uid pivot explanation:**  
-Copy the `uid` from the DNS log entry and search the `conn` log (and other protocol logs) for the same `uid` to see the full network connection context.
+If they name `powershell.exe`: “1.1.4.”  
+If they start DGA: “Not this hour. Describe the row.”  
+If they write `dns=*` : “Not specific.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **What is the primary purpose of the Zeek `dns` log?**  
-   **Answer:** To record DNS queries and responses, providing visibility into domains being contacted and enabling detection of malicious infrastructure, DGAs, and tunneling.
+1. **`id.resp_h` is the IP the name resolved to. True or false?**  
+   **Answer:** False. It is the resolver. The A record is in `answers`.  
+   **Explanation:** Outline b / d.
 
-2. **Which field contains the domain name that was queried?**  
-   **Answer:** `query`
+2. **Workstation A-query, answers 203.0.113.88. What occurred?**  
+   **Answer:** That host asked for that name and got A 203.0.113.88.  
+   **Explanation:** Outline a–d and 1.2.5 task 1.
 
-3. **What does the response code `NXDOMAIN` indicate?**  
-   **Answer:** The queried domain does not exist.
-
-4. **Name two query types that are sometimes abused for data tunneling.**  
-   **Answer:** TXT and NULL (also occasionally CNAME or others). TXT is the most commonly discussed.
-
-5. **Why is the `uid` field important when analyzing DNS activity?**  
-   **Answer:** It links the DNS query to the corresponding connection in the `conn` log and to other related protocol logs, allowing full context to be built.
+3. **A query that matches every dns row is specific. True or false?**  
+   **Answer:** False. A good query names a specific pattern (`query`, type, or `answers`).  
+   **Explanation:** 1.2.5 task 2.
 
 ---
 
 ## Additional Instructor Resources
 
-- Zeek dns.log documentation
-- Internal lists of known-good DNS servers and high-volume legitimate TXT usage (if available)
-- Next recommended modules: 1.2.5 HTTP Engine or 1.2.4 TLS Engine
+- Next: 1.2.4 TLS engine

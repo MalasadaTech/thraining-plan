@@ -11,9 +11,9 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 1.1.4,Network Activity (Endpoint),SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 1.1.5,Registry Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 1.1.6,Image and Driver Load Activity,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-1.2.1,Zeek Concepts,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,PCAP mention added (verify/expand Zeek logs); not a PCAP course
-1.2.2,Conn Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
-1.2.3,DNS Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
+1.2.1,Zeek Concepts,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; K only; PCAP mention only; ready for review; no lab
+1.2.2,Conn Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+1.2.3,DNS Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 1.2.4,TLS Engine,SOC / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete
 1.2.5,HTTP Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
 1.2.6,SMTP Engine,SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
