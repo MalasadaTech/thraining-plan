@@ -135,7 +135,7 @@ Now = **14:20** unless stated.
 
 - Two clocks: **start** from created; **close/escalate** from first touch.
 - Name the clock at risk. Record close or escalate against that clock.
-- Classroom 15 / 45 are for this lesson. This closes unit **1.4**. Next unit: **1.5** Frameworks.
+- Classroom 15 / 45 are for this lesson. This closes unit **1.4**. Next unit: **0.6** Frameworks.
 
 ---
 
@@ -144,5 +144,5 @@ Now = **14:20** unless stated.
 - Related modules:
   - 1.4.1 – Alert context and investigation
   - 1.4.4 – Common alert categorizations (previous)
-  - 1.5.1 – MITRE ATT&CK (next unit)
+  - 0.6.1 – MITRE ATT&CK (next unit)
   - Local SLA card used on shift (optional — substitutes classroom numbers)

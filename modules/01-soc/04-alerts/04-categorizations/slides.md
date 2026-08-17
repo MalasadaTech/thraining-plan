@@ -50,7 +50,7 @@ Not TP/FP. Not ATT&CK.
 
 TP / FP (**1.4.2**)  
 FP causes (**1.4.3**)  
-ATT&CK IDs (**1.5**)  
+ATT&CK IDs (**0.6**)  
 “Looks like malware so root”
 
 **Key Point:** Bucket + rejected neighbor.

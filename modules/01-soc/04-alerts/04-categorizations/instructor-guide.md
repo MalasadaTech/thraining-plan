@@ -49,7 +49,7 @@ Teach site categories and force **assign + reject the adjacent**. CTI is nomencl
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 1.4.2 / 1.5 |
+| Introduction & fence           | 6 min    | Not 1.4.2 / 0.6 |
 | Categories + neighbors         | 14 min   | a–e |
 | Walkthrough Examples           | 14 min   | |
 | Hands-On Exercise              | 16 min   | |
@@ -110,7 +110,7 @@ Teach site categories and force **assign + reject the adjacent**. CTI is nomencl
    **Explanation:** Task rewrite.
 
 5. **ATT&CK?**  
-   **Answer:** **1.5**, not a category bucket.  
+   **Answer:** **0.6**, not a category bucket.  
    **Explanation:** Fence.
 
 ---

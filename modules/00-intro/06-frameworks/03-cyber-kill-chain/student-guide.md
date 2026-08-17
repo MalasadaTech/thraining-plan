@@ -1,11 +1,11 @@
-# Module 1.5.3 – Cyber Kill Chain
+# Module 0.6.3 – Cyber Kill Chain
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
 **Proficiency Focus:**  
-- SOC: 1.5.3.1 A / B / C ; 1.5.3.2 2b / 3c / 4c  
-- Hunter: 1.5.3.1 B / C / C ; 1.5.3.2 3c / 4c / 4c  
-- CTI: 1.5.3.1 B / C / C ; 1.5.3.2 3c / 4c / 4c  
-- DE: 1.5.3.1 A / B / B ; 1.5.3.2 1a / 2b / 2b  
+- SOC: 0.6.3.1 A / B / C ; 0.6.3.2 2b / 3c / 4c  
+- Hunter: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  
+- CTI: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  
+- DE: 0.6.3.1 A / B / B ; 0.6.3.2 1a / 2b / 2b  
 **Estimated Time:** 15 minutes
 
 ---
@@ -18,9 +18,9 @@ By the end of this module, you will be able to:
 2. Place a one-line activity on a stage and say why it is not the previous or next stage.
 
 **Mapped Proficiency Items:**
-- K: 1.5.3.1 – Cyber Kill Chain  
+- K: 0.6.3.1 – Cyber Kill Chain  
   SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B
-- T: 1.5.3.2 – Identify the Kill Chain stage of observed activity  
+- T: 0.6.3.2 – Identify the Kill Chain stage of observed activity  
   SOC 2b / 3c / 4c · Hunter 3c / 4c / 4c · CTI 3c / 4c / 4c · DE 1a / 2b / 2b
 
 ---
@@ -43,7 +43,7 @@ ATT&CK named the behavior. Diamond named the empty corner. Kill Chain asks **whe
 
 **How you use it.** Place **this row** on one stage. Say why it is not the **previous** or **next** stage. Do not skip ahead to a stage you did not see.
 
-**What good looks like (1.5.3.2):** a user received a `.vbs` in email. That is **Delivery**. It is not Weaponization (you did not see them build it). It is not Exploitation (you did not see it run). Do not skip to Command and Control without a callback.
+**What good looks like (0.6.3.2):** a user received a `.vbs` in email. That is **Delivery**. It is not Weaponization (you did not see them build it). It is not Exploitation (you did not see it run). Do not skip to Command and Control without a callback.
 
 Tool survey is next (**3.3.2**).
 
@@ -67,6 +67,6 @@ Seven stages. Place the row you have. Reject the neighbor. Do not invent the res
 
 ## 4. Related modules
 
-- 1.5.1 – MITRE ATT&CK
-- 1.5.2 – Diamond Model
+- 0.6.1 – MITRE ATT&CK
+- 0.6.2 – Diamond Model
 - 3.3.2 – External tools

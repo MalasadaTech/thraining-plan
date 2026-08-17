@@ -16,7 +16,7 @@
 Advanced ATT&CK for CTI: extract TTPs from a **report/activity set**, map to **real IDs**, cite, reject the neighbor, list only supported IDs in the product.
 
 **Key Teaching Points:**
-- Do not re-teach the 1.5.1 matrix tour. One recap sentence, then the excerpt.
+- Do not re-teach the 0.6.1 matrix tour. One recap sentence, then the excerpt.
 - Do not invent T-IDs. Blank is better than `T9999`.
 - Vendor ID dumps fail without local evidence.
 - SOC 3-level K is **A / B / B** (not A/B/C). Task **2b / 3c / 4c**. Hunter/CTI **3c / 4c / 4c**. Do not collapse.
@@ -50,7 +50,7 @@ Advanced ATT&CK for CTI: extract TTPs from a **report/activity set**, map to **r
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not 1.5.1 redo / 2.5 / 3.8.2 |
+| Introduction & fence           | 8 min    | Not 0.6.1 redo / 2.5 / 3.8.2 |
 | Advanced extract + report use  | 14 min   | a |
 | Walkthrough Examples           | 14 min   | |
 | Hands-On Exercise              | 18 min   | Map lines |
@@ -63,7 +63,7 @@ Advanced ATT&CK for CTI: extract TTPs from a **report/activity set**, map to **r
 ## Detailed Teaching Notes
 
 **Talking Points:**
-- CTI 3: 3c — they already mapped alerts in 1.5.1. Push **sub-technique + reject + product line**.
+- CTI 3: 3c — they already mapped alerts in 0.6.1. Push **sub-technique + reject + product line**.
 - C can be T1071.001 **and** T1105. That is not fence-sitting if both behaviors are in the GET.
 
 **Question:**  
@@ -96,8 +96,8 @@ Advanced ATT&CK for CTI: extract TTPs from a **report/activity set**, map to **r
 
 ## Knowledge Check – Answer Key
 
-1. **Advanced vs 1.5.1?**  
-   **Answer:** Report or multi-event story; sub-technique; neighbor reject; only supported IDs in the *intel product*. 1.5.1 maps an alert.  
+1. **Advanced vs 0.6.1?**  
+   **Answer:** Report or multi-event story; sub-technique; neighbor reject; only supported IDs in the *intel product*. 0.6.1 maps an alert.  
    **Explanation:** Outline a.
 
 2. **Map line besides the ID?**  

@@ -1,11 +1,11 @@
-# Instructor Guide – Module 1.5.1 – MITRE ATT&CK
+# Instructor Guide – Module 0.6.1 – MITRE ATT&CK
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
 **Proficiency Focus:**  
-- SOC: 1.5.1.1 A / B / C ; 1.5.1.2 2b / 3c / 4c  
-- Hunter: 1.5.1.1 B / C / C ; 1.5.1.2 3c / 4c / 4c  
-- CTI: 1.5.1.1 B / C / C ; 1.5.1.2 3c / 4c / 4c  
-- DE: 1.5.1.1 A / B / B ; 1.5.1.2 1a / 2b / 2b  
+- SOC: 0.6.1.1 A / B / C ; 0.6.1.2 2b / 3c / 4c  
+- Hunter: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  
+- CTI: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  
+- DE: 0.6.1.1 A / B / B ; 0.6.1.2 1a / 2b / 2b  
 **Estimated Time:** 20 minutes  
 **Delivery Method:** Instructor-led
 
@@ -37,9 +37,9 @@
 Same as the student guide.
 
 **Mapped Items:**  
-- K: 1.5.1.1 – MITRE ATT&CK  
+- K: 0.6.1.1 – MITRE ATT&CK  
   SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B  
-- T: 1.5.1.2 – Map an alert or observed activity to MITRE ATT&CK tactics/techniques  
+- T: 0.6.1.2 – Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
   SOC 2b / 3c / 4c · Hunter 3c / 4c / 4c · CTI 3c / 4c / 4c · DE 1a / 2b / 2b
 
 ---
@@ -84,4 +84,4 @@ DE sits this at awareness. Do not start them at hunt-planning depth.
 
 ## Additional Instructor Resources
 
-- Next: 1.5.2 Diamond Model
+- Next: 0.6.2 Diamond Model

@@ -42,7 +42,7 @@ Hunter 3 is A / 1a.
 - Knowledge check — close 1.4
 
 **Speaker Notes:**  
-1.5 is next unit.
+0.6 is next unit.
 
 ---
 
@@ -207,7 +207,7 @@ Interactive.
 
 - Start from created. Close/escalate from first touch.
 - Name the clock. Record the disposition.
-- Unit **1.4** ends. Next unit: **1.5** Frameworks.
+- Unit **1.4** ends. Next unit: **0.6** Frameworks.
 
 **Speaker Notes:**  
 Do not open ATT&CK unless scheduled.
@@ -222,6 +222,6 @@ Do not open ATT&CK unless scheduled.
 | Start | created → started | 15 min |
 | Close/escalate | started → closed/escalated | 45 min |
 
-**Coming next:** Module 1.5.1 – MITRE ATT&CK
+**Coming next:** Module 0.6.1 – MITRE ATT&CK
 
 **Footer:** SOC / Hunter / CTI Training Program

@@ -228,18 +228,18 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 
 ---
 
-## 1.5 Frameworks
+## 0.6 Frameworks
 
 Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 2.5. DTF is 3.7.4.
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.5.1.1 | MITRE ATT&CK | K | A | B | C | 3-level needs basic familiarity. 5-level understands principles. 7-level can analyze and apply. |
-| 1.5.1.2 | Map an alert or observed activity to MITRE ATT&CK tactics/techniques | T | 2b | 3c | 4c | Practical application skill that grows with experience. |
-| 1.5.2.1 | Diamond Model | K | A | B | C | Same knowledge progression. |
-| 1.5.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 2b | 3c | 4c | Same performance progression. |
-| 1.5.3.1 | Cyber Kill Chain | K | A | B | C | Same knowledge progression. |
-| 1.5.3.2 | Identify the Kill Chain stage of observed activity | T | 2b | 3c | 4c | Same performance progression. |
+| 0.6.1.1 | MITRE ATT&CK | K | A | B | C | 3-level needs basic familiarity. 5-level understands principles. 7-level can analyze and apply. |
+| 0.6.1.2 | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | T | 2b | 3c | 4c | Map + cite. Not an alert pane (1.4). |
+| 0.6.2.1 | Diamond Model | K | A | B | C | Same knowledge progression. |
+| 0.6.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 2b | 3c | 4c | Same performance progression. |
+| 0.6.3.1 | Cyber Kill Chain | K | A | B | C | Same knowledge progression. |
+| 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 2b | 3c | 4c | Same performance progression. |
 
 ---
 

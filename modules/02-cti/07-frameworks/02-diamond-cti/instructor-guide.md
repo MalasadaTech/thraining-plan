@@ -16,7 +16,7 @@
 Advanced Diamond for CTI: fill vertices from a **report/activity set**, name the weakest, let that vertex **constrain the intel product**, reject vendor-name Adversary and uncited Capability.
 
 **Key Teaching Points:**
-- Do not re-teach the 1.5.2 vertex tour. One recap sentence, then the excerpt.
+- Do not re-teach the 0.6.2 vertex tour. One recap sentence, then the excerpt.
 - Adversary unknown is a *success*, not a failed card.
 - Hunter/CTI task goes to **4d** — the 7-level move is the *product constraint*, not a prettier table.
 - SOC K is **A / B / B** (not A/B/C). Task **1a / 2b / 3c**. Do not collapse.
@@ -50,7 +50,7 @@ Advanced Diamond for CTI: fill vertices from a **report/activity set**, name the
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not 1.5.2 redo / 3.1.7 / 3.11 |
+| Introduction & fence           | 8 min    | Not 0.6.2 redo / 3.1.7 / 3.11 |
 | Advanced fill + product use    | 14 min   | a |
 | Walkthrough Examples           | 14 min   | |
 | Hands-On Exercise              | 18 min   | Diamond lines |
@@ -63,7 +63,7 @@ Advanced Diamond for CTI: fill vertices from a **report/activity set**, name the
 ## Detailed Teaching Notes
 
 **Talking Points:**
-- CTI 3: 3c — they already filled incident cards in 1.5.2. Push **product constraint**.
+- CTI 3: 3c — they already filled incident cards in 0.6.2. Push **product constraint**.
 - 4d: “Adversary is weakest” is not enough. They must say **what claim drops out of the product**.
 - Meta-features: name them once, then leave them. They are not vertices and not a profile.
 
@@ -97,8 +97,8 @@ Advanced Diamond for CTI: fill vertices from a **report/activity set**, name the
 
 ## Knowledge Check – Answer Key
 
-1. **Advanced vs 1.5.2?**  
-   **Answer:** Report or activity set; weakest vertex *constrains the intel product*; reject vendor-name Adversary. 1.5.2 fills an incident / indicator card.  
+1. **Advanced vs 0.6.2?**  
+   **Answer:** Report or activity set; weakest vertex *constrains the intel product*; reject vendor-name Adversary. 0.6.2 fills an incident / indicator card.  
    **Explanation:** Outline a.
 
 2. **Diamond line besides the four fills?**  

@@ -13,7 +13,7 @@
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Not a 1.5.3 redo. Report → stages → product list.
+Not a 0.6.3 redo. Report → stages → product list.
 
 ---
 
@@ -49,7 +49,7 @@ SOC K is A/B/B. Hunter/CTI task 3c / 4c / 4c (not 4d).
 ### Slide 4 – Not This Lesson
 **Title:** Not This Hour
 
-Single-row stage (**1.5.3**)  
+Single-row stage (**0.6.3**)  
 ATT&CK IDs (**3.7.1**)  
 Diamond vertices (**3.7.2**)  
 Alert categories (**1.4.4**)  
@@ -80,7 +80,7 @@ Outline a.
 Recon → Weaponization → Delivery → Exploitation → Installation → C2 → Actions on Objectives
 
 **Speaker Notes:**  
-One slide. Do not re-teach 1.5.3.
+One slide. Do not re-teach 0.6.3.
 
 ---
 
@@ -180,7 +180,7 @@ Instructor Guide key.
 ### Slide 15 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Advanced vs 1.5.3?
+1. Advanced vs 0.6.3?
 2. Stage line besides the stage?
 3. Why not vendor T1486 as Actions?
 4. Why is Weaponization usually empty?

@@ -1,4 +1,4 @@
-# Module 1.5.1 – MITRE ATT&CK  
+# Module 0.6.1 – MITRE ATT&CK  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.5.1 – MITRE ATT&CK  
+**Title:** Module 0.6.1 – MITRE ATT&CK  
 **Subtitle:** Shared floor (everyone)  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
@@ -81,7 +81,7 @@ Answers only in the instructor guide.
 ### Slide 7 – Next
 **Title:** Next
 
-**1.5.2** Diamond Model
+**0.6.2** Diamond Model
 
 **Speaker Notes:**  
 Four vertices. Not another ATT&CK column.

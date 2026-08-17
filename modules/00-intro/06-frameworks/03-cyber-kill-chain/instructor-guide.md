@@ -1,11 +1,11 @@
-# Instructor Guide – Module 1.5.3 – Cyber Kill Chain
+# Instructor Guide – Module 0.6.3 – Cyber Kill Chain
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
 **Proficiency Focus:**  
-- SOC: 1.5.3.1 A / B / C ; 1.5.3.2 2b / 3c / 4c  
-- Hunter: 1.5.3.1 B / C / C ; 1.5.3.2 3c / 4c / 4c  
-- CTI: 1.5.3.1 B / C / C ; 1.5.3.2 3c / 4c / 4c  
-- DE: 1.5.3.1 A / B / B ; 1.5.3.2 1a / 2b / 2b  
+- SOC: 0.6.3.1 A / B / C ; 0.6.3.2 2b / 3c / 4c  
+- Hunter: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  
+- CTI: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  
+- DE: 0.6.3.1 A / B / B ; 0.6.3.2 1a / 2b / 2b  
 **Estimated Time:** 15 minutes  
 **Delivery Method:** Instructor-led
 
@@ -36,9 +36,9 @@
 Same as the student guide.
 
 **Mapped Items:**  
-- K: 1.5.3.1 – Cyber Kill Chain  
+- K: 0.6.3.1 – Cyber Kill Chain  
   SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B  
-- T: 1.5.3.2 – Identify the Kill Chain stage of observed activity  
+- T: 0.6.3.2 – Identify the Kill Chain stage of observed activity  
   SOC 2b / 3c / 4c · Hunter 3c / 4c / 4c · CTI 3c / 4c / 4c · DE 1a / 2b / 2b
 
 ---

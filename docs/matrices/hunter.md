@@ -32,18 +32,18 @@ Everyone. Taught before SOC. Same idea on the SOC, CTI, and DE sheets. Not site 
 
 ---
 
-## 1.5 Frameworks (shared floor)
+## 0.6 Frameworks (shared floor)
 
 Taught in `00` before SOC. Hunt planning is **2.5**. Codes match combined.
 
 | # | Item | Type | Hunter 3 | Hunter 5 | Hunter 7 | Justification |
 |---|------|------|----------|----------|----------|---------------|
-| 1.5.1.1 | MITRE ATT&CK | K | B | C | C | Shared floor. Planning coverage is 2.5. |
-| 1.5.1.2 | Map an alert or observed activity to MITRE ATT&CK tactics/techniques | T | 3c | 4c | 4c | Map + cite. Not hunt planning. |
-| 1.5.2.1 | Diamond Model | K | B | C | C | Shared floor. |
-| 1.5.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 3c | 4c | 4d | Weakest vertex. 7-level when vertices compete. |
-| 1.5.3.1 | Cyber Kill Chain | K | B | C | C | Shared floor. |
-| 1.5.3.2 | Identify the Kill Chain stage of observed activity | T | 3c | 4c | 4c | Stage + reject neighbor. |
+| 0.6.1.1 | MITRE ATT&CK | K | B | C | C | Shared floor. Planning coverage is 2.5. |
+| 0.6.1.2 | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | T | 3c | 4c | 4c | Map + cite. Not hunt planning. |
+| 0.6.2.1 | Diamond Model | K | B | C | C | Shared floor. |
+| 0.6.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 3c | 4c | 4d | Weakest vertex. 7-level when vertices compete. |
+| 0.6.3.1 | Cyber Kill Chain | K | B | C | C | Shared floor. |
+| 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 3c | 4c | 4c | Stage + reject neighbor. |
 
 ---
 

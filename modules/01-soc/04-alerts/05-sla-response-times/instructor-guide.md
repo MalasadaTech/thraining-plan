@@ -123,4 +123,4 @@ Fail a close on A with no start. Fail “late” with no clock name.
 ## Additional Instructor Resources
 
 - Site SLA card if you have one
-- Next recommended module: 1.5.1 MITRE ATT&CK
+- Next recommended module: 0.6.1 MITRE ATT&CK

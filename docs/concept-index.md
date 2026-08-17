@@ -266,7 +266,7 @@ Also: Diamond on a report, Diamond activity-set card, CTI Diamond line
 |----------|--------|-------|
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
-Incident / indicator cards are [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
+Incident / indicator cards are [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
 
 See also: [Diamond Model application in CTI](#diamond-model-application-in-cti), [weakest vertex constrains the intel product](#weakest-vertex-constrains-the-intel-product)
 
@@ -356,7 +356,7 @@ Also: ATT&CK tactic, why column, TA0002 Execution
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK techniques and sub-techniques](#attck-techniques-and-sub-techniques), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
@@ -367,7 +367,7 @@ Also: ATT&CK technique, sub-technique, T1059.001
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK tactics](#attck-tactics), [MITRE ATT&CK purpose and structure](#mitre-attck-purpose-and-structure)
@@ -391,7 +391,7 @@ Also: ATT&CK in intel products, advanced ATT&CK for CTI, supported ATT&CK IDs in
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 | Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-SOC alert mapping is [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
+SOC alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
 
 See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -742,7 +742,7 @@ Also: advanced Kill Chain for CTI, Kill Chain in intel products, supported Kill 
 | Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 | Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-SOC single-row staging is [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
+SOC single-row staging is [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
 
 See also: [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -752,7 +752,7 @@ Also: Kill Chain, Lockheed Martin Kill Chain
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
@@ -780,7 +780,7 @@ Also: advanced Diamond for CTI, Diamond in intel products
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 | Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-SOC incident cards are [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
+SOC incident cards are [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/). Actor profile is later (`3.11`).
 
 See also: [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem), [reject filling Adversary from a vendor name](#reject-filling-adversary-from-a-vendor-name), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -790,7 +790,7 @@ Also: Diamond Model, intrusion diamond
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [Diamond Model application in CTI](#diamond-model-application-in-cti)
@@ -801,7 +801,7 @@ Also: Adversary vertex, Capability vertex, Infrastructure vertex, Victim vertex
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [using Diamond for analysis and attribution](#using-diamond-for-analysis-and-attribution)
@@ -1661,7 +1661,7 @@ Also: weakest Diamond vertex, honest empty vertex
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond vertices: Adversary, Capability, Infrastructure, Victim](#diamond-vertices-adversary-capability-infrastructure-victim), [weakest vertex constrains the intel product](#weakest-vertex-constrains-the-intel-product)
@@ -2199,7 +2199,7 @@ Also: stage a report span, Kill Chain stage from a report, CTI Kill Chain stage 
 |----------|--------|-------|
 | Taught | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
-Single-row staging is [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
+Single-row staging is [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/).
 
 See also: [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain)
 
@@ -2209,7 +2209,7 @@ Also: Kill Chain neighbor stage, not previous not next
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Kill Chain stages](#kill-chain-stages), [using the Kill Chain to understand attack progression](#using-the-kill-chain-to-understand-attack-progression), [identify the Kill Chain stage of observed or reported activity](#identify-the-kill-chain-stage-of-observed-or-reported-activity)
@@ -2501,7 +2501,7 @@ Also: Reconnaissance Delivery Exploitation Installation C2 Actions on Objectives
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [Cyber Kill Chain in intelligence analysis](#cyber-kill-chain-in-intelligence-analysis)
@@ -2590,7 +2590,7 @@ Also: map a report to ATT&CK, map an activity set to ATT&CK, CTI ATT&CK map line
 |----------|--------|-------|
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
-Alert mapping is [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
+Alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
 
 See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
 
@@ -2600,7 +2600,7 @@ Also: map an alert to ATT&CK, tactic plus technique plus cite
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/). Report / activity-set maps are [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
@@ -2675,7 +2675,7 @@ Also: ATT&CK matrix, ATT&CK Enterprise
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
+| Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
 See also: [ATT&CK tactics](#attck-tactics), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck), [ATT&CK for CTI analysis and reporting](#attck-for-cti-analysis-and-reporting)
@@ -4696,7 +4696,7 @@ Also: Diamond attribution, unknown adversary vertex
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
+| Taught | [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/) | SOC, Hunter, CTI |
 | Used | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
 See also: [Diamond Model purpose](#diamond-model-purpose), [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [Diamond Model application in CTI](#diamond-model-application-in-cti)
@@ -4707,7 +4707,7 @@ Also: Kill Chain progression, where you are in the intrusion
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [1.5.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
+| Taught | [0.6.3 Cyber Kill Chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) | SOC, Hunter, CTI |
 | Used | [3.7.3 Cyber Kill Chain in Intelligence Analysis](../modules/03-cti/07-frameworks/03-kill-chain-cti/) | CTI, Hunter |
 
 See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [identifying the stage and rejecting the previous or next](#identifying-the-stage-and-rejecting-the-previous-or-next), [place a report or activity set on the Kill Chain](#place-a-report-or-activity-set-on-the-kill-chain)
@@ -4819,7 +4819,7 @@ Also: Diamond product constraint, weakest vertex drops a claim, Adversary empty 
 |----------|--------|-------|
 | Taught | [3.7.2 Diamond Model Application in CTI](../modules/03-cti/07-frameworks/02-diamond-cti/) | CTI, Hunter |
 
-Naming the weakest on an incident card is [1.5.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
+Naming the weakest on an incident card is [0.6.2 Diamond Model](../modules/00-intro/06-frameworks/02-diamond-model/).
 
 See also: [filling four vertices and naming the weakest](#filling-four-vertices-and-naming-the-weakest), [apply the Diamond Model to an intelligence problem](#apply-the-diamond-model-to-an-intelligence-problem)
 

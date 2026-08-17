@@ -26,7 +26,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**1.5.3** is the floor: purpose, seven stages, one **observed row**, reject previous/next. This hour is **advanced CTI use**: a *report or activity set*, several spans, and what the **intel product** may say about **progression**.
+**0.6.3** is the floor: purpose, seven stages, one **observed row**, reject previous/next. This hour is **advanced CTI use**: a *report or activity set*, several spans, and what the **intel product** may say about **progression**.
 
 ATT&CK IDs are **3.7.1**. Diamond vertices are **3.7.2**. DTF is **3.7.4**. Alert categories (scan / user / root) are **1.4.4**. A finished actor profile is **3.11**.
 
@@ -42,7 +42,7 @@ ATT&CK IDs are **3.7.1**. Diamond vertices are **3.7.2**. DTF is **3.7.4**. Aler
 
 An ATT&CK tactic name is **not** a Kill Chain stage. A GET of `update.exe` can be **Delivery** on the chain and **T1105** / **T1071.001** on ATT&CK (**3.7.1**). Do not paste tactic IDs onto the chain.
 
-**Classroom stages (same seven as 1.5.3):**
+**Classroom stages (same seven as 0.6.3):**
 
 | # | Stage | This excerpt? |
 |---|--------|----------------|
@@ -61,7 +61,7 @@ An ATT&CK tactic name is **not** a Kill Chain stage. A GET of `update.exe` can b
 
 | This lesson | Other |
 |-------------|-------|
-| Report / activity set → stages + product list | Single-row stage — **1.5.3** |
+| Report / activity set → stages + product list | Single-row stage — **0.6.3** |
 | Not ATT&CK IDs | **3.7.1** |
 | Not Diamond vertices | **3.7.2** |
 | Not 1.4.4 categories | scan / user / root |
@@ -136,7 +136,7 @@ An ATT&CK tactic name is **not** a Kill Chain stage. A GET of `update.exe` can b
 
 ## 4. Knowledge Check
 
-1. How is this hour **advanced** compared with **1.5.3**?
+1. How is this hour **advanced** compared with **0.6.3**?
 2. What must a **stage line** include besides the stage name?
 3. Why is vendor T1486 not **Actions on Objectives** in *your* product?
 4. Why is **Weaponization** usually **not observed**?
@@ -156,7 +156,7 @@ An ATT&CK tactic name is **not** a Kill Chain stage. A GET of `update.exe` can b
 
 - Related modules:
   - 3.7.2 – Diamond Model in CTI (previous)
-  - 1.5.3 – Kill Chain floor (single-row stage)
+  - 0.6.3 – Kill Chain floor (single-row stage)
   - 3.7.1 – ATT&CK for CTI
   - 3.7.4 – DTF (next)
 - Intelligence-Driven Computer Network Defense (Hutchins, Cloppert, Amin)

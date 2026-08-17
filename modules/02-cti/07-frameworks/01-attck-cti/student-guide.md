@@ -26,7 +26,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**1.5.1** is the floor: purpose, tactic vs technique, map an **alert**. This hour is **advanced CTI use**: a *report or activity set*, real **T-IDs**, evidence, neighbor reject, and what belongs in the **intel product**.
+**0.6.1** is the floor: purpose, tactic vs technique, map an **alert**. This hour is **advanced CTI use**: a *report or activity set*, real **T-IDs**, evidence, neighbor reject, and what belongs in the **intel product**.
 
 Hunt coverage / Navigator is **2.5**. Skimming a PDF to copy IDs for a hunt card is **2.4.2**. Which extracted TTPs *apply here* is **3.8.2**. Diamond / Kill Chain / DTF are **3.7.2–3.7.4**. A finished actor profile is **3.11**.
 
@@ -58,7 +58,7 @@ Do **not** invent T-IDs. If you cannot find the cell, write the behavior and lea
 
 | This lesson | Other |
 |-------------|-------|
-| Report / multi-event story → IDs | Single alert map — **1.5.1** |
+| Report / multi-event story → IDs | Single alert map — **0.6.1** |
 | Not hunt coverage | **2.5** |
 | Not “does this TTP apply on Harbor?” | **3.8.2** |
 | Not Diamond vertices | **3.7.2** |
@@ -134,7 +134,7 @@ Do **not** invent T-IDs. If you cannot find the cell, write the behavior and lea
 
 ## 4. Knowledge Check
 
-1. How is this hour **advanced** compared with **1.5.1**?
+1. How is this hour **advanced** compared with **0.6.1**?
 2. What must a **map line** include besides the T-ID?
 3. Why is a vendor T1486 not automatically in *your* product?
 4. Why can you not map “APT” to a tactic?
@@ -153,7 +153,7 @@ Do **not** invent T-IDs. If you cannot find the cell, write the behavior and lea
 
 - Related modules:
   - 3.6.1 – Advanced DNS (previous)
-  - 1.5.1 – ATT&CK floor (alert mapping)
+  - 0.6.1 – ATT&CK floor (alert mapping)
   - 2.5.1 – ATT&CK for hunt planning
   - 3.7.2 – Diamond Model in CTI (next)
   - 3.8.2 – Applicable TTPs from reports

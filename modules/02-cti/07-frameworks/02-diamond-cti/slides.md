@@ -13,7 +13,7 @@
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Not a 1.5.2 redo. Report → vertices → product constraint.
+Not a 0.6.2 redo. Report → vertices → product constraint.
 
 ---
 
@@ -49,7 +49,7 @@ SOC K is A/B/B. Hunter/CTI task 3c / 4c / 4d.
 ### Slide 4 – Not This Lesson
 **Title:** Not This Hour
 
-Incident / indicator card (**1.5.2**)  
+Incident / indicator card (**0.6.2**)  
 ATT&CK IDs (**3.7.1**)  
 Kill Chain stage (**3.7.3**)  
 Confidence / types lecture (**3.1.7**)  
@@ -83,7 +83,7 @@ Infrastructure — what systems?
 Victim — who/what is acted on?
 
 **Speaker Notes:**  
-One slide. Do not re-teach 1.5.2.
+One slide. Do not re-teach 0.6.2.
 
 ---
 
@@ -183,7 +183,7 @@ Instructor Guide key.
 ### Slide 15 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Advanced vs 1.5.2?
+1. Advanced vs 0.6.2?
 2. Diamond line besides the four fills?
 3. Why not vendor “APT” in Adversary?
 4. Why not vendor T1486 as Capability?

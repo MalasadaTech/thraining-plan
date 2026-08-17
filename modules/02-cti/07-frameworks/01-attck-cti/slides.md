@@ -13,7 +13,7 @@
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Not a 1.5.1 redo. Report → IDs → product line.
+Not a 0.6.1 redo. Report → IDs → product line.
 
 ---
 
@@ -49,7 +49,7 @@ SOC K is A/B/B. Hunter/CTI task 3c / 4c.
 ### Slide 4 – Not This Lesson
 **Title:** Not This Hour
 
-Alert mapping floor (**1.5.1**)  
+Alert mapping floor (**0.6.1**)  
 Hunt coverage / Navigator (**2.5**)  
 Applies-on-Harbor? (**3.8.2**)  
 Diamond / Kill Chain / DTF (**3.7.2–3.7.4**)
@@ -182,7 +182,7 @@ Instructor Guide key.
 ### Slide 15 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Advanced vs 1.5.1?
+1. Advanced vs 0.6.1?
 2. Map line besides the ID?
 3. Why not vendor T1486 here?
 4. Why not “APT” → tactic?

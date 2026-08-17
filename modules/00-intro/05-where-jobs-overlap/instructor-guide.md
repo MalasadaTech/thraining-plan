@@ -88,4 +88,4 @@ WS-JLEE is only “same host.” Do not tell the PRD plot.
 
 ## Additional Instructor Resources
 
-- Next: 1.5 Frameworks (then tools, then environment / signal flow)
+- Next: 0.6 Frameworks (then tools, then environment / signal flow)

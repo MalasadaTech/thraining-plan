@@ -16,7 +16,7 @@
 Advanced Kill Chain for CTI: place a **report/activity set** on the seven stages, reject previous/next, list only **supported** stages in the product, reject unobserved Weaponization and Actions on Objectives.
 
 **Key Teaching Points:**
-- Do not re-teach the 1.5.3 seven-stage tour. One recap sentence, then the excerpt.
+- Do not re-teach the 0.6.3 seven-stage tour. One recap sentence, then the excerpt.
 - GET `update.exe` is **Delivery** on the chain even if **3.7.1** mapped it to T1105 / T1071.001. Frameworks do not share labels.
 - SOC K is **A / B / B** (not A/B/C). Task **2b / 3c / 4c**. Hunter/CTI **3c / 4c / 4c** (not 4d — that is Diamond / DTF). Do not collapse.
 - Do not copy `modules/00-intro/06-frameworks/` into this folder.
@@ -49,7 +49,7 @@ Advanced Kill Chain for CTI: place a **report/activity set** on the seven stages
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not 1.5.3 redo / 3.7.1 / 3.7.2 |
+| Introduction & fence           | 8 min    | Not 0.6.3 redo / 3.7.1 / 3.7.2 |
 | Advanced place + product use   | 14 min   | a |
 | Walkthrough Examples           | 14 min   | |
 | Hands-On Exercise              | 18 min   | Stage lines |
@@ -62,7 +62,7 @@ Advanced Kill Chain for CTI: place a **report/activity set** on the seven stages
 ## Detailed Teaching Notes
 
 **Talking Points:**
-- CTI 3: 3c — they already staged single rows in 1.5.3. Push **set + product list**.
+- CTI 3: 3c — they already staged single rows in 0.6.3. Push **set + product list**.
 - If they put GET on C2: ask whether the row is a *channel* (beacon) or a *drop* (file GET). Harbor excerpt is the drop.
 - Product order is **chain order** (Delivery, Exploitation, Installation), not excerpt order.
 
@@ -96,8 +96,8 @@ Advanced Kill Chain for CTI: place a **report/activity set** on the seven stages
 
 ## Knowledge Check – Answer Key
 
-1. **Advanced vs 1.5.3?**  
-   **Answer:** Report or activity set; several spans; only supported stages in the *intel product*; reject unobserved stages. 1.5.3 stages a single row.  
+1. **Advanced vs 0.6.3?**  
+   **Answer:** Report or activity set; several spans; only supported stages in the *intel product*; reject unobserved stages. 0.6.3 stages a single row.  
    **Explanation:** Outline a.
 
 2. **Stage line besides the stage?**  

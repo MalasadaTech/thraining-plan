@@ -12,7 +12,7 @@
 | 3.7.3 | K | Cyber Kill Chain in intelligence analysis | 3.7.3 a |
 | 3.7.3.1 | T | Identify the Kill Chain stage of observed or reported activity | 3.7.3.1 task 1 |
 
-The lesson ID is **3.7.3**. SOC Kill Chain floor (single-row stage) is **1.5.3**. ATT&CK IDs are **3.7.1**. Diamond is **3.7.2**. DTF is **3.7.4**. Alert categories are **1.4.4**. Actor profile is **3.11**. Do not copy `modules/00-intro/06-frameworks/` into this folder.
+The lesson ID is **3.7.3**. SOC Kill Chain floor (single-row stage) is **0.6.3**. ATT&CK IDs are **3.7.1**. Diamond is **3.7.2**. DTF is **3.7.4**. Alert categories are **1.4.4**. Actor profile is **3.11**. Do not copy `modules/00-intro/06-frameworks/` into this folder.
 
 ## Concepts taught
 

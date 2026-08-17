@@ -26,7 +26,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**1.5.2** is the floor: purpose, four vertices, fill an **incident / indicator** card, name the weakest. This hour is **advanced CTI use**: a *report or activity set*, honest vertices, and what the **intel product** may (and may not) claim.
+**0.6.2** is the floor: purpose, four vertices, fill an **incident / indicator** card, name the weakest. This hour is **advanced CTI use**: a *report or activity set*, honest vertices, and what the **intel product** may (and may not) claim.
 
 Attribution *confidence and types* are **3.1.7**. A finished actor profile is **3.11**. ATT&CK IDs are **3.7.1**. Kill Chain stages are **3.7.3**. DTF is **3.7.4**.
 
@@ -49,7 +49,7 @@ Social-political and technology meta-features exist in the paper. They are **not
 
 | This lesson | Other |
 |-------------|-------|
-| Report / activity set → vertices + product constraint | Single incident card — **1.5.2** |
+| Report / activity set → vertices + product constraint | Single incident card — **0.6.2** |
 | Not ATT&CK IDs | **3.7.1** |
 | Not Kill Chain stage | **3.7.3** |
 | Not confidence letter / activity-group vs nation-state lecture | **3.1.7** |
@@ -127,7 +127,7 @@ Social-political and technology meta-features exist in the paper. They are **not
 
 ## 4. Knowledge Check
 
-1. How is this hour **advanced** compared with **1.5.2**?
+1. How is this hour **advanced** compared with **0.6.2**?
 2. What must a **Diamond line** include besides the four vertex fills?
 3. Why does a vendor “APT” name not fill **Adversary**?
 4. Why is vendor T1486 not **Capability** on this card?
@@ -147,7 +147,7 @@ Social-political and technology meta-features exist in the paper. They are **not
 
 - Related modules:
   - 3.7.1 – ATT&CK for CTI (previous)
-  - 1.5.2 – Diamond floor (incident card)
+  - 0.6.2 – Diamond floor (incident card)
   - 3.1.7 – Attribution confidence and types
   - 3.7.3 – Cyber Kill Chain in CTI (next)
   - 3.11 – Actor profile

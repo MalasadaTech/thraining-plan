@@ -1,4 +1,4 @@
-# Module 1.5.2 – Diamond Model  
+# Module 0.6.2 – Diamond Model  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.5.2 – Diamond Model  
+**Title:** Module 0.6.2 – Diamond Model  
 **Subtitle:** Shared floor (everyone)  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
@@ -68,7 +68,7 @@ Answers only in the instructor guide.
 ### Slide 6 – Next
 **Title:** Next
 
-**1.5.3** Cyber Kill Chain
+**0.6.3** Cyber Kill Chain
 
 **Speaker Notes:**  
 Same activity, now in time. Not another Diamond vertex.

@@ -24,7 +24,7 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 0.4 | [modules/00-intro/04-how-work-moves](../modules/00-intro/04-how-work-moves/) |
 | 0.5 | [modules/00-intro/05-where-jobs-overlap](../modules/00-intro/05-where-jobs-overlap/) |
 
-All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `1.5`, `3.3.2`, `1.8.1`. **Retired:** `1.7`, `1.8.2`–`1.8.5`. SOC ends at `1.6`.
+All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `0.6`, `3.3.2`, `1.8.1`. **Retired:** `1.7`, `1.8.2`–`1.8.5`. SOC ends at `1.6`.
 | 1.1.1 | [modules/01-soc/01-endpoint/01-endpoint-activity](../modules/01-soc/01-endpoint/01-endpoint-activity/) |
 | 1.1.2 | [modules/01-soc/01-endpoint/02-process-activity](../modules/01-soc/01-endpoint/02-process-activity/) |
 | 1.1.3 | [modules/01-soc/01-endpoint/03-file-system-activity](../modules/01-soc/01-endpoint/03-file-system-activity/) |
@@ -48,9 +48,9 @@ All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `1.5`, `3.3.2`, `1.8
 | 1.4.3 | [modules/01-soc/04-alerts/03-false-positive-causes](../modules/01-soc/04-alerts/03-false-positive-causes/) |
 | 1.4.4 | [modules/01-soc/04-alerts/04-categorizations](../modules/01-soc/04-alerts/04-categorizations/) |
 | 1.4.5 | [modules/01-soc/04-alerts/05-sla-response-times](../modules/01-soc/04-alerts/05-sla-response-times/) |
-| 1.5.1 | [modules/00-intro/06-frameworks/01-attck](../modules/00-intro/06-frameworks/01-attck/) |
-| 1.5.2 | [modules/00-intro/06-frameworks/02-diamond-model](../modules/00-intro/06-frameworks/02-diamond-model/) |
-| 1.5.3 | [modules/00-intro/06-frameworks/03-cyber-kill-chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) |
+| 0.6.1 | [modules/00-intro/06-frameworks/01-attck](../modules/00-intro/06-frameworks/01-attck/) |
+| 0.6.2 | [modules/00-intro/06-frameworks/02-diamond-model](../modules/00-intro/06-frameworks/02-diamond-model/) |
+| 0.6.3 | [modules/00-intro/06-frameworks/03-cyber-kill-chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) |
 | 1.6.1 | [modules/01-soc/05-reporting/01-report-types](../modules/01-soc/05-reporting/01-report-types/) |
 | 1.6.2 | [modules/01-soc/05-reporting/02-reporting-timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) |
 | 1.6.3 | [modules/01-soc/05-reporting/03-notification-distribution](../modules/01-soc/05-reporting/03-notification-distribution/) |

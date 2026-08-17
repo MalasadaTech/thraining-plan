@@ -24,7 +24,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-A **category** is how the SOC buckets a **working** alert for reporting and handoff. It is not TP/FP (**1.4.2**) and not an ATT&CK ID (**1.5**). You pick one bucket and say why the **neighbor** is wrong.
+A **category** is how the SOC buckets a **working** alert for reporting and handoff. It is not TP/FP (**1.4.2**) and not an ATT&CK ID (**0.6**). You pick one bucket and say why the **neighbor** is wrong.
 
 | Category | Use when | Adjacent — do not confuse with |
 |----------|----------|--------------------------------|
@@ -39,7 +39,7 @@ If your site adds buckets, they live under **other**. Do not invent ATT&CK tacti
 | This lesson | Other |
 |-------------|-------|
 | One category + rejected neighbor | TP/FP — **1.4.2** |
-| Site buckets | ATT&CK map — **1.5** |
+| Site buckets | ATT&CK map — **0.6** |
 | Working alert | SLA clocks — **1.4.5** |
 
 The task is **not** “assign an appropriate category.” It is **assign + rule out the adjacent one** in one sentence each.
@@ -130,5 +130,5 @@ Assume these are **working** alerts (you are not classifying TP/FP here).
   - 1.4.2 – Alert classification
   - 1.4.3 – Common false positive causes (previous)
   - 1.4.5 – SLA / response time goals (next)
-  - 1.5.1 – MITRE ATT&CK
+  - 0.6.1 – MITRE ATT&CK
   - Local category list used on shift (optional)

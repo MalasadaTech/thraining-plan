@@ -55,11 +55,11 @@ Everyone may look at **WS-JLEE**. That is the same host. It is not the same prod
 
 Same evidence. Different product. Asking is not doing the next job. Two hats still two products.
 
-**Next:** shared hours — frameworks (**1.5**), then tools, then environment / signal flow. Then SOC **1.1.1**.
+**Next:** shared hours — frameworks (**0.6**), then tools, then environment / signal flow. Then SOC **1.1.1**.
 
 ---
 
 ## 4. Related modules
 
 - 0.4 – How work can move
-- 1.5 – Frameworks (next)
+- 0.6 – Frameworks (next)

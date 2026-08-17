@@ -91,7 +91,7 @@ That is the whole hour. Course layout is next.
 ### Slide 8 – Next
 **Title:** Next
 
-**1.5** Frameworks (shared hours, still before SOC)
+**0.6** Frameworks (shared hours, still before SOC)
 
 **Speaker Notes:**  
 That hour is the order of the rest of the course — not how your shop files tickets.

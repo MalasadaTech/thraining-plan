@@ -1,4 +1,4 @@
-# Module 1.5.3 – Cyber Kill Chain  
+# Module 0.6.3 – Cyber Kill Chain  
 ## Slide Deck Content
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
@@ -8,7 +8,7 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 1.5.3 – Cyber Kill Chain  
+**Title:** Module 0.6.3 – Cyber Kill Chain  
 **Subtitle:** Shared floor (everyone)  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 

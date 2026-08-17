@@ -1,11 +1,11 @@
-# Instructor Guide – Module 1.5.2 – Diamond Model
+# Instructor Guide – Module 0.6.2 – Diamond Model
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
 **Proficiency Focus:**  
-- SOC: 1.5.2.1 A / B / C ; 1.5.2.2 2b / 3c / 4c  
-- Hunter: 1.5.2.1 B / C / C ; 1.5.2.2 3c / 4c / 4d  
-- CTI: 1.5.2.1 B / C / C ; 1.5.2.2 3c / 4c / 4d  
-- DE: 1.5.2.1 A / B / B ; 1.5.2.2 1a / 2b / 2b  
+- SOC: 0.6.2.1 A / B / C ; 0.6.2.2 2b / 3c / 4c  
+- Hunter: 0.6.2.1 B / C / C ; 0.6.2.2 3c / 4c / 4d  
+- CTI: 0.6.2.1 B / C / C ; 0.6.2.2 3c / 4c / 4d  
+- DE: 0.6.2.1 A / B / B ; 0.6.2.2 1a / 2b / 2b  
 **Estimated Time:** 15 minutes  
 **Delivery Method:** Instructor-led
 
@@ -36,9 +36,9 @@
 Same as the student guide.
 
 **Mapped Items:**  
-- K: 1.5.2.1 – Diamond Model  
+- K: 0.6.2.1 – Diamond Model  
   SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B  
-- T: 1.5.2.2 – Apply the Diamond Model to an incident or set of indicators  
+- T: 0.6.2.2 – Apply the Diamond Model to an incident or set of indicators  
   SOC 2b / 3c / 4c · Hunter 3c / 4c / 4d · CTI 3c / 4c / 4d · DE 1a / 2b / 2b
 
 ---
@@ -81,4 +81,4 @@ Walk the workstation + encoded PowerShell + domain fill. Fail putting a course-f
 
 ## Additional Instructor Resources
 
-- Next: 1.5.3 Cyber Kill Chain
+- Next: 0.6.3 Cyber Kill Chain

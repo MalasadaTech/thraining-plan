@@ -1,11 +1,11 @@
-# Module 1.5.2 – Diamond Model
+# Module 0.6.2 – Diamond Model
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
 **Proficiency Focus:**  
-- SOC: 1.5.2.1 A / B / C ; 1.5.2.2 2b / 3c / 4c  
-- Hunter: 1.5.2.1 B / C / C ; 1.5.2.2 3c / 4c / 4d  
-- CTI: 1.5.2.1 B / C / C ; 1.5.2.2 3c / 4c / 4d  
-- DE: 1.5.2.1 A / B / B ; 1.5.2.2 1a / 2b / 2b  
+- SOC: 0.6.2.1 A / B / C ; 0.6.2.2 2b / 3c / 4c  
+- Hunter: 0.6.2.1 B / C / C ; 0.6.2.2 3c / 4c / 4d  
+- CTI: 0.6.2.1 B / C / C ; 0.6.2.2 3c / 4c / 4d  
+- DE: 0.6.2.1 A / B / B ; 0.6.2.2 1a / 2b / 2b  
 **Estimated Time:** 15 minutes
 
 ---
@@ -18,9 +18,9 @@ By the end of this module, you will be able to:
 2. Fill the four vertices from a short activity set and say which vertex is weakest.
 
 **Mapped Proficiency Items:**
-- K: 1.5.2.1 – Diamond Model  
+- K: 0.6.2.1 – Diamond Model  
   SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B
-- T: 1.5.2.2 – Apply the Diamond Model to an incident or set of indicators  
+- T: 0.6.2.2 – Apply the Diamond Model to an incident or set of indicators  
   SOC 2b / 3c / 4c · Hunter 3c / 4c / 4d · CTI 3c / 4c / 4d · DE 1a / 2b / 2b
 
 ---
@@ -42,9 +42,9 @@ ATT&CK named the **behavior**. You still have four holes in the story: who, with
 
 **How you use it.** Fill all four from what you actually have. Name the **weakest** vertex — the one with the least evidence. That is the next question, not a guess you write as fact.
 
-**What good looks like (1.5.2.2):** encoded PowerShell on a workstation talking to a domain. Victim = that host. Capability = encoded PowerShell. Infrastructure = that domain. Adversary = weakest (you have no actor evidence). Do not put a course-fiction name in Adversary.
+**What good looks like (0.6.2.2):** encoded PowerShell on a workstation talking to a domain. Victim = that host. Capability = encoded PowerShell. Infrastructure = that domain. Adversary = weakest (you have no actor evidence). Do not put a course-fiction name in Adversary.
 
-Kill Chain is next (**1.5.3**).
+Kill Chain is next (**0.6.3**).
 
 ---
 
@@ -60,12 +60,12 @@ Kill Chain is next (**1.5.3**).
 
 Four corners. Fill what you have. Name the empty one. Do not invent the adversary.
 
-**Next:** **1.5.3** Cyber Kill Chain.
+**Next:** **0.6.3** Cyber Kill Chain.
 
 ---
 
 ## 4. Related modules
 
-- 1.5.1 – MITRE ATT&CK
-- 1.5.3 – Cyber Kill Chain
+- 0.6.1 – MITRE ATT&CK
+- 0.6.3 – Cyber Kill Chain
 - 3.11 – Actor products (later)

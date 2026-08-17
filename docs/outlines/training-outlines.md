@@ -18,7 +18,7 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 Everyone (SOC, Hunter, CTI, DE). Lessons live under `modules/00-intro/`. This whole section is taught **before SOC 1.1**. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
 
-Write only the asked child unless asked for the whole intro. Shared-floor IDs that stay: `1.5`, `3.3.2`, `1.8.1`. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
+Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`** (this section). Shared-floor IDs that stay: `3.3.2`, `1.8.1`. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
 
 **0.1 [K] How this course is laid out**  
 Stay in this lesson: the map of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
@@ -59,44 +59,49 @@ b. The *product* is different: close/escalate an alert vs an intel note vs a hun
 c. Asking the next desk is not doing that desk’s whole job  
 d. A smaller shop may have one person fill more than one of these jobs. This outline still names the jobs separately so each *product* stays clear, even if the same person writes two of them.  
 
+**0.6 [K/T] Frameworks**  
+Taught after `0.5`, still before SOC. All four roles. Lessons live under `modules/00-intro/06-frameworks/`. Do not copy them into a role folder. Write only the asked child. Hunt *planning* is **2.5**. CTI depth is **3.7**. Actor products are **3.11**. DTF is **3.7.4**. This hour is a one-line activity, not an alert pane (**1.4**).
+
+**0.6.1.1 [K] MITRE ATT&CK**  
+Stay in this lesson: purpose, structure, and one map with a cited field. Not hunt planning (**2.5**). Not **3.7.1**. Not Diamond (**0.6.2**). Not Kill Chain (**0.6.3**).
+
+a. Purpose: a shared language for adversary **behavior** (label what you saw)  
+b. Structure: Enterprise matrix — tactics as columns, techniques and sub-techniques as cells  
+c. Tactic = *why* (the goal). Technique / sub-technique = *how* (named way, e.g. `T1059` / `T1059.001`)  
+d. How to map: read the row; name tactic + technique or sub-technique; cite one field; if two IDs fit, pick the primary and reject the neighbor. An ID with no cited field is not a map  
+
+**0.6.1.2 [T] ATT&CK tasks**  
+1. Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
+
+**0.6.2.1 [K] Diamond Model**  
+Stay in this lesson: four vertices and the weakest one. Not attribution (**3.11**). Not **3.7.2**. Not ATT&CK IDs (**0.6.1**).
+
+a. Purpose: organize what you know so you can see what you do **not** know. Not a verdict  
+b. The four vertices: Adversary, Capability, Infrastructure, Victim  
+c. Fill all four from evidence you have. Name the **weakest** vertex (least evidence) — that is the next question, not a guess. A vendor or course-fiction name is not Adversary evidence  
+
+**0.6.2.2 [T] Diamond Model tasks**  
+1. Apply the Diamond Model to an incident or set of indicators: fill the four vertices and state which vertex is weakest  
+
+**0.6.3.1 [K] Cyber Kill Chain**  
+Stay in this lesson: this row’s stage, and why it is not the previous or next. Not ATT&CK (**0.6.1**). Not Diamond (**0.6.2**). Not **3.7.3**.
+
+a. Purpose: stage attack **progression**. A staging tool, not a complete model of every intrusion  
+b. The seven stages, in order: Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command and Control, Actions on Objectives  
+c. Place **this row** on one stage. Reject the previous or next stage you did not see. Do not invent the rest of the chain  
+
+**0.6.3.2 [T] Kill Chain tasks**  
+1. Identify the Kill Chain stage of observed activity and why it is not the previous or next stage  
+
 ---
 
 # Shared floor (still `00`, still before SOC)
 
-Taught after `0.1`–`0.5`, **before SOC 1.1**. All four roles. Lessons live under `modules/00-intro/` (`06-frameworks` through `08-environment`).
+Taught after `0.1`–`0.6`, **before SOC 1.1**. All four roles. Lessons live under `modules/00-intro/` (`07-tool-survey` through `08-environment`).
 
 Write only the asked child. Not DTF (`3.7.4`). Not hunt planning (`2.5`). Not actor products (`3.11`). Not TIP nav (`3.3.1`). Not VT Relations / platform depth (`3.9`). Not reporting products (`1.6` — last SOC hour). Not a PCAP analysis course. Role-local lists stay at `2.7` / `3.12` / `4.8`.
 
 **Retired (do not teach):** `1.7` shift change, `1.8.2` PCAP handling, `1.8.3` tool access, `1.8.4` notes, `1.8.5` IR process.
-
-**Frameworks** — IDs `1.5.1`–`1.5.3`. Lessons live under `modules/00-intro/06-frameworks/`. Do not copy them into a role folder. Each framework has its own applying task.
-
-**1.5.1 [K] MITRE ATT&CK**  
-Stay in this lesson: purpose, structure, and one map. Hunt *planning* with ATT&CK is **2.5**. Attribution products are **3.11**.
-
-a. Purpose and structure of the ATT&CK framework  
-b. Tactics  
-c. Techniques and Sub-techniques  
-d. How to map observed activity to ATT&CK  
-
-**1.5.1.1 [T] ATT&CK tasks**  
-1. Map an alert or observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
-
-**1.5.2 [K] Diamond Model**  
-a. Purpose of the Diamond Model  
-b. The four core features (Adversary, Capability, Infrastructure, Victim)  
-c. How the Diamond Model is used for analysis and attribution  
-
-**1.5.2.1 [T] Diamond Model tasks**  
-1. Apply the Diamond Model to an incident or set of indicators: fill the four vertices and state which vertex is weakest  
-
-**1.5.3 [K] Cyber Kill Chain**  
-a. Purpose of the Cyber Kill Chain  
-b. The stages of the Kill Chain  
-c. How the Kill Chain is used to understand attack progression  
-
-**1.5.3.1 [T] Kill Chain tasks**  
-1. Identify the Kill Chain stage of observed activity and why it is not the previous or next stage  
 
 **Tool survey** — ID `3.3.2`. Purpose and when to pick. Not a live vendor account. Advanced enrichment / pivot is **3.9**. Internal TIP is **3.3.1**.
 
@@ -385,10 +390,6 @@ b. Required time to process an alert (close or escalate)
 1. Given timestamps, identify whether the start clock or the close/escalate clock is at risk  
 2. Close or escalate an alert and record it against the correct clock  
 
-**1.5 [K/T] Frameworks**
-
-Taught on the **shared floor** after **0** (IDs unchanged). Hunt *planning* with ATT&CK is still **2.5**. Attribution products are still **3.11**. DTF is **3.7.4**.
-
 **1.6 [K/T] Reporting**
 
 Last SOC hour. Sits at the **SOC / CTI seam** after alerts (`1.4`). Three units — do not collapse them. The RFI type is the door into CTI. Finished intel products are **3.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task. **`1.7` is retired.**
@@ -593,7 +594,7 @@ c. How advanced DNS data supports enrichment and infrastructure analysis
 
 **3.7 [K/T] Frameworks**  
 
-Four children. Write only the asked child. Do not write lumped outline `3.7.5` as one module. Do not re-teach the shared-floor frameworks (`1.5`) or hunt planning (`2.5`). DTF is real PTA/P discovery IDs from [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Product is the DTF ID line. No scoring. Do not invent P-codes. Do not teach every P-code. Generic hop sentence is `3.8.1`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
+Four children. Write only the asked child. Do not write lumped outline `3.7.5` as one module. Do not re-teach the shared-floor frameworks (`0.6`) or hunt planning (`2.5`). DTF is real PTA/P discovery IDs from [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Product is the DTF ID line. No scoring. Do not invent P-codes. Do not teach every P-code. Generic hop sentence is `3.8.1`. Applicable-to-environment TTP extract is `3.8.2`. Actor profile is `3.11`.
 
 **3.7.1 [K] MITRE ATT&CK**  
 a. Advanced application for intelligence analysis and TTP extraction  
