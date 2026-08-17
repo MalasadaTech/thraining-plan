@@ -1,209 +1,91 @@
-# Module 3.11.3 – Handling RFIs  
+# Module 2.11.3 – Handling RFIs  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.11.3 – Handling RFIs  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.11.3 – Handling RFIs  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-CTI inbox. Not the SOC ticket type.
+Answer the question SOC sent. Not a second incident.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Purpose and lifecycle
-2. Evaluate and prioritize
-3. Produce a short response
-4. Decline out-of-scope and duplicates
+**Evaluate. Prioritize. Respond.**
 
-**Mapped Items:**  
-K: 3.11.3 | T: 3.11.3.1
+The RFI *is* the question.  
+Do not rewrite the SOC notify.
 
 **Speaker Notes:**  
-SOC is A/A/A and 1a/1a/1a. CTI 4d.
+1.5.1 was the type. This hour is the answer.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Three steps
+**Title:** Can we / now / answer
 
-- Lifecycle + evaluate
-- Three examples
-- Four-queue exercise
-- Knowledge check
+**Evaluate** — can we answer with what we have?  
+**Prioritize** — open incident vs standing work.  
+**Respond** — answer the question.
 
 **Speaker Notes:**  
-Closes 3.11. 3.12 is next.
+Outline a–b.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** A12 RFI
 
-SOC RFI ticket type (**1.6.1**)  
-New finished product by default (**3.11.1**)  
-Mark/send (**3.11.2**)  
-Local PIRs (**3.12.1**)
+Can answer — Zeek A + file.  
+Work **now** — IR has the host.  
+Response — **likely** the update domain is the payload host. Treat it as such.
 
-**Key Point:** Answer or decline. Do not invent.
+Not a country. Not a new case.
 
 **Speaker Notes:**  
-Fence.
+Task 1–2.
 
 ---
 
-### Slide 5 – Lifecycle
-**Title:** Receive · Evaluate · Prioritize · Respond
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Or decline / redirect.
+No SOC type pick (**1.5.1**).  
+No invented queue policy (**2.12**).  
+No nation-state paragraph.
 
 **Speaker Notes:**  
-Outline a.
+Site obtain is next.
 
 ---
 
-### Slide 6 – Evaluate
-**Title:** Scope · Holdings · Action · Duplicate
-
-Missing holdings → 3.12.2. Do not fake them.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Classroom Queue
-**Title:** R1 High · R2 Honest Who · R3 Decline · R4 Duplicate
-
-**Speaker Notes:**  
-Lesson-only.
-
----
-
-### Slide 8 – RFI Line
-**Title:** Five Fields
-
-`id | in scope? | priority | respond or decline | one sentence`
-
-**Speaker Notes:**  
-Task.
-
----
-
-### Slide 9 – Example 1
-**Title:** Example 1 – Block Tonight
-
-R1 high. CoA sentence.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2
-**Title:** Example 2 – Nation-State?
-
-Answer: unattributed.  
-Do not invent a who.
-
-**Speaker Notes:**  
-Lead / 4d.
-
----
-
-### Slide 11 – Example 3
-**Title:** Example 3 – Decline / Redirect
-
-R3 out of scope. R4 already answered.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- R2 → “yes, nation-state”  
-- Writing the exploit  
-- 6-page product for a duplicate  
-- Fabricating collection  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Swap the live RFI form.  
-Keep: evaluate → prioritize → answer or decline.
-
-**Speaker Notes:**  
-Not live org policy.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. R1–R4 lines.
-3. Two answers + two declines.
-4. No new profile unless required.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. RFI for?
-2. Lifecycle stages?
-3. Why R1 > R4?
-4. How to answer R2 without who?
-5. Where if you need collection?
+1. Answering an RFI means opening a second incident. True or false?  
+2. What three steps do you take on an RFI?  
+3. Write a two-sentence **A12** RFI response (no country, no second case).
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Answer or decline. Do not invent.
-- Next unit: **3.12** site-specific CTI.
+Evaluate, prioritize, answer. Do not rewrite the ticket.
+
+**Next:** **2.12.1** Local priorities
 
 **Speaker Notes:**  
-Do not open 3.12 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** RFI Queue — Quick Reference
-
-| ID | Action |
-|----|--------|
-| R1 | High — block two names |
-| R2 | Unattributed — not nation-state |
-| R3 | Decline |
-| R4 | Point at last note |
-
-**Coming next:** Module 3.12.1 – Local intelligence requirements
-
-**Footer:** SOC / Hunter / CTI Training Program
+2.11 ends. Site hours are obtain-and-follow.

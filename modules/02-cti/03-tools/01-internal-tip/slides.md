@@ -1,223 +1,90 @@
-# Module 3.3.1 – Internal Threat Intelligence Platform  
+# Module 2.3.1 – Internal Threat Intelligence Platform  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.3.1 – Internal TIP  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.3.1 – Internal Threat Intelligence Platform  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Search, retrieve, link. Overlay live TIP if you have it.
+What we already hold. Not VirusTotal. Not a Harbor URL.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Purpose and core functions
-2. Navigate and search
-3. Retrieve a relevant object
-4. Enrich or analyze (sighting / link)
+Look up **what this shop already knows**.
 
-**Mapped Items:**  
-K: 3.3.1 | T: 3.3.1.1
+Search. Retrieve. Or write **not in TIP**.  
+Do not invent a hit.
 
 **Speaker Notes:**  
-SOC 3-level task is 1a / 2b. CTI is 3c / 4d.
+Check internals before a public tool.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Three jobs
+**Title:** Store, search, link
 
-- Harbor TIP card
-- Three examples
-- Retrieve + enrich
-- Knowledge check
+**Store** — indicators, reports, sightings we already have.  
+**Search / retrieve** — hash, IP, or domain you have.  
+**Link** — attach this RFI as a sighting, or record a miss.
 
 **Speaker Notes:**  
-3.3.2 is next.
+Outline a–c. Overlay their real TIP if they have one.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Search A12
 
-VT / AnyRun / Silent Push / URLScan (**3.3.2**)  
-VT Relations depth (**3.9**)  
-STIX authoring (**3.10**)  
-Ticket worklog (**1.8.4**)
+Search the update domain or the hash of Temp `invoice.vbs`.  
+Write what you retrieved — or **not in TIP**.
 
-**Key Point:** Our store. Search and attach.
+A miss is a gap, not benign.
 
 **Speaker Notes:**  
-Fence.
+Do not invent a cluster label.
 
 ---
 
-### Slide 5 – Purpose
-**Title:** What the TIP Is For
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Store indicators, reports, sightings, clusters.  
-Answer: **have we already seen this?**
+No VirusTotal (**0.7** / **2.9**).  
+No STIX authoring (**2.10**).  
+No invented Harbor URL.
 
 **Speaker Notes:**  
-Outline a.
+Similarity hashes are next.
 
 ---
 
-### Slide 6 – Search
-**Title:** Navigate
-
-Search: IOC, tag, cluster.  
-Filter: type, date, TLP, source.  
-Open the object = retrieve.
-
-**Speaker Notes:**  
-Outline b. 403 → 1.8.3.
-
----
-
-### Slide 7 – Three Uses
-**Title:** Enrich · Analyze · Produce
-
-**Enrich** — add sighting / link related IOC  
-**Analyze** — read prior Harbor hits  
-**Produce** — attach object ID to the draft
-
-**Speaker Notes:**  
-Outline c.
-
----
-
-### Slide 8 – Two Lines
-**Title:** Retrieve vs Enrich
-
-`query | object | fields`  
-`object | what you add | why`
-
-Opening the page is only the first line.
-
-**Speaker Notes:**  
-Tasks.
-
----
-
-### Slide 9 – Example 1: Retrieve
-**Title:** Example 1 – SNI Search
-
-`nightowl-updates.net` → IND-1882  
-Two old sightings. No WS-JLEE yet.
-
-**Speaker Notes:**  
-Students first. Demo if you can.
-
----
-
-### Slide 10 – Example 2: VT
-**Title:** Example 2 – Wrong Store
-
-VT is **3.3.2**.  
-Internal question still unanswered.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3: No Sighting
-**Title:** Example 3 – Read-Only Fail
-
-Opened IND-1882. Never added WS-JLEE.  
-Task 2 failed.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- VT as TIP  
-- Search without opening  
-- No new sighting  
-- Tenant-wide dump  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Use the live TIP if posted.  
-Keep: search / open / attach.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. A–B: retrieve line.
-3. C–D: enrich / pull line.
-4. No VT.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. TIP vs SIEM vs VT?
-2. Three functions?
-3. Retrieve vs enrich?
-4. Why not a VT tab?
-5. Notes vs TIP?
+1. The internal TIP is the same as VirusTotal. True or false?  
+2. Name two core TIP jobs.  
+3. You search the update domain for **A12**. What two results can you write, and what must you **not** invent?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Search. Open. Link the new hit.
-- Next: **3.3.2** external tools.
+Search what we hold. Retrieve or say missing. Do not invent a hit.
+
+**Next:** **2.4.1** File similarity hashes
 
 **Speaker Notes:**  
-Do not open 3.3.2 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Harbor TIP — Quick Reference
-
-| Need | Do |
-|------|-----|
-| Have we seen it? | Search + open |
-| New host hit | Add sighting |
-| Related hash | Link indicator |
-| Draft for SOC | Pull prior hits + TLP |
-
-URL: `tip.harbor.internal` (classroom)
-
-**Coming next:** Module 3.3.2 – External tools
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open similarity unless that hour is scheduled.

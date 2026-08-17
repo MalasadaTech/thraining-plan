@@ -1,124 +1,86 @@
-# Instructor Guide – Module 3.8.1 – Identifying Additional Adversary Infrastructure from Seed Indicators
+# Instructor Guide – Module 2.8.1 – Identifying Additional Adversary Infrastructure
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.8.1 A / B / B · 3.8.1.1 1a / 2b / 3c  
-- Hunter: 3.8.1 B / C / C · 3.8.1.1 3c / 4c / 4d  
-- CTI: 3.8.1 B / C / C · 3.8.1.1 3c / 4c / 4d  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.8.1 B / C / C ; 2.8.1.1 3c / 4c / 4d  
+- Hunter: 2.8.1 B / C / C ; 2.8.1.1 3c / 4c / 4d  
+- SOC: 2.8.1 A / B / B ; 2.8.1.1 1a / 2b / 3c  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Write the **generic hop sentence**: seed → shared property → **additional infrastructure**. **3.7.4** already wrote the DTF ID line. Reject weak public NS / cloud CIDR hops and uncited vendor names.
+Write a hop sentence from a seed. No P-ID. Reject shared /24.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts say what they shared and what they found.
+- How it hooks to the hour before: 2.7.4 was the DTF ID.
+- How it hooks to the hour after: 2.8.2 is TTPs that apply *here*.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. No tool redo.
+- What we are *not* doing this hour: RDAP class. SOA parse. PDNS. DTF IDs. No lab.
+- Extra step: none.
 
 **Key Teaching Points:**
-- Do not re-teach RDAP fields, SOA timers, or Silent Push vs VT. Point at the **cards** and the hop.
-- Classroom PDNS / TIP rows are **lesson-only**, same rule as Harbor / DTF cards.
-- SOC K is **A / B / B**. Hunter/CTI task **3c / 4c / 4d**. The 4d move is *why this hop is not a coincidence*.
-- Do not open **3.8.2**, **3.8.3**, **3.8.4**, or **3.9**.
-
-**Common Student Challenges:**
-- Treating Example Cloud /24 as “theirs.”
-- Shared CDN NS as a cluster.
-- Pasting `evil-c2.net` from the vendor PDF.
-- Rewriting DTF PTA/P IDs or writing T-IDs.
-- Opening VT Relations because “that’s pivoting.”
+- Four-part sentence.
+- /24 is coincidence.
 
 **Required Materials:**
-- Student Guide (classroom cards)
+- Student Guide
 - Slide Deck
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Pivot = seed + shared property + additional infra.
-2. Pick a source; cite the hop.
-3. Reject weak / uncited hops.
+Same as the student guide.
 
-**Mapped Items:** K 3.8.1 · T 3.8.1.1
+**Mapped Items:** K 2.8.1 ; T 2.8.1.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not 3.5/3.6 redo; not 3.8.2 / 3.9 |
-| Pivot concepts + sources       | 14 min   | a–b |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | Pivot lines |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they keep the /24 |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Sentence, not P-ID |
+| Key Concepts            | 12 min    | Sibling hop; reject /24 |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- CTI 3: 3c — they already stacked SOA in **3.6**. Push **two properties** (MNAME+NS *and* same A).
-- 4d: “same NS” is not enough if that NS is public. `cdn-test.net` is distinctive *in this classroom* because it is not Cloudflare and it pairs with the same A.
-- Redacted RDAP still gives NS — they should already know that from **3.5**. One reminder, then move.
+### 1. Key Concepts
 
-**Question:**  
-“What would make `evil-c2.net` a legal additional-infra hop on *this* card?”
+Write the sentence shape. Walk sibling NS. Fail /24.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail B (/24). Fail D (uncited). Fail E (3.11). Accept A and C as the same hop if they cite MNAME+NS and/or same A.
-
-**Summaries:**
-- Ex 1: `login-nightowl.net` via SOA/NS + PDNS A.
-- Ex 2: cloud /24 or public NS is weak.
-- Ex 3: vendor name with no property stays out.
-
-**Pivot lines:**
-
-| Item | Additional infra | Source | Shared | Notes |
-|------|------------------|--------|--------|-------|
-| A | **`login-nightowl.net`** | SOA/NS and/or PDNS | MNAME+NS and/or A `203.0.113.88` | Supported |
-| B | **None / reject** | — | /24 only | Hosting, not theirs |
-| C | **`login-nightowl.net`** | PDNS + SOA | A **and** MNAME+NS | Strongest cite |
-| D | **None** | — | None on the card | Uncited |
-| E | **Refuse** | — | — | **3.11** |
-
-**Product sentence:** “From `nightowl-updates.net`: `login-nightowl.net` (same MNAME+NS and same A `203.0.113.88`).”
+If they write P0101.010: “2.7.4. This hour is the sentence.”  
+If they open RDAP: “Name it. Do not teach it.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **What is a pivot?**  
-   **Answer:** Start from a seed, follow a shared property, name additional infrastructure you can cite.  
-   **Explanation:** Outline a.
+1. **Must write a P-ID. True or false?**  
+   **Answer:** False. That is 2.7.4.  
+   **Explanation:** Stay-in.
 
-2. **Two sources + property?**  
-   **Answer:** Any two of: RDAP → NS; SOA → MNAME/NS; PDNS → historical A; TIP → internal sighting.  
-   **Explanation:** Outline b.
+2. **Four parts?**  
+   **Answer:** Seed, shared characteristic, candidate, why not coincidence.  
+   **Explanation:** Outline a / task 1.
 
-3. **Why not the cloud /24?**  
-   **Answer:** Shared hosting. RDAP org is the cloud, not the adversary. Many tenants.  
-   **Explanation:** Example 2.
-
-4. **Why not the vendor domain?**  
-   **Answer:** No shared property on *this* evidence. Uncited names stay out.  
-   **Explanation:** Example 3.
-
-5. **Harbor-applicable TTPs?**  
-   **Answer:** **3.8.2**.  
-   **Explanation:** Fence.
+3. **Hop to login-prd.net?**  
+   **Answer:** Seed update domain; shared NS; candidate login-prd.net; distinctive NS, not a public resolver. /24 is reject.  
+   **Explanation:** Task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- Classroom cards (student guide)
-- Next recommended module: 3.8.2 Extracting applicable TTPs from intelligence reports
+- Next: 2.8.2 Applicable TTPs

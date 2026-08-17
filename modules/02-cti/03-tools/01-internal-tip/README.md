@@ -1,30 +1,28 @@
 # Internal Threat Intelligence Platform
 
-**Path:** `modules/03-cti/03-tools/01-internal-tip`  
+**Path:** `modules/02-cti/03-tools/01-internal-tip`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.3.1 | K | Internal threat intelligence platform | 3.3.1 a–c |
-| 3.3.1.1 | T | Search, retrieve, and use the internal TIP for enrichment or analysis | 3.3.1.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.3.1 | K | Internal threat intelligence platform | 2.3.1 a–c | A / A / B | A / B / B | B / C / C |
+| 2.3.1.1 | T | Search, retrieve, and use the internal TIP | 2.3.1.1 tasks 1–2 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The lesson ID is **3.3.1**. External tools (VT, AnyRun, Silent Push, URLScan) are **3.3.2**. Platform-depth VT is **3.9**. STIX authoring is **3.10**. Case-ticket notes are **1.8.4**. Tool *login* is **1.8.3**.
+The teaching-unit ID is **2.3.1**. External survey is **0.7**. Platform depth is **2.9**. STIX is **2.10**. No lab. DE has no code on this row.
 
 ## Concepts taught
 
-- purpose and core functions of the internal TIP
-- navigating and searching the internal TIP
-- how the TIP supports enrichment, analysis, and production
-- search and retrieve from the internal TIP
-- use the TIP for enrichment or analysis
+- internal TIP purpose
+- search and retrieve
+- using the TIP to enrich or analyze
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

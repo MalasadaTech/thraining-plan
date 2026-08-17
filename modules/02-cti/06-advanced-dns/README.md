@@ -1,30 +1,28 @@
 # Advanced DNS Concepts
 
-**Path:** `modules/03-cti/06-advanced-dns`  
+**Path:** `modules/02-cti/06-advanced-dns`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.6.1 | K | Advanced DNS concepts (SOA and other records of intel value) | 3.6.1 a–c |
-| 3.6.1.1 | T | Interpret an SOA record and use advanced DNS data to enrich or pivot | 3.6.1.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.6.1 | K | Advanced DNS concepts | 2.6.1 a–c | A / A / B | B / C / C | B / C / C |
+| 2.6.1.1 | T | Interpret an SOA and use advanced DNS to enrich or pivot | 2.6.1.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
 
-The lesson ID is **3.6.1**. Zeek DNS fields, DGA, and tunneling are **1.2.3**. RDAP/WHOIS registration is **3.5**. Passive DNS history is **3.3.2** Silent Push.
+The teaching-unit ID is **2.6.1**. Zeek DNS is **1.2.3**. RDAP is **2.5**. Silent Push is **0.7**. No lab.
 
 ## Concepts taught
 
 - SOA records
-- other advanced DNS record types of intelligence value
-- how advanced DNS supports enrichment and infrastructure analysis
-- interpret an SOA record
-- use advanced DNS records to enrich or pivot
+- other DNS records of intel value
+- using DNS to enrich or pivot
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

@@ -1,111 +1,85 @@
-# Instructor Guide – Module 3.11.3 – Handling RFIs
+# Instructor Guide – Module 2.11.3 – Handling RFIs
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.11.3 A / A / A · 3.11.3.1 1a / 1a / 1a  
-- Hunter: 3.11.3 A / A / B · 3.11.3.1 1a / 1a / 2b  
-- CTI: 3.11.3 B / C / C · 3.11.3.1 3c / 4c / 4d  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.11.3 B / C / C ; 2.11.3.1 3c / 4c / 4d  
+- Hunter: 2.11.3 A / A / B ; 2.11.3.1 1a / 1a / 2b  
+- SOC: 2.11.3 A / A / A ; 2.11.3.1 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-CTI **receives** RFIs: evaluate, prioritize, answer or decline. Classroom queue only.
+Evaluate, prioritize, and answer the A12 RFI. Do not open a second incident. Do not invent a queue policy.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts answer the question SOC sent through the door.
+- How it hooks to the hour before: 2.11.2 routed the finished product.
+- How it hooks to the hour after: 2.12 is obtain-the-local-card.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Story bible: RFI on the update domain.
+- What we are *not* doing this hour: SOC type pick. Local Jira names. Nation-state. No lab.
+- Extra step: none.
 
 **Key Teaching Points:**
-- SOC K is **A / A / A** and task **1a / 1a / 1a** — they *recognize* an RFI, they do not run the CTI queue at 3-level. Do not collapse to Hunter/CTI codes.
-- CTI **4d** is R2 (answer unattributed without inventing a who) and the decline judgment on R3/R4.
-- 1.6.1 is the SOC *ticket type*. This hour is the CTI *inbox*.
-- Do not open 3.12 PIR lists except “that is next.”
-
-**Common Student Challenges:**
-- Answering R2 as nation-state.
-- Writing an exploit for R3.
-- A new 6-page product for R4.
-- Treating every RFI as a 3.11.1 product.
+- Can we answer / work now / answer the question.
+- Not a second case.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Purpose + lifecycle.
-2. Evaluate and prioritize.
-3. Short response or decline.
+Same as the student guide.
 
-**Mapped Items:** K 3.11.3 · T 3.11.3.1
+**Mapped Items:** K 2.11.3 ; T 2.11.3.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not 1.6.1 / 3.11.1 redo |
-| Lifecycle + evaluate           | 14 min   | a–b |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | Queue |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | Closes 3.11 |
-| **Total**                      | **~66 min** | Stretch R2 if they fill who |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Answer the question |
+| Key Concepts            | 12 min    | A12 RFI |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- Short answer > new product when holdings exist.
-- R2 is the 4d item: the question is legitimate; the *honest* answer is empty who.
-- R3: decline, do not lecture malware writing.
-- If they invent new PDNS holdings, stop — **3.12.2**.
+### 1. Key Concepts
 
-**Question:**  
-“Leadership asked ‘is it a nation-state?’ What sentence answers them *and* stays inside 3.11.1.2?”
+Write evaluate / prioritize / respond. Walk A12. Fail second incident and country paragraph.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-| ID | Scope | Priority | Action |
-|----|-------|----------|--------|
-| R1 | Yes | **High** | CoA sentence (block two names; hunt) |
-| R2 | Yes | Medium | **Unattributed** — not nation-state |
-| R3 | **No** | — | Decline |
-| R4 | Duplicate | **Low** | Point at last activity note |
+If they invent a queue SLA: “2.12. Obtain.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **RFI for?**  
-   **Answer:** A customer question that needs an intel answer (or a decline).  
-   **Explanation:** Outline a.
+1. **Answer = second incident. True or false?**  
+   **Answer:** False.  
+   **Explanation:** Stay-in / 1.5.1.
 
-2. **Lifecycle?**  
-   **Answer:** Receive → evaluate → prioritize → respond or decline.  
-   **Explanation:** Outline a.
-
-3. **Why R1 > R4?**  
-   **Answer:** R1 is an action this window. R4 is already answered.  
+2. **Three steps?**  
+   **Answer:** Evaluate, prioritize, respond.  
    **Explanation:** Outline b.
 
-4. **R2 without who?**  
-   **Answer:** Say unattributed / low confidence. The RFI does not create evidence.  
-   **Explanation:** Example 2 / 4d.
-
-5. **Need collection?**  
-   **Answer:** **3.12.2**. Do not fabricate holdings.  
-   **Explanation:** Fence.
+3. **Two-sentence A12 response?**  
+   **Answer:** Likely yes — update domain / 203.0.113.88 is the payload host. Treat it as such. No country. No new case.  
+   **Explanation:** Task 2.
 
 ---
 
 ## Additional Instructor Resources
 
-- Next recommended module: 3.12.1 Local intelligence requirements and priorities
+- Next: 2.12.1 Local priorities

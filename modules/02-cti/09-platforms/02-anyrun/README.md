@@ -1,29 +1,27 @@
 # AnyRun
 
-**Path:** `modules/03-cti/09-platforms/02-anyrun`  
+**Path:** `modules/02-cti/09-platforms/02-anyrun`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.9.2 | K | AnyRun | 3.9.2 a–b |
-| 3.9.2.1 | T | Search and review AnyRun submissions for actionable intelligence | 3.9.2.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.9.2 | K | AnyRun | 2.9.2 a–b | A / A / B | A / B / B | B / C / C |
+| 2.9.2.1 | T | Search and review AnyRun submissions | 2.9.2.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
-The lesson ID is **3.9.2**. Tool *choice* is **3.3.2**. VT Behavior (sandbox events on a *hash*) is **3.9.1**. Hunt SIEM/Zeek conversion is **2.3.1**. Applicable TTPs are **3.8.2**. Classroom AnyRun cards are lesson-only. Do not require a live detonation.
+The teaching-unit ID is **2.9.2**. Survey is **0.7**. Classroom card only. No lab.
 
 ## Concepts taught
 
-- searching AnyRun by tag, IP, domain, or hash
-- reviewing an AnyRun submission for actionable intelligence
-- search AnyRun submissions
-- extract actionable intelligence from an AnyRun submission
+- searching AnyRun submissions
+- reviewing a submission for actionable intel
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

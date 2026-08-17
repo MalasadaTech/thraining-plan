@@ -1,30 +1,28 @@
 # RDAP and WHOIS Concepts
 
-**Path:** `modules/03-cti/05-rdap-whois`  
+**Path:** `modules/02-cti/05-rdap-whois`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.5.1 | K | RDAP and WHOIS concepts | 3.5.1 a–c |
-| 3.5.1.1 | T | Query RDAP/WHOIS and interpret fields for enrichment or attribution | 3.5.1.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.5.1 | K | RDAP and WHOIS concepts | 2.5.1 a–c | A / A / B | A / B / B | B / C / C |
+| 2.5.1.1 | T | Query RDAP/WHOIS and interpret fields | 2.5.1.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
-The lesson ID is **3.5.1**. SOA / advanced DNS is **3.6**. Passive DNS / sibling domains are **3.3.2** Silent Push. Nation-state attribution is **3.1.7**.
+The teaching-unit ID is **2.5.1**. SOA is **2.6**. Silent Push is **0.7**. Attribution is **2.1.7**. No lab.
 
 ## Concepts taught
 
 - purpose of WHOIS and RDAP
-- key differences between WHOIS and RDAP
-- key RDAP/WHOIS fields for enrichment and attribution
-- query RDAP/WHOIS for a domain or IP
-- extract and interpret RDAP/WHOIS fields
+- WHOIS vs RDAP
+- registration fields for enrichment
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

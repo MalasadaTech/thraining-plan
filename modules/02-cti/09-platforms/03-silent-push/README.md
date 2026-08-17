@@ -1,29 +1,27 @@
 # Silent Push
 
-**Path:** `modules/03-cti/09-platforms/03-silent-push`  
+**Path:** `modules/02-cti/09-platforms/03-silent-push`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.9.3 | K | Silent Push | 3.9.3 a–b |
-| 3.9.3.1 | T | Enrich an indicator and pivot in Silent Push | 3.9.3.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.9.3 | K | Silent Push | 2.9.3 a–b | A / A / B | A / B / B | B / C / C |
+| 2.9.3.1 | T | Enrich an indicator and pivot in Silent Push | 2.9.3.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
 
-The lesson ID is **3.9.3**. Tool *choice* is **3.3.2**. Conceptual infra hop is **3.8.1**. SOA field reading is **3.6**. RDAP is **3.5**. VT Relations is **3.9.1**. Classroom Silent Push cards are lesson-only.
+The teaching-unit ID is **2.9.3**. Survey is **0.7**. Classroom card only. No lab.
 
 ## Concepts taught
 
-- Silent Push core capabilities and use cases
-- how to pivot and enrich indicators in Silent Push
-- enrich an indicator using Silent Push
-- pivot within Silent Push to identify additional infrastructure
+- Silent Push purpose
+- enrich and pivot on a card
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

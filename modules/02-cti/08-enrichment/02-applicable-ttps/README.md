@@ -1,29 +1,27 @@
 # Extracting Applicable TTPs from Intelligence Reports
 
-**Path:** `modules/03-cti/08-enrichment/02-applicable-ttps`  
+**Path:** `modules/02-cti/08-enrichment/02-applicable-ttps`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.8.2 | K | Extracting applicable TTPs from intelligence reports | 3.8.2 a–b |
-| 3.8.2.1 | T | Extract applicable TTPs from an intelligence report | 3.8.2.1 task 1 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.8.2 | K | Extracting applicable TTPs | 2.8.2 a–b | A / B / B | B / C / C | B / C / C |
+| 2.8.2.1 | T | Extract applicable TTPs from a report | 2.8.2.1 task 1 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 
-The lesson ID is **3.8.2**. Evidence-bound ATT&CK mapping is **3.7.1**. Harbor orientation facts are **1.8.1**. Hunt-facing ID skim is **2.4.2**. Hunt coverage is **2.5**. Infra pivot is **3.8.1**. IOC handling is **3.8.3**. Organizational impact is **3.8.4**. Actor profile is **3.11**. Do not invent T-IDs. Harbor facts are lesson-only.
+The teaching-unit ID is **2.8.2**. ATT&CK mapping is **2.7.1**. Impact is **2.8.4**. Real IDs only. No lab.
 
 ## Concepts taught
 
-- identifying relevant TTPs in a report
-- criteria for TTP applicability to the environment
-- extract applicable TTPs from an intelligence report
-- reject a TTP that does not apply here
+- identifying TTPs in a report
+- applicability to this environment
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

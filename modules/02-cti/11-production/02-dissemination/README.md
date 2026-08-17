@@ -1,31 +1,31 @@
 # Disseminating Intelligence to the Correct Audiences
 
-**Path:** `modules/03-cti/11-production/02-dissemination`  
+**Path:** `modules/02-cti/11-production/02-dissemination`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.11.2 | K | Disseminating intelligence to the correct audiences | 3.11.2 a–c |
-| 3.11.2.1 | T | Select audience and method and apply correct handling markings | 3.11.2.1 tasks 1–2 |
-| 3.11.2.2 | T | Tailor products to different audiences | 3.11.2.2 task 1 |
-| 3.11.2.3 | T | Disseminate intelligence products through approved channels | 3.11.2.3 task 1 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.11.2 | K | Disseminating intelligence | 2.11.2 a–c | A / A / B | A / B / B | B / C / C |
+| 2.11.2.1 | T | Select audience, method, and markings | 2.11.2.1 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 2.11.2.2 | T | Tailor products to different audiences | 2.11.2.2 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.11.2.3 | T | Disseminate through approved channels | 2.11.2.3 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
 
-The lesson ID is **3.11.2**. Audience *rewrite* floor is **3.1.6**. Finished *draft* is **3.11.1**. SOC routing is **1.6.3**. Local customer lists are **3.12.3**. STIX/TAXII publish is **3.10.2**. Classroom TLP and channels are lesson-only — not live org policy.
+The teaching-unit ID is **2.11.2**. Audience floor is **2.1.6**. SOC routing is **1.5.3**. Local lists are **2.12.3**. Classroom markings only. No lab.
 
 ## Concepts taught
 
-- audience identification for dissemination
-- approved dissemination methods and handling markings
-- tailor products to different audiences
-- disseminate through approved channels
+- audience identification
+- approved channels
+- handling markings
+- rejecting the wrong channel
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

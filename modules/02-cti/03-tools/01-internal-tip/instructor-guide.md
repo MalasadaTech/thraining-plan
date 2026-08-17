@@ -1,127 +1,87 @@
-# Instructor Guide – Module 3.3.1 – Internal Threat Intelligence Platform
+# Instructor Guide – Module 2.3.1 – Internal Threat Intelligence Platform
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.3.1 A / A / B · 3.3.1.1 1a / 1a / 2b  
-- Hunter: 3.3.1 A / B / B · 3.3.1.1 1a / 2b / 3c  
-- CTI: 3.3.1 B / C / C · 3.3.1.1 3c / 4c / 4d  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.3.1 B / C / C ; 2.3.1.1 3c / 4c / 4d  
+- Hunter: 2.3.1 A / B / B ; 2.3.1.1 1a / 2b / 3c  
+- SOC: 2.3.1 A / A / B ; 2.3.1.1 1a / 1a / 2b  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach purpose, search/navigate, and force **retrieve + enrich**. Do not teach VT/Silent Push or STIX authoring.
+Search the shop TIP for an indicator you already have. Retrieve it or write not in TIP. Do not invent a hit.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts check what this shop already knows before they open a public tool.
+- How it hooks to the hour before: 2.2.4 closed tradecraft. This hour is the store.
+- How it hooks to the hour after: 2.4.1 is similarity hashes, not TIP nav.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c. No Harbor URL as policy. Overlay a real TIP if they have one.
+- What we are *not* doing this hour: VT. STIX authoring. Live vendor account. No lab.
+- Extra step: none.
 
 **Key Teaching Points:**
-- Harbor TIP is a stand-in. Overlay live screens if you have them.
-- Retrieve ≠ enrich. Opening the page is not task 2.
-- VT is **3.3.2**. Ticket notes are **1.8.4**.
-- SOC 3-level task is **1a / 1a / 2b**. Hunter 3-level is **1a**. CTI is **3c / 4d**. Do not collapse.
-- 403 → point at **1.8.3**, do not teach IAM here.
-
-**Common Student Challenges:**
-- VT as the TIP.
-- Search without opening the object (no retrieve).
-- Read-only — never add the new sighting.
-- Dumping the whole tenant.
+- Store / search / link.
+- A miss is a gap, not benign.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional live TIP (read-only demo) or screenshots
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Purpose and functions.
-2. Navigate and search.
-3. Retrieve.
-4. Enrich / analyze with a link or sighting.
+Same as the student guide.
 
-**Mapped Items:** K 3.3.1 · T 3.3.1.1
+**Mapped Items:** K 2.3.1 ; T 2.3.1.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 3.3.2 / 3.10 / 1.8.4 |
-| Purpose, search, three uses    | 16 min   | a–c |
-| Walkthrough Examples           | 14 min   | Live search if possible |
-| Hands-On Exercise              | 18 min   | Retrieve + enrich |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they defend VT |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | What we already hold |
+| Key Concepts            | 12 min    | Search A12 domain/hash |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- CTI 3: 3c — they should *name the query* and *name the link*, not “I would use the TIP.”
-- If you have a live tenant, run Example 1 on the projector with a **sanitized** indicator.
+### 1. Key Concepts
 
-**Question:**  
-“If the SNI is in the TIP with zero sightings, what does retrieve tell you — and what must enrich add when WS-JLEE hits?”
+Write store / search / link. Walk A12 domain or hash. Accept “not in TIP.”
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail VT. Fail open-and-leave. Accept site object IDs if they overlay.
-
-**Summaries:**
-- Ex 1: query SNI, open IND-1882, list fields + sightings.
-- Ex 2: VT is the wrong store.
-- Ex 3: must add WS-JLEE sighting.
-
-**Retrieve:**
-
-| Item | Query | Open | Retrieved |
-|------|-------|------|-----------|
-| A | `a0e9f5…` / type Indicator | The JA3 indicator (or “none”) | Fields + linked cluster if any. “None” is a valid retrieve — then create is a site SOP (do not invent a 3.12 process). |
-| B | tag `night-owl` | Cluster + member indicators | List object types returned |
-
-**Use:**
-
-| Item | Object | Add / link | Why |
-|------|--------|------------|-----|
-| C | IND-1882 (+ new hash indicator if needed) | Sighting WS-JLEE / EDR / time; link `6734f374…` | Next shift can see the host hit |
-| D | IND-1882 + sightings | Pull prior hosts, tag, TLP, last seen into the SOC note | Analysis uses *our* hits, not a VT score |
+If they invent a Harbor URL: “Their shop screens.”  
+If they open VT: “0.7 / 2.9.”  
+If they write a STIX bundle: “2.10.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **What problem does the TIP solve?**  
-   **Answer:** What *we already hold* and how objects link. SIEM is live telemetry. VT is external.  
+1. **TIP = VirusTotal. True or false?**  
+   **Answer:** False. TIP is *our* store.  
+   **Explanation:** Stay-in.
+
+2. **Two core jobs?**  
+   **Answer:** Any two of store, search/retrieve, link.  
    **Explanation:** Outline a.
 
-2. **Three functions?**  
-   **Answer:** Store, search, link (and support production).  
-   **Explanation:** Outline a.
-
-3. **Retrieve vs enrich?**  
-   **Answer:** Retrieve = open and read. Enrich = add a sighting or link so the store changes.  
-   **Explanation:** Tasks 1–2 / Example 3.
-
-4. **Why not VT?**  
-   **Answer:** Different store. Internal presence is this TIP. VT is **3.3.2**.  
-   **Explanation:** Fence / Example 2.
-
-5. **Notes vs TIP?**  
-   **Answer:** Working notes = ticket (**1.8.4**). TIP = intel objects. Link the TIP ID in the ticket.  
-   **Explanation:** Fence.
+3. **Search the update domain. Two legal results?**  
+   **Answer:** A prior object / sighting you retrieved, or **not in TIP**. Do not invent a hit.  
+   **Explanation:** Task 1–2.
 
 ---
 
 ## Additional Instructor Resources
 
-- Local TIP SOP / demo tenant
-- Next recommended module: 3.3.2 External tools
+- Next: 2.4.1 File similarity hashes

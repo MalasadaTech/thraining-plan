@@ -1,222 +1,90 @@
-# Module 3.6.1 – Advanced DNS Concepts  
+# Module 2.6.1 – Advanced DNS Concepts  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.6.1 – Advanced DNS  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.6.1 – Advanced DNS  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Interpret SOA. Stack NS/MX/TXT/SRV. Overlay a live dig if you can.
+Who runs the zone. Not Zeek dns.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Interpret an SOA
-2. NS / MX / TXT / SRV intel value
-3. Enrich and pivot from that stack
+Read **authoritative DNS**.
 
-**Mapped Items:**  
-K: 3.6.1 | T: 3.6.1.1
+SOA, NS, related names.  
+Shared cloud is not “theirs.”
 
 **Speaker Notes:**  
-Hunter K is B/C/C. CTI task is 3c / 4d.
+NS pair came from 2.5.1.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – SOA and friends
+**Title:** SOA, NS, other
 
-- SOA + other types
-- Three examples
-- Interpret + four pivots
-- Knowledge check
+**SOA** — MNAME, RNAME, serial.  
+**NS** — who answers the zone.  
+**Other** — MX / TXT only if the card has them.
 
 **Speaker Notes:**  
-3.7 is next cluster.
+Outline a–c.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Interpret and pivot
 
-Zeek `query` / DGA / tunnel (**1.2.3**)  
-RDAP created / registrar (**3.5**)  
-Historical A (**3.3.2** Silent Push)
+SOA RNAME `hostmaster.cdn-test.net` — who runs the zone.  
+Sibling `login-prd.net` — same NS, same A `203.0.113.88`.
 
-**Key Point:** Zone records *now*. Then pivot.
+Do **not** claim `203.0.113.0/24`.
 
 **Speaker Notes:**  
-Fence.
+Story bible sibling lands here.
 
 ---
 
-### Slide 5 – SOA Fields
-**Title:** Start of Authority
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-**MNAME** — primary NS  
-**RNAME** — admin (`dot` → `@`)  
-**Serial** — zone version, **not** a hash  
-Timers — defaults; weak cluster only
+No Zeek `dns` / DGA (**1.2.3**).  
+No RDAP redo (**2.5**).  
+No Silent Push PDNS (**0.7**).
 
 **Speaker Notes:**  
-Outline a.
+ATT&CK for CTI is next.
 
 ---
 
-### Slide 6 – Other Types
-**Title:** Classroom Set
-
-**NS** — who serves the zone  
-**MX** — mail path (none is OK)  
-**TXT** — SPF / unique token  
-**SRV** — service locator  
-
-A/AAAA are assumed. Not this unit.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Stack
-**Title:** How You Analyze
-
-Same **MNAME + NS** (+ unique TXT) → cluster.  
-Not a registrant. Not a country.
-
-**Speaker Notes:**  
-Outline c.
-
----
-
-### Slide 8 – Two Lines
-**Title:** Interpret · Pivot
-
-`MNAME | RNAME | serial meaning | pivot | do not claim`  
-`records | pivot | still unknown`
-
-**Speaker Notes:**  
-Task.
-
----
-
-### Slide 9 – Example 1: Card
-**Title:** Example 1 – Night Owl Zone
-
-`ns1.cdn-test.net` / hostmaster@…  
-Serial 2026080101 = zone rev.  
-Pivot other names on that NS.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2: Serial
-**Title:** Example 2 – Not a Hash
-
-`2026080101` is not SHA256.  
-Do not family-match on it.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3: A Only
-**Title:** Example 3 – Wrong Unit
-
-A `203.0.113.88` is **1.2.3**.  
-Come back with SOA/NS/TXT.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Serial as hash / WHOIS date  
-- A-record-only  
-- Cluster on generic SPF  
-- RDAP or PDNS this hour  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Use site `dig` / DNS tool if posted.  
-Keep: SOA fields + stack to pivot.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. Interpret the Night Owl SOA.
-3. A–D: pivot lines.
-4. No RDAP. No Silent Push.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. MNAME, RNAME — serial is not?
-2. Two other types — one use each?
-3. Same operator vs weak?
-4. Why not A-only?
-5. Registration vs historical A — where?
+1. This hour is Zeek `dns` field reading. True or false?  
+2. What two SOA fields do you read first (MNAME / RNAME)?  
+3. Same NS + same A on `login-prd.net` — what can you say, and what must you **not** say about `203.0.113.0/24`?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Interpret SOA. Stack NS/MX/TXT/SRV.
-- Next cluster: **3.7** frameworks.
+SOA = who runs the zone. Same NS / same A can be a sibling.
+
+**Next:** **2.7.1** ATT&CK for CTI
 
 **Speaker Notes:**  
-Do not open 3.7 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Advanced DNS — Quick Reference
-
-| Record | Pivot |
-|--------|-------|
-| SOA MNAME/RNAME | Same zone operator |
-| NS | Shared nameservers |
-| TXT unique | Search the token |
-| MX / SRV | Mail / service infra |
-
-**Coming next:** Module 3.7.1 – ATT&CK for intelligence
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open ATT&CK unless that hour is scheduled.

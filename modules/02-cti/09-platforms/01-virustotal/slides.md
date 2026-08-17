@@ -1,213 +1,90 @@
-# Module 3.9.1 – VirusTotal Relations and Behavior  
+# Module 2.9.1 – VirusTotal Relations and Behavior  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.9.1 – VirusTotal Relations and Behavior  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.9.1 – VirusTotal Relations and Behavior  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Not a 3.3.2 redo. Two tabs. Classroom cards.
+Two tabs. Card only. No live account.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Relations → additional infra
-2. Behavior → four event classes
-3. Cite the edge
-4. Reject unlabeled nodes and Detection dumps
+Use the **tabs**.
 
-**Mapped Items:**  
-K: 3.9.1 | T: 3.9.1.1
+**Relations** — extra infra.  
+**Behavior** — events.
 
 **Speaker Notes:**  
-SOC K is A/B/B. Hunter/CTI 3c / 4c / 4d.
+0.7 was when to pick VT.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Two tabs
+**Title:** Relations vs Behavior
 
-- Two tabs
-- Three examples
-- Relations lines + Behavior line
-- Knowledge check
+**Relations** — contacted domains / IPs / dropped files.  
+**Behavior** — process, file, registry, network from a sandbox run.
 
 **Speaker Notes:**  
-3.9.2 is next.
+Outline a–b.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Card only
 
-When to pick VT (**3.3.2**)  
-SIEM/Zeek query (**2.3.1**)  
-AnyRun review (**3.9.2**)  
-Applicable TTP product (**3.8.2**)
+Seed = hash of `invoice.vbs` or `update.exe`.  
+Write what the card shows — or **not on card**.
 
-**Key Point:** Cite the edge. Extract the events.
+Do not invent a Run key.
 
 **Speaker Notes:**  
-Fence.
+Tasks 1–2.
 
 ---
 
-### Slide 5 – Relations
-**Title:** Graph Edges, Not a Dump
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Contacted domain / IP = infra.  
-Communicating file = another sample.  
-Community “related” = not enough.
+No “when to pick VT” (**0.7**).  
+No hop sentence (**2.8.1**).  
+No hunt SIEM convert (**3.3.1**).  
+No live account.
 
 **Speaker Notes:**  
-Outline a.
+AnyRun is next.
 
 ---
 
-### Slide 6 – Behavior
-**Title:** Four Classes
-
-Process · File · Registry · Network
-
-**Speaker Notes:**  
-Outline b. Not Detection.
-
----
-
-### Slide 7 – Classroom Seed
-**Title:** `6734f374…` / `update.exe`
-
-Contacted: `nightowl-updates.net`, `login-nightowl.net`, `203.0.113.88`.
-
-**Speaker Notes:**  
-Lesson-only card.
-
----
-
-### Slide 8 – Lines
-**Title:** Two Lines
-
-Relations: `seed | edge | infra | why`  
-Behavior: `process | file | registry | network`
-
-**Speaker Notes:**  
-Tasks.
-
----
-
-### Slide 9 – Example 1
-**Title:** Example 1 – Cited Hops
-
-Two names + the IP. In the product.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2
-**Title:** Example 2 – File ≠ Infra
-
-`88aa9911…` is a sample.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3
-**Title:** Example 3 – Wrong Tab
-
-Detection T-IDs ≠ Behavior.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- 12-node paste  
-- Related file as a domain  
-- Detection as Behavior  
-- Opening Silent Push  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Same edges on a live VT page.  
-Keep: cite the edge; four Behavior classes.
-
-**Speaker Notes:**  
-Do not require a login this hour.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. A–D: Relations lines.
-3. One Behavior line.
-4. No SIEM query.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Relations vs Behavior?
-2. Relations line besides the name?
-3. Why not the communicating file as infra?
-4. Why not Detection T-IDs?
-5. Where is the Zeek/SIEM query?
+1. This hour is “when to pick VT.” True or false?  
+2. What does Relations give you that Behavior does not?  
+3. Seed hash of `update.exe`. One legal Relations result, and one thing you must **not** invent.
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Cite the edge. Four event classes.
-- Next: **3.9.2** AnyRun.
+Relations = infra. Behavior = events. Card only.
+
+**Next:** **2.9.2** AnyRun
 
 **Speaker Notes:**  
-Do not open 3.9.2 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** VT Tabs — Quick Reference
-
-| Edge / row | Take |
-|------------|------|
-| Contacted domain/IP | additional infra |
-| Communicating file | sample, not infra |
-| Community related | reject |
-| Behavior | process / file / reg / net |
-
-**Coming next:** Module 3.9.2 – AnyRun
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open AnyRun unless scheduled.

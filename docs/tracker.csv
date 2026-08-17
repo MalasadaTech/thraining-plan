@@ -73,41 +73,41 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 2.2.1,Estimative Language,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.2.2,Structured Analytic Techniques,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.2.3,Admiralty Code,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
-2.2.4,Cognitive Biases and Mitigation,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.2.4,Cognitive Biases and Mitigation,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.3,Tools,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.3.1; survey is 0.7"
-2.3.1,Internal Threat Intelligence Platform,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.3.1,Internal Threat Intelligence Platform,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.4,File Similarity & Hashing Techniques,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.4.1"
-2.4.1,Hashing and Similarity Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.4.1,Hashing and Similarity Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.5,RDAP / WHOIS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.5.1"
-2.5.1,RDAP and WHOIS Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.5.1,RDAP and WHOIS Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.6,Advanced DNS,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — child is 2.6.1"
-2.6.1,Advanced DNS Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.6.1,Advanced DNS Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.7,Frameworks,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.7.1–2.7.4"
-2.7.1,MITRE ATT&CK for CTI Analysis and Reporting,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.7.2,Diamond Model Application in CTI,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.7.3,Cyber Kill Chain in Intelligence Analysis,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.7.4,MalasadaTech Defender's ThreatMesh Framework (DTF),CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Rewritten to official DTF PTA/P (no scoring); ready for re-review
+2.7.1,MITRE ATT&CK for CTI Analysis and Reporting,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.7.2,Diamond Model Application in CTI,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.7.3,Cyber Kill Chain in Intelligence Analysis,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.7.4,MalasadaTech Defender's ThreatMesh Framework (DTF),CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; official PTA/P; ready for review; no lab
 2.8,Enrichment & Analysis,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.8.1–2.8.4"
-2.8.1,Identifying Additional Adversary Infrastructure from Seed Indicators,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.8.2,Extracting Applicable TTPs from Intelligence Reports,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.8.3,IOC Handling and Enrichment Concepts,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.8.4,Threat Relevance and Organizational Impact,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.8.1,Identifying Additional Adversary Infrastructure from Seed Indicators,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.8.2,Extracting Applicable TTPs from Intelligence Reports,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.8.3,IOC Handling and Enrichment Concepts,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.8.4,Threat Relevance and Organizational Impact,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.9,Platform-Specific Skills,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.9.1–2.9.4"
-2.9.1,VirusTotal (Relations and Behavior Tabs),CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.9.2,AnyRun,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.9.3,Silent Push,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.9.4,URLScan,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.9.1,VirusTotal (Relations and Behavior Tabs),CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.9.2,AnyRun,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.9.3,Silent Push,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.9.4,URLScan,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.10,Common STIX Objects,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.10.1–2.10.2"
-2.10.1,Core STIX Objects,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.10.2,How STIX Objects Are Used in Intelligence Production,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.10.1,Core STIX Objects,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.10.2,How STIX Objects Are Used in Intelligence Production,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.11,Intelligence Production & Dissemination,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.11.1–2.11.3"
-2.11.1,Creating Finished Intelligence Products,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.11.2,Disseminating Intelligence to the Correct Audiences,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.11.3,Handling RFIs,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.11.1,Creating Finished Intelligence Products,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.11.2,Disseminating Intelligence to the Correct Audiences,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+2.11.3,Handling RFIs,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.12,Site-Specific CTI Knowledge and Tasks,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.12.1–2.12.3"
-2.12.1,Local Intelligence Requirements and Priorities,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.12.2,Local Production and Approval Processes,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-2.12.3,Local Dissemination Channels and Customers,CTI / Hunter,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+2.12.1,Local Intelligence Requirements and Priorities,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; obtain-and-follow; ready for review; no lab
+2.12.2,Local Production and Approval Processes,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; obtain-and-follow; ready for review; no lab
+2.12.3,Local Dissemination Channels and Customers,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; obtain-and-follow; ready for review; no lab
 4,Detection Engineer,DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 4.1–4.8"
 4.1,What DE Owns,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short first DE lesson; ready for review; no lab
 4.2,Making a Detection Sound and Meeting Shop Requirements,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Short DE lesson; ready for review; no lab; field list is 4.8

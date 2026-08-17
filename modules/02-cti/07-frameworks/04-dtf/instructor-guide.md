@@ -1,134 +1,91 @@
-# Instructor Guide – Module 3.7.4 – Defender’s ThreatMesh Framework (DTF)
+# Instructor Guide – Module 2.7.4 – Defender’s ThreatMesh Framework (DTF)
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.7.4 A / A / B · 3.7.4.1 1a / 1a / 2b · 3.7.4.2 1a / 1a / 2b · 3.7.4.3 1a / 1a / 2b  
-- Hunter: 3.7.4 A / B / B · 3.7.4.1 1a / 2b / 3c · 3.7.4.2 1a / 2b / 3c · 3.7.4.3 1a / 2b / 3c  
-- CTI: 3.7.4 B / C / C · 3.7.4.1 3c / 4c / 4d · 3.7.4.2 3c / 4c / 4d · 3.7.4.3 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.7.4 B / C / C ; 2.7.4.1 3c / 4c / 4d ; 2.7.4.2 3c / 4c / 4d ; 2.7.4.3 3c / 4c / 4c  
+- Hunter: 2.7.4 A / B / B ; 2.7.4.1 1a / 2b / 3c ; 2.7.4.2 1a / 2b / 3c ; 2.7.4.3 1a / 2b / 3c  
+- SOC: 2.7.4 A / A / B ; 2.7.4.1 1a / 1a / 2b ; 2.7.4.2 1a / 1a / 2b ; 2.7.4.3 1a / 1a / 2b  
+**Estimated Time:** 25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Real DTF: pick **PTA + P**, cite the characteristic, name candidate infra, name the **next lookup**, reject weak neighbors. **No scores.**
+Pick a real PTA/P, cite the characteristic, reject shared cloud, name the next lookup. DTF does not replace ATT&CK / Diamond / Kill Chain.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts record a defender discovery pivot from a known-bad seed.
+- How it hooks to the hour before: 2.7.3 was progression. This hour is infra discovery.
+- How it hooks to the hour after: 2.8.1 is the hop *without* P-IDs.
+- Why we are doing it this way: Short 0.x / 4.x voice. Official DTF IDs only. No score. No invented P-codes.
+- What we are *not* doing this hour: Re-teach RDAP/SOA/PDNS. T-IDs. Lumped 2.7.5. No lab.
+- Extra step: none.
+
+Use `login-prd.net` and `ns1.cdn-test.net`. Do not invent P-codes.
 
 **Key Teaching Points:**
-- Source of truth: [defenders-threatmesh-framework](https://github.com/MalasadaTech/defenders-threatmesh-framework). Do not copy it into this folder.
-- Real IDs only. Invented `P9999` fails. T1486 is not a DTF ID.
-- SOC K is **A / A / B**. Hunter K is **A / B / B**. CTI **4d** on 3.7.4.1–2 = distinctive vs weak pivot (NS+substring vs /24), not a number. 3.7.4.3 is **4c**.
-- Survey four tactics. Apply Domain + IP. SSL/HTTP stay named unless you overlay a cert/page card.
-- 3.8.1 still owns the generic hop sentence. This hour’s product is the **ID line**.
-- Do not copy `modules/00-intro/06-frameworks/` into this folder.
-
-**Common Student Challenges:**
-- Reaching for the old mesh+recency+reach card.
-- /24 or Example Cloud as “theirs.”
-- Vendor APT / T1486 as a pivot.
-- Opening RDAP/Silent Push and calling that the DTF product.
-- Re-teaching 3.7.1–3.7.3 instead of one complement sentence each.
+- Four tactics. Real IDs.
+- /24 is reject. Same NS / same A can take.
+- Next lookup is a name, not a tool class.
 
 **Required Materials:**
-- Student Guide (apply table)
+- Student Guide
 - Slide Deck
-- Optional: live DTF matrix for lookup
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. DTF = discover more infra; communicate/record the pivot.
-2. Real PTA/P; reject the weak neighbor.
-3. Name the next lookup.
-4. Complement, do not replace, the other three.
+Same as the student guide.
 
-**Mapped Items:** K 3.7.4 · T 3.7.4.1 · T 3.7.4.2 · T 3.7.4.3
+**Mapped Items:** K 2.7.4 ; T 2.7.4.1 ; T 2.7.4.2 ; T 2.7.4.3
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not a scorecard; not 3.7.1–3 redo |
-| Purpose, PTA/P, apply set, complement | 16 min | a–e |
-| Walkthrough Examples           | 12 min   | |
-| Hands-On Exercise              | 18 min   | Lines + lookups + three sentences |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they keep the /24 |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Discovery, no score |
+| Key Concepts            | 15 min    | Four PTA; take/reject; complement |
+| Knowledge Check         | 5 min     | Three questions |
+| Summary                 | 2 min     | |
+| **Total**               | **~25 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- CTI 3: 3c — they can name P0101.010. Push **why** that NS is distinctive and **why** P0202 fails (4d).
-- P0101.010 + P0102.002 together is stronger than either alone. That is not a numeric score.
-- No PTR on the classroom card → P0201 is **not on card**, not a fail and not a take.
-- hIGMA / masq-monitor: one “out of scope” sentence if asked.
+### 1. Key Concepts
 
-**Question:**  
-“What would make P0202 legal on *this* card — and do we have it?”
+Write four PTA. Walk same NS / same A as take. Walk /24 as reject. Complement table in one pass.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail D (/24). Fail E (not infra). Fail invented P-codes. Fail T-IDs in the DTF line. Fail a numeric total.
-
-**Summaries:**
-- Ex 1: PTA0001 stack → `login-nightowl.net`.
-- Ex 2: /24 / AS = hosting.
-- Ex 3: no DTF ID for T1486 / APT; no minted P-code.
-
-**DTF lines:**
-
-| Item | PTA | P-ID | Candidate | Notes |
-|------|-----|------|-----------|-------|
-| A | **PTA0001** | **P0101.010** | other names on `cdn-test.net` NS | Distinctive NS |
-| B | **PTA0001** | **P0102.002** | **`login-nightowl.net`** | Substring |
-| C | **PTA0001** | **P0103.003** | **`login-nightowl.net`** / same A | Stack with A–B |
-| D | **Reject** | P0202 | — | Shared /24 |
-| E | **None** | — | — | Not infrastructure |
-
-**Lookups (A–C):** A → RDAP NS (**3.5**). B → PDNS / name search for substring. C → PDNS same A (**3.3.2 / 3.9.3**). Optional stack: P0103.004 → SOA RNAME (**3.6**). Do not run the tools.
-
-**Complement (must hit all three):**
-- ATT&CK: *how* (T-IDs). DTF: *where else* (PTA/P).
-- Diamond: empty Adversary allowed. DTF does not fill it.
-- Kill Chain: order of stages. DTF does not relabel them.
+If they invent P9999: “Not in DTF.”  
+If they score: “No scoring.”  
+If they assign T1059: “2.7.1.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **DTF for?**  
-   **Answer:** Discover additional adversary infrastructure from a known-bad seed; communicate and record the pivot.  
-   **Explanation:** Outline a.
+1. **DTF replaces ATT&CK. True or false?**  
+   **Answer:** False. Discovery vs behavior.  
+   **Explanation:** Outline e / task 3.
 
-2. **DTF line besides the P-ID?**  
-   **Answer:** Seed, PTA, shared characteristic, candidate infra, why not coincidence.  
-   **Explanation:** Tasks 3.7.4.1–2.
+2. **Same NS. ID?**  
+   **Answer:** **PTA0001 / P0101.010** (take if distinctive).  
+   **Explanation:** Task 1.
 
-3. **Why not the /24?**  
-   **Answer:** Shared hosting. P0202 / P0203 are weak alone.  
-   **Explanation:** Example 2.
-
-4. **This hour — do / don’t?**  
-   **Answer:** Name the next lookup (RDAP NS, SOA RNAME, PDNS A). Do **not** invent a score. Do **not** run **3.8.1** as a generic hop without IDs.  
-   **Explanation:** Outline d.
-
-5. **Complement (any one)?**  
-   **Answer:** ATT&CK = behavior IDs; Diamond = gaps; Kill Chain = order. DTF = defender discovery pivots. It does not assign T-IDs, fill Adversary, or replace stages.  
-   **Explanation:** Outline e / 3.7.4.3.
+3. **/24 take or reject? Next lookup if same-A?**  
+   **Answer:** **Reject** P0202. If same-A (P0103.003): next lookup is PDNS / other names on that A (**0.7** / **2.9.3**).  
+   **Explanation:** Tasks 1–2.
 
 ---
 
 ## Additional Instructor Resources
 
-- [DTF matrix](https://github.com/MalasadaTech/defenders-threatmesh-framework/blob/main/matrix.md)
-- Next recommended module: 3.8.1 Identifying additional adversary infrastructure from seed indicators
+- Next: 2.8.1 Infrastructure hop sentence
+- https://github.com/MalasadaTech/defenders-threatmesh-framework

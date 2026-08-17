@@ -1,217 +1,91 @@
-# Module 3.7.4 – DTF  
+# Module 2.7.4 – Defender’s ThreatMesh Framework  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.7.4 – Defender’s ThreatMesh Framework  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.7.4 – DTF  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Real DTF. Discovery pivots. No score.
+Discovery only. Real PTA/P. No score. No invented P-codes.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Discover additional infra from a known-bad seed
-2. Pick a real PTA + P
-3. Cite the characteristic; reject the weak neighbor
-4. Name the next lookup
-5. Complement ATT&CK, Diamond, Kill Chain
+From a **known-bad seed**, pick a pivot.
 
-**Mapped Items:**  
-K: 3.7.4 | T: 3.7.4.1 · 3.7.4.2 · 3.7.4.3
+Cite the characteristic. Name candidate infra.  
+Name the **next lookup**.
 
 **Speaker Notes:**  
-SOC K is A/A/B. CTI 4d is distinctive vs weak.
+Not ATT&CK. Not a hop sentence without IDs.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
-
-- Purpose, PTA/P, apply set
-- Three examples
-- DTF lines + lookups + complement
-- Knowledge check
-
-**Speaker Notes:**  
-3.8.1 is next, not this hour’s product.
-
----
-
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
-
-ATT&CK IDs (**3.7.1**)  
-Diamond vertices (**3.7.2**)  
-Kill Chain stages (**3.7.3**)  
-Generic hop without IDs (**3.8.1**)  
-Mesh + 0–3 score (**retired**)
-
-**Key Point:** Real PTA/P. No score.
-
-**Speaker Notes:**  
-Fence. Link the GitHub repo; do not copy it.
-
----
-
-### Slide 5 – Purpose
-**Title:** Discover · Communicate · Record
-
-Known-bad seed → shared characteristic → candidate infra.
-
-**Speaker Notes:**  
-Outline a. Official DTF README.
-
----
-
-### Slide 6 – Four Tactics
+### Slide 3 – Four tactics
 **Title:** PTA0001–0004
 
-Domain · IP · SSL · Application  
-Depth this hour: Domain + IP.
+**PTA0001** Domain · **PTA0002** IP · **PTA0003** SSL · **PTA0004** Application  
+
+Pivots nest: `P0101.010` Name Server.
 
 **Speaker Notes:**  
-Outline b. SSL/HTTP named only.
+Outline a–b. Official IDs only.
 
 ---
 
-### Slide 7 – Apply Set (Real IDs)
-**Title:** Night Owl Seed
+### Slide 4 – What good looks like
+**Title:** Take vs reject
 
-P0101.010 NS · P0102.002 substring · P0103.003 same A  
-P0202 /24 = reject. T1486 = not a DTF ID.
+**Take** — same NS (`P0101.010`) or same A (`P0103.003`) → `login-prd.net`.  
+**Reject** — whole `203.0.113.0/24` (`P0202`). Shared cloud.
+
+Next lookup = RDAP / SOA / PDNS — **name** it.
 
 **Speaker Notes:**  
-Outline c. IDs from the live matrix.
+Tasks 1–2. Do not re-teach those tools.
 
 ---
 
-### Slide 8 – Lines
-**Title:** DTF Line · Lookup Line
+### Slide 5 – Not this hour
+**Title:** Not this hour / complement
 
-`seed | PTA | P-ID | characteristic | candidate | why`  
-`P-ID | next lookup | what you hope to learn`
+ATT&CK = behavior. Diamond = know/don’t-know. Kill Chain = stages.  
+DTF = discovery. Same shape. Different job.
+
+No invented P-codes. No 2.7.5 lump.
 
 **Speaker Notes:**  
-Tasks 3.7.4.1–2.
+Outline e / task 3.
 
 ---
 
-### Slide 9 – Complements
-**Title:** Four Frameworks, Four Jobs
-
-ATT&CK = behavior  
-Diamond = gaps  
-Kill Chain = order  
-DTF = defender discovery
-
-**Speaker Notes:**  
-Outline e. Same shape as ATT&CK, different job.
-
----
-
-### Slide 10 – Example 1
-**Title:** Example 1 – Distinctive Stack
-
-NS + substring + same A → `login-nightowl.net`
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 11 – Example 2
-**Title:** Example 2 – Weak P0202
-
-Cloud /24 is not theirs.
-
-**Speaker Notes:**  
-Lead. 4d.
-
----
-
-### Slide 12 – Example 3
-**Title:** Example 3 – Not Infra / Invented ID
-
-T1486 and `P9999` fail.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Mesh + recency + reach  
-- /24 as P0202  
-- T-IDs in the DTF line  
-- Opening Silent Push as the product  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. A–E: DTF lines.
-3. Lookup lines for A–C.
-4. One complement sentence each (ATT&CK / Diamond / Kill Chain).
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. DTF for?
-2. DTF line besides the P-ID?
-3. Why not the /24?
-4. This hour — do / don’t?
-5. One complement?
+1. DTF replaces ATT&CK. True or false?  
+2. Same NS on the update domain and `login-prd.net`. PTA / P-ID, or reject?  
+3. Whole `203.0.113.0/24`. Take or reject, and next lookup if you took same-A?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Real PTA/P. Cite. Reject the weak one. Name the lookup.
-- Next: **3.8.1** generic infra hop.
+Real IDs. Cite. Reject shared cloud. Name the next lookup.
+
+**Next:** **2.8.1** Infrastructure hop sentence
 
 **Speaker Notes:**  
-Do not open 3.8.1 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** DTF — Quick Reference
-
-| Evidence | ID |
-|----------|-----|
-| Distinctive NS | P0101.010 |
-| `nightowl` substring | P0102.002 |
-| Same A | P0103.003 |
-| /24 or T1486 | none |
-
-**Coming next:** Module 3.8.1 – Identifying additional adversary infrastructure
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open 2.8 unless that hour is scheduled.

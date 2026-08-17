@@ -1,214 +1,90 @@
-# Module 3.9.4 – URLScan  
+# Module 2.9.4 – URLScan  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.9.4 – URLScan Retrieve and Extract  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.9.4 – URLScan  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-No live malware submit. Classroom retrieve card.
+What the URL served. Card only.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Capabilities of a page scan
-2. Retrieve (or submit) a result
-3. Extract redirect / host / appearance
-4. Reject PDNS-use and theft over-claim
+See **what a URL served**.
 
-**Mapped Items:**  
-K: 3.9.4 | T: 3.9.4.1
+Retrieve a result. Extract title / requests / IPs.  
+Or **not on card**.
 
 **Speaker Notes:**  
-SOC K is A/A/B. Task ends at 4c.
+No live submit required.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – What you extract
+**Title:** Title, requests, redirects
 
-- Capabilities + interpret
-- Three examples
-- Retrieve/submit + extract
-- Knowledge check
+Page title / final URL.  
+Requested hosts / IPs.  
+Redirect chain.
 
 **Speaker Notes:**  
-Closes 3.9. 3.10 is next unit.
+Outline a–b.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Card or miss
 
-When to pick URLScan (**3.3.2**)  
-PDNS history (**3.9.3**)  
-File process tree (**3.9.2**)  
-SIEM/Zeek query (**2.3.1**)  
-Impact / profile (**3.8.4** / **3.11**)
+If a card exists for the update URL — extract title or requested host.  
+If not — write **not on card**.
 
-**Key Point:** This page load only.
+A screenshot is information.
 
 **Speaker Notes:**  
-Fence.
+Task 1–2.
 
 ---
 
-### Slide 5 – Capabilities
-**Title:** This URL, This Load
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Submit / retrieve · redirects · contacted hosts · screenshot
+No 0.7 survey.  
+No live submit.  
+No invented login page.
 
 **Speaker Notes:**  
-Outline a.
+2.9 ends. STIX next.
 
 ---
 
-### Slide 6 – Interpret
-**Title:** What to Take
-
-Redirect + host + appearance.  
-Not history. Not theft success.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Classroom Scan
-**Title:** `invoice-harbor.example/pay`
-
-Redirects to `nightowl-updates.net/invoice`.  
-Contacted `203.0.113.88`. Fake Harbor login.
-
-**Speaker Notes:**  
-Retrieve, do not submit.
-
----
-
-### Slide 8 – Lines
-**Title:** Two Lines
-
-`URL | submit or retrieve | why`  
-`redirect | host | appearance | will not claim`
-
-**Speaker Notes:**  
-Tasks.
-
----
-
-### Slide 9 – Example 1
-**Title:** Example 1 – Retrieve
-
-Redirect + host + appearance. Stop.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2
-**Title:** Example 2 – Not PDNS
-
-Last year’s IPs = Silent Push.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3
-**Title:** Example 3 – Not Theft
-
-Screenshot ≠ password sent.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Live malware submit from class  
-- URLScan as PDNS  
-- Screenshot as Sev1 theft  
-- Writing the 3.11 profile  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Retrieve first. Never require a live bad submit.  
-Keep: this-load facts only.
-
-**Speaker Notes:**  
-Safety.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. A–C: retrieve/submit lines.
-3. Extract + D/E.
-4. No live submit.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. URLScan for?
-2. Retrieve vs submit?
-3. Two extract fields?
-4. Why not historical A?
-5. Why not theft from the screenshot?
+1. This hour is “when to pick URLScan.” True or false?  
+2. Name two fields you extract from a result.  
+3. You have no card for the update URL. What do you write?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- This load. Not PDNS. Not a profile.
-- Next unit: **3.10** STIX.
+What the URL served. Extract or say missing.
+
+**Next:** **2.10.1** Core STIX objects
 
 **Speaker Notes:**  
-Do not open 3.10 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** URLScan — Quick Reference
-
-| Field | Take |
-|-------|------|
-| Redirect | `nightowl-updates.net/invoice` |
-| Contacted | name + `203.0.113.88` |
-| Screenshot | appearance only |
-| Historical A | wrong tool |
-
-**Coming next:** Module 3.10 – Common STIX Objects
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open STIX unless scheduled.

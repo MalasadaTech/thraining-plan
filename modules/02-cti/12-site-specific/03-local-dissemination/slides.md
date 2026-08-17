@@ -1,208 +1,89 @@
-# Module 3.12.3 – Local Customers and Channels  
+# Module 2.12.3 – Local Channels and Customers  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.12.3 – Local Channels and Customers  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.12.3 – Local Channels and Customers  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-No customer list in this packet. Obtain. Do not invent.
+Obtain the local chart. Closes 2.x.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Customers and channels are local
-2. Obtaining the list is orientation
-3. Send only from a shown list
-4. 3.11.2 is not the site list
+Send the product to **this shop’s** customers.
 
-**Mapped Items:**  
-K: 3.12.3 | T: 3.12.3.1
+On **this shop’s** channels.  
+Or write **not yet**.
 
 **Speaker Notes:**  
-SOC A/A/A. CTI 3c/4c/4c.
+2.11.2 was the classroom route.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Obtain vs invent
+**Title:** Chart or not yet
 
-- Local lists
-- Three examples
-- Orient + send lines
-- Knowledge check
-
-**Speaker Notes:**  
-Closes 3.12 and CTI 3.x.
-
----
-
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
-
-Classroom TLP / not-Slack (**3.11.2**)  
-SOC routing matrix (**1.6.3**)  
-TAXII (**3.10.2**)  
-Local approval (**3.12.2**)
-
-**Key Point:** This course does not name your customers.
-
-**Speaker Notes:**  
-Fence.
-
----
-
-### Slide 5 – Unique Lists
-**Title:** Every Section Posts Its Own
-
-Customers. Channels. Extra caveats.
+Obtain the customer / channel chart.  
+Use the names **on it**.  
+Inventing `soc-aware@dya` fails.
 
 **Speaker Notes:**  
 Outline a–b.
 
 ---
 
-### Slide 6 – Obtain
-**Title:** Ask the Lead
+### Slide 4 – What good looks like
+**Title:** A12 on the local chart
 
-Do not invent an agency roster.
+If the chart names IR + an intel ticket path — use those names.  
+No chart: **I do not have the chart yet.**
+
+Still reject SMS.
 
 **Speaker Notes:**  
-Orientation.
+Task 1.
 
 ---
 
-### Slide 7 – Two Lines
-**Title:** Orient · Send
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-`asked | pointed | have / do not have | next`  
-`product | list shown | channel from that list | send / need list / invented (fail)`
+No invented DYA distro.  
+No rewrite of **2.11.2** as org policy.  
+No hunt hour (**3.1.1**) unless scheduled.
 
 **Speaker Notes:**  
-Task.
+CTI ends after the check.
 
 ---
 
-### Slide 8 – 3.11.2 ≠ This Site
-**Title:** Training Card Is Not Policy
-
-TIP + ticket was a classroom example.
-
-**Speaker Notes:**  
-Example 2.
-
----
-
-### Slide 9 – Example 1
-**Title:** Example 1 – Honest
-
-No list. Do not send.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2
-**Title:** Example 2 – Reused 3.11.2
-
-Fail.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3
-**Title:** Example 3 – Invented Recipient
-
-Fail.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- 3.11.2 as the official list  
-- Invented partner agency  
-- Sending after approval with no customer list  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** If You Have a Real List
-
-Send only on that text.  
-Do not add invented extras.
-
-**Speaker Notes:**  
-Optional. Not in the repo.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. One orientation line.
-3. Send A–D.
-4. No invented roster.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Different from 3.11.2?
-2. Orientation line?
-3. Send with no list?
-4. Why not “always copy [agency]”?
-5. Slack if a *real* local list says so?
+1. You should invent a DYA distro so the class has recipients. True or false?  
+2. How does this hour differ from **2.11.2**?  
+3. You have not been shown a chart. What do you write, and what channel do you still **reject**?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Obtain the list. Send only from that list.
-- This closes **3.12** and CTI `3.x`.
+Obtain the local chart. Or write not yet.  
+**2.x CTI ends.** Next: **3.1.1** Purpose of threat hunting.
 
 **Speaker Notes:**  
-End of the CTI track in this curriculum.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Local Send — Quick Reference
-
-| Situation | Take |
-|-----------|------|
-| No list shown | do not send |
-| 3.11.2 classroom card | not the site list |
-| Invented agency | fail |
-| Instructor overlay | that text only |
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open hunt unless that hour is scheduled.

@@ -1,132 +1,83 @@
-# Instructor Guide – Module 3.10.2 – STIX in Intelligence Production
+# Instructor Guide – Module 2.10.2 – STIX in Intelligence Production
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.10.2 A / B / B · 3.10.2.1 1a / 1a / 2b · 3.10.2.2 1a / 1a / 2b · 3.10.2.3 1a / 1a / 2b  
-- Hunter: 3.10.2 B / C / C · 3.10.2.1 2b / 3c / 4c · 3.10.2.2 2b / 3c / 4c · 3.10.2.3 2b / 3c / 4c  
-- CTI: 3.10.2 B / C / C · 3.10.2.1 3c / 4c / 4d · 3.10.2.2 3c / 4c / 4d · 3.10.2.3 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.10.2 B / C / C ; 2.10.2.1 3c / 4c / 4d ; 2.10.2.2 3c / 4c / 4d ; 2.10.2.3 3c / 4c / 4c  
+- Hunter: 2.10.2 B / C / C ; 2.10.2.1 2b / 3c / 4c ; 2.10.2.2 2b / 3c / 4c ; 2.10.2.3 2b / 3c / 4c  
+- SOC: 2.10.2 A / B / B ; 2.10.2.1 1a / 1a / 2b ; 2.10.2.2 1a / 1a / 2b ; 2.10.2.3 1a / 1a / 2b  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Produce: **relationships + scenario**, **create/validate**, **TAXII** publish/consume. Classroom collection only.
+Link objects with real relationship types. Validate a classroom object. Consume TAXII — do not stand up a server.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts connect objects so the story is reusable.
+- How it hooks to the hour before: 2.10.1 named the objects.
+- How it hooks to the hour after: 2.11.1 is the narrative product.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b plus create/validate and TAXII consume. No server.
+- What we are *not* doing this hour: Invented types. Lumped 2.10.3. Live TAXII. No lab.
+- Extra step: none.
 
 **Key Teaching Points:**
-- Do not re-teach the eleven-type tour. Point at the **3.10.1** card.
-- SOC K is **A / B / B**. CTI **4d** on 3.10.2.1–2 (graph completeness + validation judgment). TAXII task is **4c**.
-- Real `relationship_type` only. `sighting_of` is a *sighting* property, not a relationship object — if they write `sighting | sighting_of | indicator` as a *line*, accept it and say it is the sighting object, not a `relationship`.
-- Do not stand up TAXII. `harbor-cti` is lesson-only.
-- Do not write 3.11 prose or 2.4.3 hunt leads.
-
-**Common Student Challenges:**
-- Invented `connects-to`.
-- `attributed-to` a vendor APT.
-- Missing `relationship_type`.
-- Email PDF = TAXII.
-- Turning the scenario sentence into a full product.
+- Real relationship types only.
+- TAXII = pull a collection.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Bundle for share/automation.
-2. Real links + one scenario sentence.
-3. Validate required fields.
-4. TAXII = publish/consume a collection.
+Same as the student guide.
 
-**Mapped Items:** K 3.10.2 · T 3.10.2.1 · T 3.10.2.2 · T 3.10.2.3
+**Mapped Items:** K 2.10.2 ; T 2.10.2.1 ; T 2.10.2.2 ; T 2.10.2.3
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not 3.10.1 redo / 2.4.3 / 3.11 |
-| Structure, links, validate, TAXII | 16 min | a–b + three T |
-| Walkthrough Examples           | 12 min   | |
-| Hands-On Exercise              | 18 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | Closes 3.10 |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they keep the APT actor |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Links, not a server |
+| Key Concepts            | 12 min    | A12 relationships; TAXII consume |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- 4d: they should *omit* `attributed-to`, not invent a target. That is a better graph than a fake who.
-- CoA `mitigates` the attack-pattern *or* the indicator — either is fine if they name the type.
-- TAXII collection ≠ TIP search box.
+### 1. Key Concepts
 
-**Question:**  
-“What object would have to exist before `attributed-to` is a *valid* link on this card?”
-
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**Relationships:**
-
-| Item | Line |
-|------|------|
-| A | indicator `nightowl-updates.net` **indicates** malware `update.exe` |
-| B | malware **uses** attack-pattern T1059.001 |
-| C | sighting WS-JLEE **sighting_of** indicator (sighting object) |
-
-**Scenario:** one sentence walking A–C (+ optional mitigates/targets). No profile.
-
-**Validate:**
-
-| Item | Result |
-|------|--------|
-| D | **Valid** — pattern + pattern_type |
-| E | **Invalid** — missing relationship_type |
-| F | **Invalid** — unearned threat-actor |
-
-**TAXII:**
-
-| Item | Result |
-|------|--------|
-| G | **Publish** bundle → `harbor-cti` |
-| H | **Fail** — PDF email is not TAXII |
+Write real relationship types. Walk sighting-of / indicates. Fail invented types and “I built TAXII.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Bundle for?**  
-   **Answer:** Package objects + relationships so they can be shared and automated.  
-   **Explanation:** Outline a.
+1. **Stand up TAXII this hour. True or false?**  
+   **Answer:** False. Consume a collection.  
+   **Explanation:** Stay-in / task 3.
 
-2. **One real relationship_type?**  
-   **Answer:** Any of `indicates`, `uses`, `mitigates`, `targets` with the Night Owl ends.  
-   **Explanation:** Outline b / 3.10.2.1.
+2. **Two relationship types?**  
+   **Answer:** Any two: indicates, based-on, targets, uses, related-to, sighting-of.  
+   **Explanation:** Outline b.
 
-3. **Invalid?**  
-   **Answer:** Missing `relationship_type`, invented type, empty pattern, unearned threat-actor.  
-   **Explanation:** 3.10.2.2.
-
-4. **TAXII vs bundle?**  
-   **Answer:** Bundle = the payload. TAXII = publish/consume that payload on a collection.  
-   **Explanation:** 3.10.2.3.
-
-5. **Prose product?**  
-   **Answer:** **3.11**.  
-   **Explanation:** Fence.
+3. **Hash to WS-JLEE?**  
+   **Answer:** Sighting of the Indicator on Identity WS-JLEE (or indicates + related-to). Real type only.  
+   **Explanation:** Task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- STIX 2.1 relationships / TAXII 2.1 collections (lookup)
-- Next recommended module: 3.11.1 Creating finished intelligence products
+- Next: 2.11.1 Finished intelligence products

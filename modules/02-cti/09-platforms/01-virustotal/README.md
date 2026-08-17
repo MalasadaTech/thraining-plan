@@ -1,29 +1,27 @@
-# VirusTotal (Relations and Behavior Tabs)
+# VirusTotal (Relations and Behavior)
 
-**Path:** `modules/03-cti/09-platforms/01-virustotal`  
+**Path:** `modules/02-cti/09-platforms/01-virustotal`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.9.1 | K | VirusTotal (Relations and Behavior tabs) | 3.9.1 a–b |
-| 3.9.1.1 | T | Use VirusTotal Relations and Behavior to pivot and extract events | 3.9.1.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.9.1 | K | VirusTotal Relations and Behavior | 2.9.1 a–b | A / B / B | B / C / C | B / C / C |
+| 2.9.1.1 | T | Use Relations and Behavior to pivot and extract events | 2.9.1.1 tasks 1–2 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 
-The lesson ID is **3.9.1**. Tool *choice* is **3.3.2**. Hunt SIEM/Zeek conversion is **2.3.1**. Conceptual infra hop is **3.8.1**. File similarity is **3.4**. Applicable TTPs are **3.8.2**. AnyRun / Silent Push / URLScan depth are **3.9.2–3.9.4**. Classroom VT cards are lesson-only.
+The teaching-unit ID is **2.9.1**. Survey is **0.7**. Hop sentence is **2.8.1**. Classroom card only. No lab.
 
 ## Concepts taught
 
-- VirusTotal Relations tab for infrastructure pivoting
-- VirusTotal Behavior tab for host and network events
-- use the Relations tab to identify additional adversary infrastructure
-- extract file, network, registry, and process events from the Behavior tab
+- VirusTotal Relations tab
+- VirusTotal Behavior tab
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

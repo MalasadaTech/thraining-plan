@@ -1,31 +1,29 @@
 # IOC Handling and Enrichment Concepts
 
-**Path:** `modules/03-cti/08-enrichment/03-ioc-handling`  
+**Path:** `modules/02-cti/08-enrichment/03-ioc-handling`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.8.3 | K | IOC handling and enrichment concepts | 3.8.3 a–d |
-| 3.8.3.1 | T | Enrich and pivot on IOCs using internal and external tools | 3.8.3.1 task 1 |
-| 3.8.3.2 | T | Link analysis and campaign tracking | 3.8.3.2 task 1 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.8.3 | K | IOC handling and enrichment | 2.8.3 a–d | A / B / B | B / C / C | B / C / C |
+| 2.8.3.1 | T | Enrich and pivot on IOCs | 2.8.3.1 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.8.3.2 | T | Link analysis and campaign tracking | 2.8.3.2 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The lesson ID is **3.8.3**. Generic hop sentence is **3.8.1**. Applicable TTPs are **3.8.2**. Tool *choice* is **3.3.2**. RDAP / SOA / VT / Silent Push *reading* is **3.5 / 3.6 / 3.9**. DTF ID line is **3.7.4**. Actor profile is **3.11**. Organizational impact is **3.8.4**.
+The teaching-unit ID is **2.8.3**. TTPs are **2.8.2**. Tool depth is **2.9**. No lab.
 
 ## Concepts taught
 
-- what an IOC is versus a TTP
-- IOC handling rules (keep, expire, reject)
-- record an enrichment without re-teaching the tool
-- link analysis and campaign tracking
-- reject a vendor group name with no shared objects
+- IOC vs TTP
+- keep / expire / enrich
+- same activity set vs separate
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

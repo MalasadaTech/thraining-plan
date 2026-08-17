@@ -1,214 +1,86 @@
-# Module 3.9.3 – Silent Push  
+# Module 2.9.3 – Silent Push  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.9.3 – Silent Push Enrich and Pivot  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.9.3 – Silent Push  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-SP fields, not SOA lecture. Classroom cards.
+PDNS / infra. Card only.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Capabilities that matter
-2. Enrich the seed in Silent Push
-3. Pivot on a cited field
-4. Reject /24 and sandbox use
+**Enrich** a seed. **Pivot** to names the card shows.
 
-**Mapped Items:**  
-K: 3.9.3 | T: 3.9.3.1
+Not the SOA class. Not “when to pick it.”
 
 **Speaker Notes:**  
-SOC K is A/A/B. CTI task 4d.
+0.7 was when.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Two jobs
+**Title:** Enrich and pivot
 
-- Capabilities + enrich/pivot
-- Three examples
-- Enrich line + four pivot lines
-- Knowledge check
+**Enrich** — names on this A; A records this name has had.  
+**Pivot** — other names with the same NS, if the card shows them.
 
 **Speaker Notes:**  
-3.9.4 is next.
+Outline a–b.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Take vs reject
 
-When to pick SP (**3.3.2**)  
-SOA timers (**3.6**)  
-Hop without the SP UI (**3.8.1**)  
-VT Relations (**3.9.1**)  
-URLScan this-load (**3.9.4**)
-
-**Key Point:** Cited Silent Push field.
+**Take** — `203.0.113.88` → update domain / `login-prd.net` **on the card**.  
+**Reject** — whole `/24`.
 
 **Speaker Notes:**  
-Fence.
+Task 1–2.
 
 ---
 
-### Slide 5 – Capabilities
-**Title:** PDNS · Siblings · NS · Score
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Score is a hint, not a verdict.
+No 0.7 survey.  
+No SOA class (**2.6**).  
+No live account.
 
 **Speaker Notes:**  
-Outline a.
+URLScan next.
 
 ---
 
-### Slide 6 – Enrich then Pivot
-**Title:** Fill the Record, Then One Field
-
-Enrich = A / first-seen / NS.  
-Pivot = follow that field.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Classroom Record
-**Title:** `nightowl-updates.net`
-
-A `203.0.113.88` since 2026-08-01.  
-Sibling `login-nightowl.net`.
-
-**Speaker Notes:**  
-Lesson-only.
-
----
-
-### Slide 8 – Lines
-**Title:** Two Lines
-
-Enrich: `indicator | fields | tells you | must not claim`  
-Pivot: `seed | SP field | infra | why`
-
-**Speaker Notes:**  
-Tasks.
-
----
-
-### Slide 9 – Example 1
-**Title:** Example 1 – Same A
-
-`login-nightowl.net` is the hop.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2
-**Title:** Example 2 – /24
-
-Cloud tenants ≠ theirs.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3
-**Title:** Example 3 – Not a Sandbox
-
-No process tree here.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Score as attribution  
-- CIDR spray  
-- Re-teaching SOA  
-- Opening AnyRun  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Same fields on a live SP page.  
-Keep: cite the field; reject /24.
-
-**Speaker Notes:**  
-Lesson-only cards.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. One enrich line.
-3. A–D: pivot lines.
-4. No SOA card. No VT.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Two capabilities + not?
-2. Enrich line?
-3. Why not /24?
-4. What does sibling first-seen add?
-5. Where is the process tree?
+1. This hour is “when to pick Silent Push.” True or false?  
+2. What two jobs do you do in this UI?  
+3. Enrich `203.0.113.88`. One legal pivot, and one thing you must reject.
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Cited field. Not the cloud block.
-- Next: **3.9.4** URLScan.
+PDNS context. Pivot only what the card shows. /24 is not theirs.
+
+**Next:** **2.9.4** URLScan
 
 **Speaker Notes:**  
-Do not open 3.9.4 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Silent Push — Quick Reference
-
-| Field | Take |
-|-------|------|
-| Same A | `login-nightowl.net` |
-| First-seen on sibling | ages the name |
-| /24 | reject |
-| Process tree | wrong tool |
-
-**Coming next:** Module 3.9.4 – URLScan
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open URLScan unless scheduled.

@@ -1,213 +1,90 @@
-# Module 3.8.3 – IOC Handling  
+# Module 2.8.3 – IOC Handling  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.8.3 – Handle the IOCs  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.8.3 – IOC Handling  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Not the hop sentence. File the objects.
+Keep, expire, enrich, link. Not a TTP.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. IOC ≠ TTP
-2. Keep / expire / reject
-3. Record the next enrichment
-4. Link objects, not names
+Handle the **observable**.
 
-**Mapped Items:**  
-K: 3.8.3 | T: 3.8.3.1 | T: 3.8.3.2
+Keep or expire. Name an enrich.  
+Same set only if objects are shared.
 
 **Speaker Notes:**  
-CTI 4d on both tasks.
+TTPs were last hour.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Four actions
+**Title:** Keep, expire, enrich, link
 
-- Handle + enrich + link
-- Three examples
-- Exercise
-- Knowledge check
+**Keep** — cited, current, specific.  
+**Expire** — stale, uncited, /24 noise.  
+**Enrich** — tool + field + what you hope to learn.  
+**Link** — shared objects, not a vendor name.
 
 **Speaker Notes:**  
-3.8.4 is next.
+Outline a–d.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Enrich and link
 
-Hop sentence (**3.8.1**)  
-TTP apply (**3.8.2**)  
-Tool labs (**3.5 / 3.6 / 3.9**)  
-Impact (**3.8.4**)  
-Actor profile (**3.11**)
-
-**Key Point:** Handle the tray.
+**Enrich** — hash → TIP, then VT. Not Relations.  
+**Link** — update domain + `login-prd.net` (same NS).  
+**Apart** — random cloud IP. **Not a link:** “PRD APT.”
 
 **Speaker Notes:**  
-Fence.
+Tasks 1–2.
 
 ---
 
-### Slide 5 – IOC vs TTP
-**Title:** Observable vs Behavior
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Domain, hash, Run key  
-Not “they use PowerShell”
+No TTP extract (**2.8.2**).  
+No VT Relations class (**2.9.1**).  
+No actor profile (**2.11**).
 
 **Speaker Notes:**  
-Outline a.
+Impact is next.
 
 ---
 
-### Slide 6 – Keep / Expire / Reject
-**Title:** Handling Rules
-
-Keep = cited, current, distinctive  
-Expire = stale  
-Reject = uncited / shared / not an IOC
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Enrich Line
-**Title:** Name the Next Lookup
-
-IOC | known tool | field | hope to learn
-
-**Speaker Notes:**  
-Do not run it. Do not write the hop.
-
----
-
-### Slide 8 – Link Line
-**Title:** Same Set?
-
-Shared cite on this card.  
-Not a vendor name.
-
-**Speaker Notes:**  
-Outline d. 4d lives here.
-
----
-
-### Slide 9 – Classroom Tray
-**Title:** Tray
-
-Domain + hash + Run + A = cited  
-2019 IP / /24 / evil-c2 / “APT” = not keep
-
-**Speaker Notes:**  
-Leave up.
-
----
-
-### Slide 10 – Example 1
-**Title:** Expected — One Set
-
-Keep four. Enrich the domain. Link by host + A.
-
-**Key Point:** Product shape.
-
-**Speaker Notes:**  
-Students write first.
-
----
-
-### Slide 11 – Example 2
-**Title:** Lead — Keep the Noise
-
-2019 IP, /24, uncited name.
-
-**Key Point:** Fail.
-
-**Speaker Notes:**  
-Expire vs reject.
-
----
-
-### Slide 12 – Example 3
-**Title:** Lead — APT as Glue
-
-A label is not a link.
-
-**Key Point:** Fail.
-
-**Speaker Notes:**  
-Park 3.11.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Rewrite 3.8.1  
-- Open VT  
-- Keep the /24  
-- Glue with “APT”  
-
-**Speaker Notes:**  
-Park all four.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Exercise
-
-Handle A–E. Enrich A/B. Link the set. Reject E as glue.
-
-**Speaker Notes:**  
-C expire. D/E reject.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. IOC vs TTP?  
-2. Expire vs reject?  
-3. Enrich line?  
-4. Same set?  
-5. Why not the APT name?
+1. An IOC is the same thing as a TTP. True or false?  
+2. Name keep vs expire for a whole /24.  
+3. Update domain + sibling same NS — same set or apart? What vendor name is **not** a link?
 
 **Speaker Notes:**  
-Answers in the instructor guide.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
+### Slide 7 – Summary
 **Title:** Summary
 
-Handle. Record the lookup. Link objects.
+Keep cited IOCs. Expire shared noise. Link on objects, not labels.
 
-**Coming next:** Module 3.8.4 – Relevance and impact
-
-**Speaker Notes:**  
-So what *here*.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Three Lines
-
-`IOC | type | keep/expire/reject | why`  
-`IOC | tool | field | hope to learn`  
-`objects | same set? | cite | not a name`
+**Next:** **2.8.4** Relevance and impact
 
 **Speaker Notes:**  
-Leave up during the exercise.
+Do not open impact unless scheduled.

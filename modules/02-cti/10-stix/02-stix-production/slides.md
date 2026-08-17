@@ -1,219 +1,91 @@
-# Module 3.10.2 – STIX in Production  
+# Module 2.10.2 – STIX in Production  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.10.2 – STIX in Intelligence Production  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.10.2 – STIX in Production  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Links, validate, TAXII. Not a 3.10.1 redo.
+Links + valid object + consume. No TAXII server.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Structure a shareable bundle
-2. Link with real relationship types
-3. Create and validate objects
-4. Publish or consume via TAXII
+**Connect** objects.
 
-**Mapped Items:**  
-K: 3.10.2 | T: 3.10.2.1 · 3.10.2.2 · 3.10.2.3
+Explain the **A12** scenario those links tell.  
+Pull a classroom collection. Do not build a server.
 
 **Speaker Notes:**  
-CTI 4d on graph and validate. TAXII is 4c.
+Object names were 2.10.1.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Relationships and validate
+**Title:** Real types only
 
-- Structure, links, validate, TAXII
-- Three examples
-- Lines + scenario sentence
-- Knowledge check
+`indicates` · `based-on` · `targets` · `uses` · `related-to` · `sighting-of`
+
+Validate: type, id, spec_version `2.1`, created.
 
 **Speaker Notes:**  
-Closes 3.10. 3.11 is next.
+Outline a–b. Tasks 1–2.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** A12 links + TAXII
 
-Label types only (**3.10.1**)  
-Hunt leads (**2.4.3**)  
-Narrative product (**3.11**)  
-TIP keyword search (**3.3.1**)
+Indicator (hash) **indicates** Attack Pattern.  
+Sighting **sighting-of** that Indicator on Identity **WS-JLEE**.
 
-**Key Point:** Real types. Valid objects. TAXII ≠ PDF.
+TAXII: **pull collection X**. Not “I stood up TAXII.”
 
 **Speaker Notes:**  
-Fence.
+Task 3.
 
 ---
 
-### Slide 5 – Bundle + TAXII
-**Title:** Payload and Channel
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Bundle = objects + links.  
-TAXII = publish/consume a collection.
+No invented types.  
+No TAXII server.  
+No narrative product (**2.11**).  
+No lumped 2.10.3.
 
 **Speaker Notes:**  
-Outline a. Classroom `harbor-cti`.
+Finished products next.
 
 ---
 
-### Slide 6 – Real Relationship Types
-**Title:** indicates · uses · targets · mitigates
-
-No `connects-to`.  
-No `attributed-to` without a who.
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Validate
-**Title:** Required Fields
-
-Pattern + type.  
-Source + target + relationship_type.  
-Unearned threat-actor = invalid.
-
-**Speaker Notes:**  
-3.10.2.2.
-
----
-
-### Slide 8 – Lines
-**Title:** Three Lines + One Sentence
-
-`source | relationship_type | target`  
-`object | valid or invalid | why`  
-`publish or consume | collection | what moves`  
-Plus a one-line scenario.
-
-**Speaker Notes:**  
-Tasks.
-
----
-
-### Slide 9 – Example 1
-**Title:** Example 1 – Night Owl Graph
-
-indicates / uses / sighting_of / mitigates.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2
-**Title:** Example 2 – Invalid
-
-Missing type. Vendor APT actor.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3
-**Title:** Example 3 – Not TAXII
-
-Emailing the PDF is 3.11 dissemination.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Invented relationship types  
-- attributed-to a PDF name  
-- PDF email as TAXII  
-- Scenario sentence becomes a profile  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Same types on a live TAXII collection.  
-Keep: validate before publish. Do not stand up a server this hour.
-
-**Speaker Notes:**  
-`harbor-cti` is lesson-only.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. A–C links + scenario.
-3. D–F validate.
-4. G–H TAXII.
-5. No hunt card. No 3.11 product.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Bundle for?
-2. One real relationship_type?
-3. What makes an object invalid?
-4. TAXII vs the bundle?
-5. Where is the prose product?
+1. You should stand up a TAXII server in this hour. True or false?  
+2. Name two real relationship types.  
+3. Write one relationship that ties the `invoice.vbs` hash to **WS-JLEE**.
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Link. Validate. Publish the bundle.
-- Next unit: **3.11** production and dissemination.
+Real links. Valid objects. TAXII is consume.
+
+**Next:** **2.11.1** Finished intelligence products
 
 **Speaker Notes:**  
-Do not open 3.11 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Production — Quick Reference
-
-| Move | Take |
-|------|------|
-| indicates | domain → malware |
-| uses | malware → T1059.001 |
-| Validate | pattern + relationship_type |
-| TAXII | publish/consume `harbor-cti` |
-| PDF email | not TAXII |
-
-**Coming next:** Module 3.11.1 – Creating finished intelligence products
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open 2.11 unless scheduled.

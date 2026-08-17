@@ -1,114 +1,83 @@
-# Instructor Guide – Module 3.12.3 – Local Dissemination Channels and Customers
+# Instructor Guide – Module 2.12.3 – Local Dissemination Channels and Customers
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.12.3 A / A / A · 3.12.3.1 1a / 1a / 1a  
-- Hunter: 3.12.3 A / A / B · 3.12.3.1 1a / 1a / 2b  
-- CTI: 3.12.3 B / C / C · 3.12.3.1 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.12.3 B / C / C ; 2.12.3.1 3c / 4c / 4c  
+- Hunter: 2.12.3 A / A / B ; 2.12.3.1 1a / 1a / 2b  
+- SOC: 2.12.3 A / A / A ; 2.12.3.1 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Obtain the **section’s** customer/channel list and send only from that list. This course **does not** publish the list. Fail invented rosters and “3.11.2 is our list.”
+Obtain the local customer/channel chart. Use it or write not yet. Do not invent a distro. Closes 2.x.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts send the product to *this shop’s* people on *this shop’s* path.
+- How it hooks to the hour before: 2.12.2 was produce/approve/archive.
+- How it hooks to the hour after: Hunt **3.1.1**. CTI ends.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Obtain-and-follow.
+- What we are *not* doing this hour: Invent DYA recipients. Rewrite 2.11.2 as org policy. No lab.
+- Extra step: none. Overlay a real chart if you have one; say it is overlay.
 
 **Key Teaching Points:**
-- SOC **A / A / A** and **1a / 1a / 1a**. Hunter **A / A / B**. CTI **3c / 4c / 4c**.
-- Overlay a real site list if you have one (item D). Students send *only* on that text.
-- 3.11.2 remains the floor for “not public / not personal mail” unless a *shown* local list says otherwise. Do not write that exception into this packet.
-- This closes **3.12** and the CTI `3.x` sequence.
-
-**Common Student Challenges:**
-- Reusing the 3.11.2 classroom channels as site policy.
-- Inventing a partner agency as a standing customer.
-- Sending because the note is approved (3.12.2) without a customer list.
+- Chart or not yet.
+- SMS still fails.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional: real site customer/channel card (not in this repo)
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Lists are local.
-2. Orient: have / do not have the list.
-3. Send only from a shown list.
+Same as the student guide.
 
-**Mapped Items:** K 3.12.3 · T 3.12.3.1
+**Mapped Items:** K 2.12.3 ; T 2.12.3.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | Not 3.11.2 redo |
-| Local customers/channels       | 14 min   | a–b |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | Closes 3.12 |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they reuse 3.11.2 as policy |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Local chart |
+| Key Concepts            | 12 min    | Obtain or not yet |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | Close 2.x |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- 3.11.2 = how markings and “not Slack” work. 3.12.3 = *who here* and *which of our pipes*.
-- Approval (3.12.2) and customers (this hour) are both required. Missing either → no send.
-- If a student names a real agency from memory, still fail unless *you* showed it on a local card this hour.
+### 1. Key Concepts
 
-**Question:**  
-“3.11.2 allowed TIP + ticket. Why is that not enough to send today?”
-
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**Orientation:** do not have the local list in this packet.
-
-**Send:**
-
-| Item | Result |
-|------|--------|
-| A | **Need the list** — do not send |
-| B | **Fail** — 3.11.2 is not the site list |
-| C | **Fail** — invented customer |
-| D | Send only if you overlaid a real list; else same as A |
+Write obtain vs invent. Fail soc-aware@dya. Close the section: next is hunt 3.1.1.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Different from 3.11.2?**  
-   **Answer:** 3.11.2 is generic marking/method. This hour is *this section’s* customer/channel list, which this course does not publish.  
-   **Explanation:** Outline a–b.
+1. **Invent a DYA distro. True or false?**  
+   **Answer:** False.  
+   **Explanation:** Stay-in.
 
-2. **Orientation line?**  
-   **Answer:** Who you asked, where they pointed, have/do not have the list, next step.  
-   **Explanation:** Task.
+2. **This hour vs 2.11.2?**  
+   **Answer:** 2.11.2 is the classroom route. This hour is *this shop’s* chart (or not yet).  
+   **Explanation:** Outline / stay-in.
 
-3. **Send with no list?**  
-   **Answer:** No.  
-   **Explanation:** Example 1.
-
-4. **Why not “always copy [agency]”?**  
-   **Answer:** Invented customer. Not shown.  
-   **Explanation:** Example 3.
-
-5. **Slack on a real local list?**  
-   **Answer:** Follow the *shown* local list. This packet does not grant that.  
-   **Explanation:** Floor vs overlay.
+3. **No chart. Write / still reject?**  
+   **Answer:** **Do not have the chart yet.** Still reject SMS / private chat.  
+   **Explanation:** Task 1 / 2.11.2.
 
 ---
 
 ## Additional Instructor Resources
 
-- This closes the CTI `3.x` track in this curriculum
+- Next: 3.1.1 Purpose of threat hunting

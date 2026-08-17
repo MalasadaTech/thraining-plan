@@ -1,127 +1,86 @@
-# Instructor Guide – Module 3.2.4 – Cognitive Biases and Mitigation
+# Instructor Guide – Module 2.2.4 – Cognitive Biases and Mitigation
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.2.4 A / A / A · 3.2.4.1 1a / 1a / 1a  
-- Hunter: 3.2.4 A / B / B · 3.2.4.1 1a / 2b / 3c  
-- CTI: 3.2.4 B / C / C · 3.2.4.1 3c / 4c / 4d  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.2.4 B / C / C ; 2.2.4.1 3c / 4c / 4d  
+- Hunter: 2.2.4 A / B / B ; 2.2.4.1 1a / 2b / 3c  
+- SOC: 2.2.4 A / A / A ; 2.2.4.1 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach four common biases, their impact, and force **identify + mitigate**. Close **3.2**. Do not re-teach the ACH matrix or Admiralty.
+Name the bias in a judgment and apply ACH or a Key Assumptions Check. Not a pep talk.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts name the distortion so they know which method to run.
+- How it hooks to the hour before: 2.2.3 was the rating. This hour is why people skip the rating.
+- How it hooks to the hour after: 2.3.1 is the TIP. Tradecraft cluster ends.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c. Three syllabus biases. Mitigation = 2.2.2 methods.
+- What we are *not* doing this hour: Invent a new SAT. Diagnose the person. No lab.
+- Extra step: none.
 
 **Key Teaching Points:**
-- Classroom four is a stand-in. Overlay a site list if you have one — sign-off is still these four plus a *step*.
-- “Be aware” is a fail.
-- ACH/KAC are mitigations you *invoke*, not this hour’s fill-the-grid drill.
-- SOC 3-level is **1a / 1a / 1a**. Hunter 3-level is **1a**. CTI is **3c / 4d**. Do not collapse.
-
-**Common Student Challenges:**
-- Reciting ten extra bias names.
-- Naming a bias with no textual tell.
-- Re-running a full ACH instead of stating the mitigation step.
-- Opening 3.2.3 on every example.
+- Confirmation, anchoring, availability.
+- Mitigation is a method, not “try harder.”
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional site bias card
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Four biases + impact.
-2. Identify in a judgment.
-3. Apply a concrete mitigation.
+Same as the student guide.
 
-**Mapped Items:** K 3.2.4 · T 3.2.4.1
+**Mapped Items:** K 2.2.4 ; T 2.2.4.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 3.2.2-as-lesson / 3.2.3 |
-| Four biases, impact, mitigations | 16 min | a–c |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | Identify + apply |
-| Knowledge Check & Discussion   | 8 min    | Close 3.2 |
-| Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they stay on China/Admiralty |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Name it to mitigate it |
+| Key Concepts            | 12 min    | Three biases; PDF example |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- CTI 3: 3c — they should *point at a sentence* and *name a next action*.
-- If they list “mirror imaging,” map it to **availability** or **anchoring** unless you overlay it.
+### 1. Key Concepts
 
-**Question:**  
-“If the product already ran ACH and still omitted E4–E5, is that SAT failure or confirmation?” (Both. This hour you name **confirmation** and the mitigation is *put E4–E5 on the matrix*.)
+Write the three biases. Walk the vendor-PDF nation-state sentence as anchoring / confirmation. Mitigation = KAC.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail nameless “bias.” Fail “be aware.” Accept one clearly argued neighbor bias.
-
-**Summaries:**
-- Ex 1: confirmation → ACH / add omitted rows.
-- Ex 2: anchoring → rewrite without the first label.
-- Ex 3: availability + closure → base rate + KAC.
-
-**Identify:**
-
-| Item | Bias | Tell |
-|------|------|------|
-| A | **Confirmation** | E4–E5 in the file, unused |
-| B | **Anchoring** | APT-12 lead never revisited |
-| C | **Premature closure** (availability if they argue vivid Night Owl) | Isolate + almost certainly on one guest SNI |
-| D | **Anchoring** or **confirmation** | “Always” OT visibility — untested must-be; also a **1.8.1** fact. Prefer **premature closure** / untested assumption if they say KAC |
-
-**Apply:**
-
-| Item | Mitigation | Next action (accept paraphrase) |
-|------|------------|--------------------------------|
-| A | ACH / hunt **I** | Add E4–E5 to the matrix before rewrite |
-| C | KAC + drop *almost certainly* | Test “one SNI ⇒ Night Owl”; do not isolate on that alone |
+If they add ten more bias names as required: “These three.”  
+If they say “be objective”: “Name the SAT.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Four biases / one impact?**  
-   **Answer:** Confirmation, anchoring, availability, premature closure. Impact: omitted evidence, stuck first label, vivid-case carryover, *is*/isolate too early.  
-   **Explanation:** Outline a–b.
+1. **“Be more objective” is a mitigation. True or false?**  
+   **Answer:** False. A method is a mitigation.  
+   **Explanation:** Outline c.
 
-2. **Why not “be aware”?**  
-   **Answer:** It is not a step. Mitigation names what you will *do*.  
-   **Explanation:** Outline c / task 2.
+2. **Two biases?**  
+   **Answer:** Any two of confirmation, anchoring, availability.  
+   **Explanation:** Outline a.
 
-3. **Confirmation mitigation?**  
-   **Answer:** Small ACH; require a hunt for evidence that would **I** the favorite.  
-   **Explanation:** Table / Example 1.
-
-4. **Vs 3.2.2?**  
-   **Answer:** 3.2.2 is how to run ACH/KAC. This hour is *spot the tilt* and *invoke* a technique (or another step).  
-   **Explanation:** Fence.
-
-5. **What cluster closes?**  
-   **Answer:** **3.2** Analytic tradecraft. Next is **3.3** Tools.  
-   **Explanation:** Sequence.
+3. **Vendor PDF → high nation-state. Bias and mitigation?**  
+   **Answer:** Anchoring and/or confirmation. Key Assumptions Check (or ACH if they list a competing cluster).  
+   **Explanation:** Task 1–2.
 
 ---
 
 ## Additional Instructor Resources
 
-- Site bias / tradecraft card
-- Cluster **3.2** is complete. Next: **3.3.1** Internal TIP
+- Next: 2.3.1 Internal threat intelligence platform

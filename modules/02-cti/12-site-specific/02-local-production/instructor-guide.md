@@ -1,114 +1,83 @@
-# Instructor Guide – Module 3.12.2 – Local Production and Approval Processes
+# Instructor Guide – Module 2.12.2 – Local Production and Approval Processes
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.12.2 A / A / A · 3.12.2.1 1a / 1a / 1a · 3.12.2.2 1a / 1a / 1a  
-- Hunter: 3.12.2 A / A / B · 3.12.2.1 1a / 1a / 2b · 3.12.2.2 1a / 1a / 2b  
-- CTI: 3.12.2 B / C / C · 3.12.2.1 3c / 4c / 4c · 3.12.2.2 3c / 4c / 4c  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.12.2 B / C / C ; 2.12.2.1 3c / 4c / 4c ; 2.12.2.2 3c / 4c / 4c  
+- Hunter: 2.12.2 A / A / B ; 2.12.2.1 1a / 1a / 2b ; 2.12.2.2 1a / 1a / 2b  
+- SOC: 2.12.2 A / A / A ; 2.12.2.1 1a / 1a / 1a ; 2.12.2.2 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Obtain and follow the **local** produce / approve / collect-request / archive paths. This course **does not** publish those paths. Fail invented chains.
+Obtain the produce/approve/archive path. “Not yet” is a pass. Invented ticket names fail.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts follow the shop path; they do not invent one.
+- How it hooks to the hour before: 2.12.1 was the priority list.
+- How it hooks to the hour after: 2.12.3 is who gets the product locally.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Obtain-and-follow.
+- What we are *not* doing this hour: Invent Jira. Invent a change board. Rewrite 2.11.1. No lab.
+- Extra step: none. Overlay a real card if you have one; say it is overlay.
 
 **Key Teaching Points:**
-- SOC **A / A / A** and **1a / 1a / 1a**. Hunter **A / A / B**. CTI **3c / 4c / 4c**.
-- You may overlay a real site SOP. Students follow *that* text only.
-- 3.11.1 quality ≠ approval. 3.1.8 plan ≠ the local request ticket.
-- “Harbor Chief” / invented ticket names fail even if they sound official.
-
-**Common Student Challenges:**
-- Inventing a plausible org chart so the exercise has steps.
-- Publishing because the draft was good.
-- Treating personal Drive as the archive.
+- Two paths: produce/approve, and archive.
+- Not yet is legal.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional: real site SOP (not in this repo)
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Four paths exist and are local.
-2. Orient: have / do not have the steps.
-3. Follow only what was shown.
+Same as the student guide.
 
-**Mapped Items:** K 3.12.2 · T 3.12.2.1 · T 3.12.2.2
+**Mapped Items:** K 2.12.2 ; T 2.12.2.1 ; T 2.12.2.2
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | No SOP in this packet |
-| Four paths                     | 14 min   | a–b |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they invent a Chief |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Follow, do not invent |
+| Key Concepts            | 12 min    | Two paths; not yet |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- Collection *request* = find the form. Collection *plan* = **3.1.8**.
-- Archive is 3.12.2.2 — official copy, not a private stash.
-- If you overlay a SOP, A/B become “follow those steps.” C/D still fail if they add invented extras.
+### 1. Key Concepts
 
-**Question:**  
-“The Night Owl note passed quality. Why are you still not sending it?”
-
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**Orientation (all four):** do not have the steps in this packet; ask the lead.
-
-**Follow:**
-
-| Item | Result |
-|------|--------|
-| A | **Need the path** — do not send |
-| B | **Need the collect-request path** — do not invent a ticket |
-| C | **Fail** — personal folder is not the archive |
-| D | **Fail** — invented Harbor Chief |
+Write obtain vs invent. Fail INT-REQ-01 as policy.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Four paths?**  
-   **Answer:** Produce, approve, request collection, archive.  
-   **Explanation:** Outline + 3.12.2.1–2.
+1. **Invent a DYA ticket name. True or false?**  
+   **Answer:** False.  
+   **Explanation:** Stay-in.
 
-2. **Why not send a good draft?**  
-   **Answer:** 3.11.1 is the draft. Send requires the *local* approval path, which this packet does not provide.  
-   **Explanation:** Example 3.
+2. **Two paths?**  
+   **Answer:** Produce/approve (including collection request) and archive/document.  
+   **Explanation:** Outline a–b.
 
-3. **3.1.8 vs request?**  
-   **Answer:** 3.1.8 plans sources. This hour finds how *this site* accepts a collection request.  
-   **Explanation:** Fence.
-
-4. **Official copy?**  
-   **Answer:** Wherever the site said. If not shown: you do not have an archive path yet — not your personal folder.  
-   **Explanation:** 3.12.2.2.
-
-5. **Why “Harbor Chief” fails?**  
-   **Answer:** Invented process. Same as inventing a PIR.  
-   **Explanation:** Example 2.
+3. **No card. What do you write?**  
+   **Answer:** **Do not have the path yet.**  
+   **Explanation:** Tasks 1–2.
 
 ---
 
 ## Additional Instructor Resources
 
-- Next recommended module: 3.12.3 Local customers and channels
+- Next: 2.12.3 Local channels and customers

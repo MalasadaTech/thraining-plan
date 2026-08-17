@@ -1,219 +1,89 @@
-# Module 3.7.1 – MITRE ATT&CK for CTI  
+# Module 2.7.1 – MITRE ATT&CK for CTI  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.7.1 – ATT&CK for CTI Analysis and Reporting  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.7.1 – ATT&CK for CTI Analysis  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Not a 0.6.1 redo. Report → IDs → product line.
+Product-level map. Floor was 0.6.1. Not hunt planning.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. ATT&CK in CTI analysis and reporting
-2. Extract TTPs onto real IDs
-3. Cite evidence; reject the neighbor
-4. List only supported IDs in the product
+Put ATT&CK on a **report or activity set**.
 
-**Mapped Items:**  
-K: 3.7.1 | T: 3.7.1.1
+Tactic. Technique or sub-technique. Evidence.  
+Reject the neighbor.
 
 **Speaker Notes:**  
-SOC K is A/B/B. Hunter/CTI task 3c / 4c.
+Not a SOC category. Not DTF.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Same map, CTI product
+**Title:** Why, how, cite
 
-- Advanced extract + report use
-- Three examples
-- Five map lines + product list
-- Knowledge check
+**Tactic** — why.  
+**Technique** — how.  
+**Cite** — one field.  
+**Reject** — the neighbor ID.
 
 **Speaker Notes:**  
-3.7.2 is next.
+Outline a. Same rule as 0.6.1.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Two A12 rows
 
-Alert mapping floor (**0.6.1**)  
-Hunt coverage / Navigator (**2.5**)  
-Applies-on-Harbor? (**3.8.2**)  
-Diamond / Kill Chain / DTF (**3.7.2–3.7.4**)
-
-**Key Point:** Evidence-bound IDs in the product.
+**Process** — Execution / **T1059.001**. Cite `-enc` + `wscript`. Not C2.  
+**GET /update.exe** — transfer/C2 only if that is the product. Not T1059.
 
 **Speaker Notes:**  
-Fence. Do not copy shared/frameworks.
+Do not write T1059 as a 1.4.4 category.
 
 ---
 
-### Slide 5 – Advanced Use
-**Title:** Extract · Map · Cite · Reject · Report
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Behavior, not a group name.  
-Real T-ID. Evidence span. Neighbor ID.  
-Product: only those IDs.
+No hunt coverage (**3.5**).  
+No DTF P-IDs (**2.7.4**).  
+No SOC category (**1.4.4**).
 
 **Speaker Notes:**  
-Outline a.
+Diamond is next.
 
 ---
 
-### Slide 6 – Classroom IDs
-**Title:** Use These (Real)
-
-T1059.001 PowerShell — not .003  
-T1547.001 Run key — not startup folder  
-T1071.001 Web / T1105 ingress — not T1071.004 unless DNS  
-No ID for “APT”
-
-**Speaker Notes:**  
-Do not invent cells.
-
----
-
-### Slide 7 – Map Line
-**Title:** Six Fields
-
-`evidence | tactic | T-ID | name | rejected | why`
-
-**Speaker Notes:**  
-Task.
-
----
-
-### Slide 8 – Product Line
-**Title:** Not the Whole Matrix
-
-`T1059.001, T1547.001, T1071.001, T1105`  
-No 14-tactic dump.
-
-**Speaker Notes:**  
-Reporting use.
-
----
-
-### Slide 9 – Example 1: Excerpt
-**Title:** Example 1 – Night Owl Story
-
-PS-enc, Run key, HTTP GET.  
-Four supported IDs. T1486 not seen.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2: APT
-**Title:** Example 2 – No Behavior
-
-“Financially motivated APT” ≠ TA0040.  
-No T-ID.
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3: Vendor Dump
-**Title:** Example 3 – Uncited T1486
-
-Vendor listed it. Harbor excerpt did not.  
-Stays out of *this* product.
-
-**Speaker Notes:**  
-Lead. 3.8.2 is later.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Invented T-codes  
-- Motive as a tactic  
-- Vendor matrix paste  
-- Stopping at T1059 when .001 is in the log  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Use ATT&CK for lookup.  
-Keep: cite + reject + supported list only.
-
-**Speaker Notes:**  
-Do not invent org policy.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. A–E: map lines.
-3. Product ID list for A–C.
-4. No Navigator. No invented IDs.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Advanced vs 0.6.1?
-2. Map line besides the ID?
-3. Why not vendor T1486 here?
-4. Why not “APT” → tactic?
-5. Where is Harbor applicability?
+1. This hour is hunt coverage planning. True or false?  
+2. What three things must a CTI ATT&CK line have?  
+3. `wscript` → `-enc` PowerShell. Tactic, ID, and why not C2?
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Cite. Reject the neighbor. List only supported IDs.
-- Next: **3.7.2** Diamond in CTI.
+Map the product. Cite. Reject the neighbor.
+
+**Next:** **2.7.2** Diamond Model for CTI
 
 **Speaker Notes:**  
-Do not open 3.7.2 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** CTI ATT&CK — Quick Reference
-
-| Evidence | ID |
-|----------|-----|
-| `powershell -enc` | T1059.001 |
-| HKCU Run | T1547.001 |
-| HTTP GET payload | T1071.001 / T1105 |
-| Name / motive only | none |
-
-**Coming next:** Module 3.7.2 – Diamond Model in CTI
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open Diamond unless that hour is scheduled.

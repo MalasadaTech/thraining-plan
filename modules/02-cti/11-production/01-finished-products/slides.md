@@ -1,211 +1,88 @@
-# Module 3.11.1 – Finished Intelligence Products  
+# Module 2.11.1 – Finished Intelligence Products  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.11.1 – Creating Finished Intelligence Products  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.11.1 – Finished Products  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Prose product. Honest who. Not 3.10 STIX.
+Judged answer. Not a paste. Not a country.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Classroom product types
-2. Structure and quality standards
-3. Draft and evaluate
-4. Honest actor profile
+Ship the **finished** product.
 
-**Mapped Items:**  
-K: 3.11.1 | T: 3.11.1.1 · 3.11.1.2
+Question, judgment, so-what, caveat.  
+Profile the **cluster**.
 
 **Speaker Notes:**  
-SOC 3.11.1.2 is 1a/1a/1a. CTI 4d.
+STIX links were last hour.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Structure and standards
+**Title:** What must be in it
 
-- Types, structure, quality, profile
-- Three examples
-- Draft + eval + profile lines
-- Knowledge check
+Question. What you know. Judgment. So-what. Confidence.  
+Answers the requirement. Sourced. No invented country.
 
 **Speaker Notes:**  
-3.11.2 is next.
+Outline a–c.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Draft + profile
 
-Audience rewrite only (**3.1.6**)  
-STIX/TAXII (**3.10**)  
-Channel / TLP (**3.11.2**)  
-SOC ticket type (**1.6.1**)
-
-**Key Point:** Finished prose. Empty who is honest.
+**Draft** — likely the update domain is the **A12** payload host; IR has **WS-JLEE**; medium.  
+**Fail** — a hash dump.  
+**Profile** — encoded PS + domain + NS. Not “nation-state PRD APT.”
 
 **Speaker Notes:**  
-Fence.
+Tasks 1–2.
 
 ---
 
-### Slide 5 – Types
-**Title:** Note · Assessment · Profile · Defensive Note
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Pick the job, not the vendor PDF.
+No channel list (**2.11.2**).  
+No local approval (**2.12**).  
+No STIX authoring (**2.10**).
 
 **Speaker Notes:**  
-Outline a.
+Dissemination next.
 
 ---
 
-### Slide 6 – Structure
-**Title:** Six Fields
-
-BLUF · facts · assessment · evidence · gaps · action
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Quality
-**Title:** Five Boxes
-
-Fact vs assess · supported IDs · honest who · estimative · action
-
-**Speaker Notes:**  
-Outline c.
-
----
-
-### Slide 8 – Actor Profile
-**Title:** Durable Picture, Not a Who-Essay
-
-TTPs + infra + victimology + gaps.  
-Who may be empty.
-
-**Speaker Notes:**  
-3.11.1.2.
-
----
-
-### Slide 9 – Example 1
-**Title:** Example 1 – Activity Note
-
-Harbor events. Unattributed. Block/hunt.
-
-**Speaker Notes:**  
-Students first.
-
----
-
-### Slide 10 – Example 2
-**Title:** Example 2 – Failed Draft
-
-Nation-state + T1486 + “will.”
-
-**Speaker Notes:**  
-Lead.
-
----
-
-### Slide 11 – Example 3
-**Title:** Example 3 – Honest Profile
-
-Four IDs. Two names. Empty who.
-
-**Speaker Notes:**  
-3.11.1.2.
-
----
-
-### Slide 12 – Common Mistakes
-**Title:** Common Mistakes
-
-- Vendor PDF as the product  
-- Unearned nation-state  
-- Assessment with no gaps  
-- Writing STIX or a SOC ticket  
-
-**Speaker Notes:**  
-Then the exercise.
-
----
-
-### Slide 13 – Site Overlay
-**Title:** Classroom vs Site
-
-Swap local product *names*.  
-Keep: structure + quality + honest who.
-
-**Speaker Notes:**  
-Lesson-only types.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Hands-On Exercise
-
-**Time:** 16–18 minutes
-
-1. Summarize Ex 1–3.
-2. One draft line.
-3. Eval Ex 2.
-4. Profile: TTPs, infra, who, gaps.
-
-**Speaker Notes:**  
-Instructor Guide key.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Two types + a not?
-2. Draft line besides BLUF?
-3. One Ex 2 fail?
-4. Who section on this profile?
-5. Where are channel and marking?
+1. A TIP paste is a finished product. True or false?  
+2. Name three required elements of a finished product.  
+3. Write a three-line **A12** profile that does **not** claim a country.
 
 **Speaker Notes:**  
-Interactive.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
-**Title:** Key Takeaways
+### Slide 7 – Summary
+**Title:** Summary
 
-- Type. Structure. Quality. Honest profile.
-- Next: **3.11.2** dissemination.
+Question, judgment, so-what, caveat. Cluster, not country.
+
+**Next:** **2.11.2** Dissemination
 
 **Speaker Notes:**  
-Do not open 3.11.2 unless scheduled.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Finished Product — Quick Reference
-
-| Piece | Night Owl |
-|-------|-----------|
-| Type | Activity note or assessment |
-| Who | empty / unattributed |
-| TTPs | four supported IDs |
-| Fail | APT + T1486 + “will” |
-
-**Coming next:** Module 3.11.2 – Dissemination
-
-**Footer:** SOC / Hunter / CTI Training Program
+Do not open channels unless scheduled.

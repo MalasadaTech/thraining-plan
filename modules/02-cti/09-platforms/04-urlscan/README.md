@@ -1,29 +1,27 @@
 # URLScan
 
-**Path:** `modules/03-cti/09-platforms/04-urlscan`  
+**Path:** `modules/02-cti/09-platforms/04-urlscan`  
 **Primary role:** CTI Analyst  
-**Secondary:** Threat Hunter  
-**Time:** 60–75 minutes
+**Secondary:** Threat Hunter, SOC Analyst  
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.9.4 | K | URLScan | 3.9.4 a–b |
-| 3.9.4.1 | T | Submit or retrieve a URLScan result and extract actionable intelligence | 3.9.4.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 2.9.4 | K | URLScan | 2.9.4 a–b | A / A / B | A / B / B | B / C / C |
+| 2.9.4.1 | T | Submit or retrieve a URLScan result and extract intel | 2.9.4.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
-The lesson ID is **3.9.4**. Tool *choice* is **3.3.2**. Silent Push PDNS history is **3.9.3**. AnyRun detonation is **3.9.2**. Hunt SIEM/Zeek conversion is **2.3.1**. Classroom URLScan cards are lesson-only — do not submit live malware URLs.
+The teaching-unit ID is **2.9.4**. Survey is **0.7**. Classroom card only. No live submit lab.
 
 ## Concepts taught
 
-- URLScan core capabilities and use cases
-- interpreting URLScan results for intelligence value
-- submit or retrieve a URLScan result
-- extract actionable intelligence from a URLScan report
+- URLScan purpose
+- extracting intel from a scan result
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

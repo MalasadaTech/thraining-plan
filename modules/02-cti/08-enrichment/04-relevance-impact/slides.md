@@ -1,207 +1,90 @@
-# Module 3.8.4 – Relevance and Impact  
+# Module 2.8.4 – Relevance and Impact  
 ## Slide Deck Content
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.8.4 – So What, Here?  
-**Subtitle:** CTI Analyst Training (Hunter secondary)  
+**Title:** Module 2.8.4 – Relevance and Impact  
+**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Not the TTP list. Not a PIR.
+So what here. Not a PIR. Not a country.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Relevance to this estate
-2. Impact if true
-3. Reject skipped path, PIR, attribution
+Does this finding **apply here**?
 
-**Mapped Items:**  
-K: 3.8.4 | T: 3.8.4.1
+If it is true, **what would change**?
 
 **Speaker Notes:**  
-CTI 3c / 4c / 4d. Hunter tops at 4c.
+IOC handling is done.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Two sentences
+**Title:** Relevance vs impact
 
-- Relevance + impact
-- Three examples
-- Exercise
-- Knowledge check
+**Relevance** — mission / assets / platform.  
+**Impact** — what changes (host, mail, clients).
+
+Not a PIR. Not attribution. Not a TTP list.
 
 **Speaker Notes:**  
-3.8 ends here.
+Outline a–c.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** A12
 
-TTP apply (**3.8.2**)  
-IOC file (**3.8.3**)  
-Write / obtain PIRs (**3.1.4** / **3.12.1**)  
-Attribution (**3.1.7**)
+**Relevant** — Windows workstation; we already saw it.  
+**Impact** — IR has the host; payload path is live.
 
-**Key Point:** So what *here*.
+**Not relevant** — OT wipe. No impact here.
 
 **Speaker Notes:**  
-Fence.
+Task 1. Law firm.
 
 ---
 
-### Slide 5 – Relevance
-**Title:** Does It Apply to This Estate?
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Windows users — yes for Night Owl  
-OT-only / ESXi — no on this card
+No PIR (**2.1.4** / **2.12.1**).  
+No TTP extract (**2.8.2**).  
+No nation-state (**2.1.7**).
 
 **Speaker Notes:**  
-Outline a. Harbor 1.8.1 stand-in.
+VT Relations next.
 
 ---
 
-### Slide 6 – Impact
-**Title:** If True, What Changes?
-
-User-estate persistence + HTTP C2  
-Not automatically payroll
-
-**Speaker Notes:**  
-Outline b.
-
----
-
-### Slide 7 – Impact Line
-**Title:** Impact Line
-
-finding | relevant? (fact) | impact if true | not because
-
-**Speaker Notes:**  
-4d is the last clause.
-
----
-
-### Slide 8 – Crown Jewels Are Bait
-**Title:** `pay-db-01` Needs a Path
-
-On the Harbor card.  
-Not reached by WS-JLEE on *this* evidence.
-
-**Speaker Notes:**  
-Example 2.
-
----
-
-### Slide 9 – Finding on the Desk
-**Title:** Night Owl on WS-JLEE
-
-Encoded PowerShell. Run `Updater`. HTTP GET.
-
-**Speaker Notes:**  
-Already handled in 3.8.3.
-
----
-
-### Slide 10 – Example 1
-**Title:** Expected — User Estate
-
-Relevant. Impact = that estate. Jewel not shown.
-
-**Key Point:** Product shape.
-
-**Speaker Notes:**  
-Students write first.
-
----
-
-### Slide 11 – Example 2
-**Title:** Lead — Payroll Is Down
-
-Skipped path. Fail.
-
-**Key Point:** Jewel ≠ impact.
-
-**Speaker Notes:**  
-Ask what cite would fix it.
-
----
-
-### Slide 12 – Example 3
-**Title:** Lead — PIR or Nation-State
-
-Wrong product. Fail.
-
-**Key Point:** 3.12.1 / 3.1.7.
-
-**Speaker Notes:**  
-Park both.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Resubmit the TTP list  
-- Sink pay-db-01  
-- Invent PIR-1  
-- Attribution letter  
-
-**Speaker Notes:**  
-Park all four.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Exercise
-
-Impact lines A–E. Product is A.
-
-**Speaker Notes:**  
-B not relevant. C–E fail.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Relevance vs 3.8.2?  
-2. Impact line?  
-3. Why not pay-db-01?  
-4. Why not a PIR?  
-5. Where is the real list?
+1. Relevance is the same as writing a PIR. True or false?  
+2. What two sentences do you write?  
+3. **A12** on WS-JLEE — one relevance line and one impact line.
 
 **Speaker Notes:**  
-Answers in the instructor guide.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
+### Slide 7 – Summary
 **Title:** Summary
 
-Relevant to this estate. Impact on the evidence. Not shown stays not shown.
+Applies here? What would change? Stop there.
 
-**Coming next:** Outside 3.8 (usually **3.9**)
-
-**Speaker Notes:**  
-Cluster complete.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Impact Line
-
-`finding | relevant? (Harbor fact) | impact if true | not because`
+**Next:** **2.9.1** VirusTotal Relations and Behavior
 
 **Speaker Notes:**  
-Leave up during the exercise.
+Do not open VT unless scheduled.
