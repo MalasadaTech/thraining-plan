@@ -1,205 +1,90 @@
-# Module 2.7.1 – Hunt Control and Lead Management  
+# Module 3.7.1 – Hunt Control and Lead Management
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary), SOC Analyst and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 2.7.1 – Hunt Control and Leads  
-**Subtitle:** Threat Hunter Training (SOC / CTI secondary)  
+**Title:** Module 3.7.1 – Hunt Control and Lead Management  
+**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-No hunt queue in this packet. Obtain. Do not invent.
+Obtain the path. Do not invent a ticket.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Initiate / control / leads vary by site
-2. Obtaining the path is early orientation
-3. Follow only what you were shown
+How a hunt **starts**. Who **controls** it. Where **leads** go.
 
-**Mapped Items:**  
-K: 2.7.1 | T: 2.7.1.1
+**Varies by site.**
 
 **Speaker Notes:**  
-Hunter 3c/4c/4c. Keep it simple.
+Same obtain-and-follow as 2.12.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Three pieces
+**Title:** Initiate · control · leads
 
-- What varies
-- Three examples
-- Orientation + follow lines
-- Knowledge check
+**Initiate** — how a hunt is opened.  
+**Control** — who widens, pauses, stops.  
+**Leads** — where new leftovers are parked.
 
 **Speaker Notes:**  
-2.7.2 is next.
+Outline a–b.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** Obtain
 
-Hunt line (**2.6.3**)  
-Hunt card (**2.2.2**)  
-SOC tickets (**1.6**)  
-Where you write it down (**2.7.2**)
+Ask the lead where the path lives.  
+If shown: **follow it**.  
+If not: **I do not have the local process yet.**
 
-**Key Point:** This course does not own your site’s queue.
+Do **not** invent Hunt-17.
 
 **Speaker Notes:**  
-Fence.
+Task 1. Not yet is a pass.
 
 ---
 
-### Slide 5 – They Vary
-**Title:** Every Site Builds Its Own
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-Start, own, park leads — different shop to shop.
+No classroom card rewrite (**3.2.2**).  
+No documentation form (**3.7.2**).  
+No invented DYA board.
 
 **Speaker Notes:**  
-Outline a–b. That is the whole point.
+Documentation next.
 
 ---
 
-### Slide 6 – Obtain, Do Not Invent
-**Title:** Ask the Lead
-
-Badge, tools, **hunt path**. Same week.
-
-**Speaker Notes:**  
-Orientation.
-
----
-
-### Slide 7 – Orientation Line
-**Title:** Orientation Line
-
-path | who I asked | have / do not have | next step
-
-**Speaker Notes:**  
-Write it on the board.
-
----
-
-### Slide 8 – Follow Line
-**Title:** Follow Line
-
-what I want to start | path shown | follow / still need / invented (fail)
-
-**Speaker Notes:**  
-No path → do not start.
-
----
-
-### Slide 9 – Work on the Desk
-**Title:** The Run-Key Hunt Is Not the Process
-
-**2.6.3** named the technique.  
-This hour asks *how this site opens it*.
-
-**Speaker Notes:**  
-Do not rewrite 2.6.3.
-
----
-
-### Slide 10 – Example 1
-**Title:** Expected — Honest Orientation
-
-Asked. Nothing in the packet. Wait.
-
-**Key Point:** That is a pass.
-
-**Speaker Notes:**  
-Students write first.
-
----
-
-### Slide 11 – Example 2
-**Title:** Lead — Invented Jira HUNT-17
-
-Not in this course. Fail.
-
-**Key Point:** Plausible ≠ local.
-
-**Speaker Notes:**  
-Same fail as invented PIRs in 3.12.
-
----
-
-### Slide 12 – Example 3
-**Title:** Lead — Started Anyway
-
-Interesting is not authorization.
-
-**Key Point:** Fail.
-
-**Speaker Notes:**  
-Control is local.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Fake ticket ID  
-- Personal spreadsheet as policy  
-- Last course’s board  
-
-**Speaker Notes:**  
-Park all three.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Exercise
-
-Orientation + follow A–C.
-
-**Speaker Notes:**  
-Fail C. A = still need the path.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Why no process here?  
-2. First task?  
-3. Orientation line?  
-4. Open with no path?  
-5. Where is documentation?
+1. You should invent a DYA hunt ticket so the exercise has a number. True or false?  
+2. What three path pieces does this hour obtain?  
+3. What do you write if no one has shown you the process?
 
 **Speaker Notes:**  
-Answers in the instructor guide.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
+### Slide 7 – Summary
 **Title:** Summary
 
-Local. Obtain. Do not invent. Do not start without the path.
+Obtain. Follow. Or write “not yet.”
 
-**Coming next:** Module 2.7.2 – Hunt documentation
-
-**Speaker Notes:**  
-Same idea, different path.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Lines
-
-`path | who | have / not | next`  
-`work | shown | follow / need / fail`
+**Next:** **3.7.2** Hunt documentation standards
 
 **Speaker Notes:**  
-Leave up during the exercise.
+Do not invent a template unless scheduled — and 3.7.2 will tell you not to.

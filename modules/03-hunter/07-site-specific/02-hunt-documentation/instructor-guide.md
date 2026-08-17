@@ -1,113 +1,85 @@
-# Instructor Guide – Module 2.7.2 – Hunt Documentation Standards
+# Instructor Guide – Module 3.7.2 – Hunt Documentation Standards
 
-**Target Audience:** Threat Hunter (primary), SOC Analyst and CTI Analyst (secondary)  
+**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Proficiency Focus:**  
-- Hunter: 2.7.2 B / C / C · 2.7.2.1 3c / 4c / 4c  
-- SOC: 2.7.2 A / A / B · 2.7.2.1 1a / 1a / 2b  
-- CTI: 2.7.2 A / A / B · 2.7.2.1 1a / 1a / 2b  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- Hunter: 3.7.2 B / C / C ; 3.7.2.1 3c / 4c / 4c  
+- SOC: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b  
+- CTI: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-A new hunter must **obtain** what this site requires in a hunt write-up and **where** it lives. This course **does not** publish that standard. Fail invented templates.
+Obtain the local form and store. “Not yet” is a pass. Do not invent a template.
+
+**Context (plain language):**
+
+- What this hour is for: Hunters write the hunt where the shop says, on the form the shop uses.
+- How it hooks to the hour before: 3.7.1 obtained initiate / control / leads.
+- How it hooks to the hour after: 3.7.3 is what leaves the hunt and who gets it.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Obtain-and-follow. Classroom card is not policy.
+- What we are *not* doing this hour: Publish a DYA template. Promote Slack as the record. No lab.
+- Extra step: none. If you overlay a real form, say it is overlay, not DYA policy.
 
 **Key Teaching Points:**
-- Same simple point as **2.7.1**: these things **vary from site to site**.
-- Hunter **B / C / C** · **3c / 4c / 4c**. SOC/CTI **A / A / B** · **1a / 1a / 2b**.
-- **2.2.2** is a classroom card. It is not this section’s official form (item C fails).
-- Overlay a real site form only if you have one. Students may use *that* text only.
-
-**Common Student Challenges:**
-- Promoting the 2.2.2 card to policy.
-- Slack / personal Drive as “documented.”
-- Inventing a Confluence path so the exercise looks complete.
+- 3.2.2 is training, not the site form.
+- Scratch notes are not the record.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Optional: *your* real site hunt-form slip
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Elements and store are local.
-2. Orientation record.
-3. File only against a standard you were shown.
+Same as the student guide.
 
-**Mapped Items:** K 2.7.2 · T 2.7.2.1
+**Mapped Items:** K 3.7.2 ; T 3.7.2.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 8 min    | No template in this packet |
-| Elements + store               | 14 min   | a–b |
-| Walkthrough Examples           | 14 min   | |
-| Hands-On Exercise              | 18 min   | |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they invent Confluence |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Form and store |
+| Key Concepts            | 12 min    | Obtain vs invent |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- Hold up the 2.2.2 card. “Useful practice. Not Harbor policy.”
-- If you overlay a real form, that is item B only.
-- Documentation ≠ hand-off (**2.7.3**).
+### 1. Key Concepts
 
-**Question:**  
-“Where is the official copy if I have not shown you a store?”
+Write elements vs store. Walk “not yet.” Label any overlay.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**Orientation:** `elements + store | lead | do not have the standard in this packet | ask before filing`
-
-**Document:**
-
-| Item | Result |
-|------|--------|
-| A | **Still need the standard** |
-| B | Use only if you overlaid a real form; else same as A |
-| C | **Fail** — classroom card is not the site form |
+If they paste the 3.2.2 card as policy: “Training card. Not the site form.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Why no template here?**  
-   **Answer:** Every site lists its own required elements and store.  
+1. **3.2.2 is the official form. True or false?**  
+   **Answer:** False.  
+   **Explanation:** Stay-in.
+
+2. **Two things to obtain?**  
+   **Answer:** Required elements. Where hunts are documented.  
    **Explanation:** Outline a–b.
 
-2. **2.2.2 vs this hour?**  
-   **Answer:** 2.2.2 is a training card. This hour is the *site* form and store.  
-   **Explanation:** Fence.
-
-3. **Orientation line?**  
-   **Answer:** Elements/store, who you asked, have / do not have, next step.  
-   **Explanation:** Product.
-
-4. **Slack as the record?**  
-   **Answer:** No, unless the lead *showed* you that store.  
-   **Explanation:** Example 3.
-
-5. **Who receives the output?**  
-   **Answer:** **2.7.3**.  
-   **Explanation:** Fence.
+3. **No standard shown?**  
+   **Answer:** Write **do not have the local standard yet**. Do not declare a personal note the record.  
+   **Explanation:** Task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- Next recommended module: 2.7.3 Hunt outputs and hand-off
+- Next: 3.7.3 Hunt outputs and hand-off

@@ -43,7 +43,7 @@ You do not memorize every cell. You must know what the columns and cells are.
 
 **What good looks like (0.6.1.2):** given “`wscript` launched encoded PowerShell,” you write Execution / `T1059.001` PowerShell and cite the encoded command line. You do not write Command and Control because “it might beacon later.”
 
-Hunt planning with ATT&CK is later (**2.5**). Diamond is next (**0.6.2**).
+Hunt planning with ATT&CK is later (**3.5**). Diamond is next (**0.6.2**).
 
 ---
 
@@ -67,4 +67,4 @@ ATT&CK labels behavior. Tactic is why. Technique is how. Map the row in front of
 
 - 0.6.2 – Diamond Model
 - 0.6.3 – Cyber Kill Chain
-- 2.5 – Hunt planning with ATT&CK (later)
+- 3.5 – Hunt planning with ATT&CK (later)

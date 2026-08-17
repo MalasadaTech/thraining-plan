@@ -1,31 +1,29 @@
 # STIX as Hunt Input
 
-**Path:** `modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input`  
+**Path:** `modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input`  
 **Primary role:** Threat Hunter  
 **Secondary:** SOC Analyst, CTI Analyst  
-**Time:** 60–75 minutes
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 2.4.3 | K | STIX as hunt input | 2.4.3 |
-| 2.4.3.1 | T | Identify hunt-relevant objects in a report or bundle | 2.4.3.1 task 1 |
-| 2.4.3.2 | T | Turn those objects into hunt leads | 2.4.3.1 task 2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 3.4.3 | K | STIX as hunt input | 3.4.3 a–b | A / A / B | B / C / C | A / B / B |
+| 3.4.3.1 | T | Identify hunt-relevant objects | 3.4.3.1 task 1 | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 2b / 3c |
+| 3.4.3.2 | T | Turn those objects into hunt leads | 3.4.3.1 task 2 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
 
-The lesson ID is **2.4.3**. The two STIX-input tasks are **2.4.3.1**–**2.4.3.2**. Assessing hunt vs awareness vs hand-off is **2.4.1**. Extracting leads from prose CTI is **2.4.2**. Mapping hunts to ATT&CK is **2.5**. Authoring STIX is **3.10**.
+The teaching-unit ID is **3.4.3**. Authoring STIX is **2.10**. Spec is STIX 2.1. No lab.
 
 ## Concepts taught
 
 - STIX as hunt input
 - hunt-relevant STIX objects
-- STIX objects a hunter uses
-- how a STIX bundle seeds a hunt
-- turning STIX objects into hunt leads
+- bundle seeds a hunt
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

@@ -1,210 +1,88 @@
-# Module 2.6.3 – Hunt for a Specific Technique  
+# Module 3.6.3 – Hunt for a Specific Technique
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary), SOC Analyst and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 2.6.3 – Hunt One Named Technique  
-**Subtitle:** Threat Hunter Training (SOC / CTI secondary)  
+**Title:** Module 3.6.3 – Hunt One Named Technique  
+**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-Recognition is done. This hour hunts one method.
+One method. Not the tactic.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Named technique → scoped hunt
-2. Cite a unique pattern
-3. Reject tactic sweeps and wrong class
-
-**Mapped Items:**  
-T: 2.6.3
+**Named** technique. **Unique** pattern. **Bound** scope.
 
 **Speaker Notes:**  
-Hunter 3c / 4c / 4d. SOC/CTI 1a / 1a / 2b.
+Card format is 3.2.2. Ticket is 3.7.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Hunt line
+**Title:** What you write
 
-- Hunt line
-- Three examples
-- Exercise
-- Knowledge check
+Named technique.  
+Persist or privesc.  
+Unique pattern.  
+Scope.  
+Why not the whole tactic.
 
 **Speaker Notes:**  
-2.7 is next.
+Outline task 3.
 
 ---
 
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
+### Slide 4 – What good looks like
+**Title:** A12
 
-Recognize the row (**2.6.1** / **2.6.2**)  
-All four hunt types (**2.2.1**)  
-Remap ATT&CK (**2.5**)  
-Local ticket (**2.7**)
-
-**Key Point:** One named method.
+**Hunt** — Run **`Updater`**, not any Run key.  
+**Fail** — “hunt persistence.”  
+**Fail** — call a SYSTEM task privesc with no elevation.
 
 **Speaker Notes:**  
-Fence.
+Story bible package.
 
 ---
 
-### Slide 5 – Named, Not a Class
-**Title:** Named Technique
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-HKCU Run `Updater`  
-User → SYSTEM token  
-Not “persistence”
+No four hunt types (**3.2.1**).  
+No full card rewrite (**3.2.2**).  
+No invented ticket (**3.7**).
 
 **Speaker Notes:**  
-Class is the column, not the hunt.
+Site control next.
 
 ---
 
-### Slide 6 – Hunt Line
-**Title:** Hunt Line
-
-named | class | unique pattern | scope | query idea | why not the tactic
-
-**Speaker Notes:**  
-Write it on the board.
-
----
-
-### Slide 7 – Unique Pattern (4d)
-**Title:** What Makes It Testable
-
-`Updater` + `%TEMP%\update.exe`  
-Not “any Run key”
-
-**Speaker Notes:**  
-Hunter 4d lives here.
-
----
-
-### Slide 8 – Scope
-**Title:** Where You Will Look
-
-Hosts / time / telemetry  
-Then stop
-
-**Speaker Notes:**  
-Unbounded host list fails.
-
----
-
-### Slide 9 – Classroom Seeds
-**Title:** Already Recognized
-
-Run `Updater` → persist  
-SYSTEM task → persist  
-`helpdesk.exe` → SYSTEM → privesc
-
-**Speaker Notes:**  
-Do not re-litigate.
-
----
-
-### Slide 10 – Example 1
-**Title:** Expected — Run-Key Hunt
-
-Named Run `Updater`. Scoped. Queryable.
-
-**Key Point:** This is the product shape.
-
-**Speaker Notes:**  
-Students write the line first.
-
----
-
-### Slide 11 – Example 2
-**Title:** Lead — Hunt Persistence
-
-Tactic sweep. No pattern.
-
-**Key Point:** Fail.
-
-**Speaker Notes:**  
-Ask what they would query.
-
----
-
-### Slide 12 – Example 3
-**Title:** Lead — Wrong Class
-
-SYSTEM task is persist, not privesc.
-
-**Key Point:** Fail the class swap.
-
-**Speaker Notes:**  
-Hold the 2.6.1 leftover.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Hunt the tactic  
-- Hunt the wrong class  
-- Rewrite 2.2.2  
-- Invent a 2.7 ticket  
-
-**Speaker Notes:**  
-Park all four.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Exercise
-
-Hunt lines A–E. Product is A or C.
-
-**Speaker Notes:**  
-Fail B, D, E.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. What must be named?  
-2. Hunt line besides the name?  
-3. Why not “hunt persistence”?  
-4. Why not privesc on the task?  
-5. Where is the local process?
+1. “Hunt persistence” is a valid 3.6.3 hunt. True or false?  
+2. What does **named** mean in this hour?  
+3. Write one hunt line for A12 Run **`Updater`**.
 
 **Speaker Notes:**  
-Answers in the instructor guide.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
+### Slide 7 – Summary
 **Title:** Summary
 
-One method. Unique pattern. Right class.
+One named method. Unique pattern. Wrong class fails.
 
-**Coming next:** Module 2.7.1 – Hunt control (local)
-
-**Speaker Notes:**  
-Processes vary by site.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Hunt Line
-
-`named | persist/privesc | pattern | scope | query | not the tactic`
+**Next:** **3.7.1** Hunt control and lead management
 
 **Speaker Notes:**  
-Leave up during the exercise.
+Do not invent a ticket unless scheduled — and 3.7 will tell you not to.

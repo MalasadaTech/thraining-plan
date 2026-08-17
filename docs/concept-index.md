@@ -162,9 +162,9 @@ Also: actionable CTI for hunting, hunt question telemetry scope
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
-| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.1 Assessing CTI for Hunting Value](../modules/03-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Used | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
 
@@ -174,7 +174,7 @@ Also: missed activity, activity existing controls might miss, activity the stack
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Taught | [3.1 Purpose of Threat Hunting](../modules/03-hunter/01-purpose/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [visibility gaps](#visibility-gaps), [purpose of threat hunting](#purpose-of-threat-hunting)
 
@@ -294,7 +294,7 @@ Also: anomaly hunt, baseline hunt, deviation hunt
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Taught | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [hunt types](#hunt-types), [hypothesis-driven hunt](#hypothesis-driven-hunt)
 
@@ -304,7 +304,7 @@ Also: Any.Run, AnyRun sandbox, interactive sandbox for hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Taught | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
 | Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
@@ -346,7 +346,7 @@ Also: CTI hunting value, assess a report for hunting, hunter as CTI consumer
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Taught | [3.4.1 Assessing CTI for Hunting Value](../modules/03-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 
 See also: [hunt-worthy CTI](#hunt-worthy-cti), [awareness-only CTI](#awareness-only-cti), [hand off to detections / IR](#hand-off-to-detections--ir)
 
@@ -378,7 +378,7 @@ Also: ATT&CK coverage, coverage analysis for hunting, Navigator as a view
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [using ATT&CK to identify detection or visibility gaps](#using-attck-to-identify-detection-or-visibility-gaps)
 
@@ -391,7 +391,7 @@ Also: ATT&CK in intel products, advanced ATT&CK for CTI, supported ATT&CK IDs in
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 | Used | [3.7.4 Defender’s ThreatMesh Framework (DTF) for Infrastructure Discovery](../modules/03-cti/07-frameworks/04-dtf/) | CTI, Hunter |
 
-SOC alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt coverage is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
+SOC alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt coverage is [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/).
 
 See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [how DTF complements ATT&CK, Diamond, and Kill Chain](#how-dtf-complements-attck-diamond-and-kill-chain)
 
@@ -401,7 +401,7 @@ Also: awareness only, context-only CTI, do not hunt this report
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Taught | [3.4.1 Assessing CTI for Hunting Value](../modules/03-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
 
@@ -588,7 +588,7 @@ Also: Windows privilege escalation, token theft, UAC bypass, service image abuse
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+| Taught | [3.6.2 Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
 
@@ -642,7 +642,7 @@ Also: Run key, RunOnce, Services key, registry persistence locations as examples
 |----------|--------|-------|
 | Taught | [1.1.5 Registry Activity](../modules/01-soc/01-endpoint/05-registry-activity/) | SOC, Hunter, CTI |
 
-Persistence *techniques* are [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/).
+Persistence *techniques* are [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/).
 
 See also: [registry activity](#registry-activity), [registry-based persistence](#registry-based-persistence)
 
@@ -707,7 +707,7 @@ Also: convert to SIEM query, convert to Zeek query, internal query from enrichme
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Taught | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [hunting leads from external tools](#hunting-leads-from-external-tools), [tool capabilities for hunting](#tool-capabilities-for-hunting)
 
@@ -836,10 +836,10 @@ Also: detection gap, data exists no alert, missed detection
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
-| Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
-| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
-| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.1 Purpose of Threat Hunting](../modules/03-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Used | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [visibility gaps](#visibility-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -1612,8 +1612,8 @@ Also: extract hunt leads, pull leads from a report, CTI extract for hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt-suitable TTPs](#hunt-suitable-ttps), [hunt-suitable artifacts](#hunt-suitable-artifacts), [what to drop from CTI](#what-to-drop-from-cti)
 
@@ -1626,7 +1626,7 @@ Also: TTP extract to ATT&CK, extract behavior onto T-ID, evidence-bound ATT&CK m
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 | Used | [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/) | CTI, Hunter |
 
-Copying printed IDs from a hunt-facing skim is [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/). Which extracted TTPs apply here is [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/).
+Copying printed IDs from a hunt-facing skim is [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/). Which extracted TTPs apply here is [3.8.2 Extracting Applicable TTPs from Intelligence Reports](../modules/03-cti/08-enrichment/02-applicable-ttps/).
 
 See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck), [reject a neighbor ATT&CK ID](#reject-a-neighbor-attck-id), [extract applicable TTPs from an intelligence report](#extract-applicable-ttps-from-an-intelligence-report)
 
@@ -1636,7 +1636,7 @@ Also: examples existing controls might miss, identify missed-control examples
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Taught | [3.1 Purpose of Threat Hunting](../modules/03-hunter/01-purpose/) | Hunter, SOC, CTI |
 
 See also: [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -1646,7 +1646,7 @@ Also: execute by type, first hunt search, hunt execute
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Taught | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [hunt types](#hunt-types)
 
@@ -1789,7 +1789,7 @@ Also: hand off CTI, detections hand off, IR hand off from a report
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Taught | [3.4.1 Assessing CTI for Hunting Value](../modules/03-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [hunt-worthy CTI](#hunt-worthy-cti)
 
@@ -1861,7 +1861,7 @@ Also: STIX bundle seeds a hunt, bundle as hunt seed, not how to author STIX
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 Authoring STIX is [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) and [3.10.2 How STIX Objects Are Used in Intelligence Production](../modules/03-cti/10-stix/02-stix-production/), not this module.
 
@@ -2005,19 +2005,19 @@ Also: developing a hunt, hunt intake card, hunt planning card
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Taught | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [hunt hypothesis](#hunt-hypothesis), [scoping a hunt](#scoping-a-hunt), [prioritizing hunts](#prioritizing-hunts)
 
 ### hunt for a named persistence or privilege-escalation technique
 
-Also: 2.6.3 hunt line, named technique hunt, unique pattern hunt
+Also: 3.6.3 hunt line, named technique hunt, unique pattern hunt
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
+| Taught | [3.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
 
-Recognition is [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) and [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/).
+Recognition is [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) and [3.6.2 Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/02-privilege-escalation/).
 
 See also: [reject an unbounded tactic hunt](#reject-an-unbounded-tactic-hunt), [reject hunting the wrong class (persist vs privesc)](#reject-hunting-the-wrong-class-persist-vs-privesc)
 
@@ -2027,7 +2027,7 @@ Also: hunt recipient chart, do not invent a hunt hand-off
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.3 Hunt Outputs and Hand-off](../modules/02-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
+| Taught | [3.7.3 Hunt Outputs and Hand-off](../modules/03-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
 
 See also: [expected hunt outputs are site-specific](#expected-hunt-outputs-are-site-specific), [produce required hunt outputs and perform proper hand-off](#produce-required-hunt-outputs-and-perform-proper-hand-off)
 
@@ -2037,7 +2037,7 @@ Also: hunt queue varies, do not invent a hunt ticket
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.1 Hunt Control and Lead Management](../modules/02-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
+| Taught | [3.7.1 Hunt Control and Lead Management](../modules/03-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
 
 See also: [lead management is site-specific](#lead-management-is-site-specific), [follow the local process for initiating and controlling a hunt](#follow-the-local-process-for-initiating-and-controlling-a-hunt)
 
@@ -2047,7 +2047,7 @@ Also: developing a hunt hypothesis, documented hunt hypothesis, testable if/then
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Taught | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [hypothesis-driven hunt](#hypothesis-driven-hunt), [unique patterns or behaviors suitable for hunting](#unique-patterns-or-behaviors-suitable-for-hunting)
 
@@ -2057,8 +2057,8 @@ Also: hunt question those leads support, if/then from extracted leads
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [hunt hypothesis](#hunt-hypothesis)
 
@@ -2068,7 +2068,7 @@ Also: hunt relevant objects in a bundle, identify hunt-relevant STIX
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [STIX objects a hunter uses](#stix-objects-a-hunter-uses), [STIX as hunt input](#stix-as-hunt-input)
 
@@ -2078,7 +2078,7 @@ Also: hunt-suitable IOCs, hunt-suitable patterns, hunt-suitable behaviors from C
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Taught | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [TTPs vs IOCs vs behaviors](#ttps-vs-iocs-vs-behaviors), [what to drop from CTI](#what-to-drop-from-cti)
 
@@ -2088,7 +2088,7 @@ Also: hunt suitable TTPs, extract TTPs for hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Taught | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [TTPs vs IOCs vs behaviors](#ttps-vs-iocs-vs-behaviors), [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti)
 
@@ -2098,7 +2098,7 @@ Also: actionable hunting lead, extract hunt lead, enrichment lead
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Taught | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [convert external findings to internal queries](#convert-external-findings-to-internal-queries), [unique patterns or behaviors suitable for hunting](#unique-patterns-or-behaviors-suitable-for-hunting)
 
@@ -2108,7 +2108,7 @@ Also: types of hunts, four hunt types, hunt type taxonomy
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Taught | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 See also: [intel-driven hunt](#intel-driven-hunt), [hypothesis-driven hunt](#hypothesis-driven-hunt), [reactive hunt](#reactive-hunt), [anomaly-based hunt](#anomaly-based-hunt)
 
@@ -2118,7 +2118,7 @@ Also: hunt lead board, park leads locally
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.1 Hunt Control and Lead Management](../modules/02-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
+| Taught | [3.7.1 Hunt Control and Lead Management](../modules/03-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
 
 See also: [hunt initiation and control are site-specific](#hunt-initiation-and-control-are-site-specific)
 
@@ -2128,9 +2128,9 @@ Also: hunt worthy report, hunt this report, CTI worth hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
-| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Taught | [3.4.1 Assessing CTI for Hunting Value](../modules/03-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Used | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [awareness-only CTI](#awareness-only-cti), [actionable for a hunt](#actionable-for-a-hunt)
 
@@ -2140,10 +2140,10 @@ Also: hypothesis hunt, if/then hunt, testable hunt hypothesis
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
-| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Taught | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
-How to write and document the hypothesis is [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/).
+How to write and document the hypothesis is [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/).
 
 See also: [hunt types](#hunt-types), [hunt hypothesis](#hunt-hypothesis), [anomaly-based hunt](#anomaly-based-hunt)
 
@@ -2331,7 +2331,7 @@ Also: privilege escalation indicators, integrity change, parent vs child identit
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+| Taught | [3.6.2 Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [recognizing privilege escalation techniques in logs or telemetry](#recognizing-privilege-escalation-techniques-in-logs-or-telemetry)
 
@@ -2449,7 +2449,7 @@ Also: intelligence-driven hunt, IOC hunt, bulletin hunt
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Taught | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 Extracting TTPs from a CTI report is a later item (2.4), not this module.
 
@@ -2590,7 +2590,7 @@ Also: map a report to ATT&CK, map an activity set to ATT&CK, CTI ATT&CK map line
 |----------|--------|-------|
 | Taught | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
-Alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/).
+Alert mapping is [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/). Hunt planning maps are [3.5.1](../modules/03-hunter/05-framework-application/).
 
 See also: [extracting TTPs onto ATT&CK IDs](#extracting-ttps-onto-attck-ids), [mapping observed activity to ATT&CK](#mapping-observed-activity-to-attck)
 
@@ -2603,7 +2603,7 @@ Also: map an alert to ATT&CK, tactic plus technique plus cite
 | Taught | [0.6.1 MITRE ATT&CK](../modules/00-intro/06-frameworks/01-attck/) | SOC, Hunter, CTI |
 | Used | [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/) | CTI, Hunter |
 
-Hunt planning maps are [2.5.1](../modules/02-hunter/05-framework-application/). Report / activity-set maps are [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
+Hunt planning maps are [3.5.1](../modules/03-hunter/05-framework-application/). Report / activity-set maps are [3.7.1 MITRE ATT&CK for CTI Analysis and Reporting](../modules/03-cti/07-frameworks/01-attck-cti/).
 
 See also: [ATT&CK tactics](#attck-tactics), [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [map a report or activity set to ATT&CK](#map-a-report-or-activity-set-to-attck)
 
@@ -2613,7 +2613,7 @@ Also: map a hunt plan to ATT&CK, map hunt findings to ATT&CK, ATT&CK tactics and
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [using MITRE ATT&CK for hunt planning](#using-mitre-attck-for-hunt-planning), [recording ATT&CK IDs from a report](#recording-attck-ids-from-a-report)
 
@@ -2804,7 +2804,7 @@ Also: service persistence, WMI persistence, logon script persistence
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Taught | [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [recognizing persistence techniques in logs or telemetry](#recognizing-persistence-techniques-in-logs-or-telemetry)
 
@@ -2934,8 +2934,8 @@ Also: persistence, persist after reboot, autorun methods
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
-| Used | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+| Taught | [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Used | [3.6.2 Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [registry-based persistence](#registry-based-persistence), [scheduled-task persistence](#scheduled-task-persistence)
 
@@ -3032,7 +3032,7 @@ Also: do not open a hunt without the shown path, hunt control orientation
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.1 Hunt Control and Lead Management](../modules/02-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
+| Taught | [3.7.1 Hunt Control and Lead Management](../modules/03-hunter/07-site-specific/01-hunt-control/) | Hunter, SOC, CTI |
 
 See also: [hunt initiation and control are site-specific](#hunt-initiation-and-control-are-site-specific)
 
@@ -3042,7 +3042,7 @@ Also: file the hunt on the shown form, classroom card is not the site form
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.2 Hunt Documentation Standards](../modules/02-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
+| Taught | [3.7.2 Hunt Documentation Standards](../modules/03-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
 
 See also: [required hunt-documentation elements are site-specific](#required-hunt-documentation-elements-are-site-specific), [where hunts are documented is site-specific](#where-hunts-are-documented-is-site-specific)
 
@@ -3052,7 +3052,7 @@ Also: hunt hand-off line, do not send without the chart
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.3 Hunt Outputs and Hand-off](../modules/02-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
+| Taught | [3.7.3 Hunt Outputs and Hand-off](../modules/03-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
 
 See also: [expected hunt outputs are site-specific](#expected-hunt-outputs-are-site-specific), [hunt hand-off to SOC, IR, or CTI is site-specific](#hunt-hand-off-to-soc-ir-or-cti-is-site-specific)
 
@@ -3092,8 +3092,8 @@ Also: hunt priority, rank hunts, why this hunt first
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
-| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [scoping a hunt](#scoping-a-hunt), [hunt development concepts](#hunt-development-concepts)
 
@@ -3126,7 +3126,7 @@ Also: hunt form varies, do not invent a hunt template
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.2 Hunt Documentation Standards](../modules/02-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
+| Taught | [3.7.2 Hunt Documentation Standards](../modules/03-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
 
 See also: [where hunts are documented is site-specific](#where-hunts-are-documented-is-site-specific), [document a hunt according to local standards](#document-a-hunt-according-to-local-standards)
 
@@ -3136,7 +3136,7 @@ Also: hunt store, official hunt record, not Slack
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.2 Hunt Documentation Standards](../modules/02-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
+| Taught | [3.7.2 Hunt Documentation Standards](../modules/03-hunter/07-site-specific/02-hunt-documentation/) | Hunter, SOC, CTI |
 
 See also: [required hunt-documentation elements are site-specific](#required-hunt-documentation-elements-are-site-specific)
 
@@ -3146,7 +3146,7 @@ Also: hunt done list, what a finished hunt must produce
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.7.3 Hunt Outputs and Hand-off](../modules/02-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
+| Taught | [3.7.3 Hunt Outputs and Hand-off](../modules/03-hunter/07-site-specific/03-hunt-outputs/) | Hunter, SOC, CTI |
 
 See also: [hunt hand-off to SOC, IR, or CTI is site-specific](#hunt-hand-off-to-soc-ir-or-cti-is-site-specific)
 
@@ -3186,7 +3186,7 @@ Also: privilege escalation, privesc, elevation of privilege
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+| Taught | [3.6.2 Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [common Windows privilege escalation methods](#common-windows-privilege-escalation-methods), [persistence techniques](#persistence-techniques)
 
@@ -3371,9 +3371,9 @@ Also: why hunt exists, hunt purpose, purpose of hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
-| Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
-| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Taught | [3.1 Purpose of Threat Hunting](../modules/03-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Used | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [threat hunting in the security program](#threat-hunting-in-the-security-program)
 
@@ -3432,7 +3432,7 @@ Also: rapid CTI triage, triage a report for hunting, hunt don’t hunt hand off
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Taught | [3.4.1 Assessing CTI for Hunting Value](../modules/03-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
 
 See also: [assessing CTI for hunting value](#assessing-cti-for-hunting-value), [actionable for a hunt](#actionable-for-a-hunt)
 
@@ -3452,7 +3452,7 @@ Also: recognize persistence, persistence in telemetry, persistence recognition
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Taught | [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [registry-based persistence](#registry-based-persistence)
 
@@ -3462,7 +3462,7 @@ Also: recognize privilege escalation, privilege escalation in telemetry, privesc
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+| Taught | [3.6.2 Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 
 See also: [privilege escalation techniques](#privilege-escalation-techniques), [indicators associated with privilege escalation](#indicators-associated-with-privilege-escalation)
 
@@ -3482,11 +3482,11 @@ Also: record ATT&CK IDs, copy printed ATT&CK, ATT&CK IDs if the report has them
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
-| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Used | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
-Mapping hunts to ATT&CK is [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/).
+Mapping hunts to ATT&CK is [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/).
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
 
@@ -3526,7 +3526,7 @@ Also: reject hunt persistence, reject hunt TA0003
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
+| Taught | [3.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
 
 See also: [hunt for a named persistence or privilege-escalation technique](#hunt-for-a-named-persistence-or-privilege-escalation-technique)
 
@@ -3536,7 +3536,7 @@ Also: SYSTEM task is not a privesc hunt
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
+| Taught | [3.6.3 Hunt for Specific Persistence or Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/03-hunt-specific/) | Hunter, SOC, CTI |
 
 See also: [hunt for a named persistence or privilege-escalation technique](#hunt-for-a-named-persistence-or-privilege-escalation-technique)
 
@@ -3652,7 +3652,7 @@ Also: reactive hunting, spark hunt, hunt from IR ask
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Taught | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
 
 Re-working an already-raised alert queue is SOC work, not this type.
 
@@ -3684,7 +3684,7 @@ Also: Run key persistence, RunOnce, Winlogon persistence, registry autorun
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Taught | [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [start menu / startup folder persistence](#start-menu--startup-folder-persistence), [common persistence locations (Run, Services)](#common-persistence-locations-run-services)
 
@@ -3791,7 +3791,7 @@ Also: hunt scope, bound a hunt, who where how long
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Taught | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
 
 See also: [prioritizing hunts](#prioritizing-hunts), [visibility gaps](#visibility-gaps)
 
@@ -3831,7 +3831,7 @@ Also: scheduled tasks, Task Scheduler persistence, event 4698, T1053.005
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Taught | [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [recognizing persistence techniques in logs or telemetry](#recognizing-persistence-techniques-in-logs-or-telemetry)
 
@@ -3921,7 +3921,7 @@ Also: Silent Push, passive DNS for hunting, infra clustering for hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Taught | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
 | Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of Silent Push](#purpose-strengths-and-weaknesses-of-silent-push)
@@ -4076,7 +4076,7 @@ Also: startup folder, Start Menu Startup, All Users Startup, T1547.001 startup f
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Taught | [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [persistence techniques](#persistence-techniques), [registry-based persistence](#registry-based-persistence)
 
@@ -4086,7 +4086,7 @@ Also: STIX for hunters, read STIX for hunting, STIX report or bundle
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 | Used | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 See also: [hunt-relevant STIX objects](#hunt-relevant-stix-objects), [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt)
@@ -4097,7 +4097,7 @@ Also: indicator attack-pattern observed-data malware threat-actor intrusion-set 
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 | Used | [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/) | CTI, Hunter |
 
 Core STIX object inventory for production is [3.10.1 Core STIX Objects](../modules/03-cti/10-stix/01-core-objects/).
@@ -4398,7 +4398,7 @@ Also: hunt in the program, hunt vs SOC vs CTI, explain hunt to the SOC lead
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Taught | [3.1 Purpose of Threat Hunting](../modules/03-hunter/01-purpose/) | Hunter, SOC, CTI |
 
 See also: [purpose of threat hunting](#purpose-of-threat-hunting)
 
@@ -4430,8 +4430,8 @@ Also: TTP vs IOC vs behavior, which can drive a hunt, method vs object vs patter
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt-suitable TTPs](#hunt-suitable-ttps), [hunt-suitable artifacts](#hunt-suitable-artifacts)
 
@@ -4441,7 +4441,7 @@ Also: turn STIX objects into hunt leads, convert bundle leftovers to leads
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [how a STIX bundle seeds a hunt](#how-a-stix-bundle-seeds-a-hunt), [hunt question from CTI leads](#hunt-question-from-cti-leads)
 
@@ -4503,7 +4503,7 @@ Also: online tools for hunting, enrichment tools, VT AnyRun URLScan Silent Push
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Taught | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
 
 See also: [VirusTotal for hunting](#virustotal-for-hunting), [AnyRun for hunting](#anyrun-for-hunting), [URLScan for hunting](#urlscan-for-hunting), [Silent Push for hunting](#silent-push-for-hunting)
 
@@ -4537,10 +4537,10 @@ Also: hunt-worthy pattern, unique hunt behavior, internal search pattern
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
-| Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
 
 See also: [hunt hypothesis](#hunt-hypothesis), [hunt development concepts](#hunt-development-concepts)
 
@@ -4580,7 +4580,7 @@ Also: urlscan.io, URLScan page scan, URLScan for hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Taught | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
 | Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
@@ -4718,7 +4718,7 @@ Also: ATT&CK detection gap, ATT&CK visibility gap, coverage gaps from a hunt map
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [visibility gaps](#visibility-gaps), [ATT&CK coverage analysis](#attck-coverage-analysis)
 
@@ -4728,7 +4728,7 @@ Also: ATT&CK-supported priority, rank hunts with ATT&CK
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [prioritizing hunts](#prioritizing-hunts), [mapping hunts to ATT&CK](#mapping-hunts-to-attck)
 
@@ -4738,7 +4738,7 @@ Also: ATT&CK for hunt planning, ATT&CK for hunting, framework application for hu
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Taught | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
 
 See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [ATT&CK coverage analysis](#attck-coverage-analysis)
 
@@ -4751,17 +4751,17 @@ See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [ATT&CK coverage a
 Also: visibility gap, no telemetry, cannot see, blind segment
 
 | Coverage | Module | Roles |
-| Used | [2.6.2 Privilege Escalation Techniques](../modules/02-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
+| Used | [3.6.2 Privilege Escalation Techniques](../modules/03-hunter/06-attacker-techniques/02-privilege-escalation/) | Hunter, SOC, CTI |
 |----------|--------|-------|
-| Taught | [2.1 Purpose of Threat Hunting](../modules/02-hunter/01-purpose/) | Hunter, SOC, CTI |
-| Used | [2.2.1 Hunt Types](../modules/02-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
-| Used | [2.2.2 Hunt Development Concepts](../modules/02-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
-| Used | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [2.4.1 Assessing CTI for Hunting Value](../modules/02-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
-| Used | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
-| Used | [2.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/02-hunter/05-framework-application/) | Hunter, SOC, CTI |
-| Used | [2.6.1 Persistence Techniques](../modules/02-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
+| Taught | [3.1 Purpose of Threat Hunting](../modules/03-hunter/01-purpose/) | Hunter, SOC, CTI |
+| Used | [3.2.1 Hunt Types](../modules/03-hunter/02-methodology/01-hunt-types/) | Hunter, SOC, CTI |
+| Used | [3.2.2 Hunt Development Concepts](../modules/03-hunter/02-methodology/02-hunt-development/) | Hunter, SOC, CTI |
+| Used | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Used | [3.4.1 Assessing CTI for Hunting Value](../modules/03-hunter/04-cti-for-hunters/01-assessing-cti/) | Hunter, SOC, CTI |
+| Used | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Used | [3.5.1 Using MITRE ATT&CK for Hunt Planning](../modules/03-hunter/05-framework-application/) | Hunter, SOC, CTI |
+| Used | [3.6.1 Persistence Techniques](../modules/03-hunter/06-attacker-techniques/01-persistence/) | Hunter, SOC, CTI |
 
 See also: [detection gaps](#detection-gaps), [activity missed by existing security mechanisms](#activity-missed-by-existing-security-mechanisms)
 
@@ -4771,7 +4771,7 @@ Also: VT, VirusTotal Relations, VirusTotal for hunting
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
+| Taught | [3.3.1 Tool Capabilities for Hunting](../modules/03-hunter/03-online-tools/) | Hunter, SOC, CTI |
 | Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
@@ -4829,8 +4829,8 @@ Also: drop no telemetry expired IOCs noise, what not to extract from a report
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Used | [2.4.3 STIX as Hunt Input](../modules/02-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
-| Taught | [2.4.2 Extracting Hunt Leads from CTI](../modules/02-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
+| Used | [3.4.3 STIX as Hunt Input](../modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/) | Hunter, SOC, CTI |
+| Taught | [3.4.2 Extracting Hunt Leads from CTI](../modules/03-hunter/04-cti-for-hunters/02-extracting-leads/) | Hunter, SOC, CTI |
 
 See also: [extracting hunt leads from CTI](#extracting-hunt-leads-from-cti), [visibility gaps](#visibility-gaps)
 

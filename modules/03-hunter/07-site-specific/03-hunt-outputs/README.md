@@ -1,28 +1,28 @@
 # Hunt Outputs and Hand-off
 
-**Path:** `modules/02-hunter/07-site-specific/03-hunt-outputs`  
+**Path:** `modules/03-hunter/07-site-specific/03-hunt-outputs`  
 **Primary role:** Threat Hunter  
 **Secondary:** SOC Analyst, CTI Analyst  
-**Time:** 60–75 minutes
+**Time:** about 20–25 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 2.7.3 | K | Hunt outputs and hand-off | 2.7.3 a–b |
-| 2.7.3.1 | T | Produce required hunt outputs and perform proper hand-off | 2.7.4 task 3 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|
+| 3.7.3 | K | Hunt outputs and hand-off | 3.7.3 a–b | A / A / B | B / C / C | A / A / B |
+| 3.7.3.1 | T | Produce required hunt outputs and perform proper hand-off | 3.7.4 task 3 | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 
-The lesson ID is **2.7.3**. Hunt documentation store is **2.7.2**. Hunt control is **2.7.1**. SOC report types are **1.6**. IR process is **1.8.5**. CTI products are **3.11**. Do **not** invent a Harbor hand-off chart. This hour is: expected outputs and who receives them are local, they vary, a new hunter must obtain them.
+The teaching-unit ID is **3.7.3**. Lumped outline **3.7.4** is not a separate module. Obtain-and-follow. Hunt 3.x ends here. No lab.
 
 ## Concepts taught
 
-- expected hunt outputs are site-specific
-- hunt hand-off to SOC, IR, or CTI is site-specific
-- produce required hunt outputs and perform proper hand-off
+- hunt outputs
+- hunt hand-off
+- obtaining the local output chart
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

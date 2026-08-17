@@ -42,24 +42,24 @@ Module ID,Module Title,Primary Role(s),Status - Outline,Status - Student Guide,S
 1.8.3,Tool Access and Requests,SOC / Hunter / CTI / DE,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
 1.8.4,Investigation Documentation,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
 1.8.5,Incident Response Processes,SOC / Hunter / CTI,Deferred,Deferred,Deferred,Deferred,Not Started,Deferred,Not Started,,,Retired — removed from 00
-3.1,Purpose of Threat Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.1,Purpose of Threat Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 3.2,Hunt Methodology,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Remaining 3.2 items after 3.2.1 and 3.2.2"
-3.2.1,Hunt Types,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.2.2,Hunt Development Concepts,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.3.1,Tool Capabilities for Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.2.1,Hunt Types,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.2.2,Hunt Development Concepts,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.3.1,Tool Capabilities for Hunting,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 3.4,CTI for Hunters,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"No remaining 3.4 children after 3.4.1, 3.4.2, and 3.4.3"
-3.4.1,Assessing CTI for Hunting Value,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.4.2,Extracting Hunt Leads from CTI,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.4.3,STIX as Hunt Input,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.5.1,Using MITRE ATT&CK for Hunt Planning,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.4.1,Assessing CTI for Hunting Value,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.4.2,Extracting Hunt Leads from CTI,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.4.3,STIX as Hunt Input,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.5.1,Using MITRE ATT&CK for Hunt Planning,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 3.6,Attacker Techniques,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.6.1–3.6.3"
-3.6.1,Persistence Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.6.2,Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.6.3,Hunt for Specific Persistence or Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.6.1,Persistence Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.6.2,Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.6.3,Hunt for Specific Persistence or Privilege Escalation Techniques,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 3.7,Site-Specific Hunt Knowledge and Tasks,Hunter,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 3.7.1–3.7.3"
-3.7.1,Hunt Control and Lead Management,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.7.2,Hunt Documentation Standards,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
-3.7.3,Hunt Outputs and Hand-off,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Student Guide + Instructor Guide + Slide Content complete; ready for review
+3.7.1,Hunt Control and Lead Management,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.7.2,Hunt Documentation Standards,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
+3.7.3,Hunt Outputs and Hand-off,Hunter / SOC / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab; hunt 3.x ends
 2.1,Core Intelligence Concepts,CTI,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,"Cluster heading only — children are 2.1.1–2.1.8"
 2.1.1,Data Information and Intelligence,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab
 2.1.2,Intelligence Lifecycle,CTI / Hunter / SOC,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,Revised to 0/4 voice; ready for review; no lab

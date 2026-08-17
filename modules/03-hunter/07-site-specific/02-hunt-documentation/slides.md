@@ -1,205 +1,90 @@
-# Module 2.7.2 – Hunt Documentation Standards  
+# Module 3.7.2 – Hunt Documentation Standards
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary), SOC Analyst and CTI Analyst (secondary)  
-**Estimated Delivery Time:** 60–75 minutes  
-**Total Suggested Slides:** 17
+**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Estimated Delivery Time:** 20–25 minutes  
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 2.7.2 – Hunt Documentation  
-**Subtitle:** Threat Hunter Training (SOC / CTI secondary)  
+**Title:** Module 3.7.2 – Hunt Documentation Standards  
+**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
 **Footer:** SOC / Hunter / CTI Training Program
 
 **Speaker Notes:**  
-No template in this packet. Obtain. Do not invent.
+Obtain the form. Do not invent one.
 
 ---
 
-### Slide 2 – Learning Objectives
-**Title:** Learning Objectives
+### Slide 2 – What this hour is
+**Title:** What this hour is
 
-1. Required elements vary by site
-2. The store varies by site
-3. File only against a standard you were shown
+**What** the write-up must include.  
+**Where** it lives.
 
-**Mapped Items:**  
-K: 2.7.2 | T: 2.7.2.1
+**Varies by site.**
 
 **Speaker Notes:**  
-Same idea as 2.7.1. Different path.
+3.2.2 is training, not policy.
 
 ---
 
-### Slide 3 – Agenda
-**Title:** Agenda
+### Slide 3 – Two pieces
+**Title:** Elements · store
 
-- Elements + store
-- Three examples
-- Orientation + document lines
-- Knowledge check
-
-**Speaker Notes:**  
-2.7.3 is next.
-
----
-
-### Slide 4 – Not This Lesson
-**Title:** Not This Hour
-
-Open / control the hunt (**2.7.1**)  
-Classroom hunt card (**2.2.2**)  
-Hand-off (**2.7.3**)  
-SOC notes path (**1.8.4**)
-
-**Key Point:** Training card ≠ site form.
-
-**Speaker Notes:**  
-Fence.
-
----
-
-### Slide 5 – They Vary
-**Title:** Every Site Lists Its Own
-
-What must be on the write-up.  
-Where the official copy lives.
+**Elements** — what the site form always wants.  
+**Store** — wiki / ticket / share the lead points at.
 
 **Speaker Notes:**  
 Outline a–b.
 
 ---
 
-### Slide 6 – Obtain, Do Not Invent
-**Title:** Ask the Lead
+### Slide 4 – What good looks like
+**Title:** Obtain
 
-Form + store. Same week as the queue.
+Ask where the standard lives.  
+Write **there**.  
+If not shown: **I do not have the local standard yet.**
+
+Scratch notes are **not** the record.
 
 **Speaker Notes:**  
-Orientation.
+Task 1.
 
 ---
 
-### Slide 7 – Orientation Line
-**Title:** Orientation Line
+### Slide 5 – Not this hour
+**Title:** Not this hour
 
-elements / store | who I asked | have / do not have | next step
+No initiate path (**3.7.1**).  
+No output chart (**3.7.3**).  
+No invented DYA template.
 
 **Speaker Notes:**  
-Board.
+Outputs next.
 
 ---
 
-### Slide 8 – Document Line
-**Title:** Document Line
-
-what I need to record | standard shown | use it / still need / invented (fail)
-
-**Speaker Notes:**  
-No standard → scratch notes are not the record.
-
----
-
-### Slide 9 – 2.2.2 Is Practice
-**Title:** Classroom Card Is Not Policy
-
-Useful. Not Harbor’s form.
-
-**Speaker Notes:**  
-Item C fails.
-
----
-
-### Slide 10 – Example 1
-**Title:** Expected — Honest Orientation
-
-Asked. Nothing in the packet. Wait to file.
-
-**Key Point:** Pass.
-
-**Speaker Notes:**  
-Students write first.
-
----
-
-### Slide 11 – Example 2
-**Title:** Lead — Invented Confluence Template
-
-Not in this course. Fail.
-
-**Key Point:** Plausible ≠ local.
-
-**Speaker Notes:**  
-Same fail mode as 2.7.1.
-
----
-
-### Slide 12 – Example 3
-**Title:** Lead — Slack Is the Record
-
-Chat is not the store unless shown.
-
-**Key Point:** Fail.
-
-**Speaker Notes:**  
-Location is outline b.
-
----
-
-### Slide 13 – Common Mistakes
-**Title:** Common Mistakes
-
-- Promote 2.2.2 to policy  
-- Personal Drive  
-- Invented wiki path  
-
-**Speaker Notes:**  
-Park all three.
-
----
-
-### Slide 14 – Hands-On Exercise
-**Title:** Exercise
-
-Orientation + document A–C.
-
-**Speaker Notes:**  
-Fail C. A = still need the standard.
-
----
-
-### Slide 15 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Why no template here?  
-2. 2.2.2 vs this hour?  
-3. Orientation line?  
-4. Slack as the record?  
-5. Who receives the output?
+1. The 3.2.2 classroom card is the shop’s official hunt form. True or false?  
+2. What two things does this hour obtain?  
+3. What do you write if no one has shown you the standard?
 
 **Speaker Notes:**  
-Answers in the instructor guide.
+Answers only in the instructor guide. Three questions. Stop.
 
 ---
 
-### Slide 16 – Summary
+### Slide 7 – Summary
 **Title:** Summary
 
-Elements and store are local. Obtain. Do not invent.
+Obtain elements and store. Or write “not yet.”
 
-**Coming next:** Module 2.7.3 – Outputs and hand-off
-
-**Speaker Notes:**  
-Last 2.7 child.
-
----
-
-### Slide 17 – Quick Reference (Optional)
-**Title:** Lines
-
-`elements/store | who | have / not | next`  
-`notes | shown | use / need / fail`
+**Next:** **3.7.3** Hunt outputs and hand-off
 
 **Speaker Notes:**  
-Leave up during the exercise.
+Do not invent a recipient list.

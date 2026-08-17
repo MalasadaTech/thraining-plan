@@ -12,7 +12,7 @@
 | 0.6.1.1 | K | MITRE ATT&CK | 0.6.1.1 a–d | A / B / C | B / C / C | B / C / C | A / B / B |
 | 0.6.1.2 | T | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | 0.6.1.2 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c | 1a / 2b / 2b |
 
-Stay in this lesson: purpose, structure, and one map. Hunt planning is **2.5**. Actor products are **3.11**. DTF is **3.7.4**.
+Stay in this lesson: purpose, structure, and one map. Hunt planning is **3.5**. Actor products are **2.11**. DTF is **2.7.4**.
 
 ## Concepts taught
 
