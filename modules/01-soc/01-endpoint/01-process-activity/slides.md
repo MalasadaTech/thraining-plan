@@ -78,11 +78,13 @@ Outline g. Terminate is Sysmon 5. Do not invent ProcessTerminated on this table.
 
 One sentence: who ran what, from whom, as whom.
 
+**Given:** `wscript.exe` (Temp `invoice.vbs`) → `powershell.exe -enc …` as `jlee`.
+
 A query names a **specific** pattern — parent + command-line fragment.  
 Not “all processes.”
 
 **Speaker Notes:**  
-Walk the student-guide given if you need it: wscript Temp vbs → powershell -enc. Do not tell the PRD plot.
+They should see this row before the knowledge check. One sentence: script host launched hidden encoded PowerShell. Parent + command line is the story. Do not tell the PRD plot.
 
 ---
 
