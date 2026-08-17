@@ -1,145 +1,86 @@
-# Instructor Guide – Module 3.2.2 – Structured Analytic Techniques
+# Instructor Guide – Module 2.2.2 – Structured Analytic Techniques
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
-- SOC: 3.2.2 A / A / A · 3.2.2.1 1a / 1a / 2b  
-- Hunter: 3.2.2 A / B / B · 3.2.2.1 1a / 2b / 3c  
-- CTI: 3.2.2 B / C / C · 3.2.2.1 3c / 4c / 4d  
-**Estimated Time:** 60–75 minutes  
-**Delivery Method:** Instructor-led with hands-on analysis
+- CTI: 2.2.2 B / C / C ; 2.2.2.1 3c / 4c / 4d  
+- Hunter: 2.2.2 A / B / B ; 2.2.2.1 1a / 2b / 3c  
+- SOC: 2.2.2 A / A / A ; 2.2.2.1 1a / 1a / 2b  
+**Estimated Time:** 20–25 minutes  
+**Delivery Method:** Instructor-led
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Teach purpose, the classroom pair (KAC + ACH), when to use each, and force **select + apply**. Do not teach Admiralty or the bias catalog.
+Pick ACH or a Key Assumptions Check and apply it. Do not invent a third official technique.
+
+**Context (plain language):**
+
+- What this hour is for: CTI analysts use a named method so habit does not pick the story.
+- How it hooks to the hour before: 2.2.1 was the likelihood word. This hour is the method behind the call.
+- How it hooks to the hour after: 2.2.3 is source letters. 2.2.4 names the bias.
+- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c. Two syllabus techniques only.
+- What we are *not* doing this hour: Admiralty. Bias names. A full ACH spreadsheet. No lab.
+- Extra step: none.
 
 **Key Teaching Points:**
-- Classroom pair is a stand-in. Overlay a site SAT list if you have one — sign-off here is still **these two**.
-- ACH: fewest **I**, not most **C**.
-- KAC when the story is already locked.
-- Neither when there is no second hyp and no judgment yet — collect.
-- SOC 3-level task is **1a / 1a / 2b**. Hunter 3-level is **1a**. CTI is **3c / 4d**. Do not collapse.
-- Estimative wording is **3.2.1**. They may add a term after the SAT; do not grade the lexicon.
-
-**Common Student Challenges:**
-- ACH because it looks senior.
-- Scoring ACH by “how much I like H1.”
-- Twelve-column matrices.
-- Opening 3.2.3 / 3.2.4 / 3.1.7 country claims.
+- Pick the technique that matches the problem.
+- ACH asks what evidence *hurts* a hypothesis.
 
 **Required Materials:**
 - Student Guide
 - Slide Deck
-- Whiteboard or shared doc for a live mini matrix
-- Optional site SAT card
-- Answer key (this guide)
 
 ---
 
 ## Learning Objectives
 
-1. Purpose of SATs.
-2. Classroom ACH and KAC.
-3. Select the right one.
-4. Apply one small table.
+Same as the student guide.
 
-**Mapped Items:** K 3.2.2 · T 3.2.2.1
+**Mapped Items:** K 2.2.2 ; T 2.2.2.1
 
 ---
 
 ## Suggested Timing
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction & fence           | 6 min    | Not 3.2.1-as-SAT / 3.2.3 / 3.2.4 |
-| Purpose, pair, when            | 16 min   | a–c |
-| Walkthrough Examples           | 14 min   | Fill Ex 1 matrix live |
-| Hands-On Exercise              | 18 min   | Select + apply |
-| Knowledge Check & Discussion   | 8 min    | |
-| Summary                        | 4 min    | |
-| **Total**                      | **~66 min** | Stretch Ex 2 if they open ACH on a slogan |
+| Section                 | Time      | Notes |
+|-------------------------|-----------|-------|
+| Introduction (required) | 3 min     | Named method |
+| Key Concepts            | 12 min    | ACH vs KAC; A12 |
+| Knowledge Check         | 4 min     | Three questions |
+| Summary                 | 1 min     | |
+| **Total**               | **~20 min** | |
 
 ---
 
 ## Detailed Teaching Notes
 
-**Talking Points:**
-- CTI 3: 3c — they should *fill* a table, not recite “ACH exists.”
-- Walk Ex 1 on the board. Force them to put **I** on H2 for E1–E3 before you do.
+### 1. Key Concepts
 
-**Question:**  
-“If every cell is C, what did you fail to do?” (Hyps are not distinct, or evidence cannot discriminate — collect or rewrite hyps.)
+Write the two techniques. Walk vendor-name as KAC. Walk payload-host vs browse as ACH.
 
----
-
-## Hands-On Exercise – Instructor Guidance
-
-**How to run:** Fail prestige-ACH. Fail scoring by favorites. Accept a 2-hyp ACH for A.
-
-**Summaries:**
-- Ex 1: ACH; H2 dies on I’s.
-- Ex 2: KAC on a locked story.
-- Ex 3: neither or KAC on the TLS-always assumption — not a fake ACH.
-
-**Select:**
-
-| Item | SAT | Why |
-|------|-----|-----|
-| A | **ACH** | Two live hyps + discriminating evidence |
-| B | **KAC** | Locked nation-state sentence; must-bes hidden. (Also a 3.1.7 type problem — do not run ACH to “prove China.”) |
-| C | **Neither** | Collect first |
-| D | **KAC** | Coverage “always” is an assumption, not two actor hyps |
-
-**Apply — A (ACH), accept 2 hyps:**
-
-| Evidence | H1 Night Owl | H2 scanner FP |
-|----------|--------------|---------------|
-| E1 SNI | C | I |
-| E2 JA3 | C | I |
-| E3 PS+Run | C | I |
-| E4 scanner hour | N | C |
-| E5 shared CDN | N | N |
-
-H2 has more **I**. H1 stands.
-
-**Apply — B or D (KAC), accept three rows, paraphrase OK:**
-
-| Assumption | If false |
-|------------|----------|
-| SNI unique to Night Owl | Shared CDN → do not isolate on SNI alone |
-| JA3 = same actor | Shared library → need another line |
-| Scanner hour is coincidence | Could be 1.4.3 FP — check scanner inventory |
-| (D) Zeek sees OT | **1.8.1** — no OT span; hunt is blind |
+If they add devil’s advocacy as required: “Not a third official class.”  
+If they want a 12-row ACH matrix: “Name H1, H2, and what hurts. Stop.”
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **What problem does a SAT prevent?**  
-   **Answer:** Locking onto the first story; hiding must-be-true claims.  
-   **Explanation:** Outline a.
+1. **Always run both. True or false?**  
+   **Answer:** False. Pick the one the problem needs.  
+   **Explanation:** Outline c.
 
-2. **What is I / how do you read ACH?**  
-   **Answer:** I = evidence is hard to square with that hyp. Prefer the hyp with the **fewest I**, not the most C.  
-   **Explanation:** Outline b / Example 1.
+2. **When Key Assumptions Check instead of ACH?**  
+   **Answer:** When one claim is carrying the call, not when two full stories are competing.  
+   **Explanation:** Outline c.
 
-3. **When KAC first?**  
-   **Answer:** A judgment is already written and the assumptions are unstated.  
-   **Explanation:** Outline c / Example 2.
-
-4. **When neither?**  
-   **Answer:** No second hyp and no judgment to check — collect (**3.1.8**).  
-   **Explanation:** Example 3 / C.
-
-5. **Bias catalog?**  
-   **Answer:** **3.2.4**.  
-   **Explanation:** Fence.
+3. **A12 assumption to test?**  
+   **Answer:** e.g. “a vendor APT name is who they are” or “empty SNI means benign.”  
+   **Explanation:** Task 1.
 
 ---
 
 ## Additional Instructor Resources
 
-- Site SAT / tradecraft card
-- Next recommended module: 3.2.3 Admiralty Code
+- Next: 2.2.3 Admiralty Code
