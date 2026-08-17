@@ -12,7 +12,7 @@
 | 0.6.3.1 | K | Cyber Kill Chain | 0.6.3.1 a–c | A / B / C | B / C / C | B / C / C | A / B / B |
 | 0.6.3.2 | T | Identify the Kill Chain stage of observed activity | 0.6.3.2 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c | 1a / 2b / 2b |
 
-Stay in this lesson: stage of what you saw, and why it is not the neighbor. ATT&CK is **0.6.1**. Diamond is **0.6.2**. Next shared hour is the tool survey (**3.3.2**).
+Stay in this lesson: stage of what you saw, and why it is not the neighbor. ATT&CK is **0.6.1**. Diamond is **0.6.2**. Next hour is the tool survey (**0.7**).
 
 ## Concepts taught
 

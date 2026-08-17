@@ -17,7 +17,7 @@
 
 Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `3.1`, `2.1`, `4.1`, …). Those match the `#` column. **Teach order** is SOC `1` → CTI `3` → hunt `2` → DE `4` (IDs stay). Do not assign work by old display numbers.
 
-Section **0** includes Detection Engineer (same codes as the other roles) and **`0.6` frameworks**. The **shared floor** (`3.3.2`, `1.8.1`) is taught after **0.6** and also includes DE. Other **1–3** rows stay three columns until we rate DE on them. Section **4** has a Detection Engineer column. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+Section **0** includes Detection Engineer (same codes as the other roles), **`0.6` frameworks**, and **`0.7` tool survey**. The **shared floor** (`1.8.1`) is taught after **0.7** and also includes DE. Other **1–3** rows stay three columns until we rate DE on them. Section **4** has a Detection Engineer column. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 ---
 
@@ -48,6 +48,17 @@ Taught after **0.5**, before SOC **1.1** (`00.06`). Three teaching units. Outlin
 | 0.6.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 2b / 3c / 4c | 3c / 4c / 4d | 3c / 4c / 4d | 1a / 2b / 2b |
 | 0.6.3.1 | Cyber Kill Chain | K | A / B / C | B / C / C | B / C / C | A / B / B |
 | 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c | 1a / 2b / 2b |
+
+---
+
+## 0.7 External tools (all four roles)
+
+Taught after **0.6**, before SOC **1.1** (`00.07`). Outline K/T IDs match this table (`0.7` K, `0.7.1` T). Internal TIP is **3.3.1**. Advanced enrichment / pivot is **3.9**. DE codes match the shared-intro pattern (not DE-primary).
+
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
+|---|------|------|-----------|--------------|-----------|----------|
+| 0.7 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A / B / B | B / C / C | B / C / C | A / B / B |
+| 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d | 1a / 2b / 3c |
 
 ---
 
@@ -222,14 +233,12 @@ Taught after SOC. Hunt `2.x` is after this block. IDs stay `3.x`.
 
 ## 3.3 Tools
 
-`3.3.2` (purpose and when to pick) is on the **shared floor**. Advanced enrichment / pivot is **3.9**. Internal TIP (`3.3.1`) stays CTI. DE codes on `3.3.2` match the SOC awareness column.
+The external-tool survey is **`0.7`**. Do not re-teach it here. Advanced enrichment / pivot is **3.9**. Internal TIP (`3.3.1`) stays CTI.
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
 |---|------|------|-----------|--------------|-----------|----------|
 | 3.3.1 | Internal threat intelligence platform | K | A / A / B | A / B / B | B / C / C | — |
 | 3.3.1.1 | Search, retrieve, and use the internal TIP for enrichment or analysis | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d | — |
-| 3.3.2 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A / B / B | B / C / C | B / C / C | A / B / B |
-| 3.3.2.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d | 1a / 2b / 3c |
 
 ---
 
@@ -482,7 +491,7 @@ Taught last. **1.3** is rule syntax / first read-write. Nominations from SOC, hu
 - Non-primary roles generally start at awareness level (**A** or **1a**) and only rise where the skill has clear shared value (e.g., frameworks, enrichment tools, ATT&CK, STIX).
 - You can adjust any cross-role ratings as needed.
 - Section `0` is the front door (`0.1` layout; `0.2`–`0.5` operate; `0.4.1` T). Same codes for SOC, Hunter, CTI, and DE. Shared floor after that, still before SOC.
-- Shared floor after `0.1`–`0.5`, still before SOC: `0.6`, `3.3.2`, `1.8.1`, `1.8.3`, `1.7`, `1.8.4`, `1.8.5`. Those tables include a DE column where already rated. SOC ends at `1.6`. Other `1`–`3` rows stay three columns until we rate DE on them.
+- Shared floor after `0.7`, still before SOC: `1.8.1`. `0.6` frameworks and `0.7` tool survey live in section `0`. Those tables include a DE column where already rated. SOC ends at `1.6`. Other `1`–`3` rows stay three columns until we rate DE on them.
 - **`1.8.2` is retired.** PCAP why/when is `1.2.1`. Apply-versus-alert is `1.4.1.6`. Sensors are `1.8.1.g`. Download/view is `1.8.3` if the shop lists them.
 - Section `4` is Detection Engineer (`4.1`–`4.8`). DE is primary (`docs/matrices/de.md`). Cross-role awareness lives **only** on this combined sheet — not on the SOC, hunter, or CTI sheets. Sensor unit `4.7` is lighter. Site unit `4.8` is obtain-and-follow.
 - Hunt `2.x` and CTI `3.x` tasks are children of their knowledge item (`3.2.1` K, `3.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.6.1`–`1.6.3`) at the SOC/CTI seam. Shift change is two units (`1.7.1`–`1.7.2`). Leftover SOC site is `1.8.4` notes and `1.8.5` IR. Collection sources are `3.1.8`; relevance/impact is `3.8.4`; actor profile is `3.11.1.2`; local collection request is `3.12.2.1`.

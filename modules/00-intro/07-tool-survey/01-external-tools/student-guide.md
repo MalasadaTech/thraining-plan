@@ -1,11 +1,12 @@
-# Module 3.3.2 – External Tools
+# Module 0.7 – External tools
 
-**Target Audience:** CTI Analyst (primary), Threat Hunter (secondary)  
+**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
 **Proficiency Focus:**  
-- SOC: 3.3.2 A / B / B · 3.3.2.1 1a / 2b / 3c  
-- Hunter: 3.3.2 B / C / C · 3.3.2.1 3c / 4c / 4d  
-- CTI: 3.3.2 B / C / C · 3.3.2.1 3c / 4c / 4d  
-**Estimated Time:** 60–75 minutes  
+- SOC: 0.7 A / B / B ; 0.7.1 1a / 2b / 3c  
+- Hunter: 0.7 B / C / C ; 0.7.1 3c / 4c / 4d  
+- CTI: 0.7 B / C / C ; 0.7.1 3c / 4c / 4d  
+- DE: 0.7 A / B / B ; 0.7.1 1a / 2b / 3c  
+**Estimated Time:** 20 minutes
 
 ---
 
@@ -13,151 +14,71 @@
 
 By the end of this module, you will be able to:
 
-1. State the **purpose, strength, and weakness** of VirusTotal, AnyRun, Silent Push, and URLScan.
-2. Say **when** each belongs in the intelligence process.
-3. **Select** the right tool for a need and reject the neighbor.
-4. **Enrich or pivot once** (classroom: first query + one hop).
+1. Say the purpose, one strength, and one weakness of VirusTotal, AnyRun, Silent Push, and URLScan.
+2. Pick the first external tool for a need and say why the neighbor is wrong.
 
 **Mapped Proficiency Items:**
-- K: 3.3.2 – External tools (VirusTotal, AnyRun, Silent Push, URLScan)
-- T: 3.3.2.1 – Select the appropriate external tool and perform enrichment or pivoting
+- K: 0.7 – External tools (VirusTotal, AnyRun, Silent Push, URLScan)  
+  SOC A / B / B · Hunter B / C / C · CTI B / C / C · DE A / B / B
+- T: 0.7.1 – Select the appropriate external tool for a given enrichment or analysis need  
+  SOC 1a / 2b / 3c · Hunter 3c / 4c / 4d · CTI 3c / 4c / 4d · DE 1a / 2b / 3c
 
 ---
 
 ## 1. Key Concepts
 
-These four are **external**. Check the **internal TIP** first if the question is “have *we* seen this?” (**3.3.1**). Hunt-lead → SIEM/Zeek conversion is **2.3.1**. VT Relations/Behavior graphs are **3.9**.
+You will get a hash, a file, a domain, or a live URL. These four public tools each answer a different question. You pick the one that matches the need and you say why the neighbor is the wrong first tool. You do this so you do not detonate a file when you only needed history, or screenshot a page when you needed a hash reputation.
 
-**Purpose, strengths, weaknesses (outline a) — classroom card:**
+**Purpose, strength, weakness.**
 
 | Tool | Purpose | Strength | Weakness |
 |------|---------|----------|----------|
-| **VirusTotal** | Multi-engine file / URL / hash / IP look-up | Fast reputation + related *files* on a hash | Public; not historical PDNS; not a full sandbox story |
-| **AnyRun** | Detonate a **sample** and watch behavior | Process tree, dropped files, live C2 from *this* run | Needs a file; evadable; not infra history |
-| **Silent Push** | Passive DNS / infra clustering | Historical resolutions, sibling domains | Not a detonation; not a page screenshot |
-| **URLScan** | Scan a **URL/page now** | Redirects, DOM, screenshot, contacted hosts *this load* | Not PDNS history; not file behavior |
+| **VirusTotal** | Multi-engine look-up of a file, URL, hash, or IP | Fast reputation | Public; not historical PDNS; not a full sandbox story |
+| **AnyRun** | Detonate a **sample** and watch this run | Process tree and dropped files from *this* run | Needs a file; evadable; not infra history |
+| **Silent Push** | Passive DNS / infra clustering | Historical resolutions and sibling domains | Not a detonation; not a page screenshot |
+| **URLScan** | Scan a **URL / page now** | Redirects, screenshot, hosts from *this* load | Not PDNS history; not file behavior |
 
-**When in the intel process (outline b):**
+**When to pick.**
 
 | Need | First external tool |
 |------|---------------------|
-| Hash / file reputation, “what else submitted this hash?” | **VirusTotal** |
-| You have a binary and need *behavior* | **AnyRun** |
-| Domain / IP *history* or cluster | **Silent Push** |
-| Live phishing / URL appearance | **URLScan** |
-| “Have we seen it internally?” | **Not these** — **3.3.1** TIP |
-
-**Classroom pivot (task 2 — one hop, not 3.9):**
-
-| Tool | First query | One legal hop |
-|------|-------------|----------------|
-| VT | Hash `6734f374…` | One **contacted domain** or **communicating file** |
-| AnyRun | Submit `update.exe` | One **dropped hash** or **C2 host** from the run |
-| Silent Push | `nightowl-updates.net` | One **historical A** or **sibling domain** |
-| URLScan | The live URL | One **redirect** or **contacted host** from that scan |
-
-A 12-node Relations graph is **3.9**. A SIEM query from the hop is **2.3.1**.
+| Hash or file reputation | **VirusTotal** |
+| You have a binary and need behavior | **AnyRun** |
+| Domain or IP *history* or cluster | **Silent Push** |
+| Live URL / how the page looks now | **URLScan** |
+| “Have we seen this internally?” | **Not these** — that is the internal TIP (**3.3.1**), later |
 
 | This lesson | Other |
 |-------------|-------|
-| Select + one hop | Internal TIP retrieve — **3.3.1** |
-| Not hunt-to-Zeek | **2.3.1** |
-| Not VT Relations depth | **3.9** |
-| Not imphash / ssdeep | **3.4** |
+| Purpose and when to pick | Live vendor account — not this hour |
+| Select and reject the neighbor | Relations / multi-hop pivot — **3.9** |
+| External tools only | Internal TIP — **3.3.1** |
 
-The tasks: a **select line** and a **pivot line**.
+**What good looks like (0.7.1):** you have a file hash and need vendor reputation. You pick **VirusTotal**. You reject AnyRun because you do not have a sample to detonate. You reject Silent Push because this is not a domain-history question.
 
-`need | tool | rejected neighbor | why`  
-`tool | first query | one hop | what that hop is for`
-
-| Expected (usually) | Lead (usually) |
-|--------------------|----------------|
-| Hash → VT, one communicating file | URLScan for PDNS history |
-| Domain history → Silent Push | AnyRun with no sample |
-| Live phish URL → URLScan | 12-hop VT Relations (**3.9**) |
+Platform depth and a Relations graph are later (**3.9**). You do not need a live account this hour.
 
 ---
 
-## 2. Detailed Walkthrough / Examples
+## 2. Knowledge Check
 
-### Example 1: Hash → VT + One Hop (Expected)
-
-**Need:** What do vendors say about `6734f374…`, and what else talks like it?
-
-**Select:** **VirusTotal**. Reject Silent Push (no domain question yet). Reject AnyRun until you *have* the file.  
-**Pivot:** Query the hash → open one **contacted domain** (classroom: `nightowl-updates.net`). Stop.  
-**Then:** If you need *history* on that domain, **next** tool is Silent Push — that is a *second* select, not this hop.
-
-### Example 2: URLScan for History (Lead)
-
-**Need:** What IPs has `nightowl-updates.net` used this year?
-
-**Wrong:** URLScan (that is *this page load*).  
-**Select:** **Silent Push**. Reject URLScan. Reject VT as the *first* tool for historical PDNS.  
-**Pivot:** Query the domain → one **historical A** or sibling.  
-**Lead:** Right IOC type (domain). Wrong tool.
-
-### Example 3: AnyRun with No File (Lead)
-
-**Need:** Behavior of Night Owl. Analyst has only the SNI, no binary.
-
-**Wrong:** AnyRun (nothing to detonate).  
-**Select:** Silent Push (infra) and/or VT *URL/domain* look-up. If a sample appears later, then AnyRun.  
-**Lead:** “Advanced” is not “open the sandbox anyway.”
+1. Give one purpose and one weakness of Silent Push.
+2. When do you pick URLScan instead of Silent Push?
+3. You have a hash and need reputation. Which tool, and why not AnyRun?
 
 ---
 
-## 3. Hands-On Exercise
+## 3. Summary
 
-**Objective:** Pick the tool and name one hop.
+Four tools. Match the need. Reject the neighbor. Do not open the sandbox when the question is history, and do not treat a page scan as PDNS.
 
-**Use the classroom card.** Do not convert hops into Zeek queries.
-
-**Instructions:**
-
-1. One sentence each for Examples 1–3: tool + rejected neighbor.
-2. **Select** (task 1): `need | tool | rejected | why`.
-
-   - A. Live invoice URL the user still has open.  
-   - B. You have `update.exe` from WS-JLEE Temp. Need process tree + dropped files.  
-   - C. “Have we seen this JA3 on Harbor before?”  
-   - D. Domain cluster: what else shares infra with `nightowl-updates.net`?
-
-3. **Pivot** (task 2): for **A**, **B**, and **D**, write `tool | first query | one hop | what for`.
-4. Do not open the internal TIP as an *external* tool (C should point at **3.3.1**). Do not draw a Relations graph. Do not write a SIEM query.
-5. One hop. If you need a second tool, say so as a *new* select — do not chain 3.9.
-
-**Expected Outcome:**
-- Three example summaries
-- Four select lines (C = TIP, not these four)
-- Three pivot lines
-- No Zeek query, no Relations graph
+**Next:** **1.8.1** Environment / signal flow.
 
 ---
 
-## 4. Knowledge Check
+## 4. Related modules
 
-1. Give **one strength and one weakness** for each of the four tools.
-2. When do you pick **Silent Push** over **URLScan**?
-3. What is a classroom **one-hop** on VT, and what is **3.9** instead?
-4. Why is “have we seen this internally?” not an external-tool select?
-5. Where do you turn a hop into a **hunt / SIEM** query?
-
----
-
-## 5. Summary
-
-- Four tools: purpose, strength, weakness, when.
-- Select + reject neighbor. One hop. Not the TIP, not 3.9, not 2.3.1.
-- This closes cluster **3.3**. Next: **3.4** file similarity / hashing.
-
----
-
-## 6. References & Further Reading
-
-- Related modules:
-  - 3.3.1 – Internal TIP (previous)
-  - 2.3.1 – Tool capabilities for hunting
-  - 3.9 – VirusTotal / platform depth
-  - 3.4 – File similarity and hashing
-- Local tool SOP / licenses (optional)
+- 0.6.3 – Cyber Kill Chain (previous)
+- 1.8.1 – Environment / signal flow (next)
+- 3.3.1 – Internal TIP (later)
+- 3.9 – Platform depth (later)

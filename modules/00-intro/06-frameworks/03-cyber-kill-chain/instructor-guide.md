@@ -81,4 +81,4 @@ Write the seven stages. Walk the `.vbs` in email as Delivery. Fail Exploitation 
 
 ## Additional Instructor Resources
 
-- Next: 3.3.2 External tools
+- Next: 0.7 External tools

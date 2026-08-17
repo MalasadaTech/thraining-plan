@@ -65,7 +65,7 @@ Answers only in the instructor guide.
 ### Slide 6 – Next
 **Title:** Next
 
-**3.3.2** External tools
+**0.7** External tools
 
 **Speaker Notes:**  
 Purpose and when to pick. Not VT Relations.

@@ -45,7 +45,7 @@ ATT&CK named the behavior. Diamond named the empty corner. Kill Chain asks **whe
 
 **What good looks like (0.6.3.2):** a user received a `.vbs` in email. That is **Delivery**. It is not Weaponization (you did not see them build it). It is not Exploitation (you did not see it run). Do not skip to Command and Control without a callback.
 
-Tool survey is next (**3.3.2**).
+Tool survey is next (**0.7**).
 
 ---
 
@@ -61,7 +61,7 @@ Tool survey is next (**3.3.2**).
 
 Seven stages. Place the row you have. Reject the neighbor. Do not invent the rest of the chain.
 
-**Next:** **3.3.2** External tools (tool survey).
+**Next:** **0.7** External tools (tool survey).
 
 ---
 
@@ -69,4 +69,4 @@ Seven stages. Place the row you have. Reject the neighbor. Do not invent the res
 
 - 0.6.1 – MITRE ATT&CK
 - 0.6.2 – Diamond Model
-- 3.3.2 – External tools
+- 0.7 – External tools

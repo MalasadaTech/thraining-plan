@@ -1,18 +1,18 @@
-# External Tools
+# External tools
 
 **Path:** `modules/00-intro/07-tool-survey/01-external-tools`  
-**Taught:** shared floor after 0 — purpose and when to pick (lives on the shared floor)  
+**Taught:** `00` block, before SOC  
 **Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
-**Time:** 60–75 minutes
+**Time:** about 20 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.3.2 | K | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | 3.3.2 a–b |
-| 3.3.2.1 | T | Select the appropriate external tool and perform enrichment or pivoting | 3.3.2.1 tasks 1–2 |
+| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
+|-----------|------|------|-----------------|-----------|--------------|-----------|----------|
+| 0.7 | K | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | 0.7 a–b | A / B / B | B / C / C | B / C / C | A / B / B |
+| 0.7.1 | T | Select the appropriate external tool for a given enrichment or analysis need | 0.7.1 task 1 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d | 1a / 2b / 3c |
 
-The lesson ID is **3.3.2**. Survey is on the shared floor after **0**. Internal TIP is **3.3.1**. Advanced enrichment / pivot is **3.9**. Hunt-lead extract and SIEM conversion are **2.3.1**. File similarity hashes are **3.4**.
+Stay in this lesson: purpose, strengths, weaknesses, and when to pick. Internal TIP is **3.3.1**. Platform depth is **3.9**. Next hour is **1.8.1**.
 
 ## Concepts taught
 
@@ -20,13 +20,12 @@ The lesson ID is **3.3.2**. Survey is on the shared floor after **0**. Internal 
 - purpose, strengths, and weaknesses of AnyRun
 - purpose, strengths, and weaknesses of Silent Push
 - purpose, strengths, and weaknesses of URLScan
-- when to use each external tool in the intelligence process
+- when to use each external tool
 - select the appropriate external tool
-- enrich or pivot using an external tool
 
 ## Artifacts
 
 - [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
-- `assets/` — lesson-specific images (empty)
+- `assets/` — empty

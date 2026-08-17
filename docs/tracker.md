@@ -24,7 +24,7 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 0.4 | [modules/00-intro/04-how-work-moves](../modules/00-intro/04-how-work-moves/) |
 | 0.5 | [modules/00-intro/05-where-jobs-overlap](../modules/00-intro/05-where-jobs-overlap/) |
 
-All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `0.6`, `3.3.2`, `1.8.1`. **Retired:** `1.7`, `1.8.2`–`1.8.5`. SOC ends at `1.6`.
+All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `0.6`, `0.7`, `1.8.1`. **Retired:** `1.7`, `1.8.2`–`1.8.5`. SOC ends at `1.6`.
 | 1.1.1 | [modules/01-soc/01-endpoint/01-endpoint-activity](../modules/01-soc/01-endpoint/01-endpoint-activity/) |
 | 1.1.2 | [modules/01-soc/01-endpoint/02-process-activity](../modules/01-soc/01-endpoint/02-process-activity/) |
 | 1.1.3 | [modules/01-soc/01-endpoint/03-file-system-activity](../modules/01-soc/01-endpoint/03-file-system-activity/) |
@@ -51,6 +51,7 @@ All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `0.6`, `3.3.2`, `1.8
 | 0.6.1 | [modules/00-intro/06-frameworks/01-attck](../modules/00-intro/06-frameworks/01-attck/) |
 | 0.6.2 | [modules/00-intro/06-frameworks/02-diamond-model](../modules/00-intro/06-frameworks/02-diamond-model/) |
 | 0.6.3 | [modules/00-intro/06-frameworks/03-cyber-kill-chain](../modules/00-intro/06-frameworks/03-cyber-kill-chain/) |
+| 0.7 | [modules/00-intro/07-tool-survey/01-external-tools](../modules/00-intro/07-tool-survey/01-external-tools/) |
 | 1.6.1 | [modules/01-soc/05-reporting/01-report-types](../modules/01-soc/05-reporting/01-report-types/) |
 | 1.6.2 | [modules/01-soc/05-reporting/02-reporting-timelines](../modules/01-soc/05-reporting/02-reporting-timelines/) |
 | 1.6.3 | [modules/01-soc/05-reporting/03-notification-distribution](../modules/01-soc/05-reporting/03-notification-distribution/) |
@@ -68,7 +69,6 @@ All of `00-intro` is taught before SOC: `0.1`–`0.5`, then `0.6`, `3.3.2`, `1.8
 | 3.2.3 | [modules/03-cti/02-tradecraft/03-admiralty-code](../modules/03-cti/02-tradecraft/03-admiralty-code/) |
 | 3.2.4 | [modules/03-cti/02-tradecraft/04-cognitive-biases](../modules/03-cti/02-tradecraft/04-cognitive-biases/) |
 | 3.3.1 | [modules/03-cti/03-tools/01-internal-tip](../modules/03-cti/03-tools/01-internal-tip/) |
-| 3.3.2 | [modules/00-intro/07-tool-survey/01-external-tools](../modules/00-intro/07-tool-survey/01-external-tools/) |
 | 3.4.1 | [modules/03-cti/04-file-similarity](../modules/03-cti/04-file-similarity/) |
 | 3.5.1 | [modules/03-cti/05-rdap-whois](../modules/03-cti/05-rdap-whois/) |
 | 3.6.1 | [modules/03-cti/06-advanced-dns](../modules/03-cti/06-advanced-dns/) |

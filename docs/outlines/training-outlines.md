@@ -18,7 +18,7 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 Everyone (SOC, Hunter, CTI, DE). Lessons live under `modules/00-intro/`. This whole section is taught **before SOC 1.1**. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
 
-Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`** (this section). Shared-floor IDs that stay: `3.3.2`, `1.8.1`. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
+Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`**. Tool survey is **`0.7`**. Shared-floor ID that stays: `1.8.1`. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
 
 **0.1 [K] How this course is laid out**  
 Stay in this lesson: the map of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
@@ -93,26 +93,24 @@ c. Place **this row** on one stage. Reject the previous or next stage you did no
 **0.6.3.2 [T] Kill Chain tasks**  
 1. Identify the Kill Chain stage of observed activity and why it is not the previous or next stage  
 
----
-
-# Shared floor (still `00`, still before SOC)
-
-Taught after `0.1`–`0.6`, **before SOC 1.1**. All four roles. Lessons live under `modules/00-intro/` (`07-tool-survey` through `08-environment`).
-
-Write only the asked child. Not DTF (`3.7.4`). Not hunt planning (`2.5`). Not actor products (`3.11`). Not TIP nav (`3.3.1`). Not VT Relations / platform depth (`3.9`). Not reporting products (`1.6` — last SOC hour). Not a PCAP analysis course. Role-local lists stay at `2.7` / `3.12` / `4.8`.
-
-**Retired (do not teach):** `1.7` shift change, `1.8.2` PCAP handling, `1.8.3` tool access, `1.8.4` notes, `1.8.5` IR process.
-
-**Tool survey** — ID `3.3.2`. Purpose and when to pick. Not a live vendor account. Advanced enrichment / pivot is **3.9**. Internal TIP is **3.3.1**.
-
-**3.3.2 [K] External tools (VirusTotal, AnyRun, Silent Push, URLScan)**  
-Stay in this lesson: purpose, strengths, weaknesses, and when to pick. Do not teach TIP nav (`3.3.1`) or platform depth (`3.9`).
+**0.7 [K] External tools (VirusTotal, AnyRun, Silent Push, URLScan)**  
+Taught after `0.6`, still before SOC. All four roles. Lessons live under `modules/00-intro/07-tool-survey/`. Stay in this lesson: purpose, strengths, weaknesses, and when to pick. Do not teach TIP nav (`3.3.1`) or platform depth (`3.9`). Not a live vendor account.
 
 a. Primary purpose, strengths, and weaknesses of each tool  
 b. When to use each tool  
 
-**3.3.2.1 [T] External tools tasks**  
+**0.7.1 [T] External tools tasks**  
 1. Select the appropriate external tool for a given enrichment or analysis need  
+
+---
+
+# Shared floor (still `00`, still before SOC)
+
+Taught after `0.1`–`0.7`, **before SOC 1.1**. All four roles. Lessons live under `modules/00-intro/08-environment/`.
+
+Write only the asked child. Not DTF (`3.7.4`). Not hunt planning (`2.5`). Not actor products (`3.11`). Not TIP nav (`3.3.1`). Not VT Relations / platform depth (`3.9`). Not reporting products (`1.6` — last SOC hour). Not a PCAP analysis course. Role-local lists stay at `2.7` / `3.12` / `4.8`.
+
+**Retired (do not teach):** `1.7` shift change, `1.8.2` PCAP handling, `1.8.3` tool access, `1.8.4` notes, `1.8.5` IR process.
 
 **Environment / signal flow** — ID `1.8.1`.  
 
@@ -536,7 +534,7 @@ c. Techniques to mitigate cognitive biases
 
 **3.3 [T] Tools**  
 
-Two children. Write only the asked child. **`3.3.2` (purpose and when to pick) is taught on the shared floor** after **0**. Do not re-teach the survey here. Do not turn `3.3.1` into VirusTotal / Silent Push (`3.3.2`, `3.9`) or STIX authoring (`3.10`). Classroom TIP names are stand-ins. Advanced enrichment / pivot is **3.9**.
+The external-tool survey is **`0.7`**. Do not re-teach it here. Write only the asked child. Do not turn `3.3.1` into VirusTotal / Silent Push (`0.7`, `3.9`) or STIX authoring (`3.10`). Classroom TIP names are stand-ins. Advanced enrichment / pivot is **3.9**.
 
 **3.3.1 [K] Internal threat intelligence platform**  
 a. Purpose and core functions of the internal TIP  
@@ -545,11 +543,7 @@ c. How the platform supports enrichment, analysis, and production
 
 **3.3.1.1 [T] Internal TIP tasks**  
 1. Search and retrieve relevant intelligence from the internal platform  
-2. Use the platform to support enrichment or analysis of an indicator or report  
-
-**3.3.2 [K] External tools (VirusTotal, AnyRun, Silent Push, URLScan)**  
-
-Taught on the **shared floor** after **0** (purpose and when to pick; IDs unchanged). Advanced enrichment and pivoting is **3.9**. Do not re-teach the survey in CTI.
+2. Use the platform to support enrichment or analysis of an indicator or report
 
 **3.4 [K/T] File Similarity & Hashing Techniques**  
 
@@ -568,7 +562,7 @@ d. Certificate / code-signing certificate information
 
 **3.5 [K/T] RDAP / WHOIS**  
 
-One teaching unit (`3.5.1`). Not SOA / advanced DNS (`3.6`). Not Silent Push PDNS (`3.3.2`). Redacted registrant is not “no intel” and is not nation-state attribution (`3.1.7`).
+One teaching unit (`3.5.1`). Not SOA / advanced DNS (`3.6`). Not Silent Push PDNS (`0.7`). Redacted registrant is not “no intel” and is not nation-state attribution (`3.1.7`).
 
 **3.5.1 [K] RDAP and WHOIS concepts**  
 a. Purpose of WHOIS and RDAP  
@@ -581,7 +575,7 @@ c. Key fields useful for enrichment and attribution
 
 **3.6 [K/T] Advanced DNS**  
 
-One teaching unit (`3.6.1`) — interpret SOA and use other records for enrichment/pivot. Do not re-teach Zeek `dns` fields or DGA (`1.2.3`). Not RDAP (`3.5`). Not Silent Push PDNS (`3.3.2`).
+One teaching unit (`3.6.1`) — interpret SOA and use other records for enrichment/pivot. Do not re-teach Zeek `dns` fields or DGA (`1.2.3`). Not RDAP (`3.5`). Not Silent Push PDNS (`0.7`).
 
 **3.6.1 [K] Advanced DNS concepts**  
 a. SOA records  
@@ -638,7 +632,7 @@ e. Relationship of DTF to ATT&CK, Diamond Model, and Cyber Kill Chain (discovery
 
 **3.8 [T] Enrichment & Analysis**  
 
-Write only the asked child. `3.8.1` writes the generic hop sentence from a seed — not RDAP (`3.5`), SOA (`3.6`), or Silent Push tool choice (`3.3.2`). The DTF ID line is `3.7.4`. `3.8.2` is apply-to-this-environment, not ATT&CK mapping (`3.7.1`) and not organizational impact (`3.8.4`). `3.8.3` handles the IOC as an object (keep / expire / enrich / link). `3.8.4` is the “so what here” line. Use only real ATT&CK IDs. VT Relations depth is `3.9`. Actor profile is `3.11`.
+Write only the asked child. `3.8.1` writes the generic hop sentence from a seed — not RDAP (`3.5`), SOA (`3.6`), or Silent Push tool choice (`0.7`). The DTF ID line is `3.7.4`. `3.8.2` is apply-to-this-environment, not ATT&CK mapping (`3.7.1`) and not organizational impact (`3.8.4`). `3.8.3` handles the IOC as an object (keep / expire / enrich / link). `3.8.4` is the “so what here” line. Use only real ATT&CK IDs. VT Relations depth is `3.9`. Actor profile is `3.11`.
 
 **3.8.1 [K] Identifying additional adversary infrastructure from seed indicators**  
 a. Pivoting concepts and techniques  
@@ -676,7 +670,7 @@ c. Relevance and impact are not TTP applicability (3.8.2), not a PIR (3.1.4 / 3.
 
 **3.9 [K/T] Platform-Specific Skills**  
 
-Four children. Write only the asked child unless asked for all of `3.9`. Do not re-teach the shared-floor `3.3.2` survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `2.3.1`. Conceptual infra hop is `3.8.1`. File-similarity hashes are `3.4`. Applicable TTPs are `3.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
+Four children. Write only the asked child unless asked for all of `3.9`. Do not re-teach the `0.7` survey (purpose / when to pick). Hunt conversion to SIEM/Zeek is `2.3.1`. Conceptual infra hop is `3.8.1`. File-similarity hashes are `3.4`. Applicable TTPs are `3.8.2`. Classroom result cards are lesson-only — do not require a live vendor account.
 
 **3.9.1 [K] VirusTotal**  
 a. Relations tab for infrastructure pivoting  

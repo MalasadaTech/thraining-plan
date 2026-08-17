@@ -38,7 +38,7 @@ Two ID systems exist. Do not mix them in filenames.
 | **Matrix item** (canonical) | `1.2.2.1`, `1.2.2.2` | Proficiency tracking, mapped items in guides |
 | **Outline heading** | `1.2.2` Conn knowledge, `1.2.3` Conn tasks | Curriculum design only |
 
-A **module** is a teaching unit. It may cover one outline knowledge item plus its matching tasks. **Teach order** (IDs stay): full `00-intro` first (`0.1` layout → `0.2`–`0.5` → `0.6` / `3.3.2` / `1.8.1`) → SOC `1.1`–`1.4` → **SOC ends at `1.6` reporting** → CTI → hunt → DE. Map: [modules/00-intro/README.md](modules/00-intro/README.md). **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+A **module** is a teaching unit. It may cover one outline knowledge item plus its matching tasks. **Teach order** (IDs stay): full `00-intro` first (`0.1` layout → `0.2`–`0.5` → `0.6` / `0.7` / `1.8.1`) → SOC `1.1`–`1.4` → **SOC ends at `1.6` reporting** → CTI → hunt → DE. Map: [modules/00-intro/README.md](modules/00-intro/README.md). **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 Folder names are not dotted IDs:
 
@@ -92,7 +92,7 @@ Folder names are not dotted IDs:
 | `modules/03-cti/02-tradecraft/03-admiralty-code` | `3.2.3` / `3.2.3.1` | `3.2.3` + `3.2.3.1` |
 | `modules/03-cti/02-tradecraft/04-cognitive-biases` | `3.2.4` / `3.2.4.1` | `3.2.4` + `3.2.4.1` |
 | `modules/03-cti/03-tools/01-internal-tip` | `3.3.1` / `3.3.1.1` | `3.3.1` + `3.3.1.1` |
-| `modules/00-intro/07-tool-survey/01-external-tools` | `3.3.2` / `3.3.2.1` | `3.3.2` + `3.3.2.1` task 1 (early shared) |
+| `modules/00-intro/07-tool-survey/01-external-tools` | `0.7` / `0.7.1` | `0.7` + `0.7.1` (00.07) |
 | `modules/03-cti/04-file-similarity` | `3.4.1` / `3.4.1.1`–`3.4.1.2` | `3.4.1` + `3.4.1.1` |
 | `modules/03-cti/05-rdap-whois` | `3.5.1` / `3.5.1.1` | `3.5.1` + `3.5.1.1` |
 | `modules/03-cti/06-advanced-dns` | `3.6.1` / `3.6.1.1` | `3.6.1` + `3.6.1.1` |

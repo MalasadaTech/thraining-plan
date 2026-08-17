@@ -10,6 +10,6 @@ Everyone. Taught **before SOC**. Folder order is teach order.
 | [04-how-work-moves](04-how-work-moves/) | `0.4` / `0.4.1` | How work can move |
 | [05-where-jobs-overlap](05-where-jobs-overlap/) | `0.5` | Where the jobs lightly overlap |
 | [06-frameworks](06-frameworks/) | `0.6` | ATT&CK, Diamond, Kill Chain |
-| [07-tool-survey](07-tool-survey/) | `3.3.2` | VT / AnyRun / Silent Push / URLScan |
+| [07-tool-survey](07-tool-survey/) | `0.7` | VT / AnyRun / Silent Push / URLScan |
 | [08-environment](08-environment/) | `1.8.1` | Environment / signal flow (rewrite later) |
 

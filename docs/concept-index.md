@@ -305,7 +305,7 @@ Also: Any.Run, AnyRun sandbox, interactive sandbox for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of AnyRun](#purpose-strengths-and-weaknesses-of-anyrun)
 
@@ -315,7 +315,7 @@ Also: AnyRun for intelligence, detonate a sample
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
 | Used | [3.9.2 AnyRun](../modules/03-cti/09-platforms/02-anyrun/) | CTI, Hunter |
 
 See also: [AnyRun for hunting](#anyrun-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
@@ -610,7 +610,7 @@ Also: RDAP SOA PDNS TIP as infra sources, classroom infra source set
 |----------|--------|-------|
 | Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 
-How to *read* those sources was taught in [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/), [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/), and [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/).
+How to *read* those sources was taught in [3.5.1 RDAP and WHOIS Concepts](../modules/03-cti/05-rdap-whois/), [3.6.1 Advanced DNS Concepts](../modules/03-cti/06-advanced-dns/), and [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/).
 
 See also: [pivoting concepts and techniques](#pivoting-concepts-and-techniques), [pivot from a seed indicator to additional adversary infrastructure](#pivot-from-a-seed-indicator-to-additional-adversary-infrastructure)
 
@@ -959,12 +959,12 @@ See [missing SNI](#missing-sni).
 
 ### enrich or pivot using an external tool
 
-Also: one hop, classroom pivot, not Relations graph
+Also: one hop, classroom pivot, not Relations graph. Survey select is [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/). Pivot depth is later.
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
-| Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Taught | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
+| Used | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
@@ -3811,9 +3811,9 @@ Also: pick VT AnyRun Silent Push URLScan, reject neighbor tool
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
 
-See also: [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process), [enrich or pivot using an external tool](#enrich-or-pivot-using-an-external-tool)
+See also: [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
 
 ### search and retrieve from the internal TIP
 
@@ -3922,7 +3922,7 @@ Also: Silent Push, passive DNS for hunting, infra clustering for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of Silent Push](#purpose-strengths-and-weaknesses-of-silent-push)
 
@@ -3932,7 +3932,7 @@ Also: Silent Push for intelligence, historical PDNS
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
 | Used | [3.8.1 Identifying Additional Adversary Infrastructure from Seed Indicators](../modules/03-cti/08-enrichment/01-infra-pivot/) | CTI, Hunter |
 | Used | [3.9.3 Silent Push](../modules/03-cti/09-platforms/03-silent-push/) | CTI, Hunter |
 
@@ -4581,7 +4581,7 @@ Also: urlscan.io, URLScan page scan, URLScan for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of URLScan](#purpose-strengths-and-weaknesses-of-urlscan)
 
@@ -4591,7 +4591,7 @@ Also: URLScan for intelligence, live page scan
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
 | Used | [3.9.4 URLScan](../modules/03-cti/09-platforms/04-urlscan/) | CTI, Hunter |
 
 See also: [URLScan for hunting](#urlscan-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
@@ -4772,17 +4772,17 @@ Also: VT, VirusTotal Relations, VirusTotal for hunting
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [2.3.1 Tool Capabilities for Hunting](../modules/02-hunter/03-online-tools/) | Hunter, SOC, CTI |
-| Used | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Used | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
 
 See also: [tool capabilities for hunting](#tool-capabilities-for-hunting), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
 ### purpose, strengths, and weaknesses of VirusTotal
 
-Also: VT for intelligence, hash reputation, one hop not Relations
+Also: VT for intelligence, hash reputation, not Relations
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
 | Used | [3.9.1 VirusTotal (Relations and Behavior Tabs)](../modules/03-cti/09-platforms/01-virustotal/) | CTI, Hunter |
 
 See also: [VirusTotal for hunting](#virustotal-for-hunting), [when to use each external tool in the intelligence process](#when-to-use-each-external-tool-in-the-intelligence-process)
@@ -4860,7 +4860,7 @@ Also: first external tool, hash vs sample vs history vs live URL
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [3.3.2 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | CTI, Hunter |
+| Taught | [0.7 External Tools](../modules/00-intro/07-tool-survey/01-external-tools/) | SOC, Hunter, CTI, DE |
 
 See also: [select the appropriate external tool](#select-the-appropriate-external-tool), [purpose, strengths, and weaknesses of VirusTotal](#purpose-strengths-and-weaknesses-of-virustotal)
 
