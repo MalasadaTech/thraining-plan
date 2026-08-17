@@ -140,6 +140,7 @@ A **module** is a teaching unit. It may cover one outline knowledge item plus it
 | `modules/04-de/04-tune-requests` | `4.4` / `4.4.1`–`4.4.2` | `4.4` a–d + `4.4.1` |
 | `modules/04-de/05-hunt-and-intel-packages` | `4.5` / `4.5.1`–`4.5.2` | `4.5` a–d + `4.5.1` |
 | `modules/04-de/06-detection-lifecycle` | `4.6` / `4.6.1`–`4.6.2` | `4.6` a–d + `4.6.1` |
+| `modules/04-de/07-sensors` | `4.7` / `4.7.1`–`4.7.2` | `4.7` a–c + `4.7.1` |
 
 Record the mapping in each module `README.md`.
 

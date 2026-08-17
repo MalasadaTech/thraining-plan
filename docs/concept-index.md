@@ -1444,6 +1444,46 @@ Also: earns its keep, 4.6.2
 
 See also: [a block is not a DE deploy](#a-block-is-not-a-de-deploy), [lifecycle reasons](#lifecycle-reasons)
 
+### sometimes DE watches sensors
+
+Also: MDE Zeek IDS, up and seeing the right place
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.7 Sensor availability and performance](../modules/04-de/07-sensors/) | DE, SOC, Hunter, CTI |
+
+See also: [a dead or blind sensor is not no threat](#a-dead-or-blind-sensor-is-not-no-threat), [lifecycle reasons](#lifecycle-reasons)
+
+### a dead or blind sensor is not no threat
+
+Also: down sensor is not proof, 4.7.2
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.7 Sensor availability and performance](../modules/04-de/07-sensors/) | DE, SOC, Hunter, CTI |
+
+See also: [check the rule, the sensor, or both](#check-the-rule-the-sensor-or-both)
+
+### not a vendor admin course
+
+Also: not architecture, not sensor engineering
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.7 Sensor availability and performance](../modules/04-de/07-sensors/) | DE, SOC, Hunter, CTI |
+
+See also: [sometimes DE watches sensors](#sometimes-de-watches-sensors)
+
+### check the rule, the sensor, or both
+
+Also: the rule never fired, 4.7.1
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [4.7 Sensor availability and performance](../modules/04-de/07-sensors/) | DE, SOC, Hunter, CTI |
+
+See also: [a dead or blind sensor is not no threat](#a-dead-or-blind-sensor-is-not-no-threat)
+
 ### what an IOC is versus a TTP
 
 Also: IOC vs TTP, observable vs behavior

@@ -115,3 +115,4 @@ Module IDs in the CSV are teaching-unit IDs (same as the matrix), not outline K/
 | 4.4 | [modules/04-de/04-tune-requests](../modules/04-de/04-tune-requests/) |
 | 4.5 | [modules/04-de/05-hunt-and-intel-packages](../modules/04-de/05-hunt-and-intel-packages/) |
 | 4.6 | [modules/04-de/06-detection-lifecycle](../modules/04-de/06-detection-lifecycle/) |
+| 4.7 | [modules/04-de/07-sensors](../modules/04-de/07-sensors/) |
