@@ -9,77 +9,83 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.3.3 – YARA Rules  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Byte patterns in a file or in memory  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Byte patterns. Propose, do not deploy. Not SIGMA. Not Suricata.
+1.3.2 was the network signature. This lesson is YARA: read a byte-pattern rule and propose a basic one. It is not SIGMA, not Suricata, and not how to dump memory.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts **read** a byte-pattern rule and **propose** a basic one.
+SOC analysts match **byte patterns** on a file they already have.
 
-Scan a file you already have (**1.2.7**), or memory the shop already collects.
+A log can name the file. It does not show the bytes inside.
+
+Read a rule. Propose a basic create or modify.  
+Not a SIEM query. Not how to dump memory. Not deploy.
 
 **Speaker Notes:**  
-Do not dump memory this hour.
+This slide is the student intro. The job is to say what a YARA rule would hit, then propose a basic one. Suricata stays on the wire. SIEM is the next lesson.
 
 ---
 
-### Slide 3 – Structure
+### Slide 3 – Purpose and structure
 **Title:** Purpose and structure
 
-**YARA** — match bytes in a file or in memory.
+**YARA** matches bytes in a file or in process memory.
 
-Need **`strings`** and a real **`condition`**.  
+A useful rule needs **`strings`** and a real **`condition`**.  
 **`meta`** is notes, not the match.
 
 **Speaker Notes:**  
-Outline a. `condition: true` is not a proposal.
+Name the three blocks, then stop. A rule with strings and `condition: true` is not a useful proposal. Deploy is not this lesson.
 
 ---
 
-### Slide 4 – Matching and where
-**Title:** ASCII, hex, regex; file vs memory
+### Slide 4 – ASCII, hex, regex
+**Title:** ASCII, hex, regex
 
 **ASCII** — `"update.exe" ascii nocase`.  
-**Hex** — `{ 4D 5A }` (`MZ`).  
-**Regex** — `/pattern/`. Easy to over-match.
+**Hex** — `{ 4D 5A }` (`MZ`). Not Suricata `content:"|4d 5a|"`.  
+**Regex** — `/update\.(exe|dll)/ nocase`. Easy to over-match.
 
-**File** — `at 0` and `filesize` can apply.  
-**Memory** — usually drop those.
+Named patterns plus a boolean: `and`, `or`, `filesize`, `at 0`.
 
 **Speaker Notes:**  
-Outline b–d. Same three techniques as Suricata, different syntax.
+Same three techniques as Suricata, different syntax. If they paste pipe-hex from last lesson, switch them to braces. Regex is a technique, not a requirement on every rule.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – File vs memory
+**Title:** File vs memory
 
-No memory-acquisition how-to.  
-No YARA on a log row.  
-No production push.
+**File** — disk or a saved extract. `at 0` and `filesize` can apply.
+
+**Memory** — a process the shop already scans. Drop `filesize`. Drop `at 0` for a PE header.
+
+If your shop does not scan memory, say so and stay on files.
 
 **Speaker Notes:**  
-SIEM next.
+`filesize` does not apply on a process scan, so that condition will not match. MZ at offset 0 assumes the scanned blob starts with the PE. Do not teach how to acquire memory.
 
 ---
 
-### Slide 6 – What good looks like
+### Slide 6 – Read it. Propose a basic one.
 **Title:** Read it. Propose a basic one.
 
 **Given:** MZ at 0 **and** `"update.exe"`, `filesize < 5MB`.
 
-**Detects:** a PE that contains that name. Fits the **1.2.7** extract.
+**Detects:** a PE file that contains that name, under 5 MB.
 
-`MZ at 0` alone matches Notepad.
+`{ 4D 5A } at 0` alone matches Notepad.
+
+SOC **proposes**. DE reviews.
 
 **Speaker Notes:**  
-Do not tell the PRD plot.
+Show this given before the knowledge check. One sentence: a file that starts with MZ and contains update.exe, under 5 MB. It can fit a 1.2.7 extract if you scan those bytes. It is not a files-log match and not a conviction. Do not tell the PRD plot.
 
 ---
 
@@ -91,7 +97,7 @@ Do not tell the PRD plot.
 3. Why is `{ 4D 5A } at 0` alone a poor proposal?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -100,10 +106,10 @@ Answers only in the instructor guide. Three questions. Stop.
 
 Meta + strings + condition.  
 ASCII / hex / regex.  
-File vs memory.  
+File rules may use `at 0` and `filesize`. Memory often must not.  
 You propose. You do not deploy.
 
 **Next:** **1.3.4** SIEM rules
 
 **Speaker Notes:**  
-Log fields or a SIGMA rule next.
+1.3.4 is log fields or a SIGMA rule, not bytes. Stay off YARA syntax when you get there.

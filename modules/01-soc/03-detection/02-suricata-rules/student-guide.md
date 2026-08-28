@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Name action, header, and options, and how a Suricata hit relates to a Zeek row.
+1. Name action, header, and options on a Suricata rule, and say how a hit relates to a Zeek log of the same session.
 2. Read an existing rule and say what it detects; propose a **basic** create or modify.
 
 **Mapped Proficiency Items:**
@@ -25,9 +25,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts **read** a network signature and **propose** a basic one. **1.3.1** was SIGMA (host YAML). This hour is Suricata. You do **not** deploy it. How detections run as a service is **4.x**.
+SOC analysts read a **network signature** to see what on the wire would fire. That is daily alert work: an alert names a Suricata rule, and you have to say what it matches — protocol, direction, and the string or buffer it looks for — and whether that match is specific. **1.3.1** was portable YAML for host logs (SIGMA). This lesson is **Suricata**: packets and streams. You do **not** deploy it. How detections run as a service is **4.x**. It is **not** YARA (**1.3.3**).
 
-**Suricata** inspects packets / streams and can **alert**. This lesson uses `alert` only.
+**Suricata** inspects packets and streams and can **alert** when a signature matches. This lesson uses `alert` only — not drop or reject.
 
 ```
 alert proto src_ip src_port -> dst_ip dst_port ( options )
@@ -35,14 +35,16 @@ alert proto src_ip src_port -> dst_ip dst_port ( options )
 
 | Idea | What to read |
 |------|----------------|
-| **Action, header, options** | Action = `alert`. Header = proto, addresses, ports, `->`. Options = `msg`, `sid`, `rev`, and the match keywords |
-| **Common options** | `content:"..."`. HTTP buffers: `http.uri`, `http.method`, `http.user_agent`. TLS: `tls.sni` (same *idea* as Zeek `server_name`). `flow:established,to_server` |
-| **ASCII / hex / regex** | ASCII = `content:"/update.exe"`. Hex = `content:"\|4d 5a\|"` (`MZ`). Regex = `pcre:"/update\\.(exe\|dll)/i"`. Do not paste exploit payloads |
-| **Vs Zeek** | Same session can make a Suricata hit **and** a Zeek `http` / `ssl` / `conn` row. Suricata = signature matched. Zeek = parsed fields. Pivot with time + 5-tuple. Do not put Zeek field names in the rule |
+| **Action, header, options** | Action = `alert`. Header = protocol, addresses, ports, and `->`. Options = `msg`, `sid`, `rev`, and the match keywords |
+| **Common options** | `content:"..."`. HTTP buffers: `http.uri`, `http.method`, `http.user_agent`. TLS: `tls.sni` (the name the client asked for). `flow:established,to_server` means an established connection, client to server |
+| **ASCII / hex / regex** | ASCII = `content:"/update.exe"`. Hex = `content:"\|4d 5a\|"` (the two bytes `MZ` that start a Windows executable). Regex = `pcre:"/update\\.(exe\|dll)/i"`. Regex is easy to over-match. Do not paste exploit payloads |
+| **Vs Zeek** | Zeek writes parsed fields for the session (method, URI, who talked). Suricata writes that this signature matched. The same session can produce both. Join them with time plus the **5-tuple** (source IP, source port, destination IP, destination port, protocol). Do not put Zeek field names (`uri`, `id.orig_h`, `uid`) in the Suricata rule |
+
+`$HOME_NET` means our network. `$EXTERNAL_NET` means not our network. Both are **site variables**. Do not invent the address range.
 
 **What good looks like:**
 
-- Analyze: name action, header, options, and what would fire. A raw `content:"GET"` on `tcp any any` is too broad.
+- Analyze: name action, header, options, and what would fire. A raw `content:"GET"` on `tcp any any` is too broad — those three bytes match anywhere in any TCP session.
 - Given:
 
 ```
@@ -54,15 +56,15 @@ alert http $HOME_NET any -> $EXTERNAL_NET any (
   sid:1000001; rev:1;)
 ```
 
-**What it detects:** outbound HTTP GET whose URI contains `/update.exe`. Same object as **1.2.5**. A matching session should have a Zeek `http` row.
+**What it detects:** outbound HTTP GET whose URI contains `/update.exe`. A matching session should also have a Zeek `http` log of that GET.
 
-- Modify / create: a **basic** `alert` with header, `msg`, `sid`, `rev`, and one specific `content` in the right buffer. Tightening “any GET” by adding `http.uri` is a modify. SOC **proposes**. DE reviews.
+- Modify / create: a **basic** `alert` with a header, `msg`, `sid`, `rev`, and one specific `content` in the right buffer. Tightening “any GET” by adding `http.uri` is a modify. SOC **proposes**. Detection Engineering reviews.
 
 ---
 
 ## 2. Knowledge Check
 
-1. A Suricata rule is action, header, and options. True or false?
+1. Suricata and Zeek do the same job on a session. True or false?
 2. The given rule above — what does it detect, in one sentence?
 3. Why is `content:"GET"` on `tcp any any` a poor proposal?
 
@@ -70,7 +72,7 @@ alert http $HOME_NET any -> $EXTERNAL_NET any (
 
 ## 3. Summary
 
-Suricata is action + header + options. Put the match in the right buffer. ASCII, hex, and regex are techniques. Zeek tells you the session. You propose. You do not deploy.
+A Suricata rule is action, header, and options. Put the match in the right buffer. ASCII, hex, and regex are techniques. Zeek tells you the session; Suricata tells you the signature matched. You propose. You do not deploy.
 
 **Next:** **1.3.3** YARA rules.
 

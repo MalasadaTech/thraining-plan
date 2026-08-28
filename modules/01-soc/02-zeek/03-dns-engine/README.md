@@ -17,7 +17,7 @@ This folder is **not** outline item `1.2.3` (that heading is Conn engine tasks).
 
 ## Concepts taught
 
-- `dns` log
+- `dns` log (also: DNS events, DNS logs)
 - DNS query (question)
 - DNS response (answer)
 - common DNS record types

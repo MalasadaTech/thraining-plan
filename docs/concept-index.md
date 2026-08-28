@@ -1720,7 +1720,7 @@ See also: [identifying the cause class and what you would change](#identifying-t
 
 ### file create / rename-move / delete / modify / read
 
-Also: FileCreated, FileRenamed, FileDeleted, FileModified, FileRead, Sysmon Event ID 11, Sysmon Event ID 23, Sysmon Event ID 26
+Also: FileCreated, FileRenamed, FileDeleted, FileModified, file read (where logged), Sysmon Event ID 11, Sysmon Event ID 23, Sysmon Event ID 26
 
 | Coverage | Module | Roles |
 |----------|--------|-------|

@@ -5,7 +5,7 @@
 - SOC: 1.4.2.1 A / B / C ; 1.4.2.2 2b / 3c / 4c  
 - Hunter: 1.4.2.1 B / C / C ; 1.4.2.2 2b / 3c / 4c  
 - CTI: 1.4.2.1 A / A / B ; 1.4.2.2 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Define TP, FP, TN, and FN.
+1. Define **True Positive (TP)**, **False Positive (FP)**, **True Negative (TN)**, and **False Negative (FN)**.
 2. Classify a given case and **cite the evidence**, including at least one miss as FN.
 
 **Mapped Proficiency Items:**
@@ -24,25 +24,31 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts put a **label plus a cite** on the case they just investigated. **1.4.1** gathered context. This hour you do **not** explain *why* an FP fired (**1.4.3**). You do **not** pick scan/root/user (**1.4.4**).
+After you have looked at a case, you still have to **classify** it. A classification says whether the detection was right — a real hit, a noisy fire, ordinary activity that correctly stayed quiet, or a miss. You also **cite the evidence**: a short pointer to the field or log that proves the label. That is the job in this lesson. Without a label, the next person cannot tell a real hit from a miss. Without a cite, “malicious” is a slogan.
+
+**1.4.1** gathered context on a fired alert. This lesson is the four labels. It is **not** why a false positive fired (**1.4.3**). It is **not** scan / root / user (**1.4.4**).
+
+Fired alerts sit in an **alert queue** — the list waiting for an analyst. True negatives and false negatives usually are **not** in that list, because nothing fired.
 
 | Label | Detection said | Reality |
 |-------|----------------|---------|
 | **True Positive (TP)** | Bad | Bad — a fired alert, and the activity is what the rule is for |
-| **False Positive (FP)** | Bad | Benign — a fired alert, authorized / expected activity |
+| **False Positive (FP)** | Bad | Benign — a fired alert, authorized or expected activity |
 | **True Negative (TN)** | Not bad | Benign — **no alert**, ordinary activity |
 | **False Negative (FN)** | Not bad | Bad — **no alert**, activity that should have been detected |
 
-**FN is not a fired alert you dislike.** It is a miss. You meet it in a log you pulled, a hunt, or after-action — not as a queue row.
+A **false negative is not a fired alert you dislike.** It is a **miss**. You find it in related logs, in a hunt, or after an incident — not as a fired alert in the queue.
 
-**Evidence** is a short cite: parent + `-enc`, dest + URI, “no alert on that GET.” A slogan (“malicious”) is not evidence.
+**Evidence** is a short cite: parent plus `-enc`, destination plus URI, “no alert on that GET.” A slogan (“malicious”) is not evidence.
 
-**What good looks like:**
+**What good looks like:** someone gives you a case. You name TP, FP, TN, or FN. You point at the field or log that proves it.
 
-- **TP:** Alert `Encoded PowerShell from script host`. Cite: `wscript` + `-enc` is the activity the rule is for, and it happened (**1.4.1**).
-- **FP:** Alert on any PowerShell; logs show interactive `Get-Help`. Cite: PowerShell ran; it is ordinary help, not encoded/script-host. *Why* the rule is broad is **1.4.3**.
+- **TP:** Alert `Encoded PowerShell from script host`. Cite: `wscript` plus `-enc` is the activity the rule is for, and it happened (**1.4.1**).
+- **FP:** Alert on any PowerShell; logs show interactive `Get-Help`. Cite: PowerShell ran; it is ordinary help, not encoded script-host. *Why* the rule is broad is **1.4.3**.
 - **TN:** No alert on ordinary browser activity. Cite: expected browse, no matching bad pattern. Do not invent an alert so you can classify it.
-- **FN:** Zeek/HTTP shows `GET /update.exe` to `203.0.113.88:8080`, **no** alert in the queue. Cite: the download occurred; nothing fired. That is a miss.
+- **FN:** HTTP shows `GET /update.exe` to `203.0.113.88:8080`, **no** alert in the queue. Cite: the download occurred; nothing fired. That is a miss.
+
+Do not pick a category yet (**1.4.4**). Do not explain why the false-positive rule is noisy (**1.4.3**).
 
 ---
 
@@ -56,7 +62,7 @@ SOC analysts put a **label plus a cite** on the case they just investigated. **1
 
 ## 3. Summary
 
-Four labels. TN and FN usually have **no** queue row. Classify the case and cite. Why an FP fired is next.
+Four labels. A true negative and a false negative usually have **no** alert in the queue. Classify the case and cite the evidence. Why a false positive fired is next.
 
 **Next:** **1.4.3** Common false positive causes.
 

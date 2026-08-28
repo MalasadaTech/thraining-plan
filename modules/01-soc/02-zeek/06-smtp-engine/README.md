@@ -13,7 +13,7 @@
 | 1.2.6.2 | T | Analyze a Zeek SMTP log and accurately describe what occurred | 1.2.11 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 1a / 2b |
 | 1.2.6.3 | T | Create a SIEM query to detect specific SMTP activity | 1.2.11 task 2 | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 1a / 2b |
 
-The teaching-unit ID is **1.2.6**. Outline headings `1.2.10` / `1.2.11` are the K/T pair. HTTP is **1.2.5**. Files is **1.2.7**. No lab.
+The teaching-unit ID is **1.2.6**. Outline headings `1.2.10` / `1.2.11` are the K/T pair. HTTP is **1.2.5**. Files is **1.2.7**. Not a mailbox. Not the attachment hash. No lab.
 
 ## Concepts taught
 

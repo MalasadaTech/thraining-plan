@@ -17,7 +17,7 @@ The teaching-unit ID is **1.1.3**. Process activity is **1.1.2**. Host-observed 
 
 ## Concepts taught
 
-- file system activity
+- file system activity (also: file events, file logs)
 - file create / rename-move / delete / modify / read
 - path, name, and extension
 - file hashes

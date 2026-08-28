@@ -9,24 +9,26 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.2.1 – Zeek Concepts  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Network-sensor logs from the wire  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Start of the Zeek unit. Map hour. Not conn fields. Not Wireshark.
+1.1 was host and endpoint activity — logs from the host. This unit is network-sensor telemetry. This lesson does not teach conn fields or Wireshark.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-**1.1** was host rows. This unit is the **wire**.
+An alert can name traffic on the **wire**, not only a host.
 
-Zeek writes structured logs.  
-It does **not** name the initiating process.
+**1.1** was host and endpoint activity — logs from the host.  
+This unit is **network-sensor** telemetry.
+
+Zeek writes structured logs. It does **not** name the initiating process.
 
 **Speaker Notes:**  
-That field was 1.1.4. Stay on the sensor.
+This slide is the student intro. Analysts read Zeek when the work is on the wire. Name what Zeek is before anyone opens conn fields.
 
 ---
 
@@ -38,21 +40,21 @@ Not primarily a signature IDS.
 It classifies traffic and writes logs you query in a SIEM.
 
 **Speaker Notes:**  
-Outline a. Stop. Do not teach Bro history as a unit.
+Stay on what Zeek is. Do not teach Bro history as a unit. Do not turn this into a Suricata lesson.
 
 ---
 
 ### Slide 4 – Engines
-**Title:** Engines extract
+**Title:** Engines extract protocol
 
-An engine decides the protocol and **extracts** the fields.
+An **engine** (script / analyzer) looks at a flow, decides the protocol, and **extracts** the fields.
 
-That is how applications and protocols **surface** as log rows.
+That is how applications and protocols **surface** as logs you can query.
 
-Conn, DNS, TLS, HTTP come later. Not today.
+Conn, DNS, TLS, HTTP, SMTP, files, and weird are later lessons.
 
 **Speaker Notes:**  
-Outline b–c. Do not walk `orig_h`.
+Surface means the application or protocol shows up as a log. Do not walk `orig_h`. Those fields are 1.2.2.
 
 ---
 
@@ -61,12 +63,12 @@ Outline b–c. Do not walk `orig_h`.
 
 A Zeek log is an **extract**.
 
-Pull PCAP to **verify** the row, or to **expand** what the log does not carry.
+Pull **PCAP** (a packet capture) to **verify** that extract, or to **expand** what the log does not carry.
 
-Not Wireshark. Not the download path. Not **1.4.1**.
+Not Wireshark. Not the site download path.
 
 **Speaker Notes:**  
-Outline d. Sensors are 0.8. Apply-versus-alert is later.
+PCAP is why you pull the packets, not how you read them. Sensors are 0.8. Applying PCAP against an alert is 1.4.1.
 
 ---
 
@@ -75,10 +77,10 @@ Outline d. Sensors are 0.8. Apply-versus-alert is later.
 
 1. Zeek is primarily a signature-based IDS. True or false?  
 2. What does an engine do?  
-3. You already have a Zeek row. Why pull PCAP?
+3. You already have a Zeek log. Why pull PCAP?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -92,4 +94,4 @@ PCAP verifies or expands the extract.
 **Next:** **1.2.2** Conn engine
 
 **Speaker Notes:**  
-That hour is orig_h / orig_p / resp_h / resp_p / state.
+1.2.2 is the conn log on the same network-sensor telemetry. Stay off conn fields until then.

@@ -7,12 +7,12 @@
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 1.5.3.1 | K | Notification and distribution | 1.5.3 a–c | A / B / C | A / B / B | B / C / C |
-| 1.5.3.2 | T | Route a report: name recipients, leadership awareness, and the approved channel | 1.5.3.1 task 1 | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
+| Matrix ID | Type | Item | Outline heading |
+|-----------|------|------|-----------------|
+| 1.5.3.1 | K | Notification and distribution | 1.5.3 a–c |
+| 1.5.3.2 | T | Route a report: name recipients, leadership awareness, and the approved channel | 1.5.3.1 task 1 |
 
-The teaching-unit ID is **1.5.3**. It closes unit **1.5**. SOC ends. Next is **3.1.1**. Report types are **1.5.1**. Timelines are **1.5.2**. Classroom chart is this lesson only — not a live shop matrix. **1.7** is retired. No lab.
+The teaching-unit ID is **1.5.3**. Report types are **1.5.1**. Timelines are **1.5.2**. This lesson closes unit **1.5**. SOC ends. Next is **2.1.1**. Classroom chart is this lesson only — not a live shop matrix. **1.7** is retired. No lab.
 
 ## Concepts taught
 

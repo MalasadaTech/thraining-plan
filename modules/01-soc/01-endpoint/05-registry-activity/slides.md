@@ -9,36 +9,38 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.1.5 – Registry Activity  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** What changed in a key or value  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Host registry rows. Not a persistence catalog. Not Sysmon install.
+1.1.1 named the five kinds of host activity. This lesson is the registry kind. It is not a persistence catalog, not Zeek, and not how to install Sysmon.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts read **host** registry rows: what changed, by whom.
+SOC analysts read **registry** events to see what changed in a key or value, and which process changed it.
 
-Not a persistence hunt (**2.6**).  
-Not Zeek. Not how to install Sysmon.
+Set. Delete. Rename.  
+Not a persistence catalog. Not Zeek. Not how to install Sysmon.
 
 **Speaker Notes:**  
-Describe the set. Hunt techniques wait.
+This is daily alert work: describe the registry event. Persistence techniques wait for a later lesson. File and process write-ups wait too.
 
 ---
 
 ### Slide 3 – Hive, key, value
-**Title:** Hive, key → value
+**Title:** Hive, key, value
 
 **Hive** — `HKLM` / `HKCU`, or `\REGISTRY\MACHINE\` / `\REGISTRY\USER\`.  
 **Key** — the path.  
 **Value** — the named slot plus data.
 
+Sysmon often writes `HKU\<SID>` for the user hive. That is the same tree as HKCU.
+
 **Speaker Notes:**  
-Outline a. Native prefix and friendly name are the same tree.
+Walk hive vs key vs value first. Native prefix and friendly name are the same tree. Do not teach every hive in Windows.
 
 ---
 
@@ -51,10 +53,10 @@ Outline a. Native prefix and friendly name are the same tree.
 
 **Initiating process** — who changed the key.
 
-**Run / Services** — example **locations**. Not **2.6**.
+**Run / Services** — example **locations**. Not a persistence catalog.
 
 **Speaker Notes:**  
-Outline b–d. Do not inventory every persistence method.
+Name Run or Services when that is where the change sat. Do not inventory every persistence method. Who changed the key is this event, not a process-create write-up.
 
 ---
 
@@ -65,16 +67,17 @@ Sysmon **12** / **13** / **14**.
 
 MDE `DeviceRegistryEvents` `ActionType`:  
 **RegistryValueSet**. **RegistryKeyCreated**.  
-**Registry*Deleted**. **Registry*Renamed**.
+**RegistryKeyDeleted** / **RegistryValueDeleted**. **RegistryKeyRenamed**.
 
-Same story. Different names. Full `ActionType` list is in the Defender portal — do not invent values.
+Same activity. Different field names.  
+The full `ActionType` list is in the Defender portal — do not invent values.
 
 **Speaker Notes:**  
-Outline e. Event 13 is SetValue.
+Event 13 is SetValue. Event 12 is create or delete. Event 14 is rename. Do not invent `RegistryValueRenamed` on this MDE table. Do not teach Sysmon install.
 
 ---
 
-### Slide 6 – What good looks like
+### Slide 6 – Describe it. Query something specific.
 **Title:** Describe it. Query something specific.
 
 One sentence: what happened to which key/value, by whom.
@@ -85,19 +88,19 @@ A query names a **specific** pattern — initiator + key path.
 Not “all registry events.”
 
 **Speaker Notes:**  
-They should see this row before the knowledge check. PowerShell set HKCU Run Updater to the Temp path. File create is 1.1.3. Do not tell the PRD plot.
+Show this given before the knowledge check. One sentence: PowerShell set HKCU Run value Updater to that Temp path. The file create of update.exe is a different event. Do not tell the intro plot.
 
 ---
 
 ### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. A Run-key row is a finished persistence hunt. True or false?  
+1. A Run-key event is a finished persistence hunt. True or false?  
 2. `powershell.exe` SetValue on HKCU `Run\Updater` = Temp `update.exe`. In one sentence, what occurred?  
-3. A SIEM query that matches every `DeviceRegistryEvents` row is a good “specific registry operation” query. True or false?
+3. A SIEM query that matches every registry event is a good “specific registry operation” query. True or false?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -105,11 +108,12 @@ Answers only in the instructor guide. Three questions for the whole lesson. Stop
 **Title:** Summary
 
 What changed in the hive, by whom.  
-Key, value, and initiator tell the story.  
+Set, delete, or rename.  
+Key, value, and initiator are what you write down.  
 Run and Services are locations, not a hunt course.  
 A query is specific.
 
 **Next:** **1.1.6** Image and driver load
 
 **Speaker Notes:**  
-Last 1.1 child. Then Zeek.
+1.1.6 is the load event on the same host telemetry. Stay off this registry event when you get there.

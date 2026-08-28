@@ -8,7 +8,7 @@
 
 These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection Engineer roles.
 
-**Stay in this lesson:** a short note under a unit or child says what this hour is *not*. It is not extra syllabus. Follow it when writing or revising the lesson. How to write the lesson is [generate-module.md](../generate-module.md).
+**Stay in this lesson:** a short note under a unit or child says what this lesson is *not*. It is not extra syllabus. Follow it when writing or revising the lesson. How to write the lesson is [generate-module.md](../generate-module.md).
 
 **Teach order:** `0` (includes `0.6`–`0.8`) → SOC `1` → **CTI `2`** → hunt `3` → DE `4`. This file is in that order. Folders: `02-cti`, `03-hunter`.
 
@@ -196,7 +196,7 @@ d. How this shows up: Sysmon 6 / 7; MDE `DeviceImageLoadEvents`
 
 **1.2 [K/T] Zeek and Zeek Engines**
 
-Network-sensor telemetry. Host-observed process/file/network/registry/image activity is 1.1. Stay in this lesson: this is not a PCAP analysis course. PCAP is mentioned on **1.2.1** (why you pull it). Applying PCAP against an alert is **1.4.1**. Where sensors sit is **0.8.g**. Download / view is **1.8.3** if the shop lists them.
+Network-sensor telemetry. **1.1** is host and endpoint activity (logs from the host). Stay in this lesson: this is not a PCAP analysis course. PCAP is mentioned on **1.2.1** (why you pull it). Applying PCAP against an alert is **1.4.1**. Where sensors sit is **0.8.g**. Download / view is **1.8.3** if the shop lists them.
 
 **1.2.1 [K] Zeek concepts**  
 Stay in this lesson: what Zeek is, how engines extract, and that PCAP is the usual next artifact. Not Wireshark. Not site download path. Not **1.4.1**.
@@ -380,7 +380,7 @@ b. Required time to process an alert (close or escalate)
 
 **1.5 [K/T] Reporting**
 
-Last SOC hour. Sits at the **SOC / CTI seam** after alerts (`1.4`). Three units — do not collapse them. The RFI type is the door into CTI. Finished intel products are **2.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task. **`1.7` is retired.**
+Last SOC block. Sits at the **SOC / CTI seam** after alerts (`1.4`). Three units — do not collapse them. The RFI type is the door into CTI. Finished intel products are **2.11**. Alert start/close clocks are **1.4.5**. Each knowledge item has its own applying task. **`1.7` is retired.**
 
 **1.5.1 [K] Report types**  
 a. Incident report  

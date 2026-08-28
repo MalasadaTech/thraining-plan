@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek `smtp` row: mail from, rcpt to, subject, message ID, and who talked to whom.
+1. Read a Zeek `smtp` log: mail from, rcpt to, subject, message ID, and who talked to whom.
 2. Describe what an `smtp` log shows, and say what a **specific** SIEM query looks like.
 
 **Mapped Proficiency Items:**
@@ -25,25 +25,25 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts read the Zeek **`smtp`** log to see a mail transaction on the **wire**. **1.2.5** was HTTP. This hour is envelope and a few headers — not a mailbox, not the attachment bytes. Attachments are **1.2.7**. The process that spoke SMTP is **1.1.4**.
+SOC analysts read the Zeek **`smtp`** log to see a mail transaction on the **wire**. That is daily alert work: an alert names a session, and you have to say who the session claimed mail was from and to, what subject was logged, and which hosts talked. It is **not** a mailbox. It is **not** the attachment bytes — those are **1.2.7**. It does **not** name the initiating process. That was **1.1.4**.
 
-**`smtp`** is one row for a transaction Zeek parsed.
+**SMTP activity** is network-sensor telemetry about a mail transaction Zeek parsed: envelope sender, envelope recipients, a few headers, and who talked to whom. In a SIEM, that event usually shows up as a row in an `smtp` table.
 
 | Idea | What to read |
 |------|----------------|
-| **Mail from** | `mailfrom` — envelope MAIL FROM. Who the *session* claimed as sender |
-| **Rcpt to** | `rcptto` — envelope RCPT TO (can be a list) |
-| **Subject** | `subject` — the Subject header. Empty = not logged. Easy to spoof |
-| **Message ID** | `msg_id` — Message-ID when logged. Not a file hash |
+| **Mail from** | `mailfrom` — envelope MAIL FROM. Who the *session* claimed as sender. Not the From header. |
+| **Rcpt to** | `rcptto` — envelope RCPT TO (can be more than one address) |
+| **Subject** | `subject` — the Subject header. Empty = not logged. Easy to spoof. |
+| **Message ID** | `msg_id` — Message-ID when logged. Not a file hash. |
 | **Source / dest** | `id.orig_h` / `id.orig_p` → `id.resp_h` / `id.resp_p` (often 25 / 587) |
 
-This is the **extract**. Encrypted submission may have no SMTP fields — that handshake was **1.2.4**. Do not invent a mail-gateway name.
+Zeek watches the wire and writes this log. Encrypted submission may have no SMTP fields — that handshake was **1.2.4**. Empty `subject` or `msg_id` means not logged, not “no mail.” Do not invent a mail-gateway name.
 
 **What good looks like:**
 
 - Describe: one sentence — envelope from, envelope to, subject if logged, orig → resp. Do not name a process. Do not declare phishing.
-- Given: `mailfrom` an outside address, `rcptto` a user, `subject` present (invoice), `msg_id` present. **What occurred:** that client sent envelope mail from A to B with that subject. The `.vbs` file create on the host is a different row (**1.1.3**).
-- Query: names a **specific** pattern (`mailfrom`, `rcptto`, subject, or dest), not “all `smtp` rows.”
+- Given: `mailfrom` an outside address, `rcptto` a user, `subject` present, `msg_id` present. **What occurred:** that client sent envelope mail from A to B with that subject.
+- Query: names a **specific** pattern (`mailfrom`, `rcptto`, subject, or dest), not “all `smtp` events.”
 
 ---
 
@@ -51,13 +51,13 @@ This is the **extract**. Encrypted submission may have no SMTP fields — that h
 
 1. `mailfrom` is the attachment hash. True or false?
 2. Envelope from an outside address, `rcptto` a user, subject present. In one sentence, what occurred?
-3. A SIEM query that matches every `smtp` row is a good “specific SMTP activity” query. True or false?
+3. A SIEM query that matches every `smtp` event is a good “specific SMTP activity” query. True or false?
 
 ---
 
 ## 3. Summary
 
-An `smtp` row is envelope from/to, subject, message ID, and who talked to whom. The process and the attachment hash are not on this row. A query names a specific pattern.
+An `smtp` log is envelope from/to, subject, message ID, and who talked to whom. The process and the attachment hash are not on this event. A query names a specific pattern.
 
 **Next:** **1.2.7** Files engine.
 

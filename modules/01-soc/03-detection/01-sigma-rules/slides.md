@@ -9,73 +9,85 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.3.1 – SIGMA Rules  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Read a detection. Propose a basic one.  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Portable YAML. Propose, do not deploy. Not a SIEM product.
+This lesson is portable YAML for what to look for. You read a rule and propose a basic create or modify. You do not deploy it. It is not a SIEM product.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts **read** a detection and **propose** a basic one.
+An alert comes from a **detection**. Someone wrote what to look for.
 
-You do **not** deploy it. That is **4.x**.
+SOC analysts **read** that write-up and **propose** a basic create or modify.
+
+The shop may not all use the same SIEM. SIGMA is how you write the idea once.
 
 **Speaker Notes:**  
-1.2 was logs. This is syntax.
+This slide is the student intro. You do not deploy the rule. How detections run as a service is 4.x. Suricata is the next lesson, not this one.
 
 ---
 
-### Slide 3 – Structure
+### Slide 3 – Purpose and structure
 **Title:** Purpose and structure
 
-**SIGMA** — write what to look for once.
+**SIGMA** is a generic detection format. You write what to look for once.
 
-Need **`logsource`**, **`detection`**, **`condition`**.
+A rule needs **title**, **logsource** (which telemetry), and **detection** (named selections plus a **condition**).
+
+Without those, it is not a detection.
 
 **Speaker Notes:**  
-Outline a. Title helps a teammate. FP notes are hints.
+Condition lives inside detection. Do not add status, level, or false-positive notes as required blocks. Title is what a teammate reads.
 
 ---
 
-### Slide 4 – Selectors and SIEM
-**Title:** Selectors, then a query
+### Slide 4 – Fields and selectors
+**Title:** Fields and selectors
 
-**Selectors** — `endswith`, `contains`, lists. Fields must match the logsource.
+**Selectors** are field tests: `endswith`, `contains`, a list, `re`.
 
-**To SIEM** — logsource → table. Selections → `where`. Condition → and/or/not.
+Field names must match the logsource.
+
+`Image` / `CommandLine` on `process_creation` are process-create fields (**1.1.2**).
 
 **Speaker Notes:**  
-Outline b–c. Image/CommandLine = 1.1.2. No converter lab.
+Tests in one selection are typically and. A list under one field is typically or. If they put uri on process_creation, that is the wrong logsource.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – How SIGMA becomes a SIEM query
+**Title:** How SIGMA becomes a SIEM query
 
-No Suricata. No YARA.  
-No alert queue (**1.4**).  
-No production push.
+**logsource** → table or event type.
+
+Named selections → `where` tests.
+
+**condition** → and / or / not.
+
+Write that in words. Running a converter is not this lesson.
 
 **Speaker Notes:**  
-SOC 1a/2b/3c on create.
+The product here is the shape of the query, not a saved SIEM object. Name, window, and output fields are 1.3.4.
 
 ---
 
-### Slide 6 – What good looks like
+### Slide 6 – Read it. Propose a basic one.
 **Title:** Read it. Propose a basic one.
 
 **Given:** `process_creation`, `powershell.exe`, `-enc`, parent `wscript`.
 
-**Detects:** encoded PowerShell from a script host.
+**Detects:** encoded PowerShell launched from a script host.
 
-A modify adds a selector. “Any PowerShell” is too broad.
+A **modify** adds a selector. “Any PowerShell” is too broad.
+
+SOC **proposes**. Detection engineering reviews.
 
 **Speaker Notes:**  
-Same story as 1.1.2. Do not tell the PRD plot.
+Same process story as 1.1.2. Walk the three selectors, then stop. Do not tell the intro plot. Tightening any powershell.exe by adding parent or -enc is the create/modify task.
 
 ---
 
@@ -83,22 +95,22 @@ Same story as 1.1.2. Do not tell the PRD plot.
 **Title:** Knowledge Check
 
 1. SIGMA is a SIEM product. True or false?  
-2. The given rule — what does it detect, in one sentence?  
+2. A `process_creation` rule matches `powershell.exe`, CommandLine `-enc`, and parent `wscript`. In one sentence, what does it detect?  
 3. Why is a rule that matches every `powershell.exe` a poor proposal?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 8 – Summary
 **Title:** Summary
 
-Portable YAML: logsource, selectors, condition.  
-Becomes a SIEM query.  
+SIGMA is portable YAML: logsource, selectors, condition.  
+It becomes a SIEM query.  
 You propose. You do not deploy.
 
 **Next:** **1.3.2** Suricata rules
 
 **Speaker Notes:**  
-Network rule syntax next.
+Suricata is network rule syntax, not YAML. Stay off packets until that lesson.

@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Say what a SIGMA rule is for, name its blocks, and how it becomes a SIEM query.
-2. Read an existing rule and say what it detects; propose a **basic** create or modify.
+1. Read a SIGMA rule: purpose, structure, field tests (selectors), and how it becomes a SIEM query.
+2. Describe what an existing rule detects, and say what a **basic** create or modify looks like.
 
 **Mapped Proficiency Items:**
 - K: 1.3.1.1 – SIGMA rules
@@ -25,15 +25,17 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts **read** a detection and **propose** a basic one. **1.2** was sensor logs. This hour is portable YAML. You do **not** deploy it. How detections run as a service is **4.x**. Suricata, YARA, and SIEM authorship are later **1.3** children.
+An alert comes from a **detection**. Someone wrote what to look for. SOC analysts **read** that write-up and **propose** a basic create or modify so detection engineering can review it. The shop may not all use the same SIEM, so **SIGMA** lets you write the idea once in YAML. A person or a converter turns it into that SIEM's query. You do **not** deploy the rule. How detections run as a service is **4.x**.
+
+This lesson is SIGMA. It is not Suricata, YARA, or a saved SIEM rule (**1.3.2**–**1.3.4**).
 
 **SIGMA** is a generic detection format. You write what to look for once. A converter or a person turns it into a SIEM query.
 
-| Block | What it is |
-|-------|------------|
-| **Purpose / structure** | `title`, `logsource` (which telemetry), `detection` (named selections + `condition`). Without those three, it is not a detection |
-| **Selectors** | Field tests: `endswith`, `contains`, a list, `re`. Field names must match the logsource. `Image` / `CommandLine` on `process_creation` are the **1.1.2** row |
-| **To SIEM** | `logsource` → table. Selections → `where`. `condition` → and/or/not. You write that in words or pseudo-KQL. Running a converter is not this hour |
+| Idea | What to read |
+|------|----------------|
+| **Purpose / structure** | `title`, `logsource` (which telemetry), `detection` (named selections plus a `condition`). Without those, it is not a detection. |
+| **Fields / selectors** | Field tests: `endswith`, `contains`, a list, `re`. Field names must match the logsource. `Image` / `CommandLine` on `process_creation` are process-create fields (**1.1.2**). Tests in one selection are typically **and**. A list under one field is typically **or**. |
+| **To SIEM** | `logsource` → table or event type. Selections → `where`. `condition` → and / or / not. Write that in words or a SIEM-shaped sentence. Running a converter is not this lesson. |
 
 **What good looks like:**
 
@@ -55,14 +57,14 @@ detection:
 
 **What it detects:** process create — PowerShell with `-enc` and parent `wscript`. Same story as **1.1.2**. SIEM shape: `DeviceProcessEvents` / Sysmon 1, those three predicates.
 
-- Modify / create: a **basic** rule with logsource, one selection, a condition. Tightening “any `powershell.exe`” by adding parent or `-enc` is a modify. SOC **proposes**. DE reviews.
+- Modify / create: a **basic** rule with title, logsource, one selection, and a condition. Tightening “any `powershell.exe`” by adding parent or `-enc` is a modify. SOC **proposes**. Detection engineering reviews.
 
 ---
 
 ## 2. Knowledge Check
 
 1. SIGMA is a SIEM product. True or false?
-2. The given rule above — what does it detect, in one sentence?
+2. A `process_creation` rule matches `powershell.exe`, CommandLine `-enc`, and parent `wscript`. In one sentence, what does it detect?
 3. Why is a rule that matches every `powershell.exe` a poor proposal?
 
 ---

@@ -17,19 +17,19 @@ Name which of two clocks is at risk, then record a close or escalate against tha
 
 **Context (plain language):**
 
-- What this hour is for: SOC analysts keep a queue row from sitting untouched, and from sitting open with no disposition. They name the clock and write closed or escalated against it.
-- How it hooks to the hour before: 1.4.4 was the site bucket (scan / root / user).
-- How it hooks to the hour after: 1.5 is reports. Those have their own timelines. This hour is the alert clocks only.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Classroom 15 / 45 so the timestamp task has numbers. Not a live shop SLA. Hunter 3 is A / 1a. CTI names the words (A / 1a).
-- What we are *not* doing this hour: Re-investigate. Re-label TP/FP or category. Write a report. Invent DYA minutes. No lab. **1.7** is retired — do not open shift change.
+- What this lesson is for: SOC analysts keep an alert from sitting untouched, and from sitting open with no close or escalate. They name the clock and write closed or escalated against it.
+- How it hooks to the lesson before: 1.4.4 was the site bucket (scan / root / user).
+- How it hooks to the lesson after: 1.5 is reports. Those have their own timelines. This lesson is the alert clocks only.
+- Why we are doing it this way: two clocks, with classroom 15 / 45 so the timestamp task has numbers. Those minutes are this lesson only — not a live shop SLA.
+- What we are *not* doing in this lesson: re-investigate. Re-label TP/FP or category. Write a report. Invent shop minutes. No lab. **1.7** is retired — do not open shift change.
 - Extra step: none.
 
-Do not invent a Harbor or DYA SLA card. Do not tell the PRD plot. **A12** is the same encoded-PowerShell alert they already started.
+Use the same names as the student guide: **start clock**, **close/escalate clock**, **created**, **started**, **closed**, and **escalated**. Do not invent a Harbor or DYA SLA card. The givens are timestamps only; do not retell an earlier investigation plot.
 
 **Key Teaching Points:**
 - Start from **created**. Close/escalate from **started**.
 - Untouched → only start exists.
-- Record: closed or escalated, which clock, the time. Do not close an untouched row.
+- Record: closed or escalated, which clock, the time. Do not close an untouched alert.
 
 **Required Materials:**
 - Student Guide
@@ -41,11 +41,16 @@ Do not invent a Harbor or DYA SLA card. Do not tell the PRD plot. **A12** is the
 
 Same as the student guide.
 
-**Mapped Items:** K 1.4.5.1 ; T 1.4.5.2 ; T 1.4.5.3
+**Mapped Proficiency Items:**
+- K: 1.4.5.1 – Service Level Agreements / Response Time Goals
+- T: 1.4.5.2 – Given timestamps, identify whether the start clock or the close/escalate clock is at risk
+- T: 1.4.5.3 – Close or escalate an alert and record it against the correct clock
 
 ---
 
 ## Suggested Timing
+
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
 
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
@@ -61,29 +66,32 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write the two clocks. Walk the untouched row as **start**. Walk **A12** still open as **close/escalate**.
-
-If they say “we’re late” with no clock: “Which one?”  
-If they close an untouched row: “Start first. Close/escalate has no origin.”  
-If they measure close/escalate from created: “From first touch.”  
-If they reopen TP or category: “1.4.2 / 1.4.4 are done.”  
-If they ask for DYA minutes: “Classroom 15 / 45. Their real shop substitutes.”
+**Talking Points:**
+- Open with the job: an alert must not sit untouched, and it must not sit open with no close or escalate. Name which clock is at risk. “Work faster” is not the task.
+- Write the two clocks. Start is created → first touch (classroom 15 minutes). Close/escalate is first touch → closed or escalated (classroom 45 minutes). Those minutes are this lesson only.
+- Walk the untouched given as **start**. Close/escalate has no origin yet.
+- Walk the still-open given as **close/escalate**. Start already met.
+- If they say “we’re late” with no clock: ask which one.
+- If they close an untouched alert: start first. Close/escalate has no origin.
+- If they measure close/escalate from created: measure from first touch.
+- If they reopen TP or category: those lessons are done. Stay on the clocks.
+- If they ask for shop minutes: classroom 15 / 45. Their real shop substitutes.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Untouched — which clock?**  
+1. **If nobody has touched the alert, which clock can be at risk?**  
    **Answer:** Only the **start** clock. Close/escalate has no origin yet.  
-   **Explanation:** Task 1.
+   **Explanation:** Until a first touch, the close/escalate clock has nothing to measure from.
 
-2. **Two clocks, when does each start?**  
+2. **What are the two clocks, and when does each start?**  
    **Answer:** Start = created → first touch (classroom 15 min). Close/escalate = first touch → closed or escalated (classroom 45 min).  
-   **Explanation:** Outline a–b.
+   **Explanation:** Two response-time goals, two origins. Do not measure both from created.
 
-3. **Started 13:28, still open at 14:20. Which clock, and what do you record?**  
-   **Answer:** **Close/escalate** (52 minutes, past 45). Record `escalated` (or `closed` if the card is done) against the close/escalate clock at `14:20`.  
-   **Explanation:** Tasks 1 and 2.
+3. **An alert was first touched at 13:28 and is still open at 14:20. Which clock is at risk, and what do you record?**  
+   **Answer:** **Close/escalate** (52 minutes, past 45). Record `escalated` (or `closed` if the investigation is done) against the close/escalate clock at `14:20`.  
+   **Explanation:** Start already has a first touch. The remaining clock is close/escalate. Record the disposition against that clock.
 
 ---
 

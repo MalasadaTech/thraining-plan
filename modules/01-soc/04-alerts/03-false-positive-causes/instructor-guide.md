@@ -13,23 +13,28 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-On a case already labeled FP, name the cause class and one change.
+On a case already labeled false positive, name the cause class and one change.
 
 **Context (plain language):**
 
-- What this hour is for: SOC analysts say *why* this FP happened and what they would change — not the label again.
-- How it hooks to the hour before: 1.4.2 put FP on any-PowerShell / Get-Help.
-- How it hooks to the hour after: 1.4.4 is category (scan, root, user), not cause.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b only. Name the change; DE deploys.
-- What we are *not* doing this hour: Reclassify. Deploy. Invent a third official class. No lab.
+- What this lesson is for: SOC analysts still have work after they call an alert a false positive. That fire used queue time, and the same benign activity will fire again unless someone says why it matched and what would stop it. This lesson is the cause class and one named change.
+- How it hooks to the lesson before: 1.4.2 put the false-positive label on any-PowerShell / Get-Help. This lesson is why that fire happened, not the label again.
+- How it hooks to the lesson after: 1.4.4 is category (scan, root, user), not cause.
+- Why we are doing it this way: after the false-positive label, the queue still needs a cause and a named change so the same benign fire does not repeat. Detection engineering deploys the change.
+- What we are *not* doing in this lesson: reclassify true positive versus false positive. Deploy the change. Invent a third official class. Pick scan, root, or user. No lab.
 - Extra step: none.
 
-Do not invent Harbor scanner IPs as policy. Do not tell the PRD plot.
+Use the same names as the student guide: **analyst or tool activity**, **untuned or overly broad detection logic**, **cause class**, and **change**. Do not invent scanner IP addresses as shop policy. Do not tell the PRD plot. If both classes could apply, pick a primary class and still name one change.
 
 **Key Teaching Points:**
-- Two classes: analyst/tool vs overly broad.
-- A change is one concrete sentence.
-- Pick a primary class if both could apply.
+- Two classes: analyst or tool activity, and untuned or overly broad detection logic.
+- A change is one concrete sentence, not “tune it.”
+- You name the change. You do not deploy it.
+
+**Common Student Challenges:**
+- Re-open true positive versus false positive. Why: the last lesson was the label. Example: arguing that `Get-Help` is a true positive because PowerShell ran.
+- Write “tune it” as the change. Why: the task is a named change. Example: “tune the PowerShell rule” with no selector.
+- Delete or deploy the rule. Why: SOC names the change; detection engineering deploys. Example: “delete the `/update.exe` signature” after a replay.
 
 **Required Materials:**
 - Student Guide
@@ -41,15 +46,19 @@ Do not invent Harbor scanner IPs as policy. Do not tell the PRD plot.
 
 Same as the student guide.
 
-**Mapped Items:** K 1.4.3.1 ; T 1.4.3.2
+**Mapped Proficiency Items:**
+- K: 1.4.3.1 – Common false positive causes
+- T: 1.4.3.2 – Given a false positive, identify the cause class and what you would change
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | After the label |
+| Introduction (required) | 3 min     | Cause after the false-positive label |
 | Key Concepts            | 12 min    | Two classes; two givens |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 1 min     | |
@@ -61,27 +70,30 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write a vs b. Walk Get-Help as **b**, replay as **a**.
-
-If they reclassify TP: “Already FP. 1.4.2 is done.”  
-If they say “tune it”: “Name the selector.”  
-If they want to deploy: “4.x / DE.”
+**Talking Points:**
+- Open with the job: a false positive already used queue time. Name why it fired and one change that would stop the same miss.
+- Write the two classes. Analyst or tool activity is your side causing the fire (download or test of a live rule, replay, shop-owned scanner). Untuned or overly broad logic is a detection that matches more than the bad activity it is for.
+- Walk Get-Help as overly broad: require `-enc` and a script-host parent. Walk the replay as analyst or tool: exclude the replay; do not delete the `/update.exe` signature.
+- A change is one concrete sentence. “Tune it” is not a change.
+- If they reclassify true positive versus false positive: the case is already a false positive. Classification is done.
+- If they want to deploy: detection engineering deploys. This lesson names the change.
+- If they reach for scan, root, or user: that is category, next lesson.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **This hour is TP vs FP. True or false?**  
-   **Answer:** False. The label is done. This hour is cause + change.  
-   **Explanation:** Stay-in / vs 1.4.2.
+1. **This lesson is for deciding true positive versus false positive. True or false?**  
+   **Answer:** False. The label is already done. This lesson is cause class plus one change.  
+   **Explanation:** Classification is 1.4.2. A false positive still needs a cause and a named change so the same benign fire does not repeat.
 
-2. **Two syllabus classes?**  
-   **Answer:** Analyst or tool activity. Untuned or overly broad logic.  
-   **Explanation:** Outline a–b.
+2. **What are the two cause classes?**  
+   **Answer:** Analyst or tool activity. Untuned or overly broad detection logic.  
+   **Explanation:** Those are the two classes this lesson teaches. “Other” is a fallback, not a third official class.
 
-3. **Any-PowerShell on Get-Help. Class and change?**  
-   **Answer:** **b**. Require `-enc` and a script-host parent.  
-   **Explanation:** Outline b / task 1.
+3. **False positive: any-PowerShell on Get-Help. Class and one change sentence?**  
+   **Answer:** Untuned or overly broad detection logic. Require `-enc` and a script-host parent.  
+   **Explanation:** Interactive help is expected activity. The rule matched any PowerShell. Adding parent and `-enc` is the named change, not “tune it.”
 
 ---
 

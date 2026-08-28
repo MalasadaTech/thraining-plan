@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Read a load row: user-mode image vs kernel driver, path, hash, signed vs unsigned (where logged), and who loaded it.
+1. Read an image or driver load event: user-mode image vs kernel driver, path, hash, signed vs unsigned (where logged), and who loaded it.
 2. Describe what a Sysmon or MDE image or driver load event shows, and say what a **specific** SIEM query looks like.
 
 **Mapped Proficiency Items:**
@@ -25,17 +25,17 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts read **host** load rows to see that a module entered a process, or that a driver entered the kernel. **1.1.5** was the registry row. This hour is the **load** row — last child in **1.1**. It is **not** a file create (**1.1.3**). It is **not** a process create (**1.1.2**). It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
+SOC analysts read **image and driver load** events on a host to see that a module entered a process, or that a driver entered the kernel. That is daily alert work: an alert names a host, and you have to say what was loaded, into whom (or into the kernel), from where, and whether it was signed if that is logged. **1.1.1** named the five kinds of host activity. This lesson is the **image / driver load** kind. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
 
-**Image and driver load activity** is endpoint telemetry that a **user-mode image** (usually a DLL) was mapped into a process, or that a **kernel driver** was loaded.
+**Image and driver load activity** is endpoint telemetry that a **user-mode image** (usually a DLL) was mapped into a process, or that a **kernel driver** was loaded. In a SIEM, that event usually shows up as a row in a table.
 
 | Idea | What to read |
 |------|----------------|
 | **User-mode vs kernel** | User-mode = a process loaded a module (Sysmon **7** / MDE). Kernel = a driver entered the kernel (Sysmon **6**). Not a process start. |
-| **Path, hashes, signed vs unsigned** | Path is where it loaded from. SHA256 is the loaded bytes when present. `Signed` / signature fields **where logged**. Empty ≠ unsigned. |
-| **Initiating process** | Sysmon 7 `Image`; MDE `InitiatingProcess*`. Which process loaded the module. Event **6** is kernel-wide — do not invent a user-mode parent. |
+| **Path, hashes, signed vs unsigned** | Path is where it loaded from (Sysmon `ImageLoaded`; MDE `FolderPath` + `FileName`). Hashes of the loaded bytes when present (SHA256; MDE often carries SHA1 instead). `Signed` / signature fields **where logged**. Empty is a gap, not “unsigned.” |
+| **Initiating process** | Sysmon 7 `Image` is the process; `ImageLoaded` is the module. MDE `InitiatingProcess*` is the process that loaded the module. Event **6** is kernel-wide — it has no user-mode parent field. Do not invent one. |
 
-**How this shows up:** Sysmon **6** (driver) / **7** (image load); MDE `DeviceImageLoadEvents`. Same story, different names. Event **7** is noisy and often sampled or off. If you have no 7 / no `DeviceImageLoadEvents`, write “image load not logged.” Do not invent a load from a file-create row.
+**How this shows up:** Sysmon **6** (driver) / **7** (image load); MDE `DeviceImageLoadEvents`. Same activity, different field names. Event **7** is noisy and often sampled or off. If you have no 7 / no `DeviceImageLoadEvents`, write “image load not logged.” Do not invent a load from a file-create event (**1.1.3**).
 
 MDE `ActionType` on **this** table:
 
@@ -43,17 +43,17 @@ MDE `ActionType` on **this** table:
 |--------------|------------|---------------|
 | **ImageLoaded** | A process loaded a module | Event **7** |
 
-Driver load on the endpoint is Sysmon **6**. The full MDE `ActionType` set is in the Defender portal schema. Do not invent a value.
+`DeviceImageLoadEvents` is DLL load activity. Driver load on the endpoint is Sysmon **6**. Do not treat a `.sys` path on this MDE table as a kernel driver load, and do not invent a driver `ActionType` here. The full set is in the Defender portal schema.
 
 If a field is empty in your tenant, say so. Do not invent it.
 
 **What good looks like:**
 
-- Describe: one sentence — what was loaded, into whom (or into the kernel), from where, signed or not if logged. Do not jump to a file create (**1.1.3**) or a persistence / BYOVD lecture (**2.6**).
-- Given: Sysmon **7**, `Image` `powershell.exe`, `ImageLoaded` Temp `update.dll`, `Signed=false`. **What occurred:** PowerShell loaded an unsigned DLL from Temp. The file create of that DLL, if you have one, is a different row.
-- Query: names a **specific** pattern (path or loader + `.dll` / `.sys`), not “all image loads.”
+- Describe: one sentence — what was loaded, into whom (or into the kernel), from where, signed or not if logged. Do not jump to a file create (**1.1.3**) or a persistence / BYOVD write-up.
+- Given: Sysmon **7**, `Image` `powershell.exe`, `ImageLoaded` Temp `update.dll`, `Signed=false`. **What occurred:** PowerShell loaded an unsigned DLL from Temp. The file create of that DLL, if you have one, is a different event.
+- Query: names a **specific** pattern (process + path, or Event **6** + driver path), not every image or driver load.
 
-This closes **1.1**. Protocol deep-dive is **1.2**.
+This is the last **1.1** host-activity lesson. Protocol deep-dive is **1.2**.
 
 ---
 
@@ -61,13 +61,13 @@ This closes **1.1**. Protocol deep-dive is **1.2**.
 
 1. Sysmon Event 6 is a DLL load into a process. True or false?
 2. `powershell.exe` loads Temp `update.dll` (`Signed=false`). In one sentence, what occurred?
-3. A SIEM query that matches every `DeviceImageLoadEvents` row is a good “specific image or driver load” query. True or false?
+3. A SIEM query that matches every image or driver load event is a good “specific image or driver load” query. True or false?
 
 ---
 
 ## 3. Summary
 
-A load row is a module entering a process, or a driver entering the kernel. Path and initiator tell the story. Signed empty is a gap. A file create is not a load. A query names a specific pattern.
+An image or driver load event is a module entering a process, or a driver entering the kernel. Path and initiator tell the story. Signed empty is a gap. A file create is not a load. A query names a specific pattern.
 
 **Next:** **1.2.1** Zeek concepts.
 
@@ -75,7 +75,7 @@ A load row is a module entering a process, or a driver entering the kernel. Path
 
 ## 4. Related modules
 
-- 1.1.5 – Registry activity (previous)
-- 1.2.1 – Zeek concepts
+- 1.1.1 – Endpoint activity (the map)
+- 1.1.5 – Registry activity
 - 1.1.3 – File system activity
-- 2.6 – Persistence techniques (later)
+- 1.2.1 – Zeek concepts

@@ -9,64 +9,73 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.2.4 – TLS Engine  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** The handshake Zeek saw  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Handshake metadata. ssl log. Not decrypted HTTP. Not the process.
+1.2.3 was the DNS extract. This lesson is TLS. It is the handshake, not decrypted HTTP, and not the initiating process.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts read the Zeek **`ssl`** log: the **handshake**, not the bytes inside.
+SOC analysts read **TLS** events to see the **handshake** when the payload is encrypted.
 
-It does **not** name the initiating process.  
-That was **1.1.4**.
+Who talked to whom. SNI. Certificate. Version and cipher.
+
+Not decrypted HTTP. Not the initiating process.
 
 **Speaker Notes:**  
-1.2.3 was the A record. This is TLS on :443.
+This slide is the student intro. Encrypted traffic still needs a description. Do not teach HTTP fields today. Do not name a process from this log.
 
 ---
 
-### Slide 3 – SNI and the cert
+### Slide 3 – SNI and the certificate
 **Title:** SNI, subject, issuer
 
-**`server_name`** — hostname in the Client Hello. Empty = not logged.  
-**`subject` / `issuer`** — name on the cert, and who signed it.
+**`server_name`** — hostname in the Client Hello. Empty means not sent or not logged.
+
+**`subject` / `issuer`** — name on the certificate, and who signed it.
+
+SNI is not the certificate subject.
 
 **Speaker Notes:**  
-Outline a–b. SNI is not the cert subject.
+Walk SNI first, then the certificate names. If they treat `server_name` as the cert, stop: Client Hello versus what the certificate presents.
 
 ---
 
 ### Slide 4 – JA3, version, cipher, who
 **Title:** Fingerprint, version, cipher, addresses
 
-**JA3 / JA3S** — where available. Not a malware name.  
+**JA3 / JA3S** — where the shop logs them. Not a malware name. Missing means not logged, not “no TLS.”
+
 **`version` / `cipher`** — what was negotiated.
 
-**`id.orig_*` → `id.resp_*`** — who talked to whom.
+**`id.orig_*` → `id.resp_*`** — originator to responder.
 
 **Speaker Notes:**  
-Outline c–f. Missing JA3 = not logged.
+JA3 is how the client spoke TLS. Do not invent a value. Originator started the talk from Zeek’s view.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – How it shows up
+**Title:** The ssl log
 
-No process name.  
-No phishing catalog.  
-The `conn` and `dns` rows are different extracts.
+Zeek writes TLS to the **`ssl`** log. The name is historical.
+
+One event per handshake Zeek saw.
+
+This is the **extract**. PCAP still verifies or expands (**1.2.1**).
+
+The initiating process is not on this log. That is host-observed network (**1.1.4**).
 
 **Speaker Notes:**  
-HTTP fields wait.
+Keep them on this engine. HTTP fields wait for 1.2.5. If they ask about SIEM tables, a TLS log line is an event; in a SIEM it often shows up as a row.
 
 ---
 
-### Slide 6 – What good looks like
+### Slide 6 – Describe it. Query something specific.
 **Title:** Describe it. Query something specific.
 
 One sentence: who talked to whom, SNI if present, version/cipher.
@@ -74,10 +83,10 @@ One sentence: who talked to whom, SNI if present, version/cipher.
 **Given:** `203.0.113.88:443`, `server_name` empty, version and cipher present.
 
 A query names a **specific** pattern — SNI, subject, version, or dest.  
-Not “all `ssl` rows.”
+Not every `ssl` event.
 
 **Speaker Notes:**  
-TLS handshake to that IP on 443. SNI not logged. Do not tell the PRD plot.
+Show this given before the knowledge check. Handshake to that IP on 443. SNI not logged. Do not tell the intro plot. Do not name a process.
 
 ---
 
@@ -86,22 +95,22 @@ TLS handshake to that IP on 443. SNI not logged. Do not tell the PRD plot.
 
 1. `server_name` is the name on the server certificate. True or false?  
 2. Workstation → `203.0.113.88:443`, `server_name` empty, version and cipher present. In one sentence, what occurred?  
-3. A SIEM query that matches every `ssl` row is a good “specific TLS activity” query. True or false?
+3. A SIEM query that matches every `ssl` event is a good “specific TLS activity” query. True or false?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 8 – Summary
 **Title:** Summary
 
-Handshake: SNI, cert, version, cipher, who talked to whom.  
+Handshake: SNI, certificate, version, cipher, who talked to whom.  
 JA3 only if logged.  
-The process is not on this row.  
+The process is not on this log.  
 A query is specific.
 
 **Next:** **1.2.5** HTTP engine
 
 **Speaker Notes:**  
-Cleartext HTTP fields next.
+1.2.5 is cleartext HTTP fields on the same wire. Stay off this handshake when you get there.

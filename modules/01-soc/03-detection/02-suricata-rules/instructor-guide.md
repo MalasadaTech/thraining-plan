@@ -17,20 +17,25 @@ Read a Suricata rule and propose a basic create or modify. Do not deploy it.
 
 **Context (plain language):**
 
-- What this hour is for: SOC analysts need to read a network signature the same way they read SIGMA — what fires, and is it specific.
-- How it hooks to the hour before: 1.3.1 was host YAML. This hour is the wire signature for GET /update.exe (1.2.5).
-- How it hooks to the hour after: 1.3.3 is YARA — files / memory, not packets.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–d only. SOC create is 1a/2b/3c.
-- What we are *not* doing this hour: Deploy. IPS drop policy. Exploit payloads. Zeek scripts. No lab.
+- What this lesson is for: SOC analysts read a network signature to see what on the wire would fire — protocol, direction, and the string or buffer it looks for — and whether that match is specific.
+- How it hooks to the lesson before: 1.3.1 was portable YAML for host logs (SIGMA). This lesson is the wire signature.
+- How it hooks to the lesson after: 1.3.3 is YARA — files and memory, not packets.
+- Why we are doing it this way: after host YAML, read one network signature so they can say what fires before they open file signatures or SIEM authorship.
+- What we are *not* doing in this lesson: Deploy. IPS drop policy. Exploit payloads. Zeek scripts. SIGMA YAML. YARA. No lab.
 - Extra step: none.
 
-Use `/update.exe` GET. Hex example is `MZ` only. No BUILDINGC / Night Owl names. Do not tell the PRD plot.
+Use the same names as the student guide: **action**, **header**, **options**, **content**, and **5-tuple**. Use the GET `/update.exe` given. Hex example is `MZ` only. `$HOME_NET` is a site variable — do not invent the range. Do not tell the PRD plot.
 
 **Key Teaching Points:**
-- Action, header, options.
-- HTTP/TLS buffers, not raw TCP for HTTP strings.
-- ASCII / hex / regex.
-- Suricata hit + Zeek row = same session, different job.
+- Action, header, options. This lesson is `alert` only.
+- Put HTTP and TLS strings in the matching buffer, not on raw TCP.
+- ASCII, hex, and regex are techniques. Regex is easy to over-match.
+- A Suricata hit and a Zeek log can be the same session. Different job.
+
+**Common Student Challenges:**
+- Treat Suricata and Zeek as the same product. Why: both sit on the wire. Example: putting Zeek field `uri` in a Suricata rule, or writing “the http log fired.”
+- Put `content:"GET"` on `tcp any any`. Why: GET is three bytes anywhere in the stream. Example: proposing that as a detection for a download of `/update.exe`.
+- Ship or drop the rule. Why: SOC create is a proposal. Example: writing `drop` or asking for a production push.
 
 **Required Materials:**
 - Student Guide
@@ -42,15 +47,20 @@ Use `/update.exe` GET. Hex example is `MZ` only. No BUILDINGC / Night Owl names.
 
 Same as the student guide.
 
-**Mapped Items:** K 1.3.2.1 ; T 1.3.2.2 ; T 1.3.2.3
+**Mapped Proficiency Items:**
+- K: 1.3.2.1 – Suricata rules
+- T: 1.3.2.2 – Analyze an existing Suricata rule and describe what it detects
+- T: 1.3.2.3 – Create or modify a basic Suricata rule
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Network signature, not YAML |
+| Introduction (required) | 3 min     | Network signature, not host YAML |
 | Key Concepts            | 16 min    | Structure, options, Zeek |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 2 min     | |
@@ -62,27 +72,33 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Walk action / header / options. Read the given rule. Contrast with `tcp any any` + `GET`.
-
-If they open SIGMA: “That was 1.3.1.”  
-If they want drop: “Alert only this hour.”  
-If they paste shellcode: “Stop. MZ is enough hex.”
+**Talking Points:**
+- Open with the job: an alert names a Suricata rule, and you have to say what it matches and whether the match is specific.
+- Walk action, header, and options. This lesson is `alert` only.
+- `$HOME_NET` and `$EXTERNAL_NET` are site variables. Do not invent the range.
+- Walk HTTP and TLS buffers. A string in the wrong buffer is a different match.
+- Walk ASCII, hex (`MZ` only), and regex. Stop anyone who pastes an exploit payload.
+- Same session, different job: Suricata says the signature matched; Zeek parsed the fields. Join with time plus the 5-tuple.
+- Walk the given: outbound HTTP GET whose URI contains `/update.exe`. One sentence.
+- If they open SIGMA YAML: that was 1.3.1.
+- If they want `drop` or a production push: you propose. Detection Engineering reviews. How detections run as a service is 4.x.
+- If they write `content:"GET"` on `tcp any any`: that is not a specific proposal.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **A Suricata rule is action, header, and options. True or false?**  
-   **Answer:** True.  
-   **Explanation:** Outline a.
+1. **Suricata and Zeek do the same job on a session. True or false?**  
+   **Answer:** False. Suricata says this signature matched. Zeek parsed the session. The same traffic can produce both.  
+   **Explanation:** Join them with time plus the 5-tuple. Do not put Zeek field names in the Suricata rule.
 
-2. **The given rule — what does it detect?**  
-   **Answer:** Outbound HTTP GET whose URI contains /update.exe.  
-   **Explanation:** Outline b and 1.3.4 task 1.
+2. **The given rule — what does it detect, in one sentence?**  
+   **Answer:** Outbound HTTP GET whose URI contains `/update.exe`.  
+   **Explanation:** Action is `alert`. Header is HTTP from `$HOME_NET` to `$EXTERNAL_NET`. Options put `GET` in `http.method` and `/update.exe` in `http.uri`.
 
-3. **Why is content GET on tcp any any a poor proposal?**  
+3. **Why is `content:"GET"` on `tcp any any` a poor proposal?**  
    **Answer:** Those three bytes match anywhere in any TCP session. Use the HTTP buffer and a specific URI.  
-   **Explanation:** Outline b–c / 1.3.4 task 2.
+   **Explanation:** Tightening “any GET” by adding `http.uri` is a modify. A basic proposal names a specific content in the right buffer.
 
 ---
 

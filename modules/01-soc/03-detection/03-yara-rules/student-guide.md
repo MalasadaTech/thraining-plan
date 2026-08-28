@@ -25,9 +25,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts **read** a byte-pattern rule and **propose** a basic one. **1.3.2** was Suricata (the wire). This hour is YARA. You scan a file you already have (**1.2.7**) or memory your site already collects. You do **not** deploy it. You do **not** dump memory.
+SOC analysts match **byte patterns** on a file they already have, or on memory the shop already scans. A log can name a file, a hash, or a URI. It does not show the bytes inside. That is the job in this lesson: read a **YARA** rule so you can say what would hit those bytes, and propose a basic create or modify. **1.3.2** was Suricata on the wire. This lesson is the file (or memory). You do **not** deploy the rule. You do **not** dump memory. How detections run as a service is **4.x**.
 
-**YARA** matches **byte patterns** in a file or in process memory. It is not SIGMA and not Suricata.
+**YARA** matches **byte patterns** in a file or in process memory. It is not SIGMA and not Suricata. It is not a SIEM query language.
 
 ```
 rule RuleName
@@ -43,14 +43,14 @@ rule RuleName
 
 | Idea | What to read |
 |------|----------------|
-| **Purpose / structure** | `rule` name, `meta` (notes, not the match), `strings`, `condition`. Strings with no real condition is not a useful proposal |
-| **Strings and condition** | Named patterns + boolean (`and`, `or`, `filesize`, `uint16(0)`, `#s >= 2`) |
-| **ASCII / hex / regex** | ASCII = `"update.exe" ascii nocase`. Hex = `{ 4D 5A }` (`MZ`). Regex = `/update\\.(exe\|dll)/ nocase`. Same three techniques as Suricata, different syntax |
-| **Files vs memory** | **File** — disk or a Zeek extract. `uint16(0) == 0x5A4D` and `filesize` can apply. **Memory** — drop `at 0` / `filesize`; headers may not sit at offset 0. If your shop does not scan memory, say so and stay on files |
+| **Purpose / structure** | `rule` name, `meta` (notes, not the match), `strings`, `condition`. A strings block with no real condition is not a useful proposal. |
+| **Strings and condition** | Named patterns plus boolean (`and`, `or`, `filesize`, `uint16(0) == 0x5A4D`, `#s >= 2`). `$mz at 0` is the same *idea* as that `uint16` check: MZ at the start of the file. |
+| **ASCII / hex / regex** | ASCII = `"update.exe" ascii nocase`. Hex = `{ 4D 5A }` (`MZ`) — not Suricata `content:"\|4d 5a\|"`. Regex = `/update\.(exe\|dll)/ nocase`. Regex is easy to over-match. |
+| **Files vs memory** | **File** — disk or a saved extract. `at 0` and `filesize` can apply. **Memory** — a process the shop already scans. Drop `filesize` (it does not apply there, so the rule will not match). Drop `at 0` for a PE header; the image may not sit at the start of the region. If your shop does not scan memory, say so and stay on files. |
 
 **What good looks like:**
 
-- Analyze: name the strings, the condition, file vs memory, and what would fire. `MZ at 0` alone matches every PE.
+- Analyze: name the strings, the condition, file vs memory, and what would fire. `{ 4D 5A } at 0` alone matches every PE, including Notepad.
 - Given:
 
 ```
@@ -66,7 +66,7 @@ rule Train_UpdateExe
 }
 ```
 
-**What it detects:** a **file** that starts with MZ and contains `update.exe`, under 5 MB. Fits the **1.2.7** extract *if you scan that object*. Not a conviction.
+**What it detects:** a **file** that starts with MZ and contains `update.exe`, under 5 MB. That can fit a PE extract of `update.exe` (**1.2.7**) **if you scan those bytes**. It does not match a `files` log line. It is not a conviction.
 
 - Modify / create: a **basic** file rule with one distinctive string **and** a header or size check. Tightening “MZ only” by adding `update.exe` is a modify. SOC **proposes**. DE reviews.
 

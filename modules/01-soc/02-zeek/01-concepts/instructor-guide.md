@@ -17,14 +17,14 @@ Name what Zeek is, what an engine does, and why PCAP is the usual next artifact.
 
 **Context (plain language):**
 
-- What this hour is for: SOC analysts need the map of network-sensor logs before they read a `conn` row. This hour is that map.
-- How it hooks to the hour before: 1.1 closed on host rows. 1.1.4 named the initiating process. Zeek will not.
-- How it hooks to the hour after: 1.2.2 is the conn engine — first log fields.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–d only. PCAP is a mention, not a course.
-- What we are *not* doing this hour: Wireshark. Site download path. Apply-versus-alert (1.4.1). A catalog of every log. No lab.
+- What this lesson is for: An alert can name traffic on the wire, not only a host. Before you describe that traffic, you have to know what Zeek is — a framework that watched the wire and wrote structured fields. This lesson names what Zeek is, what an engine does, and why you still pull PCAP.
+- How it hooks to the lesson before: 1.1 was host and endpoint activity (logs from the host). 1.1.4 named the initiating process. Zeek will not.
+- How it hooks to the lesson after: 1.2.2 is the conn engine — first log fields.
+- Why we are doing it this way: name the network-sensor log before anyone reads a conn field. PCAP is a mention, not a course.
+- What we are *not* doing in this lesson: Wireshark. Site download path. Applying PCAP against an alert (1.4.1). A catalog of every log. TAP / SPAN names (sensors are 0.8). Conn fields (`orig_h`). No lab.
 - Extra step: none.
 
-Do not invent TAP / SPAN names. Sensors are **0.8**. Do not teach `orig_h` today.
+Use the same names as the student guide: **Zeek**, **engine**, **extract**, **surface**, and **PCAP**. **Engine** means a script or analyzer. **Surface** means the application or protocol shows up as a log you can query.
 
 **Key Teaching Points:**
 - Framework, not signature IDS.
@@ -41,15 +41,18 @@ Do not invent TAP / SPAN names. Sensors are **0.8**. Do not teach `orig_h` today
 
 Same as the student guide.
 
-**Mapped Items:** K 1.2.1.1
+**Mapped Proficiency Items:**
+- K: 1.2.1.1 – Zeek concepts
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Wire, not host |
+| Introduction (required) | 3 min     | Network-sensor logs, not host logs |
 | Key Concepts            | 10 min    | Framework, engine, PCAP |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 2 min     | |
@@ -61,11 +64,14 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write framework → engine → PCAP. Stop before conn fields.
-
-If they ask who started the socket: “1.1.4. Not on this row.”  
-If they open Wireshark: “Not this hour. PCAP is why, not how.”  
-If they start TAP names: “0.8. Do not invent the site.”
+**Talking Points:**
+- Open with the job: an alert can name traffic on the wire, and you have to know what that Zeek log is before you describe it.
+- 1.1 was host and endpoint activity (logs from the host). This unit is network-sensor telemetry. Zeek does not name the initiating process.
+- Walk framework, then engine, then PCAP. Stop before conn fields.
+- If they ask who started the socket: that is 1.1.4. It is not on this log.
+- If they open Wireshark: that is not this lesson. PCAP is why you pull it, not how you read it.
+- If they start TAP or SPAN names: that is 0.8. Do not invent the site.
+- If they apply PCAP against an alert: that is 1.4.1.
 
 ---
 
@@ -73,15 +79,15 @@ If they start TAP names: “0.8. Do not invent the site.”
 
 1. **Zeek is primarily a signature-based IDS. True or false?**  
    **Answer:** False. It is a network analysis framework that writes structured logs.  
-   **Explanation:** Outline a.
+   **Explanation:** Zeek classifies traffic and extracts fields. A signature IDS matches payloads against rules. That is not what Zeek is for in this lesson.
 
 2. **What does an engine do?**  
-   **Answer:** Classify the protocol and extract fields. That is how applications and protocols show up as log rows.  
-   **Explanation:** Outline b–c.
+   **Answer:** Classify the protocol and extract fields. That is how applications and protocols show up as logs.  
+   **Explanation:** An engine is a script or analyzer. It looks at a flow, decides the protocol, and writes the fields you query. Conn, DNS, and the rest wait for later lessons.
 
-3. **Why pull PCAP if you already have a Zeek row?**  
+3. **Why pull PCAP if you already have a Zeek log?**  
    **Answer:** To verify the extract, or to expand what the log does not carry.  
-   **Explanation:** Outline d.
+   **Explanation:** A Zeek log is the fields an engine already wrote. PCAP is the packet capture you use to check those fields or to fill a gap. This lesson does not teach Wireshark or how to download the file.
 
 ---
 

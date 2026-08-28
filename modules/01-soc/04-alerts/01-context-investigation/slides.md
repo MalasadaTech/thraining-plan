@@ -9,103 +9,112 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.4.1 – Alert Context and Investigation  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Work the object that fired  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-The object that fired. Not a new rule. Not TP/FP.
+This lesson is the start of alert handling. The object in the queue already fired. You do not write a new rule. You do not classify TP or FP yet.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-The first alert is **`wscript` → encoded PowerShell**.
+An alert is the **object that fired**.
 
-Investigate that object.  
-Do **not** write the rule. Do **not** classify.
+SOC analysts gather **context** on that object before they classify it.
+
+This lesson is that first pass.
 
 **Speaker Notes:**  
-1.3.4 proposed the SIEM rule. It fired.
+This slide is the student intro. The job is to say what the alert already shows, what it does not, and what related host logs or a packet capture add. Classification is the next lesson.
 
 ---
 
-### Slide 3 – Context and config
-**Title:** Present, missing, what would fire
+### Slide 3 – Present, missing, VirusTotal
+**Title:** Present, missing, VirusTotal
 
-**Context** — two columns: present / missing.  
-Hash, IP, or domain you have → **VirusTotal** (**0.7**).  
-Missing is a gap, not benign. Not Relations (**3.9**).
+**Context** is two lists: **present** and **missing**.
 
-**Config** — one sentence: what would fire.
+Host, user, time, rule name, and the field the rule keys on.
+
+If you have a hash, IP, or domain, look it up on **VirusTotal**. Write the one-line result.
+
+Missing is a **gap**, not benign. Do not open Relations (**2.9**).
 
 **Speaker Notes:**  
-Outline a–b. Do not invent a command line.
+Name the gap. Do not fill it with a guess. VirusTotal here is reputation on a value you already have. Relations is later.
 
 ---
 
-### Slide 4 – Hops, host rows, PCAP
-**Title:** Upstream, endpoint logs, PCAP
+### Slide 4 – Config and hops
+**Title:** What would fire, and each hop
 
-**Hops** — name each. SIEM-only is allowed. Do not invent Suricata.
+**Configuration** — one sentence: what would fire.
 
-**Endpoint logs** — what they **add** or **fail to add**. Temp `invoice.vbs` can add. Run key waits.
+**Upstream hops** — name each hop from detection logic to the alert.
 
-**PCAP** — what it adds versus alert fields. Process-only → **not applicable**.
+Classroom pattern: Suricata rule → SIEM correlation search → SIEM alert.
+
+Some alerts are **SIEM-only**. Do not invent a Suricata hop.
 
 **Speaker Notes:**  
-Outline c–e. Why PCAP is 1.2.1. Sensors are 0.8.
+Walk configuration first, then hops. The given in this course is a SIEM rule that fired a SIEM alert. Inventing Suricata adds a hop that is not on the given.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Endpoint logs and PCAP
+**Title:** What logs and PCAP add
 
-No TP/FP (**1.4.2**).  
-No new SIGMA.  
-No invented capture.
+**Endpoint logs** — pull related host events for that host and window. State what they **add** or **fail to add**. Opening the table is not the task.
+
+**PCAP** — for a network alert, state what the capture adds versus the alert fields.
+
+If the alert is process-only and there is no capture, write **PCAP not applicable**.
 
 **Speaker Notes:**  
-Hunt the Run key later.
+A file event can add Temp invoice.vbs. The Run key waits for hunt. Why you pull PCAP is 1.2.1. Sensors are 0.8. Do not invent a packet capture.
 
 ---
 
-### Slide 6 – What good looks like
-**Title:** Five products
+### Slide 6 – The first alert
+**Title:** The first alert
 
-Present: host, user, `-enc`, parent `wscript`.  
-VT: hash of `invoice.vbs` and/or `203.0.113.88` — one-line result.  
-Config: that trio fires.  
-Hops: SIEM rule → SIEM alert.  
-Host logs: **add** Temp `invoice.vbs`.  
-PCAP: **not applicable** on this first alert.
+The first alert is **`wscript` → encoded PowerShell** as `jlee`.
+
+**Present:** host, user, `-enc`, parent `wscript`.  
+**VirusTotal:** hash of `invoice.vbs` and/or IP `203.0.113.88` — one line.  
+**Config:** PowerShell with `-enc` and parent `wscript` fires.  
+**Hops:** SIEM rule → SIEM alert.  
+**Host logs:** add Temp `invoice.vbs`.  
+**PCAP:** not applicable on this process alert.
 
 **Speaker Notes:**  
-Do not tell the PRD plot.
+Show this given before the knowledge check. Do not tell the rest of the incident. Do not classify.
 
 ---
 
 ### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Missing parent process means the activity was benign. True or false?  
+1. The alert context is missing a parent process. That means the activity was benign. True or false?  
 2. Name the hops for a SIEM-only process alert.  
-3. You have the hash of Temp `invoice.vbs` and IP `203.0.113.88`. What do you look up on VirusTotal, and what is **not** this hour?
+3. You have the hash of Temp `invoice.vbs` and IP `203.0.113.88`. What do you look up on VirusTotal, and what is **not** this lesson?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 8 – Summary
 **Title:** Summary
 
-Present vs missing. Hash / IP / domain → **VT**.  
-What the config would fire.  
+Present versus missing. A hash, IP, or domain you have goes to **VirusTotal**.  
+Say what the configuration would fire.  
 Name each hop.  
-Logs and PCAP must add — or you say they failed.
+Logs and PCAP must add something — or you say they failed to.
 
 **Next:** **1.4.2** Alert classification
 
 **Speaker Notes:**  
-TP / FP / TN / FN next.
+TP, FP, TN, and FN are next. Stay off classification until that lesson.

@@ -11,7 +11,7 @@
 |-----------|------|------|-----------------|-----------|--------------|-----------|
 | 1.2.1.1 | K | Zeek concepts | 1.2.1 a–d | A / B / C | B / C / C | A / B / B |
 
-The teaching-unit ID is **1.2.1**. Conn is **1.2.2**. Host-observed network is **1.1.4**. Apply PCAP against an alert is **1.4.1**. Sensors are **0.8**. Not a PCAP course. No lab.
+The teaching-unit ID is **1.2.1**. Conn is **1.2.2**. Host-network (endpoint) is **1.1.4**. Applying PCAP against an alert is **1.4.1**. Sensors are **0.8**. Not a PCAP course. No lab.
 
 ## Concepts taught
 

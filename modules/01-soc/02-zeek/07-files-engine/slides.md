@@ -3,103 +3,95 @@
 
 **Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.2.7 – Files Engine  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** A file on the wire  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-File on the wire. Not Sysmon 11. Not YARA.
+1.2.1 said engines extract protocol. This lesson is the files engine. It is not host file activity and not YARA.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts read the Zeek **`files`** log: a file **on the wire**.
+SOC analysts read the Zeek **files** log to see a file on the **wire**.
 
-It is **not** a host file-create (**1.1.3**).
+Name. MIME. Hash. Who sent it, who received it.
+
+This is not a host file-create (**1.1.3**).
 
 **Speaker Notes:**  
-1.2.5 was GET /update.exe. This is those bytes.
+This slide is the student intro. An alert may name a download, an attachment, or a hash. The job is to say what moved on the wire. Do not teach a Temp path today.
 
 ---
 
 ### Slide 3 – Name, MIME, hash
 **Title:** Name, MIME, hash
 
-**`filename`** — when the protocol gave one. Can lie.  
-**`mime_type`** — what Zeek thinks the bytes are.  
-**`md5` / `sha1` / `sha256`** — when calculated. Empty ≠ clean.
+**`filename`** — when the protocol gave one. It can lie. Empty means not logged.
+
+**`mime_type`** — what Zeek thinks the bytes are. A Windows executable is often `application/x-dosexec`. It can disagree with the name.
+
+**`md5` / `sha1` / `sha256`** — when calculated. Empty is not “clean.” Do not invent a hash.
 
 **Speaker Notes:**  
-Outline a–c. Name vs MIME can disagree.
+Walk name, MIME, and hash first. The name can say `.exe` while MIME disagrees, or the other way around. Empty hash means Zeek did not calculate one.
 
 ---
 
-### Slide 4 – Who, and the UID
+### Slide 4 – Sender, receiver, connection UID
 **Title:** Sender, receiver, connection UID
 
-**`tx_hosts` / `rx_hosts`** — who sent, who received.
+**`tx_hosts`** sent the bytes. **`rx_hosts`** received them. These are not orig/resp.
 
 **`conn_uids`** — those values *are* the `uid` on `conn` / `http` / `smtp`. Copy one and search.
 
 **Speaker Notes:**  
-Outline d–e. First hour that owes the join.
+For an HTTP GET of a file, the server is often the sender. Copy `conn_uids` and search other Zeek logs. That is the join, not a lab.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No Temp path. That is **1.1.3**.  
-No YARA (**1.3**).  
-Do not invent a hash.
-
-**Speaker Notes:**  
-Weird next.
-
----
-
-### Slide 6 – What good looks like
+### Slide 5 – Describe it. Query something specific.
 **Title:** Describe it. Query something specific.
 
 One sentence: name, MIME, hash if logged, who sent to whom.
 
-**Given:** `update.exe`, executable MIME, hash logged, from `203.0.113.88`.
+**Given:** `update.exe`, MIME `application/x-dosexec`, hash logged, from `203.0.113.88` to a workstation.
 
 A query names a **specific** pattern — name, MIME, hash, or tx/rx.  
-Not “all `files` rows.”
+Not every `files` event.
 
 **Speaker Notes:**  
-That IP sent update.exe on the same connection as the HTTP GET. Do not tell the PRD plot.
+Show this given before the knowledge check. One sentence: that IP sent update.exe on the wire. Copy conn_uids. Do not describe a Sysmon 11. Do not tell the course-fiction plot.
 
 ---
 
-### Slide 7 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. A Zeek `files` row is the same thing as a Sysmon 11 file create. True or false?  
-2. `update.exe`, executable MIME, hash logged, from `203.0.113.88` to a workstation. In one sentence, what occurred?  
-3. A SIEM query that matches every `files` row is a good “specific file transfer” query. True or false?
+1. A Zeek `files` event is the same thing as a Sysmon 11 file create. True or false?  
+2. `update.exe`, MIME `application/x-dosexec`, hash logged, from `203.0.113.88` to a workstation. In one sentence, what occurred?  
+3. A SIEM query that matches every `files` event is a good “specific file transfer” query. True or false?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 8 – Summary
+### Slide 7 – Summary
 **Title:** Summary
 
 Name, MIME, hash, who sent and received.  
 `conn_uids` joins the other Zeek logs.  
-The host file row is a different sensor.
+The host file event is a different sensor.
 
 **Next:** **1.2.8** Weird engine
 
 **Speaker Notes:**  
-Protocol oddities next. Not a hash.
+1.2.8 is protocol oddities. Stay off the file hash when you get there.

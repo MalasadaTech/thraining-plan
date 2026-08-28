@@ -3,41 +3,44 @@
 
 **Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+**Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.2.2 – Conn Engine  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Who talked to whom on the wire  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-First engine. Five fields. Not the process. Not a scan course.
+1.2.1 said engines extract protocol data. This lesson is the `conn` extract. It is not the initiating process, and it is not a scan course.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts read the Zeek **`conn`** log: who talked to whom on the **wire**.
+SOC analysts read the Zeek **`conn`** log to see who talked to whom on the **wire**.
 
-It does **not** name the initiating process.  
-That was **1.1.4**.
+Originator. Responder. How the connection ended.  
+It does **not** name the initiating process. That is **1.1.4**.
 
 **Speaker Notes:**  
-1.2.1 said engines extract. This is the extract.
+This slide is the student intro. Daily alert work is to describe the connection, not to name a process or open DNS yet.
 
 ---
 
-### Slide 3 – Who talked to whom
-**Title:** orig and resp
+### Slide 3 – Originator and responder
+**Title:** Originator and responder
 
-**`id.orig_h` / `id.orig_p`** — who started the talk.  
-**`id.resp_h` / `id.resp_p`** — who was contacted.
+**`id.orig_h` / `id.orig_p`** — originator IP and port. Who started the talk from Zeek’s view.
+
+**`id.resp_h` / `id.resp_p`** — responder IP and port. Who was contacted.
+
+Originator is not automatically an internal host. It is not the destination.
 
 **Speaker Notes:**  
-Outline a–d. orig is not “internal.” It is originator from Zeek’s view.
+Walk source as originator and destination as responder. If they treat orig as “our network,” correct it here before state.
 
 ---
 
@@ -48,60 +51,50 @@ Outline a–d. orig is not “internal.” It is originator from Zeek’s view.
 **`S0`** — attempt, no reply.  
 **`REJ`** — attempt refused.
 
-**`history`** — short flags (`S` SYN, `H` SYN-ACK, `F` FIN, `R` RST).
+**`history`** — short flags of what was seen (`S` SYN, `H` SYN-ACK, `F` FIN, `R` RST).
+
+If you see another state, say what the field shows.
 
 **Speaker Notes:**  
-Outline e. Do not inventory every rare state.
+These three states are enough to start. Do not inventory every rare `conn_state`. History is the flag string, not a second story.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No process name.  
-No beacon math.  
-PCAP still verifies or expands (**1.2.1**).
-
-**Speaker Notes:**  
-DNS fields wait. uid-pivot is not this outline.
-
----
-
-### Slide 6 – What good looks like
+### Slide 5 – Describe it. Query something specific.
 **Title:** Describe it. Query something specific.
 
-One sentence: orig IP/port → resp IP/port, state.
+One sentence: originator IP/port → responder IP/port, state.
 
 **Given:** workstation → `203.0.113.88:443`, `conn_state` `SF`.
 
-A query names a **specific** pattern — resp IP or port + state.  
-Not “all `conn` rows.”
+A query names a **specific** pattern — responder IP or port + state.  
+Not every connection.
 
 **Speaker Notes:**  
-Completed TCP to that IP on 443. Who launched the socket is 1.1.4. Do not tell the PRD plot.
+Show this given before the knowledge check. One sentence: that host completed a TCP connection to that IP on 443. Who launched the socket is 1.1.4. Do not tell the course-fiction plot.
 
 ---
 
-### Slide 7 – Knowledge Check
+### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
 1. `id.orig_h` is the destination IP. True or false?  
 2. Workstation → `203.0.113.88:443`, `SF`. In one sentence, what occurred?  
-3. A SIEM query that matches every `conn` row is a good “specific connection activity” query. True or false?
+3. A SIEM query that matches every connection is a good “specific connection activity” query. True or false?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 8 – Summary
+### Slide 7 – Summary
 **Title:** Summary
 
 Who talked to whom, on which ports, how it ended.  
-The process is not on this row.  
+The process is not on this log.  
 A query is specific.
 
 **Next:** **1.2.3** DNS engine
 
 **Speaker Notes:**  
-Same flow can have a dns row next.
+1.2.3 is the DNS extract on the same wire telemetry. Stay off `conn` fields when you get there.

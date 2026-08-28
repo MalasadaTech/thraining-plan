@@ -5,7 +5,7 @@
 - SOC: 1.2.5.1 A / B / C ; 1.2.5.2 2b / 3c / 4c ; 1.2.5.3 2b / 3c / 4c  
 - Hunter: 1.2.5.1 B / C / C ; 1.2.5.2 3c / 4c / 4c ; 1.2.5.3 3c / 4c / 4c  
 - CTI: 1.2.5.1 A / B / B ; 1.2.5.2 1a / 2b / 3c ; 1.2.5.3 1a / 2b / 3c  
-**Estimated Time:** 25–30 minutes
+**Estimated Time:** 25–30 minutes  
 
 ---
 
@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek `http` row: method, host, URI, User-Agent, status, and who talked to whom.
+1. Read a Zeek `http` log: method, host, URI, User-Agent, status, and who talked to whom.
 2. Describe what an `http` log shows, and say what a **specific** SIEM query looks like.
 
 **Mapped Proficiency Items:**
@@ -25,40 +25,44 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts read the Zeek **`http`** log to see a request/response on the **wire**. **1.2.4** was the TLS handshake. This hour is HTTP metadata — not the full body, not the process. The process was **1.1.4**.
+SOC analysts read Zeek **HTTP** logs to see a request and response on the **wire**. That is daily alert work: an alert names a web request, and you have to say which method, host, and URI were used, what status came back, and who talked to whom. **1.2.4** was the TLS handshake. This lesson is **HTTP**. It does **not** name the initiating process. That is host telemetry (**1.1.4**). It is **not** the file extract (**1.2.7**).
 
-**`http`** is one row for a request/response pair Zeek parsed.
+The **`http`** log is one **event** for a request/response pair Zeek parsed. In a SIEM, that event usually shows up as a row in an HTTP table. Later lessons may still say “row.” Here it means the same thing as the log.
 
 | Idea | What to read |
 |------|----------------|
-| **Method** | `method` — GET, POST, PUT, HEAD, … |
-| **Host** | `host` — the Host header. Empty = not logged. |
-| **URI / URL** | `uri` is the path and query. **Host + URI** is the URL you describe. |
-| **User-Agent** | `user_agent` — what the client claimed. Can lie. Empty = not logged. |
+| **Method** | `method` — GET, POST, PUT, HEAD, and the rest when you see them |
+| **Host** | `host` — the Host header. Empty means it was not logged. This is not the destination IP. |
+| **URI / URL** | `uri` is the path and query. **Host + URI** is the URL you describe. There is often no single `url` field. |
+| **User-Agent** | `user_agent` — what the client claimed. It can lie. Empty means it was not logged. |
 | **Status** | `status_code` — 200 is not “benign.” 404 is not “safe.” |
 | **Source / dest** | `id.orig_h` / `id.orig_p` → `id.resp_h` / `id.resp_p` |
 
-You usually do **not** get the body. File extract is **1.2.7**. Encrypted HTTPS often has no `http` row — that was the `ssl` extract (**1.2.4**).
+**How this shows up:** Zeek `http` (`method`, `host`, `uri`, `user_agent`, `status_code`, `id.orig_*`, `id.resp_*`).
+
+You usually do **not** get the body. File extract is **1.2.7**. Encrypted HTTPS often has no `http` log — that is the `ssl` extract (**1.2.4**).
+
+If a field is empty, say so. Do not invent it.
 
 **What good looks like:**
 
-- Describe: one sentence — method, host+URI, status, UA if logged, orig → resp. Do not name a process. Do not invent the body.
-- Given: `GET`, `uri` `/update.exe`, `id.resp_h` `203.0.113.88`, `id.resp_p` `8080`, `status_code` `200`, `user_agent` empty. **What occurred:** that host **GET** `/update.exe` from `203.0.113.88:8080` and got **200**. UA not logged. The TLS `:443` handshake is a different row.
-- Query: names a **specific** pattern (method, host, URI, UA, or dest), not “all `http` rows.”
+- Describe: one sentence — method, host+URI, status, User-Agent if logged, orig → resp. Do not name a process. Do not invent the body.
+- Given: `GET`, `uri` `/update.exe`, `id.resp_h` `203.0.113.88`, `id.resp_p` `8080`, `status_code` `200`, `user_agent` empty. **What occurred:** the originator requested **GET** `/update.exe` from `203.0.113.88` on port **8080** and received status **200**. User-Agent was not logged. Do not mix this with a TLS handshake (**1.2.4**).
+- Query: names a **specific** pattern (method, host, URI, User-Agent, or dest), not every `http` log.
 
 ---
 
 ## 2. Knowledge Check
 
 1. `host` is the destination IP. True or false?
-2. `GET /update.exe` to `203.0.113.88:8080`, status `200`, UA empty. In one sentence, what occurred?
-3. A SIEM query that matches every `http` row is a good “specific HTTP activity” query. True or false?
+2. `GET /update.exe` to `203.0.113.88:8080`, status `200`, User-Agent empty. In one sentence, what occurred?
+3. A SIEM query that matches every `http` log is a good “specific HTTP activity” query. True or false?
 
 ---
 
 ## 3. Summary
 
-An `http` row is method, host+URI, UA, status, and who talked to whom. The process is not on this row. A query names a specific pattern.
+An `http` log is method, host+URI, User-Agent, status, and who talked to whom. The process is not on this log. A query names a specific pattern.
 
 **Next:** **1.2.6** SMTP engine.
 

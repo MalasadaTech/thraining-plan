@@ -7,12 +7,12 @@
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 1.4.4.1 | K | Common alert categorizations | 1.4.4 a–e | A / B / C | B / C / C | A / A / A |
-| 1.4.4.2 | T | Assign a category to an alert and justify why it is not the adjacent category | 1.4.4.1 task 1 | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 1a / 1a |
+| Matrix ID | Type | Item | Outline heading |
+|-----------|------|------|-----------------|
+| 1.4.4.1 | K | Common alert categorizations | 1.4.4 a–e |
+| 1.4.4.2 | T | Assign a category to an alert and justify why it is not the adjacent category | 1.4.4.1 task 1 |
 
-The teaching-unit ID is **1.4.4**. Classification (TP/FP) is **1.4.2**. FP causes are **1.4.3**. ATT&CK is **0.6**. SLA clocks are **1.4.5**. No lab.
+The teaching-unit ID is **1.4.4**. Classification (TP/FP) is **1.4.2**. FP causes are **1.4.3**. ATT&CK is **0.6**. SLA clocks are **1.4.5**. Not a DYA category list. No lab.
 
 ## Concepts taught
 

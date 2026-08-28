@@ -9,87 +9,92 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.5.3 – Notification and Distribution  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Who gets the report, and which channel carries it  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Who and how. Closes 1.5. SOC ends. Next is CTI, not 1.7.
+This lesson is who receives the report and how it travels. It closes unit 1.5. SOC ends. Next is CTI at 2.1.1, not 1.7.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Put the record on an **approved path**.
+SOC analysts put the case and the CTI question on an **approved path**.
 
 **Who** gets it.  
 **Leadership** yes or no.  
 **Which channel** — and reject the wrong one.
 
+An incident that only lives in chat is not a handoff.
+
 **Speaker Notes:**  
-Type and clock are done. Do not write the body.
+This slide is the student intro. Type and clock are already taught. This lesson is the route so IR and leadership actually see the case. Do not write the report body.
 
 ---
 
-### Slide 3 – Classroom chart
+### Slide 3 – Who, leadership, channel
 **Title:** Who, leadership, channel
 
-**Incident** — SOC + IR. Lead **yes**. **Ticket**.  
-**RFI** — named team. Lead **no**. Ticket or RFI form.
+A **notification chart** names who, leadership yes or no, and the approved channel.
+
+**Incident** — SOC + IR. Leadership **yes**. **Ticket**.  
+**RFI** — named team. Leadership **no**. Ticket or RFI form.
+
+**Approved** (classroom): ticket, approved RFI form.  
+**Not approved:** personal SMS, private chat, off-domain mail.
 
 **Speaker Notes:**  
-Outline a–c. This chart is this lesson only. Overlay a real shop chart if they have one. No invented informational row.
+This chart is a classroom stand-in, not a live shop matrix. Overlay a real shop chart if they have one. Do not invent an informational row.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Route + reject
+### Slide 4 – Route and reject
+**Title:** Route and reject
 
-**Incident** — **A12** to IR. Lead yes. Ticket.  
+Right people on the **wrong path** still fails.
+
+**Incident** — **A12** to IR. Leadership yes. Ticket.  
 Reject personal email or chat.
 
-**RFI** — CTI on the update domain. Lead no. Form or ticket.  
+**RFI** — CTI on the update domain. Leadership no. Form or ticket.  
 Reject texting a CTI friend.
 
 **Speaker Notes:**  
-Right people, wrong path still fails. Do not retell the plot.
+Walk both givens before the knowledge check. Do not retell the plot. The product is four facts: recipients, leadership yes or no, channel, rejected channel.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No type pick (**1.5.1**).  
-No 30 / 60 clock (**1.5.2**).  
-No report body.  
-No invented DYA distro.  
-**1.7** is retired.
-
-**Speaker Notes:**  
-If the ticket system is down, that is a 1.5.2 blocker. They do not invent SMS.
-
----
-
-### Slide 6 – Knowledge Check
+### Slide 5 – Knowledge Check
 **Title:** Knowledge Check
 
-1. This hour is when the report is due. True or false?  
+1. This lesson is when the report is due. True or false?  
 2. What three things does the notification chart tell you?  
 3. First IR handoff for **A12**. Recipients, leadership yes/no, channel, and one rejected channel?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 7 – Summary
+### Slide 6 – Summary
 **Title:** Summary
 
-Chart: who, leadership, channel.  
-Reject the unofficial path.
-
-**Next:** **3.1.1** Data, information, and intelligence.  
-Unit **1.5** ends. SOC ends. The RFI is the door into CTI.
+The chart names who, leadership, and channel.  
+Reject the unofficial path.  
+This closes **1.5**. SOC reporting ends here.
 
 **Speaker Notes:**  
-Do not open 3.1 unless that hour is scheduled. Do not open 1.7.
+The remaining job after type and clock was the route. CTI is next. Stay off 1.7.
+
+---
+
+### Slide 7 – Next
+**Title:** Next
+
+**2.1.1** Data, information, and intelligence
+
+The RFI is the door into CTI.
+
+**Speaker Notes:**  
+Do not open 2.1.1 unless that lesson is scheduled. Do not open 1.7.

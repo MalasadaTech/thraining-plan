@@ -12,7 +12,7 @@
 | 1.5.1.1 | K | Report types | 1.5.1 a–c | A / B / C | B / C / C | B / C / C |
 | 1.5.1.2 | T | Identify the correct report type for a given situation and why it is not the adjacent type | 1.5.1.1 task 1 | 2b / 3c / 4c | 2b / 3c / 4c | 3c / 4c / 4c |
 
-The teaching-unit ID is **1.5.1**. Timelines are **1.5.2**. Routing is **1.5.3**. Finished intel products are **3.11**. Alert SLA clocks are **1.4.5**. **1.7** is retired. The RFI is the door into CTI. No lab.
+The teaching-unit ID is **1.5.1**. Timelines are **1.5.2**. Routing is **1.5.3**. Finished intel products are **2.11**. Alert SLA clocks are **1.4.5**. **1.7** is retired. The RFI is the door into CTI. No lab.
 
 ## Concepts taught
 

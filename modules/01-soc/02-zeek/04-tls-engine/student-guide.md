@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek TLS (`ssl`) row: SNI, cert names, JA3 where logged, version, cipher, and who talked to whom.
-2. Describe what a TLS log shows, and say what a **specific** SIEM query looks like.
+1. Read a TLS event: SNI, certificate subject and issuer, JA3 where logged, version, cipher, and who talked to whom.
+2. Describe what a Zeek TLS log shows, and say what a **specific** SIEM query looks like.
 
 **Mapped Proficiency Items:**
 - K: 1.2.4.1 – TLS engine
@@ -25,27 +25,27 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts read the Zeek **`ssl`** log (the TLS engine; the name is historical) to see the **handshake**, not the decrypted bytes. **1.2.3** was the DNS extract. This hour is TLS on the same wire. It does **not** name the initiating process. That was **1.1.4**.
+SOC analysts read Zeek **TLS** events to see the **handshake** when the payload is encrypted. That is daily alert work: traffic on 443 still needs a description — who talked to whom, which hostname the client asked for, what name is on the certificate, and which version and cipher were negotiated. This lesson is the **TLS** engine. Zeek writes it to the **`ssl`** log (the name is historical). It is **not** decrypted HTTP. It does **not** name the initiating process. That is host-observed network (**1.1.4**).
 
-**TLS** is one row for a handshake Zeek saw.
+Each handshake Zeek saw is one **event** in that log. In a SIEM, that event usually shows up as a **row**. Later lessons may still say “row.” Here it means the same thing as the TLS log.
 
 | Idea | What to read |
 |------|----------------|
-| **SNI** | `server_name` — the hostname in the Client Hello. Empty = not logged / not sent. |
-| **Subject / issuer** | `subject` / `issuer` — the name on the cert, and who signed it |
-| **JA3 / JA3S** | Client / server TLS fingerprints **where available**. Missing = not logged, not “no TLS.” |
+| **SNI** | `server_name` — the hostname in the Client Hello. Empty means it was not sent or not logged. |
+| **Subject / issuer** | `subject` / `issuer` — the name on the certificate, and who signed it. SNI is not the certificate subject. |
+| **JA3 / JA3S** | Client / server TLS fingerprints **where the shop logs them**. Missing means not logged, not “no TLS.” |
 | **Version / cipher** | `version`, `cipher` — what was negotiated |
-| **Source / dest** | `id.orig_h` / `id.orig_p` → `id.resp_h` / `id.resp_p` |
+| **Source / dest** | `id.orig_h` / `id.orig_p` → `id.resp_h` / `id.resp_p` — originator to responder |
 
-JA3 is how the client spoke TLS, not a malware name. Do not treat a hash as a verdict. Do not invent a JA3 value.
+JA3 is how the client spoke TLS, not a malware name. Do not treat a JA3 value as a verdict. Do not invent a JA3 value. If the field is empty, say so.
 
-This is the **extract**. PCAP still verifies or expands (**1.2.1**). Do not open HTTP fields yet.
+This is the **extract**. PCAP still verifies or expands (**1.2.1**). Do not open HTTP fields yet (**1.2.5**).
 
 **What good looks like:**
 
-- Describe: one sentence — who talked to whom, SNI if present, subject/issuer, version/cipher, JA3 only if logged. Do not name a process. Do not call it phishing from one mismatch.
-- Given: `id.resp_h` `203.0.113.88`, `id.resp_p` `443`, `server_name` empty, `version` / `cipher` present. **What occurred:** that host completed a TLS handshake to `203.0.113.88:443`. SNI not logged. The `conn` is a different row (**1.2.2**). The A record was **1.2.3**.
-- Query: names a **specific** pattern (SNI, subject, version, or dest IP/port), not “all `ssl` rows.”
+- Describe: one sentence — who talked to whom, SNI if present, subject/issuer, version/cipher, JA3 only if logged. Do not name a process. Do not call it phishing from one SNI and subject mismatch.
+- Given: `id.resp_h` `203.0.113.88`, `id.resp_p` `443`, `server_name` empty, `version` / `cipher` present. **What occurred:** that host completed a TLS handshake to `203.0.113.88:443`. SNI was not logged.
+- Query: names a **specific** pattern (SNI, subject, version, or dest IP/port), not every `ssl` event.
 
 ---
 
@@ -53,13 +53,13 @@ This is the **extract**. PCAP still verifies or expands (**1.2.1**). Do not open
 
 1. `server_name` is the name on the server certificate. True or false?
 2. Workstation → `203.0.113.88:443`, `server_name` empty, version and cipher present. In one sentence, what occurred?
-3. A SIEM query that matches every `ssl` row is a good “specific TLS activity” query. True or false?
+3. A SIEM query that matches every `ssl` event is a good “specific TLS activity” query. True or false?
 
 ---
 
 ## 3. Summary
 
-A TLS row is the handshake: SNI, cert, version, cipher, who talked to whom. JA3 only if logged. The process is not on this row. A query names a specific pattern.
+A TLS event is the handshake: SNI, certificate, version, cipher, and who talked to whom. JA3 only if logged. The process is not on this log. A query names a specific pattern.
 
 **Next:** **1.2.5** HTTP engine.
 

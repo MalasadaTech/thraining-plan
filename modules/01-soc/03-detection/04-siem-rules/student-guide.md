@@ -5,7 +5,7 @@
 - SOC: 1.3.4.1 A / B / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 1a / 2b / 3c  
 - Hunter: 1.3.4.1 B / C / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 2b / 3c / 4c  
 - CTI: 1.3.4.1 A / B / B ; 1.3.4.2 1a / 2b / 3c ; 1.3.4.3 1a / 1a / 2b  
-**Estimated Time:** 25–30 minutes
+**Estimated Time:** 25–30 minutes  
 
 ---
 
@@ -25,22 +25,22 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts **read** a saved detection and **propose** a basic one. **1.3.3** was YARA (bytes). This hour is the SIEM object that can create an **alert**. You do **not** deploy it. Opening the alert is **1.4**. How detections run as a service is **4.x**.
+SOC analysts **read** a saved detection and **propose** a basic one. That is daily work: an alert names a rule, and you have to say what that rule looks at — which table, which fields, which match — before you treat the alert as a fact. This lesson is that saved rule. It is **not** opening the alert (**1.4**). It is **not** how detections run as a service (**4.x**). You **propose**. You do **not** deploy.
 
-A **SIEM rule** (analytics / correlation search) runs on ingested logs.
+A **SIEM rule** is named logic that runs on ingested logs and can fire an alert. Shops also call this an **analytics rule** or a **correlation search**. Here those names mean the saved detection, not a requirement to join events.
 
 | Idea | What to read |
 |------|----------------|
-| **Structure** | Name, **table**, **logic**, **window**, **output** fields. A table with no `where` is not a detection. A join or count in a window is correlation — optional for a basic rule |
-| **Fields → detection** | Name the table. Pick fields you already know (`FileName`, `ProcessCommandLine`, `uri`, …). Add a parent, token, or dest so it is not “all PowerShell” |
-| **Wildcards / regex** | Wildcard / `has` for a path or substring (`*\\Temp\\*`). Regex when the token actually varies (`-e` / `-enc` / `-EncodedCommand`). Do not regex an empty field into existence |
+| **Structure** | **Name**, **table** (which log store), **logic** (the filter), **window** (how far back / how often), **output** fields. A table with no filter is not a detection. A join or count across events in a window is extra. A basic rule can be a filter on one table. |
+| **Fields → detection** | Name the table. Pick fields that exist on that table (`FileName`, `ProcessCommandLine` on process events). Add a parent, token, or destination so it is not “all PowerShell.” |
+| **Wildcards / regex** | **Wildcard** or substring when a path or fixed token is enough (`*\\Temp\\*`, `-enc`). **Regex** when the token itself varies (`-e` / `-enc` / `-EncodedCommand`). Do not regex an empty field into existence. |
 
-**From SIGMA (task 2, second path):** logsource → table, selectors → `where`, condition → boolean. Then name it, give it a window, list output fields. You are not required to run a converter.
+**From SIGMA (second create path):** SIGMA is a portable detection: you write what to look for once. Turn it into a SIEM rule by mapping **logsource** (which telemetry) → table, **selectors** (field tests) → logic, **condition** (and / or / not) → how those tests combine. Then name it, give it a window, and list output fields. You are not required to run a converter.
 
 **What good looks like:**
 
 - Analyze: name table, logic, window, and what would fire.
-- Given (from the **1.3.1** SIGMA):
+- Given:
 
 ```
 Name: Encoded PowerShell from script host
@@ -53,9 +53,11 @@ Logic:
 Output: Timestamp, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine
 ```
 
-**What it detects:** the **1.1.2** process create. Mapped from SIGMA, not freehand.
+**What it detects:** a process create of PowerShell with `-enc` in the command line, parent `wscript`.
 
-- Create: a **basic** proposed rule from those fields **or** from that SIGMA. An unfiltered `DeviceProcessEvents` is not a create. SOC **proposes**. DE reviews.
+If you started from SIGMA, the same three tests were `Image` / `CommandLine` / `ParentImage` on `process_creation`. The SIEM wrap is the name, table, window, and outputs.
+
+- Create: a **basic** proposed rule from those fields **or** from that SIGMA mapping. An unfiltered `DeviceProcessEvents` is not a create. SOC **proposes**. Detection engineering reviews.
 
 ---
 
@@ -69,7 +71,7 @@ Output: Timestamp, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine
 
 ## 3. Summary
 
-A SIEM rule is named logic on a table, in a window, with outputs. Build it from fields you know, or translate SIGMA. You propose. You do not deploy. This closes **1.3**.
+A SIEM rule is named logic on a table, in a window, with outputs. Build it from fields you know, or translate SIGMA. You propose. You do not deploy.
 
 **Next:** **1.4.1** Alert context and investigation.
 
@@ -77,7 +79,8 @@ A SIEM rule is named logic on a table, in a window, with outputs. Build it from 
 
 ## 4. Related modules
 
-- 1.3.3 – YARA rules (previous)
 - 1.3.1 – SIGMA rules
+- 1.3.3 – YARA rules
+- 1.1.2 – Process activity
 - 1.4.1 – Alert context and investigation
 - 4.x – How detections run as a service

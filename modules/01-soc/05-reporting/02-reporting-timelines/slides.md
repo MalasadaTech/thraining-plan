@@ -9,86 +9,83 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.5.2 – Reporting Timeline Requirements  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Which report clock, and whether it is at risk  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Report clocks, not alert 15 / 45. Name which one. Say if it is at risk.
+1.5.1 named the type. This lesson is the clock for that type. It is not the alert 15 / 45, and it is not who gets the report.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Watch the **report** clock.
+SOC analysts watch **report** clocks so a case record and a CTI question leave the desk on time.
 
-Name **which** clock.  
-Say whether it is **at risk**.
+This lesson names **which clock** applies and whether it is **at risk**.
+
+It is not the alert 15 / 45.
 
 **Speaker Notes:**  
-Type is already picked. Do not route. Do not use alert SLA.
+This slide is the student intro. A blocker also needs an escalate clock so it does not sit. Do not pick the type again. Do not route the report.
 
 ---
 
-### Slide 3 – Two kinds of clock
+### Slide 3 – Submit vs escalate-for-more-info
 **Title:** Submit vs escalate-for-more-info
 
-**Submit — incident** — from the decision. Classroom **30 min**.  
-**Submit — RFI** — from the question. Classroom **60 min**.  
-**Escalate-for-more-info** — from the moment you are blocked. Classroom **15 min**.
+**Submit — incident** — from the decision. Classroom **30 minutes**.  
+**Submit — RFI** — from the question. Classroom **60 minutes**.  
+**Escalate-for-more-info** — from the moment you are blocked. Classroom **15 minutes**.
+
+These minutes are this lesson only. They are not a live shop policy.
 
 **Speaker Notes:**  
-Outline a–b. 30 / 60 / 15 are this lesson only. Do not invent an informational clock.
+Write the three rows and stop. Do not invent an informational or changeover clock. If the shop has another named type, that type has its own submit number.
 
 ---
 
-### Slide 4 – What good looks like
+### Slide 4 – Which clock + at risk
 **Title:** Which clock + at risk
 
 **Submit — RFI, at risk** — question `13:30`, still unsent at `14:40`.  
-Not the 30-minute incident clock.
+That is not the 30-minute incident clock.
 
 **Escalate-for-more-info, at risk** — blocked at `14:10`, still blocked at `14:28`.  
 Submit is still running. Act on the blocker.
 
 **Speaker Notes:**  
-A12 is the case they already opened. The RFI is the update domain. Do not retell the plot.
+A12 is the case they already opened. The RFI is the update-domain question. Walk both givens before the knowledge check. Do not retell the plot.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No alert 15 / 45 (**1.4.5**).  
-No type pick (**1.5.1**).  
-No recipients or channel (**1.5.3**).  
-No invented DYA minutes.  
-**1.7** is retired.
-
-**Speaker Notes:**  
-If they write changeover as a report clock, stop.
-
----
-
-### Slide 6 – Knowledge Check
+### Slide 5 – Knowledge Check
 **Title:** Knowledge Check
 
-1. This hour is the same 15 / 45 clocks as **1.4.5**. True or false?  
+1. This lesson uses the same 15 / 45 clocks as **1.4.5**. True or false?  
 2. When does the **escalate-for-more-info** clock start?  
 3. RFI question at `13:30`, still unsent at `14:40`. Which clock, and is it at risk?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 7 – Summary
+### Slide 6 – Summary
 **Title:** Summary
 
-Submit-by-type. Blocked → escalate.  
-Name the clock. Not the alert SLA.
-
-**Next:** **1.5.3** Notification and distribution
+Submit by type. When blocked, escalate.  
+Name the clock. These are not the alert SLA clocks.
 
 **Speaker Notes:**  
-Do not open routing unless that hour is scheduled.
+Routing is next. Stay off who gets the report until that lesson.
+
+---
+
+### Slide 7 – Next
+**Title:** Next
+
+**1.5.3** Notification and distribution
+
+**Speaker Notes:**  
+1.5.3 is who gets the report and which channel. It is not another clock lesson.

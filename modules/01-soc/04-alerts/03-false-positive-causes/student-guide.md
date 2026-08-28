@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Name the two cause classes: analyst/tool activity, and untuned or overly broad logic.
-2. Given an FP, pick the class and say **what you would change**.
+1. Name the two cause classes: analyst or tool activity, and untuned or overly broad detection logic.
+2. Given a false positive, pick the class and say **what you would change**.
 
 **Mapped Proficiency Items:**
 - K: 1.4.3.1 – Common false positive causes
@@ -24,35 +24,37 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-The case is **already an FP** (**1.4.2**). This hour you pick a **cause class** and a **change**. You do **not** re-argue TP vs FP. You do **not** deploy the change (**1.3** / **4.x**). You do **not** pick scan/root/user (**1.4.4**).
+SOC analysts still have work after they call an alert a **false positive**. That fire already used queue time, and the same benign activity will fire again unless someone says why it matched and what would stop it. That is the job in this lesson: pick a **cause class** and name **one change**. You do not decide true positive versus false positive again. You do not deploy the change.
 
-| Class | What it looks like | Change you can name |
-|-------|--------------------|---------------------|
-| **a. Analyst or tool activity** | Someone tested a rule that is already live; packet replay; a scanner the shop owns | Exclude the lab/replay/scanner identity; test in a lab window — not “delete the rule” |
-| **b. Untuned or overly broad logic** | Any PowerShell; `content:"GET"` on any TCP; MZ-only YARA wired to an alert | Add a second selector (parent + `-enc`); bind an HTTP buffer; raise a threshold |
+A false positive is a fired alert on authorized or expected activity. Classification (**1.4.2**) already put that label on the case. This lesson is the **cause** of that fire, not the label. Categories such as scan, root, or user are **1.4.4**.
 
-Those two classes are the syllabus. If neither fits, say **other — not a/b** and still name a change. Do not invent a third official class.
+| Cause class | What it looks like | Change you can name |
+|-------------|--------------------|---------------------|
+| **Analyst or tool activity** | A security analyst downloaded or tested a rule that is already live; packet replay into production; a scanner the shop owns | Exclude the lab, replay, or scanner identity; test in a lab window. Do not delete a good signature |
+| **Untuned or overly broad detection logic** | Any PowerShell; `content:"GET"` on any TCP; MZ-only YARA wired to an alert | Add a second selector (parent and `-enc`); bind an HTTP buffer; raise a threshold |
 
-A change is one concrete sentence: “Require parent `wscript` and `-enc`.” Not “tune it.”
+Those two classes are the ones this lesson teaches. If neither fits, say **other — not analyst/tool or overly broad** and still name a change. Do not invent a third official class.
+
+A change is one concrete sentence: “Require parent `wscript` and `-enc`.” “Tune it” is not a change. You name the change. Detection engineering deploys it (**1.3** / **4.x**).
 
 **What good looks like:**
 
-- **b:** FP on any-PowerShell / `Get-Help` (**1.4.2**). Class **b**. Change: propose the **1.3.1** shape — `-enc` and a script-host parent. Hand it to DE.
-- **a:** FP because an analyst replayed yesterday’s `GET /update.exe` PCAP into production. Class **a**. Change: exclude the replay window or interface. Do not delete the `/update.exe` signature.
+- **Overly broad:** False positive on any-PowerShell / `Get-Help` (**1.4.2**). Class: untuned or overly broad detection logic. Change: require `-enc` and a script-host parent. Hand it to detection engineering.
+- **Analyst or tool:** False positive because an analyst replayed yesterday’s `GET /update.exe` packet capture into production. Class: analyst or tool activity. Change: exclude the replay window or interface. Do not delete the `/update.exe` signature.
 
 ---
 
 ## 2. Knowledge Check
 
-1. This hour is for deciding TP vs FP. True or false?
-2. What are the two syllabus cause classes?
-3. FP: any-PowerShell on `Get-Help`. Class and one change sentence.
+1. This lesson is for deciding true positive versus false positive. True or false?
+2. What are the two cause classes?
+3. False positive: any-PowerShell on `Get-Help`. Name the class and one change sentence.
 
 ---
 
 ## 3. Summary
 
-After FP: **class + change**. Analyst/tool vs overly broad. Name the change; you do not deploy it.
+After a false positive: **class + change**. Analyst or tool activity versus untuned or overly broad logic. Name the change. You do not deploy it.
 
 **Next:** **1.4.4** Common alert categorizations.
 

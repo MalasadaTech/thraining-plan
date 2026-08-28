@@ -9,24 +9,24 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.1.4 – Network Activity (Endpoint)  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Which process on this device talked  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Host-network rows. Who on this device talked. Not Zeek. Not Sysmon install.
+1.1.3 was the file event on the same host. This lesson is the host-network kind. It is not Zeek and not how to install Sysmon.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts read **host** network rows: which **process** talked, and to where.
+SOC analysts read **host-network** events to see which process on this device talked, and to where.
 
-Not a process create (**1.1.2**).  
-Not Zeek (**1.2**). Zeek does not name the process.
+The point versus Zeek is the initiating process.  
+Not Zeek. Not how to install Sysmon.
 
 **Speaker Notes:**  
-Daily alert work: describe the host-network row. Registry waits.
+This is daily alert work: describe the endpoint network log. Registry and Zeek wait for later lessons.
 
 ---
 
@@ -38,7 +38,7 @@ Daily alert work: describe the host-network row. Registry waits.
 **Domain / URL** — when the endpoint logged them. Empty ≠ no DNS.
 
 **Speaker Notes:**  
-Outline a–b. Port 443 does not make an unexpected initiator “expected.”
+Walk address and direction first. Port 443 does not make an unexpected initiator “expected.” A missing name is a gap, not proof that DNS never happened.
 
 ---
 
@@ -47,11 +47,11 @@ Outline a–b. Port 443 does not make an unexpected initiator “expected.”
 
 Sysmon `Image`. MDE `InitiatingProcess*`.
 
-This is the point of **1.1** vs Zeek.  
-A `conn` row will not give you this field.
+This is the point of this lesson versus Zeek.  
+A `conn` log will not give you this field.
 
 **Speaker Notes:**  
-Outline c / e. Do not teach JA3 or `uid` here.
+The host-network event names who opened the socket. Do not teach JA3 or Zeek `uid` here.
 
 ---
 
@@ -61,16 +61,17 @@ Outline c / e. Do not teach JA3 or `uid` here.
 Sysmon **3** (connect). Sysmon **22** (DNS, if in the feed).
 
 MDE `DeviceNetworkEvents` `ActionType`:  
-**ConnectionSuccess** — this process completed a connection.
+**ConnectionSuccess** (this process completed a connection).
 
-Same story. Different names. Full `ActionType` list is in the Defender portal — do not invent values.
+Same activity. Different field names.  
+The full `ActionType` list is in the Defender portal — do not invent values.
 
 **Speaker Notes:**  
-Outline d. No Event 22 in the feed → “DNS not logged on the endpoint.”
+DNS on the endpoint is Sysmon 22 when that event is in the feed. No Event 22 → “DNS not logged on the endpoint.” Do not teach Sysmon install.
 
 ---
 
-### Slide 6 – What good looks like
+### Slide 6 – Describe it. Query something specific.
 **Title:** Describe it. Query something specific.
 
 One sentence: which process, to which IP/port, which direction.
@@ -81,19 +82,19 @@ A query names a **specific** pattern — initiator + dest port or remote IP.
 Not “all connections.”
 
 **Speaker Notes:**  
-They should see this row before the knowledge check. Hidden encoded PowerShell connected outbound 443. URL not logged. Do not tell the PRD plot.
+Show this given before the knowledge check. One sentence: hidden encoded PowerShell connected outbound 443. URL not logged. Do not tell the intro plot.
 
 ---
 
 ### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. A Zeek `conn` row names the initiating process. True or false?  
+1. A Zeek `conn` log names the initiating process. True or false?  
 2. `powershell.exe -enc …` has `ConnectionSuccess` to `203.0.113.88:443` and no `RemoteUrl`. In one sentence, what occurred?  
-3. A SIEM query that matches every `DeviceNetworkEvents` row is a good “specific endpoint network” query. True or false?
+3. A SIEM query that matches every endpoint network event is a good “specific endpoint network activity” query. True or false?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -109,4 +110,4 @@ A query is specific.
 **Next:** **1.1.5** Registry activity
 
 **Speaker Notes:**  
-That hour is the registry row on the same host telemetry.
+1.1.5 is the registry event on the same host telemetry. Stay off this host-network event when you get there.

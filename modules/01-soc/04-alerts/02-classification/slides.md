@@ -3,69 +3,74 @@
 
 **Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.4.2 – Alert Classification  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Whether the detection was right  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Label plus cite. Not why the FP fired.
+This lesson is the four classification labels and a cite of evidence. It is not why a false positive fired, and it is not scan / root / user.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Classify the case you just investigated.  
-**Cite** the evidence.
+After you have looked at a case, you **classify** it.
 
-Do **not** explain why an FP fired. That is **1.4.3**.
+A classification says whether the detection was right. You **cite the evidence**.
+
+This lesson is the four labels.
 
 **Speaker Notes:**  
-1.4.1 gathered context.
+This slide is the student intro. Without a label, the next person cannot tell a real hit from a miss. Without a cite, “malicious” is a slogan. Context gathering was the previous lesson. Why a false positive fired waits.
 
 ---
 
 ### Slide 3 – Four labels
 **Title:** TP, FP, TN, FN
 
-**TP** — alert, activity is what the rule is for.  
-**FP** — alert, activity is benign.  
-**TN** — no alert, ordinary activity.  
-**FN** — no alert, bad activity that should have fired.
+**True Positive** — a fired alert, and the activity is what the rule is for.  
+**False Positive** — a fired alert, and the activity is benign.  
+**True Negative** — no alert, ordinary activity.  
+**False Negative** — no alert, bad activity that should have fired.
+
+Fired alerts sit in an **alert queue**. TN and FN usually do not.
 
 **Speaker Notes:**  
-Outline a–d. TN and FN usually have no queue row.
+Walk detection-said versus reality. Stop on true negative and false negative so they do not assume every case is a queue item. Do not open cause class or category.
 
 ---
 
-### Slide 4 – FN and evidence
+### Slide 4 – A miss, and a cite
 **Title:** A miss, and a cite
 
-**FN** is not a fired alert you dislike. It is a **miss**.
+A **false negative** is not a fired alert you dislike. It is a **miss**.
 
-**Evidence** — parent + `-enc`, dest + URI, “no alert on that GET.”  
+**Evidence** is a short cite — parent plus `-enc`, destination plus URI, “no alert on that GET.”  
 A slogan is not a cite.
 
 **Speaker Notes:**  
-Why the FP fired waits.
+This is the task extension: cite the field or log. If they call a disliked queue alert an FN, send them back to the table. Why the false positive fired is the next lesson.
 
 ---
 
-### Slide 5 – What good looks like
-**Title:** Four cases
+### Slide 5 – Four cases
+**Title:** Classify and cite
 
-**TP** — encoded PowerShell from `wscript`.  
-**FP** — any-PowerShell on `Get-Help`.  
+**TP** — alert `Encoded PowerShell from script host`; `wscript` plus `-enc`.  
+**FP** — any-PowerShell alert on interactive `Get-Help`.  
 **TN** — ordinary browse, no alert.  
 **FN** — `GET /update.exe` to `203.0.113.88:8080`, no alert.
 
+Do not invent an alert so you can classify it.
+
 **Speaker Notes:**  
-Do not tell the PRD plot.
+Show these givens before the knowledge check. The product is the label plus the cite. Do not tell the course-fiction plot. Do not explain why the PowerShell rule is broad.
 
 ---
 
@@ -77,18 +82,26 @@ Do not tell the PRD plot.
 3. `GET /update.exe` to `203.0.113.88:8080`, no alert. Classify and cite.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Four labels. Cite the evidence.  
-TN and FN usually have no queue row.  
-Why an FP fired is next.
-
-**Next:** **1.4.3** Common false positive causes
+Four labels.  
+Cite the evidence.  
+True negatives and false negatives usually have no alert in the queue.
 
 **Speaker Notes:**  
-Cause class next, not another label.
+The next lesson is why a false positive fired — the cause class, not another label.
+
+---
+
+### Slide 8 – Next
+**Title:** Next
+
+**1.4.3** Common false positive causes
+
+**Speaker Notes:**  
+1.4.3 is why this false positive happened and what you would change. Stay off the four labels when you get there.

@@ -5,7 +5,7 @@
 - SOC: 1.5.3.1 A / B / C ; 1.5.3.2 2b / 3c / 4c  
 - Hunter: 1.5.3.1 A / B / B ; 1.5.3.2 2b / 3c / 4c  
 - CTI: 1.5.3.1 B / C / C ; 1.5.3.2 3c / 4c / 4c  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Read a notification chart: **who**, **leadership awareness**, **approved channel**.
+1. Read a notification chart: **who** receives the report, whether **leadership** gets awareness, and which **channel** is approved.
 2. Route a report: name recipients, whether leadership gets awareness, the approved channel, and **reject the wrong channel**.
 
 **Mapped Proficiency Items:**
@@ -24,7 +24,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts put the record on an **approved path** so IR and leadership actually see the case, and so the CTI question lands as an RFI, not a text. You already know the **type** (**1.5.1**) and the **clock** (**1.5.2**). This hour is **who** and **how**. You do **not** pick the type again. You do **not** score the 30 / 60. You do **not** write the body. **1.7** is retired — not a 1.5 channel.
+SOC analysts put the case record and the CTI question on an **approved path** so IR and leadership actually see them. An incident that only lives in a private chat is not a handoff. An RFI sent as a text is not a request the CTI desk can work. **1.5.1** named the type. **1.5.2** named the clock. This lesson is **who** receives the report, whether **leadership** gets awareness, and **which channel** is approved. You do **not** pick the type again. You do **not** score the 30 / 60. You do **not** write the body. **1.7** is retired — it is not a 1.5 channel.
+
+A **notification chart** (sometimes called a **matrix**) is a table that says which teams receive which report type, whether leadership gets awareness, and which channel is approved.
 
 **Classroom chart (this lesson only — not a live shop matrix):**
 
@@ -35,7 +37,7 @@ SOC analysts put the record on an **approved path** so IR and leadership actuall
 
 If your shop has a real chart, use it. The obligation is **who + leadership yes/no + approved channel**, not these names. If your shop has an **other** type, it has its own row — do not invent one here.
 
-**Leadership awareness** is a yes/no on the chart. It is not “email the CEO.” Duty SOC lead counts. The leadership product is a short awareness flag, not the file hash.
+**Leadership awareness** is a yes or no on the chart. It is not “email the CEO.” The duty SOC lead counts. The leadership product is a short awareness flag, not the file hash.
 
 **Approved** (classroom): ticket, approved RFI form.  
 **Not approved** (classroom): personal SMS, private chat, personal mail off-domain.
@@ -53,7 +55,7 @@ The route is four facts: **recipients**, **leadership yes/no**, **channel**, **r
 
 ## 2. Knowledge Check
 
-1. This hour is when the report is due. True or false?
+1. This lesson is when the report is due. True or false?
 2. What three things does the notification chart tell you?
 3. First IR handoff for **A12**. Recipients, leadership yes/no, channel, and one rejected channel?
 
@@ -61,9 +63,9 @@ The route is four facts: **recipients**, **leadership yes/no**, **channel**, **r
 
 ## 3. Summary
 
-Chart: who, leadership, channel. Reject the unofficial path. This closes **1.5**. SOC ends.
+The chart names who, leadership, and channel. Reject the unofficial path. This closes **1.5**. SOC reporting ends here.
 
-**Next:** **3.1.1** Data, information, and intelligence. The RFI is the door into CTI.
+**Next:** **2.1.1** Data, information, and intelligence. The RFI is the door into CTI.
 
 ---
 
@@ -71,5 +73,5 @@ Chart: who, leadership, channel. Reject the unofficial path. This closes **1.5**
 
 - 1.5.2 – Reporting timeline requirements (previous)
 - 1.5.1 – Report types
-- 3.1.1 – Data, information, and intelligence
-- 3.11 – Intelligence production (not a 1.5 route)
+- 2.1.1 – Data, information, and intelligence
+- 2.11 – Intelligence production (not a 1.5 route)

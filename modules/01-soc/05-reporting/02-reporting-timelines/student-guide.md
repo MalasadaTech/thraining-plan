@@ -24,7 +24,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts watch **report** clocks so the case record and the CTI question leave the desk on time — and so a blocker gets escalated instead of sitting. You already know the **type** (**1.5.1**). This hour you name **which clock** and whether it is **at risk**. You do **not** use the alert 15 / 45 (**1.4.5**). You do **not** pick the type again. You do **not** route the report (**1.5.3**).
+SOC analysts watch **report** clocks so a case record and a CTI question leave the desk on time, and so a blocker is escalated instead of sitting. **1.5.1** already named the type — **incident report** (the case record) or **RFI** (the question to another desk). This lesson is **which clock** applies to that type, and whether it is **at risk**. It is **not** the alert 15 / 45 clocks (**1.4.5**). It is **not** who gets the report (**1.5.3**).
 
 **Classroom numbers (this lesson only — not a live shop policy):**
 
@@ -34,7 +34,7 @@ SOC analysts watch **report** clocks so the case record and the CTI question lea
 | **Submit — RFI** | The **question** arises | **60 minutes** |
 | **Escalate-for-more-info** | You become **blocked** (cannot finish without another desk) | **15 minutes** |
 
-If your shop uses different minutes, use those. The obligation is **submit-by-type** plus **blocked → escalate**, not 30 / 60 / 15. If your shop has an **other** type, it has its own submit number — do not invent one here.
+If your shop uses different minutes, use those. The obligation is **submit-by-type** plus **blocked → escalate**, not 30 / 60 / 15. If your shop has an **other** type, that type has its own submit number — do not invent one here.
 
 **At risk** means the named clock will miss if you wait, or it is already past. “Late” with no clock name is not the task.
 
@@ -49,7 +49,7 @@ Two clocks can be live. When you are blocked, name **escalate-for-more-info** fi
 
 ## 2. Knowledge Check
 
-1. This hour is the same 15 / 45 clocks as **1.4.5**. True or false?
+1. This lesson uses the same 15 / 45 clocks as **1.4.5**. True or false?
 2. When does the **escalate-for-more-info** clock start?
 3. RFI question at `13:30`, still unsent at `14:40`. Which clock, and is it at risk?
 
@@ -57,7 +57,7 @@ Two clocks can be live. When you are blocked, name **escalate-for-more-info** fi
 
 ## 3. Summary
 
-Submit-by-type. Blocked → escalate. Name the clock. Not the alert SLA.
+Submit by type. When blocked, escalate. Name the clock. These are not the alert SLA clocks.
 
 **Next:** **1.5.3** Notification and distribution.
 

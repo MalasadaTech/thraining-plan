@@ -13,7 +13,7 @@
 | 1.3.4.2 | T | Analyze an existing SIEM rule and describe what it detects | 1.3.8 task 1 | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 2b / 3c |
 | 1.3.4.3 | T | Create a basic SIEM detection rule from log fields or a SIGMA rule | 1.3.8 task 2 | 1a / 2b / 3c | 2b / 3c / 4c | 1a / 1a / 2b |
 
-The teaching-unit ID is **1.3.4**. Outline headings `1.3.7` / `1.3.8` are the K/T pair. SIGMA is **1.3.1**. YARA is **1.3.3**. Alerts are **1.4**. This lesson closes unit **1.3**. SOC proposes; does not deploy. No lab.
+The teaching-unit ID is **1.3.4**. Outline headings `1.3.7` / `1.3.8` are the K/T pair. SIGMA is **1.3.1** (mapping restated here; YAML authorship stays there). YARA is **1.3.3**. Alerts are **1.4**. How detections run as a service is **4.x**. SOC proposes; does not deploy. No lab.
 
 ## Concepts taught
 

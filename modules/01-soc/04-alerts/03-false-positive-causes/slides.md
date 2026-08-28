@@ -9,87 +9,89 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.4.3 – Common False Positive Causes  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Why a false positive fired, and what you would change  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Already an FP. Class + change. Do not deploy.
+This lesson sits after classification. The case is already a false positive. The work here is the cause class and one named change. Analysts do not deploy that change.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-The case is **already an FP**.
+A **false positive** already used queue time.
 
-Pick a **cause class** and **one change**.  
-Do **not** re-argue TP vs FP.
+Say **why** it matched, and **one change** that would stop the same fire.
+
+You do not re-decide true positive versus false positive.  
+You do not deploy the change.
 
 **Speaker Notes:**  
-1.4.2 was the label.
+This slide is the student intro. A false positive still used queue time. The job is the cause class and one change so the same benign fire does not keep repeating. Do not re-open classification.
 
 ---
 
-### Slide 3 – Two classes
-**Title:** Analyst/tool vs overly broad
+### Slide 3 – Two cause classes
+**Title:** Analyst or tool versus overly broad
 
-**a** — tested a live rule; replay; shop-owned scanner.  
-Change: exclude that identity or window.
+**Analyst or tool activity** — someone tested or downloaded a live rule; replayed a capture; ran a shop-owned scanner.  
+Change: exclude that identity or window. Do not delete a good signature.
 
-**b** — any PowerShell; GET on any TCP; MZ-only.  
-Change: add a selector. Hand it to DE.
+**Untuned or overly broad detection logic** — any PowerShell; GET on any TCP; MZ-only YARA wired to an alert.  
+Change: add a selector. Hand it to detection engineering.
 
 **Speaker Notes:**  
-Outline a–b. No third official class.
+Those two classes are the whole set. If neither fits, say other and still name a change. Do not invent a third official class.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Class + one sentence
+### Slide 4 – Class plus one sentence
+**Title:** Class plus one sentence
 
-**b** — `Get-Help` on any-PowerShell.  
+**Overly broad** — `Get-Help` on any-PowerShell.  
 Change: require `-enc` and parent `wscript`.
 
-**a** — replay of `GET /update.exe` into production.  
+**Analyst or tool** — replay of `GET /update.exe` into production.  
 Change: exclude the replay. Do not delete the signature.
 
 **Speaker Notes:**  
-“Tune it” is not a change. Do not tell the PRD plot.
+Show these two givens before the knowledge check. “Tune it” is not a change. Do not tell the PRD plot.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Name the change. You do not deploy it.
+**Title:** Name the change. You do not deploy it.
 
-No reclassify.  
-No deploy.  
-No scan/root/user category (**1.4.4**).
+Do not reclassify true positive versus false positive.  
+Do not deploy the change.  
+Do not pick scan, root, or user (**1.4.4**).
 
 **Speaker Notes:**  
-Categories next.
+Stay on cause and change. Category is the next lesson. Detection engineering deploys.
 
 ---
 
 ### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. This hour is for deciding TP vs FP. True or false?  
-2. What are the two syllabus cause classes?  
-3. FP: any-PowerShell on `Get-Help`. Class and one change sentence.
+1. This lesson is for deciding true positive versus false positive. True or false?  
+2. What are the two cause classes?  
+3. False positive: any-PowerShell on `Get-Help`. Name the class and one change sentence.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-After FP: class + change.  
-Analyst/tool vs overly broad.  
+After a false positive: class plus change.  
+Analyst or tool activity versus overly broad logic.  
 Name the change. You do not deploy it.
 
 **Next:** **1.4.4** Common alert categorizations
 
 **Speaker Notes:**  
-Category is not cause.
+1.4.4 is the site category, not the false-positive cause. Stay off cause class when you get there.

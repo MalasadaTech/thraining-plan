@@ -17,19 +17,24 @@ Classify a case as TP, FP, TN, or FN and cite the evidence. Include one miss as 
 
 **Context (plain language):**
 
-- What this hour is for: SOC analysts label the case they just investigated and say why, in one cite.
-- How it hooks to the hour before: 1.4.1 gathered context on the encoded-PowerShell alert.
-- How it hooks to the hour after: 1.4.3 is *why* an FP fired — not the label.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–d. FN is a missed detection. No lab.
-- What we are *not* doing this hour: FP cause class. Categories. Hunt. Invented alerts so they can classify. No lab.
+- What this lesson is for: After you have looked at a case, you classify it so the shop knows whether the detection was right, and you cite the evidence — a short pointer to the field or log that proves the label.
+- How it hooks to the lesson before: 1.4.1 gathered context on a fired alert. This lesson is the four labels.
+- How it hooks to the lesson after: 1.4.3 is *why* a false positive fired — not the label.
+- Why we are doing it this way: name the four labels and require a cite, including a miss as FN, before anyone explains why a false positive fired.
+- What we are *not* doing in this lesson: false-positive cause class. Scan / root / user categories. Hunt how-to. Invented alerts so they can classify. No lab.
 - Extra step: none.
 
-TP = the first alert. FN = GET /update.exe with no queue row. Do not tell the PRD plot.
+Use the same names as the student guide: **True Positive**, **False Positive**, **True Negative**, **False Negative**, **alert queue**, and **cite / evidence**. **Alert queue** is the list of fired alerts waiting for an analyst, not the headline word for a true negative or a false negative. The true-positive given is the encoded-PowerShell alert. The false-negative given is `GET /update.exe` with no alert. Do not turn either into the course-fiction plot.
 
 **Key Teaching Points:**
-- Four labels. TN/FN usually have no queue row.
-- Cite, not a slogan.
-- FN is a miss, not a disliked alert.
+- Four labels. True negatives and false negatives usually have no alert in the queue.
+- Cite the field or log. A slogan is not a cite.
+- A false negative is a miss, not a disliked alert.
+
+**Common Student Challenges:**
+- Treat a false negative as a bad alert in the queue. Why: they have only classified fired alerts. Example: calling the GET a false positive because they dislike that nothing fired.
+- Invent an alert so a true negative or false negative can be classified. Why: they think every case must be a queue item. Example: writing a fake browser-malware alert for ordinary browse.
+- Explain why the PowerShell rule is broad instead of labeling the `Get-Help` case. Why: the next lesson is causes. Example: “untuned rule” with no FP label and no cite.
 
 **Required Materials:**
 - Student Guide
@@ -41,15 +46,19 @@ TP = the first alert. FN = GET /update.exe with no queue row. Do not tell the PR
 
 Same as the student guide.
 
-**Mapped Items:** K 1.4.2.1 ; T 1.4.2.2
+**Mapped Proficiency Items:**
+- K: 1.4.2.1 – Alert classification (TP/FP/TN/FN)
+- T: 1.4.2.2 – Classify given cases as TP, FP, TN, or FN and cite the evidence
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Label + cite |
+| Introduction (required) | 3 min     | Label plus cite |
 | Key Concepts            | 12 min    | Four labels; four givens |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 1 min     | |
@@ -61,27 +70,29 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write the four-cell table. Walk TP then FN so they do not call a miss an FP.
-
-If they start “untuned rule”: “1.4.3. Label only.”  
-If they invent an alert for the GET: “No alert. That is the FN.”  
-If they say “malicious” with no cite: “Cite the field.”
+**Talking Points:**
+- Open with the job: after you have looked at a case, you classify it and cite evidence so the shop knows whether the detection was right.
+- Walk the four-label table. Stop on true negative and false negative: they usually have no alert in the queue.
+- Walk the four givens. Put the false negative next to the true positive so they do not call a miss a false positive or invent an alert.
+- If they start explaining an untuned rule: that is 1.4.3. This lesson is the label only.
+- If they invent an alert for the GET: there is no alert. That is the false negative.
+- If they say “malicious” with no cite: cite the field.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **FN is a bad alert in the queue. True or false?**  
-   **Answer:** False. FN is a miss — no alert on bad activity.  
-   **Explanation:** Outline d.
+1. **FN is a bad alert sitting in the queue. True or false?**  
+   **Answer:** False. A false negative is a miss — no alert on bad activity that should have been detected.  
+   **Explanation:** A disliked alert in the queue is still a fired alert. That is a true positive or a false positive, not a false negative.
 
-2. **Encoded PS alert, wscript + -enc. Classify and cite.**  
-   **Answer:** TP. The activity the rule is for occurred.  
-   **Explanation:** Outline a / task 1.
+2. **Alert `Encoded PowerShell from script host`, `wscript` + `-enc` confirmed. Classify and cite.**  
+   **Answer:** TP. Cite: parent `wscript` and `-enc` are the activity the rule is for, and that activity happened.  
+   **Explanation:** The rule is encoded PowerShell from a script host. The parent and command line prove the hit.
 
-3. **GET /update.exe, no alert. Classify and cite.**  
-   **Answer:** FN. The download occurred; nothing fired.  
-   **Explanation:** Outline d / task 1 (include a miss).
+3. **`GET /update.exe` to `203.0.113.88:8080`, no alert. Classify and cite.**  
+   **Answer:** FN. Cite: the download occurred; nothing fired.  
+   **Explanation:** That is a missed detection. Do not invent an alert so you can classify it.
 
 ---
 

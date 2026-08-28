@@ -9,49 +9,54 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.1.3 – File System Activity  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** What happened to the file  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Host file rows. Not Zeek. Not Sysmon install. Not the process create from last hour.
+1.1.1 named the five kinds of host activity. This lesson is the file kind. It is not Zeek, not how to install Sysmon, and not a process-create write-up.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-SOC analysts read **host** file rows: what happened to a file, where, by whom.
+SOC analysts read **file** events to see what happened to a file.
 
-Not a process create (**1.1.2**).  
-Not Zeek (**1.2**). Not how to install Sysmon.
+Where it sat. Which process touched it.  
+Not Zeek. Not how to install Sysmon. Not a process create.
 
 **Speaker Notes:**  
-Daily alert work: describe the file row. Host-network waits.
+This is daily alert work: describe the file event. Host-network waits for later lessons.
 
 ---
 
-### Slide 3 – The actions
+### Slide 3 – Create, rename-move, delete
 **Title:** Create, rename-move, delete, modify, read
 
-**Create** — a file appeared. Sysmon **11**.  
-**Rename-move** — same object, new name or folder.  
-**Delete** — Sysmon **23** / **26**.  
-**Modify / read** — where logged.
+**Create** — a file appeared. Sysmon **11**. MDE create is `FileCreated`.
+
+**Rename-move** — same object, new name or folder. MDE `FileRenamed` when logged. Not Event 11.
+
+**Delete** — Sysmon **23** / **26**. MDE `FileDeleted`.
+
+**Modify / read** — where logged. Do not assume a `FileRead` value on this table.
 
 **Speaker Notes:**  
-Outline a. Event 11 is not a rename.
+Walk the actions first. Event 11 is create, not rename. Read is where that action is logged — do not invent `FileRead`.
 
 ---
 
 ### Slide 4 – Path, hash, who touched it
 **Title:** Path, hash, initiating process
 
-**Path / name / extension** — where it sits. Name can lie.  
-**Hash** — bytes when present. Event **11** often has none.  
-**Initiating process** — who did this *to the file*.
+**Path / name / extension** — where it sits. The name can lie.
+
+**Hash** — file bytes when present. Event **11** often has none. Empty is a gap, not “clean.”
+
+**Initiating process** — who did this *to the file*. Not a process-create parent-child write-up.
 
 **Speaker Notes:**  
-Outline b–d. Do not turn this into a 1.1.2 parent-child write-up.
+Path and initiator are what you write down. Do not turn this into a 1.1.2 parent-child write-up.
 
 ---
 
@@ -61,17 +66,17 @@ Outline b–d. Do not turn this into a 1.1.2 parent-child write-up.
 Sysmon **11** / **23** / **26**.
 
 MDE `DeviceFileEvents` `ActionType`:  
-**FileCreated**. **FileRenamed**. **FileDeleted**.  
-**FileModified** / **FileRead** where logged.
+**FileCreated** (create). **FileRenamed** (rename-move). **FileDeleted** (delete). **FileModified** (where logged).
 
-Same story. Different names. Full `ActionType` list is in the Defender portal — do not invent values.
+Same activity. Different field names.  
+The full `ActionType` list is in the Defender portal — do not invent values.
 
 **Speaker Notes:**  
-Outline e. Write “not logged,” not “did not happen.”
+Read is where that action is logged. Do not invent `FileRead` on this MDE table. Write “not logged,” not “did not happen.” Do not teach Sysmon install.
 
 ---
 
-### Slide 6 – What good looks like
+### Slide 6 – Describe it. Query something specific.
 **Title:** Describe it. Query something specific.
 
 One sentence: what happened to which file, by whom.
@@ -82,7 +87,7 @@ A query names a **specific** pattern — initiator + path + extension.
 Not “all file events.”
 
 **Speaker Notes:**  
-They should see this row before the knowledge check. Script host created update.exe under Temp. Hash not logged. Do not tell the PRD plot.
+Show this given before the knowledge check. One sentence: script host created update.exe under Temp. Hash not logged. Do not tell the intro plot.
 
 ---
 
@@ -91,10 +96,10 @@ They should see this row before the knowledge check. Script host created update.
 
 1. Sysmon Event 11 is a rename. True or false?  
 2. `wscript.exe` creates Temp `update.exe` (Sysmon 11, no hash). In one sentence, what occurred?  
-3. A SIEM query that matches every `DeviceFileEvents` row is a good “specific file operation” query. True or false?
+3. A SIEM query that matches every file event is a good “specific file operation” query. True or false?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -102,11 +107,11 @@ Answers only in the instructor guide. Three questions for the whole lesson. Stop
 **Title:** Summary
 
 What happened to which file, by whom.  
-Path and initiator tell the story.  
+Path and initiator are what you trust.  
 A missing hash is a gap.  
 A query is specific.
 
 **Next:** **1.1.4** Network activity (endpoint)
 
 **Speaker Notes:**  
-That hour is host-observed network. Not Zeek.
+1.1.4 is the host-network event on the same host telemetry. Stay off this file event when you get there.
