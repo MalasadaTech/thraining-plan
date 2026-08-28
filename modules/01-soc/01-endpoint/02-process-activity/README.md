@@ -17,7 +17,7 @@ The teaching-unit ID is **1.1.2**. File activity is **1.1.3**. Host-observed net
 
 ## Concepts taught
 
-- process activity
+- process activity (also: process events, process logs)
 - process create / terminate
 - PID, name, and command line
 - parent-child process

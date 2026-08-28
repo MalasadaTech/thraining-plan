@@ -3214,7 +3214,7 @@ See also: [process activity](#process-activity), [Sysmon 1 / 5 / 10 and DevicePr
 
 ### process activity
 
-Also: process events, process telemetry, host process activity
+Also: process events, process logs, process telemetry, host process activity
 
 | Coverage | Module | Roles |
 |----------|--------|-------|

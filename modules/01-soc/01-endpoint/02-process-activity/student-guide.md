@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Read a process row: create / terminate, parent-child, command line, user, hashes, and process access.
+1. Read a process event: create / terminate, parent-child, command line, user, hashes, and process access.
 2. Describe what a Sysmon or MDE process event shows, and say what a **specific** SIEM query looks like.
 
 **Mapped Proficiency Items:**
@@ -25,20 +25,20 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-SOC analysts read **host** process rows to see who ran what. **1.1.1** was the map. This hour is the **process** row. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
+SOC analysts read **process** events on a host to see who ran what. That is daily alert work: an alert names a host, and you have to say which program started, ended, or touched another — from whom, and as whom. **1.1.1** named the five kinds of host activity. This lesson is the **process** kind. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
 
-**Process activity** is endpoint telemetry about a running program: it **started**, it **ended**, or one process **touched** another.
+**Process activity** is endpoint telemetry about a running program: it **started**, it **ended**, or one process **touched** another. In a SIEM, that event usually shows up as a row in a process table.
 
 | Idea | What to read |
 |------|----------------|
 | **Create / terminate** | Sysmon **1** / **5**. MDE create is `ActionType` **ProcessCreated**. Terminate is Sysmon 5 — do not assume `ProcessTerminated` on this table. |
-| **PID, name, command line** | `ProcessId`, image/name, `CommandLine` / `ProcessCommandLine`. Name can lie. Command line is often the story. |
+| **PID, name, command line** | `ProcessId`, image/name, `CommandLine` / `ProcessCommandLine`. The image name can be fake. The command line is often what actually ran. |
 | **Parent-child** | PPID, parent name, parent command line; MDE `InitiatingProcess*` |
 | **Integrity / user** | Integrity level; `User` / account (where logged). Empty is a gap, not “not admin.” |
 | **Hash / original filename** | SHA256; `OriginalFileName` (PE resource — can disagree with the on-disk name) |
 | **Process access** | Sysmon **10**: source → target (who touched whom). Not a create. |
 
-**How this shows up:** Sysmon **1** / **5** / **10**; MDE `DeviceProcessEvents` (`ActionType`, `InitiatingProcess*`, `ProcessCommandLine`, SHA256). MDE **initiating** process = parent. Same story, different names.
+**How this shows up:** Sysmon **1** / **5** / **10**; MDE `DeviceProcessEvents` (`ActionType`, `InitiatingProcess*`, `ProcessCommandLine`, SHA256). On MDE, the **initiating** process is the parent. Same activity, different field names.
 
 MDE `ActionType` values on **this** table:
 
@@ -47,17 +47,17 @@ MDE `ActionType` values on **this** table:
 | **ProcessCreated** | A process launched | Event **1** |
 | **OpenProcess** | A process opened a handle to another (who touched whom) | Event **10** |
 
-The full set is in the Defender portal schema. Do not invent a value. **Terminate** is Sysmon **5**. Do not assume a `ProcessTerminated` row in `DeviceProcessEvents`.
+The full set is in the Defender portal schema. Do not invent a value. **Terminate** is Sysmon **5**. Do not assume a `ProcessTerminated` event in `DeviceProcessEvents`.
 
 If a field is empty in your tenant, say so. Do not invent it.
 
 **What good looks like:**
 
 - Describe: one sentence — who ran what, from whom, as whom. Create, terminate, or access. Do not jump to file, DNS, or registry (**1.1.3**–**1.1.5**).
-- Given: `wscript.exe` (Temp `invoice.vbs`) → `powershell.exe -enc …` as `jlee`. **What occurred:** script host launched hidden encoded PowerShell. The hash of `powershell.exe` can still be fine. The parent + command line is the story.
+- Given: `wscript.exe` (Temp `invoice.vbs`) → `powershell.exe -enc …` as `jlee`. **What occurred:** script host launched hidden encoded PowerShell. The hash of `powershell.exe` can still be fine. The parent and command line are what you write down.
 - Query: names a **specific** pattern (parent + command-line fragment), not “all processes.”
 
-File, host-network, registry, and image-load rows are the next **1.1** lessons.
+File, host-network, registry, and image-load events are the next **1.1** lessons.
 
 ---
 
@@ -71,7 +71,7 @@ File, host-network, registry, and image-load rows are the next **1.1** lessons.
 
 ## 3. Summary
 
-A process row is who ran what, from whom, as whom. Create, terminate, or access. Command line and parent tell the story. A query names a specific pattern.
+A process event tells you who ran what, from whom, as whom. That is a create, a terminate, or an access. Command line and parent are what you trust. A query names a specific pattern.
 
 **Next:** **1.1.3** File system activity.
 
