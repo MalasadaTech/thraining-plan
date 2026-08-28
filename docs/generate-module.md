@@ -149,7 +149,7 @@ Then update:
 - [tracker.csv](tracker.csv) — add or update the row; mark only the artifacts you actually wrote
 - [tracker.md](tracker.md) — folder map row if this ID is new
 - README numbering table in the repo root if this ID is new
-- [exports/gemini-notebook/student-corpus.md](../exports/gemini-notebook/student-corpus.md) — **rebuild the whole file** if this change touches a student-guide, the story bible, or the companion story. Do not surgical-edit the blob. Instructor-only / slides-only / matrix-only changes skip this. How-to: [exports-gemini-notebook.md](exports-gemini-notebook.md).
+- [exports/gemini-notebook/](../exports/gemini-notebook/) — **rebuild the whole tree** (corpus, by-track, by-unit, by-lesson, fiction copies) if this change touches a student-guide, the story bible, or the companion story. Do not surgical-edit a blob. Instructor-only / slides-only / matrix-only changes skip this. How-to: [exports-gemini-notebook.md](exports-gemini-notebook.md).
 
 Do not set tracker status to human-accepted (`Complete` on the whole package). Use the per-artifact columns: student/instructor/slides complete, then tell the user it is ready to review.
 
@@ -180,12 +180,12 @@ Do not set tracker status to human-accepted (`Complete` on the whole package). U
 - Write a new lab, demo, or hands-on exercise unless the human asked for one
 - Skip the fluff review when you finish
 - Use a shop nickname in the instructor guide or slides without the student-guide word or a one-line gloss
-- Skip rebuilding [exports/gemini-notebook/student-corpus.md](../exports/gemini-notebook/student-corpus.md) when a student-guide, the story bible, or the companion story changed
+- Skip rebuilding the [exports/gemini-notebook/](../exports/gemini-notebook/) tree when a student-guide, the story bible, or the companion story changed
 
 ---
 
 ## 7. When you finish
 
-List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) stay-in-this-lesson notes were followed, (3) Concepts taught matches the index, (4) Context is in the instructor guide, (5) the student **Intro** says why this lesson exists in the job, (6) any challenges have examples (or the list is omitted), (7) every slide has plain speaker notes, (8) **fluff review done**, (9) 1–3 knowledge-check questions for the lesson, (10) no new lab/demo unless asked, (11) student guide and slide faces stand alone (no live instructor required), (12) status stays at review until they accept the lesson, (13) Gemini Notebook corpus rebuilt if a student-guide, the story bible, or the companion story changed.
+List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) stay-in-this-lesson notes were followed, (3) Concepts taught matches the index, (4) Context is in the instructor guide, (5) the student **Intro** says why this lesson exists in the job, (6) any challenges have examples (or the list is omitted), (7) every slide has plain speaker notes, (8) **fluff review done**, (9) 1–3 knowledge-check questions for the lesson, (10) no new lab/demo unless asked, (11) student guide and slide faces stand alone (no live instructor required), (12) status stays at review until they accept the lesson, (13) Gemini Notebook export tree rebuilt if a student-guide, the story bible, or the companion story changed.
 
 **Fluff review (required, you and the human):** For each extra example, table, slide, lab step, or question, say which outline bullet it serves. If you cannot, delete it.

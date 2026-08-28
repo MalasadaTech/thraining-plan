@@ -16,11 +16,11 @@ docs/
   generate-module.md              # AI instructions to write a Gate 2 module
   story-bible.md                  # living classroom fiction (PRD / DYA)
   companion-story/                # outline, plan, finished A12 story
-  exports-gemini-notebook.md      # Gemini Notebook corpus: what it is, when to rebuild
+  exports-gemini-notebook.md      # Gemini Notebook exports: sets, when to rebuild
   todo.md                         # review and follow-up list
 
 templates/                        # proposal + module writing templates
-exports/gemini-notebook/          # student-corpus.md — upload snapshot; rebuild, do not surgical-edit
+exports/gemini-notebook/          # corpus + by-track / by-unit / by-lesson / fiction; rebuild, do not surgical-edit
 modules/
   00-intro/<unit>/<module>/       # front door + shared hours (everyone, before SOC)
   01-soc/<unit>/<module>/
