@@ -13,7 +13,7 @@
 | 4.6.1 | T | Call modify / retire / leave and cite the reason | 4.6.1 task 1 |
 | 4.6.2 | T | Given a block, decide whether the matching rule still earns its keep | 4.6.1 task 2 |
 
-The lesson ID is **4.6**. Tunes are **4.4**. Packages are **4.5**. Sensors are **4.7**. No lab. A block is not automatic retire. Do not invent tickets.
+The teaching-unit ID is **4.6**. Tune requests are **4.4**. Packages are **4.5**. Sensors are **4.7**. No lab. A block is not automatic retire. Do not invent tickets.
 
 ## Concepts taught
 

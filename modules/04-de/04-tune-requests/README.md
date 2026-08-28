@@ -13,7 +13,7 @@
 | 4.4.1 | T | Pick tune / exception / replace / leave / retire and cite why | 4.4.1 task 1 |
 | 4.4.2 | T | Reject a request that is investigation, a block, or IR containment | 4.4.1 task 2 |
 
-The lesson ID is **4.4**. Nominations are **4.3**. Packages are **4.5**. Lifecycle depth is **4.6**. No lab. Do not invent tickets or a DYA form.
+The teaching-unit ID is **4.4**. Nominations are **4.3**. Packages are **4.5**. Lifecycle depth is **4.6**. Not investigation, a block, or IR containment. Not a new nomination. No lab. Do not invent tickets or a DYA form.
 
 ## Concepts taught
 

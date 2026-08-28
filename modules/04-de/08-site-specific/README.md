@@ -15,7 +15,7 @@
 | 4.8.2.1 | T | Follow the local path you were shown (or record that you do not have it yet) | 4.8.2.1 task 1 |
 | 4.8.2.2 | T | Reject inventing a change board or ticket name as policy | 4.8.2.1 task 2 |
 
-One teaching unit for **4.8**. Obtain-and-follow. **Do not invent policy.** No lab. No DYA field list, change board, or ticket name.
+The teaching-unit ID is **4.8**. One lesson for **4.8.1** and **4.8.2**. Obtain-and-follow. **Do not invent policy.** No lab. No DYA field list, change board, or ticket name.
 
 ## Concepts taught
 

@@ -12,7 +12,7 @@
 | 4.1 | K | What DE owns | 4.1 a–d |
 | 4.1.1 | T | Sort work to DE, nominator, 1.3, or block | 4.1.1 tasks 1–2 |
 
-The lesson ID is **4.1**. Rule syntax is **1.3**. Sound/test is **4.2**. Nomination review is **4.3**. No lab. Do not invent tickets or field lists.
+The teaching-unit ID is **4.1**. Rule syntax is **1.3**. Sound/test is **4.2**. Nomination review is **4.3**. Lifecycle after a block is **4.6**. Not tickets or field lists (**4.8**). No lab.
 
 ## Concepts taught
 

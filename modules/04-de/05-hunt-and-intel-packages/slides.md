@@ -9,64 +9,86 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 4.5 – Hunt and intel packages  
-**Subtitle:** Detection Engineer (SOC / Hunter / CTI sit this too)  
+**Subtitle:** Inputs from hunt and intel, not finished detections  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Last hour was a tune on a live rule. This hour is a package from hunt or intel. Not a finished detection.
+4.4 was a tune on a live rule. This lesson is a package from hunt or intel. It is not a finished detection.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Hunters and intel send DE **packages**. Inputs, not finished detections.
+Detection engineers get **packages** from hunters and from intel.
 
-Treat like a **nomination**.  
-**Add**, **change**, or **no new rule**. Not a **block** list.
+Those are inputs, not finished detections.
+
+Treat the package like a **nomination**. Then name one **add**, one **change**, or **no new rule**. Not a **block** list.
 
 **Speaker Notes:**  
-This is regular inbound work from those two desks. “No new rule” is a real product. Blocks stay with firewall / IA.
+This slide is the student intro. Packages are regular inbound work from those two desks. You review them so they do not skip review, and so extra infrastructure does not become a DE deploy.
 
 ---
 
-### Slide 3 – Like a nomination
+### Slide 3 – Both desks send packages
+**Title:** Packages from CTI and hunters
+
+**CTI** and **hunters** both send packages.
+
+A package is a hunt write-up or an intel **report**.  
+It is inbound material to review.
+
+It is not a tune on a live rule. It is not a finished detection.
+
+**Speaker Notes:**  
+Both sources are the same kind of input. Do not invent a second review job for intel. A tune request is 4.4 — a live rule already on the desk.
+
+---
+
+### Slide 4 – Treat it like a nomination
 **Title:** Not a finished detection
 
-Need + pointer. The package is often the pointer.
+Clear enough to review: the **need**, and a **pointer**.  
+The package is often the pointer.
 
-A drafted rule if they have one — not required. Missing need or pointer? **Send it back.**
+A drafted rule if they have one — not required.  
+Missing need or pointer? **Send it back.**
 
 **Speaker Notes:**  
-Same bar as 4.3. Do not re-teach the whole nomination hour. Do not invent a form.
+Same bar as 4.3. Restate need plus pointer in ordinary words. Do not walk the whole nomination lesson. Do not invent a form.
 
 ---
 
-### Slide 4 – Three products
+### Slide 5 – Three products
 **Title:** Add, change, or no new rule
 
-One **add**.  
-One **change**.  
+One **add** — a new detection this package supports.  
+One **change** — a live rule should change because of this package.  
 **No new rule** — still a finished review.
 
+Name one. Do not write the rule.
+
 **Speaker Notes:**  
-Name one. Do not write the rule. Do not pad a “no new rule” with a fake add.
+Name one product. Do not pad a “no new rule” with a fake add. If they start picking tune versus retire, that is 4.4 or 4.6.
 
 ---
 
-### Slide 5 – Not a block list
+### Slide 6 – Not a block list
 **Title:** Reject a block list
 
 A list of IPs or domains to put on the firewall is a **block**.
 
 Firewall / IA. Not a DE deploy.
 
+**Reject** that product.
+
 **Speaker Notes:**  
 Walk the three student-guide givens if you need them. Hunt package with a gap → add. Already covered → no new rule. IPs for the firewall → reject.
 
 ---
 
-### Slide 6 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
 1. A package is a finished detection. True or false?  
@@ -74,11 +96,11 @@ Walk the three student-guide givens if you need them. Hunt package with a gap �
 3. A package is a list of IPs to put on the firewall. Add a rule, or reject?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 7 – Summary
+### Slide 8 – Summary
 **Title:** Summary
 
 CTI and hunters both send packages.  
@@ -86,15 +108,7 @@ Treat like a nomination.
 Add, change, or no new rule.  
 A block list is not DE.
 
-**Speaker Notes:**  
-Lifecycle is next — when to modify, retire, or leave.
-
----
-
-### Slide 8 – Next
-**Title:** Next
-
-**4.6** Detection lifecycle
+**Next:** **4.6** Detection lifecycle
 
 **Speaker Notes:**  
-That hour is modify / retire / leave on a live rule, including after a block.
+4.6 is modify, retire, or leave on a live rule you already own. Stay off package review when you get there.

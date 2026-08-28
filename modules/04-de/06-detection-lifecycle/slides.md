@@ -9,42 +9,41 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 4.6 – Detection lifecycle  
-**Subtitle:** Detection Engineer (SOC / Hunter / CTI sit this too)  
+**Subtitle:** Modify, retire, or leave a live rule  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Last hour was a package. This hour is a live rule you already own. Not the tune inbox.
+This lesson is a regular review of a detection you already own. It is not a SOC tune request and not how to write a rule.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Normal DE work: **manage** the detections you already own.
+Detection engineers own **live** rules — detections that are already deployed.
 
-Review whether they still earn their keep, need an update, or should come out.
+Those rules do not stay useful forever. Review them: **modify**, **retire**, or **leave**, and cite why.
 
-**Modify. Retire. Leave.** Cite the reason.  
 A **block** is not automatic retire.
 
 **Speaker Notes:**  
-You wanted this opener so the hour is regular work, not only a ticket from SOC. Do not invent an expiry field.
+This slide is the student intro. Regular review of the set you own, not a ticket from SOC. Do not teach how to write a rule.
 
 ---
 
-### Slide 3 – Three calls
+### Slide 3 – Modify, retire, leave
 **Title:** Modify, retire, leave
 
-**Modify** — stay, but not as it is.  
-**Retire** — come out.  
-**Leave** — still useful.
+**Modify** — the rule should stay, but not as it is.  
+**Retire** — the rule should come out.  
+**Leave** — it is still useful. Do not change it because someone is tired of it.
 
 **Speaker Notes:**  
-4.4’s five answers are the tune inbox. Today is the standing call plus a reason.
+The three calls are the product of this lesson. Tune, exception, and replace are answers to a SOC request in 4.4. Do not teach that inbox here.
 
 ---
 
-### Slide 4 – Reasons
+### Slide 4 – Cite the reason
 **Title:** Cite the reason
 
 Still useful. Too noisy. Threat gone.  
@@ -52,21 +51,21 @@ Sensor gone. A nomination replaced it.
 Already blocked — so the rule *may* not be needed.
 
 **Speaker Notes:**  
-Sensor gone is a reason only. How to check a dead sensor is 4.7.
+A nomination here means someone asked for a new or different detection that now covers this. Sensor gone is a reason only. How to check a dead sensor is 4.7.
 
 ---
 
-### Slide 5 – After a block
-**Title:** Block is not retire
+### Slide 5 – A block is not automatic retire
+**Title:** A block is not automatic retire
 
-Firewall / IA blocked the infrastructure.
+Whoever **blocks** (firewall / IA) stopped that infrastructure.
 
 Does this rule still earn its keep?  
 Keep it if it still watches something else.  
 Retire it if it only existed for what is now blocked.
 
 **Speaker Notes:**  
-Walk the three student-guide givens if you need them. Too noisy → modify. Still useful and a tired SOC → leave. Blocked IP → decide, do not auto-retire.
+Walk the student-guide givens if you need them. Too noisy → modify. Threat gone → retire. Still useful and a tired SOC → leave. Blocked IP → decide, do not auto-retire.
 
 ---
 
@@ -78,7 +77,7 @@ Walk the three student-guide givens if you need them. Too noisy → modify. Stil
 3. A live rule still catches the intended activity. SOC wants it gone because it is busy. Modify, retire, or leave?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -89,7 +88,7 @@ Modify, retire, or leave — and cite why.
 A block is not automatic retire.
 
 **Speaker Notes:**  
-Sensors are next. Lighter hour.
+Sensors are next. That lesson is whether the sensor was up, not this review.
 
 ---
 
@@ -99,4 +98,4 @@ Sensors are next. Lighter hour.
 **4.7** Sensor availability and performance
 
 **Speaker Notes:**  
-That hour is sometimes DE. A dead sensor is not “no threat.” Not vendor admin.
+4.7 is sometimes DE. A dead sensor is not “no threat.” Not vendor admin.

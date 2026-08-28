@@ -13,20 +13,21 @@
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Last hour was a nomination — something new. This hour is a rule that is already live. Same kind of pointer.
+4.3 was a nomination — something new. This lesson is a rule that is already live. Same kind of pointer. It is not how to write a rule.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-After rules are **live**, SOC asks DE to change them.
+After a detection is **live**, SOC lives with the alerts.
 
-A **tune request**. Same desk. **Different inbox.**  
-Which rule + a **pointer**. Then five answers.
+When that rule is noisy, brittle, or missing context, they ask DE to change it.
+
+That ask is a **tune request**, not a new nomination.
 
 **Speaker Notes:**  
-This is regular live-rule work, not a new nomination. Same kind of pointer as 4.3. Do not invent a ticket name.
+This slide is the student intro. SOC sends DE work on a live rule. Name that job before the five answers. Do not invent a ticket name.
 
 ---
 
@@ -35,10 +36,12 @@ This is regular live-rule work, not a new nomination. Same kind of pointer as 4.
 
 The rule is already **live**. Noisy, brittle, or missing context.
 
-Same desk as nominations. **Different inbox.**
+Same desk as nominations. Different pile of work — a different **inbox**.
+
+“Missing context” here is the *rule*, not the pointer.
 
 **Speaker Notes:**  
-“Missing context” here is the *rule*. The pointer is the next slide.
+Keep them on a live rule. A nomination is something new. Missing context on this slide is what is wrong with the rule. The pointer is the next slide.
 
 ---
 
@@ -52,19 +55,19 @@ Same desk as nominations. **Different inbox.**
 No pointer? **Send it back.**
 
 **Speaker Notes:**  
-Same pointer kinds as a nomination. Not a DYA form. You cannot cite why without the pointer.
+Same pointer kinds as a nomination. Not a DYA form. You cannot cite why without the pointer. Do not pick a tune answer yet.
 
 ---
 
 ### Slide 5 – Answers and rejects
 **Title:** Five answers. Reject these.
 
-**Tune. Exception. Replace. Leave. Retire.**
+**Tune. Exception. Replace. Leave. Retire.** Cite why.
 
-Reject: **investigation**, **block**, **IR containment**.
+Reject: **investigation**, **block**, **IR containment**. Those are not tunes.
 
 **Speaker Notes:**  
-Walk the three student-guide givens if you need them. Backup plus intended fire, with a pointer → tune or exception. No pointer → send back. Investigate or block → reject.
+Walk the three student-guide givens if you need them. Backup plus intended fire, with a pointer, is tune or exception. No pointer is send back. Investigate or block is reject. When to retire in general is 4.6.
 
 ---
 
@@ -76,7 +79,7 @@ Walk the three student-guide givens if you need them. Backup plus intended fire,
 3. SOC says a live rule is noisy and asks you to investigate the host. Tune or reject?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -84,12 +87,12 @@ Answers only in the instructor guide. Three questions for the whole lesson. Stop
 **Title:** Summary
 
 Live rule. Different inbox.  
-Which rule + a pointer.  
+Which rule plus a pointer.  
 Then tune, exception, replace, leave, or retire.  
 Reject investigation, block, and IR.
 
 **Speaker Notes:**  
-Packages are next.
+Packages are next. Stay off this tune inbox when you get there.
 
 ---
 
@@ -99,4 +102,4 @@ Packages are next.
 **4.5** Hunt and intel packages
 
 **Speaker Notes:**  
-That hour is a package from CTI or hunters. Treat it like a nomination. “No new rule” is valid.
+4.5 is a package from CTI or hunters. Treat it like a nomination. “No new rule” is valid.

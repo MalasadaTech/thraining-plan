@@ -13,21 +13,21 @@
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Last hour named what DE owns. This hour is what good enough to ship looks like. Not how to write the rule.
+4.1 named what DE owns. This lesson is what good enough to ship looks like. It is not how to write the rule.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Once work is on the desk, you do not ship it until it is **sound**.
+A detection on DE’s desk does not ship because someone asked.
 
-**Sound.** Test before live.  
-The shop list you were **shown**.  
-**Close the loop.**
+It ships when it is **sound** and meets the shop list you were **shown**.
+
+This lesson is that ship bar.
 
 **Speaker Notes:**  
-This is regular ship work, not how to write the rule. The field list is 4.8. Check the list you have, or say you do not have it.
+This slide is the student intro. Name sound, the list you were shown, and the note back. Do not write a rule today. Do not invent a DYA field list.
 
 ---
 
@@ -36,24 +36,24 @@ This is regular ship work, not how to write the rule. The field list is 4.8. Che
 
 **Sound:** fires on the intended activity. Does **not** fire on what it must not.
 
-**Test before it goes live.** State what **must fire** and what **must not**.
+**Test** a draft or a change **before it goes live.** State what **must fire** and what **must not**.
 
 **Speaker Notes:**  
-If they cannot name both, they are not ready to ship. Do not write SIGMA.
+If they cannot name both, they are not ready to ship. Do not write SIGMA. A change to a live rule gets the same two lines as a draft.
 
 ---
 
 ### Slide 4 – The list you were shown
 **Title:** Shop requirements
 
-Meta fields, naming, IDs, tags, logging.
+Kinds DE owns: meta fields, naming, IDs, tags, logging.
 
 The *list* is local (**4.8**). Check the list you were **shown**. Met vs missing.
 
 No list? Say so. Do not invent fields.
 
 **Speaker Notes:**  
-Do not put a fake DYA field list on the board. Obtain-and-follow is 4.8.
+Do not put a fake DYA field list on the board. This lesson names the kinds. Obtain-and-follow is 4.8.
 
 ---
 
@@ -65,7 +65,7 @@ Tell the nominator (and SOC):
 **Shipped. Changed. Sent back. Retired.**
 
 **Speaker Notes:**  
-That is the note. Accept / send back / reject as a *review* is 4.3.
+That is the note, not a ticket name. Accept / send back / reject as a *review* is 4.3. Sent back here is the close-the-loop note.
 
 ---
 
@@ -77,19 +77,19 @@ That is the note. Accept / send back / reject as a *review* is 4.3.
 3. Name the four close-the-loop notes.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Sound = fire / must-not-fire. Test both before live.  
+Sound = fire / must-not-fire. Test both before a draft or a change goes live.  
 Check the list you were shown.  
 Shipped, changed, sent back, or retired.
 
 **Speaker Notes:**  
-Nomination review is next.
+Nomination review is next. Stay off the test itself when you get there.
 
 ---
 
@@ -99,4 +99,4 @@ Nomination review is next.
 **4.3** Nominations from SOC, hunt, and CTI
 
 **Speaker Notes:**  
-That hour is who can nominate, and accept / send back / reject. Not the test itself.
+4.3 is who can nominate, and accept / send back / reject. Not the test itself.

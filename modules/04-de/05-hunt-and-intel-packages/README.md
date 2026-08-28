@@ -13,7 +13,7 @@
 | 4.5.1 | T | Review a package: one add, one change, or no new rule | 4.5.1 task 1 |
 | 4.5.2 | T | Reject turning the package into a block list | 4.5.1 task 2 |
 
-The lesson ID is **4.5**. Nominations are **4.3**. Tunes are **4.4**. Lifecycle is **4.6**. No lab. Do not invent tickets or a block list.
+The teaching-unit ID is **4.5**. Nominations are **4.3**. Tunes are **4.4**. Lifecycle is **4.6**. Not rule syntax (**1.3**). No lab. Do not invent tickets or a block list.
 
 ## Concepts taught
 

@@ -26,11 +26,11 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-Hunters and intel will send DE **packages**. Those are inputs, not finished detections. This hour is how you review them.
+Detection engineers review inbound work from other desks. Hunters and intel send **packages** — a hunt write-up or an intel **report**. Those are inputs, not finished detections you can deploy. The job in this lesson is to review the package the same way you review a **nomination**: confirm it is clear enough, then name one **add**, one **change**, or **no new rule**, and reject a **block** list. You do that so a package does not skip review, and so extra infrastructure does not become a DE deploy.
 
-**4.4** was a tune on a *live* rule. Packages come from **CTI** or from **hunters**. Both are inputs.
+A **package** comes from **CTI** or from **hunters**. Both are inputs. A **tune request** (**4.4**) is about a *live* rule already on the desk. A package is new inbound material from those two desks.
 
-A package is **not** a finished detection. Treat it like a **nomination** (**4.3**): it must be clear enough to review — the **need**, and a **pointer**. The package itself is often the pointer (the hunt package, or the intel **report** title and URL). A drafted rule if they have one — not required. If the need or pointer is missing, **send it back**.
+A package is **not** a finished detection. Treat it like a **nomination** (**4.3**). A nomination is clear enough to review when it names the **need** — what activity, where it showed up — and a **pointer**. The pointer is an investigation number, or the intel **report** title and URL. The package itself is often the pointer. A drafted rule if they have one is not required. If the need or pointer is missing, **send it back**.
 
 Then review for a chance to add or change a detection. **“No new rule”** is a valid product.
 
@@ -48,7 +48,7 @@ Then review for a chance to add or change a detection. **“No new rule”** is 
 - Given: an intel report we already cover; no gap. **No new rule.**
 - Given: a list of IPs to put on the firewall. **Reject.** That is a block list.
 
-Do not write the rule (**1.3**). Do not invent a ticket. Tunes are **4.4**. When to retire in general is **4.6**.
+Do not write the rule (**1.3**). Do not invent a ticket. Tunes on a live rule are **4.4**. When to retire a live rule in general is **4.6**.
 
 ---
 
@@ -73,4 +73,4 @@ Packages come from CTI and from hunters. Treat them like a nomination. Add, chan
 - 4.3 – Nominations from SOC, hunt, and CTI
 - 4.4 – Tune requests from SOC
 - 4.6 – Detection lifecycle
-- 0.3 – How work can move
+- 1.3 – Detection authoring (how a rule works)

@@ -18,19 +18,19 @@ Sometimes DE checks whether sensors are up and seeing the right place. A down se
 
 **Context (plain language):**
 
-- What this hour is for: When a rule never fires, DE sometimes asks whether the sensor was up and looking at the right place. Check the rule, the sensor, or both. A dead sensor is not proof nothing happened.
-- How it hooks to the hour before: 4.6 used “sensor gone” as a retire reason. This hour is that check.
-- How it hooks to the hour after: 4.8 is local policy — obtain the list and the path. Do not invent either.
+- What this lesson is for: Detections only fire on what a sensor actually saw. When a rule never fires, DE sometimes asks whether the sensor was up and looking at the right place. Check the rule, the sensor, or both. A dead sensor is not proof nothing happened.
+- How it hooks to the lesson before: 4.6 used “sensor gone” as a retire reason. This lesson is the check itself.
+- How it hooks to the lesson after: 4.8 is local policy — obtain the list and the path. Do not invent either.
 - Why we are doing it this way: This unit is lighter on purpose. Sometimes DE. Not a vendor-admin or architecture course.
-- What we are *not* doing this hour: Logging into MDE to configure it. Sizing Zeek. Writing a rule (1.3). Lifecycle calls (4.6). No lab. No DYA tickets.
+- What we are *not* doing in this lesson: Logging into MDE to configure it. Sizing Zeek. Writing a rule (1.3). Lifecycle calls (4.6). No lab. No DYA tickets. No invented site architecture.
 - Extra step: none.
 
-Say **sensor**, **dead**, **blind**, and **never fired** the way the student guide does. **MDE**, **Zeek**, and **IDS** are examples of place, not a tool class.
+Use the same names as the student guide: **sensor**, **dead**, **blind**, and **never fired**. **MDE**, **Zeek**, and **IDS** are examples of place, not a tool class. **Dead** means down or not sending. **Blind** means up but not looking at that host or path.
 
 **Key Teaching Points:**
 - Sometimes DE. Not always. Not vendor admin.
-- Dead or blind ≠ no threat.
-- “Never fired” → rule, sensor, or both.
+- Dead or blind is not “no threat.”
+- “Never fired” means check the rule, the sensor, or both.
 
 **Required Materials:**
 - Student Guide
@@ -42,15 +42,20 @@ Say **sensor**, **dead**, **blind**, and **never fired** the way the student gui
 
 Same as the student guide.
 
-**Mapped Items:** K 4.7 ; T 4.7.1 ; T 4.7.2
+**Mapped Proficiency Items:**
+- K: 4.7 – Sensor availability and performance
+- T: 4.7.1 – Given “the rule never fired,” check the rule, the sensor, or both
+- T: 4.7.2 – Reject treating a down sensor as proof the activity did not happen
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | After 4.6 sensor-gone |
+| Introduction (required) | 3 min     | Sensor check, not vendor admin |
 | Key Concepts            | 10 min    | Up and seeing; never fired |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 2 min     | |
@@ -62,27 +67,30 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write: sometimes DE; MDE / Zeek / IDS as examples; dead ≠ no threat; never fired → rule, sensor, or both.
-
-If they start configuring a sensor: “Not this course.”  
-If they say “sensor down, so nothing happened”: “Reject.”  
-If they invent a ticket: “Check, not the ticket.”
+**Talking Points:**
+- Open with the job: detections only fire on what a sensor saw. When a rule never fires, DE sometimes has to ask whether that collector was up and seeing the right place.
+- Name MDE, Zeek, and IDS as examples of place. Stop there. Do not log into the box or draw a site diagram.
+- A dead sensor is down or not sending. A blind sensor is up but not looking at that host or path. Neither one means “no threat.”
+- Walk the three givens from the student guide. Sensor up and seeing that host: check the rule. Sensor down or not seeing that place: check the sensor, or both. Down all week so “nothing happened”: reject.
+- If they start configuring a sensor: that is not this lesson.
+- If they say the sensor was down, so nothing happened: reject. Silence is not proof.
+- If they invent a ticket or a network layout: the product is the check, not a ticket name or an architecture.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Down sensor means no activity. True or false?**  
+1. **A down sensor means the activity did not happen. True or false?**  
    **Answer:** False. A dead or blind sensor is not “no threat.”  
-   **Explanation:** Outline b and 4.7.1 task 2.
+   **Explanation:** The activity may still have happened. You just could not see it. A down sensor is not proof.
 
-2. **“The rule never fired.” What two things might you check?**  
+2. **Someone says “the rule never fired.” What two things might you check?**  
    **Answer:** The rule, the sensor, or both.  
-   **Explanation:** 4.7.1 task 1.
+   **Explanation:** A silent rule is not always a broken rule. If the sensor was up and seeing that host, check the rule. If it was down or not seeing that place, check the sensor, or both.
 
-3. **Three example kinds of sensor?**  
+3. **Name three kinds of sensor this lesson uses as examples.**  
    **Answer:** MDE, Zeek, IDS.  
-   **Explanation:** Outline a.
+   **Explanation:** Those are examples of collectors DE might watch for up-and-seeing. They are not a vendor-admin lab.
 
 ---
 

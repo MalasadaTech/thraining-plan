@@ -109,11 +109,11 @@
 2.12.2,Local Production and Approval Processes,CTI / Hunter / SOC,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; obtain-and-follow; no lab; ready for review
 2.12.3,Local Dissemination Channels and Customers,CTI / Hunter / SOC,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; obtain-and-follow; no lab; ready for review
 4,Detection Engineer,DE,Complete,Not Started,Not Started,Not Started,Not Started,Not Started,Not Started,,,Cluster heading only â€” children are 4.1â€“4.8
-4.1,What DE Owns,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
-4.2,Making a Detection Sound and Meeting Shop Requirements,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; field list is 4.8; Accepted 2026-08-16
-4.3,Nominations from SOC Hunt and CTI,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
-4.4,Tune Requests from SOC,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
-4.5,Hunt and Intel Packages,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; Accepted 2026-08-16
-4.6,Detection Lifecycle,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; block is not automatic retire; Accepted 2026-08-16
-4.7,Sensor Availability and Performance,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,no lab; not vendor admin; Accepted 2026-08-16
-4.8,Site-Specific DE Knowledge,DE / SOC / Hunter / CTI,Complete,Complete,Complete,Complete,Not Started,Complete,Not Started,,,One unit (4.8.1â€“4.8.2); obtain-and-follow; do not invent policy; Accepted 2026-08-16
+4.1,What DE Owns,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; no lab; ready for review
+4.2,Making a Detection Sound and Meeting Shop Requirements,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; no lab; field list is 4.8; ready for review
+4.3,Nominations from SOC Hunt and CTI,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; no lab; ready for review
+4.4,Tune Requests from SOC,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; no lab; ready for review
+4.5,Hunt and Intel Packages,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; no lab; ready for review
+4.6,Detection Lifecycle,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; no lab; block is not automatic retire; ready for review
+4.7,Sensor Availability and Performance,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; no lab; not vendor admin; ready for review
+4.8,Site-Specific DE Knowledge,DE / SOC / Hunter / CTI,Complete,Review,Review,Review,Not Started,Complete,Not Started,,,Voice rewrite to stand-alone templates; one unit (4.8.1-4.8.2); obtain-and-follow; ready for review

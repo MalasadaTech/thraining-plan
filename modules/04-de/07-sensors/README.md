@@ -13,7 +13,7 @@
 | 4.7.1 | T | Given “the rule never fired,” check the rule, the sensor, or both | 4.7.1 task 1 |
 | 4.7.2 | T | Reject treating a down sensor as proof the activity did not happen | 4.7.1 task 2 |
 
-The lesson ID is **4.7**. Lighter than **4.1**–**4.6**. Lifecycle is **4.6**. Site lists are **4.8**. No lab. Not vendor admin. Do not invent tickets.
+The lesson ID is **4.7**. Lighter than **4.1**–**4.6**. Lifecycle is **4.6**. Site lists are **4.8**. No lab. Not vendor admin. Do not invent a site architecture or tickets.
 
 ## Concepts taught
 

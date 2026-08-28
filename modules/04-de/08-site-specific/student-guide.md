@@ -28,18 +28,23 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-Every shop has its own DE **policy**. This course does **not** publish DYA’s. This hour is **obtain-and-follow**. You do not invent policy.
+A detection engineer ships a new rule, changes a live one, or retires one that no longer earns its keep. That work has to match this shop’s rules: which checks a detection must pass, how a change is reviewed and deployed, and how a retire is recorded. Those rules are local. They are not in this course. That is the job in this lesson: obtain the current list and the path, then follow only what you were shown, so you do not invent policy to make a nomination look complete.
 
-**4.2** said shop requirements (meta fields, naming, IDs, tags, logging) are a *list*. **4.6** said you retire and deploy. This hour is *this shop’s* list and *this shop’s* path.
+**4.2** named the kinds of shop requirements (meta fields, naming, IDs, tags, logging) and said the *list* is local. **4.6** said you retire and deploy. This lesson is *this shop’s* current list and *this shop’s* path. You do **not** invent either. You do **not** write a rule (**1.3**). This course does **not** publish policy for the classroom firm (**DYA**).
 
-**Local detection requirements.** Required meta fields, naming, and other deploy checks. They **vary by shop**. Obtain the current list. Do **not** invent one.
+Every shop has its own DE **policy**. It has two parts.
 
-**Local review, deploy, and retire paths.** How a change is reviewed and deployed. How a retire is recorded. Obtain the path. Do **not** invent a change board or a ticket name.
+| Piece | What it is |
+|-------|------------|
+| **Local detection requirements** (the **list**) | Required meta fields, naming, and other deploy checks. They vary by shop. Obtain the current list. Do not invent one. |
+| **Local review, deploy, and retire paths** (the **path**) | How a change is reviewed and deployed, and how a retire is recorded. Obtain that path. Do not invent a change board or a ticket name. |
 
-**What good looks like:**
+**Obtain-and-follow** means you get the current list and path from the role or place your lead names, then use only that. If no one has shown you the list or the path, write **I do not have it yet.** If an instructor overlays a real shop list or path, that overlay is for the room. It is still not DYA policy.
 
-- Given: someone showed you the list. Align the nomination or change **only** to that list. Mark met vs missing.
-- Given: no one has shown you the list or the path. Record that you **do not have it yet**. Do not fill the gap with made-up fields or a made-up ticket.
+**What good looks like:** someone asks you to align a nomination, ship a change, or record a retire.
+
+- Given: someone showed you the list. You **have** it. Align the nomination or change **only** to that list. Mark met versus missing.
+- Given: no one has shown you the list or the path. You **do not have it yet**. Record that. Do not fill the gap with made-up fields or a made-up ticket.
 - Given: you invent “change board X” or a ticket name and treat it as policy. **Reject.**
 
 Do not write the rule (**1.3**). Do not invent DYA policy.

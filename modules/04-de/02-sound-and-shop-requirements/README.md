@@ -14,7 +14,7 @@
 | 4.2.2 | T | Mark which shop requirements are met and which are still missing | 4.2.1 task 2 |
 | 4.2.3 | T | Write the close-the-loop note to the nominator | 4.2.1 task 3 |
 
-The lesson ID is **4.2**. What DE owns is **4.1**. Nomination review is **4.3**. The field *list* is **4.8**. No lab. Do not invent fields or tickets.
+The teaching-unit ID is **4.2**. What DE owns is **4.1**. Nomination review is **4.3**. The field *list* is **4.8**. No lab. Do not invent fields or tickets.
 
 ## Concepts taught
 

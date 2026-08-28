@@ -25,22 +25,22 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-Other desks send DE work. That hand-off is a **nomination**. This hour is what it must contain, and how you **accept**, **send back**, or **reject** it.
+SOC, hunt, and CTI send Detection Engineering work. That hand-off is a **nomination**. DE reviews it because a rough ask is still detection work — but only if it is clear enough to review. This lesson is who can send one, what it must contain, and how you **accept** it for work, **send it back**, or **reject** it.
 
-**4.2** was sound, the shop list, and closing the loop.
+**4.1** named that those three desks nominate, and that the draft need not be perfect. **4.2** was making a detection sound and closing the loop. This lesson is the inbound nomination itself.
 
 **Who can nominate:** a **SOC analyst**, a **hunter**, or a **CTI analyst**.
 
 A nomination can be a draft, a sketch, or “we need something on this.” It does **not** have to be production-ready.
 
-**Clear enough to review** means two things are present:
+The bar for the nominator is **“clear enough to review,”** not “ready to deploy.” Clear enough means two things are present:
 
-- The **need** — what activity, where it showed up.
-- **Context or a reference** — this came from an investigation or an intel **report**. The pointer is an investigation number, or the report title and URL.
+- The **need** — what activity, and where it showed up.
+- **Context or a reference** — this came from an investigation or an intel **report**. This lesson calls that a **pointer**. The pointer is an investigation number, or the report title and URL.
 
 A **drafted rule** goes with it **if the nominator has one**. It is **not** required. DE can finish the rule.
 
-Do not invent a ticket name or a DYA form. The *kinds* of pointer are enough. The local form is **4.8**.
+Do not invent a ticket name or a form. The *kinds* of pointer are enough. Site lists and paths wait for **4.8**.
 
 **DE review** is one of three:
 
@@ -50,9 +50,7 @@ Do not invent a ticket name or a DYA form. The *kinds* of pointer are enough. Th
 | **Send back** | Say what is missing (need, pointer, or both). The nominator still owes that. |
 | **Reject** | Say why. Not DE work (a block, an investigation, or “write me SIGMA” as **1.3**). |
 
-The bar is **“clear enough to review,”** not “ready to deploy.”
-
-**What good looks like (4.3.1):** pick accept / send back / reject, say why, and name what the **nominator** still owes vs what **DE** will finish.
+**What good looks like:** pick accept / send back / reject, say why, and name what the **nominator** still owes vs what **DE** will finish.
 
 - Given: encoded PowerShell on workstations, plus the intel report title and URL. No drafted rule. **Accept.** DE finishes the rule.
 - Given: the need, no pointer. **Send back.** Nominator owes the investigation number, or the report title and URL.
@@ -72,7 +70,7 @@ Hunt and intel **packages** are **4.5**. Tunes on a *live* rule are **4.4**.
 
 ## 3. Summary
 
-SOC, hunt, and CTI nominate. Clear enough = the need plus a pointer. A drafted rule is extra if they have one. Accept, send back, or reject — and say who finishes what.
+SOC, hunt, and CTI nominate. Clear enough means the need plus a pointer. A drafted rule is extra if they have one. Accept, send back, or reject — and say who finishes what.
 
 **Next:** **4.4** Tune requests from SOC.
 
@@ -84,4 +82,4 @@ SOC, hunt, and CTI nominate. Clear enough = the need plus a pointer. A drafted r
 - 4.2 – Making a detection sound and meeting shop requirements
 - 4.4 – Tune requests from SOC
 - 4.5 – Hunt and intel packages
-- 4.8 – Site-specific DE knowledge (the local form)
+- 4.8 – Site-specific DE knowledge

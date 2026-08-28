@@ -26,11 +26,14 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-When a rule never fires, DE sometimes has to ask whether the **sensor** was even up and looking at the right place. This hour is that check.
+Detections only fire on what a **sensor** actually saw. When a rule never fires, Detection Engineering sometimes has to ask whether that sensor was **up** and looking at the **right place**. A silent rule is not always a broken rule. A **dead** or **blind** sensor is not proof the activity did not happen. That is the job in this lesson: check the **rule**, the **sensor**, or **both**. This is **not** how to administer those tools, and it is **not** an architecture course.
 
-**4.6** used “sensor gone” as a reason to retire. This hour is the check itself.
+A **sensor** here is a collector that records host or network activity for detections. **Sometimes** DE watches whether those collectors are up and seeing the right place. Examples: **MDE**, **Zeek**, **IDS**. “Up and seeing the right place” means the collector is working and looking at the host or path the rule needs. You are not the vendor admin. This lesson does not place sensors, size them, or log into the box.
 
-**Sometimes** DE watches whether sensors are up and seeing the right place. Examples: **MDE**, **Zeek**, **IDS**. You are not the vendor admin. This is not an architecture course.
+| Word | What it means here |
+|------|--------------------|
+| **Dead** | The sensor is down or not sending. |
+| **Blind** | The sensor is up, but it is not looking at that host or path. |
 
 A **dead** or **blind** sensor is **not** “no threat.” The activity may still have happened. You just could not see it.
 
@@ -40,7 +43,7 @@ A **dead** or **blind** sensor is **not** “no threat.” The activity may stil
 - Given: “the rule never fired,” and the sensor was down or not seeing that place. Check the **sensor**, or **both**.
 - Given: the sensor was down all week, so “nothing happened.” **Reject.** A down sensor is not proof the activity did not happen.
 
-Do not log into the vendor box. Do not size a sensor. Do not invent a ticket.
+Do not log into the vendor box. Do not size a sensor. Do not invent a ticket or a site architecture.
 
 ---
 
@@ -48,7 +51,7 @@ Do not log into the vendor box. Do not size a sensor. Do not invent a ticket.
 
 1. A down sensor means the activity did not happen. True or false?
 2. Someone says “the rule never fired.” What two things might you check?
-3. Name three kinds of sensor this hour uses as examples.
+3. Name three kinds of sensor this lesson uses as examples.
 
 ---
 

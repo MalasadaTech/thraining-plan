@@ -25,23 +25,28 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-DE’s normal work starts with knowing what is **yours**. Before you write or tune anything, you sort: this is DE, this is a nominator, this is how a rule works (**1.3**), or this is a **block**. This hour names that split.
+Detection engineers turn what the other desks learned into lasting rules. That only works if you know which work is yours. Before you write or ship a detection, sort the request: DE owning the detections, someone nominating work, how a rule is written, or a firewall block. Mix those up and you send a rough ask away as “not DE’s problem,” or you treat a block request as a deploy. That is the job in this lesson.
 
-**0.2** said the detection engineer turns what we learned into lasting rules.
+DE owns the **set of detections** — the rules the shop runs: **new**, **change**, **retire**, and **deploy**. This lesson names those four. It does not teach how to do them.
 
-DE owns the **set of detections**: **new**, **change**, **retire**, **deploy**.
+| Kind of work | What it is |
+|--------------|------------|
+| **DE** | New, change, retire, or deploy — owning the set |
+| **Nominator** | SOC, hunt, or CTI asking DE to look. A sketch is enough |
+| **1.3** | How a rule *works* (syntax, a first read or write) |
+| **Block** | Firewall / IA stopping traffic. Not a DE deploy |
 
 **SOC**, **hunt**, and **CTI** **nominate**. The draft need not be perfect. A sketch is still DE’s to review. “Rough” is not “not DE’s problem.”
 
-**1.3** is how a rule *works* (syntax, a first read/write). This section is how we **run** detections as a service. Do not write SIGMA, Suricata, YARA, or SIEM here.
+How a rule *works* is **1.3** — syntax, a first read or write. Detection Engineering is how we **run** detections as a service. Do not write SIGMA, Suricata, YARA, or a SIEM rule in this lesson.
 
-**Firewall / IA** **blocks**. DE does not. A block request is not a DE deploy.
+**Firewall / IA** **blocks** what intel names. DE does not. A block request is not a DE deploy.
 
-**What good looks like (4.1.1):** someone hands you a piece of work. You say DE, nominator, 1.3, or a block. You reject two mixes: treating a rough nomination as not DE, and treating a block request as a deploy.
+**What good looks like:** someone hands you a piece of work. You say DE, nominator, 1.3, or a block. You reject two mixes: treating a rough nomination as not DE, and treating a block request as a deploy.
 
-- Given: “Write me a SIGMA rule for this log.” That is **1.3**, not this section.
-- Given: “We keep missing this. Can you look?” That is a **nomination**. Rough is still DE’s to review.
-- Given: “Block this IP at the firewall.” That is a **block**, not a DE deploy.
+- Given: “Write me a SIGMA rule for this log.” **1.3.** That is how a rule is written, not how we run detections.
+- Given: “We keep missing this. Can you look?” A **nomination**. Rough is still DE’s to review.
+- Given: “Block this IP at the firewall.” A **block**, not a DE deploy.
 
 Do not invent a ticket name. Do not invent a field list. Those wait for **4.8**, and you obtain them.
 
@@ -65,7 +70,7 @@ DE owns new, change, retire, and deploy. Nominations can be rough. 1.3 is how a 
 
 ## 4. Related modules
 
-- 0.2 – Jobs in one sentence
-- 0.3 – How work can move
+- 0.3 – Jobs in one sentence
+- 0.4 – How work can move
 - 1.3 – Detection authoring (how a rule works)
 - 4.2 – Making a detection sound and meeting shop requirements

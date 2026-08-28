@@ -13,55 +13,64 @@
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Last hour used “sensor gone” as a retire reason. This hour is the check. Lighter on purpose.
+This lesson is the sensor check: was the collector up and seeing the right place. It is not vendor admin and not how to size a collector. Readers who skip 4.6 can still take it.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-When a rule never fires, DE sometimes asks: was the **sensor** up and looking at the right place?
+Detections only fire on what a **sensor** actually saw.
+
+When a rule never fires, DE sometimes asks: was the sensor **up** and looking at the **right place**?
 
 Check the **rule**, the **sensor**, or **both**.  
 A dead sensor is not “no threat.”
 
 **Speaker Notes:**  
-This is regular “why didn’t it fire” work. Not vendor admin. Not architecture.
+This slide is the student intro. A silent rule is not always a broken rule. Stay on that check. Do not teach vendor consoles or a site diagram.
 
 ---
 
-### Slide 3 – Sometimes DE
+### Slide 3 – Up and seeing the right place
 **Title:** Up and seeing the right place
 
 **Sometimes** DE watches sensors.  
 Examples: **MDE**, **Zeek**, **IDS**.
 
+“Up and seeing the right place” means the collector is working and looking at the host or path the rule needs.
+
 Not a vendor-admin course. Not architecture.
 
 **Speaker Notes:**  
-Name the three as places, not a lab. Do not log into the box.
+Name the three as places, not a lab. Do not log into the box. Do not invent where those sensors sit at a site.
 
 ---
 
-### Slide 4 – Dead is not “no threat”
-**Title:** Dead or blind ≠ no threat
+### Slide 4 – Dead or blind is not no threat
+**Title:** Dead or blind is not “no threat”
+
+**Dead** — the sensor is down or not sending.  
+**Blind** — it is up, but it is not looking at that host or path.
 
 The activity may still have happened.  
 You just could not see it.
 
 **Speaker Notes:**  
-That is the whole of outline b. Do not let them close the case on a down sensor.
+Silence is a gap, not a close. Do not let them treat a down sensor as proof nothing happened.
 
 ---
 
 ### Slide 5 – The rule never fired
 **Title:** Rule, sensor, or both
 
-Sensor up and seeing that host → check the **rule**.  
-Sensor down or not seeing that place → check the **sensor**, or **both**.
+Sensor up and seeing that host — check the **rule**.  
+Sensor down or not seeing that place — check the **sensor**, or **both**.
+
+A down sensor is not proof the activity did not happen.
 
 **Speaker Notes:**  
-Walk the three student-guide givens if you need them. Down all week so “nothing happened” → reject.
+Walk the three student-guide givens if you need them. Down all week so “nothing happened” is a reject. The product is the check, not a ticket.
 
 ---
 
@@ -70,10 +79,10 @@ Walk the three student-guide givens if you need them. Down all week so “nothin
 
 1. A down sensor means the activity did not happen. True or false?  
 2. Someone says “the rule never fired.” What two things might you check?  
-3. Name three kinds of sensor this hour uses as examples.
+3. Name three kinds of sensor this lesson uses as examples.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
@@ -86,7 +95,7 @@ Rule, sensor, or both.
 Not vendor admin.
 
 **Speaker Notes:**  
-Site lists are next. Obtain them. Do not invent fields.
+Site lists are next. Obtain them. Do not invent fields or a change path.
 
 ---
 
@@ -96,4 +105,4 @@ Site lists are next. Obtain them. Do not invent fields.
 **4.8** Site-specific DE knowledge
 
 **Speaker Notes:**  
-That hour is local policy: obtain the list and the path. Do not invent either.
+That lesson is local policy: obtain the list and the path. Do not invent either.

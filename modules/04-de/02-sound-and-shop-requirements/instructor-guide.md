@@ -14,24 +14,24 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-What “sound” means, what you state before a rule goes live, how you treat the shop list, and how you close the loop.
+Name the ship bar for a detection: sound, the test you state before it goes live, the shop list you were shown, and the close-the-loop note.
 
 **Context (plain language):**
 
-- What this hour is for: Once work is on the desk, you do not ship it until it is sound and meets the list you were shown. Fire / must-not-fire, that list, and a short note back to the nominator.
-- How it hooks to the hour before: 4.1 named what DE owns. This hour is what good enough to ship looks like.
-- How it hooks to the hour after: 4.3 is how you review a nomination (accept, send back, or reject).
-- Why we are doing it this way: You wanted sound, test, shop requirements, and close-the-loop in one hour. The field *list* waits for 4.8.
-- What we are *not* doing this hour: Writing a rule (1.3). Inventing DYA fields or tickets. Nomination accept/reject depth (4.3). Tune inbox (4.4). No lab.
+- What this lesson is for: A detection on DE’s desk does not ship because someone asked. It ships when it is sound and when it meets the shop list you were shown. This lesson is that ship bar: test what must fire and what must not, check the list you were shown, and tell the nominator what happened.
+- How it hooks to the lesson before: 4.1 named what DE owns. This lesson is what good enough to ship looks like.
+- How it hooks to the lesson after: 4.3 is how you review a nomination (accept, send back, or reject).
+- Why we are doing it this way: sound, the kinds of shop requirement, and the four notes are the bar you can teach without a local field list. The actual list is 4.8.
+- What we are *not* doing in this lesson: Writing a rule (1.3). Inventing DYA fields or tickets. Nomination accept/reject depth (4.3). Tune inbox (4.4). No lab.
 - Extra step: none.
 
-Say **sound**, **shop requirements**, and **close the loop** the way the student guide does. The list is the one they were shown — not a list you invent on the board.
+Use the same names as the student guide: **sound**, **shop requirements**, and **close the loop**. The list is the one they were shown — not a list you invent on the board. **Sent back** here is the close-the-loop *note*. The accept / send back / reject *review* is 4.3.
 
 **Key Teaching Points:**
-- Sound = fires on the intended activity; does not fire on what it must not.
-- Test those two before live.
-- Check the list you were shown, or say you do not have it.
-- Note: shipped, changed, sent back, or retired.
+- Sound means it fires on the intended activity and does not fire on what it must not.
+- Test a draft or a change before it goes live. State both lines.
+- Check the list you were shown, or say you do not have it. Do not invent fields.
+- The note is shipped, changed, sent back, or retired.
 
 **Required Materials:**
 - Student Guide
@@ -43,11 +43,17 @@ Say **sound**, **shop requirements**, and **close the loop** the way the student
 
 Same as the student guide.
 
-**Mapped Items:** K 4.2 ; T 4.2.1 ; T 4.2.2 ; T 4.2.3
+**Mapped Proficiency Items:**
+- K: 4.2 – Making a detection sound and meeting shop requirements
+- T: 4.2.1 – Test a draft or change: what must fire and what must not
+- T: 4.2.2 – Mark which shop requirements are met and which are still missing
+- T: 4.2.3 – Write the close-the-loop note to the nominator
 
 ---
 
 ## Suggested Timing
+
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
 
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
@@ -63,27 +69,27 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write must-fire / must-not-fire. Stop. Do not write a rule.
-
-If they invent a field: “Only the list you were shown. No list? Say so.”
-
-If they start an accept/reject speech: “The note is four words. Review depth is 4.3.”
+**Talking Points:**
+- Open with the job: a detection does not ship because someone asked. It ships when it is sound and meets the list you were shown.
+- Write must-fire and must-not-fire. Stop. Do not write a rule. A draft and a change both get those two lines.
+- Name the kinds of shop requirement: meta fields, naming, IDs, tags, logging. Do not put a fake DYA field list on the board. If they invent a field: only the list you were shown. No list? Say so.
+- The note is four words: shipped, changed, sent back, retired. If they start an accept/reject speech: that review depth is 4.3. **Sent back** here is the close-the-loop note.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Sound — two things?**  
+1. **A detection is sound when it does what two things?**  
    **Answer:** It fires on the intended activity, and it does not fire on what it must not.  
-   **Explanation:** Outline a.
+   **Explanation:** Sound is both facts. Firing on the intended activity alone is not enough.
 
-2. **No shop list — invent the fields?**  
+2. **You were not shown a shop list. Do you invent the fields?**  
    **Answer:** No. Mark against a list you were shown, or say you do not have the list. Do not invent fields.  
-   **Explanation:** Outline c and 4.2.1 task 2.
+   **Explanation:** The kinds of requirement are named in this lesson. The actual list is local (4.8).
 
-3. **Four close-the-loop notes?**  
+3. **Name the four close-the-loop notes.**  
    **Answer:** Shipped, changed, sent back, retired.  
-   **Explanation:** Outline d and 4.2.1 task 3.
+   **Explanation:** That is the note to the nominator (and SOC). It is not a ticket name, and it is not the 4.3 review.
 
 ---
 

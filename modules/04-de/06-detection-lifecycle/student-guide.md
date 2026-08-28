@@ -26,15 +26,17 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**4.5** was a package (add, change, or no new rule).
+Detection engineers own **live** detections: rules that are already deployed. Those rules do not stay useful forever. In this job you review a detection you already own and call **modify**, **retire**, or **leave**, and you cite the reason. You do it because a noisy rule, a rule aimed at a gone threat, or a rule that only watched something now blocked should not sit unchanged — and a still-useful rule should not come out just because the queue is busy.
 
-DE’s normal work includes **managing** the detections you already own. You regularly review whether they still earn their keep, need an update, or should come out. This hour is that review: **modify**, **retire**, or **leave**. Cite the reason. This is not the tune *inbox* (**4.4**).
+This lesson is that regular review. It is not a SOC request to change a noisy live rule. That request is a different inbox (**4.4**).
 
 | Call | When |
 |------|------|
 | **Modify** | The rule should stay, but not as it is (too noisy, or a nomination replaced part of it). |
 | **Retire** | The rule should come out (threat gone, sensor gone, a nomination replaced it, or it no longer earns its keep). |
 | **Leave** | Still useful. Do not change it because someone is tired of it. |
+
+**Earn its keep** means the rule still does useful work — it still watches something that matters.
 
 **Reasons** you cite:
 
@@ -45,13 +47,14 @@ DE’s normal work includes **managing** the detections you already own. You reg
 - a nomination replaced it
 - already **blocked**, so the rule *may* not be needed
 
-“Sensor gone” is a reason here. How to check a dead sensor is **4.7**.
+A **nomination** here means someone asked for a new or different detection that now covers this activity. **Sensor gone** means the log source that fed this rule is no longer there. How to check a dead sensor is **4.7**.
 
-**A block is not automatic retire.** Firewall / IA blocked the infrastructure. Ask: does this rule still earn its keep? Keep it if it still watches something else (other hosts, other paths). Retire it if it only existed for what is now blocked.
+**A block is not automatic retire.** Whoever **blocks** (firewall / IA) already stopped that infrastructure. Ask: does this rule still earn its keep? Keep it if it still watches something else (other hosts, other paths). Retire it if it only existed for what is now blocked.
 
 **What good looks like:**
 
 - Given: live rule, still the right activity, too noisy. **Modify.** Reason: too noisy.
+- Given: live rule, the threat is gone. **Retire.** Reason: threat gone.
 - Given: live rule, still catching the intended activity; SOC is tired of it. **Leave.** Reason: still useful.
 - Given: “We blocked this IP.” **Not automatic retire.** Decide if the matching rule still earns its keep.
 

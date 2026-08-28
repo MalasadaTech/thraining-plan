@@ -13,45 +13,53 @@
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-This is the first Detection Engineering hour. We only name what the desk owns. Not how to write a rule.
+This is the start of the Detection Engineering track. This lesson names what the desk owns. It does not teach how to write a rule.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Normal DE work starts with knowing what is **yours**.
+Detection engineers turn what the other desks learned into lasting rules.
 
-Sort: DE, nominator, **1.3**, or a **block**. Then own the set.
+Before you write or ship one, know whether the work is **yours**.
+
+This lesson names that split.
 
 **Speaker Notes:**  
-This hour is the front door so later hours stay on one kind of work. No tickets. No field lists.
+This slide is the student intro. Sort the request before anyone writes, tests, or reviews a nomination. Do not teach how to do those jobs today.
 
 ---
 
-### Slide 3 – The set
+### Slide 3 – DE owns the set
 **Title:** DE owns the set
+
+DE owns the **set of detections** — the rules the shop runs.
 
 **New. Change. Retire. Deploy.**
 
+This lesson names those four. It does not teach how to do them.
+
 **Speaker Notes:**  
-That is the whole product. Do not teach how to do any of the four this hour.
+Write the four words and stop. How to new, change, retire, or deploy is later. Today is only what the desk owns.
 
 ---
 
-### Slide 4 – Nominate vs write a rule
+### Slide 4 – Nominate vs how a rule works
 **Title:** Nominate vs 1.3
 
 SOC, hunt, and CTI **nominate**. The draft need not be perfect.
 
-**1.3** is how a rule *works*. This section is how we **run** them.
+**1.3** is how a rule *works*. Detection Engineering is how we **run** them.
+
+A sketch is still DE’s to review.
 
 **Speaker Notes:**  
-A sketch is still DE’s to review. If they start writing SIGMA, stop them — that is 1.3.
+A rough ask is still this desk’s to review. If they start writing SIGMA, Suricata, YARA, or a SIEM rule, stop them — that is 1.3.
 
 ---
 
-### Slide 5 – Not a block
+### Slide 5 – A block is not DE
 **Title:** A block is not DE
 
 Firewall / IA **blocks**. DE does not.
@@ -59,7 +67,7 @@ Firewall / IA **blocks**. DE does not.
 A block request is not a DE deploy.
 
 **Speaker Notes:**  
-Walk the three student-guide givens if you need them: write SIGMA → 1.3; “can you look?” → nomination; block this IP → block.
+Walk the three student-guide givens if you need them: write SIGMA is 1.3; “can you look?” is a nomination; block this IP is a block.
 
 ---
 
@@ -71,20 +79,20 @@ Walk the three student-guide givens if you need them: write SIGMA → 1.3; “ca
 3. Someone asks you to block an IP at the firewall. Is that DE, a nominator, 1.3, or a block?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Own new, change, retire, deploy.  
+DE owns new, change, retire, and deploy.  
 Nominations can be rough.  
 1.3 is how a rule works.  
-A block is not a deploy.
+A block is not a DE deploy.
 
 **Speaker Notes:**  
-That is the front door. Sound and shop requirements are next.
+That is the front door of the track. Sound and shop requirements are next.
 
 ---
 
@@ -94,4 +102,4 @@ That is the front door. Sound and shop requirements are next.
 **4.2** Making a detection sound and meeting shop requirements
 
 **Speaker Notes:**  
-That hour is fire / must-not-fire, the shop list you were shown, and closing the loop. Not this sort.
+4.2 is fire / must-not-fire, the shop list you were shown, and closing the loop. Not this sort.

@@ -14,8 +14,8 @@
 
 By the end of this module, you will be able to:
 
-1. Say that a **tune request** is about a *live* rule, on a **different inbox**, and that it must name **which rule** and a **pointer**.
-2. Pick **tune**, **exception**, **replace**, **leave**, or **retire**, and reject a request that is really an investigation, a **block**, or IR containment.
+1. Say that a **tune request** is about a *live* rule, that it sits in a different **inbox** from a nomination, and that it must name **which rule** and a **pointer**.
+2. Given a SOC tune request, pick **tune**, **exception**, **replace**, **leave**, or **retire** and cite why — or reject a request that is really an investigation, a **block**, or IR containment.
 
 **Mapped Proficiency Items:**
 - K: 4.4 – Tune requests from SOC
@@ -26,13 +26,13 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-After rules are **live**, SOC will ask DE to change them. That ask is a **tune request**, not a new nomination. This hour is that inbox.
+After a detection is **live**, SOC lives with the alerts it fires. When that rule is noisy, brittle, or missing context, they ask Detection Engineering to change it. That ask is a **tune request**. This lesson is that work: you name the live rule, you point at the investigation or intel report, and you pick what to do — or you reject an ask that is really investigation, a block, or IR containment.
 
-**4.3** was a **nomination** (something new). A tune is about a rule that is already live — noisy, brittle, or missing context.
+**4.3** was a **nomination** (something new). A tune is about a rule that is already live.
 
-“Missing context” here means the **rule** fires without enough of the picture. It is not the pointer below.
+A tune request is about a *live* rule that is **noisy**, **brittle**, or **missing context**. “Missing context” here means the **rule** fires without enough of the picture. It is not the pointer below.
 
-Same desk as nominations. **Different inbox.** Do not treat a tune as a new nomination.
+You sit at the same desk as nominations. The work sits in a different pile — a different **inbox**. Do not treat a tune as a new nomination.
 
 **Clear enough to review** means two things are present:
 
