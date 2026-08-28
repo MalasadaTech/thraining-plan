@@ -9,30 +9,32 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 1.1.1 – Endpoint activity  
-**Subtitle:** SOC Analyst (Hunter / CTI sit this too)  
+**Subtitle:** Overview of host activity types  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Start of the SOC analyst block. This hour is the map of host rows. Not how to read a process create.
+This is the start of the SOC analyst track. This lesson names the five kinds of host activity. It does not teach how to read a process-create event.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-An alert will point at a **host**.
+An alert usually names a **host**.
 
-Before you describe a row, know **which kind of row** it is.
+That host generated a **log**. Before you describe it, know **what kind of activity** it is.
 
-This hour is that map.
+This lesson is the overview.
 
 **Speaker Notes:**  
-You wanted this in front of process / file / registry. Do not teach fields today.
+This slide is the student intro. Name the kinds before anyone reads process, file, or registry fields. Do not teach fields today.
 
 ---
 
-### Slide 3 – Five kinds
-**Title:** What a host leaves
+### Slide 3 – Five kinds of host activity
+**Title:** Five kinds of host activity
+
+A host generates **logs** when something happens on it.
 
 **Process** — a program ran, ended, or touched another.  
 **File** — a file changed.  
@@ -41,35 +43,37 @@ You wanted this in front of process / file / registry. Do not teach fields today
 **Image / driver load** — a DLL or driver loaded.
 
 **Speaker Notes:**  
-Outline a. One line each. Stop.
+One line each. Stop. Host-network is the host logging a talk, not Zeek. If they ask about SIEM tables, a log line is an event; in a SIEM it often shows up as a row.
 
 ---
 
-### Slide 4 – Same activities, two encodings
+### Slide 4 – Same activities, two tools
 **Title:** Sysmon and MDE
 
-Two encodings of the **same** activities.  
-Not two different stories.
+Two tools. Same five kinds of activity.  
+Different field names — not two different sets of facts.
 
 This course uses both as examples.  
-Not how to install Sysmon.
+This is not how to install Sysmon.
 
 **Speaker Notes:**  
-Outline b. Do not dump Event IDs.
+Do not dump Event IDs. The point is that Sysmon and MDE are two encodings of the same host activity.
 
 ---
 
-### Slide 5 – One type at a time
-**Title:** The map, then one row
+### Slide 5 – Overview now, one kind next
+**Title:** Overview now, one kind next
 
-This hour is only the map.
+This lesson only names the five kinds.  
+The next lessons each cover one kind in detail.
 
-Endpoint telemetry. Zeek is **1.2**.
+This is **endpoint** telemetry — logs from the host.  
+Protocol deep-dive is Zeek (**1.2**).
 
-An alert points at a host. Know the **kind** before you describe it.
+Name the **kind** before you describe the event.
 
 **Speaker Notes:**  
-Outline c–e. Walk the three student-guide givens if you need them.
+Keep them on the overview. If you need the classify-the-line examples, use the three givens in the student guide.
 
 ---
 
@@ -81,19 +85,19 @@ Outline c–e. Walk the three student-guide givens if you need them.
 3. “This host connected to an IP and port.” Process, or host-network?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions for the whole lesson. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Five kinds of host rows.  
-Sysmon and MDE encode the same activities.  
-Know the kind before you describe the row.
+Five kinds of host activity.  
+Sysmon and MDE record the same kinds with different names.  
+Name the kind before you describe the event.
 
 **Speaker Notes:**  
-Process row is next.
+Process activity is next. That lesson is who ran what, not another overview.
 
 ---
 
@@ -103,4 +107,4 @@ Process row is next.
 **1.1.2** Process activity
 
 **Speaker Notes:**  
-That hour is who ran what. The alert beat (`wscript` → `powershell -enc`) lives there.
+1.1.2 is who ran what. The `wscript` → `powershell -enc` example lives there, not here.

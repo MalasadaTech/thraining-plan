@@ -13,22 +13,22 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Name the five kinds of host rows so the next hours can stay on one kind each.
+Name the five kinds of host activity so the next lessons can stay on one kind each.
 
 **Context (plain language):**
 
-- What this hour is for: An alert will point at a host. Before you describe a row, you need to know which kind of row it is. This hour is that map.
-- How it hooks to the hour before: the full `00` block (front door, frameworks, tools, environment). This is the start of the SOC analyst block.
-- How it hooks to the hour after: 1.1.2 is the process row — who ran what.
-- Why we are doing it this way: You wanted a front door for 1.1 so process / file / registry / host-network / image-load are named before we read one.
-- What we are *not* doing this hour: Process fields. Sysmon install. Zeek. The PRD plot. No lab.
+- What this lesson is for: An alert usually names a host. That host generated a log. Before you describe what happened, you have to know what kind of activity the log is about. This lesson names those kinds.
+- How it hooks to the lesson before: the shared intro block (course layout, what a SOC is, jobs, frameworks, tools, environment). This is the start of the SOC analyst track.
+- How it hooks to the lesson after: 1.1.2 is process activity — who ran what.
+- Why we are doing it this way: name process, file, registry, host-network, and image/driver load before anyone reads a single event.
+- What we are *not* doing in this lesson: process fields, Sysmon install, Zeek, the course fiction plot (DYA / PRD), no lab.
 - Extra step: none.
 
-Say **row**, **process**, **file**, **registry**, **host-network**, and **image/driver load** the way the student guide does. **Host-network** means the endpoint logged a talk, not a Zeek protocol lesson.
+Use the same names as the student guide: **log**, **event**, **process**, **file**, **registry**, **host-network**, and **image/driver load**. **Row** is the SIEM-table gloss from the student intro, not the headline word. **Host-network** means the endpoint logged a talk, not a Zeek protocol lesson.
 
 **Key Teaching Points:**
-- Five kinds. One map.
-- Sysmon and MDE encode the same activities.
+- Five kinds of host activity. This lesson is the overview.
+- Sysmon and MDE record the same activities with different field names.
 - Name the kind. Do not describe the event yet.
 
 **Required Materials:**
@@ -41,15 +41,19 @@ Say **row**, **process**, **file**, **registry**, **host-network**, and **image/
 
 Same as the student guide.
 
-**Mapped Items:** K 1.1.1.1 ; T 1.1.1.2
+**Mapped Proficiency Items:**
+- K: 1.1.1.1 – Endpoint activity (the map)
+- T: 1.1.1.2 – Given a one-line description, name the activity type
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | After the shared floor |
+| Introduction (required) | 3 min     | After the shared intro block |
 | Key Concepts            | 10 min    | Five kinds; three givens |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 2 min     | |
@@ -61,27 +65,29 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write the five kinds. Stop. Walk the three “given” lines.
-
-If they start Event IDs: “1.1.2. Today is the kind.”  
-If they say host-network is Zeek: “The host logged it. Zeek is 1.2.”  
-If they tell the PRD story: “Not this hour.”
+**Talking Points:**
+- Open with the job: an alert names a host, that host generated a log, and you have to know the kind of activity before you describe it.
+- Write the five kinds. Stop there. Do not add fields or Event IDs.
+- Walk the three “given” lines from the student guide. The product is the kind, not a story of the incident.
+- If they start listing Event IDs: that is 1.1.2. Today is only the kind of activity.
+- If they say host-network is Zeek: the host logged the talk. Zeek is 1.2.
+- If they start the DYA / PRD plot: that fiction is from the intro. It is not this lesson.
 
 ---
 
 ## Knowledge Check – Answer Key
 
 1. **Sysmon and MDE are two different stories. True or false?**  
-   **Answer:** False. Two encodings of the same activities.  
-   **Explanation:** Outline b.
+   **Answer:** False. Two tools, same five kinds of activity, different field names.  
+   **Explanation:** The course uses both as examples of the same host activity, not as two separate facts.
 
 2. **“A program started on the host.” Which type?**  
    **Answer:** Process.  
-   **Explanation:** Outline a and 1.1.1.1 task 1.
+   **Explanation:** A program ran. That is process activity, not file or network.
 
 3. **“This host connected to an IP and port.” Process or host-network?**  
    **Answer:** Host-network.  
-   **Explanation:** Outline a and d. The process *started* it; the row that logged the talk is host-network.
+   **Explanation:** A process started the connection, but the log that recorded the talk is host-network. Process would be “a program started,” not “this host connected.”
 
 ---
 

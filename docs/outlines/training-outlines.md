@@ -124,16 +124,16 @@ After the full `00` block (`0.1`–`0.8`). This section is **1.1** → **1.2** �
 
 **1.1 [K/T] Endpoint Logs**
 
-Endpoint telemetry (Sysmon / MDE) vs network-sensor telemetry (Zeek, unit 1.2). Sysmon Event IDs and MDE tables encode the same activities; this unit is not Sysmon installation or configuration. One map hour, then five activity units. Write only the asked child. `1.1.4` is **host-observed** network (initiating process → IP/port/domain). Protocol deep-dive is `1.2`. Do not merge the two.
+Endpoint telemetry (Sysmon / MDE) vs network-sensor telemetry (Zeek, unit 1.2). Sysmon Event IDs and MDE tables encode the same activities; this unit is not Sysmon installation or configuration. One overview lesson, then five activity units. Write only the asked child. `1.1.4` is **host-observed** network (initiating process → IP/port/domain). Protocol deep-dive is `1.2`. Do not merge the two.
 
 **1.1.1 [K] Endpoint activity (the map)**  
-Stay in this lesson: name the five kinds of host rows. Do not teach process fields, Sysmon install, or Zeek (**1.2**). One activity type per later child.
+Stay in this lesson: name the five kinds of host activity. Do not teach process fields, Sysmon install, or Zeek (**1.2**). One activity type per later child.
 
-a. A host leaves **rows** when something happens on it — a program runs, a file changes, a registry key is written, the host talks, or an image/driver loads  
+a. A host generates **logs** when something happens on it — a program runs, a file changes, a registry key is written, the host talks, or an image/driver loads  
 b. **Sysmon** and **MDE** are two encodings of those same activities, not two different stories. This course uses both as examples  
-c. You will learn **one activity type at a time**. This hour is only the map  
+c. You will learn **one activity type at a time**. This lesson is only the overview  
 d. This is **endpoint** telemetry. Protocol deep-dive is Zeek (**1.2**)  
-e. An alert will point at a host. You need to know **which kind of row** you are looking at before you describe it  
+e. An alert will point at a host. You need to know **which kind of activity** you are looking at before you describe it  
 
 **1.1.1.1 [T] Tasks**  
 1. Given a one-line description, name the activity type: process, file, registry, host-network, or image/driver load  

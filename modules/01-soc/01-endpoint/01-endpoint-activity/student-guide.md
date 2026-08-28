@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Name the five kinds of **host rows** this unit will teach.
+1. Name the five kinds of **host activity** this unit will teach.
 2. Given a one-line description, say whether it is **process**, **file**, **registry**, **host-network**, or **image/driver load**.
 
 **Mapped Proficiency Items:**
@@ -24,9 +24,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-An alert will point at a **host**. Before you describe a row, you need to know **which kind of row** you are looking at. This hour is that map.
+An alert usually names a **host** — a laptop, server, or other device. Something on that host generated a log. Before you describe what happened, you have to know **what kind of activity** the log is about. That is the job in this lesson: name the kind first, so you do not mix process, file, and network details into one write-up.
 
-A host leaves **rows** when something happens on it:
+A host generates **logs** when something happens on it. Each log is one **event**. In a SIEM, that event usually shows up as a **row** in a table. Later lessons may still say “row.” Here it means the same thing as the log.
 
 | Kind | What happened |
 |------|----------------|
@@ -36,11 +36,13 @@ A host leaves **rows** when something happens on it:
 | **Host-network** | This host talked (IP, port, domain) — the *process* started it |
 | **Image / driver load** | A DLL or driver was loaded |
 
-**Sysmon** and **MDE** are two encodings of those **same** activities, not two different stories. This course uses both as examples. This is **not** how to install Sysmon.
+**Host-network** means the *host* logged that this device talked. It is not a Zeek lesson. Zeek watches the wire and does not name the process that opened the socket.
 
-You will learn **one activity type at a time** after this hour. This hour is only the map.
+**Sysmon** and **MDE** (Microsoft Defender for Endpoint) are two tools that record those **same** five kinds of activity. They use different field names. They are not two different sets of facts. This course uses both as examples. This is **not** how to install Sysmon.
 
-This is **endpoint** telemetry. Protocol deep-dive is Zeek (**1.2**).
+You will learn **one activity type at a time** after this lesson. This lesson only names the five kinds. The next lessons each cover one kind in detail.
+
+This is **endpoint** telemetry: logs from the host itself. Protocol deep-dive is Zeek (**1.2**).
 
 **What good looks like:** someone gives you one line. You name the kind. You do not describe fields yet.
 
@@ -48,7 +50,7 @@ This is **endpoint** telemetry. Protocol deep-dive is Zeek (**1.2**).
 - Given: “A file appeared in Temp.” **File.**
 - Given: “This host connected to an IP and port.” **Host-network.**
 
-Do not tell the rest of the incident. Do not open a process row yet (**1.1.2**).
+Do not tell the rest of the incident. Do not try to read process fields yet (**1.1.2**).
 
 ---
 
@@ -62,7 +64,7 @@ Do not tell the rest of the incident. Do not open a process row yet (**1.1.2**).
 
 ## 3. Summary
 
-Five kinds of host rows. Sysmon and MDE encode the same activities. Know the kind before you describe the row. Zeek is later.
+There are five kinds of host activity. Sysmon and MDE record the same kinds with different field names. Name the kind before you describe the event. Zeek is later.
 
 **Next:** **1.1.2** Process activity.
 
@@ -70,6 +72,6 @@ Five kinds of host rows. Sysmon and MDE encode the same activities. Know the kin
 
 ## 4. Related modules
 
-- 0.5 – How this course is laid out
+- 0.1 – How this course is laid out
 - 1.1.2 – Process activity
 - 1.2 – Zeek

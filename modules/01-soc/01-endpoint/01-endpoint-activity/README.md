@@ -16,7 +16,7 @@ The teaching-unit ID is **1.1.1**. Process is **1.1.2**. File is **1.1.3**. Host
 
 ## Concepts taught
 
-- host rows
+- host activity types (also: host logs, host events, host rows)
 - five activity types
 - Sysmon and MDE encode the same activities
 - endpoint vs Zeek

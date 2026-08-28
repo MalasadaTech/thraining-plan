@@ -1153,13 +1153,25 @@ See also: [the product is different](#the-product-is-different), [how work can m
 
 ### host rows
 
-Also: endpoint activity map, five kinds of host rows
+Also: host activity types, host logs, host events, endpoint activity map, five kinds of host rows
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
 | Taught | [1.1.1 Endpoint activity (the map)](../modules/01-soc/01-endpoint/01-endpoint-activity/) | SOC, Hunter, CTI |
 
 See also: [five activity types](#five-activity-types), [Sysmon and MDE encode the same activities](#sysmon-and-mde-encode-the-same-activities)
+
+### host activity types
+
+See [host rows](#host-rows).
+
+### host logs
+
+See [host rows](#host-rows).
+
+### host events
+
+See [host rows](#host-rows).
 
 ### five activity types
 

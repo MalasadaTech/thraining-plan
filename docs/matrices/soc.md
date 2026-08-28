@@ -29,14 +29,14 @@ Everyone. Taught before SOC. Same idea on the hunter, CTI, and DE sheets. Not si
 
 ## 1.1 Endpoint Logs
 
-Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive is 1.2. Map hour is 1.1.1; activity units are 1.1.2–1.1.6.
+Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive is 1.2. Overview lesson is 1.1.1; activity units are 1.1.2–1.1.6.
 
 ### 1.1.1 Endpoint activity (the map)
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|
-| 1.1.1.1 | Endpoint activity (the map) | K | A | B | B | Map hour. Facts at 3. Principles at 5/7. Not an analysis item. |
-| 1.1.1.2 | Given a one-line description, name the activity type | T | 1a | 2b | 2b | Name the kind of row. Do not describe the event. No 4d. |
+| 1.1.1.1 | Endpoint activity (the map) | K | A | B | B | Overview lesson. Facts at 3. Principles at 5/7. Not an analysis item. |
+| 1.1.1.2 | Given a one-line description, name the activity type | T | 1a | 2b | 2b | Name the kind of activity. Do not describe the event. No 4d. |
 
 ### 1.1.2 Process activity
 
