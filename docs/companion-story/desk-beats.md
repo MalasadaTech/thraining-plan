@@ -6,11 +6,11 @@ Instructor card. Same facts as the [story bible](../story-bible.md) “when each
 |------|-------------|-----------------------|-------------------|
 | `wscript` → `powershell -enc` on **WS-JLEE** / `jlee` | **1.1.2** process | **1.4** the alert (what fired) | — |
 | `invoice.vbs` in Temp | **1.1.3** file | **1.4.1** investigation; **1.5** notify (path, not hash) | Leadership one-liner does not need the hash |
-| SOC VT lookup of a hash, IP, or domain they already have | **0.7** survey | **1.4.1** first pass — here, the `invoice.vbs` hash | Relations tab; a detection count as a hunt |
+| SOC VT lookup of a hash, IP, or domain they already have | **0.7** survey | **1.4.1** first pass — here, the `invoice.vbs` hash is **not in VT** | Relations tab; a detection count as a hunt; leadership one-liner |
 | HKCU Run **`Updater`** → `%TEMP%\update.exe` | **1.1.5** registry | **3.x** hunt (more hosts) | First alert. Leadership notify |
-| Host GET `update.exe` `:8080` to `prd-updates.net` / `203.0.113.88` | **1.1.4** + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **2.11.3** RFI seed | Not all of this in the leadership notify |
+| Host GET `update.exe` `:8080` to `prd-updates.net` / `203.0.113.88` | **1.1.4** + **1.2** Zeek | **1.4.1** host-network names the process; Zeek HTTP names `GET` / URI; PCAP vs alert fields if a flow exists; **2.11.3** RFI seed | Not all of this in the leadership notify |
 | FN: that GET with **no** fired alert | **1.4.2** | Hunt purpose **3.1**; DE gap **4.5** | Calling FN a disliked TP |
-| Sibling `login-prd.net`, same NS, same A | **2.5** / **2.6** / **2.8** | Extra infra → **block** (0.3 f) | SOC notify field |
+| Sibling `login-prd.net`, same NS, same A, SOA | **2.5** / **2.6** / **2.8** | Extra infra → **block** (0.3 f) | SOC notify field |
 | Hunt package: `Updater` / `update.exe` / more `invoice.vbs` | **3.x** | Hunt product; same package to **4.x** | Rewrite of the SOC ticket |
 | Nomination / add / no new rule | **4.3** / **4.5** | After the hunt or SOC “we keep missing this” | Invented in 1.1; used as a block list |
 
