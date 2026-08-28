@@ -12,12 +12,12 @@
 | 2.9.4 | K | URLScan | 2.9.4 a–b | A / A / B | A / B / B | B / C / C |
 | 2.9.4.1 | T | Submit or retrieve a URLScan result and extract intel | 2.9.4.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.9.4**. Survey is **0.7**. Classroom card only. No live submit lab.
+The teaching-unit ID is **2.9.4**. Silent Push is **2.9.3**. STIX is **2.10.1**. Survey (purpose / when to pick) is **0.7**. Hop sentence is **2.8.1**. Hunt conversion is **3.3.1**. Classroom result card only. No live submit lab.
 
 ## Concepts taught
 
-- URLScan purpose
-- extracting intel from a scan result
+- URLScan core capabilities and use cases (also: this page load, interpreting URLScan results for intelligence value)
+- submit or retrieve a URLScan result (also: retrieve existing URLScan, extract actionable intelligence from a URLScan report)
 
 ## Artifacts
 

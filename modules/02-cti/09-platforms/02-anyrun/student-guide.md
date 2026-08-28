@@ -5,7 +5,7 @@
 - CTI: 2.9.2 B / C / C ; 2.9.2.1 3c / 4c / 4c  
 - Hunter: 2.9.2 A / B / B ; 2.9.2.1 2b / 3c / 4c  
 - SOC: 2.9.2 A / A / B ; 2.9.2.1 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -14,7 +14,7 @@
 By the end of this module, you will be able to:
 
 1. Search AnyRun submissions by tag, IP, domain, or hash.
-2. Review a submission and extract **actionable** intel (who / what — **2.1.5**), from a classroom card.
+2. Review a submission and extract **actionable** intelligence from a classroom card, or say it is not on the card.
 
 **Mapped Proficiency Items:**
 - K: 2.9.2 – AnyRun
@@ -24,29 +24,38 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts search **public detonations** for a seed they already have. When to pick AnyRun is **0.7**. This hour is **search + review**. Card only. No live account.
+CTI analysts search **public detonations** for a seed they already have — a tag, an IP, a domain, or a hash. A public detonation is a sandbox run someone else published. They do this so they can write **who** can act and **what** they do from a run that already happened, instead of guessing from a label. When to pick AnyRun is **0.7**. This lesson is **search and review**. You work from a **classroom card** (a static submission page). You do not need a live vendor account.
 
 | Move | Job |
 |------|-----|
-| **Search** | Tag, IP, domain, or hash you have (update domain / `update.exe` hash) |
-| **Review** | Process tree, network, dropped files **on the card** |
-| **Extract** | A who + what someone can act on — or **not on card** |
+| **Search** | The tag, IP, domain, or hash you already have |
+| **Review** | Process tree, network, and dropped files **on the card** |
+| **Extract** | A who + what someone can act on (**2.1.5**) — or **not on card** |
 
-**What good looks like:** search `203.0.113.88` or the hash. Extract a contacted URI or dropped name **if present**. Do not invent a beacon POST (not the main plot). A count of “malicious” tags is **information**, not intelligence.
+A **tag** is a label on a public run (a family name, a short verdict, a technique name). Search the tag you already have. Do not fish for a new family.
+
+**What good looks like:**
+
+- Search `203.0.113.88` or the hash of `update.exe`. Those are seeds you already have, not new hunts.
+- Extract a contacted URI or a dropped file name **if the card shows it**.
+- If the card does not show a check-in POST (a beacon to a URL), write **not on card**. Do not invent one.
+- A count of “malicious” tags is **information**, not intelligence. It has no who and no next step.
+
+This is not when to pick AnyRun (**0.7**). It is not a VirusTotal Relations hop (**2.9.1**). A conceptual infrastructure hop is **2.8.1**. Hunt conversion to SIEM or Zeek is **3.3.1**.
 
 ---
 
 ## 2. Knowledge Check
 
-1. This hour is “when to pick AnyRun.” True or false?
-2. What four things can you search by?
-3. You open a card for the `update.exe` hash. Name one extract that is legal, and one you must **not** invent.
+1. A count of “malicious” tags on an AnyRun card is actionable intelligence. True or false?
+2. What four things can you search AnyRun submissions by?
+3. You open a classroom card for the `update.exe` hash. Name one extract that is legal if it is on the card, and one thing you must **not** invent.
 
 ---
 
 ## 3. Summary
 
-Search the seed. Review the card. Extract who/what or say missing. No live account.
+Search the seed you already have. Review the card. Extract who and what, or say it is missing. A verdict tag is not intelligence. No live account.
 
 **Next:** **2.9.3** Silent Push.
 
@@ -57,4 +66,6 @@ Search the seed. Review the card. Extract who/what or say missing. No live accou
 - 2.9.1 – VirusTotal (previous)
 - 2.9.3 – Silent Push
 - 0.7 – When to pick AnyRun
-- 2.1.5 – Actionable
+- 2.1.5 – Actionable intelligence
+- 2.8.1 – Infrastructure hop
+- 3.3.1 – Hunt conversion to SIEM / Zeek

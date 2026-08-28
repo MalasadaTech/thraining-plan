@@ -12,13 +12,16 @@
 | 2.7.3 | K | Cyber Kill Chain in intelligence analysis | 2.7.3 a | A / B / B | B / C / C | B / C / C |
 | 2.7.3.1 | T | Identify the Kill Chain stage of observed or reported activity | 2.7.3.1 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.7.3**. Floor is **0.6.3**. ATT&CK is **2.7.1**. DTF is **2.7.4**. No lab.
+The teaching-unit ID is **2.7.3**. Floor is **0.6.3**. ATT&CK is **2.7.1**. Diamond is **2.7.2**. DTF is **2.7.4**. Hunt planning is **3.5**. No lab.
 
 ## Concepts taught
 
-- seven Kill Chain stages
+- Cyber Kill Chain in intelligence analysis (also: supported Kill Chain stages in a product)
+- place a report or activity set on the Kill Chain
+- identify the Kill Chain stage of observed or reported activity
 - listing only supported stages
 - rejecting the neighbor stage
+- reject an unobserved Kill Chain stage
 
 ## Artifacts
 

@@ -3,90 +3,112 @@
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.1.4 – Intelligence Requirements  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** The question the work exists to answer  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-The question the work exists to answer. Not a shop PIR list you invent.
+This lesson is the question the work exists to answer. It is not a shop PIR list you invent, and it is not the later test of whether a product can be used.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Write the **question**.
+CTI analysts write the **question** the work exists to answer.
 
-So collection is not “everything interesting.”  
-A PIR is a *ranked* requirement.
+Without it, collection becomes everything interesting.
+
+This lesson is that question. Not a shop PIR list you invent.
 
 **Speaker Notes:**  
-Type was last hour. This hour is the question.
+This slide is the student intro. Name the requirement before anyone scores a product or picks a source class. Do not teach the local PIR card today.
 
 ---
 
-### Slide 3 – Purpose, PIR, drives work
-**Title:** Question + rank + what you skip
+### Slide 3 – Purpose of intelligence requirements
+**Title:** Purpose of intelligence requirements
 
-**Purpose** — focus on a decision.  
-**PIR** — leadership ranked it. Not every IR is a PIR.  
-**Drives work** — what you collect, analyze, and **do not** chase.
+An intelligence requirement focuses collection and analysis on a **decision**.
+
+A clear requirement names the **question**, **whose decision**, and **what you will not chase**.
 
 **Speaker Notes:**  
-Outline a–c. Overlay a real shop list if they have one.
+Purpose first. Types and the A12 translate come next. If they start listing sources, that is a later lesson.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Translate + what you skip
+### Slide 4 – Types of requirements
+**Title:** A PIR is ranked
 
-Slogan: “Are we seeing them?”  
+A **Priority Intelligence Requirement (PIR)** is a requirement leadership or the program ranked.
+
+**Standing** and **ad-hoc** requirements are still requirements.  
+They are not all PIRs.
+
+If your shop publishes PIR IDs, use those. Do not invent a list.
+
+**Speaker Notes:**  
+PIR is a type, not a synonym for every requirement. Standing stays until leadership takes it off. Ad-hoc is one-time, often from an RFI. Do not overlay a made-up DYA list.
+
+---
+
+### Slide 5 – How a requirement drives work
+**Title:** What you collect, analyze, and skip
+
+The requirement names what you **collect** and what you **analyze**.
+
+It also names what you will **not** chase on this question.
+
+The sibling domain is later enrichment, not this requirement.
+
+**Speaker Notes:**  
+This is outline “drives collection and analysis.” The next slide is the A12 given. Do not open OSINT versus commercial here.
+
+---
+
+### Slide 6 – Translate the slogan
+**Title:** Translate the slogan
+
+Slogan: “Are we seeing them?”
+
+**A12** — `wscript` launched encoded PowerShell on **WS-JLEE**. An update domain is in the traffic.
+
 Refine: “Is the update domain the payload host for **A12** in this window?”
 
-Drive: A record / file you have.  
+Collect the A record and the file you have.  
 **Not** the sibling domain on this requirement.
 
 **Speaker Notes:**  
-Do not invent PIR-01.
+Show this given before the knowledge check. The product is the refined question plus what you skip. Do not invent PIR-01. Do not tell the rest of the incident.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No type pick (**2.1.3**).  
-No actionable test (**2.1.5**).  
-No OSINT vs commercial (**2.1.8**).  
-No invented local PIR list (**2.12.1**).
-
-**Speaker Notes:**  
-Obtain the shop list later. Do not write one.
-
----
-
-### Slide 6 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
 1. Every intelligence requirement is a PIR. True or false?  
-2. What does a PIR add that a standing or ad-hoc IR may not have?  
+2. What does a PIR add that a standing or ad-hoc requirement may not have?  
 3. “Are we seeing them?” Translate it for **A12**, and name one thing **not** to chase.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 7 – Summary
+### Slide 8 – Summary
 **Title:** Summary
 
-The question. A PIR is ranked. It names what you skip.
+A requirement is the question.  
+A PIR is ranked.  
+It names what you collect, analyze, and skip.
 
 **Next:** **2.1.5** Ensuring intelligence is actionable
 
 **Speaker Notes:**  
-Do not open the actionable test unless that hour is scheduled.
+2.1.5 is whether the product can be used. Stay off that test unless that lesson is scheduled.

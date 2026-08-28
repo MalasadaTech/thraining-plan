@@ -16,8 +16,8 @@ The teaching-unit ID is **2.6.1**. Zeek DNS is **1.2.3**. RDAP is **2.5**. Silen
 
 ## Concepts taught
 
-- SOA records
-- other DNS records of intel value
+- SOA records (also: Start of Authority, MNAME, RNAME, zone serial)
+- other DNS records of intel value (also: NS, MX, TXT, SRV)
 - using DNS to enrich or pivot
 
 ## Artifacts

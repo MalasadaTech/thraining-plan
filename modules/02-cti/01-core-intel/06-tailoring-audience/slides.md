@@ -9,62 +9,70 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.1.6 – Tailoring Output to the Audience  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Same facts, different reader  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Same facts. Different reader.
+2.1.5 asked whether the product can be acted on. This lesson is who is reading. It is not a channel list and not how to write an actor profile.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Change **how you say it**.
+CTI analysts change **how they say the same facts** so the person who will act can use them.
 
-Not the judgment.  
-Content, format, detail.
+Leadership needs a short so-what. IR needs host, file, and domain.
+
+The assessment does not change.
 
 **Speaker Notes:**  
-Actionable was last hour. This hour is who is reading.
+This slide is the student intro. Name the reader before anyone rewrites. Do not teach channels or the actor profile today.
 
 ---
 
-### Slide 3 – Three adjustments
+### Slide 3 – Name who is reading
+**Title:** Audience analysis
+
+Name **who is reading** and what they can do before you write.
+
+Leadership owns awareness. They cannot work a hash.
+
+IR / SOC owns the host. They need path and domain.
+
+Wrong reader, wrong shape.
+
+**Speaker Notes:**  
+This is why audience analysis matters. If they skip it, they send a hash dump to the lead or a one-liner to IR. Consumers in this lesson are leadership and IR / SOC.
+
+---
+
+### Slide 4 – Content, format, detail
 **Title:** Content, format, detail
 
-**Content** — which facts this person needs.  
-**Format** — one line vs a short para.  
-**Detail** — hash and path vs no hash.
+**Content** — which facts this person needs to act.  
+**Format** — one sentence versus a short paragraph.  
+**Detail** — hash and path versus no hash.
+
+Facts stay. Detail changes.
 
 **Speaker Notes:**  
-Outline a–b. Leadership does not need the hash.
+Walk the three adjustments. Leadership does not need the hash. Do not invent a style guide. Do not pick a ticket type.
 
 ---
 
-### Slide 4 – What good looks like
+### Slide 5 – Same A12, two readers
 **Title:** Same A12, two readers
 
-**Leadership** — **WS-JLEE** / `jlee` ran encoded PowerShell; IR has the host.  
+**Given:** `jlee` on **WS-JLEE** ran encoded PowerShell from a script. IR has the host.
+
+**Leadership** — **WS-JLEE** / `jlee` ran encoded PowerShell from a script; IR has the host.  
 No hash.
 
 **IR / SOC** — add Temp `invoice.vbs` and the update domain.
 
 **Speaker Notes:**  
-Same assess. Not a different plot.
-
----
-
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No change to the judgment.  
-No actor profile (**2.11**).  
-No SOC ticket type (**1.5**).  
-No channel list (**2.11.2**).
-
-**Speaker Notes:**  
-Do not invent a style guide.
+Show this given before the knowledge check. Same assessment. Not a different plot. Do not add the Run key or a file hash to the leadership line.
 
 ---
 
@@ -72,20 +80,22 @@ Do not invent a style guide.
 **Title:** Knowledge Check
 
 1. Tailoring means you change the judgment so leadership likes it. True or false?  
-2. What three things do you adjust?  
-3. **A12** for leadership (no hash) versus for IR (what you add).
+2. What three things do you adjust for a named audience?  
+3. Same A12 facts: `jlee` on **WS-JLEE** ran encoded PowerShell from Temp `invoice.vbs`; IR has the host; the update domain is in the case. Write the leadership line (no hash) and what you add for IR.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Same facts. Different detail. Leadership: no hash.
+Name who is reading before you write.  
+Same facts. Different content, format, and detail.  
+Leadership does not need the hash.
 
 **Next:** **2.1.7** Attribution
 
 **Speaker Notes:**  
-Do not open attribution unless that hour is scheduled.
+2.1.7 is who you claim. Stay off that assessment unless that lesson is scheduled.

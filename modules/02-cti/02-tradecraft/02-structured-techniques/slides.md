@@ -9,58 +9,66 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.2.2 – Structured Analytic Techniques  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Named methods so a favorite story does not win  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Two syllabus techniques. Pick one. Do not invent a third.
+This lesson is two named methods: Key Assumptions Check and Analysis of Competing Hypotheses. Pick the one the problem needs. Do not invent a third official technique.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Use a **named method**.
+CTI analysts use a **named method** so a favorite story does not win by habit.
 
-So a favorite story does not win by habit.  
-Not the likelihood word. Not a bias name.
+A draft often already has a preferred explanation. This lesson is how you pick a method and apply it.
+
+Not a likelihood word. Not a source letter. Not a bias name.
 
 **Speaker Notes:**  
-2.2.1 was the term. This hour is the method.
+This slide is the student intro. The job is to slow the jump to one story. Estimative language was the previous lesson. Admiralty and bias names wait.
 
 ---
 
-### Slide 3 – Two techniques
+### Slide 3 – Purpose of a structured technique
+**Title:** Purpose of a structured technique
+
+A **structured analytic technique** is a named way to test a call.
+
+Purpose: make the jump to one story slower and inspectable.
+
+Pick the technique that matches the problem.  
+Do not run both to fill time.
+
+**Speaker Notes:**  
+Name the purpose before the two techniques. The product is one method applied, not a stack of methods that look thorough.
+
+---
+
+### Slide 4 – Two techniques
 **Title:** Key Assumptions Check vs ACH
 
 **Key Assumptions Check** — one claim is carrying the call. List it. Say what breaks it.  
 **ACH** — two or more explanations. See which evidence **hurts** each one.
 
+This lesson teaches those two only.
+
 **Speaker Notes:**  
-Outline a–c. Do not run both to fill time.
+One line each. Stop. Hurt means evidence that is hard for a hypothesis to live with. Do not score ACH by how many facts support the favorite story.
 
 ---
 
-### Slide 4 – What good looks like
+### Slide 5 – What good looks like
 **Title:** Apply one
 
-**KAC** — assumption: vendor APT name = who they are. Break: it is a PDF label.  
-**ACH** — H1 payload host for **A12**. H2 ordinary browse. `GET /update.exe :8080` hurts H2.
+**Key Assumptions Check** — assumption: a vendor APT name is who they are. Break: it is a PDF label.  
+**ACH** — H1 payload host for **A12**. H2 ordinary browse. `GET /update.exe` `:8080` hurts H2.
+
+You do not need a full spreadsheet.
 
 **Speaker Notes:**  
-No full spreadsheet required.
-
----
-
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No Admiralty (**2.2.3**).  
-No bias list (**2.2.4**).  
-No third official technique.
-
-**Speaker Notes:**  
-If they want letters, that is next.
+Show these givens before the knowledge check. A12 is the classroom incident on WS-JLEE. Do not retell the whole plot. Name H1, H2, and what hurts, then stop.
 
 ---
 
@@ -72,16 +80,18 @@ If they want letters, that is next.
 3. For **A12**, name one assumption a Key Assumptions Check would test.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Named method. Pick ACH or a Key Assumptions Check.
+Named method.  
+ACH when two stories compete.  
+Key Assumptions Check when one claim is carrying the call.
 
 **Next:** **2.2.3** Admiralty Code
 
 **Speaker Notes:**  
-Do not open Admiralty unless that hour is scheduled.
+Admiralty is next. Stay off source letters unless that lesson is scheduled.

@@ -12,12 +12,12 @@
 | 2.9.3 | K | Silent Push | 2.9.3 a–b | A / A / B | A / B / B | B / C / C |
 | 2.9.3.1 | T | Enrich an indicator and pivot in Silent Push | 2.9.3.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.9.3**. Survey is **0.7**. Classroom card only. No lab.
+The teaching-unit ID is **2.9.3**. When to pick Silent Push is **0.7**. The hop sentence is **2.8.1**. Hunt conversion is **3.3.1**. Classroom card only. No live account. No lab.
 
 ## Concepts taught
 
-- Silent Push purpose
-- enrich and pivot on a card
+- Silent Push core capabilities and use cases (also: Silent Push purpose, PDNS / infra context)
+- enrich an indicator using Silent Push (also: pivot within Silent Push, enrich and pivot on a card)
 
 ## Artifacts
 

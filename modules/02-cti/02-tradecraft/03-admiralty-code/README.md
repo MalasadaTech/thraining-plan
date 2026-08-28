@@ -9,16 +9,18 @@
 
 | Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |-----------|------|------|-----------------|-----------|--------------|-----------|
-| 2.2.3 | K | Admiralty Code | 2.2.3 a–c | A / A / B | A / B / B | B / C / C |
-| 2.2.3.1 | T | Assign Admiralty ratings and evaluate reliability/credibility | 2.2.3.1 tasks 1–2 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.2.3 | K | Admiralty Code / source reliability and information credibility | 2.2.3 a–c | A / A / B | A / B / B | B / C / C |
+| 2.2.3.1 | T | Assign Admiralty Code ratings and evaluate source reliability and credibility | 2.2.3.1 tasks 1–2 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.2.3**. Estimative language is **2.2.1**. Attribution confidence is **2.1.7**. No lab.
+The teaching-unit ID is **2.2.3**. Estimative language is **2.2.1**. Attribution confidence is **2.1.7**. Cognitive bias is **2.2.4**. No lab.
 
 ## Concepts taught
 
 - source reliability scale
 - information credibility scale
 - combining Admiralty ratings
+- assign Admiralty Code ratings
+- explain an Admiralty Code rating
 
 ## Artifacts
 

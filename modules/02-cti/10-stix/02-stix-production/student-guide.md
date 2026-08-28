@@ -5,7 +5,7 @@
 - CTI: 2.10.2 B / C / C ; 2.10.2.1 3c / 4c / 4d ; 2.10.2.2 3c / 4c / 4d ; 2.10.2.3 3c / 4c / 4c  
 - Hunter: 2.10.2 B / C / C ; 2.10.2.1 2b / 3c / 4c ; 2.10.2.2 2b / 3c / 4c ; 2.10.2.3 2b / 3c / 4c  
 - SOC: 2.10.2 A / B / B ; 2.10.2.1 1a / 1a / 2b ; 2.10.2.2 1a / 1a / 2b ; 2.10.2.3 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Link syllabus objects with a real **relationship** type and explain the **A12** scenario those objects represent.
-2. Say what **create / validate** and **TAXII consume** look like — classroom bundle only; no server.
+1. Structure STIX objects for sharing and automation, and link them with real **relationship** types so the set retells a threat scenario.
+2. Say what a **valid** STIX 2.1 object looks like, and what **TAXII** sharing and consumption look like — classroom collection only; no server.
 
 **Mapped Proficiency Items:**
 - K: 2.10.2 – How STIX objects are used in intelligence production
@@ -26,30 +26,51 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts **connect** objects so a machine (and hunt) can reuse the same story. Object *names* are **2.10.1**. The narrative product is **2.11**. This hour is **links + a valid classroom object + consume**. Do not invent relationship types. Do not stand up a TAXII server.
+CTI analysts **package** threat activity so other people and other tools can reuse the same story. A hash in a slide is not reusable. You connect the objects you already named, you check they are valid STIX 2.1, and you share or pull that package so a TIP, a hunt, or another shop can ingest the graph without reading a PDF. That is the job in this lesson. **2.10.1** named the object types. This lesson is the production step. It is **not** the finished narrative product (**2.11**). It is **not** TIP search (**2.3.1**). Hunt *reads* STIX later (**3.4.3**). Classroom bundle only. Do not stand up a TAXII server.
 
-**Relationship (real types):** `indicates`, `based-on`, `targets`, `uses`, `related-to`, `sighting-of`.  
-Example: Indicator (hash) **indicates** Attack Pattern (T1059.001). Sighting **sighting-of** that Indicator on Identity **WS-JLEE**.
+**Structuring for sharing and automation.** STIX 2.1 objects travel together in a **bundle** — a wrapper that carries the objects as one package. The bundle is the **payload**. Machines can ingest it. A PDF you email is a story for a person. It is not a STIX bundle, and it is not TAXII.
 
-**Create / validate:** required fields present (type, id, spec_version `2.1`, created). Invalid = missing type or invented type.
+**Linking objects.** A **Relationship** is its own STIX object. It names how two objects connect. Use a real STIX 2.1 `relationship_type`. Do not invent one.
 
-**TAXII:** a **collection** you consume (pull a classroom bundle). You do not run the server.
+| `relationship_type` | What it says |
+|---------------------|--------------|
+| **indicates** | This Indicator points at that activity (Attack Pattern, Malware, and similar) |
+| **based-on** | This Indicator is based on that Observed Data |
+| **targets** | This actor, malware, or campaign targets that Identity |
+| **uses** | This actor, malware, or campaign uses that Attack Pattern or tool |
+| **related-to** | A non-specific link when no tighter type fits — do not use it to hide a guess |
 
-**What good looks like:** three objects + two real relationships that retell **A12**. Then: “I would pull collection X” — not “I stood up TAXII.”
+**Sighting** is not a `relationship_type`. It is its own STIX object. It says something was seen. It points at the seen object with `sighting_of_ref`. Optional `where_sighted_refs` names the **Identity** that saw it (a host or org). `sighting-of` is not a STIX 2.1 relationship type.
+
+**Create / validate.** A STIX 2.1 object needs `type`, `spec_version` (`2.1`), `id`, `created`, and `modified`. A Relationship also needs `relationship_type`, `source_ref`, and `target_ref`. An Indicator also needs a **pattern** (`pattern` and `pattern_type`). The bundle is only the wrapper; you validate the objects inside it.
+
+Invalid: missing `type`, an invented `type` or `relationship_type`, a Relationship with no `relationship_type`, or an unearned **Threat Actor** because a PDF said “PRD APT.”
+
+**TAXII.** **TAXII** is the **channel** — the protocol for putting STIX on the wire and taking it off. A **collection** is a named group of objects on a TAXII server. **Sharing** is publishing a valid bundle into a collection. **Consumption** is pulling objects from a collection. In this lesson you **consume**: pull the classroom collection this course names `harbor-cti`. You do not run the server.
+
+**What good looks like:** someone gives you the classroom incident **A12** — `wscript` ran Temp `invoice.vbs` on host **WS-JLEE**, then encoded PowerShell (Attack Pattern **T1059.001**). You produce a small graph, not a report.
+
+- Indicator (hash of `invoice.vbs`) **indicates** Attack Pattern T1059.001.
+- Sighting of that Indicator, `where_sighted_refs` Identity **WS-JLEE**.
+- That set retells A12: a hash indicates encoded PowerShell, and we saw it on WS-JLEE.
+- Validate: those objects have `type`, `spec_version` `2.1`, `id`, `created`, `modified`; the Relationship has `relationship_type` `indicates`; the Sighting has `sighting_of_ref`.
+- TAXII: “I would pull collection `harbor-cti`.” Not “I stood up TAXII.”
+
+Do not add a Threat Actor to make the graph look complete. Do not invent a relationship type. Do not tell the rest of the narrative product (**2.11**).
 
 ---
 
 ## 2. Knowledge Check
 
-1. You should stand up a TAXII server in this hour. True or false?
-2. Name two real relationship types.
-3. Write one relationship that ties the `invoice.vbs` hash to **WS-JLEE**.
+1. You should stand up a TAXII server in this lesson. True or false?
+2. Name two real STIX 2.1 relationship types.
+3. Write one STIX-aligned link that ties the `invoice.vbs` hash to **WS-JLEE**.
 
 ---
 
 ## 3. Summary
 
-Real relationship types. A classroom object must validate. TAXII is consume, not a server you build.
+A bundle packages STIX objects so machines can reuse the story. Real relationship types only; Sighting is its own object. A classroom object must validate. TAXII is the channel; you consume a collection. You do not run the server.
 
 **Next:** **2.11.1** Finished intelligence products.
 
@@ -57,7 +78,7 @@ Real relationship types. A classroom object must validate. TAXII is consume, not
 
 ## 4. Related modules
 
-- 2.10.1 – Core objects (previous)
-- 2.11.1 – Finished products
-- 2.3.1 – TIP
-- 3.4.3 – Hunt STIX input
+- 2.10.1 – Core STIX objects
+- 2.11.1 – Finished intelligence products
+- 2.3.1 – Internal TIP
+- 3.4.3 – STIX as hunt input

@@ -1,4 +1,4 @@
-# Module 2.7.2 – Diamond Model for CTI  
+# Module 2.7.2 – Diamond Model Application in CTI  
 ## Slide Deck Content
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
@@ -8,63 +8,71 @@
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 2.7.2 – Diamond Model for CTI  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Title:** Module 2.7.2 – Diamond Model Application in CTI  
+**Subtitle:** Four vertices on a report or activity set  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Four vertices. Weakest named. No vendor-name Adversary.
+This lesson is CTI application of Diamond. Fill the product from a report or activity set. Name the weakest vertex. Reject a vendor-name Adversary. Do not re-teach the shared Diamond lesson.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Fill what you **know**.
+CTI analysts put Diamond on a **report or activity set**.
 
-Name what you **do not**.  
-Reject “PRD APT” as Adversary.
+The product shows what you **know** and what you **do not**.
+
+Fill four vertices. Name the **weakest**.  
+Reject a vendor APT name as **Adversary**.
 
 **Speaker Notes:**  
-Floor was 0.6.2.
+This slide is the student intro. Hunt and detection reuse the card. The job is an honest intel product, not a group name from a PDF. Do not open ATT&CK IDs or Kill Chain stages.
 
 ---
 
-### Slide 3 – Four vertices
-**Title:** Adversary, Capability, Infrastructure, Victim
+### Slide 3 – Four vertices on the product
+**Title:** Four vertices on the product
 
-**Adversary** — cluster you can defend.  
+**Adversary** — who you can defend against, only with evidence.  
 **Capability** — what they used.  
-**Infrastructure** — where they hosted it.  
+**Infrastructure** — where they hosted it or talked through it.  
 **Victim** — who was hit.
 
+Fill each from the report or activity set in front of you.
+
 **Speaker Notes:**  
-Outline a.
+Name the four corners as the fills on a CTI product. Do not walk the shared-floor purpose lecture. The next slide is the A12 card.
 
 ---
 
-### Slide 4 – What good looks like
+### Slide 4 – A12 card
 **Title:** A12 card
 
-Capability — encoded PowerShell / `update.exe`.  
-Infrastructure — update domain / `203.0.113.88`.  
-Victim — **WS-JLEE** / `jlee`.  
-Adversary — unknown cluster. **Weakest.**
+**Capability** — encoded PowerShell / `update.exe`.  
+**Infrastructure** — update domain / `203.0.113.88`.  
+**Victim** — **WS-JLEE** / `jlee` / DYA.  
+**Adversary** — unknown cluster. **Weakest.**
+
+The weakest vertex **constrains** the product. Do not guess a group to finish the card.
 
 **Speaker Notes:**  
-Do not add the beacon POST.
+Walk the student table. Three vertices have internals. Adversary does not. Do not add the beacon POST. That row is not this activity set.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – A vendor name is not Adversary
+**Title:** A vendor name is not Adversary
 
-No T-IDs (**2.7.1**).  
-No Kill Chain stages (**2.7.3**).  
-No vendor-name fill.
+“PRD APT” on a PDF is a **vendor label**.
+
+It does **not** fill Adversary.
+
+Write unknown cluster. Name Adversary as weakest.
 
 **Speaker Notes:**  
-Kill Chain is next.
+This is the reject. A title that looks like a who is still not evidence. Actor profile and attribution types wait for later lessons.
 
 ---
 
@@ -76,16 +84,18 @@ Kill Chain is next.
 3. Fill Diamond for **A12** and name the weakest vertex.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Four fills. Weakest named. Label is not Adversary.
+Four vertices on the CTI product.  
+Weakest named — that gap drops a who-claim.  
+A vendor label is not Adversary.
 
 **Next:** **2.7.3** Kill Chain for CTI
 
 **Speaker Notes:**  
-Do not open Kill Chain unless that hour is scheduled.
+Kill Chain is next. Same kind of product, now in stages. Stay off Diamond when you get there.

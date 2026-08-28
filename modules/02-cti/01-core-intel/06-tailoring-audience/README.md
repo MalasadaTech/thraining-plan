@@ -12,7 +12,7 @@
 | 2.1.6 | K | Tailoring output to the audience | 2.1.6 a–b | A / A / B | A / B / B | B / C / C |
 | 2.1.6.1 | T | Adjust an intelligence product for a specified audience | 2.1.6.1 task 1 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.1.6**. Actionable is **2.1.5**. Dissemination channels are **2.11.2**. Finished actor profile is **2.11.1.2**. No lab.
+The teaching-unit ID is **2.1.6**. Actionable is **2.1.5**. Attribution is **2.1.7**. Dissemination channels are **2.11.2**. Finished actor profile is **2.11.1.2**. SOC ticket types are **1.5**. No lab.
 
 ## Concepts taught
 

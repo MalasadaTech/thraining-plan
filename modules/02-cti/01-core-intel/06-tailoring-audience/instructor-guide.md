@@ -13,22 +13,28 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Same facts, different content / format / detail for a named consumer.
+Same facts, different content, format, and detail for a named reader.
 
 **Context (plain language):**
 
-- What this hour is for: CTI analysts change how they say it so the reader can use it.
-- How it hooks to the hour before: 2.1.5 was whether the product can be acted on.
-- How it hooks to the hour after: 2.1.7 is attribution. Not a rewrite.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b. Leadership one-liner has no hash.
-- What we are *not* doing this hour: Change the judgment. Actor profile. SOC ticket type. Channel list. No lab.
+- What this lesson is for: CTI analysts change how they say the same facts so the person who will act can use them. Leadership gets a short so-what. IR and SOC get host, file, and domain. The assessment does not change.
+- How it hooks to the lesson before: 2.1.5 asked whether the product can be acted on. This lesson is who is reading.
+- How it hooks to the lesson after: 2.1.7 is attribution. It is not a rewrite.
+- Why we are doing it this way: name the reader first, then change content, format, and detail. Keep the facts. Leadership does not get the hash.
+- What we are *not* doing in this lesson: changing the judgment. Actor profile. SOC ticket type. Channel list. No lab.
 - Extra step: none.
 
-Do not invent a DYA style guide.
+Use the same names as the student guide: **audience**, **consumer**, **content**, **format**, **detail**, **leadership**, and **IR / SOC**. The given uses course-fiction names (**A12**, **WS-JLEE**, `jlee`, Temp `invoice.vbs`, the update domain). Do not turn it into the rest of the plot. Do not invent a DYA style guide.
 
 **Key Teaching Points:**
-- Facts stay. Detail changes.
-- Leadership: no hash.
+- Name who is reading and what they can do before you write.
+- Facts and judgment stay. Content, format, and detail change.
+- Leadership: one-liner, no hash. IR / SOC: add Temp `invoice.vbs` and the update domain.
+
+**Common Student Challenges:**
+- Change the judgment so leadership likes it. Why: they think tailoring means a friendlier answer. Example: dropping “IR has the host” and writing “all clear.”
+- Put the file hash in the leadership line. Why: they copy the IR product and only shorten it a little. Example: pasting Temp `invoice.vbs` and a hash into the leadership sentence.
+- Pick a channel instead of writing the two products. Why: email versus ticket is later. Example: arguing SMS versus ticket and never writing the leadership line.
 
 **Required Materials:**
 - Student Guide
@@ -40,19 +46,23 @@ Do not invent a DYA style guide.
 
 Same as the student guide.
 
-**Mapped Items:** K 2.1.6 ; T 2.1.6.1
+**Mapped Proficiency Items:**
+- K: 2.1.6 – Tailoring output to the audience
+- T: 2.1.6.1 – Adjust an intelligence product for a specified audience
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Same facts |
-| Key Concepts            | 12 min    | Leadership vs IR |
+| Introduction (required) | 3 min     | Same facts, two readers |
+| Key Concepts            | 12 min    | Audience first; leadership vs IR |
 | Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
+| Summary                 | 2 min     | |
+| **Total**               | **~21 min** | |
 
 ---
 
@@ -60,27 +70,30 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write content / format / detail. Walk leadership one-liner vs IR detail on **A12**.
-
-If they drop the judgment: “Same assess.”  
-If they add the hash for leadership: “Bible. No hash.”  
-If they pick email vs ticket: “2.11.2.”
+**Talking Points:**
+- Open with the job: same facts, two readers, because the person who will act has to be able to use the product.
+- Name the audience first: who is reading, and what they can do. Leadership cannot work a hash. IR needs path and domain.
+- Walk content, format, and detail. Stop. Do not invent a style guide.
+- Walk the given: leadership one-liner, no hash; IR gets Temp `invoice.vbs` and the update domain. Same assessment.
+- If they change the judgment: the facts stay. Tailoring is how you say it.
+- If they add the hash for leadership: leadership does not need the hash.
+- If they pick a channel: that is 2.11.2. This lesson is the two products.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Tailoring changes the judgment so leadership likes it. True or false?**  
+1. **Tailoring means you change the judgment so leadership likes it. True or false?**  
    **Answer:** False. Facts and judgment stay.  
-   **Explanation:** Stay-in.
+   **Explanation:** Tailoring is content, format, and detail for the reader. Softening the assessment is a different product, not this task.
 
-2. **Three things you adjust?**  
-   **Answer:** Content, format, detail.  
-   **Explanation:** Outline b.
+2. **What three things do you adjust for a named audience?**  
+   **Answer:** Content, format, and detail.  
+   **Explanation:** Which facts this person needs, how long the product is, and how much path or hash you keep.
 
-3. **A12 for leadership vs IR?**  
+3. **Same A12 facts. Write the leadership line (no hash) and what you add for IR.**  
    **Answer:** Leadership: host / user / encoded PowerShell; IR has the host. No hash. IR: add Temp `invoice.vbs` and the update domain.  
-   **Explanation:** Task 1.
+   **Explanation:** Same case, two readers. More detail for IR is not a second plot.
 
 ---
 

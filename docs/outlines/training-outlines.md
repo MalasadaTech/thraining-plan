@@ -641,7 +641,7 @@ b. Criteria for determining which TTPs are applicable to the environment
 **2.8.3 [K] IOC handling and enrichment concepts**  
 a. What an IOC is (an observable you record, enrich, or expire) versus a TTP  
 b. Handling rules: keep cited current IOCs; reject stale, uncited, or shared-infrastructure noise  
-c. Enrichment uses internal and external tools already taught — this hour selects and records the enrichment; it does not re-teach the tool  
+c. Enrichment uses internal and external tools already taught — this lesson selects and records the enrichment; it does not re-teach the tool  
 d. Link analysis and campaign tracking: connect handled IOCs into one activity set or keep them apart  
 
 **2.8.3.1 [T] Tasks**  

@@ -13,7 +13,7 @@
 | 2.4.1.1 | T | Use file similarity hashes to identify related samples | 2.4.1.1 tasks 1–2 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 | 2.4.1.2 | T | Extract and interpret certificate / code-signing information | 2.4.1.1 task 3 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.4.1**. MD5/SHA is **1.2.7**. VT Relations is **2.9**. Classroom thresholds only. No lab.
+The teaching-unit ID is **2.4.1**. MD5/SHA identity hashes are **1.2.7**. VT Relations is **2.9**. TLS certificates are **1.2.4**. Attribution is **2.1.7**. Classroom thresholds only. No lab.
 
 ## Concepts taught
 

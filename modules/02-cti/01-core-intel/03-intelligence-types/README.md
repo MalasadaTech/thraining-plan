@@ -12,7 +12,7 @@
 | 2.1.3 | K | Intelligence types | 2.1.3 a–d | A / A / A | A / B / B | B / C / C |
 | 2.1.3.1 | T | Classify an intelligence product or requirement by type | 2.1.3.1 task 1 | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.1.3**. Lifecycle is **2.1.2**. Requirements are **2.1.4**. Audience rewrite is **2.1.6**. No lab.
+The teaching-unit ID is **2.1.3**. Lifecycle is **2.1.2**. Requirements are **2.1.4**. Audience rewrite is **2.1.6**. Actor profile is **2.11**. Not PIR format. No lab.
 
 ## Concepts taught
 

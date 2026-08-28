@@ -9,82 +9,88 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.9.2 – AnyRun  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Search and review a public detonation  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Search and review. Card only.
+2.9.1 was VirusTotal tabs on a classroom card. This lesson is AnyRun search and review. It is not when to pick the tool, and it is not a live vendor login.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Search a **public detonation**.
+CTI analysts search **public detonations** for a seed they already have.
 
-Review the card. Extract who / what.  
-Or **not on card**.
+They write **who** can act and **what** they do from a run that already happened.
+
+This lesson is search and review. Classroom card only. No live account.
 
 **Speaker Notes:**  
-0.7 was when to pick it.
+This slide is the student intro. When to pick AnyRun is 0.7. They search a seed they already have and extract from a static card. Do not open a vendor tab.
 
 ---
 
-### Slide 3 – Search and review
-**Title:** Tag, IP, domain, hash
+### Slide 3 – Search by tag, IP, domain, or hash
+**Title:** Search by tag, IP, domain, or hash
 
-Search the seed you have.  
-Review process, network, dropped files **on the card**.
+Search the seed you already have.
+
+A **tag** is a label on a public run — not a new family to go find.
 
 **Speaker Notes:**  
-Outline a–b.
+Name the four search keys and stop. They search a seed they already have. They do not fish for a new family. A VirusTotal Relations hop or a Silent Push history query is another lesson.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Extract or miss
+### Slide 4 – Review the card
+**Title:** Review the card
 
-Search `203.0.113.88` or the `update.exe` hash.  
-Extract a URI or dropped name if present.
+Read the process tree, the network, and the dropped files.
+
+Only what is **on the card**.
+
+**Speaker Notes:**  
+Review is reading the submission, not detonating a sample. If a surface is empty, that is a gap, not a fact to invent.
+
+---
+
+### Slide 5 – Extract or say missing
+**Title:** Extract or say missing
+
+Search `203.0.113.88` or the `update.exe` hash.
+
+Extract a URI or dropped name if the card shows it.  
+Or write **not on card**.
 
 A “malicious” tag is information.  
-Do not invent a beacon POST.
+Do not invent a check-in POST.
 
 **Speaker Notes:**  
-Task 2.
-
----
-
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No “when to pick” (**0.7**).  
-No live account.  
-No extra plot.
-
-**Speaker Notes:**  
-Silent Push next.
+Walk this given before the knowledge check. Who plus what is the product. A verdict count is not. Do not tell the companion-story plot.
 
 ---
 
 ### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. This hour is “when to pick AnyRun.” True or false?  
-2. What four things can you search by?  
-3. Card for the `update.exe` hash — one legal extract, one thing you must **not** invent.
+1. A count of “malicious” tags on an AnyRun card is actionable intelligence. True or false?  
+2. What four things can you search AnyRun submissions by?  
+3. Classroom card for the `update.exe` hash — one legal extract if present, one thing you must **not** invent.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Search the seed. Review the card. Extract or say missing.
+Search the seed you already have.  
+Review the card. Extract who and what, or say it is missing.  
+A verdict tag is not intelligence.
 
 **Next:** **2.9.3** Silent Push
 
 **Speaker Notes:**  
-Do not open Silent Push unless scheduled.
+Silent Push is domain and IP history, not a sandbox run. Do not open it unless that lesson is scheduled.

@@ -14,7 +14,7 @@
 By the end of this module, you will be able to:
 
 1. Name common biases that warp a product, and what they do to it.
-2. Spot a bias in a judgment and name a **mitigation** you already have (**2.2.2**).
+2. Spot a bias in a judgment and name a **mitigation** — a named method, not a pep talk.
 
 **Mapped Proficiency Items:**
 - K: 2.2.4 – Cognitive biases and mitigation
@@ -24,34 +24,43 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts name the **bias** so they can apply a method, not a pep talk. Techniques are **2.2.2**. This hour is the **distortion**. You do **not** invent a new SAT. You do **not** diagnose the author.
+CTI analysts write **judgments** other people act on. A first label, a favorite story, or the last incident can lock that product before the evidence has a fair look. The job in this lesson is to **name the bias** in the judgment and apply a **named method** so the product can still change. This is not Admiralty letters (**2.2.3**). It is not how to navigate a threat intelligence platform (**2.3.1**). You do **not** invent a third official method. You do **not** diagnose the author.
 
 | Bias | What it looks like | What it does to the product |
 |------|--------------------|-----------------------------|
 | **Confirmation** | You keep the evidence that fits the first story | Alternatives never get a fair look |
 | **Anchoring** | The first vendor name or first number sticks | Later internals cannot move the call |
-| **Availability** | The last incident you saw becomes this one | **A12** gets treated as “the last campaign” with no link |
+| **Availability** | The last incident you remember becomes this one | A new event is treated as **A12** (this course’s classroom incident) with no shared host, malware, or infrastructure |
 
-**Mitigation** is a method you already have: **Key Assumptions Check** or **ACH** (**2.2.2**). “Be more objective” is not a mitigation.
+This lesson names **those three**. A longer psychology list is not required.
+
+A **mitigation** is a method you run on the product. “Be more objective” is not a mitigation. Two methods this course already named (**2.2.2**) are enough here:
+
+| Method | Use when | What you do |
+|--------|----------|-------------|
+| **Key Assumptions Check** | One claim is carrying the call | List the assumption; say what would break it |
+| **Analysis of Competing Hypotheses (ACH)** | Two or more explanations are live | List the hypotheses; see which evidence **hurts** each one |
 
 **What good looks like:**
 
-- **Spot:** “Vendor PDF says PRD APT, so high nation-state.” **Anchoring** (and confirmation). First label stuck.
-- **Mitigate:** Key Assumptions Check — “vendor name = who they are.” That assumption breaks. You do not need a new technique.
+- **Spot:** “Vendor PDF says PRD APT, so high nation-state.” **Anchoring** (and confirmation). **PRD APT** is a vendor label, not proof of who they are. The first label stuck.
+- **Mitigate:** Key Assumptions Check — assumption: “vendor name = who they are.” That assumption breaks. You do not need a new method.
+
+Do not tell the rest of the incident. Do not re-rate the source (**2.2.3**). Do not write an actor profile (**2.11**).
 
 ---
 
 ## 2. Knowledge Check
 
 1. “Be more objective” is a mitigation technique. True or false?
-2. Name two biases from this hour.
+2. Name two biases from this lesson.
 3. “Vendor PDF says PRD APT, so high nation-state.” Bias, and one mitigation.
 
 ---
 
 ## 3. Summary
 
-Name the bias. Apply a method you already have. Do not pep-talk it away.
+Name the bias in the product. Apply a method you can run. Do not pep-talk it away.
 
 **Next:** **2.3.1** Internal threat intelligence platform.
 

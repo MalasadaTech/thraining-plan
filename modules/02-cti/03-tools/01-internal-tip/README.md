@@ -16,9 +16,11 @@ The teaching-unit ID is **2.3.1**. External survey is **0.7**. Platform depth is
 
 ## Concepts taught
 
-- internal TIP purpose
-- search and retrieve
-- using the TIP to enrich or analyze
+- purpose and core functions of the internal TIP
+- navigating and searching the internal TIP
+- how the TIP supports enrichment, analysis, and production
+- search and retrieve from the internal TIP
+- use the TIP for enrichment or analysis
 
 ## Artifacts
 

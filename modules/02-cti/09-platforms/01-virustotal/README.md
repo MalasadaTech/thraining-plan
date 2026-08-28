@@ -12,12 +12,12 @@
 | 2.9.1 | K | VirusTotal Relations and Behavior | 2.9.1 a–b | A / B / B | B / C / C | B / C / C |
 | 2.9.1.1 | T | Use Relations and Behavior to pivot and extract events | 2.9.1.1 tasks 1–2 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.9.1**. Survey is **0.7**. Hop sentence is **2.8.1**. Classroom card only. No lab.
+The teaching-unit ID is **2.9.1**. Survey is **0.7**. Hop sentence is **2.8.1**. File-similarity hashes are **2.4**. Hunt SIEM convert is **3.3.1**. Classroom result card only. No live account. No lab.
 
 ## Concepts taught
 
-- VirusTotal Relations tab
-- VirusTotal Behavior tab
+- VirusTotal Relations tab (also: infrastructure pivoting, contacted domain, contacted IP, dropped files)
+- VirusTotal Behavior tab (also: file, network, registry, and process events)
 
 ## Artifacts
 

@@ -1,4 +1,4 @@
-# Collection Sources and Methods
+# Collection sources and methods
 
 **Path:** `modules/02-cti/01-core-intel/08-collection-sources`  
 **Primary role:** CTI Analyst  
@@ -13,7 +13,7 @@
 | 2.1.8.1 | T | Identify appropriate collection source classes | 2.1.8.1 task 1 | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
 | 2.1.8.2 | T | Plan collection against an intelligence requirement | 2.1.8.1 task 2 | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.1.8**. Lifecycle collection *stage* is **2.1.2**. Local *request* is **2.12.2.1**. Tool depth is **0.7** / **2.9**. No lab.
+The teaching-unit ID is **2.1.8**. Lifecycle collection *stage* is **2.1.2**. Local *request* is **2.12.2.1**. Tool depth is **0.7** / **2.3** / **2.9**. No lab. No invented collection plan or site list.
 
 ## Concepts taught
 

@@ -3,72 +3,91 @@
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.5.1 – RDAP and WHOIS  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Registration lookup for a domain or IP  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Registration. Redacted is a fact. Not SOA.
+This lesson is registration lookup. It does not teach SOA, PDNS, or how to name an actor.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Pull **registration**.
+CTI analysts look up **registration** on a domain or an IP.
 
-Registrar, nameservers, dates.  
-Redacted registrant is not “no intel.”
+Before you enrich an indicator or call it empty, read that lookup.
+
+This lesson is that lookup.
 
 **Speaker Notes:**  
-Not a country. Not Silent Push.
+This slide is the student intro. Registration is who holds the name or the block, not who answers the zone. File hashes were last lesson. SOA waits for the next one.
 
 ---
 
-### Slide 3 – WHOIS vs RDAP
-**Title:** Same job, different shape
+### Slide 3 – Same job: registration
+**Title:** WHOIS and RDAP
 
-**WHOIS** — text.  
-**RDAP** — structured JSON. Same fields, easier to parse.
+Both look up **registration** for a domain or an IP.
 
-Useful: registrar, NS, created / updated, registrant *if present*.
+Who registered the name. Who holds the block.
+
+Not DNS SOA. Not PDNS.
 
 **Speaker Notes:**  
-Outline a–c.
+Purpose first. They are two protocols for one job. If someone starts reading an SOA, that is 2.6.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Query the update domain
+### Slide 4 – How they differ
+**Title:** RDAP first, WHOIS fallback
 
-Extract `ns1.cdn-test.net` / `ns2.cdn-test.net`.  
-Write **registrant redacted** if that is the card.
+**RDAP** — JSON over **HTTPS**. Easier to parse.
 
-Distinctive NS is enrichment. Not nation-state.
+**WHOIS** — free text on **port 43**. Layout changes by server.
+
+Query RDAP first. Use WHOIS when RDAP has no record.
 
 **Speaker Notes:**  
-Sibling name can be named. SOA is 2.6.
+Same job, different protocol. Do not say RDAP is “WHOIS in JSON.” One difference is enough for the knowledge check later.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Fields you extract
+**Title:** Registrar, NS, dates, block holder
 
-No SOA parse (**2.6**).  
-No Silent Push PDNS (**0.7**).  
-No nation-state from redaction (**2.1.7**).
+**Domain** — registrar, nameservers, created / updated, registrant *if present*.
+
+**IP** — CIDR and org. Who holds the block, not the actor.
+
+**Redacted registrant** is a fact. Not “no intel.” Not a country.
 
 **Speaker Notes:**  
-No live-account lab.
+Walk the field table. Distinctive NS is enrichment, not nation-state. Cloud org is the hosting holder, not the campaign.
 
 ---
 
-### Slide 6 – Knowledge Check
+### Slide 6 – Query it. Write what is there.
+**Title:** Query the name or the IP
+
+Update domain: extract `ns1.cdn-test.net` / `ns2.cdn-test.net`, registrar, created date.
+
+Write **registrant redacted** if that is the lookup. Distinctive NS is not nation-state.
+
+`203.0.113.88`: extract `203.0.113.0/24`, org **Example Cloud**. Not “theirs.”
+
+**Speaker Notes:**  
+Show both givens before the knowledge check. Sibling `login-prd.net` can be named from the same NS. Do not read SOA. Do not open Silent Push. Do not tell the intro plot.
+
+---
+
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
 1. A redacted registrant means you have no intelligence. True or false?  
@@ -76,16 +95,18 @@ No live-account lab.
 3. You query the update domain and see `ns1.cdn-test.net`. What did you extract, and what must you **not** claim?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 7 – Summary
+### Slide 8 – Summary
 **Title:** Summary
 
-Registration. Redacted is a fact. NS is enrichment, not attribution.
+WHOIS and RDAP look up registration. Query RDAP first.  
+Redacted is a fact. NS is enrichment, not attribution.  
+An IP org is who holds the block, not the actor.
 
 **Next:** **2.6.1** Advanced DNS
 
 **Speaker Notes:**  
-Do not open SOA unless that hour is scheduled.
+2.6.1 is SOA on the same name. Stay off this registration lookup when you get there.

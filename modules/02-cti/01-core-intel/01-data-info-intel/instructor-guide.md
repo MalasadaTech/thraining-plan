@@ -1,4 +1,4 @@
-# Instructor Guide – Module 2.1.1 – Difference between Data, Information, and Intelligence
+# Instructor Guide – Module 2.1.1 – Difference between data, information, and intelligence
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
@@ -13,21 +13,21 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Sort a product as data, information, or intelligence. Do not brief a raw field as intel.
+Name an item as data, information, or intelligence so the next desk gets a judged answer, not a raw field with a new title.
 
 **Context (plain language):**
 
-- What this hour is for: CTI analysts label the layer so the next desk gets a judged answer, not a hash with a new title.
-- How it hooks to the hour before: 1.5 closed SOC. The RFI asked intel to work the update domain / file.
-- How it hooks to the hour after: 2.1.2 is the lifecycle. This hour is only the three words and the sort.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b plus the categorize task. CTI 3 is already at B / 3c. SOC is A / 1a.
-- What we are *not* doing this hour: Lifecycle stages. PIR format. Finished product. Attribution. VT Relations. Hunt. No lab.
+- What this lesson is for: A CTI analyst is asked to brief or hand off what landed on the desk. Before treating it as something someone should act on, they have to know what layer they have. This lesson names those layers.
+- How it hooks to the lesson before: SOC reporting (`1.5`) closed the SOC track. An RFI is the door into CTI. This is the start of the CTI analyst track.
+- How it hooks to the lesson after: 2.1.2 is the intelligence lifecycle — which job you are in. This lesson is only the three words and the sort.
+- Why we are doing it this way: name data, information, and intelligence before anyone walks a lifecycle, writes a requirement, or drafts a finished product.
+- What we are *not* doing in this lesson: lifecycle stages, PIR format, finished product, attribution, platform depth, hunt. No lab.
 - Extra step: none.
 
-Do not invent a second plot. Do not dump the Run key. **A12** and the update domain are enough. Do not tell the PRD story.
+Use the same names as the student guide: **data**, **information**, and **intelligence**. The givens use course-fiction names (`203.0.113.88`, Temp `invoice.vbs`, **WS-JLEE** / `jlee`, incident **A12**). Do not turn them into the intro plot. Do not dump the Run key.
 
 **Key Teaching Points:**
-- Data = recorded fact. Information = story. Intelligence = judged answer to a question.
+- Data is a recorded fact. Information is a story. Intelligence is a judged answer to a question.
 - The path is add context, then add judgment. Not a rename.
 - If they are unsure, it is not intelligence yet.
 
@@ -41,16 +41,20 @@ Do not invent a second plot. Do not dump the Run key. **A12** and the update dom
 
 Same as the student guide.
 
-**Mapped Items:** K 2.1.1 ; T 2.1.1.1
+**Mapped Proficiency Items:**
+- K: 2.1.1 – Difference between data, information, and intelligence
+- T: 2.1.1.1 – Correctly categorize examples as data, information, or intelligence
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
 | Introduction (required) | 3 min     | Sort the layer |
-| Key Concepts            | 12 min    | Three terms; A12 path |
+| Key Concepts            | 12 min    | Three terms; three givens |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 1 min     | |
 | **Total**               | **~20 min** | |
@@ -61,13 +65,15 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write the three words. Walk `203.0.113.88` as **data**, the A-record / `invoice.vbs` story as **information**, the A12 assessment as **intelligence**.
-
-If they call a VT count intelligence: “Context. Still information.”  
-If they want PIR format: “2.1.4.”  
-If they start the lifecycle: “2.1.2.”  
-If they write a finished paper: “2.11.”  
-If they invent a lookalike-Microsoft row: “Stay on A12.”
+**Talking Points:**
+- Open with the job: something landed on the desk, and you have to know the layer before you brief it as a decision.
+- Write the three terms. Stop there. Information describes. Intelligence judges.
+- Walk the three “given” lines from the student guide. The product is the layer, not a story of the incident.
+- If they call a VirusTotal detection count intelligence: that is context. It is still information.
+- If they want PIR format: that is 2.1.4. Today the question can be informal.
+- If they start the lifecycle: that is 2.1.2.
+- If they write a finished paper: that is 2.11.
+- If they start the DYA / PRD plot: that fiction is from the intro. It is not this lesson.
 
 ---
 
@@ -75,15 +81,15 @@ If they invent a lookalike-Microsoft row: “Stay on A12.”
 
 1. **A hash with no other text is intelligence. True or false?**  
    **Answer:** False. That is data.  
-   **Explanation:** Outline a / task 1.
+   **Explanation:** A hash with no other text is a recorded fact. It has no story and no judgment.
 
 2. **What must you add before information becomes intelligence?**  
    **Answer:** A judgment against a question, and a so-what (what someone should do).  
-   **Explanation:** Outline b.
+   **Explanation:** Context makes a story. Intelligence is that story judged against a question, with an action someone can take.
 
-3. **“We assess the update domain is the payload host for A12; treat it as such.” Layer?**  
-   **Answer:** **Intelligence.** It answers the RFI question and names a so-what.  
-   **Explanation:** Task 1.
+3. **“We assess that domain is the payload host for incident A12; treat it as such.” Data, information, or intelligence?**  
+   **Answer:** Intelligence.  
+   **Explanation:** It answers a question and names a so-what. It is not a raw field and not only a who / what / where story.
 
 ---
 

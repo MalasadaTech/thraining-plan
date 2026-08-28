@@ -5,7 +5,7 @@
 - CTI: 2.7.1 B / C / C ; 2.7.1.1 3c / 4c / 4c  
 - Hunter: 2.7.1 B / C / C ; 2.7.1.1 3c / 4c / 4c  
 - SOC: 2.7.1 A / B / B ; 2.7.1.1 2b / 3c / 4c  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Use ATT&CK as a **CTI** label on a report or activity set — tactic, technique or sub-technique, evidence.
-2. Reject the neighbor ID.
+1. Put ATT&CK on a **report or activity set** for a CTI product: tactic, technique or sub-technique, and the evidence that supports it.
+2. Reject a **neighbor** ID that looks close but is not what this product shows.
 
 **Mapped Proficiency Items:**
 - K: 2.7.1 – MITRE ATT&CK for CTI analysis and reporting
@@ -24,28 +24,41 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts put ATT&CK on a **product** so hunt and DE can reuse the same ID. The floor map is **0.6.1**. This hour is **report / activity-set** mapping. You do **not** redo hunt planning (**3.5**). You do **not** assign DTF P-IDs (**2.7.4**). You do **not** write T1059 as a SOC *category* (**1.4.4**).
+CTI analysts put ATT&CK IDs on a **product** so hunt and detection can reuse the same names. You extract named behaviors — tactics, techniques, and procedures (**TTPs**) — from a **report or activity set**, and you write only the IDs this product can support. That is the job in this lesson: a mapped line other desks can trust.
 
-Same rule as 0.6: tactic = why, technique = how, cite one field, reject the neighbor. An ID with no evidence is a slogan.
+An **activity set** is more than one related event you are writing up together, such as a process launch and a later download. A **report** is the same idea on paper: vendor write-up, internal note, or your own product. You do not map a SOC queue category. You do not plan hunt coverage.
 
-**What good looks like:**
+| Piece | What it is |
+|-------|------------|
+| **Tactic** | *Why* — the goal at that step (Execution, Command and Control, and so on) |
+| **Technique or sub-technique** | *How* — the named way (`T1059` Command and Scripting Interpreter; `T1059.001` PowerShell) |
+| **Evidence** | The field or sentence in **this** product that shows it (command line, parent, URI) |
+| **Neighbor** | A nearby ID that could fit if you stretched. Reject it, and say why this product does not show it |
 
-- **Encoded PowerShell from `wscript` (A12):** Execution / **T1059.001** PowerShell. Cite `-enc` + parent. **Not** Command and Control — you have no beacon in this row.
-- **GET `/update.exe` :8080:** Command and Control or Ingress Tool Transfer (**T1105**) only if the product is the *download*. **Not** T1059 — that ID is the process, not the GET.
+A finished CTI line is **tactic + technique or sub-technique + evidence**. If two IDs could fit, pick the primary for this product and reject the neighbor. An ID with no cited evidence is a slogan, not a map. Copying a vendor’s ID list without citing what *this* product shows is not a map either.
+
+This lesson is **not** hunt coverage planning (**3.5**). It is **not** DTF pivot IDs (**2.7.4**). It is **not** a SOC alert category (**1.4.4**). It is **not** which TTPs apply to this shop (**2.8.2**). Diamond vertices are next (**2.7.2**).
+
+**What good looks like:** someone gives you a report line or an activity set. You write the tactic, the ID, and the cite. You name the neighbor you are not using.
+
+- **Given:** `wscript` launched encoded PowerShell (`-enc`). **Write:** Execution / **T1059.001** PowerShell. Cite `-enc` and the parent `wscript`. **Reject** Command and Control — this product does not show a beacon.
+- **Given:** HTTP GET `/update.exe` on port 8080, and the product is the tool download. **Write:** Command and Control / **T1105** Ingress Tool Transfer. Cite the URI. **Reject** **T1059** — that ID is a command interpreter, not an HTTP GET.
+
+Do not collapse the process and the download into one ID. Do not guess the next stage.
 
 ---
 
 ## 2. Knowledge Check
 
-1. This hour is hunt coverage planning. True or false?
+1. An ATT&CK ID with no cited evidence is a finished CTI map. True or false?
 2. What three things must a CTI ATT&CK line have?
-3. `wscript` → `-enc` PowerShell. Tactic, ID, and why not C2?
+3. `wscript` launched encoded PowerShell (`-enc`). Name the tactic, the ID, and why it is not Command and Control.
 
 ---
 
 ## 3. Summary
 
-Map the product. Cite the field. Reject the neighbor. Not hunt planning. Not a SOC category.
+Extract TTPs from a report or activity set onto ATT&CK IDs. A CTI line is tactic, technique or sub-technique, and evidence. Reject the neighbor this product does not show. Hunt planning, DTF, and SOC categories are other lessons.
 
 **Next:** **2.7.2** Diamond Model for CTI.
 
@@ -54,7 +67,8 @@ Map the product. Cite the field. Reject the neighbor. Not hunt planning. Not a S
 ## 4. Related modules
 
 - 2.6.1 – Advanced DNS (previous)
-- 2.7.2 – Diamond
-- 0.6.1 – ATT&CK floor
-- 3.5 – Hunt planning
+- 2.7.2 – Diamond Model for CTI
+- 0.6.1 – ATT&CK floor (one activity, not this product)
+- 3.5 – Hunt planning with ATT&CK
+- 2.8.2 – Which extracted TTPs apply here
 - 1.4.4 – Alert categories

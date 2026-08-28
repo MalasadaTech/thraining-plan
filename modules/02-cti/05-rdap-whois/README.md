@@ -19,6 +19,8 @@ The teaching-unit ID is **2.5.1**. SOA is **2.6**. Silent Push is **0.7**. Attri
 - purpose of WHOIS and RDAP
 - WHOIS vs RDAP
 - registration fields for enrichment
+- redacted registrant is a fact
+- IP CIDR / org (who holds the block)
 
 ## Artifacts
 

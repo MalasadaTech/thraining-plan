@@ -9,57 +9,69 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.1.5 – Ensuring Intelligence Is Actionable  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Can someone act on this product?  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-The product, not the question. Can someone act?
+This lesson scores the product, not the question. 2.1.4 wrote the requirement. Do not rewrite for an audience today, and do not run the hunt-useful test.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Does this product let someone **act** on the requirement?
+A write-up is not done when it is interesting.
 
-Who. What they do. Still in time.
+Someone has to **act**: a named who, a specific what, still in time, on the named question.
+
+This lesson scores the **product**.
 
 **Speaker Notes:**  
-2.1.4 was the question. This hour is the product.
+This slide is the student intro. CTI analysts check whether the write-up lets someone act. Do not teach audience rewrite. Do not teach hunt-useful. Those are later lessons.
 
 ---
 
-### Slide 3 – Pass vs fail
-**Title:** Actionable or not
+### Slide 3 – Actionable when
+**Title:** What makes intelligence actionable
 
-**Pass** — answers the named question; names a who and a what.  
-**Fail** — interesting only; “be aware”; no role; window closed; slogan, no caveat.
+It **answers the named requirement**.  
+A **who** can act.  
+A **what** they do is specific.  
+It is still **in time** for that decision.  
+You state **how sure** you are.
 
 **Speaker Notes:**  
-Outline a–b. Not a hunt-useful test.
+These are the characteristics. Teach the table. Do not brand them as a shop five-box form, and do not invent a DYA checklist.
 
 ---
 
-### Slide 4 – What good looks like
+### Slide 4 – Why it fails
+**Title:** Why intelligence fails to be actionable
+
+It is interesting, but not the question.  
+No role is named.  
+“Be aware” or “monitor” with no next step.  
+The window already closed.  
+A slogan with no caveat.
+
+A hash dump with no judgment and no next step is still **data**.
+
+**Speaker Notes:**  
+“Interesting” is not a pass. If they offer hunt-useful as a fail reason, that is a different test in 3.4.1.
+
+---
+
+### Slide 5 – Two products
 **Title:** Two products
 
-**Actionable** — update domain is the **A12** payload host; IR has **WS-JLEE**; treat it as such.  
-**Not** — “New activity in the news. Be aware.”
+**Actionable:** “We assess the update domain is the payload host for **A12**. IR has **WS-JLEE**. Treat the domain as the payload host.”
+
+**Not:** “New activity in the news. Be aware.”
+
+Say whether it is actionable, and why. Do not rewrite it.
 
 **Speaker Notes:**  
-A hash dump is still data.
-
----
-
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No rewrite for the CEO (**2.1.6**).  
-No hunt-useful test (**3.4.1**).  
-No actor profile (**2.11**).
-
-**Speaker Notes:**  
-Do not invent a shop form.
+Show these two givens before the knowledge check. The first answers the named question and names IR plus a next step. The second answers nothing. Stay on A12. Do not tell the intro plot.
 
 ---
 
@@ -71,16 +83,18 @@ Do not invent a shop form.
 3. “We assess the update domain is the **A12** payload host; IR has the host.” Actionable? Why?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Answers the question + who + what. Slogans fail.
+Actionable intelligence answers the named question, names a who, and names a specific what.  
+Slogans and “be aware” fail.  
+This is not the hunt-useful test.
 
 **Next:** **2.1.6** Tailoring output to the audience
 
 **Speaker Notes:**  
-Do not open audience rewrite unless that hour is scheduled.
+2.1.6 is how you say the same facts to a given audience. Do not open that rewrite unless that lesson is scheduled.

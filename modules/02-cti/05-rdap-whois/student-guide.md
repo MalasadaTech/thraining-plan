@@ -5,7 +5,7 @@
 - CTI: 2.5.1 B / C / C ; 2.5.1.1 3c / 4c / 4c  
 - Hunter: 2.5.1 A / B / B ; 2.5.1.1 2b / 3c / 4c  
 - SOC: 2.5.1 A / A / B ; 2.5.1.1 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -24,20 +24,29 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts pull **registration** so they can see registrar, nameservers, and created dates. You do **not** interpret SOA (**2.6**). You do **not** use Silent Push PDNS (**0.7**). You do **not** call a redacted registrant nation-state (**2.1.7**).
+CTI analysts look up **registration** on a domain or an IP so they can see who registered the name, who holds the address block, and which nameservers and dates sit on the record. Before you add those facts to an indicator (**enrichment**) or name an actor (**attribution**), you have to read that lookup. That is the job in this lesson. **2.4.1** was file hashes. This lesson is registration. It is **not** SOA (**2.6**). It is **not** Silent Push PDNS (**0.7**).
 
-| Idea | Meaning |
-|------|---------|
-| **WHOIS** | Text registration record (legacy) |
-| **RDAP** | Structured registration (JSON, same job, easier to parse) |
-| **Useful fields** | Registrar, nameservers, created / updated, registrant *if present* |
+**WHOIS** and **RDAP** both do the same job: look up registration for a **domain** or an **IP**. You are not asking DNS who runs the zone. You are asking the registry, registrar, or RIR who holds the name or the block.
 
-**Redacted registrant is a fact.** It is not “no intel.” It is not a country.
+| Idea | WHOIS | RDAP |
+|------|-------|------|
+| **Shape** | Free text. Layout changes by server. | JSON. Same fields, easier to parse. |
+| **How you query** | Port 43 | HTTPS |
+| **Order** | Fallback when RDAP has no record | Query RDAP first |
 
-**What good looks like:**
+| Field | What you take |
+|-------|----------------|
+| **Registrar** | Who maintains the domain registration |
+| **Nameservers** | Which NS names sit on the record. Distinctive NS is enrichment, not “this is a nation-state.” |
+| **Created / updated** | When the record appeared or last changed |
+| **Registrant** | Who registered the name, **if present**. **Redacted** is a fact. It is not “no intel.” It is not a country. |
+| **IP CIDR / org** | The block and who holds it (often a cloud). That org is **not** the actor. |
 
-- **Query** the update domain. Extract: nameservers `ns1.cdn-test.net` / `ns2.cdn-test.net`, created date, registrar. Write **registrant redacted** if that is what the card shows.
-- **Interpret:** distinctive NS is enrichment. It is **not** “this is a nation-state.” Sibling `login-prd.net` with the **same NS** is a later hop you can *name* — the SOA read is **2.6**.
+**What good looks like:** someone gives you a domain or an IP. You query **RDAP** first. You use **WHOIS** if RDAP has no record. You write the fields that are there. You do not skip the lookup, and you do not turn redaction or a cloud org into an actor.
+
+- Given: the update domain. Extract: nameservers `ns1.cdn-test.net` / `ns2.cdn-test.net`, created date, registrar. Write **registrant redacted** if that is what the lookup shows. Distinctive NS is enrichment. It is **not** “this is a nation-state.” Sibling `login-prd.net` with the **same NS** is a later hop you can *name* — the SOA read is **2.6**.
+- Given: `203.0.113.88`. Extract: `203.0.113.0/24`, org **Example Cloud**. That is who holds the block. It is not “theirs.”
+- Interpret: registration adds those fields to the indicator. It does not attribute an actor (**2.1.7**).
 
 ---
 
@@ -51,7 +60,7 @@ CTI analysts pull **registration** so they can see registrar, nameservers, and c
 
 ## 3. Summary
 
-RDAP/WHOIS is registration. Redacted is a fact. Distinctive NS is enrichment, not attribution.
+WHOIS and RDAP look up registration. Query RDAP first. Redacted is a fact. Distinctive NS is enrichment, not attribution. An IP org is who holds the block, not the actor.
 
 **Next:** **2.6.1** Advanced DNS.
 

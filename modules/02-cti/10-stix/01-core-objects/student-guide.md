@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Name the common **STIX 2.1** objects on the syllabus.
-2. Label those objects in a classroom report or bundle — do not invent types.
+1. Name the eleven **STIX 2.1** objects this lesson covers.
+2. Given a line from a report, label the object. Do not invent a type.
 
 **Mapped Proficiency Items:**
 - K: 2.10.1 – Core STIX objects
@@ -24,31 +24,56 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts label **what kind of object** they are sharing. Hunt *reads* STIX as input later (**3.4.3**). Finished narrative is **2.11**. TIP retrieve is **2.3.1**. This hour is **identify**. Classroom bundle only. Do not stand up TAXII (**2.10.2**).
+CTI analysts share threat facts in a common language so another shop — and hunt — can reuse them without guessing what each fact was. **STIX** (Structured Threat Information Expression) is that language. Version **2.1** is the spec this course uses. Before you write a bundle or a narrative, you have to name **what kind of object** each fact is. That is the job in this lesson: look at a report and label it.
 
-Syllabus objects (STIX **2.1** — the spec, not a hunt ID): Indicator · Observed Data · Malware · Attack Pattern · Threat Actor · Intrusion Set · Campaign · Course of Action · Identity · Relationship · Sighting.
+Hunt *reads* STIX as input later (**3.4.3**). Finished narrative is **2.11**. TIP retrieve is **2.3.1**. Linking objects and TAXII consume are **2.10.2**. This lesson is **identify**. Classroom report or bundle only. Do not stand up a TAXII server.
 
-**What good looks like:**
+This lesson uses these eleven real STIX **2.1** types. Do not invent a twelfth.
 
-- Hash of `invoice.vbs` = **Indicator** (or Observed Data if it is a raw observation).
-- Encoded PowerShell / T1059.001 = **Attack Pattern**.
-- **WS-JLEE** / DYA = **Identity** (victim), not Threat Actor.
-- “PRD APT” on a PDF = **not** automatically Threat Actor — that is a label (**2.1.7**).
-- A row that ties indicator to identity = **Relationship** or **Sighting**.
+| Object | What it names |
+|--------|----------------|
+| **Indicator** | A pattern used to detect activity (a hash pattern, an IP pattern) |
+| **Observed Data** | A raw record of what was seen (this file, this IP) — not a judgment |
+| **Malware** | Malicious code: a family or an instance — not the hash pattern |
+| **Attack Pattern** | A way the adversary works (for example T1059.001) |
+| **Threat Actor** | Who is believed to operate with malicious intent |
+| **Intrusion Set** | Grouped behaviors believed to be one actor’s set |
+| **Campaign** | A time-bounded set of activity against a set of targets |
+| **Course of Action** | A recommended action to prevent or respond |
+| **Identity** | A person, organization, or system — including the victim. Not the attacker by default |
+| **Relationship** | A typed link between two objects |
+| **Sighting** | An assertion that an object was seen, often at an Identity |
+
+A hash can be two different objects. If the report gives a pattern to find that hash again, it is an **Indicator**. If it only records that the hash was seen, it is **Observed Data**.
+
+**Sighting** is not **Observed Data**. Observed Data is the record (“this file was on the host”). Sighting is the assertion (“we saw this Indicator / Malware here”). **Relationship** is a typed link (this Indicator *indicates* that Malware). A line that ties an Indicator to **WS-JLEE** is a **Sighting**, not a generic Relationship.
+
+**What good looks like:** someone gives you a line from a report. You name the object. You do not write the bundle yet.
+
+- Hash of `invoice.vbs` as a detection pattern. **Indicator.** The same hash as “this file was seen” is **Observed Data**.
+- Encoded PowerShell / T1059.001. **Attack Pattern.**
+- The malicious `invoice.vbs` family or instance. **Malware.**
+- **WS-JLEE** / **DYA**. **Identity** (victim), not Threat Actor.
+- “PRD APT” on a PDF. **Not** automatically Threat Actor. That is a vendor label. Attribution is **2.1.7**.
+- “We saw that hash on WS-JLEE.” **Sighting.**
+- A link that says this Indicator indicates that Malware. **Relationship.** Do not pick the link type here — **2.10.2**.
+- Block the payload host, or kill the Run key. **Course of Action.**
+
+Do not tell the rest of the incident. Do not invent a type if none of the eleven fits.
 
 ---
 
 ## 2. Knowledge Check
 
-1. You may invent a STIX type if none fits. True or false?
-2. Name four syllabus STIX objects.
-3. Hash of `invoice.vbs` vs **WS-JLEE** — which two objects?
+1. You may invent a STIX type if none of these eleven fits. True or false?
+2. “PRD APT” on a vendor PDF is automatically a Threat Actor object. True or false?
+3. Hash of `invoice.vbs` used as a detection pattern, vs **WS-JLEE**. Which two objects?
 
 ---
 
 ## 3. Summary
 
-Real STIX 2.1 types only. Label the object. A vendor name is not automatically Threat Actor.
+STIX 2.1 names eleven objects in this lesson. Label the object from the report. A hash pattern is an Indicator; a raw observation is Observed Data. A victim host is Identity. A vendor name is not automatically Threat Actor.
 
 **Next:** **2.10.2** STIX in production.
 

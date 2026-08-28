@@ -5,7 +5,7 @@
 - CTI: 2.7.3 B / C / C ; 2.7.3.1 3c / 4c / 4c  
 - Hunter: 2.7.3 B / C / C ; 2.7.3.1 3c / 4c / 4c  
 - SOC: 2.7.3 A / B / B ; 2.7.3.1 2b / 3c / 4c  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Name the seven Kill Chain stages.
-2. Identify the stage of observed activity, reject the neighbor, and list **only supported** stages in the product.
+1. Use the seven Kill Chain stages to show attack **progression** on an intelligence product.
+2. Identify the stage of observed or reported activity, reject the previous or next stage you did not see, and list **only supported** stages in the product.
 
 **Mapped Proficiency Items:**
 - K: 2.7.3 – Cyber Kill Chain in intelligence analysis
@@ -24,36 +24,51 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts put **progression** on a product so the reader sees what was observed — and what was not. The floor is **0.6.3**. This hour is a **report**. You do **not** map ATT&CK (**2.7.1**). You do **not** invent Reconnaissance you did not see.
+CTI analysts put attack **progression** on a product — the write-up you issue — so the reader sees what was observed, and what was not. Hunt and IR use that list. A stage you invent becomes work on a step that is not in the evidence. That is the job in this lesson: name the stage of activity you have in a report or a set of events, and list only the stages you can cite.
 
-Seven stages: Reconnaissance · Weaponization · Delivery · Exploitation · Installation · Command and Control · Actions on Objectives.
+The Lockheed Martin Cyber Kill Chain names seven stages of attack progression. You need those names to write the product. This lesson is **not** ATT&CK (**2.7.1**). It is **not** Diamond (**2.7.2**). It is **not** DTF (**2.7.4**). It is **not** hunt planning (**3.5**).
 
-**What good looks like:**
+| Stage | Cite it when you have |
+|-------|------------------------|
+| **Reconnaissance** | Target research (scans, open-source lookup of the victim). Not “they must have looked.” |
+| **Weaponization** | Building the payload. Victim logs almost never show this. |
+| **Delivery** | The weapon arrived (mail, web, USB). |
+| **Exploitation** | It executed against a vulnerability, or ran as the exploit. |
+| **Installation** | Code or an implant is on the host. |
+| **Command and Control** | A callback or control channel. |
+| **Actions on Objectives** | The goal (theft, encryption, and so on). |
 
-- **`invoice.vbs` / `wscript` → encoded PowerShell:** **Installation** (or Delivery of the vbs). Cite the process. **Not** C2 — no beacon in that row.
-- **GET `/update.exe` :8080:** Installation of the payload (or C2 if that is how you frame the channel). **Not** Reconnaissance.
-- Product line: list **only** stages you can cite. Do **not** write Recon because “they must have scanned.”
+A **supported** stage is one you can cite from the report or the activity. The product lists **only** those stages. Do not fill the other five because the chain “must” have happened. Reject the previous or next stage you did not see. Reject an **unobserved** stage — Reconnaissance you did not see, Weaponization you did not see, Command and Control with no callback.
+
+**What good looks like:** someone gives you observed or reported activity. You name the stage, say why it is not the neighbor, and the product lists only what you can cite.
+
+- Given: `wscript.exe` (Temp `invoice.vbs`) → `powershell.exe -enc …`. **Stage:** **Installation**. Cite the process. **Not** Command and Control — there is no beacon in that activity. **Delivery** of the vbs only if the product also has it arriving.
+- Given: `GET /update.exe` on port 8080. **Stage:** **Installation** of the payload, or **Command and Control** if that GET is the control channel. **Not** Reconnaissance — fetching a payload is not target research.
+- Product line: list **only** stages you can cite. Do **not** write Reconnaissance because “they must have scanned.”
+
+Do not map ATT&CK IDs (**2.7.1**). Do not fill Diamond vertices (**2.7.2**). Do not pick a DTF pivot (**2.7.4**).
 
 ---
 
 ## 2. Knowledge Check
 
 1. You should list all seven stages on every product. True or false?
-2. Name the seven stages in order.
+2. `GET /update.exe` on port 8080. Is that Reconnaissance? Why or why not?
 3. `wscript` → `-enc`. Stage, and why not the neighbor?
 
 ---
 
 ## 3. Summary
 
-Seven stages. Only what you saw. Reject the neighbor. Do not invent Recon.
+Seven stages. Only what you can cite. Reject the previous or next stage you did not see. Do not invent Reconnaissance.
 
-**Next:** **2.7.4** DTF.
+**Next:** **2.7.4** Defender’s ThreatMesh Framework (DTF).
 
 ---
 
 ## 4. Related modules
 
-- 2.7.2 – Diamond (previous)
-- 2.7.4 – DTF
-- 0.6.3 – Kill Chain floor
+- 2.7.2 – Diamond Model application in CTI
+- 2.7.4 – Defender’s ThreatMesh Framework (DTF)
+- 2.7.1 – MITRE ATT&CK for CTI analysis and reporting
+- 0.6.3 – Cyber Kill Chain (shared floor)

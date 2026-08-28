@@ -9,64 +9,68 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.1.3 – Intelligence Types  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Strategic, operational, tactical, technical  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Type follows the question. Not the file length.
+This lesson names four types of intelligence. It does not teach how to write a PIR.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Pick the **kind of answer**.
+A consumer needs a **decision they can make**.
 
-The consumer gets the decision they can make.  
-Not a stage. Not a PIR.
+An alert responder needs what to do **now**.  
+Leadership needs whether to change **posture**.
+
+This lesson names the **kind of answer**.
 
 **Speaker Notes:**  
-2.1.2 was the job in the loop. This hour is what kind of answer.
+This slide is the student intro. Match the product or the requirement to the decision. Do not write a PIR today.
 
 ---
 
 ### Slide 3 – Four types
 **Title:** Strategic, operational, tactical, technical
 
-**Strategic** — posture / risk, months to years.  
-**Operational** — how we run this over days to weeks.  
-**Tactical** — what to do **now**.  
-**Technical** — the observables.
+**Strategic** — what leadership should change about risk or posture (months to years).  
+**Operational** — how we run this incident or hunt over days to weeks.  
+**Tactical** — what a responder should do **now** on this activity.  
+**Technical** — the observables we can detect or pivot on.
 
 **Speaker Notes:**  
-Outline a–d. Neighbors: strategic ↔ operational; tactical ↔ technical.
+One line each. Stop. Technical is its own type, not a nickname for tactical. Neighbors are the next slide.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Type + not the neighbor
+### Slide 4 – Type follows the question
+**Title:** Type follows the question
 
-**Technical** — `203.0.113.88`, `GET /update.exe :8080`.  
+A long PDF is not automatically strategic.  
+A hash is not an action.
+
+Neighbors are strategic vs operational, and tactical vs technical.
+
+A **requirement** is the question. A **product** is the answer. Both get a type.
+
+**Speaker Notes:**  
+Length is not type. A lifecycle stage is not type. If they start writing a PIR, that is 2.1.4.
+
+---
+
+### Slide 5 – Type, and not the neighbor
+**Title:** Type, and not the neighbor
+
+**Technical** — A record `203.0.113.88`; `GET /update.exe` on port 8080.  
 Not “isolate the host.”
 
-**Tactical** — treat the update domain as the **A12** payload host; IR has **WS-JLEE**.  
+**Tactical** — isolate **WS-JLEE**; treat the update domain as the **A12** payload host.  
 Not a hash dump.
 
 **Speaker Notes:**  
-Do not invent extra victims for operational / strategic.
-
----
-
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No PIR (**2.1.4**).  
-No audience rewrite (**2.1.6**).  
-No actor profile (**2.11**).  
-Stage ≠ type (**2.1.2**).
-
-**Speaker Notes:**  
-A raw IOC list is still data.
+Walk these two givens before the knowledge check. Do not invent extra victims for operational or strategic.
 
 ---
 
@@ -78,16 +82,18 @@ A raw IOC list is still data.
 3. “Isolate **WS-JLEE**; treat the update domain as the **A12** payload host.” Type, and why not the neighbor?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Type follows the question. Reject the neighbor.
+Type follows the question.  
+Strategic, operational, tactical, technical.  
+Reject the neighbor.
 
 **Next:** **2.1.4** Intelligence requirements
 
 **Speaker Notes:**  
-Do not open PIR format unless that hour is scheduled.
+2.1.4 is writing the requirement. Stay off PIR format unless that lesson is scheduled.

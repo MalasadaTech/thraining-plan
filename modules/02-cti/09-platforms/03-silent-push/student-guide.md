@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Say what Silent Push is for (passive DNS / infra context).
-2. Enrich a seed and pivot to additional names or IPs **on a classroom card**.
+1. Name Silent Push’s **core capabilities** and what you use it for: **passive DNS** (historical resolutions, also called PDNS) and infrastructure context around a seed you already have.
+2. **Enrich** that seed from a classroom card, then **pivot** only to extra names or IPs the card shows.
 
 **Mapped Proficiency Items:**
 - K: 2.9.3 – Silent Push
@@ -24,28 +24,44 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts use Silent Push for **passive DNS and infra context**. When to pick it is **0.7**. SOA/RDAP classes are **2.5** / **2.6**. The hop sentence is **2.8.1**. This hour is **this UI**. Card only.
+CTI analysts already have a **seed** — a domain or IP from the case. They open Silent Push to see the **passive DNS** history around that seed and any related infrastructure the product actually lists. That is the job in this lesson: enrich the seed from the **classroom result card**, then pivot only to extra names the card shows, so you do not treat shared hosting as theirs.
+
+Silent Push is a **passive DNS / infrastructure** tool. It is **not** a sandbox detonation and **not** a page screenshot. When to pick it instead of VirusTotal, AnyRun, or URLScan is **0.7**. This lesson is what you read once you are in Silent Push.
+
+| Capability | What you use it for |
+|------------|---------------------|
+| **Historical names on an A** | Which hostnames have pointed at this IPv4 address (an **A** record is that IPv4 mapping) |
+| **A history for a name** | Which IPv4 addresses this hostname has resolved to |
+| **Shared nameservers** | Other names that use the same **NS** (nameserver) pair — only if the card shows them |
+
+**Enrich** means you write what the card says about the seed you already have. **Pivot** means you take one shared fact from that card (same A, or same NS pair) and name additional infrastructure. If the card does not show the extra name, write **not on the card**. Do not invent a hit.
 
 | Move | Job |
 |------|-----|
 | **Enrich** | What names have pointed at `203.0.113.88`? What A records has the update domain had? |
 | **Pivot** | Other names with the same NS pair — if the card shows them |
 
-**What good looks like:** enrich `203.0.113.88` → names on that A **on the card** (update domain, maybe `login-prd.net`). **Reject** treating the whole `/24` as theirs. Not on card is legal.
+**What good looks like:**
+
+- Given: enrich `203.0.113.88` on the classroom card. **Take** the names on that A that the card lists (the update domain, maybe `login-prd.net`).
+- **Reject** treating the whole `203.0.113.0/24` as theirs. Neighboring IPs on that subnet are shared hosting, not extra adversary infrastructure.
+- If a sibling is not on the card, the legal line is **not on the card**.
+
+This is **not** an RDAP class (**2.5**) and **not** an SOA class (**2.6**). The generic hop sentence (seed, shared characteristic, candidate, why not coincidence) is **2.8.1**. Hunt conversion to SIEM or Zeek is **3.3.1**. You do **not** need a live Silent Push account.
 
 ---
 
 ## 2. Knowledge Check
 
-1. This hour is “when to pick Silent Push.” True or false?
-2. What two jobs do you do in this UI?
+1. This lesson is “when to pick Silent Push.” True or false?
+2. What two jobs do you do in Silent Push?
 3. Enrich `203.0.113.88`. One legal pivot, and one thing you must reject.
 
 ---
 
 ## 3. Summary
 
-PDNS / infra context. Enrich the seed. Pivot only what the card shows. Shared /24 is not theirs.
+Silent Push gives passive DNS and infrastructure context for a seed you already have. Enrich that seed from the classroom card. Pivot only to names the card shows. A shared `/24` is not theirs.
 
 **Next:** **2.9.4** URLScan.
 
@@ -53,7 +69,7 @@ PDNS / infra context. Enrich the seed. Pivot only what the card shows. Shared /2
 
 ## 4. Related modules
 
-- 2.9.2 – AnyRun (previous)
+- 2.9.2 – AnyRun
 - 2.9.4 – URLScan
-- 0.7 – When to pick Silent Push
-- 2.6 / 2.8.1 – SOA / hop sentence
+- 0.7 – External tools
+- 2.8.1 – Identifying additional adversary infrastructure

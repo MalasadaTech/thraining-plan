@@ -12,13 +12,13 @@
 | 2.1.5 | K | Ensuring intelligence is actionable | 2.1.5 a–b | A / A / B | A / B / B | B / C / C |
 | 2.1.5.1 | T | Evaluate whether a piece of intelligence is actionable and explain why | 2.1.5.1 task 1 | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.1.5**. Requirements are **2.1.4**. Audience rewrite is **2.1.6**. Hunt-useful is **3.4.1**. No lab.
+The teaching-unit ID is **2.1.5**. Requirements are **2.1.4**. Audience rewrite is **2.1.6**. Hunt-useful is **3.4.1**. Actor profile is **2.11**. No lab.
 
 ## Concepts taught
 
 - characteristics of actionable intelligence
-- why intelligence fails to be actionable
-- evaluating whether a product is actionable
+- common reasons intelligence fails to be actionable
+- evaluate whether intelligence is actionable
 
 ## Artifacts
 

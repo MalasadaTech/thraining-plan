@@ -12,13 +12,14 @@
 | 2.7.2 | K | Diamond Model application in CTI | 2.7.2 a | A / B / B | B / C / C | B / C / C |
 | 2.7.2.1 | T | Apply the Diamond Model to an intelligence problem | 2.7.2.1 task 1 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.7.2**. Floor is **0.6.2**. ATT&CK is **2.7.1**. Kill Chain is **2.7.3**. No lab.
+The teaching-unit ID is **2.7.2**. ATT&CK for CTI is **2.7.1**. Kill Chain for CTI is **2.7.3**. Diamond Model is **0.6.2**. Actor profile is **2.11**. Attribution types are **2.1.7**. Hunt planning is **3.5**. No lab.
 
 ## Concepts taught
 
-- Diamond vertices on a CTI product
-- weakest vertex
-- rejecting a vendor-name Adversary fill
+- Diamond Model application in CTI (also: Diamond on a report or activity set)
+- apply the Diamond Model to an intelligence problem
+- weakest vertex constrains the intel product
+- reject filling Adversary from a vendor name
 
 ## Artifacts
 

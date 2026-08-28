@@ -12,7 +12,7 @@
 | 2.7.1 | K | MITRE ATT&CK for CTI analysis and reporting | 2.7.1 a | A / B / B | B / C / C | B / C / C |
 | 2.7.1.1 | T | Map activity or reports to MITRE ATT&CK | 2.7.1.1 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.7.1**. Floor is **0.6.1**. Hunt planning is **3.5**. DTF is **2.7.4**. No lab.
+The teaching-unit ID is **2.7.1**. Floor is **0.6.1**. Hunt planning is **3.5**. DTF is **2.7.4**. Applicable TTPs are **2.8.2**. Diamond is **2.7.2**. No lab.
 
 ## Concepts taught
 

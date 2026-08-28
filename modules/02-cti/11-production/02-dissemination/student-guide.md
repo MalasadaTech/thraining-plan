@@ -1,4 +1,4 @@
-# Module 2.11.2 – Disseminating Intelligence to the Correct Audiences
+# Module 2.11.2 – Disseminating intelligence to the correct audiences
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
@@ -13,32 +13,50 @@
 
 By the end of this module, you will be able to:
 
-1. Name the audience, an **approved channel**, and a **handling marking**.
-2. Tailor the same **A12** product (leadership vs technical) and reject the wrong channel.
+1. Name the **audience**, an **approved channel**, and a **handling marking**, and apply a **handling caveat**.
+2. Tailor the same **A12** product for a technical audience and for leadership, and reject the wrong channel.
 
 **Mapped Proficiency Items:**
 - K: 2.11.2 – Disseminating intelligence to the correct audiences
 - T: 2.11.2.1 – Select audience and method and apply correct handling markings
-- T: 2.11.2.2 – Tailor products to different audiences
-- T: 2.11.2.3 – Disseminate through approved channels
+- T: 2.11.2.2 – Tailor products to different audiences (technical, leadership, etc.)
+- T: 2.11.2.3 – Disseminate intelligence products through approved channels
 
 ---
 
 ## 1. Key Concepts
 
-CTI analysts put the **finished product** on an approved path. Tailor *content* floor is **2.1.6**. SOC report routing is **1.5.3**. Local customer lists are **2.12.3**. Classroom markings are **lesson-only** — not live org policy.
+CTI analysts **send the finished product** to the people who can use it, on a path the shop already approved, with a label that says who else may see it. A judged answer that only lives in a private chat is not disseminated. Leadership that never sees the one-liner cannot act. That is the job in this lesson: name the audience, the approved channel, and the handling marking — then send that version.
 
-| Idea | Classroom stand-in (not DYA policy) |
-|------|-------------------------------------|
-| **Audience** | IR / SOC (technical) vs leadership (awareness) |
-| **Channel** | Ticket / approved intel channel. **Reject** personal SMS |
-| **Marking** | A handling label your shop already uses (e.g. TLP-style). Do not invent a DYA marking scheme |
+**2.11.1** wrote the product. **2.1.6** is how you change content, format, and detail for a named reader. You do not change the judgment. This lesson is the **send**. SOC report routing is **1.5.3**. Local customer lists are **2.12.3**. The TLP labels and channels in this lesson are **classroom stand-ins** — not live org policy.
+
+| Idea | What it is |
+|------|------------|
+| **Audience** | Who owns the next decision. **IR / SOC** (technical) vs **leadership** (awareness) |
+| **Channel** | How it travels. **Ticket** or **approved intel channel**. Reject personal SMS, private chat, and public post |
+| **Handling marking** | A label that says who may see this product |
+| **Handling caveat** | An extra instruction the label does not say (for example, no hash on the leadership send) |
+
+**Classroom card (this lesson only — not live org policy):**
+
+| Label | Meaning in this lesson |
+|-------|------------------------|
+| **TLP:AMBER** | Need-to-know inside the organization. Not a public post |
+| **TLP:CLEAR** | No restriction. Do not use this on a product that names a live host |
+
+**TLP** here means Traffic Light Protocol used as a practice label. If your shop has a real marking card, use that card. Do not invent a DYA color such as `TLP-RED-DYA`.
+
+A one-liner is still marked. Right people on the wrong path still fails.
 
 **What good looks like:**
 
-- **Technical:** IR + SOC, ticket, marking your shop uses. Detail: host, vbs, domain.
-- **Leadership:** duty lead awareness, approved channel, **no hash** (**2.1.6**).
-- **Reject:** WhatsApp “so leadership sees it faster.”
+**Given:** the finished **A12** product from **2.11.1**. IR has **WS-JLEE** / `jlee`. The update domain is **likely** the payload host. Temp `invoice.vbs` is on the host. Same facts. Two sends.
+
+- **Technical (IR / SOC):** audience IR + SOC. Channel: ticket. Marking: **TLP:AMBER** (classroom). Caveat: need-to-know inside the shop. Detail: host, `invoice.vbs`, update domain.
+- **Leadership:** audience duty lead (awareness). Channel: approved channel. Marking: still **TLP:AMBER** (classroom). Caveat: **no hash**, no file path. One line: IR has the host; treat the update domain as the payload host.
+- **Reject:** personal SMS or private chat “so leadership sees it faster.”
+
+Do not rewrite the judgment so leadership likes it (**2.1.6**). Do not invent a customer list (**2.12.3**).
 
 ---
 
@@ -52,7 +70,7 @@ CTI analysts put the **finished product** on an approved path. Tailor *content* 
 
 ## 3. Summary
 
-Audience + approved channel + marking. Same facts, different detail. No SMS. No invented DYA scheme.
+Audience, approved channel, and handling marking. Same facts, different detail. A caveat can still restrict the send. No SMS. Classroom TLP is not live org policy.
 
 **Next:** **2.11.3** Handling RFIs.
 
@@ -60,8 +78,8 @@ Audience + approved channel + marking. Same facts, different detail. No SMS. No 
 
 ## 4. Related modules
 
-- 2.11.1 – Finished products (previous)
-- 2.11.3 – RFIs
-- 2.1.6 – Audience rewrite floor
-- 1.5.3 – SOC routing
-- 2.12.3 – Local customer list
+- 2.11.1 – Creating finished intelligence products (previous)
+- 2.11.3 – Handling RFIs
+- 2.1.6 – Tailoring output to the audience
+- 1.5.3 – Notification and distribution
+- 2.12.3 – Local dissemination channels and customers

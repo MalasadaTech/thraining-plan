@@ -1,4 +1,4 @@
-# Difference between Data, Information, and Intelligence
+# Difference between data, information, and intelligence
 
 **Path:** `modules/02-cti/01-core-intel/01-data-info-intel`  
 **Primary role:** CTI Analyst  

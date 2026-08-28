@@ -12,7 +12,7 @@
 | 2.9.2 | K | AnyRun | 2.9.2 a–b | A / A / B | A / B / B | B / C / C |
 | 2.9.2.1 | T | Search and review AnyRun submissions | 2.9.2.1 tasks 1–2 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.9.2**. Survey is **0.7**. Classroom card only. No lab.
+The teaching-unit ID is **2.9.2**. Survey is **0.7**. Classroom card only. No lab. Hop sentence is **2.8.1**. Hunt conversion is **3.3.1**.
 
 ## Concepts taught
 

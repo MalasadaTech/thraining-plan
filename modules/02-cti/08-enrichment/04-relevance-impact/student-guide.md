@@ -5,7 +5,7 @@
 - CTI: 2.8.4 B / C / C ; 2.8.4.1 3c / 4c / 4d  
 - Hunter: 2.8.4 B / C / C ; 2.8.4.1 2b / 3c / 4c  
 - SOC: 2.8.4 A / B / B ; 2.8.4.1 1a / 2b / 3c  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -24,20 +24,32 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts write the **so what here**. Applicable TTPs are **2.8.2**. PIRs are **2.1.4** / **2.12.1**. Attribution is **2.1.7**. This hour is two sentences: **relevance** and **impact**.
+CTI analysts say whether a finding **matters here**, not only whether it is technically interesting. Enrichment can leave you with an extra domain, a kept TTP, or a handled IOC. Someone still has to write the line for this shop. If you skip it, people chase reports that never touch this mission, these assets, or this platform — or they write a crisis the evidence does not support.
+
+This lesson is those two sentences: **relevance** and **impact**. TTP applicability is **2.8.2**. Handling the IOC as an object is **2.8.3**. This lesson is the so-what that follows.
 
 | Sentence | Meaning |
 |----------|---------|
-| **Relevance** | Does this finding apply to this mission / assets / platform? |
-| **Impact** | If it is true, what would change here (host, mail, clients)? |
+| **Relevance** | Does this finding apply to this environment: **mission** (what the shop does), **assets** (what it owns), and **platform** (what it runs)? |
+| **Impact** | If the finding is true, **what would change here**? Write the change that follows from this finding. |
 
-Do not invent OT impact. DYA is a law firm. Do not invent a PIR list.
+The classroom company is a **law firm** that runs **Windows workstations**. Judge against that environment. Do not invent a shop list of impact categories.
+
+Relevance and impact are not the other products that sit next to them:
+
+| Not this lesson | What that product is |
+|-----------------|----------------------|
+| **TTP applicability** (**2.8.2**) | Whether a behavior from a report can happen or be hunted on this platform. Keep or reject the TTP. That is not the so-what of a finding. |
+| **PIR** (**2.1.4** / **2.12.1**) | A **priority intelligence requirement** — a ranked question the shop wants answered. Do not write or invent that list here. |
+| **Attribution** (**2.1.7**) | Who or what cluster did it, and at what confidence. A country or a vendor “APT” name is not the impact line. |
 
 **What good looks like:**
 
-- **Relevant:** encoded PowerShell + update domain on **WS-JLEE** — we have that platform; we already saw it.
-- **Impact:** IR has the host; the payload path is live on a user workstation. Not “nation-state crisis.” Not a new PIR.
-- **Not relevant:** an OT-wipe finding. Impact: none here — we do not run that process.
+- **Relevant:** encoded PowerShell and an update-domain fetch on **WS-JLEE** (incident **A12**). We run Windows workstations. We already saw this on that host.
+- **Impact:** IR has the host. The payload path is live on a user workstation. Not “nation-state crisis.” Not a new PIR.
+- **Not relevant:** a report’s OT-wipe finding. This shop does not run that process. Impact: none here.
+
+Do not retell the whole incident. Do not extract **T1059.001** as the product (**2.8.2**). Do not name a country (**2.1.7**).
 
 ---
 
@@ -45,13 +57,13 @@ Do not invent OT impact. DYA is a law firm. Do not invent a PIR list.
 
 1. Relevance is the same as writing a PIR. True or false?
 2. What two sentences do you write?
-3. **A12** on WS-JLEE — one relevance line and one impact line (no country, no PIR).
+3. Given: encoded PowerShell and an update-domain fetch on **WS-JLEE** (incident **A12**, a Windows workstation). Write one relevance sentence and one impact sentence. Do not name a country. Do not write a PIR.
 
 ---
 
 ## 3. Summary
 
-Applies here? What would change? Not a PIR. Not a country. Not a TTP list.
+Does this finding apply here? If it is true, what would change? Stop there. Not a PIR. Not a country. Not a TTP list.
 
 **Next:** **2.9.1** VirusTotal Relations and Behavior.
 

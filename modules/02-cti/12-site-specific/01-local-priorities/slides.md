@@ -1,89 +1,98 @@
-# Module 2.12.1 – Local Priorities  
+# Module 2.12.1 – Local Intelligence Requirements and Priorities  
 ## Slide Deck Content
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
+**Estimated Delivery Time:** 15–20 minutes  
 **Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 2.12.1 – Local Priorities  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Title:** Module 2.12.1 – Local Intelligence Requirements and Priorities  
+**Subtitle:** Obtain the current list. Do not invent one.  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Obtain the list. Do not invent PIR-01.
+2.11.3 answered the RFI. This lesson is the shop’s current PIR / priority list. It is not how to write a requirement, and it is not a DYA list this course publishes.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-**Get** the shop’s current priorities.
+CTI analysts obtain the shop’s **current priorities**.
 
-Align work if the card exists.  
-Write **not yet** if it does not.
+Analysis should answer what leadership already ranked, not whatever looks interesting today.
+
+Get the list that is in force here. Then say whether a piece of work belongs on it.
 
 **Speaker Notes:**  
-PIR concept was 2.1.4.
+This slide is the student intro. The job is obtain-and-follow. Do not start writing PIR text. Do not treat A12 as the list.
 
 ---
 
-### Slide 3 – Obtain vs invent
-**Title:** Two legal answers
+### Slide 3 – Current PIRs / priorities
+**Title:** Current PIRs / priorities
 
-A stated local item on a **real** card.  
-Or: **I do not have the list yet.**
+A **PIR** is a ranked requirement (**2.1.4**). This lesson is *this shop’s current* list.
 
-Inventing PIR-DYA-01 fails.
+Every organization and every section has its own. A new analyst obtains it early.
+
+This course does **not** publish DYA’s list.
 
 **Speaker Notes:**  
-Outline a–b.
+Current means the list in force now, not last quarter’s copy and not a classroom ID. If you overlay a real shop list, say it is overlay, not DYA policy.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Align A12 only if the card says so
+### Slide 4 – How they drive analytic focus
+**Title:** How they drive analytic focus
 
-If the card lists payload hosts on user VLANs — **A12** aligns.  
-If there is no card — **not yet.**
+A **stated** item gets analysis.
+
+Work that is only interesting is not assigned.
+
+Without a list, you cannot claim a piece of work is aligned.
 
 **Speaker Notes:**  
-Task 1–2.
+Local requirements decide what gets analysis now. Interesting is not a priority. An open incident is still not a PIR unless the shop list says so — and we are not inventing that list.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Identify, then align
+**Title:** Identify, then align
 
-No invented DYA PIR list.  
-No rewrite of **2.1.4**.  
-No approval path (**2.12.2**).
+**Identify:** obtain the current list from the role or place your lead names. If none was shown: **I do not have the list yet.**
+
+**Align:** only to a **stated** item on a list you were shown.
+
+**A12** is an open incident. An incident is not a PIR.
 
 **Speaker Notes:**  
-Process next.
+Walk the two products. “Not yet” is a pass. Inventing a PIR ID so the page is not blank is a fail. Do not use A12, a user VLAN, or a workstation as a published DYA priority.
 
 ---
 
 ### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. You should invent a DYA PIR list so the exercise has numbers. True or false?  
-2. What do you do if the shop has not given you the list yet?  
-3. If a local card says “payload hosts on user workstations,” does **A12** align? Why?
+1. You should invent a DYA PIR list so the class has numbers. True or false?  
+2. What do you write if the shop has not given you the current list?  
+3. You have not been shown a current list. Can you mark **A12** as aligned to a local requirement?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Obtain. Align or write not yet. Do not invent.
+Every shop has current PIRs / priorities.  
+Obtain that list. Align only to a stated item.  
+If you do not have the list, write that. Do not invent PIRs.
 
-**Next:** **2.12.2** Local production and approval
+**Next:** **2.12.2** Local production and approval processes
 
 **Speaker Notes:**  
-Do not invent a process chart unless they have one.
+2.12.2 is the local produce / approve / archive path. Same obtain-and-follow rule. Do not invent a ticket or approval chain.

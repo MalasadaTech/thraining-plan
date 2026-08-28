@@ -12,11 +12,14 @@
 | 2.10.1 | K | Core STIX objects | 2.10.1 a–k | A / B / B | B / C / C | B / C / C |
 | 2.10.1.1 | T | Identify and label common STIX objects | 2.10.1.1 task 1 | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.10.1**. Spec is **STIX 2.1**. Do not invent types. Do not write lumped **2.10.3**. No lab.
+The teaching-unit ID is **2.10.1**. Spec is **STIX 2.1**. Do not invent types. Do not write lumped **2.10.3**. Hunt input is **3.4.3**. Finished narrative is **2.11**. TIP retrieve is **2.3.1**. Production / TAXII is **2.10.2**. Classroom report or bundle only. No lab.
 
 ## Concepts taught
 
 - STIX 2.1 core objects
+- Indicator, Observed Data, and Malware
+- Attack Pattern, Threat Actor, Intrusion Set, and Campaign
+- Course of Action, Identity, Relationship, and Sighting
 - labeling objects in a report
 
 ## Artifacts

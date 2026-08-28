@@ -10,9 +10,9 @@
 | Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |-----------|------|------|-----------------|-----------|--------------|-----------|
 | 2.8.4 | K | Threat relevance and organizational impact | 2.8.4 a–c | A / B / B | B / C / C | B / C / C |
-| 2.8.4.1 | T | Assess relevance and potential impact | 2.8.4.1 task 1 | 1a / 2b / 3c | 2b / 3c / 4c | 3c / 4c / 4d |
+| 2.8.4.1 | T | Assess threat relevance and potential impact to the organization | 2.8.4.1 task 1 | 1a / 2b / 3c | 2b / 3c / 4c | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.8.4**. TTPs are **2.8.2**. PIRs are **2.1.4** / **2.12.1**. Attribution is **2.1.7**. No lab.
+The teaching-unit ID is **2.8.4**. TTP applicability is **2.8.2**. PIRs are **2.1.4** / **2.12.1**. Attribution is **2.1.7**. VT Relations is **2.9.1**. No lab. Do not invent a DYA impact list.
 
 ## Concepts taught
 

@@ -9,59 +9,71 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.2.3 – Admiralty Code  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Source reliability and information credibility  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Letter plus number. Two axes. Not “likely.”
+2.2.2 was the named method. This lesson is the source and information rating. It is not estimative likelihood and not attribution confidence.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Split **who said it** from **whether this piece checks out**.
+CTI analysts split **who said it** from **whether this piece checks out**.
 
-Write **B2**, not “trusted.”
+A report lands. Write a **letter** for the source and a **number** for this claim.
+
+Do not treat “a shop we trust said it” as “this report is confirmed.”
 
 **Speaker Notes:**  
-Likelihood is 2.2.1. This hour is Admiralty.
+This slide is the student intro. The job is the pair, not a single “trusted” stamp. Likelihood words wait for 2.2.1. Confidence words wait for 2.1.7.
 
 ---
 
 ### Slide 3 – Two scales
-**Title:** A–F and 1–6
+**Title:** Source reliability and information credibility
 
-**Letter** — source reliability (A completely reliable … F cannot be judged).  
-**Number** — this information (1 confirmed … 6 cannot be judged).
+**Letter — source reliability**  
+**A** completely reliable. **B** usually reliable. **C** fairly reliable.  
+**D** not usually reliable. **E** unreliable. **F** reliability cannot be judged.
 
-A is not “true.” 1 is not “trusted source.”
+**Number — this information**  
+**1** confirmed by other sources. **2** probably true. **3** possibly true.  
+**4** doubtful. **5** improbable. **6** truth cannot be judged.
+
+**A** is not “true.” **1** is not “trusted source.”
 
 **Speaker Notes:**  
-Outline a–c. Overlay a shop card if they have one.
+Write both scales. Stop on F versus 6 so they do not think “cannot be judged” is one rating. If the shop has a card, overlay it. Do not invent letters.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Two ratings
+### Slide 4 – Letter plus number
+**Title:** Combine them
 
-**Internal Zeek A record for A12** — about **B** and **1** or **2**. Not A1 just because it is ours.  
-**Anonymous blog, no internals** — **F** or **E** and **5** or **6**. Not B2 because the title said INTEL.
+A rating is **letter + number** (example **B2**).
+
+The letter is the source. The number is this piece.  
+Do not raise one because the other is high.
+
+**B2** — usually reliable source; this piece is probably true.  
+Not confirmed. Not a trusted-source stamp.
 
 **Speaker Notes:**  
-Task 1–2.
+This is how the two ratings combine: they stay independent and are written together. If they say “likely,” that is 2.2.1, not Admiralty 2.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Assign and explain
+**Title:** Assign and explain
 
-No “likely” (**2.2.1**).  
-No confidence word (**2.1.7**).  
-No invented scale.
+**Internal sensor log you pulled** — about **B** and **1** or **2**. Not **A1** just because it is yours.
+
+**Anonymous blog, no internals** — **F** or **E** and **5** or **6**. Not **B2** because the title said INTEL.
 
 **Speaker Notes:**  
-Bias names are next.
+Walk both givens before the knowledge check. The product is letter plus number and a one-line meaning. Do not open the course-fiction plot.
 
 ---
 
@@ -69,20 +81,22 @@ Bias names are next.
 **Title:** Knowledge Check
 
 1. A reliable source means the information is confirmed. True or false?  
-2. What are the two Admiralty axes?  
+2. What are the two parts of an Admiralty Code rating?  
 3. Anonymous blog, no internals, “block these now.” Letter + number, and why.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Letter = source. Number = this piece. Combine them.
+Letter is the source. Number is this piece. Write both.  
+Do not mix them with “likely.”  
+Do not mark a source **A1** just because it is yours.
 
 **Next:** **2.2.4** Cognitive biases and mitigation
 
 **Speaker Notes:**  
-Do not open biases unless that hour is scheduled.
+2.2.4 names the bias that makes people skip this rating. Do not open bias names unless that lesson is scheduled.

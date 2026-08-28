@@ -9,78 +9,88 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.9.3 – Silent Push  
-**Subtitle:** CTI Analyst (Hunter / SOC sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Passive DNS and infrastructure context  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-PDNS / infra. Card only.
+2.9.2 was the AnyRun sandbox card. This lesson is Silent Push on a classroom card. It is not when to pick the tool, and it is not a live account.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-**Enrich** a seed. **Pivot** to names the card shows.
+CTI analysts already have a **seed** — a domain or IP from the case.
 
-Not the SOA class. Not “when to pick it.”
+They open Silent Push for **passive DNS** history and related infrastructure.
+
+Enrich the seed. Pivot only to names the **classroom card** shows.
 
 **Speaker Notes:**  
-0.7 was when.
+This slide is the student intro. They already chose Silent Push in 0.7. Today they read the card so they do not treat shared hosting as theirs. Do not start a four-tool survey.
 
 ---
 
-### Slide 3 – Two jobs
-**Title:** Enrich and pivot
+### Slide 3 – Core capabilities
+**Title:** What Silent Push is for
 
-**Enrich** — names on this A; A records this name has had.  
-**Pivot** — other names with the same NS, if the card shows them.
+**Historical names on an A** — which hostnames pointed at this IPv4 address.  
+**A history for a name** — which IPv4 addresses this hostname resolved to.  
+**Shared nameservers** — other names with the same NS pair, if the card shows them.
+
+Not a sandbox. Not a page screenshot.
 
 **Speaker Notes:**  
-Outline a–b.
+These are the capabilities. When to pick Silent Push versus URLScan stays in 0.7. If they ask about SOA or RDAP, that is 2.6 or 2.5.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Take vs reject
+### Slide 4 – Enrich and pivot
+**Title:** Enrich the seed. Pivot only what the card shows.
 
-**Take** — `203.0.113.88` → update domain / `login-prd.net` **on the card**.  
-**Reject** — whole `/24`.
+**Enrich** — what names have pointed at `203.0.113.88`? What A records has the update domain had?
+
+**Pivot** — other names with the same NS pair, if the card shows them.
+
+If it is not on the card, write **not on the card**. Do not invent a hit.
 
 **Speaker Notes:**  
-Task 1–2.
+Enrich is the seed you already have. Pivot is extra infrastructure. The next slide is the take and the reject on this given.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Take versus reject
+**Title:** Take versus reject
 
-No 0.7 survey.  
-No SOA class (**2.6**).  
-No live account.
+**Take** — `203.0.113.88` → the update domain / `login-prd.net` **on the card**.
+
+**Reject** — the whole `203.0.113.0/24`. Neighboring IPs are shared hosting.
 
 **Speaker Notes:**  
-URLScan next.
+Show this given before the knowledge check. Names on that A are a take only if the card lists them. Do not tell the intro plot.
 
 ---
 
 ### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. This hour is “when to pick Silent Push.” True or false?  
-2. What two jobs do you do in this UI?  
+1. This lesson is “when to pick Silent Push.” True or false?  
+2. What two jobs do you do in Silent Push?  
 3. Enrich `203.0.113.88`. One legal pivot, and one thing you must reject.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-PDNS context. Pivot only what the card shows. /24 is not theirs.
+Passive DNS and infrastructure context.  
+Enrich the seed. Pivot only what the card shows.  
+A shared `/24` is not theirs.
 
 **Next:** **2.9.4** URLScan
 
 **Speaker Notes:**  
-Do not open URLScan unless scheduled.
+URLScan is the page-scan card. Stay off that product unless that lesson is scheduled.

@@ -12,7 +12,7 @@
 | 2.2.4 | K | Cognitive biases and mitigation | 2.2.4 a–c | A / A / A | A / B / B | B / C / C |
 | 2.2.4.1 | T | Identify bias and apply a mitigation | 2.2.4.1 tasks 1–2 | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.2.4**. Mitigations are **2.2.2** methods. No new SAT. No lab.
+The teaching-unit ID is **2.2.4**. Mitigations are the **2.2.2** methods (Key Assumptions Check and ACH). Do not invent a third official technique. Do not diagnose the author. Admiralty is **2.2.3**. Estimative language is **2.2.1**. TIP is **2.3.1**. No lab.
 
 ## Concepts taught
 

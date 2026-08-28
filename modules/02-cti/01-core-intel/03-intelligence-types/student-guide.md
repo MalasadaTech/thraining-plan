@@ -5,7 +5,7 @@
 - CTI: 2.1.3 B / C / C ; 2.1.3.1 3c / 4c / 4c  
 - Hunter: 2.1.3 A / B / B ; 2.1.3.1 1a / 2b / 3c  
 - SOC: 2.1.3 A / A / A ; 2.1.3.1 1a / 1a / 1a  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,7 +13,7 @@
 
 By the end of this module, you will be able to:
 
-1. Name the four types: **strategic**, **operational**, **tactical**, **technical**.
+1. Name the four types: **strategic**, **operational**, **tactical**, and **technical**.
 2. Classify a product or requirement by type, and say why it is not the neighbor.
 
 **Mapped Proficiency Items:**
@@ -24,7 +24,11 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts pick the **kind of answer** so the consumer gets the decision they can make. Type follows the **question**, not the file length. You already know the layer (**2.1.1**) and the stage (**2.1.2**). This hour is **type**. You do **not** write a PIR (**2.1.4**). You do **not** rewrite for audience format (**2.1.6**). You do **not** write the actor profile (**2.11**).
+CTI analysts pick the **kind of answer** so the consumer gets a decision they can make. An alert responder needs what to do **now**. Leadership needs whether to change **posture**. If you hand the wrong kind, they cannot use it. That is the job in this lesson: name the type of the product or the requirement, and say why it is not the neighbor.
+
+Type follows the **question**, not the file length. A **requirement** is the question you are asked to answer. A **product** is the answer you give. Both get a type. How to write a priority intelligence requirement (PIR) is **2.1.4**.
+
+This course uses four types. **Technical** is its own type, not another word for tactical.
 
 | Type | Question it answers | Neighbor — not this |
 |------|---------------------|---------------------|
@@ -33,15 +37,17 @@ CTI analysts pick the **kind of answer** so the consumer gets the decision they 
 | **Tactical** | What should a responder do **now** on this activity? | **Technical** — the observable is not the action |
 | **Technical** | What are the observables we can detect or pivot on? | **Tactical** — a hash is not “isolate the host” |
 
-A long PDF is not automatically strategic. A hash is not automatically intelligence. Type applies to **intelligence** (or the requirement that asks for it). A raw IOC list is still **data**.
+A long PDF is not automatically strategic. Horizon (months vs days) is typical, not a substitute for the question. Type applies to **intelligence** (or the requirement that asks for it). A raw list of IPs and hashes is still **data**.
 
-Stage ≠ type. You can collect technical data in service of a tactical question.
+A lifecycle **stage** is not a type. You can collect technical observables in service of a tactical question. Stages are **2.1.2**. Audience format is **2.1.6**. Finished actor products are **2.11**.
 
-**What good looks like:**
+**What good looks like:** someone gives you a product or a question. You name the type. You say why it is not the neighbor.
 
-- **Technical, not tactical:** the A record `203.0.113.88` and `GET /update.exe :8080` for the update domain. Observables. Not “isolate **WS-JLEE**.”
-- **Tactical, not technical:** “Treat the update domain as the payload host for **A12**; IR has the host.” Action now. Not a hash dump.
-- **Strategic** would be a posture line for leadership (no hash). **Operational** would be how the desk runs **A12** over the next days. Do not invent extra victims to fill those rows.
+- Given: the A record `203.0.113.88` and `GET /update.exe` on port 8080 for the update domain. **Technical.** Not tactical: those are observables, not “isolate **WS-JLEE**.”
+- Given: “Isolate **WS-JLEE**; treat the update domain as the **A12** payload host.” **Tactical.** Not technical: that sentence is the action now, not a hash dump.
+- Given: “What should IR do now on **WS-JLEE**?” **Tactical** requirement. The question is the type, same as the product.
+
+**Strategic** would be a posture line for leadership (no hash). **Operational** would be how the desk runs **A12** over the next days. Do not invent extra victims to fill those rows.
 
 ---
 
@@ -55,7 +61,7 @@ Stage ≠ type. You can collect technical data in service of a tactical question
 
 ## 3. Summary
 
-Type follows the question. Strategic / operational / tactical / technical. Reject the neighbor.
+Type follows the question. Strategic, operational, tactical, technical. Reject the neighbor. Length is not type. A stage is not a type.
 
 **Next:** **2.1.4** Intelligence requirements.
 

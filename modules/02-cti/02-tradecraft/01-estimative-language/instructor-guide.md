@@ -1,4 +1,4 @@
-# Instructor Guide – Module 2.2.1 – Estimative Language
+# Instructor Guide – Module 2.2.1 – Estimative language
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Proficiency Focus:**  
@@ -17,15 +17,17 @@ Write and read a likelihood term. Do not confuse it with confidence.
 
 **Context (plain language):**
 
-- What this hour is for: CTI analysts make uncertainty comparable across products.
-- How it hooks to the hour before: 2.1.8 was where you collect. This hour is how you word the call.
-- How it hooks to the hour after: 2.2.2 is a technique (ACH / assumptions). Not a word list.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–c. Classroom terms only. No invented percents.
-- What we are *not* doing this hour: Admiralty. Actor profile. Confidence scale rewrite. No lab.
+- What this lesson is for: CTI analysts write judgments that other people act on. Those people should not have to guess whether “could be” means likely or remote. This lesson is the likelihood word.
+- How it hooks to the lesson before: 2.1.8 was where you collect. This lesson is how you word the call.
+- How it hooks to the lesson after: 2.2.2 is a method (ACH / assumptions). It is not a word list.
+- Why we are doing it this way: pick a likelihood term so the next reader can compare products, and keep that term off the 2.1.7 evidence scale. Classroom terms only. No invented percents.
+- What we are *not* doing in this lesson: Admiralty letters. Actor profile. Confidence scale rewrite. Structured techniques. No lab.
 - Extra step: none.
 
+Use the same names as the student guide: **likelihood**, **confidence**, and the classroom terms **almost certainly**, **highly likely**, **likely**, **even chance**, **unlikely**, **highly unlikely**, and **remote**. **Confidence level** on an estimative statement still means how probable, not the 2.1.7 low / medium / high evidence scale. **A12** is the course incident. **PRD** is the course-fiction adversary.
+
 **Key Teaching Points:**
-- Likelihood ≠ confidence.
+- Likelihood is not confidence.
 - “Could be” is not a term.
 
 **Required Materials:**
@@ -38,19 +40,23 @@ Write and read a likelihood term. Do not confuse it with confidence.
 
 Same as the student guide.
 
-**Mapped Items:** K 2.2.1 ; T 2.2.1.1
+**Mapped Proficiency Items:**
+- K: 2.2.1 – Estimative language
+- T: 2.2.1.1 – Use and interpret estimative language in analytic judgments
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Comparable uncertainty |
-| Key Concepts            | 12 min    | Terms; A12 sentence |
+| Introduction (required) | 3 min     | Likelihood words, not the evidence scale |
+| Key Concepts            | 12 min    | Terms; write and interpret |
 | Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
+| Summary                 | 2 min     | |
+| **Total**               | **~21 min** | |
 
 ---
 
@@ -58,26 +64,31 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write purpose + the classroom list. Walk “likely the A12 payload host.” Fail “could be PRD.”
-
-If they say high confidence: “2.1.7. Different axis.”  
-If they put 75%: “No percents unless their shop card says so.”
+**Talking Points:**
+- Open with the job: analysts write judgments other people act on, and those people should not guess whether “could be” means likely or remote.
+- Write the purpose: make uncertainty comparable. Do not hide behind “we believe.”
+- Walk the classroom list. Stop. These are this lesson’s terms, not a live ODNI card. No percents unless their shop card says so.
+- Likelihood is how probable. Confidence is how good the evidence is (2.1.7). They can both appear. They are not the same word.
+- Walk “likely the A12 payload host.” Fail “could be PRD.”
+- If they say high confidence: that is 2.1.7. Different axis.
+- If they put 75%: no percents unless their shop card says so.
+- If they want Admiralty letters: that is 2.2.3. If they want ACH: that is 2.2.2.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Likely = high confidence. True or false?**  
-   **Answer:** False. Likelihood vs how good the evidence is.  
-   **Explanation:** Outline c / vs 2.1.7.
+1. **“Likely” and “high confidence” mean the same thing. True or false?**  
+   **Answer:** False. Likelihood is how probable. High confidence is how good the evidence is.  
+   **Explanation:** The two words can both appear in one judgment. They are not interchangeable.
 
-2. **Why estimative language?**  
+2. **Why does estimative language exist?**  
    **Answer:** So uncertainty is comparable. The reader does not guess.  
-   **Explanation:** Outline a.
+   **Explanation:** “Could be” and “we believe” hide whether the claim is likely or remote.
 
-3. **A12 sentence with a term?**  
+3. **Write one A12 sentence that uses a classroom term (not “could be”).**  
    **Answer:** Any legal classroom term in a full sentence, e.g. “The update domain is **likely** the payload host for A12.”  
-   **Explanation:** Task 1.
+   **Explanation:** The product is a term the next reader can compare. “Could be PRD” fails.
 
 ---
 

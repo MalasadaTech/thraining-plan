@@ -5,7 +5,7 @@
 - CTI: 2.1.7 B / C / C ; 2.1.7.1 3c / 4c / 4d  
 - Hunter: 2.1.7 A / B / B ; 2.1.7.1 1a / 2b / 3c  
 - SOC: 2.1.7 A / A / A ; 2.1.7.1 1a / 1a / 1a  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -24,7 +24,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts name **who or what cluster** — at a type and a confidence — so defense aims at the right cluster. This is not a finished actor profile (**2.11.1.2**). Estimative wording depth is **2.2.1**. You do **not** invent a nation-state as fact.
+CTI analysts name **who or what cluster** sits behind activity — at a type and a confidence — so collection, hunt, and defense aim at the right cluster. That is the job in this lesson: read an attribution statement, say what type it claims, and whether the evidence earns that confidence. This is not a finished actor profile (**2.11.1.2**). Estimative wording depth is **2.2.1**. You do **not** invent a nation-state as fact.
 
 | Idea | Meaning |
 |------|---------|
@@ -33,14 +33,18 @@ CTI analysts name **who or what cluster** — at a type and a confidence — so 
 | **Activity group** | A cluster of activity (infra, malware, ops). You can defend against a cluster without a country |
 | **Nation-state** | A government sponsor. Needs more than a vendor label |
 
-**Classroom confidence (this lesson only — not a live ODNI card):** **Low** = thin or single-source. **Medium** = more than one independent line, alternatives remain. **High** = several independent lines; alternatives are weak.
+**Shared hosting** means more than one customer sat on the same IP or range, so that address is not “theirs.” A **false flag** is planted evidence meant to look like someone else. A vendor marketing name is a **label**, not proof. One blog is one source.
+
+**Classroom confidence (this lesson only — not a live ODNI card):** **Low** means the evidence is thin or single-source. **Medium** means more than one independent line, and alternatives still remain. **High** means several independent lines, and alternatives are weak. If your shop publishes a confidence card, use it. Do not treat these three words as live policy.
 
 A name on a PDF (“PRD APT”) is a **vendor label**, not proof of who they are.
 
-**What good looks like:**
+**What good looks like:** someone gives you a claim. You name the type claimed, the confidence claimed, and whether the evidence present earns both.
 
-- **Assess:** “Vendor PDF says PRD APT, so this is a nation-state, high confidence.” **Fail.** Type claimed is nation-state; evidence is a label. Confidence is too high. You may say **activity group / low** until internals support more.
-- **A12** internals (encoded PowerShell, update domain, `203.0.113.88`) support an **activity cluster**. They do **not** by themselves prove a government.
+- Given: “Vendor PDF says PRD APT, so this is a nation-state, high confidence.” **Fail.** Type claimed is nation-state. Evidence is a label. Confidence is too high. Honest read: **activity group / low** until independent evidence supports more.
+- Given: incident **A12** — encoded PowerShell, an update domain, and `203.0.113.88`. Those facts can support an **activity cluster**. They do **not** by themselves prove a government.
+
+Do not write the finished actor profile. Do not swap in likelihood words such as likely or almost certainly (**2.2.1**).
 
 ---
 
@@ -54,7 +58,7 @@ A name on a PDF (“PRD APT”) is a **vendor label**, not proof of who they are
 
 ## 3. Summary
 
-Attribute the cluster you can defend. Name type and confidence. A PDF label is not high nation-state.
+Attribute the cluster you can defend. Name type and confidence. A vendor label is not high-confidence nation-state.
 
 **Next:** **2.1.8** Collection sources and methods.
 
@@ -65,4 +69,4 @@ Attribute the cluster you can defend. Name type and confidence. A PDF label is n
 - 2.1.6 – Tailoring to audience (previous)
 - 2.1.8 – Collection sources
 - 2.2.1 – Estimative language
-- 2.11.1.2 – Actor profile (not this hour)
+- 2.11.1.2 – Actor profile (not this lesson)

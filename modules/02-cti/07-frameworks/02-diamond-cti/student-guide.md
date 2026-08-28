@@ -5,7 +5,7 @@
 - CTI: 2.7.2 B / C / C ; 2.7.2.1 3c / 4c / 4d  
 - Hunter: 2.7.2 B / C / C ; 2.7.2.1 3c / 4c / 4d  
 - SOC: 2.7.2 A / B / B ; 2.7.2.1 1a / 2b / 3c  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -24,18 +24,26 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts use Diamond to see **what they know and do not know**. The floor is **0.6.2**. This hour is a **report / activity set**. You do **not** assign ATT&CK IDs (**2.7.1**). You do **not** fill Adversary with “PRD APT.”
+CTI analysts put the Diamond Model on a **report or activity set** so the product shows what they know and what they do not. Hunt and detection reuse that product. The job in this lesson is to fill the four vertices from the evidence you have, name the **weakest** vertex, and refuse to put a vendor APT name in **Adversary**. That is how this desk keeps attribution honest on the product. You do **not** write an actor profile here (**2.11**). You do **not** assign ATT&CK IDs (**2.7.1**).
+
+The four vertices are **Adversary**, **Capability**, **Infrastructure**, and **Victim**. Fill each from the report or activity set in front of you. The weakest vertex is the one with the least evidence. On a CTI product, that gap **constrains the write-up**: you do not guess a group name to make the card look complete.
+
+**A12** is the classroom activity set: encoded PowerShell on **WS-JLEE** (`jlee`) fetched `update.exe` from the update domain / `203.0.113.88`.
 
 | Vertex | Fill with | A12 classroom |
 |--------|-----------|----------------|
-| **Adversary** | Who you can defend against | Unknown cluster — **not** a vendor label |
+| **Adversary** | Who you can defend against — only if you have evidence | Unknown cluster — **not** a vendor label |
 | **Capability** | What they used | Encoded PowerShell; `update.exe` |
-| **Infrastructure** | Where they hosted it | Update domain / `203.0.113.88` |
+| **Infrastructure** | Where they hosted it or talked through it | Update domain / `203.0.113.88` |
 | **Victim** | Who was hit | **WS-JLEE** / `jlee` / DYA |
 
-**Weakest** is usually **Adversary** until internals support a cluster. A PDF name does not fill that vertex.
+**Weakest** on A12 is **Adversary**. Internals support the other three vertices. A PDF name such as “PRD APT” does not fill Adversary. Write the unknown cluster and name Adversary as weakest.
 
-**What good looks like:** four fills + “weakest = Adversary (label only).” Reject “Adversary = PRD APT.”
+Do not add the beacon POST to this product. That traffic is not the A12 activity set.
+
+**What good looks like:** four fills + “weakest = Adversary.” Reject “Adversary = PRD APT.”
+
+Kill Chain stages are the next lesson (**2.7.3**).
 
 ---
 
@@ -49,7 +57,7 @@ CTI analysts use Diamond to see **what they know and do not know**. The floor is
 
 ## 3. Summary
 
-Four vertices. Weakest named. Vendor label is not Adversary.
+Four vertices on the CTI product. Weakest named — that gap drops a who-claim. A vendor label is not Adversary.
 
 **Next:** **2.7.3** Kill Chain for CTI.
 
@@ -58,6 +66,7 @@ Four vertices. Weakest named. Vendor label is not Adversary.
 ## 4. Related modules
 
 - 2.7.1 – ATT&CK for CTI (previous)
-- 2.7.3 – Kill Chain
-- 0.6.2 – Diamond floor
+- 2.7.3 – Kill Chain for CTI
+- 0.6.2 – Diamond Model
 - 2.1.7 – Attribution
+- 2.11 – Actor profile

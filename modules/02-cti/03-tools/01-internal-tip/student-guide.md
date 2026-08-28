@@ -5,7 +5,7 @@
 - CTI: 2.3.1 B / C / C ; 2.3.1.1 3c / 4c / 4d  
 - Hunter: 2.3.1 A / B / B ; 2.3.1.1 1a / 2b / 3c  
 - SOC: 2.3.1 A / A / B ; 2.3.1.1 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Say what the internal TIP is for, and what it is **not**.
-2. Search, retrieve, and use it to support enrichment or analysis of an indicator you already have.
+1. Say what the internal threat intelligence platform (TIP) is for, how to search it, and how it supports enrichment, analysis, and production.
+2. Search, retrieve, and use it to support enrichment or analysis of an indicator or report you already have.
 
 **Mapped Proficiency Items:**
 - K: 2.3.1 – Internal threat intelligence platform
@@ -24,18 +24,34 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts look up **what this shop already holds** before they open a public tool. The TIP is the **intel store**. You do **not** re-teach VirusTotal (**0.7** / **2.9**). You do **not** author STIX (**2.10**). You do **not** invent a Harbor URL as policy. If your shop has a real TIP, use those screens.
+CTI analysts look up **what this organization already knows** about a hash, IP, domain, or report before they treat a public lookup as new. That store is the internal **threat intelligence platform (TIP)**. You search it so you do not miss a prior sighting, duplicate work, or invent a hit that is not there.
+
+The TIP is **our** intel store. It is **not** VirusTotal, Silent Push, or any other public tool from **0.7**. Those tools answer a public question. This lesson is the internal check: do we already hold this? Advanced pivot is **2.9**. STIX authoring is **2.10**. The product name on the screen may differ. The jobs do not.
 
 | Function | Job |
 |----------|-----|
-| **Store** | Indicators, reports, sightings, cluster labels *we* already have |
-| **Search / retrieve** | Find what we already know about a hash, IP, or domain |
-| **Link** | Attach a new sighting to an existing object — or record **not in TIP** |
+| **Store** | Indicators, reports, and sightings we already have |
+| **Search / retrieve** | Find what we already know about a hash, IP, domain, or report |
+| **Link** | Attach this observation to an existing object when one is there |
+
+A **sighting** is a record that this organization saw the indicator.
+
+**How to search.** You already have a value. Open the TIP. Search the field that matches that type — a hash in a hash search, a domain in a domain search. Open the object that comes back and read what is already recorded. If nothing comes back, write **not in TIP**. A search in the wrong field is not a miss.
+
+**How the TIP supports the work.**
+
+| Use | What it does |
+|-----|----------------|
+| **Enrichment** | Prior notes and related objects we already hold |
+| **Analysis** | What we hold versus what a public tool would add. A miss is a **gap**, not benign. |
+| **Production** | Cite the object you retrieved, or cite the miss, so the product shows internals were checked |
+
+Do not author a STIX bundle here (**2.10**). Do not run a multi-hop pivot here (**2.9**).
 
 **What good looks like:**
 
-- **Search:** the update domain or the hash of Temp `invoice.vbs` (**A12**). Write what you **retrieved** (a prior sighting, a cluster label) or **not in TIP**.
-- **Use:** if a prior object exists, **link** this RFI as a sighting. If not, say the TIP added nothing. Do not invent a hit.
+- **Search:** given a domain or file hash you already have. Write the object you **retrieved**, or **not in TIP**.
+- **Use:** if a prior object exists, **link** this observation to it (a sighting) and cite it. If not, say the TIP added nothing. Do not invent a hit.
 
 A TIP miss is a gap, not “benign.”
 
@@ -44,14 +60,14 @@ A TIP miss is a gap, not “benign.”
 ## 2. Knowledge Check
 
 1. The internal TIP is the same as VirusTotal. True or false?
-2. Name two core TIP jobs.
-3. You search the update domain for **A12**. What two results can you write, and what must you **not** invent?
+2. Name two core TIP functions.
+3. You search a domain you already have. What two results can you write, and what must you not invent?
 
 ---
 
 ## 3. Summary
 
-Search what we already hold. Retrieve it or say it is missing. Link a sighting. Do not invent a hit.
+The internal TIP is this organization's store. Search the matching type. Retrieve the object or write **not in TIP**. Link a sighting when one exists. A miss is a gap, not benign. Do not invent a hit.
 
 **Next:** **2.4.1** File similarity hashes.
 
@@ -61,5 +77,6 @@ Search what we already hold. Retrieve it or say it is missing. Link a sighting. 
 
 - 2.2.4 – Cognitive biases (previous)
 - 2.4.1 – File similarity
-- 0.7 / 2.9 – External tools / Relations
+- 0.7 – External tools
+- 2.9 – Platform depth / pivot
 - 2.10 – STIX authoring

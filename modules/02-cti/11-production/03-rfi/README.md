@@ -10,9 +10,9 @@
 | Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |-----------|------|------|-----------------|-----------|--------------|-----------|
 | 2.11.3 | K | Handling RFIs | 2.11.3 a–b | A / A / A | A / A / B | B / C / C |
-| 2.11.3.1 | T | Evaluate, prioritize, and produce a response | 2.11.3.1 | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
+| 2.11.3.1 | T | Evaluate, prioritize, and produce a response to an RFI | 2.11.3.1 | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.11.3**. SOC RFI type is **1.5.1**. Local queue is **2.12**. No lab.
+The teaching-unit ID is **2.11.3**. SOC RFI type is **1.5.1**. Finished-product structure is **2.11.1**. Dissemination is **2.11.2**. Local queue is **2.12**. Classroom RFI queue is lesson-only, not live org policy. No lab.
 
 ## Concepts taught
 

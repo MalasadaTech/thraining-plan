@@ -5,7 +5,7 @@
 - CTI: 2.1.5 B / C / C ; 2.1.5.1 3c / 4c / 4d  
 - Hunter: 2.1.5 A / B / B ; 2.1.5.1 1a / 2b / 3c  
 - SOC: 2.1.5 A / A / B ; 2.1.5.1 1a / 1a / 1a  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -24,7 +24,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts check whether the product lets someone **act** on the requirement (**2.1.4**). This hour is the **product**, not the question. You do **not** rewrite for audience (**2.1.6**). You do **not** write the actor profile (**2.11**). Hunt “can I hunt this?” is **3.4.1** — a different test.
+CTI analysts check whether a write-up lets someone **act**. An interesting finding is not enough. Someone has to be able to do a specific next step, in time, on the question the work was supposed to answer. That is the job in this lesson: say whether a piece is **actionable**, and why.
+
+**Actionable** intelligence is a judged answer someone can use. It is not a slogan, and it is not a pile of raw facts. The **requirement** is the question the work exists to answer. This lesson scores the **product** — the write-up — against that question. **2.1.4** wrote the question. This lesson does not rewrite the product for a different audience (**2.1.6**). It does not write an actor profile (**2.11**). Whether a hunter can hunt from the report is a different test (**3.4.1**).
 
 | Actionable when | Fails when |
 |-----------------|------------|
@@ -34,12 +36,12 @@ CTI analysts check whether the product lets someone **act** on the requirement (
 | It is still **in time** for that decision | The window already closed |
 | You state **how sure** you are | A slogan with no caveat |
 
-“Interesting” is not a pass. A hash dump is usually still **data** (**2.1.1**), so it is not actionable intelligence.
+“Interesting” is not a pass. A hash dump with no judgment and no next step is still **data**, so it is not actionable intelligence.
 
-**What good looks like:**
+**What good looks like:** someone gives you a product. You say whether it is actionable, and why. You do not rewrite it for a new reader.
 
-- **Actionable:** “We assess the update domain is the payload host for **A12**. IR has **WS-JLEE**. Treat the domain as such.” Answers the RFI. Who + what.
-- **Not actionable:** “New activity in the news. Be aware.” No requirement answered. No who. No next step.
+- **Actionable:** “We assess the update domain is the payload host for **A12**. IR has **WS-JLEE**. Treat the domain as the payload host.” It answers the named question. It names who acts and what they do.
+- **Not actionable:** “New activity in the news. Be aware.” It answers no requirement. It names no who. It gives no next step.
 
 ---
 
@@ -53,7 +55,7 @@ CTI analysts check whether the product lets someone **act** on the requirement (
 
 ## 3. Summary
 
-Actionable = answers the question + who + what. Slogans fail. This is not the hunt-useful test.
+Actionable intelligence answers the named question, names a who, and names a specific what. Slogans and “be aware” fail. This is not the hunt-useful test.
 
 **Next:** **2.1.6** Tailoring output to the audience.
 

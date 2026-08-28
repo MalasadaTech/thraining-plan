@@ -9,11 +9,11 @@
 
 | Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |-----------|------|------|-----------------|-----------|--------------|-----------|
-| 2.8.3 | K | IOC handling and enrichment | 2.8.3 a–d | A / B / B | B / C / C | B / C / C |
-| 2.8.3.1 | T | Enrich and pivot on IOCs | 2.8.3.1 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.8.3 | K | IOC handling and enrichment concepts | 2.8.3 a–d | A / B / B | B / C / C | B / C / C |
+| 2.8.3.1 | T | Enrich and pivot on IOCs using internal and external tools | 2.8.3.1 | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
 | 2.8.3.2 | T | Link analysis and campaign tracking | 2.8.3.2 | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 
-The teaching-unit ID is **2.8.3**. TTPs are **2.8.2**. Tool depth is **2.9**. No lab.
+The teaching-unit ID is **2.8.3**. Applicable TTPs are **2.8.2**. The hop sentence is **2.8.1**. Relevance and impact are **2.8.4**. VirusTotal Relations is **2.9.1**. Actor profile is **2.11**. No lab.
 
 ## Concepts taught
 

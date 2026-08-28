@@ -5,7 +5,7 @@
 - CTI: 2.12.3 B / C / C ; 2.12.3.1 3c / 4c / 4c  
 - Hunter: 2.12.3 A / A / B ; 2.12.3.1 1a / 1a / 2b  
 - SOC: 2.12.3 A / A / A ; 2.12.3.1 1a / 1a / 1a  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Say that **local customers and channels** exist at the shop, and how you **obtain** that chart.
-2. Route a product using **that** chart — or record that you **do not have it yet**. Do not invent a customer list.
+1. Name that this shop has **primary internal and external customers** and **approved dissemination channels**, and say how you **obtain** that chart.
+2. Send a product using **those** names — or record that you **do not have the chart yet**. Do not invent a customer list.
 
 **Mapped Proficiency Items:**
 - K: 2.12.3 – Local dissemination channels and customers
@@ -24,15 +24,26 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-CTI analysts send the finished product to **this shop’s** customers on **this shop’s** channels. Classroom routing is **2.11.2**. This hour is the **local chart**. Environment / sensors are **0.8**. Do not invent a DYA distro.
+CTI analysts send a **finished product** to the people this shop actually serves, on the path this shop already named. A classroom audience and a classroom channel are not that list. That is the job in this lesson: obtain this shop's named customers and named channels, then send using those names — or write that you do not have the chart yet. Inventing recipients sends the product to the wrong people, or on the wrong path.
 
-| You do | You do not |
-|--------|------------|
-| Obtain the customer / channel chart | Invent `soc-aware@dya` as policy |
-| Use the names **on that chart** | Use SMS because it is faster (**2.11.2**) |
-| Write **do not have the chart yet** | Fill a Harbor/DYA recipient list |
+**Dissemination** here means sending the finished product. The draft itself is **2.11.1**. Local produce / approve / archive is **2.12.2**. Classroom audience, approved-channel idea, and handling marking (TLP-style) are **2.11.2**. Those classroom names are lesson stand-ins. They are not this organization's customer list, and they are not this organization's channel list.
 
-**What good looks like:** “I obtain the local customer/channel chart. If it names IR + an intel ticket path, I use those names for the **A12** product. If there is no chart: **I do not have the chart yet.**”
+| Idea | What it is |
+|------|------------|
+| **Internal customers** | Named recipients **inside** this organization. Obtain the names. Do not guess them. |
+| **External customers** | Named recipients **outside** this organization, if the chart includes them. If it does not, do not add a row. |
+| **Approved channel / method** | The path this shop named for that send. Obtain that name too. |
+
+**Primary** means the main recipients on the chart, not everyone who might like a copy.
+
+You **obtain** the customer / channel chart from the role or place your lead names. You use the names **on that chart**. You do **not** invent a DYA roster or a DYA distro so the product has somewhere to go. Environment and sensors are **0.8** — not a customer list.
+
+Missing the chart does not authorize an unofficial path. Personal SMS and private chat still fail (**2.11.2**).
+
+**What good looks like:** someone asks you to send the **A12** product. You name how the send is done here, or you say the chart is missing. You do not invent recipients.
+
+- Chart shown: use the customer names and the channel name **on that chart** for **A12**. Do not add a person the chart does not name.
+- No chart: **I do not have the chart yet.** Do not invent a distro to complete the send.
 
 This closes **2.x** CTI. Hunt is **3.x**.
 
@@ -40,23 +51,24 @@ This closes **2.x** CTI. Hunt is **3.x**.
 
 ## 2. Knowledge Check
 
-1. You should invent a DYA distro so the class has recipients. True or false?
-2. How does this hour differ from **2.11.2**?
+1. You should invent a DYA customer list so the product has recipients. True or false?
+2. How does this lesson differ from **2.11.2**?
 3. You have not been shown a chart. What do you write, and what channel do you still **reject**?
 
 ---
 
 ## 3. Summary
 
-Obtain the local chart. Use those names. Or write not yet. Do not invent recipients. CTI `2.x` ends. Hunt is `3.x`.
+Obtain this shop's customer and channel chart. Use those names. Or write that you do not have it yet. Do not invent recipients. Classroom TLP and classroom channels stay in **2.11.2**. CTI `2.x` ends. Hunt is `3.x`.
 
-**Next:** **3.1.1** Purpose of threat hunting.
+**Next:** **3.1** Purpose of threat hunting.
 
 ---
 
 ## 4. Related modules
 
-- 2.12.2 – Local produce/approve (previous)
-- 2.11.2 – Classroom dissemination
-- 0.8 – Environment / sensors
-- 3.1.1 – Purpose of threat hunting
+- 2.12.2 – Local production and approval (previous)
+- 2.11.2 – Classroom dissemination (audience, channel, TLP / marking)
+- 2.11.1 – Finished products
+- 0.8 – Environment / signal flow
+- 3.1 – Purpose of threat hunting
