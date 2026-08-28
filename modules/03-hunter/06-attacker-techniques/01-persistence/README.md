@@ -12,15 +12,16 @@
 | 3.6.1 | K | Persistence techniques | 3.6.1 a–d | A / B / B | B / C / C | A / B / B |
 | 3.6.1.1 | T | Recognize persistence techniques in logs or telemetry | 3.6.3 task 1 | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
 
-The teaching-unit ID is **3.6.1**. Privilege escalation is **3.6.2**. Named-technique hunt is **3.6.3**. No lab.
+The teaching-unit ID is **3.6.1**. Registry activity reading is **1.1.5**. Privilege escalation is **3.6.2**. Named-technique hunt is **3.6.3**. ATT&CK remapping is **3.5**. No lab.
 
 ## Concepts taught
 
 - persistence techniques
 - registry-based persistence
-- startup-folder persistence
+- start menu / startup folder persistence
 - scheduled-task persistence
-- other common persistence
+- other common persistence methods
+- recognizing persistence techniques in logs or telemetry
 
 ## Artifacts
 

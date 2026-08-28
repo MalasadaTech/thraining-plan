@@ -1,7 +1,7 @@
 # Module 3.1 – Purpose of Threat Hunting  
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
 **Total Suggested Slides:** 7
 
@@ -9,81 +9,92 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 3.1 – Purpose of Threat Hunting  
-**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Why hunters look past the alert queue  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Missed activity and gaps. Not a rewritten ticket.
+This is the start of the hunter track. This lesson names why hunting exists. It does not pick a hunt type or write a hunt card.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Find what **alerts missed**.
+SOC works the **alerts that already fired**.
 
-Name **gaps** detections cannot see.  
-Different product from the SOC ticket.
+Some malicious or suspicious activity **never appears** in that list.
+
+Hunters look for that missed activity, and they name the **holes** that let it hide.
 
 **Speaker Notes:**  
-CTI answered the domain. Hunt looks for more hosts.
+This slide is the student intro. Hunting exists next to the queue and the intel note, not instead of them. Do not pick a hunt type today.
 
 ---
 
-### Slide 3 – Two jobs
-**Title:** Missed activity vs gaps
+### Slide 3 – Missed activity
+**Title:** Missed activity
 
-**Missed** — it happened; no queue row.  
-**Gap** — even looking, the detection would not have fired.
+Malicious or suspicious activity happened.
+
+**No** alert fired. That is a **false negative**.
+
+It is not a fired alert you dislike.
 
 **Speaker Notes:**  
-Outline a–b.
+They already classified false negatives in 1.4.2. Hunting is one place you go looking for those misses. Stay off hunt types.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** A12
+### Slide 4 – Detection gaps and visibility gaps
+**Title:** Detection gaps and visibility gaps
 
-**Missed** — `GET /update.exe :8080`, no alert.  
-**Look for** — HKCU Run **`Updater`**, more `invoice.vbs`, `update.exe` on other hosts.
+**Detection gap** — the logs exist; no detection would have caught it.
 
-The first alert did not require the Run key.
+**Visibility gap** — you cannot see it even if you look. The telemetry is not there.
+
+Name the hole. Do not pretend the hunt ran.
 
 **Speaker Notes:**  
-Story bible. Tasks 1–2.
+Both are holes. They are not the same hole. ATT&CK mapping of a hunt waits for 3.5.1. Today is only the names.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Examples existing controls missed
+**Title:** Examples existing controls missed
 
-No hunt type (**3.2.1**).  
-No hunt card (**3.2.2**).  
-No invented ticket (**3.7**).
+The first **A12** alert is the process create. It did **not** require the Run key.
+
+**Missed** — `GET /update.exe` to `203.0.113.88:8080`, no alert.
+
+**Look for** — HKCU Run **`Updater`**, `update.exe`, or another `invoice.vbs` on other hosts.
+
+The product is a **package**, not a rewritten SOC ticket.
 
 **Speaker Notes:**  
-Types next.
+Show this given before the knowledge check. The download is the miss. The Run key is a look-for the first alert did not require. If they retell the process chain, that is still the SOC ticket.
 
 ---
 
 ### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Hunt rewrites the SOC ticket with a better story. True or false?  
-2. What two jobs does hunting exist to do?  
-3. Name one **A12** miss, and one hunt look-for that was **not** on the first alert.
+1. Threat hunting rewrites the SOC ticket with a better story. True or false?  
+2. What two jobs does hunting exist to do in the security program?  
+3. HTTP shows `GET /update.exe` to `203.0.113.88:8080`, and no alert fired. The first process alert did not require the HKCU Run value `Updater`. Name the missed activity, and name one thing a hunt should look for that was not on that first alert.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Missed activity. Gaps. A package, not a rewritten ticket.
+Find what the alerts missed.  
+Name detection and visibility gaps.  
+The product is a package, not a rewritten ticket.
 
 **Next:** **3.2.1** Hunt types
 
 **Speaker Notes:**  
-Do not open types unless scheduled.
+Hunt types are next. Do not open that lesson unless it is scheduled.

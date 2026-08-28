@@ -13,20 +13,28 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Recognize elevation in a log. Not persistence. Not an A12 fact.
+Recognize a privilege change in host telemetry. Name the method and the indicator. This is not persistence, and it is not a named-technique hunt.
 
 **Context (plain language):**
 
-- What this hour is for: Hunters tell persistence apart from a privilege change, and name the indicator that proves the change.
-- How it hooks to the hour before: 3.6.1 recognized the Run key as persistence.
-- How it hooks to the hour after: 3.6.3 hunts **one named** technique.
-- Why we are doing it this way: Short 0.x / 4.x voice. Outline a–b + recognize task. Classroom elevation row is not a bible A12 event.
-- What we are *not* doing this hour: Hunt TA0004. Call the Run key privesc. Invent DYA tickets. No lab.
+- What this lesson is for: Hunters read host telemetry to see whether an actor gained a higher privilege than they started with. They name the method and the indicator that proves the change.
+- How it hooks to the lesson before: 3.6.1 recognized the Run key as persistence — something that will run again.
+- How it hooks to the lesson after: 3.6.3 hunts one named technique, not the whole privilege-escalation class.
+- Why we are doing it this way: after naming persistence, name elevation as a different job so the next lesson can hunt one method instead of the whole class.
+- What we are *not* doing in this lesson: hunting a named technique (3.6.3). Calling the A12 Run key elevation. ATT&CK remapping (3.5). Invented tickets (3.7). No lab.
 - Extra step: none.
 
+Use the same names as the student guide: **privilege escalation**, **elevation**, **token theft / impersonation**, **UAC bypass**, **auto-elevate**, **privileged service / image abuse**, **indicator**, and **visibility gap**. The `helpdesk.exe` and `fodhelper.exe` lines are classroom examples. They are not A12 facts. The A12 Run key is persistence, not this class.
+
 **Key Teaching Points:**
-- Already-SYSTEM is not elevation.
-- A12 Run key is persist, not privesc.
+- Elevation is a privilege change. Persistence is something that will run again.
+- A process that was already SYSTEM is not elevation. Usual UAC consent is not a bypass.
+- Name the method and the indicator, or name a visibility gap.
+
+**Common Student Challenges:**
+- Call the Run key privilege escalation. Why: persistence also starts a process. Example: writing “elevation” for HKCU Run `Updater` when the child still runs as the logged-on user.
+- Treat an already-SYSTEM process as elevation. Why: the task is a privilege *change*. Example: labeling a SYSTEM service start as token theft when the parent was already SYSTEM.
+- Treat expected UAC consent as a bypass. Why: a Yes on a signed installer is usual. Example: calling `Setup.exe` with a consent event a UAC bypass.
 
 **Required Materials:**
 - Student Guide
@@ -38,16 +46,20 @@ Recognize elevation in a log. Not persistence. Not an A12 fact.
 
 Same as the student guide.
 
-**Mapped Items:** K 3.6.2 ; T 3.6.2.1
+**Mapped Proficiency Items:**
+- K: 3.6.2 – Privilege escalation techniques
+- T: 3.6.2.1 – Recognize privilege escalation techniques in logs or telemetry
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Lower → higher |
-| Key Concepts            | 12 min    | Methods + A12 is not this |
+| Introduction (required) | 3 min     | Privilege change, not autorun |
+| Key Concepts            | 12 min    | Methods + indicators; three givens |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 1 min     | |
 | **Total**               | **~20 min** | |
@@ -58,26 +70,29 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write elevation vs persist. Walk token / UAC / service. Label the classroom row as classroom.
-
-If they call Run **`Updater`** privesc: “3.6.1. Same user.”  
-If they invent a Night Owl ticket: “Not a bible A12 fact. 3.7.”
+**Talking Points:**
+- Open with the job: hunters have to say whether the actor gained a higher privilege, or only set something to run again.
+- Walk the method table. Stop on the distinguisher: an auto-elevate parent with no consent is UAC bypass; a user-context parent that is not auto-elevate, with a SYSTEM or High-integrity child, is token theft.
+- Walk the three givens. `helpdesk.exe` → SYSTEM `cmd.exe` with no consent is token theft. `fodhelper.exe` → unknown executable with no consent is UAC bypass. HKCU Run `Updater` is persistence, same user.
+- If they call Run `Updater` elevation: that is 3.6.1. It starts as the logged-on user.
+- If they hunt “privilege escalation” as a class: that is 3.6.3. Today is recognize the method.
+- If they invent a ticket name: that is local hunt control (3.7). Do not invent one here.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Run Updater is privesc. True or false?**  
-   **Answer:** False. Persistence.  
-   **Explanation:** Stay-in / 3.6.1.
+1. **HKCU Run `Updater` is privilege escalation. True or false?**  
+   **Answer:** False. It is persistence.  
+   **Explanation:** The Run key starts as the logged-on user. That is 3.6.1. Elevation needs a privilege change you can point at.
 
-2. **Two methods?**  
-   **Answer:** Any two of: token theft, UAC bypass, privileged-service abuse, other.  
-   **Explanation:** Outline a.
+2. **Name two privilege-escalation methods.**  
+   **Answer:** Any two of: token theft / impersonation, UAC bypass, privileged service / image abuse. A named “other” method counts only if they can point at it.  
+   **Explanation:** The lesson names those Windows methods. “Privilege escalation” as a class is not a method.
 
-3. **User parent → SYSTEM cmd, no consent?**  
-   **Answer:** Token theft. Proof: parent identity vs child identity, no consent.  
-   **Explanation:** Outline b / task 1.
+3. **A user `helpdesk.exe` launches `cmd.exe` as SYSTEM with no consent event. What method, and what indicator proves it?**  
+   **Answer:** Token theft. Proof: parent identity versus child identity, and no consent.  
+   **Explanation:** `helpdesk.exe` is not an auto-elevate Windows binary, so this is not a UAC bypass. The parent was user-context and the child is SYSTEM.
 
 ---
 

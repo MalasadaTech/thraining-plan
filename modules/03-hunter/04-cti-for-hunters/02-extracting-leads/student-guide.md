@@ -5,7 +5,7 @@
 - Hunter: 3.4.2 B / C / C ; 3.4.2.1–3.4.2.3 3c / 4c / 4d  
 - SOC: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b  
 - CTI: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -13,8 +13,8 @@
 
 By the end of this module, you will be able to:
 
-1. Pull hunt-suitable **TTPs** and **artifacts** from a report that already passed the gate.
-2. Drop what you cannot search, then state the **hunt question** the leftovers support.
+1. Pull hunt-suitable **TTPs** and **artifacts** from a CTI report that is already worth hunting.
+2. Drop what you cannot search, then state the **hunt question** those leftovers support.
 
 **Mapped Proficiency Items:**
 - K: 3.4.2 – Extracting hunt leads from CTI
@@ -26,26 +26,40 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-You extract **after** the **3.4.1** gate. If the report is awareness-only or a full hand-off, stop. Mixed reports: extract only the hunt-worthy slice. Full card format is **3.2.2**. Mapping coverage is **3.5**. This hour is **keep / drop / question**.
+A hunter does not paste a CTI report into a search. After a report is already worth hunting, they pull the methods and objects they can actually search internally, drop the rest, and write one **hunt question** those leftovers can answer. That is the job in this lesson: keep, drop, then the question — so you do not hunt a slogan, an expired hash, or a whole address block.
 
-| Kind | What it is | Keep when |
-|------|------------|-----------|
-| **TTP** | How they work — a method you can search | Specific enough, and you have telemetry |
-| **IOC** | A named object — hash, host, IP, URL | Current, rare enough, queryable here |
+**3.4.1** is whether to hunt at all. This lesson is extract. It is **not** how to author STIX (**3.4.3** / **2.10**). It is **not** mapping the hunt onto ATT&CK (**3.5**). The full hunt-card format is **3.2.2**.
+
+If the report is awareness-only or a full hand-off, stop. If it is mixed, extract only the hunt-worthy slice.
+
+| Kind | What it is | Keep when it can drive a hunt |
+|------|------------|-------------------------------|
+| **TTP** | How they work — a method (tactic, technique, or procedure) | Specific enough, and you have **telemetry** (logs you can search) |
+| **IOC** | A named object — hash, host, IP, or URL (indicator of compromise) | Current, rare enough, and queryable here |
 | **Behavior** | A pattern over time | Off-baseline or scoped, not daily admin |
 
-**Drop:** no telemetry (name the **visibility gap**), expired IOCs, noise (whole `/24`, slogan TTP, already-blocked firehose).
+Copying the IOC appendix is not extract. Extract is a keep list you can search.
 
-Record ATT&CK IDs **if the report already has them**. Do not invent IDs. Do not open Navigator (**3.5**).
+**Drop** what you cannot hunt:
 
-**What good looks like (A12 slice):**
+| Drop | Why |
+|------|-----|
+| **No telemetry** | You cannot see it here. Name that **visibility gap**. Do not keep it as a lead. |
+| **Expired IOC** | Stale, or a hash with no reuse note (for example a 2019 hash the report does not say is still in use). |
+| **Noise** | A slogan TTP (“they use persistence”), a whole `/24`, or already-blocked objects that only produce volume. |
+
+Record **ATT&CK** IDs **if the report already printed them**. Do not invent an ID the page never had. Do not open ATT&CK Navigator. Mapping this hunt onto tactics and techniques is **3.5**.
+
+**What good looks like:** someone gives you a hunt-worthy report. You write keep TTPs, keep artifacts, drop lines, and one hunt question. The question is an if/then the leftovers can answer. It must be able to come back empty. If the leftovers cannot form that question, you extracted noise.
+
+Classroom slice (**A12**): a vendor report leftover about the same activity this course already uses — HKCU Run **`Updater`**, a download of `/update.exe` on port **8080**, and more `invoice.vbs`.
 
 - **Keep TTP:** HKCU Run **`Updater`** → `%TEMP%\update.exe`.
 - **Keep artifacts:** `GET /update.exe` to `203.0.113.88:8080`; more `invoice.vbs`.
-- **Drop:** “they use persistence”; a 2019 hash with no reuse note; the vendor `/24`.
-- **Question:** If more A12 persistors exist, we see Run **`Updater`**, `update.exe`, or another `invoice.vbs`.
+- **Drop:** “they use persistence”; the whole `203.0.113.0/24`.
+- **Hunt question:** If more A12 persistors exist, we see Run **`Updater`**, `update.exe`, or another `invoice.vbs`.
 
-If leftovers cannot form a question that can fail, you extracted noise.
+Do not write the SIEM query here. Do not fill the four-field hunt card (**3.2.2**). Do not tell the rest of the incident.
 
 ---
 
@@ -59,7 +73,7 @@ If leftovers cannot form a question that can fail, you extracted noise.
 
 ## 3. Summary
 
-Keep searchable TTPs and artifacts. Drop noise. One question that can fail.
+Keep searchable TTPs and artifacts. Drop noise, expired objects, and anything you cannot see. One hunt question that can come back empty.
 
 **Next:** **3.4.3** STIX as hunt input.
 
@@ -67,7 +81,7 @@ Keep searchable TTPs and artifacts. Drop noise. One question that can fail.
 
 ## 4. Related modules
 
-- 3.4.1 – Gate (previous)
-- 3.4.3 – STIX input
-- 3.2.2 – Hunt card
-- 3.5.1 – ATT&CK map
+- 3.4.1 – Assessing CTI for hunting value
+- 3.4.3 – STIX as hunt input
+- 3.2.2 – Hunt development concepts
+- 3.5.1 – Using MITRE ATT&CK for hunt planning

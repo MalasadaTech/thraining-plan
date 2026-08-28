@@ -1,7 +1,7 @@
 # Module 3.2.1 – Hunt Types  
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
 **Total Suggested Slides:** 7
 
@@ -9,62 +9,67 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 3.2.1 – Hunt Types  
-**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Intel, hypothesis, reactive, anomaly  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Four types. Execute = type + look-for. No lab.
+This lesson names the four hunt types and what execute looks like for each. It does not teach the hunt card, and it is not a SIEM session.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Pick **why** you are searching.
+Hunters pick a **type** so the search has a reason.
 
-Name the type and the look-for.  
-Not the written card.
+After **A12**, the start might be a CTI domain, an if/then, a known incident, or an odd pattern with no intel yet.
+
+Mix the starts and you look for the wrong thing.
 
 **Speaker Notes:**  
-3.1 was why hunt exists.
+This slide is the student intro. 3.1 said why hunting exists. This lesson is which kind of hunt you are running. Do not write the card today.
 
 ---
 
 ### Slide 3 – Four types
 **Title:** Intel, hypothesis, reactive, anomaly
 
-**Intel-driven** — CTI seed.  
-**Hypothesis-driven** — if they persist, we should see X.  
-**Reactive** — after a known incident.  
-**Anomaly-based** — odd pattern, no intel yet.
+**Intel-driven** — starts from a CTI fact.  
+**Hypothesis-driven** — starts from “if they persist, we should see X.”  
+**Reactive** — starts from a known incident.  
+**Anomaly-based** — starts from an odd pattern, with no intel naming it yet.
 
 **Speaker Notes:**  
-Outline a–d.
+One line each. Stop. The start is the type. Neighbors and A12 look-for lines are the next slide.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** A12 execute lines
+### Slide 4 – Execute is type plus look-for
+**Title:** Execute is type plus look-for
 
-**Intel** — search the update domain / file.  
-**Hypothesis** — search Run **`Updater`**.  
-**Reactive** — more `invoice.vbs` after A12.  
-**Anomaly** — GET `:8080` `/update.exe` with no alert.
+**Intel** — search hosts for the update domain or file CTI already worked.  
+**Hypothesis** — search HKCU Run **`Updater`**.  
+**Reactive** — after **A12**, more `invoice.vbs` or `update.exe` on other hosts.  
+**Anomaly** — GET `:8080` `/update.exe` with no alert, and no intel yet.
+
+Name the type, the seed, and the look-for. Not a live SIEM session. Not the written card (**3.2.2**).
 
 **Speaker Notes:**  
-Tasks 4–7 as product lines.
+Walk these four A12 lines before the knowledge check. Execute is that product line. If they open a SIEM or start the card, stop them. Do not invent a ticket.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – The start decides the type
+**Title:** The start decides the type
 
-No hunt card (**3.2.2**).  
-No SIEM session.  
-No invented ticket (**3.7**).
+A CTI domain is **intel-driven**, not an if/then.
+
+“If they persist, we should see Run **`Updater`**” is **hypothesis-driven**, even if a report mentioned persistence.
+
+After **A12**, more `invoice.vbs` on other hosts is **reactive**. Rewriting the **WS-JLEE** process alert is SOC work.
 
 **Speaker Notes:**  
-Development next.
+This is the mix-up slide. A nearby CTI report does not make every hunt intel-driven. Reactive is more of the incident on other hosts, not a better write-up of the first alert.
 
 ---
 
@@ -76,16 +81,17 @@ Development next.
 3. “If they persist, we should see Run `Updater` on more hosts.” Which type, and what do you search?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Four starts. Execute = type + look-for.
+Four starts. Execute is type plus look-for.  
+Not a rewritten ticket. Not a SIEM session.
 
 **Next:** **3.2.2** Hunt development
 
 **Speaker Notes:**  
-Do not open the card unless scheduled.
+3.2.2 is the written card. Stay off hypothesis / scope / priority format unless that lesson is scheduled.

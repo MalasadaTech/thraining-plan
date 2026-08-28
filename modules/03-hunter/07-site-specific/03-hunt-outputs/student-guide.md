@@ -5,7 +5,7 @@
 - Hunter: 3.7.3 B / C / C ; 3.7.3.1 3c / 4c / 4c  
 - SOC: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b  
 - CTI: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes
+**Estimated Time:** 20–25 minutes  
 
 ---
 
@@ -14,7 +14,7 @@
 By the end of this module, you will be able to:
 
 1. Say that **what a finished hunt must produce** and **who it is handed to** (SOC, IR, or CTI) **varies by site**.
-2. **Hand off** only on the path you were shown — or record that you **do not have the chart yet**. Do not invent a recipient.
+2. **Produce** those required outputs and **hand off** only on the path you were shown — or record that you **do not have the local list yet**. Do not invent a recipient.
 
 **Mapped Proficiency Items:**
 - K: 3.7.3 – Hunt outputs and hand-off
@@ -24,40 +24,52 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**3.7.2** was where the hunt is *written down*. This hour is what **leaves** the hunt: the required output and the **hand-off**.
+Hunters finish a hunt by producing what this shop calls **done** and sending that product to the team this shop names. Inventing an output or a recipient so the hunt can close sends the work to the wrong place, or as the wrong product. That is the job in this lesson: obtain the required outputs and the hand-off path, then follow them — or write that you do not have them yet.
 
-This course **does not** publish a DYA output list or recipient chart. You still know *that* hunts often go to SOC, IR, CTI, or DE (**4.x**). You do **not** know *this site’s* names, queues, or “always IR if A12.”
+The hunt **product** is a **package**: more hosts, a gap. That idea is already in **3.1**. It is **not** a rewrite of the SOC ticket. **3.7.2** is where the hunt is written down. This lesson is what **leaves** the hunt.
 
-| Path | You will be shown (locally) | You do **not** do this hour |
-|------|-----------------------------|-----------------------------|
-| **Outputs** | What “done” always includes here | Invent “always file an incident report” |
-| **Hand-off** | Which team and which local channel | Invent `soc@` as policy |
+This course does **not** publish a DYA output list or a DYA recipient list. You know **SOC**, **IR**, and **CTI** exist as kinds of teams. You do **not** know this site's names, queues, or “always IR if **A12**.”
 
-**What good looks like:** “I obtain the output list and the hand-off chart from [role the instructor names, or my lead]. The A12 package (more hosts, the gap) goes **where that chart says**. If none was shown: **I do not have the local chart yet.** I do **not** email a made-up queue.”
+| Idea | What it is |
+|------|------------|
+| **Expected outputs** | What this shop always wants when a hunt is finished. Obtain that list. Do not invent “always file an incident report.” |
+| **Hand-off** | Which team and which local channel receive the package. Obtain that path. Do not invent a queue. |
 
-The hunt product is still a **package**, not a rewrite of the SOC ticket (**3.1**). Who receives the package is a **site** fact.
+**Hand-off** here means sending the finished hunt product. Shops often keep the path as a **hand-off chart**: who gets it, and on which channel. You **obtain** the output list and that chart from the role or place your lead names. You use the names **on that chart**. You do **not** invent a DYA ticket, an email address, or a DE queue so the package has somewhere to go.
+
+SOC reporting is **1.5**. How DE reviews a hunt package is **4.5**. Those are not this site's recipient list.
+
+**What good looks like:** someone asks you to close the **A12** hunt. You name what “done” includes here and who receives the package, or you say those lists are missing. You do not invent a recipient.
+
+- List and chart shown: produce what the output list requires. Send the **A12** package (more hosts, the gap) on the path the chart names. Do not add a team the chart does not name.
+- No list or chart: **I do not have the local output list / hand-off chart yet.** Do not email a made-up queue.
+
+If an instructor overlays a real shop list, that overlay is for the room. It is still not DYA policy.
+
+This closes **3.x** Hunt. Detection Engineer is **4.x**.
 
 ---
 
 ## 2. Knowledge Check
 
 1. You should email a made-up SOC queue so the hunt is “handed off.” True or false?
-2. What two things does this hour obtain?
-3. If no chart was shown, what do you write — and what do you **not** send?
+2. What two things do you obtain so a hunt can close here?
+3. You have not been shown a list or a chart. What do you write, and what do you **not** send?
 
 ---
 
 ## 3. Summary
 
-Obtain outputs and the hand-off chart. Follow it. Or write “not yet” and do not send.
+Obtain the required outputs and the hand-off path. Follow them. Or write that you do not have them yet, and do not send. Do not invent a recipient. Hunt `3.x` ends.
 
-Hunt 3.x ends here. **Next track:** **4.x** Detection Engineer.
+**Next track:** **4.x** Detection Engineer.
 
 ---
 
 ## 4. Related modules
 
-- 3.7.2 – Documentation (previous)
-- 3.1 – Hunt product is a package
+- 3.7.2 – Hunt documentation standards (previous)
+- 3.1 – Purpose of threat hunting (the package)
 - 1.5 – SOC reporting
-- 4.x – DE takes a nominated gap
+- 4.1 – What DE owns
+- 4.5 – Hunt and intel packages

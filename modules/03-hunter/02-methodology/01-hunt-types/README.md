@@ -15,7 +15,7 @@
 | 3.2.1.3 | T | Execute a reactive hunt | 3.2.3 task 6 | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 | 3.2.1.4 | T | Execute an anomaly-based hunt | 3.2.3 task 7 | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
 
-The teaching-unit ID is **3.2.1**. Hunt card is **3.2.2**. Execute = product line, no lab.
+The teaching-unit ID is **3.2.1**. Hunt development (the card) is **3.2.2**. Local hunt tickets are **3.7**. Execute is the product line, not a SIEM session. No lab.
 
 ## Concepts taught
 

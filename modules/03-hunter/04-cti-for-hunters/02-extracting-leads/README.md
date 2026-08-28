@@ -14,13 +14,16 @@
 | 3.4.2.2 | T | Extract hunt-suitable artifacts | 3.4.2.1 task 2 | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
 | 3.4.2.3 | T | State the hunt question those leads support | 3.4.2.1 task 3 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
 
-The teaching-unit ID is **3.4.2**. STIX input is **3.4.3**. ATT&CK mapping is **3.5**. No lab.
+The teaching-unit ID is **3.4.2**. Assessing hunting value is **3.4.1**. STIX input is **3.4.3**. ATT&CK mapping is **3.5**. Hunt-card format is **3.2.2**. No lab.
 
 ## Concepts taught
 
+- extracting hunt leads from CTI
+- TTPs vs IOCs vs behaviors
 - hunt-suitable TTPs
 - hunt-suitable artifacts
-- drop list (no telemetry, expired, noise)
+- what to drop from CTI (no telemetry, expired IOCs, noise)
+- recording ATT&CK IDs from a report
 - hunt question from leftovers
 
 ## Artifacts

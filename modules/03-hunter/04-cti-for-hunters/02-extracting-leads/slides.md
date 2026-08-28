@@ -1,71 +1,91 @@
-# Module 3.4.2 – Extracting Hunt Leads from CTI
+# Module 3.4.2 – Extracting Hunt Leads from CTI  
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 3.4.2 – Extracting Hunt Leads from CTI  
-**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Keep, drop, then the hunt question  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-After the gate. Not the appendix dump.
+3.4.1 decided whether to hunt. This lesson pulls searchable leftovers from a report that already passed that decision. It is not STIX and not ATT&CK mapping.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Pull only what you can **search here**.
+A hunter does not paste a CTI report into a search.
 
-Keep / drop / one **question**.
+Pull only what you can **search here**. Drop the rest. Then write one **hunt question** those leftovers can answer.
+
+This lesson is keep, drop, and the question.
 
 **Speaker Notes:**  
-Awareness or full hand-off: stop.
+This slide is the student intro. Copying an appendix hunts slogans, expired hashes, and whole address blocks. Name keep / drop before anyone maps ATT&CK or opens STIX.
 
 ---
 
-### Slide 3 – Keep vs drop
-**Title:** TTP, IOC, behavior
+### Slide 3 – TTP, IOC, behavior
+**Title:** Which leftovers can drive a hunt
 
-**Keep** — searchable method, current object, scoped pattern.  
-**Drop** — no telemetry, expired, noise.  
-Copy ATT&CK IDs **only if the report printed them**.
+**TTP** — how they work. Keep when it is specific and you have telemetry.  
+**IOC** — a named object (hash, host, IP, URL). Keep when it is current, rare, and queryable here.  
+**Behavior** — a pattern over time. Keep when it is off-baseline or scoped, not daily admin.
+
+Copying the IOC appendix is not extract.
 
 **Speaker Notes:**  
-Outline a–c. Map is 3.5.
+One line each. Telemetry means logs you can search. If they start listing every vendor ATT&CK ID, that is not a keep list yet.
 
 ---
 
-### Slide 4 – What good looks like
+### Slide 4 – What to drop
+**Title:** What to drop
+
+**No telemetry** — you cannot see it here. Name that visibility gap.  
+**Expired IOC** — stale, or a hash with no reuse note.  
+**Noise** — slogan TTP, a whole `/24`, already-blocked volume.
+
+**Speaker Notes:**  
+Walk one example each from the student guide. A 2019 hash with no reuse note is expired. “They use persistence” is noise. Do not keep a `/24` because one IP in it was bad.
+
+---
+
+### Slide 5 – ATT&CK IDs if printed
+**Title:** Record ATT&CK IDs if the report has them
+
+Copy the ID **only if the report printed it**.
+
+Do not invent an ID.  
+Do not open Navigator. Mapping this hunt is **3.5**.
+
+**Speaker Notes:**  
+This is outline recording, not coverage analysis. If they write T1547.001 when the page only said Run Updater, send them back to the printed text.
+
+---
+
+### Slide 6 – Keep, drop, then the question
 **Title:** A12 slice
 
-**Keep** — Run **`Updater`**; `:8080` `/update.exe`; more `invoice.vbs`.  
-**Drop** — “persistence”; a /24; a 2019 hash.  
-**Question** — if more persistors exist, we see those.
+**Keep TTP** — HKCU Run **`Updater`** → `%TEMP%\update.exe`.  
+**Keep artifacts** — `GET /update.exe` `:8080`; more `invoice.vbs`.  
+**Drop** — “they use persistence”; the `203.0.113.0/24`.  
+**Question** — if more A12 persistors exist, we see those.
+
+The question must be able to come back empty.
 
 **Speaker Notes:**  
-Tasks 1–3.
+Show this given before the knowledge check. The unique pattern is the value name Updater, not any Run key. Do not write the four-field card and do not tell the intro plot.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
-
-No Navigator (**3.5**).  
-No STIX authoring (**2.10**).  
-No invented ticket (**3.7**).
-
-**Speaker Notes:**  
-STIX input next.
-
----
-
-### Slide 6 – Knowledge Check
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
 1. Copying the IOC appendix is extract. True or false?  
@@ -73,16 +93,18 @@ STIX input next.
 3. From the A12 slice: one keep TTP, one keep artifact, and the hunt question.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 7 – Summary
+### Slide 8 – Summary
 **Title:** Summary
 
-Keep searchable leftovers. One question that can fail.
+Keep searchable TTPs and artifacts.  
+Drop noise, expired objects, and anything you cannot see.  
+One hunt question that can come back empty.
 
 **Next:** **3.4.3** STIX as hunt input
 
 **Speaker Notes:**  
-Do not open STIX unless scheduled.
+3.4.3 reads the same leftovers in STIX. Keep / drop rules do not change. Do not open STIX unless that lesson is scheduled.

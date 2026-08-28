@@ -1,7 +1,7 @@
-# Module 3.6.1 – Persistence Techniques
+# Module 3.6.1 – Persistence Techniques  
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
 **Total Suggested Slides:** 7
 
@@ -9,60 +9,67 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 3.6.1 – Persistence Techniques  
-**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Name the method that will run again  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Runs again. Not a one-off. Not privesc.
+This lesson is persistence recognition for hunters. It is not how to read a registry event, not privilege escalation, and not a hunt of a named technique.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Name the **class**. Name the **field that proves it**.
+Hunters name the method that will **run again** after reboot, logon, or a time trigger.
+
+SOC already described the registry set. This lesson names the **class**.  
+Not a one-off run. Not privilege escalation. Not “hunt persistence.”
 
 **Speaker Notes:**  
-Hunt the named technique in 3.6.3.
+This slide is the student intro. Registry activity reading was 1.1.5. This lesson is hunt persistence — the method. Do not open a hunt package.
 
 ---
 
 ### Slide 3 – Four classes
-**Title:** Registry · startup · task · other
+**Title:** Four persistence classes
 
-**Registry** — Run / RunOnce value set.  
-**Startup folder** — file or `.lnk` in Startup.  
-**Scheduled task** — created / updated.  
-**Other** — service, WMI, logon script. Say which.
+**Registry-based** — Run / RunOnce / Winlogon value set. The data is the payload.  
+**Start menu / startup folder** — file or `.lnk` in user or All Users Startup.  
+**Scheduled tasks** — created or updated. Trigger, command, account it runs as.  
+**Other common methods** — service, WMI subscription, or logon script. Say which.
 
 **Speaker Notes:**  
-Outline a–d.
+Walk the four classes. Stop. Do not inventory every persistence technique. Services, WMI, and logon scripts live under other — name the one you see.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** A12
+### Slide 4 – Recognize the method
+**Title:** Class plus proof
 
-HKCU Run **`Updater`** → `%TEMP%\update.exe`.  
-**Class** — registry.  
-**Proof** — value name + path.
+Name the **class**. Name the **field that proves it**.
 
-The first alert did not require this key.
+A one-off process is not persistence.  
+A privilege change by itself is the next lesson.  
+If you cannot see the class, name a **visibility gap**. Do not invent a method.
 
 **Speaker Notes:**  
-Story bible. Task 1.
+Recognition is the task. The product is class plus proof, or a named gap. Stay off the 1.1.5 field-by-field write-up. Stay off hunting every Run key.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – What good looks like
+**Title:** Name the class from the log
 
-No “hunt persistence” (**3.6.3**).  
-No token theft (**3.6.2**).  
-No invented ticket (**3.7**).
+**Given:** HKCU Run **`Updater`** → `%TEMP%\update.exe` on **WS-JLEE**.
+
+**Class** — registry-based persistence.  
+**Proof** — value name + payload path.
+
+`wscript` running Temp `invoice.vbs` once is **not** this class.  
+A vendor Run key under `Program Files` is still persistence *as a method*.
 
 **Speaker Notes:**  
-Privesc next.
+Show this given before the knowledge check. One sentence: that Run value will launch at logon. Do not tell the intro plot. Do not turn this into a hunt of every Run key.
 
 ---
 
@@ -71,19 +78,21 @@ Privesc next.
 
 1. A one-off `wscript invoice.vbs` is persistence. True or false?  
 2. Name the four persistence classes.  
-3. Class + proof for HKCU Run **`Updater`**.
+3. Class + proof for HKCU Run **`Updater`** → `%TEMP%\update.exe`.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Four classes. Class + proof. Not a tactic hunt.
+A method that will run again.  
+Four classes. Class plus proof.  
+A one-off run is not persistence.
 
 **Next:** **3.6.2** Privilege escalation techniques
 
 **Speaker Notes:**  
-Do not open privesc unless scheduled.
+3.6.2 is elevation, not autorun. Stay off privilege escalation unless that lesson is scheduled.

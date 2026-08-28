@@ -14,13 +14,15 @@
 | 3.2.2.2 | T | Scope and prioritize a hunt | 3.2.3 task 2 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
 | 3.2.2.3 | T | Identify unique patterns suitable for hunting | 3.2.3 task 3 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
 
-The teaching-unit ID is **3.2.2**. Types are **3.2.1**. Local docs are **3.7.2**. No lab.
+The teaching-unit ID is **3.2.2**. Hunt types are **3.2.1**. Hunt tools are **3.3.1**. Named-technique hunt is **3.6.3**. Local documentation is **3.7.2**. No lab.
 
 ## Concepts taught
 
+- hunt development concepts (also: hunt card)
 - hunt hypothesis
-- scope and priority
-- unique patterns for internal search
+- scoping a hunt
+- prioritizing hunts
+- unique patterns or behaviors suitable for hunting
 
 ## Artifacts
 

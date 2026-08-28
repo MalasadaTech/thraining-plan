@@ -17,9 +17,10 @@ The teaching-unit ID is **3.1**. Hunt types are **3.2.1**. Run key is first *use
 
 ## Concepts taught
 
-- purpose of threat hunting
-- missed activity
-- detection and visibility gaps
+- purpose of threat hunting (also: threat hunting in the security program)
+- missed activity (also: activity missed by existing security mechanisms)
+- detection gaps
+- visibility gaps
 
 ## Artifacts
 

@@ -1,65 +1,75 @@
-# Module 3.7.3 – Hunt Outputs and Hand-off
+# Module 3.7.3 – Hunt Outputs and Hand-off  
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
 **Total Suggested Slides:** 7
 
 ---
 
 ### Slide 1 – Title Slide
-**Title:** Module 3.7.3 – Hunt Outputs and Hand-off  
-**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Title:** Module 3.7.3 – Hunt outputs and hand-off  
+**Subtitle:** Obtain this shop’s done list and recipient path  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-What leaves the hunt. Who gets it. Site says.
+3.7.2 was the write-up. This lesson is what leaves the hunt, and who receives it. It closes Hunt. Do not invent a recipient.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-**Outputs** — what “done” includes.  
-**Hand-off** — SOC, IR, or CTI — **as the site names them**.
+Hunters finish a hunt by producing what this shop calls **done**.
+
+They send that product to the team this shop names.  
+Inventing a recipient is not a hand-off.
 
 **Speaker Notes:**  
-You know the teams exist. You do not invent the queue.
+This slide is the student intro. Obtain the required outputs and the hand-off path. Do not invent a DYA queue so the hunt can close.
 
 ---
 
-### Slide 3 – Two pieces
-**Title:** Outputs · chart
+### Slide 3 – Expected outputs
+**Title:** What “done” includes here
 
-**Outputs** — what the shop always wants when a hunt closes.  
-**Chart** — which team, which channel.
+**Expected outputs** are what this shop always wants when a hunt is finished.
+
+Obtain that list.  
+Do not invent “always file an incident report.”
+
+The hunt product is still a **package** — more hosts, a gap — not a rewritten SOC ticket.
 
 **Speaker Notes:**  
-Outline a–b. DE 4.x may take a nominated gap — site says.
+Name the idea. Stop. Do not fill a DYA output list on the board. The package was named in 3.1. This lesson does not rewrite the SOC ticket.
 
 ---
 
-### Slide 4 – What good looks like
-**Title:** Obtain
+### Slide 4 – Hand-off to SOC, IR, or CTI
+**Title:** Who receives it here
 
-Ask for the chart.  
-A12 package goes **where that chart says**.  
-If none: **I do not have the local chart yet.** Do **not** send.
+**Hand-off** is which team and which local channel receive the package.
+
+**SOC**, **IR**, or **CTI** — as this site names them.  
+Obtain the path. Do not invent a queue or “always IR if **A12**.”
 
 **Speaker Notes:**  
-Task 1. Package, not a rewritten ticket.
+Those are kinds of teams, not a fill-in list. You know they exist. You do not know this site’s names. Do not write shop emails on the board. DE is the next course track, not a recipient you invent here.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Produce from the list, or write not yet
+**Title:** Produce from the list, or write not yet
 
-No documentation form (**3.7.2**).  
-No invented `soc@`.  
-No DE how-to (**4.x**).
+Obtain the output list and the hand-off chart.
+
+**Shown** — produce what the list requires. Send the **A12** package where the chart says.  
+**Not shown** — **I do not have the local output list / hand-off chart yet.**
+
+Do not email a made-up queue to complete the send.
 
 **Speaker Notes:**  
-Hunt 3.x ends after the summary.
+Walk both givens before the knowledge check. If you overlay a real shop list, say it is overlay, not DYA policy. Use only the names on it.
 
 ---
 
@@ -67,20 +77,22 @@ Hunt 3.x ends after the summary.
 **Title:** Knowledge Check
 
 1. You should email a made-up SOC queue so the hunt is “handed off.” True or false?  
-2. What two things does this hour obtain?  
-3. If no chart was shown, what do you write — and what do you not send?
+2. What two things do you obtain so a hunt can close here?  
+3. You have not been shown a list or a chart. What do you write, and what do you **not** send?
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Obtain outputs and the chart. Or write “not yet” and do not send.
+Obtain the required outputs and the hand-off path.  
+Use them, or write not yet.  
+Do not invent a recipient.
 
 **Hunt 3.x ends.** **Next track:** **4.x** Detection Engineer
 
 **Speaker Notes:**  
-Do not open DE unless scheduled.
+This closes 3.x Hunt. Detection Engineer is next. Do not open that track unless it is scheduled.

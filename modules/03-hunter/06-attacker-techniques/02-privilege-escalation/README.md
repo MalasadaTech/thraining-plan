@@ -7,18 +7,19 @@
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.6.2 | K | Privilege escalation techniques | 3.6.2 a–b | A / B / B | B / C / C | A / B / B |
-| 3.6.2.1 | T | Recognize privilege escalation techniques in logs or telemetry | 3.6.3 task 2 | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
+| Matrix ID | Type | Item | Outline heading |
+|-----------|------|------|-----------------|
+| 3.6.2 | K | Privilege escalation techniques | 3.6.2 a–b |
+| 3.6.2.1 | T | Recognize privilege escalation techniques in logs or telemetry | 3.6.3 task 2 |
 
-The teaching-unit ID is **3.6.2**. Named-technique hunt is **3.6.3**. A12 Run key is not this class. No lab.
+The teaching-unit ID is **3.6.2**. Persistence recognition is **3.6.1**. Named-technique hunt is **3.6.3**. ATT&CK remapping is **3.5**. Local hunt control is **3.7**. The A12 Run key is not this class. No lab.
 
 ## Concepts taught
 
 - privilege escalation techniques
-- Windows privilege-escalation methods
-- elevation indicators
+- common Windows privilege escalation methods
+- indicators associated with privilege escalation
+- recognizing privilege escalation techniques in logs or telemetry
 
 ## Artifacts
 

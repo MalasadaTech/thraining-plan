@@ -14,7 +14,7 @@
 | 3.5.1.2 | T | Use ATT&CK to identify detection or visibility gaps | 3.5.2 task 2 | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
 | 3.5.1.3 | T | Use ATT&CK to support hunt prioritization | 3.5.2 task 3 | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
 
-The teaching-unit ID is **3.5.1**. Outline T block is **3.5.2** (not a separate module). Persistence how-to is **3.6**. No lab.
+The teaching-unit ID is **3.5.1**. Outline T block is **3.5.2** (not a separate module). Shared-floor ATT&CK is **0.6.1**. CTI product mapping is **2.7.1**. Hunt-card format is **3.2.2**. Persistence how-to is **3.6**. No lab.
 
 ## Concepts taught
 

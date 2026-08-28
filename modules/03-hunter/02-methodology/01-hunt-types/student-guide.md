@@ -14,7 +14,7 @@
 By the end of this module, you will be able to:
 
 1. Name the four hunt types.
-2. Say what **execute** looks like for each type on **A12** — pick the type and the look-for.
+2. Given a seed, name the type and the look-for. That is what **execute** means in this lesson.
 
 **Mapped Proficiency Items:**
 - K: 3.2.1 – Hunt types
@@ -27,16 +27,28 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-Hunters pick a **type** so the search has a reason. Purpose was **3.1**. The hunt *card* (hypothesis write-up) is **3.2.2**. This hour is **type + what execute means**. No lab. No invented ticket.
+Hunters pick a **type** so the search has a reason. After **A12**, you might search because CTI named a domain, because you expect a persistence key, because the incident already happened, or because a download never alerted. Those are four different starts. Mix them and you look for the wrong thing. That is the job in this lesson: name the type, the seed, and what you look for.
 
-| Type | Starts from | Execute looks like (A12) |
-|------|-------------|--------------------------|
-| **Intel-driven** | A CTI fact (domain, hash, TTP) | Search hosts for the update domain / file CTI already worked |
-| **Hypothesis-driven** | “If they persist, we should see X” | Search HKCU Run **`Updater`** because persistors leave that key |
-| **Reactive** | A known incident | After A12, look for more `invoice.vbs` / `update.exe` on other hosts |
-| **Anomaly-based** | Odd pattern, no intel yet | Hosts with GET `:8080` `/update.exe` that **never** alerted |
+**3.1** said why hunting exists: missed activity and gaps. This lesson is **which kind of hunt** you are running. The written hunt card (hypothesis, scope, priority, pattern) is **3.2.2**. Local hunt tickets are **3.7**. This lesson is not a SIEM session.
 
-**What good looks like:** name the type, the seed, and the look-for. “Execute” is that product line — not a SIEM session this hour.
+| Type | Starts from | Execute looks like (**A12**) |
+|------|-------------|------------------------------|
+| **Intel-driven** | A CTI fact (domain, hash, or named behavior already in a CTI product) | Search hosts for the update domain or file CTI already worked |
+| **Hypothesis-driven** | An if/then: “If they persist, we should see X” | Search HKCU Run **`Updater`** because persistors leave that key |
+| **Reactive** | A known incident | After **A12**, look for more `invoice.vbs` or `update.exe` on other hosts |
+| **Anomaly-based** | An odd pattern, with no intel naming it yet | Hosts with GET `:8080` `/update.exe` that **never** alerted |
+
+**Execute** means you name the type, the seed, and the look-for. It is that product line, not a live query in this lesson.
+
+The start is the type. A CTI domain is **intel-driven**, not an if/then. “If they persist, we should see Run **`Updater`**” is **hypothesis-driven**, even if you first heard about persistence in a report. After **A12**, more `invoice.vbs` on other hosts is **reactive**. Rewriting the **WS-JLEE** process alert is SOC work, not a reactive hunt. GET `:8080` `/update.exe` with no alert and no intel yet is **anomaly-based**.
+
+**What good looks like:** someone gives you a seed. You name the type and the look-for. You do not write the card yet. You do not invent a ticket.
+
+- Given: CTI already worked the update domain / file. **Intel-driven.** Search hosts for that domain / file.
+- Given: “If they persist, we should see Run **`Updater`** on more hosts.” **Hypothesis-driven.** Search HKCU Run **`Updater`**.
+- Given: GET `:8080` `/update.exe` on hosts that never alerted, and no intel named it yet. **Anomaly-based.**
+
+Do not extract TTPs from a report here (**3.4.2**). Do not map the hunt to ATT&CK (**3.5**). Do not hunt “persistence” as a category (**3.6.3** is one named technique).
 
 ---
 
@@ -50,7 +62,7 @@ Hunters pick a **type** so the search has a reason. Purpose was **3.1**. The hun
 
 ## 3. Summary
 
-Four types. Each has a different start. Execute = type + look-for, not a rewritten ticket.
+Four types. Each has a different start. Execute is type plus look-for, not a rewritten ticket and not a SIEM session.
 
 **Next:** **3.2.2** Hunt development.
 
@@ -58,7 +70,8 @@ Four types. Each has a different start. Execute = type + look-for, not a rewritt
 
 ## 4. Related modules
 
-- 3.1 – Purpose (previous)
-- 3.2.2 – Hunt card / hypothesis write-up
+- 3.1 – Purpose of Threat Hunting (previous)
+- 3.2.2 – Hunt development (the card)
 - 2.11.3 – CTI RFI (intel seed)
 - 3.6.3 – Hunt one named technique
+- 3.7 – Site-specific hunt control (do not invent a ticket)

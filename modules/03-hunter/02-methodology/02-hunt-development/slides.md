@@ -1,7 +1,7 @@
-# Module 3.2.2 – Hunt Development  
+# Module 3.2.2 – Hunt Development Concepts  
 ## Slide Deck Content
 
-**Target Audience:** Threat Hunter (primary); SOC, CTI sit this too  
+**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
 **Total Suggested Slides:** 7
 
@@ -9,61 +9,63 @@
 
 ### Slide 1 – Title Slide
 **Title:** Module 3.2.2 – Hunt Development  
-**Subtitle:** Threat Hunter (SOC / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI Training Program
+**Subtitle:** Hypothesis, scope, priority, unique pattern  
+**Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-Four-line card. No invented ticket.
+3.2.1 named the hunt types. This lesson is the write-up: a four-line hunt card. It is not a SIEM session and not a ticket you invent.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-**Bound** the search.
+Hunters bound a search **before** they query.
 
-Hypothesis. Scope. Priority. Unique pattern.
+Write a short **hunt card**: hypothesis, scope, priority, unique pattern.
+
+Not a SIEM session. Not a site ticket. Not “hunt persistence.”
 
 **Speaker Notes:**  
-Type was last hour.
+This slide is the student intro. An unbounded look is not a hunt. Get the four pieces on paper before anyone opens a query.
 
 ---
 
 ### Slide 3 – Four pieces
-**Title:** Card contents
+**Title:** Four pieces of the hunt card
 
-**Hypothesis** — if X, we see Y.  
-**Scope** — where / how long / which tables.  
-**Priority** — why now.  
-**Pattern** — specific enough to search.
+**Hypothesis** — if X is true, we should see Y.  
+**Scope** — where, how long, which telemetry.  
+**Priority** — why this hunt now.  
+**Unique pattern** — specific enough to search internally.
 
 **Speaker Notes:**  
-Outline a–d.
+A hypothesis is testable if/then, not a topic. Scope is not every log source. Priority is not a blog. Unique pattern is not “any Run key.”
 
 ---
 
 ### Slide 4 – What good looks like
-**Title:** A12 card
+**Title:** What good looks like
 
-If persistors exist, Run **`Updater`** → `%TEMP%\update.exe`.  
-Scope: user workstations, 14 days, registry + file.  
-Priority: open incident + FN download.  
-Pattern: value name **`Updater`**, not any Run key.
+**Hypothesis:** If A12 persistors exist elsewhere, we see HKCU Run **`Updater`** → `%TEMP%\update.exe`.  
+**Scope:** User workstations, last 14 days, registry and file events.  
+**Priority:** Open A12 incident plus the missed `GET /update.exe` download.  
+**Pattern:** Value name **`Updater`**, not any Run key.
 
 **Speaker Notes:**  
-Tasks 1–3.
+Walk this A12 card before the knowledge check. Four lines. Do not write the SIEM query. The missed download is a false negative, not a fired alert they dislike.
 
 ---
 
-### Slide 5 – Not this hour
-**Title:** Not this hour
+### Slide 5 – Not this lesson
+**Title:** Not this lesson
 
-No SIEM session.  
-No local template (**3.7.2**).  
+No SIEM session (**3.3.1**).  
+No local template or ticket (**3.7.2**).  
 No “hunt persistence” (**3.6.3**).
 
 **Speaker Notes:**  
-Tools next.
+Keep them on the four-line card. Tools are next. Site forms and named-technique hunts come later.
 
 ---
 
@@ -71,20 +73,22 @@ Tools next.
 **Title:** Knowledge Check
 
 1. A hunt card is “search everything for malware.” True or false?  
-2. What four pieces does the card have?  
-3. Write a one-line **A12** hypothesis and one unique pattern.
+2. What four pieces does the hunt card have?  
+3. Write a one-line **A12** hypothesis and one unique pattern (not “any Run key”).
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Hypothesis, scope, priority, unique pattern.
+Hypothesis, scope, priority, unique pattern.  
+Bound the search.  
+The classroom card is training, not a ticket you invent.
 
 **Next:** **3.3.1** Hunt tool capabilities
 
 **Speaker Notes:**  
-Do not open tools unless scheduled.
+3.3.1 converts a hunt lead into a precise internal query. Do not open tools in this lesson.
