@@ -15,7 +15,7 @@
 By the end of this module, you will be able to:
 
 1. Say that the same host, log, or domain can sit on more than one desk.
-2. Name the **product** that makes each job different — even when one person wears two hats.
+2. Name the **product** that makes each job different — even when one person fills more than one job.
 
 **Mapped Proficiency Items:**
 - K: 0.5 – Where the jobs lightly overlap
@@ -24,22 +24,24 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**0.4** named one possible path. This hour is the overlap. Everyone may look at the same **host**, **log**, or **domain**. That does not make the jobs the same.
+The same host, log, or domain can sit on more than one desk. Looking at that evidence is not finishing that desk’s job. That is the job in this lesson: name the **product** you are writing — close or escalate an alert, an intel note, a hunt, or a rule — so you do not treat a look or a question as doing the next job.
 
-The **product** is different:
+Everyone may look at the same **host**, **log**, or **domain**. That does not make the jobs the same.
 
-| Product | What it is |
-|---------|------------|
-| Close or escalate an **alert** | SOC analyst work |
-| An **intel note** | CTI work |
-| A **hunt** | Hunter work |
-| A **rule** | Detection engineer work |
+The **product** is the thing that job finishes. The products are different:
 
-**Asking** the next desk is not doing that desk’s whole job. An RFI is a question, not the intel note. A hunt package is a hand-off, not the hunt.
+| Product | Whose job |
+|---------|-----------|
+| Close or escalate an **alert** | SOC analyst |
+| An **intel note** | CTI analyst |
+| A **hunt** | Threat hunter |
+| A **rule** | Detection engineer |
 
-A smaller shop may have **one person** fill more than one of these jobs (two hats). We still name the jobs separately so each **product** stays clear — even if the same person writes two of them.
+This lesson names those products. It does not teach how to write them.
 
-Everyone may look at **WS-JLEE**. That is the same host. It is not the same product. Do not write the ticket. Do not write the note.
+**Asking** the next desk is not doing that desk’s whole job. A **Request for Information (RFI)** is a question to intel, not the intel note. Handing over a **hunt package** is a hand-off, not the hunt.
+
+A smaller shop may have **one person** fill more than one of these jobs (two hats). This course still names the jobs separately so each **product** stays clear — even if the same person writes two of them.
 
 ---
 
@@ -47,19 +49,20 @@ Everyone may look at **WS-JLEE**. That is the same host. It is not the same prod
 
 1. Everyone may look at the same host. Does that mean they are doing the same job?
 2. Asking the next desk is doing that desk’s whole job. True or false?
-3. In a smaller shop, one person may write two products. Why does this outline still name the jobs separately?
+3. In a smaller shop, one person may write two products. Why does this course still name the jobs separately?
 
 ---
 
 ## 3. Summary
 
-Same evidence. Different product. Asking is not doing the next job. Two hats still two products.
+The same evidence can sit on more than one desk. The product is what makes the jobs different. Asking is not doing the next job. One person may fill two jobs; they still finish two products.
 
-**Next:** shared hours — frameworks (**0.6**), then tools, then environment / signal flow. Then SOC **1.1.1**.
+**Next:** **0.6** Frameworks.
 
 ---
 
 ## 4. Related modules
 
+- 0.3 – Jobs in one sentence
 - 0.4 – How work can move
-- 0.6 – Frameworks (next)
+- 0.6 – Frameworks

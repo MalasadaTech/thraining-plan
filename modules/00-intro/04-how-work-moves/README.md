@@ -11,7 +11,7 @@
 | 0.4 | K | How work can move | 0.4 a–g |
 | 0.4.1 | T | Given a step in the flow, name the next hand-off and whose product it is | 0.4.1 task 1 |
 
-The lesson ID is **0.4**. Jobs are **0.3**. Overlap / two hats is **0.5**. One possible path, not every shop’s policy. No lab.
+The lesson ID is **0.4**. Jobs are **0.3**. Overlap / two hats is **0.5**. One possible path, not every shop’s policy. No DYA ticket names. No lab.
 
 ## Concepts taught
 

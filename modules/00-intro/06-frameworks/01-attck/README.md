@@ -3,7 +3,7 @@
 **Path:** `modules/00-intro/06-frameworks/01-attck`  
 **Taught:** `00` block, before SOC  
 **Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
-**Time:** about 20 minutes
+**Time:** about 15–20 minutes
 
 ## Mapped proficiency items
 
@@ -12,7 +12,7 @@
 | 0.6.1.1 | K | MITRE ATT&CK | 0.6.1.1 a–d | A / B / C | B / C / C | B / C / C | A / B / B |
 | 0.6.1.2 | T | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | 0.6.1.2 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c | 1a / 2b / 2b |
 
-Stay in this lesson: purpose, structure, and one map. Hunt planning is **3.5**. Actor products are **2.11**. DTF is **2.7.4**.
+Stay in this lesson: purpose, structure, and one map with a cited field. Hunt planning is **3.5**. CTI product mapping is **2.7.1**. Diamond is **0.6.2**. Kill Chain is **0.6.3**. Actor profiles are **2.11**. DTF is **2.7.4**. Not an alert pane (**1.4**). No lab.
 
 ## Concepts taught
 

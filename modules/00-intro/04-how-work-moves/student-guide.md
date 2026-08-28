@@ -16,7 +16,7 @@ By the end of this module, you will be able to:
 
 1. Name one possible path of work after an alert.
 2. Say where extra infrastructure goes, and where a hunt package can go.
-3. Given a step in the flow, name the next hand-off and whose **product** it is.
+3. Given a step in the path, name the next hand-off and whose **product** it is.
 
 **Mapped Proficiency Items:**
 - K: 0.4 – How work can move
@@ -26,28 +26,33 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**0.3** named the jobs. This hour is how **work** can move between them. One possible path. Not the only way a shop runs. Not DYA policy.
+After an alert, work has to go to the next desk. Someone sorts the alert, then they start the hand-offs — to incident response, to leadership, to intel, and later to whoever blocks, hunts, or writes rules. That is the job in this lesson: name **one possible path** those hand-offs can take, and whose product is next. It is not the only way a shop runs. It is not how your site files the ticket.
 
-**RFI** still means Request for Information: asking intel for more work on that alert.
+**0.3** named the jobs. This lesson is how work can move between them.
+
+**RFI** means Request for Information: asking intel for more work on that alert.
 
 **The path:**
 
-1. An analyst gets an alert and **triages** it (sorts what it is and what to do next).
+1. An analyst gets an alert and **triages** it — sorts what it is and what to do next.
 2. They send it to **incident response** and **notify leadership**.
-3. They send an **RFI** to intel.
+3. They ask intel for more work on that alert (an **RFI**).
 4. Intel works the RFI, **enriches** it (adds context), and may find more adversary infrastructure.
 5. Extra infrastructure can go to whoever **blocks** (firewall / IA).
 6. Intel can also hand hunters a **hunt package**.
 7. That same package can go to **detection engineers** to write or tune rules (MDE, YARA, Suricata, SIGMA, and so on).
 
+This is **one possible** path. A shop may skip a step or do two at once. Do not invent a ticket name, a PIR list, or an approval chain.
+
 One person may wear two hats — that is **0.5**.
 
-An alert on **WS-JLEE** can start this path. Do not write the ticket. Do not write the RFI. This hour only names the steps.
+**What good looks like:** someone names a step. You name the **next hand-off** and **whose product** it is. You do not name how a site files the ticket.
 
-**What good looks like (0.4.1):** someone names a step. You name the **next hand-off** and **whose product** it is. You do not name how a site files the ticket.
-
-- Given: triage is done. Next: incident response and notify leadership; and/or an RFI to intel. Products: IR contains and recovers; leadership is notified; intel’s product is later the intel note, not the ask.
+- Given: triage is done. Next: incident response and notify leadership; and/or an RFI to intel. Products: IR contains and recovers; leadership is notified; the RFI is the ask, not intel’s finished work.
 - Given: intel found extra infrastructure. Next: whoever **blocks** (firewall / IA). Product: the block. Not a hunt.
+- Given: intel has a hunt package. Next: hunters, and that same package can go to detection engineers. Products: a hunt for activity the alerts missed; rules written or tuned.
+
+Do not write the RFI. Do not write the hunt. Do not write the rule.
 
 ---
 
@@ -61,7 +66,7 @@ An alert on **WS-JLEE** can start this path. Do not write the ticket. Do not wri
 
 ## 3. Summary
 
-Alert → triage → IR and leadership → RFI to intel → enrich. Extra infrastructure can be blocked. A hunt package can go to hunters and to detection engineers.
+Alert → triage → IR and leadership → RFI to intel → enrich. Extra infrastructure can be blocked. A hunt package can go to hunters and to detection engineers. Name the next hand-off and whose product it is.
 
 **Next:** **0.5** Where the jobs overlap.
 

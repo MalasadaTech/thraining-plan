@@ -3,83 +3,112 @@
 
 **Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (front door)  
 **Estimated Delivery Time:** 15 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 0.1 – How this course is laid out  
-**Subtitle:** Front door (SOC / Hunter / CTI / DE)  
+**Subtitle:** The order of the course  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-First hour. Map of the course. Not what a SOC is.
+This is the first lesson. This lesson names the order of the course. It does not teach what a SOC is.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-The order of this course.  
-What sits before SOC, and applies to everyone.
+This course trains four jobs that sit next to each other.
+
+Before you sit a track, know **the order of the course** — what applies to everyone, and where the four tracks sit.
+
+This lesson is the layout.
 
 **Speaker Notes:**  
-Names of the company and adversary come next hour. No hand-off task today.
+This slide is the student intro. Name the layout before anyone defines a SOC or a job. Do not teach those topics today.
 
 ---
 
-### Slide 3 – Order
-**Title:** Order
+### Slide 3 – Order of the course
+**Title:** Order of the course
 
-Front door.  
-Shared hours (everyone).  
-Then SOC analyst, CTI, hunting, detection engineers.
+This **front door** — the intro lessons everyone sits first.
+
+Then **shared lessons** that also apply to every role.
+
+Then four **tracks**: SOC analyst, then CTI, then hunting, then detection engineers.
 
 **Speaker Notes:**  
-Four tracks after the shared block. SOC is first among the four.
+Four tracks after the shared lessons. SOC is first among the four. Keep them on the order. If they ask what a SOC is, that is the next lesson.
 
 ---
 
 ### Slide 4 – Inside SOC
 **Title:** Inside SOC
 
-Detections *are*, then the alert queue.  
-SOC **ends at reporting**.  
+You learn what detections *are* before you live in the alert queue.
+
+SOC **ends at reporting**.
+
 The RFI is the door into CTI.
 
 **Speaker Notes:**  
-Teaching order, not a claim about every shop.
+This is teaching order, not a claim about every shop. Do not walk an alert or write an RFI today.
 
 ---
 
-### Slide 5 – Before SOC, for everyone
-**Title:** Before SOC, for everyone
+### Slide 5 – Shared lessons before SOC
+**Title:** Shared lessons before SOC
 
-Frameworks. Tool survey. Environment / signal flow.
+**Frameworks. Tool survey. Environment / signal flow.**
 
-Role-local hunt / CTI / DE lists come later.
+Those sit after this intro and still before SOC. They apply to everyone.
+
+Role-local hunt / CTI / DE lists come later and differ by shop.
 
 **Speaker Notes:**  
-Obtain-and-follow. Do not invent a ticket name.
+Those three are not SOC-only. If they offer a ticket name from their shop, do not write it on the board as course vocabulary.
 
 ---
 
-### Slide 6 – Knowledge Check
+### Slide 6 – Course fiction
+**Title:** Course fiction
+
+This course uses one company and one adversary as **fiction**, not your site’s policy.
+
+Those **names** come in the next lesson.
+
+After the lessons, a **companion story** retells the same flow as one incident.
+
+**Speaker Notes:**  
+Do not name DYA or PRD today. If they ask, those names are the next lesson. Do not start the companion story.
+
+---
+
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
 1. After this front door, what comes before the four tracks?  
 2. Where does the SOC track end? What is the door into CTI?  
-3. Name two hours that apply to everyone and sit before SOC.
+3. Name two shared lessons that sit before SOC and apply to everyone.
 
 **Speaker Notes:**  
-Answers only in the instructor guide. Three questions. Stop.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
-### Slide 7 – Next
-**Title:** Next
+### Slide 8 – Summary
+**Title:** Summary
 
-**0.2** What a SOC is
+Front door, then shared lessons for everyone, then four tracks.
+
+Detections before the alert queue. SOC ends at reporting. The RFI is the door into CTI.
+
+Names of the company and adversary come next.
+
+**Next:** **0.2** What a SOC is
 
 **Speaker Notes:**  
-That hour names DYA and PRD. This hour does not.
+0.2 is what a SOC is. That lesson names the company and the adversary. This lesson does not.

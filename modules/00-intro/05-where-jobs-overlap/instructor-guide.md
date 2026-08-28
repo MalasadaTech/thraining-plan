@@ -14,23 +14,24 @@
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-Same evidence can sit on more than one desk. The product is what makes the jobs different.
+Name the product that makes each job different when the same host, log, or domain sits on more than one desk.
 
 **Context (plain language):**
 
-- What this hour is for: Name the overlap. Same host, log, or domain. Different product. One person may wear two hats.
-- How it hooks to the hour before: 0.4 named the path between desks.
-- How it hooks to the hour after: shared hours (frameworks first), still before SOC.
-- Why we are doing it this way: You wanted smaller shops called out so people do not collapse two jobs into one product.
-- What we are *not* doing this hour: How to close an alert, write an intel note, hunt, or write a rule. No lab. No DYA tickets. Not the companion story.
+- What this lesson is for: The same host, log, or domain can sit on more than one desk. Looking at that evidence is not finishing that desk’s job. This lesson names the product you are writing so a look or a question is not treated as doing the next job.
+- How it hooks to the lesson before: 0.4 named one possible path of work between desks.
+- How it hooks to the lesson after: 0.6 is frameworks, still before SOC.
+- Why we are doing it this way: smaller shops are called out so two jobs do not collapse into one product.
+- What we are *not* doing in this lesson: how to close an alert, write an intel note, hunt, or write a rule. The path of work (0.4). Jobs as one-sentence definitions (0.3). No lab. No DYA ticket names. Not the companion story.
 - Extra step: none.
 
-Say **product** the way the student guide does: the thing that job finishes (alert close/escalate, intel note, hunt, rule).
+Use the same names as the student guide: **host**, **log**, **domain**, **product**, **alert**, **intel note**, **hunt**, and **rule**. **RFI** is Request for Information: a question to intel, not the intel note. **Two hats** means one person filling more than one job.
 
 **Key Teaching Points:**
 - Same evidence is not the same job.
+- The product is what makes the jobs different.
 - Asking the next desk is a hand-off, not that job.
-- Two hats still two products.
+- One person may fill two jobs; they still finish two products.
 
 **Required Materials:**
 - Student Guide
@@ -42,16 +43,19 @@ Say **product** the way the student guide does: the thing that job finishes (ale
 
 Same as the student guide.
 
-**Mapped Items:** K 0.5
+**Mapped Proficiency Items:**
+- K: 0.5 – Where the jobs lightly overlap
 
 ---
 
 ## Suggested Timing
 
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+
 | Section                 | Time      | Notes |
 |-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | After 0.4 path |
-| Key Concepts            | 10 min    | a–d on the board |
+| Introduction (required) | 3 min     | Same evidence is not the same job |
+| Key Concepts            | 10 min    | Four products; asking is not doing; two hats |
 | Knowledge Check         | 4 min     | Three questions |
 | Summary                 | 2 min     | |
 | **Total**               | **~19 min** | |
@@ -62,27 +66,28 @@ Same as the student guide.
 
 ### 1. Key Concepts
 
-Write the four products. Stop. Do not teach how to produce any of them.
-
-If they ask “what if I am both SOC and intel?” — “Then you still finish two products. We name both.”
-
-WS-JLEE is only “same host.” Do not tell the PRD plot.
+**Talking Points:**
+- Open with the job: the same host, log, or domain can sit on more than one desk. Looking at that evidence is not finishing that desk’s job. This lesson names the product.
+- Write the four products. Stop. Do not teach how to produce any of them.
+- Asking the next desk is a hand-off, not that job. An RFI is a question, not the intel note. A hunt package is a hand-off, not the hunt.
+- If they ask “what if I am both SOC and intel?”: you still finish two products. This course still names both jobs so the products stay clear.
+- If they start closing an alert or writing a hunt: that is a later lesson. Today only names the split.
 
 ---
 
 ## Knowledge Check – Answer Key
 
-1. **Same host — same job?**  
+1. **Everyone may look at the same host. Does that mean they are doing the same job?**  
    **Answer:** No. Same evidence. Different product.  
-   **Explanation:** Outline a and b.
+   **Explanation:** Looking at the host is not finishing the job. The product is what makes the jobs different: close or escalate an alert, an intel note, a hunt, or a rule.
 
-2. **Asking the next desk is doing that job. True or false?**  
+2. **Asking the next desk is doing that desk’s whole job. True or false?**  
    **Answer:** False. Asking is a hand-off, not that desk’s whole job.  
-   **Explanation:** Outline c.
+   **Explanation:** An RFI is a question, not the intel note. A hunt package is a hand-off, not the hunt.
 
-3. **Why still name the jobs in a smaller shop?**  
+3. **In a smaller shop, one person may write two products. Why does this course still name the jobs separately?**  
    **Answer:** So each product stays clear, even if the same person writes two of them.  
-   **Explanation:** Outline d.
+   **Explanation:** One person may fill more than one job. They still finish two products. Naming the jobs keeps those products from collapsing into one write-up.
 
 ---
 

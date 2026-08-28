@@ -6,7 +6,7 @@
 - Hunter: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  
 - CTI: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  
 - DE: 0.6.1.1 A / B / B ; 0.6.1.2 1a / 2b / 2b  
-**Estimated Time:** 20 minutes
+**Estimated Time:** 15–20 minutes  
 
 ---
 
@@ -14,50 +14,50 @@
 
 By the end of this module, you will be able to:
 
-1. Say what ATT&CK is for, and what a tactic vs a technique (or sub-technique) is.
-2. Map a one-line activity to a tactic and a technique (or sub-technique) and cite the evidence.
+1. Say what ATT&CK is for, and tell a **tactic** from a **technique** (or **sub-technique**).
+2. Given one line of activity, name a tactic and a technique (or sub-technique) and cite the evidence.
 
 **Mapped Proficiency Items:**
-- K: 0.6.1.1 – MITRE ATT&CK  
-  SOC A / B / C · Hunter B / C / C · CTI B / C / C · DE A / B / B
-- T: 0.6.1.2 – Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence  
-  SOC 2b / 3c / 4c · Hunter 3c / 4c / 4c · CTI 3c / 4c / 4c · DE 1a / 2b / 2b
+- K: 0.6.1.1 – MITRE ATT&CK
+- T: 0.6.1.2 – Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence
 
 ---
 
 ## 1. Key Concepts
 
-People on different desks will look at the same host or log. They need one name for **what the adversary was trying to do** and **how**. ATT&CK is that shared language. You use it to label what you saw, not to decorate a ticket.
+People on different desks will look at the same host or log. They need one name for **what the adversary was trying to do** and **how**. ATT&CK is that shared language. That is the job in this lesson: label the behavior you saw, so those desks are not using four different names for the same thing.
 
-**Purpose and structure.** ATT&CK is a knowledge base of adversary **behaviors**. The Enterprise matrix puts **tactics** as columns and **techniques** (and **sub-techniques**) as cells.
+ATT&CK is a knowledge base of adversary **behavior**. You use it to name what you saw. You do not use it to decorate a ticket.
 
-**Tactic** = *why* — the goal at that step (Execution, Persistence, Command and Control, …).
+The **Enterprise** matrix puts **tactics** as columns and **techniques** (and **sub-techniques**) as cells. You do not memorize every cell. You must know what the columns and cells are.
 
-**Technique** = *how* — a named way to reach that goal (`T1059` Command and Scripting Interpreter).
+| Piece | What it is |
+|-------|------------|
+| **Tactic** | *Why* — the goal at that step (Execution, Persistence, Command and Control) |
+| **Technique** | *How* — a named way (`T1059` Command and Scripting Interpreter) |
+| **Sub-technique** | A more specific how (`T1059.001` PowerShell) |
 
-**Sub-technique** = a more specific how (`T1059.001` PowerShell).
+A finished **map** is that label: tactic + technique or sub-technique + **one cited field**. Read the line of activity in front of you (later lessons may still say **row**; here it means that one log or event). Name the goal. Name the how. Cite one field that actually shows it, such as the command line. If two IDs fit, pick the **primary** for this line and reject the neighbor. An ID with no cited field is not a map.
 
-You do not memorize every cell. You must know what the columns and cells are.
+**What good looks like:** someone gives you one line. You name the tactic and the technique or sub-technique. You cite the field. You do not tell the rest of the incident.
 
-**How to map.** Read what the row actually shows. Name the **goal** (tactic). Name the **how** (technique or sub-technique). Cite one field (command line, URI, parent, hive). If two IDs fit, pick the **primary** for this row and say why the neighbor is weaker. An ID with no evidence is a slogan.
+- Given: “`wscript` launched encoded PowerShell.” **Label:** Execution / `T1059.001` PowerShell. **Cite:** the encoded command line. **Not:** Command and Control — this line does not show a beacon.
 
-**What good looks like (0.6.1.2):** given “`wscript` launched encoded PowerShell,” you write Execution / `T1059.001` PowerShell and cite the encoded command line. You do not write Command and Control because “it might beacon later.”
-
-Hunt planning with ATT&CK is later (**3.5**). Diamond is next (**0.6.2**).
+This is one line of activity, not an alert queue (**1.4**). Hunt planning with ATT&CK is later (**3.5**). Putting IDs on a CTI product is later (**2.7.1**). Diamond is next (**0.6.2**).
 
 ---
 
 ## 2. Knowledge Check
 
 1. What is a tactic, and what is a technique?
-2. Why is an ATT&CK ID with no cited field not a finished map?
+2. An ATT&CK ID with no cited field is a finished map. True or false?
 3. Encoded PowerShell ran from a script. Name a tactic and a technique (or sub-technique) and what you would cite.
 
 ---
 
 ## 3. Summary
 
-ATT&CK labels behavior. Tactic is why. Technique is how. Map the row in front of you and cite the field.
+ATT&CK labels behavior. A tactic is why. A technique is how. Name both for the line in front of you and cite the field.
 
 **Next:** **0.6.2** Diamond Model.
 
@@ -65,6 +65,8 @@ ATT&CK labels behavior. Tactic is why. Technique is how. Map the row in front of
 
 ## 4. Related modules
 
+- 0.5 – Where the jobs lightly overlap
 - 0.6.2 – Diamond Model
 - 0.6.3 – Cyber Kill Chain
+- 2.7.1 – ATT&CK for CTI (later)
 - 3.5 – Hunt planning with ATT&CK (later)

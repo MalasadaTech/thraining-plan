@@ -2,7 +2,7 @@
 
 Everyone. Taught **before SOC**. Folder order is teach order.
 
-| Folder | ID | Hour |
+| Folder | ID | Lesson |
 |--------|-----|------|
 | [01-course-layout](01-course-layout/) | `0.1` | How this course is laid out |
 | [02-what-a-soc-is](02-what-a-soc-is/) | `0.2` | What a SOC is |

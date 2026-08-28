@@ -12,7 +12,7 @@
 | 0.6.2.1 | K | Diamond Model | 0.6.2.1 a–c | A / B / C | B / C / C | B / C / C | A / B / B |
 | 0.6.2.2 | T | Apply the Diamond Model to an incident or set of indicators | 0.6.2.2 task 1 | 2b / 3c / 4c | 3c / 4c / 4d | 3c / 4c / 4d | 1a / 2b / 2b |
 
-Stay in this lesson: four vertices and the weakest one. ATT&CK is **0.6.1**. Kill Chain is **0.6.3**. Actor products are **3.11**.
+The teaching-unit ID is **0.6.2**. ATT&CK is **0.6.1**. Kill Chain is **0.6.3**. CTI Diamond is **2.7.2**. Actor products are **2.11**. Stay in this lesson: four vertices and the weakest one. No lab.
 
 ## Concepts taught
 

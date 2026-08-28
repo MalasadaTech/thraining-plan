@@ -10,7 +10,7 @@
 |-----------|------|------|-----------------|
 | 0.2 | K | What a SOC is | 0.2 a–c |
 
-The lesson ID is **0.2**. Jobs are **0.3**. How work moves is **0.4**. DYA and PRD are course fiction, not site policy.
+The teaching-unit ID is **0.2**. Jobs are **0.3**. How work moves is **0.4**. DYA and PRD are course fiction, not site policy. No lab.
 
 ## Concepts taught
 

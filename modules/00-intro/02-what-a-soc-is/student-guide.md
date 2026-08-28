@@ -25,29 +25,29 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**0.1** was the map of the course. This hour is what a **SOC** is.
+You will work in or next to a **SOC**. Later lessons name desks and move work between them. That only works if everyone means the same thing by the word. This lesson is that shared meaning: what a SOC is, that more than one job sits nearby, and the company and adversary names this course uses.
 
 **SOC** means Security Operations Center. Your shop may use another door sign. The job is the same.
 
-**What it is:** A SOC watches for bad or suspicious activity and **starts** the response. It is not every security job in the company.
+A SOC is a place that watches for bad or suspicious activity and **starts** the response. It is not every security job in the company.
 
-**Team sport:** More than one job sits in or next to the SOC. Who does what is **0.3**. How work moves is **0.4**.
+A SOC is a **team sport**: more than one job sits in or next to the SOC. Who does what is **0.3**. How work moves is **0.4**.
 
-**This course’s story:** We use one company — **Dixon, Yamada, & Associates (DYA)**, a law firm — and one adversary name — **Pink River Dolphin (PRD)**. Those names are **fiction for this course**. They are not your shop’s rules.
+This course uses one company and one adversary as fiction. **DYA** is **Dixon, Yamada, & Associates**, a law firm. **PRD** is **Pink River Dolphin**, the adversary name. Those names are **fiction for this course**. They are not your site’s policy. They are not a hunt order and not your shop’s ticket names.
 
 ---
 
 ## 2. Knowledge Check
 
-1. In one sentence, what is a SOC in this course?
-2. What does “team sport” mean here?
-3. What are DYA and PRD?
+1. In one sentence, what is a SOC?
+2. A SOC is a team sport. What does that mean?
+3. DYA and PRD are your site’s policy. True or false?
 
 ---
 
 ## 3. Summary
 
-A SOC watches and starts the response. Several jobs sit nearby. DYA and PRD are for this course, not your site.
+A SOC watches for bad or suspicious activity and starts the response. Several jobs sit in or next to it. DYA and PRD are course fiction, not your site’s policy.
 
 **Next:** **0.3** Jobs in one sentence.
 
@@ -55,6 +55,6 @@ A SOC watches and starts the response. Several jobs sit nearby. DYA and PRD are 
 
 ## 4. Related modules
 
+- 0.1 – How this course is laid out
 - 0.3 – Jobs in one sentence
 - 0.4 – How work can move
-- [docs/story-bible.md](../../../docs/story-bible.md) – DYA / PRD names

@@ -10,12 +10,12 @@
 |-----------|------|------|-----------------|
 | 0.3 | K | Jobs in one sentence | 0.3 a–f |
 
-The lesson ID is **0.3**. What a SOC is is **0.2**. How work moves is **0.4**. One person may wear two hats — **0.5**. No lab. Not an IR or firewall course.
+The teaching-unit ID is **0.3**. What a SOC is is **0.2**. How work moves is **0.4**. One person may wear two hats — **0.5**. Not how to do each job. IR and firewall / IA are neighbors, not tracks. No lab. No ticket names.
 
 ## Concepts taught
 
 - jobs in one sentence
-- IR and firewall/IA as neighbors, not tracks in this course
+- IR and firewall / IA as neighbors, not tracks in this course
 
 ## Artifacts
 

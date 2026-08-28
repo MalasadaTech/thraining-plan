@@ -15,28 +15,28 @@
 By the end of this module, you will be able to:
 
 1. Say the purpose, one strength, and one weakness of VirusTotal, AnyRun, Silent Push, and URLScan.
-2. Pick the first external tool for a need and say why the neighbor is wrong.
+2. Pick the first external tool for a need and say why the neighbor is the wrong first pick.
 
 **Mapped Proficiency Items:**
-- K: 0.7 – External tools (VirusTotal, AnyRun, Silent Push, URLScan)  
-  SOC A / B / B · Hunter B / C / C · CTI B / C / C · DE A / B / B
-- T: 0.7.1 – Select the appropriate external tool for a given enrichment or analysis need  
-  SOC 1a / 2b / 3c · Hunter 3c / 4c / 4d · CTI 3c / 4c / 4d · DE 1a / 2b / 3c
+- K: 0.7 – External tools (VirusTotal, AnyRun, Silent Push, URLScan)
+- T: 0.7.1 – Select the appropriate external tool for a given enrichment or analysis need
 
 ---
 
 ## 1. Key Concepts
 
-You will get a hash, a file, a domain, or a live URL. These four public tools each answer a different question. You pick the one that matches the need and you say why the neighbor is the wrong first tool. You do this so you do not detonate a file when you only needed history, or screenshot a page when you needed a hash reputation.
+You will get a hash, a file, a domain, or a live URL. Four public tools each answer a different question. That is the job in this lesson: pick the first tool that matches the need, and say why the neighbor is the wrong first pick, so you do not detonate a file when you only needed history, or screenshot a page when you needed a hash reputation.
+
+This is **not** how to search the internal **threat intelligence platform** (**TIP**, **2.3.1**). It is **not** how to read VirusTotal Relations, an AnyRun submission, a Silent Push record, or a URLScan result (**2.9**). You do not need a live vendor account.
 
 **Purpose, strength, weakness.**
 
 | Tool | Purpose | Strength | Weakness |
 |------|---------|----------|----------|
-| **VirusTotal** | Multi-engine look-up of a file, URL, hash, or IP | Fast reputation | Public; not historical PDNS; not a full sandbox story |
-| **AnyRun** | Detonate a **sample** and watch this run | Process tree and dropped files from *this* run | Needs a file; evadable; not infra history |
-| **Silent Push** | Passive DNS / infra clustering | Historical resolutions and sibling domains | Not a detonation; not a page screenshot |
-| **URLScan** | Scan a **URL / page now** | Redirects, screenshot, hosts from *this* load | Not PDNS history; not file behavior |
+| **VirusTotal** | Multi-engine look-up of a file, URL, hash, or IP | Fast reputation | What you submit is public. It is not historical **passive DNS** (past resolutions, also called **PDNS**). It is not a full sandbox story. |
+| **AnyRun** | Detonate a **sample** and watch this run | Process tree and dropped files from *this* run | You need a file. Malware can detect the sandbox. It is not infrastructure history. |
+| **Silent Push** | Passive DNS / infrastructure clustering | Historical resolutions and sibling domains | Not a detonation. Not a page screenshot. |
+| **URLScan** | Scan a **URL / page now** | Redirects, screenshot, and hosts from *this* load | Not PDNS history. Not file behavior. |
 
 **When to pick.**
 
@@ -46,17 +46,13 @@ You will get a hash, a file, a domain, or a live URL. These four public tools ea
 | You have a binary and need behavior | **AnyRun** |
 | Domain or IP *history* or cluster | **Silent Push** |
 | Live URL / how the page looks now | **URLScan** |
-| “Have we seen this internally?” | **Not these** — that is the internal TIP (**3.3.1**), later |
+| “Have we seen this internally?” | **Not these** — that is the internal TIP (**2.3.1**), later |
 
-| This lesson | Other |
-|-------------|-------|
-| Purpose and when to pick | Live vendor account — not this hour |
-| Select and reject the neighbor | Relations / multi-hop pivot — **3.9** |
-| External tools only | Internal TIP — **3.3.1** |
+**What good looks like:** someone gives you a need. You name the first public tool. You reject the neighbor. You do not open a vendor tab.
 
-**What good looks like (0.7.1):** you have a file hash and need vendor reputation. You pick **VirusTotal**. You reject AnyRun because you do not have a sample to detonate. You reject Silent Push because this is not a domain-history question.
+- Given: a file hash, and you need vendor reputation. **VirusTotal.** Reject AnyRun: you do not have a sample to detonate. Reject Silent Push: this is not a domain-history question.
 
-Platform depth and a Relations graph are later (**3.9**). You do not need a live account this hour.
+Platform depth and a Relations graph are later (**2.9**). You do not need a live account in this lesson.
 
 ---
 
@@ -70,7 +66,7 @@ Platform depth and a Relations graph are later (**3.9**). You do not need a live
 
 ## 3. Summary
 
-Four tools. Match the need. Reject the neighbor. Do not open the sandbox when the question is history, and do not treat a page scan as PDNS.
+Four tools. Match the need. Reject the neighbor. Do not open the sandbox when the question is history, and do not treat a page scan as passive DNS.
 
 **Next:** **0.8** Environment / signal flow.
 
@@ -80,5 +76,5 @@ Four tools. Match the need. Reject the neighbor. Do not open the sandbox when th
 
 - 0.6.3 – Cyber Kill Chain (previous)
 - 0.8 – Environment / signal flow (next)
-- 3.3.1 – Internal TIP (later)
-- 3.9 – Platform depth (later)
+- 2.3.1 – Internal threat intelligence platform (later)
+- 2.9 – Platform depth (later)

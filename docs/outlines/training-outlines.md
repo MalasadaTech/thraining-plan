@@ -23,10 +23,10 @@ Write only the asked child unless asked for the whole intro. Frameworks are **`0
 **0.1 [K] How this course is laid out**  
 Stay in this lesson: the map of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
 
-a. Front door, then shared hours that apply to every role, then four tracks: SOC analyst, CTI, hunting, detection engineers  
+a. Front door, then shared lessons that apply to every role, then four tracks: SOC analyst, CTI, hunting, detection engineers  
 b. Inside SOC, detections *are* before the alert queue. SOC ends at reporting (`1.5`). The RFI is the door into CTI  
 c. After this intro and still before SOC: frameworks, tool survey, and environment / signal flow. Those apply to everyone. Role-local hunt / CTI / DE lists come later and differ by shop  
-d. This course uses one company and one adversary as fiction. Those names come in the next hour. After the lessons, a companion story retells the same flow as one incident  
+d. This course uses one company and one adversary as fiction. Those names come in the next lesson. After the lessons, a companion story retells the same flow as one incident  
 
 **0.2 [K] What a SOC is**  
 a. A place that watches for bad or suspicious activity and starts the response  
@@ -60,7 +60,7 @@ c. Asking the next desk is not doing that desk’s whole job
 d. A smaller shop may have one person fill more than one of these jobs. This outline still names the jobs separately so each *product* stays clear, even if the same person writes two of them.  
 
 **0.6 [K/T] Frameworks**  
-Taught after `0.5`, still before SOC. All four roles. Lessons live under `modules/00-intro/06-frameworks/`. Do not copy them into a role folder. Write only the asked child. Hunt *planning* is **3.5**. CTI depth is **2.7**. Actor products are **2.11**. DTF is **2.7.4**. This hour is a one-line activity, not an alert pane (**1.4**).
+Taught after `0.5`, still before SOC. All four roles. Lessons live under `modules/00-intro/06-frameworks/`. Do not copy them into a role folder. Write only the asked child. Hunt *planning* is **3.5**. CTI depth is **2.7**. Actor products are **2.11**. DTF is **2.7.4**. This lesson is a one-line activity, not an alert pane (**1.4**).
 
 **0.6.1.1 [K] MITRE ATT&CK**  
 Stay in this lesson: purpose, structure, and one map with a cited field. Not hunt planning (**3.5**). Not **2.7.1**. Not Diamond (**0.6.2**). Not Kill Chain (**0.6.3**).

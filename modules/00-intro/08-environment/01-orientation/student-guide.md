@@ -1,12 +1,12 @@
 # Module 0.8 – Environment / signal flow
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
+**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
 **Proficiency Focus:**  
 - SOC: 0.8 A / B / C ; 0.8.1 2b / 3c / 4c  
 - Hunter: 0.8 B / C / C ; 0.8.1 2b / 3c / 4c  
 - CTI: 0.8 A / B / B ; 0.8.1 1a / 2b / 3c  
 - DE: 0.8 A / B / B ; 0.8.1 2b / 3c / 4c  
-**Estimated Time:** 20 minutes
+**Estimated Time:** 15–20 minutes  
 
 ---
 
@@ -18,52 +18,50 @@ By the end of this module, you will be able to:
 2. Given a situation, say which kind applies and why it is not the adjacent kind.
 
 **Mapped Proficiency Items:**
-- K: 0.8 – Environment / signal flow  
-  SOC A / B / C · Hunter B / C / C · CTI A / B / B · DE A / B / B
-- T: 0.8.1 – Identify which kind of fact applies and why it is not the adjacent kind  
-  SOC 2b / 3c / 4c · Hunter 2b / 3c / 4c · CTI 1a / 2b / 3c · DE 2b / 3c / 4c
+- K: 0.8 – Environment / signal flow
+- T: 0.8.1 – Identify which kind of fact applies and why it is not the adjacent kind
 
 ---
 
 ## 1. Key Concepts
 
-Every desk will look at the same host or log. You must know **where your site can see and where it cannot**. This course does not give you those answers. You get them from **your shop**. If you invent a network, a firewall name, or a sensor you were not shown, you are not doing this hour.
+An alert, a hunt, an intel note, and a detection all look at the same host or log. Before you treat a gap as “nothing happened,” you have to know **where your site can see and where it cannot**. That is the job in this lesson: name the **kind** of environment fact you need — how traffic and logs move on this site — take the question to **your shop**, and do not invent a network, a firewall, or a sensor you were not shown. This course does not publish those answers.
 
-**Why this matters.** A SOC close, a hunt, an intel note, and a detection all depend on the same visibility. If you do not know the egress, the email path, or whether a sensor exists, you will treat a gap as “nothing happened.”
+**Environment / signal flow** is the site’s infrastructure and how traffic (and the logs of that traffic) move. **0.7** named outside tools. Those tools do not tell you what *this* network can see.
 
-**Seven kinds of facts to obtain** (the answers live at your site, not here):
+| Kind | What you need from your shop |
+|------|------------------------------|
+| **Path to the internet / egress** | How traffic leaves for the internet, and where those doors are |
+| **Key network segments and data flow** | The main pieces of the network, and how data moves between them |
+| **Email flow and related systems** | How mail enters and leaves, and which systems sit on that path |
+| **Edge firewall / choke points** | Where the shop can block or see at the edge |
+| **Trusted third-party access / federation** | Who else is trusted onto the network |
+| **Crown jewel / critical assets** | Which assets are critical. Do not guess them |
+| **PCAP collection points / sensors** | Where a sensor sits, and where one does not |
 
-| Kind | The question you take to your shop |
-|------|------------------------------------|
-| **Egress** | How does traffic leave for the internet? |
-| **Segments** | What are the main pieces, and how does data move between them? |
-| **Email** | How does mail enter and leave? |
-| **Choke points** | Where can the shop block or see at the edge? |
-| **Third-party / federation** | Who else is trusted onto the network? |
-| **Crown jewels** | Which assets must not be guessed? |
-| **PCAP / sensors** | Where is there a sensor, and where is there not? |
+**PCAP / sensors** means where a collector sits. It is not how to read a Zeek log (**1.2**). It is not host-observed network (**1.1.4**) — the host logging that *this device* talked.
 
-| This lesson | Other |
-|-------------|-------|
-| Which *kind* of fact | Zeek field reading — **1.2** |
-| Where a sensor sits | Host-observed network on the endpoint — **1.1.4** |
-| Obtain the fact from your shop | Invented site card / classroom network — not this hour |
+A **gap** is still a fact. “No sensor there” is the sensor kind. If no one has shown you the answer, write that you do not have it yet. Do not fill the blank with a classroom network, a ticket name, or the course-fiction firm’s gear.
 
-**What good looks like (0.8.1):** a user clicked a link and the host talked to the internet. The question “how did it leave?” is **egress**. It is not **email** unless you are asking how a message arrived. It is not **sensors** unless you are asking whether anything could have recorded that path. You do not name a firewall you were not shown.
+**What good looks like:** someone gives you a situation. You name the **kind**. You say why the neighbor is the wrong kind. You do not name a firewall you were not shown.
+
+- Given: a user clicked a link and the host talked to the internet. Question: how did that traffic leave? **Path to the internet / egress.** Not **email** — that is how a message arrived. Not **PCAP / sensors** unless the question is whether anything could have recorded that path.
+- Given: you need to know whether any collector could have recorded that talk. **PCAP collection points / sensors.** Not a Zeek-field question (**1.2**). Not host-observed network (**1.1.4**).
+- Given: you need to know which assets must not be guessed. **Crown jewel / critical assets.** Not **trusted third-party / federation** — that is who else is trusted onto the network.
 
 ---
 
 ## 2. Knowledge Check
 
-1. Why must every role know where the site can see?
-2. What is the difference between an egress question and an email question?
-3. You need to know whether any sensor could have seen a host talk. Which kind of fact is that, and why is it not a Zeek-field question?
+1. Why must every role know where the site can see, and where it cannot?
+2. A user clicked a link and the host talked to the internet. You ask how that traffic left. Which kind of fact is that, and why is it not email?
+3. You need to know whether any sensor could have recorded that talk. Which kind of fact is that, and why is it not a Zeek-field question?
 
 ---
 
 ## 3. Summary
 
-Seven kinds of questions. Obtain the answers from your shop. Name the kind that applies and reject the neighbor. Do not invent the network.
+Seven kinds of questions. Obtain the answers from your shop. Name the kind that applies and reject the neighbor. A gap is a fact. Do not invent the network.
 
 **Next:** **1.1.1** Endpoint activity (the map).
 
@@ -73,5 +71,5 @@ Seven kinds of questions. Obtain the answers from your shop. Name the kind that 
 
 - 0.7 – External tools (previous)
 - 1.1.1 – Endpoint activity (next)
-- 1.2 – Zeek (later)
 - 1.1.4 – Host-observed network (later)
+- 1.2 – Zeek (later)

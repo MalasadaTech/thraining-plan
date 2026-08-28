@@ -6,7 +6,7 @@
 - Hunter: 0.1 A / B / B  
 - CTI: 0.1 A / B / B  
 - DE: 0.1 A / B / B  
-**Estimated Time:** 15 minutes
+**Estimated Time:** 15 minutes  
 
 ---
 
@@ -14,9 +14,9 @@
 
 By the end of this module, you will be able to:
 
-1. Name the order of this course.
+1. Name the order of this course: front door, then shared lessons for every role, then four tracks.
 2. Say that SOC ends at reporting, and that the RFI is the door into CTI.
-3. Say which hours come before SOC and apply to everyone.
+3. Name the shared lessons that sit before SOC and apply to everyone.
 
 **Mapped Proficiency Items:**
 - K: 0.1 – How this course is laid out
@@ -25,15 +25,23 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-This hour is the **map of the course**. It is not what a SOC is. It is not the jobs. It is not how work moves.
+This course trains four jobs that sit next to each other. Before you sit a track, you have to know **the order of the course** — what applies to everyone, and where the four tracks sit. That is the job in this lesson: name the layout first, so you do not treat a shared lesson as SOC-only, or the SOC track as the whole program.
 
-**Order:** this front door, then shared hours that apply to every role, then four tracks — SOC analyst, then CTI, then hunting, then detection engineers.
+This lesson is **not** what a SOC is. It is **not** the jobs. It is **not** how work moves.
+
+**Order:** this **front door** (the intro lessons everyone sits first), then **shared lessons** that also apply to every role, then four **tracks** — SOC analyst, then CTI, then hunting, then detection engineers.
+
+| Block | What sits there |
+|-------|-----------------|
+| **Front door** | This intro — the first lessons everyone sits |
+| **Shared lessons** | Still before SOC, and they apply to every role |
+| **Four tracks** | SOC analyst, then CTI, then hunting, then detection engineers |
 
 **Inside SOC:** you learn what detections *are* before you live in the alert queue. SOC **ends at reporting (`1.5`)**. The RFI is the door into CTI.
 
-**Still before SOC, for everyone:** frameworks, tool survey, and environment / signal flow. Those are not SOC-only. Role-local hunt / CTI / DE lists come later and differ by shop. Do not invent your shop’s ticket names here.
+**Still before SOC, for everyone:** **frameworks**, **tool survey**, and **environment / signal flow**. Those are not SOC-only. Role-local hunt / CTI / DE lists come later and differ by shop. Do not invent your shop’s ticket names here.
 
-**Fiction.** This course uses one company and one adversary as fiction, not your site’s policy. Those **names** come in the next hour. After the lessons, a **companion story** retells the same flow as one incident. We do not write that story this hour.
+**Fiction.** This course uses one company and one adversary as fiction, not your site’s policy. Those **names** come in the next lesson. After the lessons, a **companion story** retells the same flow as one incident. We do not write that story in this lesson.
 
 ---
 
@@ -41,13 +49,13 @@ This hour is the **map of the course**. It is not what a SOC is. It is not the j
 
 1. After this front door, what comes before the four tracks?
 2. Where does the SOC track end? What is the door into CTI?
-3. Name two shared hours that sit before SOC.
+3. Name two shared lessons that sit before SOC and apply to everyone.
 
 ---
 
 ## 3. Summary
 
-Map first. Shared hours for everyone, then SOC, CTI, hunting, detections. Detections before the alert queue. SOC ends at reporting. Names of the company and adversary come next.
+Front door, then shared lessons for everyone, then four tracks: SOC analyst, CTI, hunting, detection engineers. Inside SOC, detections come before the alert queue. SOC ends at reporting. The RFI is the door into CTI. Names of the company and adversary come next.
 
 **Next:** **0.2** What a SOC is.
 

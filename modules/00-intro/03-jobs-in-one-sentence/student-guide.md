@@ -24,7 +24,9 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**0.2** said a SOC is a team sport. This hour names the jobs. How work moves between them is **0.4**. One person may do more than one job — that is **0.5**.
+Work lands as an alert, a question, a hunt, a rule, or a block. Before you take it or send it, you have to know **whose job** it is. That is this lesson: name each desk in one sentence so you do not treat every neighbor as the same work, and so you know which two desks this course only points at.
+
+**0.2** said a SOC is a team sport: more than one job sits in or next to it. This lesson names those jobs. How work moves between them is **0.4**. One person may do more than one job — that is **0.5**.
 
 **RFI** means Request for Information: asking intel for more work on an alert.
 
@@ -35,9 +37,9 @@ By the end of this module, you will be able to:
 | **CTI analyst** | Answer the RFI; add context; find more of the adversary. |
 | **Threat hunter** | Look for more activity the alerts missed, from a hunt package or a hypothesis. |
 | **Detection engineer** | Turn what we learned into lasting rules. |
-| **Firewall / IA** | Block what intel names. A **hand-off**, not a track in this course. |
+| **Firewall / IA** (Information Assurance) | Block what intel names. A **hand-off**, not a track in this course. |
 
-Do not learn how to do each job this hour. One sentence each. Stop.
+Do not learn how to do each job in this lesson. One sentence each. Stop. This lesson does not name tickets.
 
 ---
 

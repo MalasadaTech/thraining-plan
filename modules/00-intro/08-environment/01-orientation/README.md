@@ -1,18 +1,17 @@
 # Environment / signal flow
 
 **Path:** `modules/00-intro/08-environment/01-orientation`  
-**Taught:** `00` block, before SOC  
-**Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
-**Time:** about 20 minutes
+**Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
+**Time:** about 15–20 minutes
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|----------|
-| 0.8 | K | Environment / signal flow | 0.8 a–g | A / B / C | B / C / C | A / B / B | A / B / B |
-| 0.8.1 | T | Identify which kind of fact applies and why it is not the adjacent kind | 0.8.1 task 1 | 2b / 3c / 4c | 2b / 3c / 4c | 1a / 2b / 3c | 2b / 3c / 4c |
+| Matrix ID | Type | Item | Outline heading |
+|-----------|------|------|-----------------|
+| 0.8 | K | Environment / signal flow | 0.8 a–g |
+| 0.8.1 | T | Identify which kind of fact applies and why it is not the adjacent kind | 0.8.1 task 1 |
 
-Stay in this lesson: kinds of facts to obtain from your shop. Do not invent a site card. Zeek is **1.2**. Host-observed network is **1.1.4**. Previous is **0.7**. Next is **1.1.1**.
+The teaching-unit ID is **0.8**. Tasks are **0.8.1**. Previous is **0.7**. Next is **1.1.1**. Zeek is **1.2**. Host-observed network is **1.1.4**. Kinds of facts to obtain from your shop. Do not invent a site card, spans, ticket names, or DYA / Harbor architecture. No lab.
 
 ## Concepts taught
 

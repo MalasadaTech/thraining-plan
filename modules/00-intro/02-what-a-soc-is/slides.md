@@ -13,72 +13,84 @@
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-First hour of the course. We only name what a SOC is. We do not walk an alert yet. SOC means Security Operations Center.
+0.1 was the map of the course. This lesson names what a SOC is. It does not name each job or walk a hand-off.
 
 ---
 
-### Slide 2 – What this hour is
-**Title:** What this hour is
+### Slide 2 – Why this lesson exists
+**Title:** Why this lesson exists
 
-Three facts. Then we stop.
+You will work in or next to a **SOC**.
+
+Later lessons name desks and move work. That only works if everyone means the same thing by the word.
+
+This lesson is that shared meaning.
 
 **Speaker Notes:**  
-This is the front door. Next hour (0.3) names each job in one sentence. No lab today.
+This slide is the student intro. Name what a SOC is before anyone lists desks or walks an alert. Do not teach job one-liners today.
 
 ---
 
-### Slide 3 – What a SOC is
+### Slide 3 – Watch and start
 **Title:** Watch and start
+
+A **SOC** is a Security Operations Center.
 
 A SOC watches for bad or suspicious activity and **starts** the response.
 
+It is not every security job in the company.
+
 **Speaker Notes:**  
-“Starts” is the useful word. They do not have to finish IR, intel, or a hunt in this definition. Your shop’s door sign may differ. The job is the same.
+“Starts” is the useful word. The SOC does not have to finish every security job in this definition. If their shop uses another door sign, the job is still watch-and-start.
 
 ---
 
 ### Slide 4 – Team sport
 **Title:** More than one job nearby
 
-Intel, hunting, detections, and IR can sit in or next to the SOC.
+A SOC is a **team sport**.
+
+More than one job sits in or next to the SOC.
 
 **Speaker Notes:**  
-Do not name their products yet. That is 0.3. Here they only need “more than one job,” not “the whole company.”
+Do not name those jobs or their products. That is 0.3. Here they only need “more than one job,” not “the whole company.”
 
 ---
 
 ### Slide 5 – Course fiction
 **Title:** DYA and PRD
 
-**DYA** = Dixon, Yamada, & Associates (a law firm)  
-**PRD** = Pink River Dolphin (adversary name)
+**DYA** is Dixon, Yamada, & Associates, a law firm.  
+**PRD** is Pink River Dolphin, the adversary name.
 
-Fiction for this course. Not your site’s policy.
+Those names are fiction for this course. They are not your site’s policy.
 
 **Speaker Notes:**  
-These names let later lessons reuse the same people and hosts. They are not a live hunt order and not your shop’s ticket names.
+These names let later lessons reuse the same company and adversary. They are not a live hunt order and not your shop’s ticket names. Show names, not the plot.
 
 ---
 
 ### Slide 6 – Knowledge Check
 **Title:** Knowledge Check
 
-1. In one sentence, what is a SOC in this course?  
-2. What does “team sport” mean here?  
-3. What are DYA and PRD?
+1. In one sentence, what is a SOC?  
+2. A SOC is a team sport. What does that mean?  
+3. DYA and PRD are your site’s policy. True or false?
 
 **Speaker Notes:**  
-Answers are only in the instructor guide. One question per fact. Stop after these three.
+Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
 
 ---
 
 ### Slide 7 – Summary
 **Title:** Summary
 
-Watch and start. Several jobs nearby. DYA / PRD are for this course.
+A SOC watches and starts the response.  
+Several jobs sit in or next to it.  
+DYA and PRD are course fiction, not site policy.
 
 **Speaker Notes:**  
-Same three facts. Do not preview the full hand-off chain.
+Same three facts. Do not preview the full hand-off chain. Jobs in one sentence is next.
 
 ---
 
@@ -88,4 +100,4 @@ Same three facts. Do not preview the full hand-off chain.
 **0.3** Jobs in one sentence
 
 **Speaker Notes:**  
-That is the next small piece. Sit down.
+0.3 is each job in one sentence. Stay off the hand-off chain until 0.4.
