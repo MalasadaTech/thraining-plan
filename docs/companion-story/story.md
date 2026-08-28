@@ -17,7 +17,7 @@ This story is the syllabus again, as that one case.
 
 ---
 
-## 1. The queue row
+## 1. The alert in the queue
 
 A SOC analyst gets an alert.
 
@@ -25,7 +25,7 @@ The detection that fired is the one they already know how to read (**1.3**). It 
 
 The analyst does not write a new rule. They investigate the fired object (**1.4.1**).
 
-Present on the row: host, user, time, rule name, parent, the encoded command line. Missing until they pull more: dest IP, URI, file hash. Missing is a gap, not “benign.”
+Present on the alert: host, user, time, rule name, parent, the encoded command line. Missing until they pull more: dest IP, URI, file hash. Missing is a gap, not “benign.”
 
 They do not invent a command line. They do not need the Run key on this first pass.
 
@@ -37,7 +37,7 @@ They put a label on what they have, and they cite it (**1.4.2**).
 
 **True positive.** The rule said this process chain was bad. The activity is the activity the rule is for: `wscript` launched encoded PowerShell on **WS-JLEE**. Cite: parent + `-enc`. A slogan is not evidence.
 
-Endpoint logs for that host and window add the dropper path: Temp `invoice.vbs`. That is what they pulled. The file row has a hash. They look that hash up on VirusTotal (**1.4.1** / **0.7**) during this first pass and write the one-line result — what VT adds, or that the hash is not in VT. They do not open Relations. If the tenant has no parent process, they write that the logs **fail to add** it. Opening the table is not the task.
+Endpoint logs for that host and window add the dropper path: Temp `invoice.vbs`. That is what they pulled. The file event has a hash. They look that hash up on VirusTotal (**1.4.1** / **0.7**) during this first pass and write the one-line result — what VT adds, or that the hash is not in VT. They do not open Relations. If the tenant has no parent process, they write that the logs **fail to add** it. Opening the table is not the task.
 
 They also see a miss. Zeek or PCAP — if they have a flow — shows `GET /update.exe` to `203.0.113.88:8080`. Nothing in the queue fired on that download. That is a **false negative**. FN is not a fired alert they dislike. It is activity that should have been detected and was not.
 
@@ -91,7 +91,7 @@ No country. No “PRD APT” as proof. No second incident. Local queue policy is
 
 ## 6. One hop
 
-While answering, CTI hops from the seed they already have (**2.8.1**). They do not re-teach RDAP or SOA this hour. They write a sentence:
+While answering, CTI hops from the seed they already have (**2.8.1**). They do not re-teach RDAP or SOA in this beat. They write a sentence:
 
 `prd-updates.net` / `203.0.113.88` | distinctive NS pair `ns1.cdn-test.net` + `ns2.cdn-test.net` | candidate **`login-prd.net`** | same NS, same A, not a public resolver.
 
@@ -103,7 +103,7 @@ They reject the whole `203.0.113.0/24`. Shared hosting is not “theirs.”
 
 ## 7. Block, not a detection
 
-The extra name goes to whoever **blocks** — firewall or IA (**0.3 e**).
+The extra name goes to whoever **blocks** — firewall or IA (**0.3 f**).
 
 That hand-off is a block / blacklist request. It is not a new course. It is not a DE deploy. Detection Engineering will **reject** a package that is only a list of IPs to put on the firewall (**4.5.2**).
 

@@ -9,6 +9,6 @@ The training outline as one incident. Same facts as the [story bible](../story-b
 | [story.md](story.md) | Finished retelling |
 | [desk-beats.md](desk-beats.md) | Plant / use / do-not-dump card |
 
-**Teach order** is still `0` → SOC `1` → CTI `2` → hunt `3` → DE `4`. This folder is a re-read after those hours, not a replacement for them.
+**Teach order** is still `0` → SOC `1` → CTI `2` → hunt `3` → DE `4`. This folder is a re-read after those lessons, not a replacement for them.
 
 If the story and the bible disagree, **the bible wins**. Add a fact there first.

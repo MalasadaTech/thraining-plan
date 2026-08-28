@@ -1153,7 +1153,9 @@ See also: [the product is different](#the-product-is-different), [how work can m
 
 ### host rows
 
-Also: host activity types, host logs, host events, endpoint activity map, five kinds of host rows
+Also: host activity types, host logs, host events, endpoint activity overview, five kinds of host activity
+
+Student-facing words in **1.1.1** are **host activity**, **log**, and **event**. A SIEM often shows each event as a **row**. This heading is the search alias.
 
 | Coverage | Module | Roles |
 |----------|--------|-------|

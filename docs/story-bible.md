@@ -34,7 +34,7 @@ Do not invent first names for Dixon or Yamada unless we add them here on purpose
 
 ## Main incident (the plot)
 
-This is the one chain that is “what happened.” Other classroom rows can reuse the names; they are **not** the plot unless we promote them here.
+This is the one chain that is “what happened.” Other classroom examples can reuse the names; they are **not** the plot unless we promote them here.
 
 1. `wscript` runs `invoice.vbs` from Temp on **WS-JLEE**.
 2. That launches hidden encoded PowerShell (`powershell -enc`).
@@ -83,7 +83,7 @@ Reuse the numbers. They are classroom stand-ins.
 
 **Decided (law firm vs old Harbor map):**
 
-- **OT** (`10.10.50.0/24`, `fw-ot`, `ot-hist-01`, no span on OT) is **not** DYA plot. A law firm does not run that plant network. Do not use OT in the companion story. Leftover classroom rows may still say OT until a rename pass; they are not architecture policy.
+- **OT** (`10.10.50.0/24`, `fw-ot`, `ot-hist-01`, no span on OT) is **not** DYA plot. A law firm does not run that plant network. Do not use OT in the companion story. Leftover classroom examples may still say OT until a rename pass; they are not architecture policy.
 - **`pay-db-01`** is **not** this incident. A law firm can have payroll; it is not A12.
 - Vendor VPN and payroll SaaS via SAML are **not** this incident.
 
@@ -109,7 +109,7 @@ Those stay “ask your real site.”
 - Building C and Harbor were never one company. Building C is now a DYA building.
 - File hash prefix `6734f374…` also appears as a JA3 in the TLS lesson. Easy to mix up. Split them when we touch that lesson.
 - `checkin.nightowl-updates.net` / beacon POST is not the main GET `update.exe` chain.
-- Side rows (SYSTEM scheduled task, `helpdesk.exe`, Word → `helper.dll`) use the same user/host. They are extra examples, not the plot.
+- Side examples (SYSTEM scheduled task, `helpdesk.exe`, Word → `helper.dll`) use the same user/host. They are extra examples, not the plot.
 
 ---
 
@@ -117,15 +117,15 @@ Those stay “ask your real site.”
 
 One chain. Each lesson plants or reads a beat. The **alert** is not the whole incident. The **notification** is not the whole investigation. CTI and hunt add facts the SOC product did not owe.
 
-Do not invent a second plot. Extra classroom rows (`helpdesk.exe`, Word → `helper.dll`) stay off this table.
+Do not invent a second plot. Extra classroom examples (`helpdesk.exe`, Word → `helper.dll`) stay off this table.
 
 | Beat (already in “Main incident”) | First teach / plant | First *use* in the flow | Do **not** dump it in |
 |-----------------------------------|---------------------|-------------------------|------------------------|
 | `wscript` → hidden `powershell -enc` on **WS-JLEE** / `jlee` | **1.1.2** process | **1.4** the alert (this is what fired) | — |
-| `invoice.vbs` in Temp (file row, hash) | **1.1.3** file | **1.4.1** investigation; **1.5** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
+| `invoice.vbs` in Temp (file event, hash) | **1.1.3** file | **1.4.1** investigation; **1.5** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
 | HKCU Run **`Updater`** → `%TEMP%\update.exe` | **1.1.5** registry | **3.x** hunt (more hosts the alert missed) | Not in the first alert. Not required on the leadership notify |
 | Host GET `update.exe` :8080 to PRD domain / `203.0.113.88` | **1.1.4** host-network + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **2.11.3** RFI seed (the domain) | Not all of this in the leadership notify |
-| Sibling `login-prd.net`, same NS, same A, SOA | **2.5** / **2.6** / **2.8** | **2.x** enrichment; extra infra → **block** (0.3 e) | Not a SOC notify field |
+| Sibling `login-prd.net`, same NS, same A, SOA | **2.5** / **2.6** / **2.8** | **2.x** enrichment; extra infra → **block** (0.3 f) | Not a SOC notify field |
 | Hunt package: look for `Updater` / `update.exe` / more `invoice.vbs` | **3.x** | Hunt product; same package can go to **4.x** DE | Not a rewrite of the SOC ticket |
 | Nomination / tune / new rule | **4.x** | After the hunt or SOC “we keep missing this” | Not invented in 1.1 |
 
@@ -135,7 +135,7 @@ Do not invent a second plot. Extra classroom rows (`helpdesk.exe`, Word → `hel
 
 **CTI:** more infrastructure and “so what.” **Hunt:** activity the alerts missed. **DE:** lasting rule. Same evidence can sit on more than one desk (**0.4**); the *product* is different.
 
-When we revise a 1.1 / 1.2 / 1.4 / 1.5 lesson, plant or read only that row’s beat. Do not retell the whole chain.
+When we revise a 1.1 / 1.2 / 1.4 / 1.5 lesson, plant or read only that lesson’s beat. Do not retell the whole chain.
 
 ---
 
@@ -155,4 +155,4 @@ When training grows:
 
 1. Add or change the fact here (date it in the git commit; no need for a changelog in the page).
 2. Then change the lesson (or the companion story).
-3. If you are unsure whether a classroom row is “plot” or “extra example,” leave it off the main incident list.
+3. If you are unsure whether a classroom example is “plot” or “extra example,” leave it off the main incident list.

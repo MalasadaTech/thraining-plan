@@ -8,8 +8,8 @@ The working tracker is [tracker.csv](tracker.csv). Add a row there when you star
 |--------|---------|
 | Not Started | Work has not begun |
 | In Progress | Actively being developed |
-| Review | Draft complete, needs review |
-| Complete | Finished and approved. Written lessons accepted 2026-08-16 (see Notes). |
+| Review | Draft complete, needs review. After the stand-alone voice rewrite, accept again before marking Complete. |
+| Complete | Finished and approved. |
 | Deferred | Intentionally postponed |
 
 ## Folder mapping

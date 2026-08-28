@@ -15,7 +15,7 @@
 - Non-primary roles receive minimal awareness ratings: **A** (Knowledge) or **1a** (Task) unless the skill has clear shared value.
 - "—" means the item is not applicable / no requirement for that role.
 
-Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `2.1`, `3.1`, `4.1`, …). Those match the `#` column. **Teach order** is SOC `1` → CTI `2` → hunt `3` → DE `4`. Do not assign work by old display numbers.
+Headings use **teaching-unit IDs** (`0.1`, `1.1`, `1.2`, `2.1`, `3.1`, `4.1`, …). Those match the `#` column. **Teach order** is intro `0` → SOC `1` → CTI `2` → hunt `3` → DE `4`. Do not assign work by old display numbers.
 
 Section **0** includes Detection Engineer (same codes as the other roles), **`0.6` frameworks**, **`0.7` tool survey**, and **`0.8` environment / signal flow**. Other **1–3** rows stay three columns until we rate DE on them. Section **4** has a Detection Engineer column. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 

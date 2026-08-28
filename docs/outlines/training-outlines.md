@@ -21,7 +21,7 @@ Everyone (SOC, Hunter, CTI, DE). Lessons live under `modules/00-intro/`. This wh
 Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`**. Tool survey is **`0.7`**. Environment / signal flow is **`0.8`**. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
 
 **0.1 [K] How this course is laid out**  
-Stay in this lesson: the map of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
+Stay in this lesson: the layout of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
 
 a. Front door, then shared lessons that apply to every role, then four tracks: SOC analyst, CTI, hunting, detection engineers  
 b. Inside SOC, detections *are* before the alert queue. SOC ends at reporting (`1.5`). The RFI is the door into CTI  
