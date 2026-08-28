@@ -63,12 +63,12 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 
 - [ ] Module folder (new modules only): `modules/<role>/<unit>/<nn-short-name>/`
 - [ ] `README.md` — mapped matrix IDs, outline headings, roles, time, **Concepts taught**
-- [ ] `student-guide.md` from [templates/student-guide.md](../templates/student-guide.md). Must have an **Intro** as the first paragraph of Key Concepts: why this hour exists in the job, in ordinary words. Not only “last hour was X.”
-- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md). Must have **Context (plain language)** as one block at the top of the overview. “What this hour is for” must match the student Intro. **Common Student Challenges** is optional. If you list any, each bullet needs a short why and one example. Do not invent challenges to fill a quota. Do not add a new lab or demo unless asked.
-- [ ] `slides.md` from [templates/slides.md](../templates/slides.md). On-slide text stays short and readable without extra briefing. Every slide has **Speaker Notes** in plain language (why this slide, how it connects — not a recap of the bullets).
+- [ ] `student-guide.md` from [templates/student-guide.md](../templates/student-guide.md). Must have an **Intro** as the first paragraph of Key Concepts: why this lesson exists in the job, in ordinary words. Not only “last lesson was X.” A reader with no live instructor must still understand it.
+- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md). Must have **Context (plain language)** as one block at the top of the overview. “What this lesson is for” must match the student Intro. Notes a substitute can use; no planning-chat residue. **Common Student Challenges** is optional. If you list any, each bullet needs a short why and one example. Do not invent challenges to fill a quota. Do not add a new lab or demo unless asked.
+- [ ] `slides.md` from [templates/slides.md](../templates/slides.md). On-slide text stays short and readable without extra briefing or a live instructor. Slide 2 is **Why this lesson exists**. Every slide has **Speaker Notes** in plain language (why this slide, how it connects — not a recap of the bullets).
 - [ ] [concept-index.md](concept-index.md) — Taught vs Used, aliases, roles; same terms as the README Concepts list
 - [ ] [tracker.csv](tracker.csv) — move the row to `Review`, then `Complete` when accepted
-- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index; Context is present; student Intro is present; any challenges have examples; slide notes are plain language
+- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index; Context is present; student Intro is present; any challenges have examples; slide notes are plain language; student guide and slide faces stand alone; no unexplained “this hour” / “row” / “map” slang in student-facing text
 - [ ] Review: names match the outline and student guide. A shop nickname (e.g. “bulletin”) is either the same word the student already has, or it is defined on first use in ordinary words. Do not leave the instructor saying a word the student guide never explained.
 - [ ] **Fluff review (required):** hunt for content that is only there to fill. Cut examples, slides, tables, labs, or extra questions that do not teach a new outline fact. If you cannot say what outline bullet a piece serves, remove it.
 
@@ -80,7 +80,7 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 - Quiz (tracker column exists; not part of sign-off yet)
 - “Related modules” / next-steps links in sibling guides
 
-Front door and shared hours live under `modules/00-intro/` and are taught before SOC: `0.1`–`0.5`, `0.6`, `0.7`, `0.8`. SOC ends at `1.5`. Do not copy those lessons into each role. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+Front door and shared lessons live under `modules/00-intro/` and are taught before SOC: `0.1`–`0.5`, `0.6`, `0.7`, `0.8`. SOC ends at `1.5`. Do not copy those lessons into each role. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 ### Concept index rules
 

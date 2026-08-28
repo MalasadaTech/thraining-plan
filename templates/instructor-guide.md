@@ -5,6 +5,8 @@
 **Estimated Time:** XX minutes (real length — do not pad to an hour)  
 **Delivery Method:** Instructor-led / Self-paced / Hybrid  
 
+Student-facing artifacts (student guide and slide faces) must still make sense with no live talk. Instructor notes are for a substitute who was not in the planning chat: complete sentences, no cue-card fragments, no “you wanted…”.
+
 ---
 
 ## Module Overview for Instructors
@@ -15,11 +17,11 @@
 **Context (plain language):**  
 [One block. Ordinary words. No outline letters or matrix codes.]
 
-- What this hour is for: (same job-context idea as the student **Intro**)
-- How it hooks to the hour before:
-- How it hooks to the hour after:
+- What this lesson is for: (same job-context idea as the student **Intro**)
+- How it hooks to the lesson before:
+- How it hooks to the lesson after:
 - Why we are doing it this way:
-- What we are *not* doing this hour:
+- What we are *not* doing in this lesson:
 - Extra step (only if you added something the outline/human did not say, and why):
 
 Use the same names as the student guide. If you use a shop nickname, define it here in ordinary words on first use.
@@ -30,7 +32,7 @@ Use the same names as the student guide. If you use a shop nickname, define it h
 - ...
 
 **Common Student Challenges:**  
-Optional. Omit this heading if the hour is simple and you do not expect a real struggle. Do not invent bullets to fill a list. If you list any, each is: short why + one example.
+Optional. Omit this heading if the lesson is simple and you do not expect a real struggle. Do not invent bullets to fill a list. If you list any, each is: short why + one example.
 
 - [Challenge]. [Why it happens]. Example: [concrete wrong move].
 
@@ -55,11 +57,11 @@ Match the student guide. Do not invent extra objectives.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this hour is). Drop any row you are not teaching.
+Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
 
 | Section                        | Time     | Notes |
 |--------------------------------|----------|-------|
-| Introduction (required)        | XX min   | Context + what this hour is |
+| Introduction (required)        | XX min   | Context + what this lesson is |
 | Key Concepts                   | XX min   |       |
 | Demonstration / Walkthrough    | omit | Do not write a demo until asked |
 | Hands-On Exercise              | omit | Do not write a lab until asked |
@@ -98,4 +100,4 @@ Required: **1–3 questions for the lesson** (same as the slides / student guide
 ## Additional Instructor Resources *(optional)*
 
 - Next lesson
-- Story bible or external docs only if this hour uses them
+- Story bible or external docs only if this lesson uses them

@@ -2,7 +2,7 @@
 
 Use this file when asked to generate or revise module content for an **existing** teaching-unit ID (Gate 2). Humans follow [contributing.md](contributing.md). You follow this file.
 
-This is a procedure for **every** lesson. Stay-in-this-lesson notes live in [training-outlines.md](outlines/training-outlines.md) under that ID. Do not invent requirements, IDs, or a new voice.
+This is a procedure for **every** lesson. Stay-in-this-lesson notes live in [training-outlines.md](outlines/training-outlines.md) under that ID. Do not invent requirements, IDs, or a second voice. Follow the templates: student-facing text must stand alone; say **this lesson**, not **this hour**, unless you mean clock time.
 
 **Caller prompt (either tool):**  
 `Follow docs/generate-module.md and generate teaching-unit <ID> (<Title>) for me to review. Do not invent IDs.`
@@ -45,7 +45,7 @@ If the user wants a **new** requirement, stop and point them at [templates/requi
 
 Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) before you write.
 
-**Voice sibling:** clone **voice** from `modules/00-intro/` or `modules/04-de/` (short, Intro, no pad). Use the previous module in the same unit only for names already taught and to stay out of that hour. **Do not copy** an old hour-long sibling’s length, section list, tables, example count, slide count, or labs.
+**Voice sibling:** clone **length and stay-in-lesson discipline** from `modules/00-intro/` or `modules/04-de/` (short, Intro, no pad). Voice itself comes from the templates, not from an old sibling’s “this hour” / cue-card wording. Use the previous module in the same unit only for names already taught and to stay out of that lesson. **Do not copy** an old hour-long sibling’s length, section list, tables, example count, slide count, or labs.
 
 ---
 
@@ -77,8 +77,8 @@ Match the voice sibling (plain words, same names, stay in this lesson). **Do not
 | Time | As long as the outline needs. Never stretch a short topic to fill 60–75 minutes. |
 | Audience | Primary + secondary roles from the matrix |
 | Proficiency | 3/5/7 codes from the matrix, per role, identical in student + instructor headers |
-| Student guide | Objectives → **Intro** (why this hour exists in the job) → key concepts that cover the outline, including what each **task** looks like when done well. **No labs, demos, or hands-on exercises** until the human asks. **Knowledge check: 1–3 questions per lesson** that has slides. Short summary. |
-| Instructor guide | **Intro required** (Context + what this hour is). No demo or lab write-up until the human asks. Timing table lists only sections you actually teach. Answers for the 1–3 lesson questions. |
+| Student guide | Objectives → **Intro** (why this lesson exists in the job) → key concepts that cover the outline, including what each **task** looks like when done well. **No labs, demos, or hands-on exercises** until the human asks. **Knowledge check: 1–3 questions per lesson** that has slides. Short summary. Readable with no live instructor. |
+| Instructor guide | **Intro required** (Context + what this lesson is). No demo or lab write-up until the human asks. Timing table lists only sections you actually teach. Answers for the 1–3 lesson questions. Notes a substitute can use; no planning-chat residue. |
 | Slides | As many as you need. Intro + concepts + **knowledge check (1–3 questions for the lesson)** are required. No demo or exercise slides until the human asks. Face of each slide is short enough to read alone. **Speaker Notes** on every slide: a few plain sentences (why this slide, how it connects). |
 | Answers | Only in the instructor guide. No standalone `answer-key.md`. No quiz. |
 
@@ -90,28 +90,28 @@ Examples: use them when they help. Do not invent fail-stories to hit a count.
 
 **Knowledge check:** **1–3 questions per lesson** that has slides. Required. Not per concept. Do not write a fourth question to fill. Do not ask about the next lesson just to have more items.
 
-Voice: direct, instructional, short paragraphs, tables for fields.
+Voice: direct, instructional, short paragraphs, tables for fields. Complete sentences. A reader with no live instructor must still understand the student guide and the slide faces. Say **this lesson**, not **this hour**, unless you mean clock time. Do not use SIEM slang (row, map, encoding) as the first word for an idea; define it on first use in ordinary words, or use a plain word.
 
-**Student Intro (required).** First paragraph of Key Concepts, before the outline ideas. Ordinary words. Why this hour exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last hour was X.” Put the same idea on slide 2. If you cannot finish “in this job they do this because ___,” you do not have an intro.
+**Student Intro (required).** First paragraph of Key Concepts, before the outline ideas. Ordinary words. Why this lesson exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last lesson was X.” Put the same idea on slide 2. If you cannot finish “in this job they do this because ___,” you do not have an intro.
 
 **Context (required). Challenges (only if real):**
 
-Write **Context (plain language)** as the first block in the instructor overview, before Key Teaching Points. Anyone who was not in the planning chat should still see the connection. Use ordinary words. No outline letters, no matrix codes in this block. The “what this hour is for” line must match the student Intro.
+Write **Context (plain language)** as the first block in the instructor overview, before Key Teaching Points. Anyone who was not in the planning chat should still see the connection. Use ordinary words. No outline letters, no matrix codes in this block. The “what this lesson is for” line must match the student Intro.
 
 Include:
 
-- What this hour is for (one or two sentences)
-- How it hooks to the hour before and the hour after (one line each)
+- What this lesson is for (one or two sentences)
+- How it hooks to the lesson before and the lesson after (one line each)
 - Why we are doing it this way (the human’s stated reason, not a new rule)
-- What we are *not* doing this hour
+- What we are *not* doing in this lesson
 
 If you add a step the human did not say, it must appear in Context as “extra, because ___.” If you cannot finish that sentence, do not add the step. Do not jump ahead.
 
-**Common Student Challenges:** omit the whole list when the hour is this simple. Do not invent struggles to satisfy a quota. If you *do* list a challenge, each bullet is one short why + one concrete example.
+**Common Student Challenges:** omit the whole list when the lesson is this simple. Do not invent struggles to satisfy a quota. If you *do* list a challenge, each bullet is one short why + one concrete example.
 
-**Slides:** someone who only reads the deck should still get the point. Speaker notes carry the why; they are not “read the bullets again.”
+**Slides:** someone who only reads the deck should still get the point. Slide 2 title is **Why this lesson exists**, not “What this hour is.” Slide titles name the idea. Speaker notes carry the why; they are not “read the bullets again,” and they are not planning-chat fragments (“Outline a. Stop.” / “You wanted…”).
 
-**Words:** use the word the outline and student guide already use. If you want a shop nickname, define it on first use in ordinary words. Do not invent a second name and assume the reader knows it.
+**Words:** use the word the outline and student guide already use. If you want a shop nickname, define it on first use in ordinary words. Do not invent a second name and assume the reader knows it. If the outline still says “hour,” “row,” or “map” as unexplained slang, use the plain word in the student-facing text and put the outline word in parentheses on first use if later lessons still need it.
 
 **Stay in this lesson:** the outline note under this ID (or its unit) is the fence. Do not pull in the next child or another unit.
 
@@ -168,6 +168,10 @@ Do not set tracker status to human-accepted (`Complete` on the whole package). U
 - Skip **Context (plain language)** or the student **Intro**
 - Invent Common Student Challenges to fill a quota, or leave a listed challenge as a label with no example
 - Leave a slide without plain-language speaker notes
+- Write student-facing text that only makes sense with a live instructor
+- Say “this hour” when you mean this lesson
+- Use unexplained SIEM slang (row, map, encoding) as the headline word for an idea
+- Leave planning-chat residue (“You wanted…,” “Outline a. Stop.”)
 - Jump ahead of what the human asked without saying why in Context
 - Pad a short lesson, or add optional sections only to fill
 - Copy a sibling’s table of contents, timing, or example set
@@ -180,6 +184,6 @@ Do not set tracker status to human-accepted (`Complete` on the whole package). U
 
 ## 7. When you finish
 
-List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) stay-in-this-lesson notes were followed, (3) Concepts taught matches the index, (4) Context is in the instructor guide, (5) the student **Intro** says why this hour exists in the job, (6) any challenges have examples (or the list is omitted), (7) every slide has plain speaker notes, (8) **fluff review done**, (9) 1–3 knowledge-check questions for the lesson, (10) no new lab/demo unless asked, (11) status stays at review until they accept the lesson.
+List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) stay-in-this-lesson notes were followed, (3) Concepts taught matches the index, (4) Context is in the instructor guide, (5) the student **Intro** says why this lesson exists in the job, (6) any challenges have examples (or the list is omitted), (7) every slide has plain speaker notes, (8) **fluff review done**, (9) 1–3 knowledge-check questions for the lesson, (10) no new lab/demo unless asked, (11) student guide and slide faces stand alone (no live instructor required), (12) status stays at review until they accept the lesson.
 
 **Fluff review (required, you and the human):** For each extra example, table, slide, lab step, or question, say which outline bullet it serves. If you cannot, delete it.

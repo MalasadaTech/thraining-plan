@@ -5,7 +5,7 @@
 | Slide # | Slide Title                        | Required? | Content Guidance |
 |---------|------------------------------------|-----------|------------------|
 | 1       | Title Slide                        | Yes       | Module number + title + roles |
-| 2       | What this hour is                  | Yes       | Student **Intro** — why this hour exists in the job, then what you will name |
+| 2       | Why this lesson exists             | Yes       | Student **Intro** — why this lesson exists in the job, then what you will name. Title the idea; do not use “What this hour is.” |
 |         | Learning Objectives                | If useful | Only the objectives you actually have |
 |         | Agenda / Roadmap                   | Optional  | Skip on a short lesson |
 |         | Key Concepts                       | Yes       | One idea per slide |
@@ -27,7 +27,7 @@ Every slide has **Speaker Notes**. Write them in ordinary words. Someone who was
 - Not a recap of the on-slide bullets
 - Not a second student guide
 
-The **face of the slide** must be short enough to understand without a briefing. One idea. If you need a technical term, put a few ordinary words next to it.
+The **face of the slide** must be short enough to understand without a briefing or a live instructor. One idea. Complete sentences or short lines that still name the idea. If you need a technical term, put a few ordinary words next to it. Slide titles name the idea (`Five kinds of host activity`), not a classroom ritual (`What this hour is`).
 
 ---
 

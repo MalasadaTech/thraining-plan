@@ -6,6 +6,8 @@
 
 Do not add optional sections just to fill the page.
 
+Write so a reader with no live instructor can follow. Say **this lesson**, not **this hour**, unless you mean clock time. Complete sentences. If you use a shop or SIEM word (row, map, encoding), put ordinary words next to it on first use, or do not use it.
+
 ---
 
 ## Learning Objectives
@@ -23,7 +25,7 @@ By the end of this module, you will be able to:
 
 ## 1. Key Concepts
 
-**Intro (required).** First paragraph, before the outline ideas. Ordinary words. Why this hour exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last hour was X.” If you cannot finish “in this job they do this because ___,” you do not have an intro.
+**Intro (required).** First paragraph, before the outline ideas. Ordinary words. Why this lesson exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last lesson was X.” If you cannot finish “in this job they do this because ___,” you do not have an intro.
 
 Teach every outline bullet for this lesson. No extra concept sections to look complete.
 
