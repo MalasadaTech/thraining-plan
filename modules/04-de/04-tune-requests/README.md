@@ -1,31 +1,24 @@
-# Tune requests from SOC
+# Tune Requests from SOC
 
-**Path:** `modules/04-de/04-tune-requests`  
-**Primary role:** Detection Engineer  
-**Secondary:** SOC Analyst, Threat Hunter, CTI Analyst  
-**Time:** about 15–20 minutes
+**Path:** `modules/04-de/04-tune-requests`
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 4.4 | K | Tune requests from SOC | 4.4 a–d |
-| 4.4.1 | T | Pick tune / exception / replace / leave / retire and cite why | 4.4.1 task 1 |
-| 4.4.2 | T | Reject a request that is investigation, a block, or IR containment | 4.4.1 task 2 |
-
-The teaching-unit ID is **4.4**. Nominations are **4.3**. Packages are **4.5**. Lifecycle depth is **4.6**. Not investigation, a block, or IR containment. Not a new nomination. No lab. Do not invent tickets or a DYA form.
+| Matrix ID | Type | Item |
+|---|---|---|
+| 4.4 | K | Tune requests from SOC |
+| 4.4.1 | T | Tune / exception / replace / leave / retire |
+| 4.4.2 | T | Route investigation/block/containment elsewhere |
 
 ## Concepts taught
 
-- tune request on a live rule
-- same desk, different inbox
-- tune / exception / replace / leave / retire
-- reject investigation, block, or IR as a tune
-- tune request need and reference
+- live detection tuning
+- evidence-backed change
+- narrow exceptions/filters
+- re-testing after tune
+- operational cost vs detection value
+- work type vs local queue design
 
-## Artifacts
+## Supporting reference
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- [Sigma Filters](https://sigmahq.io/docs/meta/)

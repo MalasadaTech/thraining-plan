@@ -5,83 +5,104 @@
 - Hunter: 3.4.2 B / C / C ; 3.4.2.1–3.4.2.3 3c / 4c / 4d  
 - SOC: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b  
 - CTI: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Extract hunt-suitable procedures, behaviors, observables, and indicators from a CTI report.
+2. Evaluate each candidate lead for provenance, applicability, distinctiveness, validity, and local visibility, then state the hunt question it supports.
 
-1. Pull hunt-suitable **TTPs** and **artifacts** from a CTI report that is already worth hunting.
-2. Drop what you cannot search, then state the **hunt question** those leftovers support.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.4.2 – Extracting hunt leads from CTI
 - T: 3.4.2.1 – Extract hunt-suitable TTPs from a CTI report
 - T: 3.4.2.2 – Extract hunt-suitable artifacts (IOCs, patterns, behaviors)
 - T: 3.4.2.3 – State the hunt question those leads support
 
----
-
 ## 1. Key Concepts
 
-A hunter does not paste a CTI report into a search. After a report is already worth hunting, they pull the methods and objects they can actually search internally, drop the rest, and write one **hunt question** those leftovers can answer. That is the job in this lesson: keep, drop, then the question — so you do not hunt a slogan, an expired hash, or a whole address block.
+A CTI report becomes hunt input only after the hunter translates it into **searchable local evidence**.
 
-**3.4.1** is whether to hunt at all. This lesson is extract. It is **not** how to author STIX (**3.4.3** / **2.10**). It is **not** mapping the hunt onto ATT&CK (**3.5**). The full hunt-card format is **3.2.2**.
+### What to extract
 
-If the report is awareness-only or a full hand-off, stop. If it is mixed, extract only the hunt-worthy slice.
+**Procedures / behaviors**
+- Run-key persistence pointing into a user-writable path;
+- encoded PowerShell spawned by a script interpreter;
+- scheduled task creation with an unusual action;
+- HTTP request to a campaign-specific path.
 
-| Kind | What it is | Keep when it can drive a hunt |
-|------|------------|-------------------------------|
-| **TTP** | How they work — a method (tactic, technique, or procedure) | Specific enough, and you have **telemetry** (logs you can search) |
-| **IOC** | A named object — hash, host, IP, or URL (indicator of compromise) | Current, rare enough, and queryable here |
-| **Behavior** | A pattern over time | Off-baseline or scoped, not daily admin |
+**Observables / indicators**
+- hash;
+- domain/IP/URL;
+- filename/path;
+- registry value;
+- certificate;
+- user-agent or protocol trait.
 
-Copying the IOC appendix is not extract. Extract is a keep list you can search.
+**Context**
+- platform;
+- time period;
+- target population;
+- parent/child relationship;
+- expected role in the intrusion.
 
-**Drop** what you cannot hunt:
+Context often determines whether the lead is useful.
 
-| Drop | Why |
-|------|-----|
-| **No telemetry** | You cannot see it here. Name that **visibility gap**. Do not keep it as a lead. |
-| **Expired IOC** | Stale, or a hash with no reuse note (for example a 2019 hash the report does not say is still in use). |
-| **Noise** | A slogan TTP (“they use persistence”), a whole `/24`, or already-blocked objects that only produce volume. |
+### Evaluate each candidate lead
 
-Record **ATT&CK** IDs **if the report already printed them**. Do not invent an ID the page never had. Do not open ATT&CK Navigator. Mapping this hunt onto tactics and techniques is **3.5**.
+Ask:
 
-**What good looks like:** someone gives you a hunt-worthy report. You write keep TTPs, keep artifacts, drop lines, and one hunt question. The question is an if/then the leftovers can answer. It must be able to come back empty. If the leftovers cannot form that question, you extracted noise.
+1. **Provenance** – Where did the claim/value come from?
+2. **Local applicability** – Can this exist in our environment?
+3. **Distinctiveness** – Will it reduce normal activity to a reviewable set?
+4. **Validity / timeliness** – Is the relationship still relevant to the question?
+5. **Visibility** – Do we have telemetry that can test it?
 
-Classroom slice (**A12**): a vendor report leftover about the same activity this course already uses — HKCU Run **`Updater`**, a download of `/update.exe` on port **8080**, and more `invoice.vbs`.
+### Old does not automatically mean expired
 
-- **Keep TTP:** HKCU Run **`Updater`** → `%TEMP%\update.exe`.
-- **Keep artifacts:** `GET /update.exe` to `203.0.113.88:8080`; more `invoice.vbs`.
-- **Drop:** “they use persistence”; the whole `203.0.113.0/24`.
-- **Hunt question:** If more A12 persistors exist, we see Run **`Updater`**, `update.exe`, or another `invoice.vbs`.
+A SHA256 from 2019 does not become invalid merely because it is old. A file hash can remain useful for retrospective search indefinitely.
 
-Do not write the SIEM query here. Do not fill the four-field hunt card (**3.2.2**). Do not tell the rest of the incident.
+An indicator should be treated as expired/invalid when its source or context says its useful validity ended, ownership changed, the pattern no longer represents the threat, or a defined validity window ended.
 
----
+Age affects priority and expected yield. It is not an automatic expiration rule.
+
+### Missing telemetry is a gap, not a reason to erase the lead
+
+If a report provides a strong persistence procedure but the environment lacks registry telemetry:
+
+- keep the procedure as relevant intelligence;
+- mark it **not currently executable as a hunt lead**;
+- record the **visibility gap**.
+
+That preserves the defensive requirement.
+
+### A12 extraction
+
+**Keep procedure**
+> HKCU Run value `Updater` → `%TEMP%\update.exe`
+
+**Keep observable**
+> `GET /update.exe` to `203.0.113.88:8080`
+
+**Keep context**
+> Windows user workstations; incident time window
+
+**Weak/broad candidate**
+> Entire `203.0.113.0/24` without evidence of common control
+
+**Hunt question**
+> Are A12-related persistence or payload-delivery artifacts present on additional Windows user workstations during the scoped time window?
 
 ## 2. Knowledge Check
 
-1. Copying the IOC appendix is extract. True or false?
-2. Name one reason to **drop** an object.
-3. From the A12 slice, name one keep TTP, one keep artifact, and the hunt question.
-
----
+1. Why is a 2019 hash not automatically “expired”?
+2. What should you do with a strong CTI procedure that is locally applicable but not observable with current telemetry?
+3. From the A12 slice, give one procedure, one observable, and one hunt question.
 
 ## 3. Summary
 
-Keep searchable TTPs and artifacts. Drop noise, expired objects, and anything you cannot see. One hunt question that can come back empty.
+Extract more than IOC lists. Preserve procedures, observables, and the context that makes them meaningful.
 
-**Next:** **3.4.3** STIX as hunt input.
+Evaluate leads for applicability, distinctiveness, validity, and visibility. If visibility is missing, record the gap rather than deleting the intelligence.
 
----
-
-## 4. Related modules
-
-- 3.4.1 – Assessing CTI for hunting value
-- 3.4.3 – STIX as hunt input
-- 3.2.2 – Hunt development concepts
-- 3.5.1 – Using MITRE ATT&CK for hunt planning
+**Next:** **3.4.3 – STIX as Hunt Input**.

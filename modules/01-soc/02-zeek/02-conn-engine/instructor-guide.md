@@ -8,97 +8,85 @@
 **Estimated Time:** 25–30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Read a Zeek `conn` event and describe it. Say what a specific SIEM query looks like.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts read the `conn` log to see who talked to whom on the wire, and how the connection ended.
-- How it hooks to the lesson before: 1.2.1 said engines extract protocol data. This lesson is the first extract — originator, responder, and state.
-- How it hooks to the lesson after: 1.2.3 is DNS. The same flow can have a `dns` event later.
-- Why we are doing it this way: after the Zeek map, read one engine so you can describe a connection before you open DNS or TLS.
-- What we are *not* doing in this lesson: the initiating process (1.1.4). DNS and later engines. Beacon or scan methodology. A full `conn_state` catalog. PCAP analysis. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **`conn` log**, **event**, **originator**, **responder**, **`conn_state`**, and **`history`**. **Row** is the SIEM-table gloss from the student intro, not the headline word. Keep `203.0.113.88:443` as the given. Do not tell the course-fiction plot. Do not invent a site VLAN.
-
-**Key Teaching Points:**
-- Originator versus responder. `id.orig_h` is not the destination, and it is not automatically internal.
-- `SF` / `S0` / `REJ` are enough to start. History is the flag string.
-- No process on this log.
-- A query is specific, not every connection.
-
-**Common Student Challenges:**
-- Treat `id.orig_h` as the destination, or as “our host.” Why: “source” sounds like the internal workstation. Example: writing the dest IP in `id.orig_h` because the workstation is “ours.”
-- Name a process from the `conn` log. Why: 1.1.4 trained initiating process. Example: writing `powershell.exe` from a Zeek `conn` event.
-- Write a query that matches every connection. Why: the task is a named pattern. Example: `conn=*` with no responder IP, port, or state.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+A connection record gives you a network-level starting point: the endpoints, transport, and progress Zeek observed. That description helps you select the related protocol records without assigning a purpose to the traffic too early.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Interpret connection endpoints, state, history, and identifiers.
+2. Describe a connection using the supplied evidence.
+3. Create or modify a query for specific connection activity.
 
 **Mapped Proficiency Items:**
 - K: 1.2.2.1 – Conn engine
 - T: 1.2.2.2 – Analyze a Zeek conn log and accurately describe what occurred
 - T: 1.2.2.3 – Create a SIEM query to detect specific connection activity
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required. For query tasks, ask learners to write or modify the shown query and explain its predicates. Confirm the local schema if demonstrating it in an approved teaching environment.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Wire, not host |
-| Key Concepts            | 16 min    | Five fields; two products |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~25 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 17 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **27** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Reading connection fields
 
-**Talking Points:**
-- Open with the job: an alert names an IP or a connection, and you have to say who talked to whom on the wire and how it ended.
-- Walk the field table. Stop on originator: it is not destination, and it is not “internal.”
-- Teach `SF`, `S0`, and `REJ`. If they ask for every rare state, say what the field shows and stay on those three.
-- Walk the given: workstation → `203.0.113.88:443`, `conn_state` `SF`. One sentence. Originator, responder, port, state.
-- If they name `powershell.exe`: that is 1.1.4. It is not on this log.
-- If they start beacon math or a scan write-up: stay on this event. Describe who talked to whom and how it ended.
-- If they write `conn=*`: that is not a specific query.
+Read endpoint pairs together and use the case of history letters to distinguish direction. Keep state explanations grounded in the TCP example.
 
----
+**Key point to reinforce:** Read originator, responder, transport, state, history, and UID. Originator is a connection role, not a synonym for internal.
 
-## Knowledge Check – Answer Key
+### 2. Working through the example
 
-1. **`id.orig_h` is the destination IP. True or false?**  
-   **Answer:** False. It is the originator IP. Destination is `id.resp_h`.  
-   **Explanation:** Originator started the talk from Zeek’s view. Responder is who was contacted.
+Have learners cite proto before calling it TCP. Ask what evidence would be needed to name an application or process.
 
-2. **Workstation → 203.0.113.88:443, SF. What occurred?**  
-   **Answer:** That host completed a TCP connection to 203.0.113.88 on 443.  
-   **Explanation:** Originator, responder, port, and `SF` (established and torn down). Who launched the socket is not on this log.
+**Key point to reinforce:** The example records TCP to 203.0.113.88:443 with normal establishment and termination. CTrain1 is the connection pivot.
 
-3. **A query that matches every connection is specific. True or false?**  
-   **Answer:** False. A good query names a specific pattern (responder IP or port + state).  
-   **Explanation:** “Every connection” is a table dump, not a detection for this task.
+### 3. Creating a focused connection query
 
----
+Use SF and S0 to show that changing a predicate changes the question. Explain sensor visibility as a possible limit.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Select destination, transport, and state. S0 means no response observed; it does not explain why.
 
-- Next: 1.2.3 DNS engine
+## Knowledge Check — Answer Key
+
+### 1. How do originator and responder differ from internal and external?
+
+**Expected answer:** They describe the connection roles observed by Zeek, not ownership or network location.
+
+### 2. Describe the supplied record and name the pivot identifier.
+
+**Expected answer:** TCP from 192.0.2.10:51000 to 203.0.113.88:443 with normal establishment and termination; use uid CTrain1 for related Zeek records.
+
+### 3. Modify the query for unanswered attempts and explain the limit.
+
+**Expected answer:** Change conn_state to S0. This means no reply was observed, which does not alone prove blocking or that the server was unavailable.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+A connection finding describes the endpoints, transport, and observed progress. Use the connection identifier to seek related records and keep explanations of purpose or failure tied to additional evidence.
+
+Previous: [1.2.1 – Zeek Concepts](../01-concepts/student-guide.md)
+
+Next: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — conn.log](https://docs.zeek.org/en/current/reference/logs/conn.html)

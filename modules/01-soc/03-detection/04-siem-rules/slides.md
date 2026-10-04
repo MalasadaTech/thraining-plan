@@ -1,114 +1,119 @@
-# Module 1.3.4 – SIEM Rules  
-## Slide Deck Content
+# Module 1.3.4 – SIEM Rules
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Identify the source, logic, timing, trigger, and output of a saved detection.
+- Explain what a rule would match and what would create an alert.
+- Create a basic proposal from known log fields or a Sigma rule.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.3.4 – SIEM Rules  
-**Subtitle:** Named logic that can fire an alert  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson is the saved SIEM detection: named logic on ingested logs. Students read one and propose a basic one. They do not deploy it, and they do not open the alert console.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-An alert names a **rule**.
+A saved detection combines search logic with operating settings that determine when and how an alert is created. Reading both parts explains what an alert represents and helps turn a query into a reviewable detection proposal.
 
-SOC analysts **read** that saved detection and **propose** a basic one, so they can say what the rule looks at before they treat the alert as a fact.
-
-You propose. You do not deploy. Opening the alert is **1.4**.
-
-**Speaker Notes:**  
-This slide is the student intro. The job is the saved rule, not the alert queue and not a production push. The next slides name the pieces of that rule.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Name, table, logic, window, output
-**Title:** Name, table, logic, window, output
+## Understanding the detection proposal
 
-A **SIEM rule** (analytics rule / **correlation search**) is named logic that can fire an alert.
+Specify source, logic, lookback, frequency, trigger, output, and alert handling. A query is one part of the detection.
 
-**Name. Table. Logic. Window. Output fields.**
-
-A table with no filter is not a detection.
-
-A join or count in a window is extra. A basic rule can be a filter on one table.
-
-**Speaker Notes:**  
-Correlation search means the saved detection, not a requirement to join events. Stay on structure. Fields and the SIGMA wrap are the next slide.
+**Speaker notes:** Separate the query from its scheduling and alert settings. Explain that an empty source or late ingestion can affect coverage even if the predicates are correct.
 
 ---
 
-### Slide 4 – From fields or from SIGMA
-**Title:** From fields or from SIGMA
+## Reference — Understanding the detection proposal
 
-**From fields** — name the table. Pick fields that exist on it. Add a parent, token, or destination so it is not “all PowerShell.”
+| Component | What to specify |
+|---|---|
+| Name and purpose | The activity the detection is intended to identify. |
+| Source | Required table, event types, and populated fields. |
+| Logic | Matching predicates and any grouping, count, or threshold. |
+| Lookback | How far back each run searches. |
+| Frequency | How often it runs; distinct from lookback. |
+| Output | Evidence and entity fields needed to investigate a result. |
+| Alert behavior | How matches become alerts and how repeated matches are handled. |
 
-**From SIGMA** — logsource → table, selectors → logic, condition → and/or/not. Then name it, give it a window, list outputs.
-
-You are not required to run a converter.
-
-**Speaker Notes:**  
-Two legal creates: from log fields you already know, or by wrapping a SIGMA rule. Same destination object. Map SIGMA; do not re-teach YAML as a new format.
-
----
-
-### Slide 5 – Wildcard vs regex
-**Title:** Wildcard vs regex
-
-**Wildcard** (or substring) — when a path or fixed token is enough (`*\\Temp\\*`, `-enc`).
-
-**Regex** — when the token itself varies (`-e` / `-enc` / `-EncodedCommand`).
-
-Do not regex an empty field into existence.
-
-**Speaker Notes:**  
-This is matching on SIEM fields, not byte patterns on a file. If the string is stable, a wildcard or substring is enough. Regex is for variation.
+**Speaker notes:** Separate the query from its scheduling and alert settings. Explain that an empty source or late ingestion can affect coverage even if the predicates are correct. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Read it. Propose a basic one.
-**Title:** Read it. Propose a basic one.
+## Reading a worked proposal
 
-**Given:** `DeviceProcessEvents`, powershell, `-enc`, parent `wscript`, 5-minute window.
+The teaching proposal runs every five minutes over a five-minute window and triggers on matching process events.
 
-**Detects:** process create of PowerShell with `-enc` and parent `wscript`.
-
-An unfiltered table is not a create. SOC proposes. Detection engineering reviews.
-
-**Speaker Notes:**  
-Walk the given from the student guide before the knowledge check. One sentence for what it detects. Do not tell the intro plot. Do not open the alert.
+**Speaker notes:** Read the query and then the trigger statement. A filter match and a platform-created alert are related but distinct steps.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Reference — Reading a worked proposal
 
-1. A SIEM table with no filter is a detection. True or false?  
-2. The given rule — what does it detect, in one sentence?  
-3. When do you use a wildcard instead of a regex?
+| where Timestamp > ago(5m)
+| where ActionType == "ProcessCreated"
+| where FileName =~ "powershell.exe"
+| where InitiatingProcessFileName =~ "wscript.exe"
+| where ProcessCommandLine contains "-enc"
+| project Timestamp, DeviceId, DeviceName, ReportId, AccountName,
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Read the query and then the trigger statement. A filter match and a platform-created alert are related but distinct steps. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Worked example — Reading a worked proposal
 
-Named logic on a table, in a window, with outputs.  
-From fields or from SIGMA.  
-You propose. You do not deploy.
+```kusto
+DeviceProcessEvents
+| where Timestamp > ago(5m)
+| where ActionType == "ProcessCreated"
+| where FileName =~ "powershell.exe"
+| where InitiatingProcessFileName =~ "wscript.exe"
+| where ProcessCommandLine contains "-enc"
+| project Timestamp, DeviceId, DeviceName, ReportId, AccountName,
+          ProcessCommandLine, InitiatingProcessCommandLine
+```
 
-**Next:** **1.4.1** Alert context and investigation
+**Speaker notes:** Read the query and then the trigger statement. A filter match and a platform-created alert are related but distinct steps. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
 
-**Speaker Notes:**  
-The next lesson is the alert that this object can create, not more rule syntax.
+---
+
+## Creating or translating a basic rule
+
+Translate field tests and their semantics. Review late data and repeated matches before operational use.
+
+**Speaker notes:** Ask learners to produce the predicate and describe the surrounding rule settings. Compare contains and has without implying their semantics are interchangeable.
+
+---
+
+## Knowledge check
+
+1. How do lookback and run frequency differ?
+2. Describe the example’s matching logic and trigger.
+3. Create a modified proposal that permits both Script Host parents. What besides the predicate should it specify?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+A SIEM detection proposal connects clear logic to a source, schedule, trigger, and useful output. Preserve matching semantics when translating Sigma and review timing and alert behavior before deployment.
+
+Previous: [1.3.3 – YARA Rules](../03-yara-rules/student-guide.md)
+
+Next: [1.4.1 – Alert Context and Investigation](../../04-alerts/01-context-investigation/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)
+- [Microsoft — Custom detection rules](https://learn.microsoft.com/en-us/defender-xdr/custom-detection-rules)
+- [Sigma — Rule basics](https://sigmahq.io/docs/basics/rules.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

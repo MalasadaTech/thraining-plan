@@ -7,68 +7,76 @@
 - SOC: 2.2.4 A / A / A ; 2.2.4.1 1a / 1a / 1a  
 **Estimated Time:** 20–25 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name common biases that warp a product, and what they do to it.
-2. Spot a bias in a judgment and name a **mitigation** — a named method, not a pep talk.
+1. Recognize **confirmation bias**, **anchoring**, and **availability bias** in an analytic judgment and explain how each can distort the product.
+2. Select and apply a structured mitigation that gives the judgment a meaningful opportunity to change.
 
 **Mapped Proficiency Items:**
 - K: 2.2.4 – Cognitive biases and mitigation
 - T: 2.2.4.1 – Identify cognitive bias in a judgment and apply a mitigation technique
 
----
-
 ## 1. Key Concepts
 
-CTI analysts write **judgments** other people act on. A first label, a favorite story, or the last incident can lock that product before the evidence has a fair look. The job in this lesson is to **name the bias** in the judgment and apply a **named method** so the product can still change. This is not Admiralty letters (**2.2.3**). It is not how to navigate a threat intelligence platform (**2.3.1**). You do **not** invent a third official method. You do **not** diagnose the author.
+Cognitive biases are predictable shortcuts in human judgment. Analysts cannot eliminate them by simply deciding to “be objective.” The practical goal is to recognize where a judgment is vulnerable and use a process that forces the reasoning to encounter evidence or alternatives it might otherwise ignore.
 
-| Bias | What it looks like | What it does to the product |
-|------|--------------------|-----------------------------|
-| **Confirmation** | You keep the evidence that fits the first story | Alternatives never get a fair look |
-| **Anchoring** | The first vendor name or first number sticks | Later internals cannot move the call |
-| **Availability** | The last incident you remember becomes this one | A new event is treated as **A12** (this course’s classroom incident) with no shared host, malware, or infrastructure |
+This lesson focuses on three biases:
 
-This lesson names **those three**. A longer psychology list is not required.
+| Bias | What happens | Risk to the product |
+|---|---|---|
+| **Confirmation bias** | The analyst gives more attention to evidence that fits the favored explanation and discounts evidence that does not. | Alternatives receive an unfair test and the judgment becomes harder to revise. |
+| **Anchoring** | An early label, number, or explanation has too much influence on later reasoning. | New evidence is interpreted around the first frame instead of being allowed to change it. |
+| **Availability bias** | Recent, vivid, or memorable examples come to mind more easily and feel more representative than they are. | A new event is treated like the last memorable incident without enough shared evidence. |
 
-A **mitigation** is a method you run on the product. “Be more objective” is not a mitigation. Two methods this course already named (**2.2.2**) are enough here:
+The task is to identify the **effect on the judgment**, not diagnose the personality or motives of the person who wrote it.
 
-| Method | Use when | What you do |
-|--------|----------|-------------|
-| **Key Assumptions Check** | One claim is carrying the call | List the assumption; say what would break it |
-| **Analysis of Competing Hypotheses (ACH)** | Two or more explanations are live | List the hypotheses; see which evidence **hurts** each one |
+### Confirmation bias
 
-**What good looks like:**
+Suppose an analyst already favors the idea that the update domain was a payload host. If the analyst records every suspicious detail supporting that idea but ignores evidence of legitimate software activity, confirmation bias can strengthen the conclusion without actually strengthening the analysis.
 
-- **Spot:** “Vendor PDF says PRD APT, so high nation-state.” **Anchoring** (and confirmation). **PRD APT** is a vendor label, not proof of who they are. The first label stuck.
-- **Mitigate:** Key Assumptions Check — assumption: “vendor name = who they are.” That assumption breaks. You do not need a new method.
+A useful mitigation is **ACH** because it requires the analyst to compare the same evidence against competing explanations and look deliberately for evidence that is inconsistent with the favored one.
 
-Do not tell the rest of the incident. Do not re-rate the source (**2.2.3**). Do not write an actor profile (**2.11**).
+### Anchoring
 
----
+Suppose the first report calls the cluster “PRD APT.” Later analysis begins with the unstated assumption that the vendor tracking name identifies a government sponsor. The first label has become an anchor.
+
+A **Key Assumptions Check** can expose the dependency: “vendor label = actual sponsor.” Once written down, the analyst can ask what evidence supports that assumption and what would cause it to fail.
+
+### Availability bias
+
+Suppose the analyst recently worked A12 and then sees a new incident involving PowerShell. Because A12 is vivid and easy to recall, the analyst may prematurely treat the new event as related even when there is no shared infrastructure, file, host, or other meaningful linkage.
+
+A useful mitigation is to make the comparison explicit. ACH can compare “related to A12” against “unrelated activity,” while a Key Assumptions Check can test the premise that superficial similarity implies common origin.
+
+### Mitigation is a process, not a pep talk
+
+“Be more objective,” “keep an open mind,” or “avoid bias” are good intentions, but they do not create a repeatable test. A mitigation should change what the analyst **does** with the reasoning.
+
+The two methods already taught in Module 2.2.2 are sufficient for this lesson:
+
+- **Key Assumptions Check:** expose a premise carrying the judgment and test how fragile it is.
+- **ACH:** compare competing explanations against the same evidence and seek evidence that discriminates among them.
+
+The goal is not to prove that the first judgment was wrong. The goal is to give it a fair opportunity to change if the evidence does not support it.
 
 ## 2. Knowledge Check
 
-1. “Be more objective” is a mitigation technique. True or false?
-2. Name two biases from this lesson.
-3. “Vendor PDF says PRD APT, so high nation-state.” Bias, and one mitigation.
-
----
+1. Why is “be more objective” not a sufficient bias mitigation?
+2. A vendor tracking name is introduced early and later evidence is interpreted around it. Which bias is most directly illustrated, and what mitigation would help?
+3. A new PowerShell incident is assumed to be A12-related mainly because A12 was the analyst's most recent case. Which bias is illustrated, and how could the analyst test that assumption?
 
 ## 3. Summary
 
-Name the bias in the product. Apply a method you can run. Do not pep-talk it away.
+Confirmation bias favors evidence that fits the current explanation. Anchoring gives the first frame too much influence. Availability makes vivid or recent examples feel more representative than they are. Effective mitigation changes the analyst's process by exposing assumptions or comparing alternative explanations, giving the judgment a real chance to move when the evidence warrants it.
 
-**Next:** **2.3.1** Internal threat intelligence platform.
 
----
+## 4. Related Modules
 
-## 4. Related modules
-
+- 2.2.2 – Structured analytic techniques
 - 2.2.3 – Admiralty Code (previous)
-- 2.2.2 – Structured analytic techniques (the mitigations)
-- 2.3.1 – Internal TIP
-- 2.1.7 – Attribution
+- 2.1.8 – Attribution
+- 2.4.1 – Internal threat intelligence platform
+
+**Next:** [2.3.1 – MITRE ATT&CK for CTI Analysis and Reporting](../../03-frameworks/01-attck-cti/student-guide.md).

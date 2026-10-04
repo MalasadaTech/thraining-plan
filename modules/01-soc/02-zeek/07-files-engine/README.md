@@ -5,6 +5,10 @@
 **Secondary:** Threat Hunter, CTI Analyst  
 **Time:** about 25–30 minutes
 
+## Purpose
+
+Zeek file analysis connects observed network content to the flow that carried it. It can help explain a download or attachment, while the available fields also show whether hashes or extracted bytes exist for further examination.
+
 ## Mapped proficiency items
 
 | Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
@@ -13,20 +17,29 @@
 | 1.2.7.2 | T | Analyze a Zeek files log and accurately describe what occurred | 1.2.13 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 1a / 2b |
 | 1.2.7.3 | T | Create a SIEM query to detect specific file transfer activity | 1.2.13 task 2 | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 1a / 2b |
 
-The teaching-unit ID is **1.2.7**. Outline headings `1.2.12` / `1.2.13` are the K/T pair. SMTP is **1.2.6**. Weird is **1.2.8**. Host file activity is **1.1.3**. Student-facing text says **files log** / **event**; **row** is a SIEM gloss. No lab.
-
 ## Concepts taught
 
 - `files` log
 - filename (files log)
 - MIME type
 - files-log hashes (MD5, SHA1, SHA256)
-- `tx_hosts` / `rx_hosts`
-- `conn_uids` (link to other Zeek logs)
+- current endpoint / `is_orig` fields and legacy `tx_hosts` / `rx_hosts`
+- current `uid` and legacy `conn_uids` (links to other Zeek logs)
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- [Student guide](student-guide.md)
+- [Instructor guide and answer key](instructor-guide.md)
+- [Slides and speaker notes](slides.md)
+
+## Course connections
+
+Previous: [1.2.6 – SMTP Engine](../06-smtp-engine/student-guide.md)
+
+Next: [1.2.8 – Weird Engine](../08-weird-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — files.log](https://docs.zeek.org/en/current/reference/logs/files.html)

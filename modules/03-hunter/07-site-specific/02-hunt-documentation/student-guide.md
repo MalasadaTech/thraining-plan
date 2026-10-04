@@ -5,68 +5,89 @@
 - Hunter: 3.7.2 B / C / C ; 3.7.2.1 3c / 4c / 4c  
 - SOC: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b  
 - CTI: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Locate the local hunt documentation standard and authoritative repository.
+2. Document a hunt using the required local fields, evidence/query retention rules, and versioning method.
 
-1. Name the two local facts you must obtain — **required elements** of hunt documentation, and **where and how** hunts are documented — and say that both **vary by site**.
-2. **Document** a hunt only on the form and in the official place you were shown — or record that you **do not have the local standard yet**.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.7.2 – Hunt documentation standards
 - T: 3.7.2.1 – Document a hunt according to local standards
 
----
-
 ## 1. Key Concepts
 
-Hunters write the hunt on the shop’s form, in the shop’s official place, so the next person can find a complete record. That is the job in this lesson: obtain the local documentation standard, then write there. You do **not** invent a DYA hunt template or an archive path.
+The 3.2.2 hunt card teaches the **reasoning needed to develop a hunt**.
 
-**3.7.1** was how a hunt is opened and controlled. This lesson is how it is **written down**. **3.2.2** already taught a classroom hunt card (hypothesis, scope, priority, unique pattern). That card is training. It is not your site’s form. What the hunt must produce, and who receives it, is **3.7.3**.
+The organization's hunt record answers a different question:
 
-Every shop lists its own required elements and official place. A new hunter obtains them early. This course does **not** publish DYA’s hunt template or the path where hunts are stored.
+> What must be preserved so another analyst can understand, reproduce, review, and close this hunt here?
 
-| Idea | What it is |
-|------|------------|
-| **Required elements** | What the site form always wants on a hunt write-up. You obtain that list. You do not write one for DYA. |
-| **Where and how** | The official place and method the shop uses to record hunts (sometimes called the **store**). Your lead names it. Personal notes and Slack are **not** that record. |
-| **Obtain-and-follow** | Ask where the standard lives (the role or place your lead names). Write there, on that form. If no one has shown you the standard, write **I do not have the local standard yet.** |
+### Learn the local documentation map
 
-If an instructor overlays a real shop form, that overlay is the standard for the room. It is still not DYA policy.
+| Question | Local answer |
+|---|---|
+| What fields are mandatory? | ______ |
+| Where is the authoritative hunt record stored? | ______ |
+| How are hypothesis/scope changes recorded? | ______ |
+| How are queries or notebooks retained? | ______ |
+| What evidence/results must be attached or linked? | ______ |
+| How are data sources and time windows recorded? | ______ |
+| How are gaps and limitations captured? | ______ |
+| How are revisions/version history handled? | ______ |
+| What status/closure fields are required? | ______ |
 
-**What good looks like:** someone asks you to document a hunt.
+These are orientation questions, not a substitute template.
 
-- **Obtain:** “I obtain the required elements and where hunts are documented from [the role or place the instructor names, or my lead]. I write there.” If none was shown: **“I do not have the local standard yet.”**
-- **Document:** only on the form and in the official place you were shown. Do **not** declare a scratch note the hunt record. Do **not** invent a template name or a folder path as policy.
+### Reproducibility matters
 
-The classroom card is still useful as *ideas*. It is not the site form.
+A future analyst should be able to answer:
 
-Do not invent an initiate path (**3.7.1**). Do not invent an output list or recipient chart (**3.7.3**).
+- What was the hypothesis?
+- What population and time window were searched?
+- Which telemetry was available?
+- Which query/version was run?
+- What exclusions or filters were applied?
+- What findings were reviewed?
+- What limitations affect the result?
 
----
+A screenshot of a dashboard rarely provides all of that.
+
+### Separate scratch work from the official record
+
+Personal notes can help an analyst think. The local standard decides what must become part of the authoritative hunt record.
+
+The official record should preserve enough evidence and reasoning to support:
+- review;
+- hand-off;
+- follow-on hunting;
+- detection engineering;
+- later lessons learned.
+
+### Missing standard
+
+Use:
+
+> **Local hunt documentation standard not yet verified.**
+
+Then identify the missing repository/form/process owner.
 
 ## 2. Knowledge Check
 
-1. The 3.2.2 classroom card is the shop’s official hunt form. True or false?
-2. What two things does this lesson obtain?
-3. What do you write if no one has shown you the standard?
-
----
+1. How does the 3.2.2 hunt card differ from the local official hunt record?
+2. Name four things that support reproducibility.
+3. What should you record if you do not know the authoritative hunt repository?
 
 ## 3. Summary
 
-Every shop has hunt documentation standards. Obtain the required elements and where hunts are documented. Write there. If you do not have the standard, write that. Do not invent a template.
+Document hunts where the organization says the authoritative record lives.
 
-**Next:** **3.7.3** Hunt outputs and hand-off.
+Preserve the hypothesis, scope, telemetry, query/evidence, findings, limitations, and version history required by the local standard.
 
----
+**Next:** **3.7.3 – Hunt Outputs and Hand-off**.
 
-## 4. Related modules
+## Reference Model
 
-- 3.7.1 – Hunt control and lead management
-- 3.7.3 – Hunt outputs and hand-off
-- 3.2.2 – Hunt development (classroom card)
+This module intentionally relies on the organization's local hunt documentation and records standard.

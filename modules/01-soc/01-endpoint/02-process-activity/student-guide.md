@@ -5,81 +5,81 @@
 - SOC: 1.1.2.1 A / B / C ; 1.1.2.2 2b / 3c / 4c ; 1.1.2.3 2b / 3c / 4c  
 - Hunter: 1.1.2.1 A / B / B ; 1.1.2.2 1a / 2b / 3c ; 1.1.2.3 1a / 2b / 3c  
 - CTI: 1.1.2.1 A / A / A ; 1.1.2.2 1a / 1a / 1a ; 1.1.2.3 1a / 1a / 1a  
-**Estimated Time:** 25–30 minutes  
-
----
+**Estimated Time:** 25–30 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a process event: create / terminate, parent-child, command line, user, hashes, and process access.
-2. Describe what a Sysmon or MDE process event shows, and say what a **specific** SIEM query looks like.
+1. Interpret process creation, termination, and access events.
+2. Describe a process event using its recorded fields and limitations.
+3. Create or modify a query for a specific process pattern.
 
 **Mapped Proficiency Items:**
 - K: 1.1.2.1 – Process activity concepts
 - T: 1.1.2.2 – Analyze a process event (Sysmon or MDE) and accurately describe what occurred
 - T: 1.1.2.3 – Create a SIEM query to detect specific process activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+A process event helps answer which program ran, what started it, and under which account. Reading those relationships carefully gives the investigation a stronger starting point than relying on the executable name alone.
 
-SOC analysts read **process** events on a host to see who ran what. That is daily alert work: an alert names a host, and you have to say which program started, ended, or touched another — from whom, and as whom. **1.1.1** named the five kinds of host activity. This lesson is the **process** kind. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
+## 1. Reading a process event
 
-**Process activity** is endpoint telemetry about a running program: it **started**, it **ended**, or one process **touched** another. In a SIEM, that event usually shows up as a row in a process table.
+| Detail | What to examine |
+|---|---|
+| Operation | Sysmon 1 records process creation, 5 termination, and 10 process access. These are different operations. |
+| Process identity | Image path, PID, event time, and a stable process identifier where available. PIDs can be reused. |
+| Command line | Recorded arguments explain how the program was invoked; they may be incomplete or attacker-controlled. |
+| Parent and account | Parent fields and user context help explain the launch relationship. In an MDE creation event, `InitiatingProcess*` describes the initiating process. |
+| Integrity and elevation | Use recorded integrity and token information to assess execution context. An empty field leaves a gap. |
+| Hash and original filename | Identify the file and its embedded metadata. MDE uses `ProcessVersionInfoOriginalFileName`; a name or trusted hash alone does not establish benign use. |
 
-| Idea | What to read |
-|------|----------------|
-| **Create / terminate** | Sysmon **1** / **5**. MDE create is `ActionType` **ProcessCreated**. Terminate is Sysmon 5 — do not assume `ProcessTerminated` on this table. |
-| **PID, name, command line** | `ProcessId`, image/name, `CommandLine` / `ProcessCommandLine`. The image name can be fake. The command line is often what actually ran. |
-| **Parent-child** | PPID, parent name, parent command line; MDE `InitiatingProcess*` |
-| **Integrity / user** | Integrity level; `User` / account (where logged). Empty is a gap, not “not admin.” |
-| **Hash / original filename** | SHA256; `OriginalFileName` (PE resource — can disagree with the on-disk name) |
-| **Process access** | Sysmon **10**: source → target (who touched whom). Not a create. |
+`DeviceProcessEvents` provides process creation and related observations. Use its in-portal schema to confirm event types rather than assuming every Sysmon operation has a direct equivalent there. For process access, describe the recorded source and target; opening a handle alone does not establish injection.
 
-**How this shows up:** Sysmon **1** / **5** / **10**; MDE `DeviceProcessEvents` (`ActionType`, `InitiatingProcess*`, `ProcessCommandLine`, SHA256). On MDE, the **initiating** process is the parent. Same activity, different field names.
+## 2. Working through the example
 
-MDE `ActionType` values on **this** table:
+The supplied creation event records `wscript.exe` launching `powershell.exe -enc …` as `jlee`. A supported description is: “Script Host launched PowerShell with an encoded-command argument under the recorded account `jlee`.” The parent, command line, and account fields support the sentence.
 
-| `ActionType` | What it is | Sysmon cousin |
-|--------------|------------|---------------|
-| **ProcessCreated** | A process launched | Event **1** |
-| **OpenProcess** | A process opened a handle to another (who touched whom) | Event **10** |
+The abbreviated command line does not show the decoded instructions. It also does not establish a hidden window: that needs an appropriate argument or other evidence. Record the event reference and time so another analyst can recover the source. A legitimate PowerShell binary can be used for either authorized or malicious activity.
 
-The full set is in the Defender portal schema. Do not invent a value. **Terminate** is Sysmon **5**. Do not assume a `ProcessTerminated` event in `DeviceProcessEvents`.
+## 3. Creating a focused process query
 
-If a field is empty in your tenant, say so. Do not invent it.
+The following KQL example illustrates the requested search. Confirm the table, fields, and supported `ActionType` values in your environment before using it. Adjust the time range to the investigation.
 
-**What good looks like:**
+```kusto
+DeviceProcessEvents
+| where Timestamp > ago(1d)
+| where ActionType == "ProcessCreated"
+| where FileName =~ "powershell.exe"
+| where InitiatingProcessFileName =~ "wscript.exe"
+| where ProcessCommandLine contains "-enc"
+| project Timestamp, DeviceName, AccountName, ProcessCommandLine,
+          InitiatingProcessCommandLine, ProcessId, SHA1, SHA256
+```
 
-- Describe: one sentence — who ran what, from whom, as whom. Create, terminate, or access. Do not jump to file, DNS, or registry (**1.1.3**–**1.1.5**).
-- Given: `wscript.exe` (Temp `invoice.vbs`) → `powershell.exe -enc …` as `jlee`. **What occurred:** script host launched hidden encoded PowerShell. The hash of `powershell.exe` can still be fine. The parent and command line are what you write down.
-- Query: names a **specific** pattern (parent + command-line fragment), not “all processes.”
+The filters search for the three observed characteristics together. `contains` performs a substring search; this teaching example can match longer text and does not cover every spelling or form of PowerShell invocation. Review the returned command lines before interpreting a match. To create a query for a different parent, change the initiating-process predicate and explain how the result set changes.
 
-File, host-network, registry, and image-load events are the next **1.1** lessons.
+## Knowledge Check
 
----
+1. What distinguishes Sysmon events 1, 5, and 10?
+2. Describe the supplied wscript-to-PowerShell event and identify one unknown.
+3. Modify the query to look for the same PowerShell pattern started by cscript.exe. What changes?
 
-## 2. Knowledge Check
+## Summary
 
-1. Sysmon Event 10 is a process start. True or false?
-2. `wscript.exe` (Temp `.vbs`) creates `powershell.exe -enc …`. In one sentence, what occurred?
-3. A SIEM query that matches every process is a good “specific process activity” query. True or false?
+A useful process description connects the operation, program, command line, parent, and account to recorded evidence. A focused query expresses the chosen pattern and makes its coverage limits clear.
 
----
+## Course Connections
 
-## 3. Summary
+Previous: [1.1.1 – Endpoint activity (the map)](../01-endpoint-activity/student-guide.md)
 
-A process event tells you who ran what, from whom, as whom. That is a create, a terminate, or an access. Command line and parent are what you trust. A query names a specific pattern.
+Next: [1.1.3 – File System Activity](../03-file-system-activity/student-guide.md)
 
-**Next:** **1.1.3** File system activity.
+[1.x module index](../../README.md)
 
----
+## References and Further Reading
 
-## 4. Related modules
-
-- 1.1.1 – Endpoint activity (the map)
-- 1.1.3 – File system activity
-- 1.1.4 – Network activity (endpoint)
-- 1.2 – Zeek
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceProcessEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)

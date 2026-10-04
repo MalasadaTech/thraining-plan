@@ -8,100 +8,85 @@
 **Estimated Time:** 25–30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Read a Zeek `files` event and describe it. Say what a specific SIEM query looks like.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts read name, MIME, and hash when Zeek saw a file on the wire — who sent it, who received it, and which connection UID joins the other Zeek logs.
-- How it hooks to the lesson before: 1.2.6 is envelope mail. This lesson is the file extract on the wire, including an attachment if Zeek hashed it.
-- How it hooks to the lesson after: 1.2.8 is weird — protocol oddities, not a file hash.
-- Why we are doing it this way: after the protocol engines, read the files extract so you can describe a transfer without treating it as a host file-create.
-- What we are *not* doing in this lesson: host file activity (1.1.3). YARA (1.3). PCAP analysis. Invented hashes. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **files log**, **event**, `filename`, `mime_type`, `md5` / `sha1` / `sha256`, `tx_hosts`, `rx_hosts`, and `conn_uids`. **Row** is the SIEM-table gloss from the student intro, not the headline word. The given uses `update.exe` and `203.0.113.88` (MIME `application/x-dosexec`). Teach `conn_uids` as the join, not a pivot lab. Do not tell the course-fiction plot.
-
-**Key Teaching Points:**
-- Wire file, not host file.
-- Name can lie. MIME can disagree.
-- Empty hash means not calculated, not clean.
-- `tx_hosts` / `rx_hosts` are sender and receiver, not orig/resp.
-- `conn_uids` values are the `uid` on the other Zeek logs.
-- A query is specific.
-
-**Common Student Challenges:**
-- Treat a `files` event as a Sysmon 11. Why: both mention a file. Example: writing “`update.exe` was created in Temp” from the files log.
-- Look for `id.orig_h` on this log. Why: conn and HTTP use orig/resp; files uses tx/rx. Example: calling the workstation the sender because it started the HTTP GET.
-- Write a query that matches every `files` event. Why: the task is a named pattern. Example: no filename, MIME, hash, or tx/rx filter.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+Zeek file analysis connects observed network content to the flow that carried it. It can help explain a download or attachment, while the available fields also show whether hashes or extracted bytes exist for further examination.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Interpret file names, MIME types, hashes, direction, and connection identifiers.
+2. Describe observed file content without assuming endpoint creation.
+3. Create or modify a query using the file-log schema actually available.
 
 **Mapped Proficiency Items:**
 - K: 1.2.7.1 – Files engine
 - T: 1.2.7.2 – Analyze a Zeek files log and accurately describe what occurred
 - T: 1.2.7.3 – Create a SIEM query to detect specific file transfer activity
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required. For query tasks, ask learners to write or modify the shown query and explain its predicates. Confirm the local schema if demonstrating it in an approved teaching environment.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Wire file, not host file |
-| Key Concepts            | 16 min    | Fields; two products |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~25 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 17 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **27** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Reading file-analysis records
 
-**Talking Points:**
-- Open with the job: an alert names a download, an attachment, or a hash, and you have to say what moved on the wire.
-- Walk the field table. Stop on MIME: `application/x-dosexec` is what Zeek often writes for a Windows executable, not the word “executable.”
-- Stop on tx/rx: the host that sent the bytes is `tx_hosts`. For an HTTP GET of a file, that is often the server, not the client.
-- Stop on `conn_uids`: copy a value and search other Zeek logs as `uid`. That is the join, not a lab.
-- Walk the given: `update.exe`, MIME `application/x-dosexec`, hash logged, from `203.0.113.88` to a workstation. One sentence. Do not describe a Temp path.
-- If they describe a Temp path: that is 1.1.3. Different sensor.
-- If they start YARA: that is 1.3.
-- If they write a query with no name, MIME, hash, or tx/rx filter: that is not specific.
+Compare the two schema representations rather than teaching old fields as universal. Keep file identity, connection identity, hash, and extracted object distinct.
 
----
+**Key point to reinforce:** Distinguish file FUID, connection UID, hash, and extracted object. Current and legacy direction fields differ.
 
-## Knowledge Check – Answer Key
+### 2. Working through the example
 
-1. **A Zeek `files` event is the same thing as a Sysmon 11 file create. True or false?**  
-   **Answer:** False. The files log is the wire. Sysmon 11 is the host.  
-   **Explanation:** Zeek analyzed bytes on the network. A host file-create is 1.1.3. The host may never write the file.
+Ask learners to determine sender from is_orig and explain the missing endpoint-path claim. Use the related HTTP record only for what it actually adds.
 
-2. **`update.exe`, MIME `application/x-dosexec`, hash logged, from `203.0.113.88` to a workstation. What occurred?**  
-   **Answer:** That IP sent `update.exe` (executable MIME, hash logged) to the workstation on the wire.  
-   **Explanation:** Name, MIME, hash, and tx/rx are what you write down. Copy `conn_uids` to join other Zeek logs. Do not add a Temp path.
+**Key point to reinforce:** With is_orig=false, the responder supplies the content. A network observation does not establish a host Temp path.
 
-3. **A query that matches every `files` event is specific. True or false?**  
-   **Answer:** False. A good query names a specific pattern (name, MIME, hash, or tx/rx).  
-   **Explanation:** Every files event is a table dump, not a detection for this task.
+### 3. Creating a focused file-analysis query
 
----
+Confirm that learners change both direction and the sender-address field. Do not require nonexistent legacy columns in a current feed.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Query content type and supported sender/direction fields. Preserve completeness and extraction limitations.
 
-- Next: 1.2.8 Weird engine
+## Knowledge Check — Answer Key
+
+### 1. How do fuid and uid differ?
+
+**Expected answer:** fuid identifies the analyzed file object; uid identifies the associated connection. Legacy conn_uids can hold connection identifiers.
+
+### 2. Who supplied the content when is_orig=false in the example, and does it establish a Temp file on the host?
+
+**Expected answer:** The responder, 203.0.113.88, supplied it. The network observation does not establish an endpoint path or file creation.
+
+### 3. Modify the query for files supplied by the originator and identify the legacy equivalent.
+
+**Expected answer:** Use is_orig=true and an id.orig_h predicate for the desired sender. In a legacy schema, search that sender in tx_hosts and use conn_uids for the pivot.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+File-analysis records describe observed network content and its connection context. Check the schema, direction, completeness, and available hashes or extracted bytes before choosing the next pivot.
+
+Previous: [1.2.6 – SMTP Engine](../06-smtp-engine/student-guide.md)
+
+Next: [1.2.8 – Weird Engine](../08-weird-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — files.log](https://docs.zeek.org/en/current/reference/logs/files.html)

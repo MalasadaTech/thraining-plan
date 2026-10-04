@@ -6,70 +6,66 @@
 - Hunter: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  
 - CTI: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  
 - DE: 0.6.3.1 A / B / B ; 0.6.3.2 1a / 2b / 2b  
-**Estimated Time:** 15 minutes  
-
----
+**Estimated Time:** 15 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name the seven Kill Chain stages and say what the chain is for.
-2. Place a one-line activity on one stage and say why it is not the previous or next stage.
+1. Describe the purpose and seven stages of the Cyber Kill Chain.
+2. Assign a stage to a simple observed event and explain the evidence.
+3. Distinguish observed progression from unestablished activity.
 
 **Mapped Proficiency Items:**
 - K: 0.6.3.1 – Cyber Kill Chain
 - T: 0.6.3.2 – Identify the Kill Chain stage of observed activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+The Cyber Kill Chain provides a way to discuss progression through an intrusion. It helps analysts place an observed event in a larger sequence and consider where defensive action could interrupt that sequence. The available evidence may show only part of the activity.
 
-You often see **one step** of an attack: a file in email, a program that ran, a callback. Before you treat that step as the whole intrusion, you have to name **where it sits in the sequence**. That is the job in this lesson: place the activity you have on one stage, and refuse the previous or next stage you did not see.
+## 1. The seven stages
 
-The Lockheed Martin **Cyber Kill Chain** shows attack **progression** as a short sequence of stages. It is a staging tool, not a complete model of every intrusion.
+| Stage | What it describes |
+|---|---|
+| Reconnaissance | Gathering information about a target. |
+| Weaponization | Preparing a malicious payload or delivery package. |
+| Delivery | Transmitting the malicious material to the target. |
+| Exploitation | Exploiting a vulnerability to enable the attack. |
+| Installation | Establishing a malicious implant or foothold. |
+| Command and Control | Communicating with infrastructure used to direct the compromised system. |
+| Actions on Objectives | Carrying out the attacker's intended outcome. |
 
-You have one activity — one log or one-line description. In a SIEM that often shows up as a **row**. Later lessons may still say “row.” Here it means the activity in front of you.
+The sequence is a model for reasoning about an intrusion. Real activity can repeat stages, take different paths, or leave stages unobserved. Use the model to explain what the evidence shows while keeping those limits visible.
 
-| Stage | What this stage is |
-|-------|--------------------|
-| **Reconnaissance** | Researching the target |
-| **Weaponization** | Building a deliverable payload |
-| **Delivery** | The weapon arrives (email, web, USB) |
-| **Exploitation** | It runs against a vulnerability, or as the exploit |
-| **Installation** | Code or an implant is on the host |
-| **Command and Control** | A callback or control channel |
-| **Actions on Objectives** | The goal (theft, encryption, and so on) |
+## 2. Placing an observed event
 
-Place **this activity** on **one** stage. Say why it is not the **previous** or **next** stage. Do not invent stages you did not see.
+Suppose an email record shows that a message containing a `.vbs` attachment was delivered to a mailbox. For this example, separate analysis has established that the attachment is malicious. The email record supports **Delivery** because it shows the malicious material reaching the target.
 
-**What good looks like:** someone gives you one line. You name the stage. You reject the neighbor you did not see. You do not fill the rest of the chain.
+The record does not show how the attachment was prepared, whether anyone opened it, or whether it established a foothold. Those are questions for other evidence. The `.vbs` extension alone would not establish maliciousness; the example's stated analysis supplies that context.
 
-- Given: “A user received a `.vbs` in email.” **Delivery.** It is not **Weaponization** (you did not see them build it). It is not **Exploitation** (you did not see it run). Do not skip to Command and Control without a callback.
+## 3. Explaining a stage assignment
 
-This lesson is **not** ATT&CK (**0.6.1**). It is **not** Diamond (**0.6.2**). Listing every supported stage on an intelligence product is later (**2.7.3**).
+A useful stage assignment includes the stage, the event supporting it, and any uncertainty that affects interpretation. For example: “Delivery: the email record shows the malicious attachment reached the mailbox; execution has not been established.”
 
----
+ATT&CK, the Diamond Model, and the Cyber Kill Chain answer different questions. ATT&CK names behavior, the Diamond Model organizes the elements of an event, and the Kill Chain describes progression. Together they help analysts explain activity without requiring every observation to prove an entire intrusion.
 
-## 2. Knowledge Check
+## Knowledge Check
 
-1. What is the Cyber Kill Chain for?
-2. Name the seven stages in order.
-3. A user received a `.vbs` in email. Why is that Delivery, and why is it not Exploitation?
+1. Name the seven Cyber Kill Chain stages and explain what the model helps analysts describe.
+2. An email record confirms delivery of an attachment established as malicious. Which stage is supported, and why?
+3. Does that delivery record establish exploitation or installation? What would you say in the finding?
 
----
+## Summary
 
-## 3. Summary
+The Cyber Kill Chain describes intrusion progression in seven stages. Assign a stage from the observed event, explain the supporting evidence, and leave unobserved activity open for investigation.
 
-Seven stages. Place the activity you have. Reject the previous or next stage you did not see. Do not invent the rest of the chain.
+## Course Connections
 
-**Next:** **0.7** External tools (tool survey).
+Previous: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)
 
----
+Next: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)
 
-## 4. Related modules
+## References and Further Reading
 
-- 0.6.1 – MITRE ATT&CK
-- 0.6.2 – Diamond Model
-- 0.7 – External tools
-- 2.7.3 – Cyber Kill Chain in intelligence analysis (later)
+- [Lockheed Martin — Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html) — Original model and supporting resources.

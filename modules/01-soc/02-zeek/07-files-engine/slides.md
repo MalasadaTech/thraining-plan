@@ -1,97 +1,120 @@
-# Module 1.2.7 – Files Engine  
-## Slide Deck Content
+# Module 1.2.7 – Files Engine
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 7
+- Interpret file names, MIME types, hashes, direction, and connection identifiers.
+- Describe observed file content without assuming endpoint creation.
+- Create or modify a query using the file-log schema actually available.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.2.7 – Files Engine  
-**Subtitle:** A file on the wire  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.2.1 said engines extract protocol. This lesson is the files engine. It is not host file activity and not YARA.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read the Zeek **files** log to see a file on the **wire**.
+Zeek file analysis connects observed network content to the flow that carried it. It can help explain a download or attachment, while the available fields also show whether hashes or extracted bytes exist for further examination.
 
-Name. MIME. Hash. Who sent it, who received it.
-
-This is not a host file-create (**1.1.3**).
-
-**Speaker Notes:**  
-This slide is the student intro. An alert may name a download, an attachment, or a hash. The job is to say what moved on the wire. Do not teach a Temp path today.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Name, MIME, hash
-**Title:** Name, MIME, hash
+## Reading file-analysis records
 
-**`filename`** — when the protocol gave one. It can lie. Empty means not logged.
+Distinguish file FUID, connection UID, hash, and extracted object. Current and legacy direction fields differ.
 
-**`mime_type`** — what Zeek thinks the bytes are. A Windows executable is often `application/x-dosexec`. It can disagree with the name.
-
-**`md5` / `sha1` / `sha256`** — when calculated. Empty is not “clean.” Do not invent a hash.
-
-**Speaker Notes:**  
-Walk name, MIME, and hash first. The name can say `.exe` while MIME disagrees, or the other way around. Empty hash means Zeek did not calculate one.
+**Speaker notes:** Compare the two schema representations rather than teaching old fields as universal. Keep file identity, connection identity, hash, and extracted object distinct.
 
 ---
 
-### Slide 4 – Sender, receiver, connection UID
-**Title:** Sender, receiver, connection UID
+## Reference — Reading file-analysis records
 
-**`tx_hosts`** sent the bytes. **`rx_hosts`** received them. These are not orig/resp.
+| Field or representation | What it contributes |
+|---|---|
+| `fuid` | File-analysis identifier; this is different from a connection UID. |
+| `filename`, `mime_type` | A supplied filename when available and an assessment of content type. These may disagree. |
+| `md5`, `sha1`, `sha256` | Hashes when the relevant analysis is enabled and values are available. |
+| Current `uid`, endpoint fields, `is_orig` | Connection context; `is_orig=false` indicates the responder supplied the content, and true indicates the originator. |
+| Legacy `tx_hosts`, `rx_hosts`, `conn_uids` | Sender/receiver sets and connection identifiers in older or compatibility-enabled schemas. Check which representation your feed uses. |
+| Completeness and extraction fields | Observed/missing byte information and extraction details help assess what was actually available. |
 
-**`conn_uids`** — those values *are* the `uid` on `conn` / `http` / `smtp`. Copy one and search.
-
-**Speaker Notes:**  
-For an HTTP GET of a file, the server is often the sender. Copy `conn_uids` and search other Zeek logs. That is the join, not a lab.
-
----
-
-### Slide 5 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
-
-One sentence: name, MIME, hash if logged, who sent to whom.
-
-**Given:** `update.exe`, MIME `application/x-dosexec`, hash logged, from `203.0.113.88` to a workstation.
-
-A query names a **specific** pattern — name, MIME, hash, or tx/rx.  
-Not every `files` event.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: that IP sent update.exe on the wire. Copy conn_uids. Do not describe a Sysmon 11. Do not tell the course-fiction plot.
+**Speaker notes:** Compare the two schema representations rather than teaching old fields as universal. Keep file identity, connection identity, hash, and extracted object distinct. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Working through the example
 
-1. A Zeek `files` event is the same thing as a Sysmon 11 file create. True or false?  
-2. `update.exe`, MIME `application/x-dosexec`, hash logged, from `203.0.113.88` to a workstation. In one sentence, what occurred?  
-3. A SIEM query that matches every `files` event is a good “specific file transfer” query. True or false?
+With is_orig=false, the responder supplies the content. A network observation does not establish a host Temp path.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Ask learners to determine sender from is_orig and explain the missing endpoint-path claim. Use the related HTTP record only for what it actually adds.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Supplied example
 
-Name, MIME, hash, who sent and received.  
-`conn_uids` joins the other Zeek logs.  
-The host file event is a different sensor.
+Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `203.0.113.88`, and `is_orig=false`. A related HTTP record associates it with `/update.exe`.
 
-**Next:** **1.2.8** Weird engine
+**Speaker notes:** Ask learners to determine sender from is_orig and explain the missing endpoint-path claim. Use the related HTTP record only for what it actually adds.
 
-**Speaker Notes:**  
-1.2.8 is protocol oddities. Stay off the file hash when you get there.
+---
+
+## Creating a focused file-analysis query
+
+Query content type and supported sender/direction fields. Preserve completeness and extraction limitations.
+
+**Speaker notes:** Confirm that learners change both direction and the sender-address field. Do not require nonexistent legacy columns in a current feed.
+
+---
+
+## Reference — Creating a focused file-analysis query
+
+| where TimeGenerated > ago(1d)
+| where mime_type == "application/x-dosexec"
+| where ['id.resp_h'] == "203.0.113.88" and is_orig == false
+| project TimeGenerated, fuid, uid, ['id.orig_h'], ['id.resp_h'],
+
+**Speaker notes:** Confirm that learners change both direction and the sender-address field. Do not require nonexistent legacy columns in a current feed. Use the surrounding student-guide explanation to interpret the table and its limits.
+
+---
+
+## Worked example — Creating a focused file-analysis query
+
+```kusto
+ZeekFiles
+| where TimeGenerated > ago(1d)
+| where mime_type == "application/x-dosexec"
+| where ['id.resp_h'] == "203.0.113.88" and is_orig == false
+| project TimeGenerated, fuid, uid, ['id.orig_h'], ['id.resp_h'],
+          mime_type, is_orig
+```
+
+**Speaker notes:** Confirm that learners change both direction and the sender-address field. Do not require nonexistent legacy columns in a current feed. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. How do fuid and uid differ?
+2. Who supplied the content when is_orig=false in the example, and does it establish a Temp file on the host?
+3. Modify the query for files supplied by the originator and identify the legacy equivalent.
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+File-analysis records describe observed network content and its connection context. Check the schema, direction, completeness, and available hashes or extracted bytes before choosing the next pivot.
+
+Previous: [1.2.6 – SMTP Engine](../06-smtp-engine/student-guide.md)
+
+Next: [1.2.8 – Weird Engine](../08-weird-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Zeek — files.log](https://docs.zeek.org/en/current/reference/logs/files.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

@@ -8,100 +8,87 @@
 **Estimated Time:** 25–30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Read a SIEM detection and propose a basic create from log fields or from SIGMA. Do not deploy it.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts read a saved SIEM detection and propose a basic one so they can say what that rule looks at — which table, which fields, which match — before they treat the alert as a fact.
-- How it hooks to the lesson before: 1.3.3 was YARA (byte patterns on a file or in memory). This lesson is named logic on ingested logs.
-- How it hooks to the lesson after: 1.4.1 is the alert that this object can create — context and investigation, not more syntax.
-- Why we are doing it this way: name the saved SIEM object (structure, fields or a SIGMA wrap, wildcard vs regex) so the next lesson can open the alert.
-- What we are *not* doing in this lesson: Deploy. Alert queue. Converter lab. Invented SIEM product names as policy. How detections run as a service (4.x). No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **SIEM rule**, **analytics rule**, **correlation search**, **table**, **logic**, **window**, **output**, **wildcard**, **regex**, **SIGMA**, **logsource**, and **selector**. **Correlation search** means the saved detection, not a join. The given uses encoded PowerShell and parent `wscript`. Do not turn it into the intro plot.
-
-**Key Teaching Points:**
-- Name, table, logic, window, output.
-- A table with no filter is not a detection.
-- Fields that exist on that table, or a SIGMA wrap, then name / window / outputs.
-- Wildcard or substring when the token is stable. Regex when it varies.
-- SOC proposes. Detection engineering reviews.
-
-**Common Student Challenges:**
-- Treat an unfiltered table as a detection. Why: the table is the log store, not the rule. Example: proposing `DeviceProcessEvents` with no filter.
-- Regex a fixed token. Why: regex is for when the token varies. Example: a regex for `-enc` when a substring is enough.
-- Put a field on the wrong table. Why: fields belong to that log source. Example: `uri` on `DeviceProcessEvents`.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+A saved detection combines search logic with operating settings that determine when and how an alert is created. Reading both parts explains what an alert represents and helps turn a query into a reviewable detection proposal.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Identify the source, logic, timing, trigger, and output of a saved detection.
+2. Explain what a rule would match and what would create an alert.
+3. Create a basic proposal from known log fields or a Sigma rule.
 
 **Mapped Proficiency Items:**
 - K: 1.3.4.1 – SIEM rules
 - T: 1.3.4.2 – Analyze an existing SIEM rule and describe what it detects
 - T: 1.3.4.3 – Create a basic SIEM detection rule from log fields or a SIGMA rule
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required. Learners should produce the requested basic modification and explain a match and nonmatch. Operational deployment follows the later Detection Engineering track and local change procedures.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Saved rule, not the alert |
-| Key Concepts            | 16 min    | Structure, fields or SIGMA, match |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~25 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 17 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **27** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Understanding the detection proposal
 
-**Talking Points:**
-- Open with the job: an alert names a rule, and you have to say what that rule looks at.
-- Walk name, table, logic, window, and output. A table with no filter is not a detection. Correlation search means the saved detection, not a requirement to join.
-- From fields: name the table, pick fields that exist on it, add a parent or token so it is not “all PowerShell.”
-- From SIGMA: logsource to table, selectors to logic, then wrap with name, window, and outputs. They are not required to run a converter.
-- Wildcard or substring when the path or token is stable. Regex when the token varies.
-- Walk the given: `DeviceProcessEvents`, powershell, `-enc`, parent `wscript`, 5-minute window. One sentence: process create of PowerShell with `-enc` and parent `wscript`.
-- If they open the alert console: that is 1.4.
-- If they want to deploy: that is 4.x.
-- If they put `uri` on `DeviceProcessEvents`: that field is not on this table.
+Separate the query from its scheduling and alert settings. Explain that an empty source or late ingestion can affect coverage even if the predicates are correct.
 
----
+**Key point to reinforce:** Specify source, logic, lookback, frequency, trigger, output, and alert handling. A query is one part of the detection.
 
-## Knowledge Check – Answer Key
+### 2. Reading a worked proposal
 
-1. **A SIEM table with no filter is a detection. True or false?**  
-   **Answer:** False. You need logic (and a name, window, and outputs).  
-   **Explanation:** The table is the log store. A detection is named logic on that table.
+Read the query and then the trigger statement. A filter match and a platform-created alert are related but distinct steps.
 
-2. **The given rule — what does it detect?**  
-   **Answer:** Process create of PowerShell with `-enc` and parent `wscript`.  
-   **Explanation:** Table, three predicates, and window are what fire. Do not narrate the rest of an incident.
+**Key point to reinforce:** The teaching proposal runs every five minutes over a five-minute window and triggers on matching process events.
 
-3. **When do you use a wildcard instead of a regex?**  
-   **Answer:** When a substring or path is enough. Regex when the token itself varies.  
-   **Explanation:** `-enc` as a fixed token is a wildcard or substring. `-e` / `-enc` / `-EncodedCommand` is regex.
+### 3. Creating or translating a basic rule
 
----
+Ask learners to produce the predicate and describe the surrounding rule settings. Compare contains and has without implying their semantics are interchangeable.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Translate field tests and their semantics. Review late data and repeated matches before operational use.
 
-- Next: 1.4.1 Alert context and investigation
+## Knowledge Check — Answer Key
+
+### 1. How do lookback and run frequency differ?
+
+**Expected answer:** Lookback is the time range searched by each run; frequency is how often the search runs.
+
+### 2. Describe the example’s matching logic and trigger.
+
+**Expected answer:** It selects process-created PowerShell events with the specified Script Host parent and -enc substring; the classroom trigger is one or more matches.
+
+### 3. Create a modified proposal that permits both Script Host parents. What besides the predicate should it specify?
+
+**Expected answer:** Use the two-value in~ parent predicate, preserve the other tests, and specify source, purpose/name, lookback, frequency, trigger, outputs, and reviewed alert handling.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+A SIEM detection proposal connects clear logic to a source, schedule, trigger, and useful output. Preserve matching semantics when translating Sigma and review timing and alert behavior before deployment.
+
+Previous: [1.3.3 – YARA Rules](../03-yara-rules/student-guide.md)
+
+Next: [1.4.1 – Alert Context and Investigation](../../04-alerts/01-context-investigation/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)
+- [Microsoft — Custom detection rules](https://learn.microsoft.com/en-us/defender-xdr/custom-detection-rules)
+- [Sigma — Rule basics](https://sigmahq.io/docs/basics/rules.html)

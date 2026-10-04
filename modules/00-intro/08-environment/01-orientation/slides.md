@@ -1,107 +1,77 @@
-# Module 0.8 – Environment / signal flow  
-## Slide Deck Content
+# Module 0.8 – Environment / signal flow
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
-**Estimated Delivery Time:** 15–20 minutes  
-**Total Suggested Slides:** 8
+- Describe the seven environment areas used for orientation.
+- Identify which areas are relevant to a simple investigation question.
+- Distinguish the environment area relevant to a question from a related area, including traffic paths versus sensor coverage.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 0.8 – Environment / signal flow  
-**Subtitle:** Obtain from your shop. Do not invent.  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This is the last shared intro lesson before SOC. It names the kinds of site facts to obtain. It does not publish a classroom network.
+**Speaker notes:** Introduce the purpose and connect it to the shared course sequence. The objectives describe the understanding learners should demonstrate by the end.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-An alert, a hunt, an intel note, and a detection all look at the same host or log.
+An event becomes easier to interpret when you understand where it occurred and how activity normally moves through the organization. Environment orientation connects a host or account to its role, its access paths, and the evidence available along those paths.
 
-Before you treat a gap as “nothing happened,” know **where your site can see** and where it cannot.
-
-This course does not give you those answers. You get them from **your shop**.
-
-**Speaker Notes:**  
-This slide is the student intro. Name the kinds of questions before anyone draws a network. Do not fill in firewall names or spans today.
+**Speaker notes:** Ask learners where this topic could help them understand an investigation. Use their answers to introduce the example without requiring prior operational experience.
 
 ---
 
-### Slide 3 – Seven kinds of facts
-**Title:** Seven kinds of facts
+## Building a useful environment picture
 
-**Path to the internet / egress** — how traffic leaves.  
-**Key network segments and data flow** — main pieces, how data moves.  
-**Email flow** — how mail enters and leaves.  
-**Edge firewall / choke points** — where the shop can block or see at the edge.  
-**Trusted third-party / federation** — who else is trusted onto the network.  
-**Crown jewels** — which assets are critical. Do not guess them.  
-**PCAP / sensors** — where a sensor sits, and where it does not.
+Orient around seven areas: egress; segments and data flow; email; edge controls; third-party access and federation; crown jewels; PCAP and sensors.
 
-**Speaker Notes:**  
-These are questions. The shop supplies the answers. A gap is still a fact. Stop if they start naming gear this course never showed.
+For each, identify its role and the evidence it can provide.
+
+**Speaker notes:** Walk through all seven areas without inventing local architecture. Explain crown jewels in terms of business impact, and PCAP as packet capture. Identity federation is a trust arrangement for authentication or identity; it does not automatically imply a direct network tunnel.
 
 ---
 
-### Slide 4 – Tell two kinds apart
-**Title:** Tell two kinds apart
+## Tracing an event through the environment
 
-Host talked to the internet — how did it leave? → **egress**  
-How a message arrived → **email**  
-Could anything have recorded it? → **PCAP / sensors**
+Example: workstation → expected egress path → relevant observation point.
 
-Name the kind. Reject the neighbor. Do not name a firewall you were not shown.
+Check three things: possible path, sensor coverage, and available records for the event time.
 
-**Speaker Notes:**  
-That is the task. Walk the three givens in the student guide if you need them. “I do not have it yet” is a pass. Inventing the network is a fail.
+**Speaker notes:** Ask learners to explain the difference between a network path and evidence about traffic on that path. Use conditional language because the course provides no confirmed DYA topology. A sensor’s existence does not guarantee the needed record exists.
 
 ---
 
-### Slide 5 – Obtain. Do not invent.
-**Title:** Obtain. Do not invent.
+## Recording useful gaps and next questions
 
-Not Zeek fields (**1.2**).  
-Not host-observed network (**1.1.4**).  
-Not a network this course made up.
+Record the known path, available evidence, and visibility gaps.
 
-**Speaker Notes:**  
-PCAP / sensors is where a collector sits. Zeek is how you read a log you already have. Host-observed network is the host logging a talk. If they start drawing DYA or Harbor gear, stop them.
+Connect the affected system to its purpose and importance.
 
----
+Identify the owner or documentation needed for the next question.
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
-
-1. Why must every role know where the site can see, and where it cannot?  
-2. A user clicked a link and the host talked to the internet. You ask how that traffic left. Which kind, and why is it not email?  
-3. “Could a sensor have recorded this?” — which kind, and why not Zeek?
-
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Keep the task at orientation: identify the environment areas relevant to a question and explain why. A useful answer can name an owner or document to consult when the design is unknown. It need not invent a topology or propose a sensor deployment.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Knowledge check
 
-Seven kinds of questions.  
-Obtain the answers from your shop.  
-Name the kind. Reject the neighbor.  
-A gap is a fact. Do not invent the network.
+1. Which environment areas would help you investigate a workstation contacting an external domain?
+2. You know the expected egress path but need to determine whether packet-level evidence exists. Which environment area should you check, and how does it differ from egress?
+3. How do third-party access and crown jewels help orient an investigation?
 
-**Speaker Notes:**  
-Same three teaching points. Endpoint activity is next. Stay off host logs until then.
+**Speaker notes:** Ask learners to explain the evidence or reasoning behind each answer. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for expected responses and feedback.
 
 ---
 
-### Slide 8 – Next
-**Title:** Next
+## Summary and next step
 
-**1.1.1** Endpoint activity (the map)
+Environment orientation helps you connect an event to expected paths, organizational importance, and available evidence. Use the seven areas to ask focused questions, verify the actual environment, and make visibility gaps clear.
 
-**Speaker Notes:**  
-1.1.1 names the five kinds of host activity. Those logs sit on a device that lives somewhere on a site they just learned to ask about.
+Previous: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)
+
+Next: the SOC analyst track, beginning with observations and detections.
+
+**Speaker notes:** Revisit any uncertainty from the knowledge check, then connect the lesson to the next topic.
+
+---
+
+## References and further reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.
+
+**Speaker notes:** These linked resources support the lesson and provide a place to check definitions and service details.

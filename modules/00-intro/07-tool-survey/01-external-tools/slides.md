@@ -1,104 +1,89 @@
-# Module 0.7 – External tools  
-## Slide Deck Content
+# Module 0.7 – External tools
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
-**Estimated Delivery Time:** 20 minutes  
-**Total Suggested Slides:** 8
+- Describe the questions VirusTotal, ANY.RUN, Silent Push, and urlscan.io can help answer.
+- Choose a suitable service and input for a simple investigation question.
+- Explain a relevant interpretation limit and distinguish a lookup from a new submission.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 0.7 – External tools  
-**Subtitle:** VirusTotal, AnyRun, Silent Push, URLScan  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson is the shared survey of four public tools. It names purpose and when to pick. It is not a live account and not how to click the product.
+**Speaker notes:** Introduce the purpose and connect it to the shared course sequence. The objectives describe the understanding learners should demonstrate by the end.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-You will get a **hash**, a **file**, a **domain**, or a **live URL**.
+External analysis services can help answer questions about files, domains, IP addresses, and web pages. Choosing a useful service starts with the question you need to answer and the input you have. Their capabilities overlap, and results still need interpretation in the context of the investigation.
 
-Four public tools each answer a different question.
-
-Pick the first tool that matches the need. Say why the neighbor is the wrong first pick.
-
-**Speaker Notes:**  
-This slide is the student intro. They pick so they do not detonate a file when they only needed history, or screenshot a page when they needed a hash reputation. Do not open a vendor tab.
+**Speaker notes:** Ask learners where this topic could help them understand an investigation. Use their answers to introduce the example without requiring prior operational experience.
 
 ---
 
-### Slide 3 – Purpose, strength, weakness
-**Title:** Purpose, strength, weakness
+## Matching the tool to the question
 
-**VirusTotal** — look-up. Fast reputation. Not passive DNS. Not a full sandbox.  
-**AnyRun** — detonate a sample. This-run behavior. Needs a file.  
-**Silent Push** — history / cluster. Not a detonation. Not a screenshot.  
-**URLScan** — this page load. Not passive DNS. Not file behavior.
+VirusTotal: existing knowledge and reputation.
 
-**Speaker Notes:**  
-One strength and one weakness each. **Passive DNS** (also called PDNS) is historical resolutions — Silent Push, not URLScan. Do not memorize vendor menus.
+ANY.RUN: observed file or URL behavior.
 
----
+Silent Push: DNS and infrastructure relationships.
 
-### Slide 4 – When to pick
-**Title:** When to pick
+urlscan.io: browser requests, redirects, and page appearance.
 
-Hash or file reputation → **VirusTotal**  
-Binary and behavior → **AnyRun**  
-Domain or IP history → **Silent Push**  
-Live URL / page now → **URLScan**  
-Seen internally? → **not these** (internal TIP, later)
-
-**Speaker Notes:**  
-Match the need. Reject the neighbor. “Have we seen this internally?” is the TIP in a later lesson, not one of these four.
+**Speaker notes:** Ask learners to state the question before naming a product. Accept overlapping choices when justified. Correct the former oversimplifications: VirusTotal includes passive DNS, and ANY.RUN supports URLs as well as files. A hash lookup and a new execution are different workflows.
 
 ---
 
-### Slide 5 – A finished select
-**Title:** A finished select
+## Interpreting what comes back
 
-Need: file hash, vendor reputation.  
-Pick **VirusTotal**.  
-Not AnyRun — no sample to detonate.  
-Not Silent Push — not a history question.
+Connect each result to the question.
 
-**Speaker Notes:**  
-That is the task. Show this given before the knowledge check. No hop. No Relations graph. No live query.
+Reputation is an assessment; execution and browser results reflect observed conditions.
 
----
+Infrastructure relationships are leads to evaluate.
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+Keep the report reference and time.
 
-1. Give one purpose and one weakness of Silent Push.  
-2. When do you pick URLScan instead of Silent Push?  
-3. You have a hash and need reputation. Which tool, and why not AnyRun?
-
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Work through the suspicious-link example in order: existing context, observed web behavior, then infrastructure questions. Ask what each result adds and what it cannot establish. Avoid presenting the four services as interchangeable or requiring all four for every case.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Choosing a suitable lookup or submission
 
-Four tools. Match the need. Reject the neighbor.  
-Do not open the sandbox when the question is history.  
-Do not treat a page scan as passive DNS.
+Distinguish an existing-report lookup from a new submission.
 
-**Speaker Notes:**  
-Environment / signal flow is next. That lesson is kinds of facts from the shop, not another tool survey.
+Check organizational approval and actual visibility settings.
+
+Choose the workflow that fits the question and the sensitivity of the input.
+
+**Speaker notes:** Use a fictional URL containing a token to explain why submission handling matters. Do not conduct live submissions of organizational material in this introductory lesson. Explain that “unlisted” and “private” have distinct meanings in urlscan.io; consult current documentation for operational use.
 
 ---
 
-### Slide 8 – Next
-**Title:** Next
+## Knowledge check
 
-**0.8** Environment / signal flow
+1. You need to see the redirects and resources loaded during a browser visit. Which service is a suitable starting point, and why?
+2. You have only a file hash. Can you run a new file execution in a sandbox from that alone?
+3. A domain has no detections and shares an IP address with a malicious domain. What can you conclude, and what should you check before submitting its URL?
 
-**Speaker Notes:**  
-0.8 is where visibility comes from. Do not invent a site card. Do not start TIP navigation or platform depth.
+**Speaker notes:** Ask learners to explain the evidence or reasoning behind each answer. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for expected responses and feedback.
+
+---
+
+## Summary and next step
+
+Choose an external service by the question, input, and available capability. Interpret results as evidence with limits, preserve their context, and use an approved submission workflow when providing new material.
+
+Previous: [0.6.3 – Cyber Kill Chain](../../06-frameworks/03-cyber-kill-chain/student-guide.md)
+
+Next: [0.8 – Environment / signal flow](../../08-environment/01-orientation/student-guide.md)
+
+**Speaker notes:** Revisit any uncertainty from the knowledge check, then connect the lesson to the next topic.
+
+---
+
+## References and further reading
+
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching) — Existing reports, relationships, and passive DNS searches.
+- [VirusTotal — Private scanning](https://docs.virustotal.com/docs/private-scanning) — Separate private-scanning workflow.
+- [ANY.RUN — Features](https://any.run/features/) — Interactive analysis capabilities and supported inputs.
+- [Silent Push — Passive DNS lookups](https://help.silentpush.com/docs/perform-passive-dns-scans-and-record-specific-lookups) — DNS history and record-specific investigation.
+- [urlscan.io — FAQ](https://urlscan.io/docs/faq/) — Scan behavior and visibility options.
+
+**Speaker notes:** These linked resources support the lesson and provide a place to check definitions and service details.

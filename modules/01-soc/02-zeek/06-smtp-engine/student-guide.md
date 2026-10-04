@@ -7,65 +7,74 @@
 - CTI: 1.2.6.1 A / A / B ; 1.2.6.2 1a / 1a / 2b ; 1.2.6.3 1a / 1a / 2b  
 **Estimated Time:** 25–30 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek `smtp` log: mail from, rcpt to, subject, message ID, and who talked to whom.
-2. Describe what an `smtp` log shows, and say what a **specific** SIEM query looks like.
+1. Interpret SMTP envelope addresses, subject, Message-ID, and endpoints.
+2. Describe a transaction without assuming delivery or user action.
+3. Create or modify a query for specific SMTP activity.
 
 **Mapped Proficiency Items:**
 - K: 1.2.6.1 – SMTP engine
 - T: 1.2.6.2 – Analyze a Zeek SMTP log and accurately describe what occurred
 - T: 1.2.6.3 – Create a SIEM query to detect specific SMTP activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+SMTP records describe mail transactions visible to a network sensor. They help identify envelope addresses and selected headers while leaving mailbox delivery, user action, and attachment behavior to other evidence.
 
-SOC analysts read the Zeek **`smtp`** log to see a mail transaction on the **wire**. That is daily alert work: an alert names a session, and you have to say who the session claimed mail was from and to, what subject was logged, and which hosts talked. It is **not** a mailbox. It is **not** the attachment bytes — those are **1.2.7**. It does **not** name the initiating process. That was **1.1.4**.
+## 1. Reading a mail transaction
 
-**SMTP activity** is network-sensor telemetry about a mail transaction Zeek parsed: envelope sender, envelope recipients, a few headers, and who talked to whom. In a SIEM, that event usually shows up as a row in an `smtp` table.
+| Field | Meaning |
+|---|---|
+| `mailfrom` | Envelope sender supplied during the SMTP transaction. This differs from the displayed From header. |
+| `rcptto` | Envelope recipients, potentially more than one. |
+| `subject` | Recorded Subject header when available. |
+| `msg_id` | Message-ID header when available; useful context, not a file hash or guaranteed unique identity. |
+| Endpoint fields and `uid` | The communicating systems and connection context. |
 
-| Idea | What to read |
-|------|----------------|
-| **Mail from** | `mailfrom` — envelope MAIL FROM. Who the *session* claimed as sender. Not the From header. |
-| **Rcpt to** | `rcptto` — envelope RCPT TO (can be more than one address) |
-| **Subject** | `subject` — the Subject header. Empty = not logged. Easy to spoof. |
-| **Message ID** | `msg_id` — Message-ID when logged. Not a file hash. |
-| **Source / dest** | `id.orig_h` / `id.orig_p` → `id.resp_h` / `id.resp_p` (often 25 / 587) |
+These values describe the observed transaction and claims within it. A familiar sender name or subject does not authenticate the sender. Encryption, including a STARTTLS transition, may limit which portions the sensor can parse. A missing header can reflect absence in the message, collection limits, or parsing visibility.
 
-Zeek watches the wire and writes this log. Encrypted submission may have no SMTP fields — that handshake was **1.2.4**. Empty `subject` or `msg_id` means not logged, not “no mail.” Do not invent a mail-gateway name.
+## 2. Working through the example
 
-**What good looks like:**
+The supplied transaction records envelope sender `sender@example.net`, recipient `jlee@example.org`, subject `Invoice`, and Message-ID `<train-1@example.net>` between two mail systems.
 
-- Describe: one sentence — envelope from, envelope to, subject if logged, orig → resp. Do not name a process. Do not declare phishing.
-- Given: `mailfrom` an outside address, `rcptto` a user, `subject` present, `msg_id` present. **What occurred:** that client sent envelope mail from A to B with that subject.
-- Query: names a **specific** pattern (`mailfrom`, `rcptto`, subject, or dest), not “all `smtp` events.”
+Describe it as: “Zeek observed an SMTP transaction with the recorded envelope sender and recipient, subject `Invoice`, and the supplied Message-ID.” Without a relevant acceptance result or delivery record, avoid claiming successful mailbox delivery. The transaction also does not establish that the user opened the message or that its attachment was malicious.
 
----
+## 3. Creating a focused SMTP query
 
-## 2. Knowledge Check
+This KQL teaching example assumes an ingested table named `ZeekSmtp`, a datetime `TimeGenerated` column, and columns retaining the Zeek field names shown below. These are classroom table names, not built-in Zeek or SIEM tables. Map names and data types to your ingestion schema before use.
 
-1. `mailfrom` is the attachment hash. True or false?
-2. Envelope from an outside address, `rcptto` a user, subject present. In one sentence, what occurred?
-3. A SIEM query that matches every `smtp` event is a good “specific SMTP activity” query. True or false?
+```kusto
+ZeekSmtp
+| where TimeGenerated > ago(1d)
+| where mailfrom =~ "sender@example.net"
+| where subject contains "Invoice"
+| project TimeGenerated, uid, ['id.orig_h'], ['id.resp_h'],
+          mailfrom, rcptto, subject, msg_id
+```
 
----
+This selects transactions using an envelope sender and subject substring. For a recipient search, first confirm whether `rcptto` was ingested as an array or string and use the appropriate membership operation. Sender or subject matches remain leads requiring context.
 
-## 3. Summary
+## Knowledge Check
 
-An `smtp` log is envelope from/to, subject, message ID, and who talked to whom. The process and the attachment hash are not on this event. A query names a specific pattern.
+1. How does mailfrom differ from a displayed From header?
+2. Describe the example without claiming mailbox delivery.
+3. Modify the query for the same sender regardless of subject.
 
-**Next:** **1.2.7** Files engine.
+## Summary
 
----
+SMTP evidence describes the observed mail transaction and selected headers. Use it to develop a precise lead while keeping delivery, user action, and attachment behavior tied to their own evidence.
 
-## 4. Related modules
+## Course Connections
 
-- 1.2.5 – HTTP engine (previous)
-- 1.2.7 – Files engine
-- 1.2.4 – TLS engine
-- 1.1.4 – Host-observed network
+Previous: [1.2.5 – HTTP Engine](../05-http-engine/student-guide.md)
+
+Next: [1.2.7 – Files Engine](../07-files-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — smtp.log](https://docs.zeek.org/en/current/reference/logs/smtp.html)

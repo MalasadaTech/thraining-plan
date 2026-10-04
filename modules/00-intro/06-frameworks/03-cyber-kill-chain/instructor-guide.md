@@ -9,90 +9,84 @@
 **Estimated Time:** 15 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
+The Cyber Kill Chain provides a way to discuss progression through an intrusion. It helps analysts place an observed event in a larger sequence and consider where defensive action could interrupt that sequence. The available evidence may show only part of the activity.
 
-**Purpose of this module:**  
-Name the seven Kill Chain stages and place the activity you have on one of them, so a first payload is not the whole intrusion.
-
-**Context (plain language):**
-
-- What this lesson is for: You often see one step of an attack. This lesson is how you name where that step sits, and refuse the previous or next stage you did not see.
-- How it hooks to the lesson before: 0.6.2 Diamond organized what you know into four corners. This lesson stages the same activity in time.
-- How it hooks to the lesson after: 0.7 is the tool survey — when to pick VirusTotal, AnyRun, Silent Push, or URLScan.
-- Why we are doing it this way: shared floor before SOC. One staging model for every role. CTI product depth stays later.
-- What we are *not* doing in this lesson: ATT&CK IDs. Diamond fill. Listing every supported stage on an intelligence product (2.7.3). Hunt planning. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **Reconnaissance**, **Weaponization**, **Delivery**, **Exploitation**, **Installation**, **Command and Control**, and **Actions on Objectives**. **Row** is the SIEM-table gloss from the student intro, not the headline word. It means the one activity in front of you.
-
-**Key Teaching Points:**
-- Seven stages, in order. Lockheed Martin Cyber Kill Chain.
-- Place this activity on one stage. Reject the previous or next stage you did not see.
-- Do not invent the rest of the chain.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+Teach this as a shared introductory lesson using the supplied examples and discussion. Match the depth to the proficiency levels above. The focus is the mapped knowledge and task; operational procedures are developed in the later role tracks.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Describe the purpose and seven stages of the Cyber Kill Chain.
+2. Assign a stage to a simple observed event and explain the evidence.
+3. Distinguish observed progression from unestablished activity.
 
 **Mapped Proficiency Items:**
 - K: 0.6.3.1 – Cyber Kill Chain
 - T: 0.6.3.2 – Identify the Kill Chain stage of observed activity
 
----
+## Preparation
+
+Read the [student guide](student-guide.md) and use [slides.md](slides.md) to support the explanation. Review the answer key before teaching so the discussion and feedback reinforce the same concepts. This lesson uses discussion and worked examples; no lab is required.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Where this step sits |
-| Key Concepts            | 8 min     | Stages + one place |
-| Knowledge Check         | 3 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~15 min** | |
-
----
+| Section | Time | Teaching purpose |
+|---|---|---|
+| Opening and purpose | 2 min | Connect this lesson to the previous topic. |
+| Explanation and worked examples | 7 min | Use the three teaching sections below. |
+| Knowledge check and feedback | 4 min | Ask for reasoning as well as an answer. |
+| Summary and transition | 2 min | Consolidate the lesson and introduce the next topic. |
+| **Total** | **15 min** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. The seven stages
 
-**Talking Points:**
-- Open with the job: you often see one step of an attack, and you have to name where it sits so a first payload is not the whole intrusion.
-- Write the seven stages in order. Stop there. Do not add Unified Kill Chain or ATT&CK tactics.
-- Walk the given: a `.vbs` in email is Delivery. Fail Weaponization (you did not see them build it) and Exploitation (you did not see it run). Command and Control is not the next stage — it is further down the chain, and there is no callback.
-- If they start mapping ATT&CK IDs: that is 0.6.1. Today is the stage, not the technique.
-- If they start filling Diamond vertices: that is 0.6.2.
-- If they list all seven stages on a product because “the chain must have happened”: that is 2.7.3. Today is one activity, one stage.
-- DE sits this at awareness. Do not start them at CTI product depth.
+Read the stages in order with a brief explanation of each. Emphasize that unobserved stages remain unknown. Execution of a program does not automatically demonstrate vulnerability exploitation, and a file on disk does not by itself establish installation of a foothold.
 
----
+**Student-facing emphasis:** Reconnaissance → Weaponization → Delivery → Exploitation → Installation → Command and Control → Actions on Objectives. Use the stages to describe progression and opportunities to interrupt it.
 
-## Knowledge Check – Answer Key
+### 2. Placing an observed event
 
-1. **What is the Cyber Kill Chain for?**  
-   **Answer:** Staging attack progression. It is a staging tool, not a complete model of every intrusion.  
-   **Explanation:** The chain names where a step sits in time. It does not describe every intrusion by itself.
+Keep the example anchored to the delivery record. If learners choose Weaponization, ask what evidence shows preparation. If they choose Exploitation or Installation, ask what happened on the endpoint and whether any such event was supplied.
 
-2. **Name the seven stages in order.**  
-   **Answer:** Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command and Control, Actions on Objectives.  
-   **Explanation:** Lockheed Martin Cyber Kill Chain. Order matters. Do not add extra stages.
+**Student-facing emphasis:** Observed: email with an established malicious attachment reaches a mailbox. Supported stage: Delivery. Evidence: the email delivery record. Opening, exploitation, and installation remain unestablished.
 
-3. **A user received a `.vbs` in email. Why is that Delivery, and why is it not Exploitation?**  
-   **Answer:** You saw it arrive. You did not see it run. Exploitation is the next stage you do not have.  
-   **Explanation:** Delivery is the weapon arriving. The previous stage you also did not see is Weaponization (building it). Do not skip to Command and Control without a callback.
+### 3. Explaining a stage assignment
 
----
+Use the three framework purposes as a brief synthesis. Learners should explain their stage choice, not reconstruct an unseen attack. Discuss one plausible interruption point, such as preventing delivery, without turning this introduction into a control-design lesson.
 
-## Additional Instructor Resources
+**Student-facing emphasis:** State the stage and supporting event. Identify what remains unknown. ATT&CK: behavior. Diamond: event elements. Kill Chain: progression.
 
-- Next: 0.7 External tools
+## Knowledge Check — Answer Key
+
+### 1. Name the seven Cyber Kill Chain stages and explain what the model helps analysts describe.
+
+**Expected answer:** The stages are Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command and Control, and Actions on Objectives. They describe progression through an intrusion and opportunities to interrupt it.
+
+**Feedback and assessment:** Accept a plain-language explanation that acknowledges evidence may cover only part of the sequence.
+
+### 2. An email record confirms delivery of an attachment established as malicious. Which stage is supported, and why?
+
+**Expected answer:** Delivery, because the record shows the malicious material reaching the mailbox.
+
+**Feedback and assessment:** Require the event-based reason, not just the stage name.
+
+### 3. Does that delivery record establish exploitation or installation? What would you say in the finding?
+
+**Expected answer:** No. The finding should identify Delivery and state that endpoint execution, exploitation, and installation have not been established by this record.
+
+**Feedback and assessment:** Look for a distinction between an observed stage and possible later activity.
+
+## Closing and Transition
+
+The Cyber Kill Chain describes intrusion progression in seven stages. Assign a stage from the observed event, explain the supporting evidence, and leave unobserved activity open for investigation.
+
+Previous: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)
+
+Next: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)
+
+## References and Further Reading
+
+- [Lockheed Martin — Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html) — Original model and supporting resources.

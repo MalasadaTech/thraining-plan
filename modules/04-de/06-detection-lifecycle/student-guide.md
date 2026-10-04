@@ -1,4 +1,4 @@
-# Module 4.6 – Detection lifecycle
+# Module 4.6 – Detection Lifecycle
 
 **Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
@@ -6,81 +6,114 @@
 - SOC: 4.6 A / A / B ; 4.6.1 1a / 1a / 2b ; 4.6.2 1a / 1a / 2b  
 - Hunter: 4.6 A / A / B ; 4.6.1 1a / 1a / 2b ; 4.6.2 1a / 1a / 2b  
 - CTI: 4.6 A / A / B ; 4.6.1 1a / 1a / 2b ; 4.6.2 1a / 1a / 2b  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
-
-1. Given a live rule and a reason, call **modify**, **retire**, or **leave**.
-2. Given “we **blocked** this infrastructure,” decide whether the matching rule still earns its keep.
+1. Review a live detection and choose **modify, retire/replace, or leave** based on value, performance, data availability, and redundancy.
+2. Evaluate whether an external block or control change actually removes the detection's remaining value.
 
 **Mapped Proficiency Items:**
 - K: 4.6 – Detection lifecycle
 - T: 4.6.1 – Call modify / retire / leave and cite the reason
 - T: 4.6.2 – Given a block, decide whether the matching rule still earns its keep
 
----
-
 ## 1. Key Concepts
 
-Detection engineers own **live** detections: rules that are already deployed. Those rules do not stay useful forever. In this job you review a detection you already own and call **modify**, **retire**, or **leave**, and you cite the reason. You do it because a noisy rule, a rule aimed at a gone threat, or a rule that only watched something now blocked should not sit unchanged — and a still-useful rule should not come out just because the queue is busy.
+Detection lifecycle management asks a recurring question:
 
-This lesson is that regular review. It is not a SOC request to change a noisy live rule. That request is a different inbox (**4.4**).
+> Does this analytic still provide enough defensive value, with acceptable operational cost and valid data, to remain in its current form?
 
-| Call | When |
-|------|------|
-| **Modify** | The rule should stay, but not as it is (too noisy, or a nomination replaced part of it). |
-| **Retire** | The rule should come out (threat gone, sensor gone, a nomination replaced it, or it no longer earns its keep). |
-| **Leave** | Still useful. Do not change it because someone is tired of it. |
+A live detection can become less useful because:
+- adversary behavior changes;
+- the data source changes;
+- a replacement analytic provides better coverage;
+- benign activity changes;
+- the rule becomes redundant;
+- a control prevents some of the activity;
+- the original threat-specific context expires.
 
-**Earn its keep** means the rule still does useful work — it still watches something that matters.
+None of those conditions automatically tells you the answer. They trigger a review.
 
-**Reasons** you cite:
+### Three course decisions
 
-- still useful
-- too noisy
-- threat gone
-- sensor gone
-- a nomination replaced it
-- already **blocked**, so the rule *may* not be needed
+| Decision | Meaning |
+|---|---|
+| **Modify** | Keep the capability, but change logic, data assumptions, context, or implementation. |
+| **Retire / replace** | Remove this analytic from active use because a replacement or changed environment makes the old rule unnecessary/unsupported. |
+| **Leave** | The current analytic remains useful and its operational burden is acceptable. |
 
-A **nomination** here means someone asked for a new or different detection that now covers this activity. **Sensor gone** means the log source that fed this rule is no longer there. How to check a dead sensor is **4.7**.
+### Evaluate more than “is the threat still active?”
 
-**A block is not automatic retire.** Whoever **blocks** (firewall / IA) already stopped that infrastructure. Ask: does this rule still earn its keep? Keep it if it still watches something else (other hosts, other paths). Retire it if it only existed for what is now blocked.
+Useful review factors include:
 
-**What good looks like:**
+- **Coverage value:** What meaningful behavior does the analytic detect?
+- **Performance:** Is alert quality/volume acceptable?
+- **Data health:** Are the required logs and fields still available?
+- **Redundancy:** Does another analytic now provide equal or better coverage?
+- **Durability:** Does the rule depend on a short-lived condition?
+- **Operational cost:** Is the analyst burden proportionate to the value?
+- **Replacement path:** If retiring, what coverage remains?
 
-- Given: live rule, still the right activity, too noisy. **Modify.** Reason: too noisy.
-- Given: live rule, the threat is gone. **Retire.** Reason: threat gone.
-- Given: live rule, still catching the intended activity; SOC is tired of it. **Leave.** Reason: still useful.
-- Given: “We blocked this IP.” **Not automatic retire.** Decide if the matching rule still earns its keep.
+A campaign ending does not automatically make a behavioral detection obsolete if the behavior is useful across other threats.
 
-Do not write the rule (**1.3**). Do not invent a ticket.
+### Data-source change can mean modify—not immediate retirement
 
----
+If the old sensor/log path disappears but equivalent evidence exists elsewhere, the right answer may be:
+
+> Modify/migrate the analytic to the supported data source.
+
+Retirement is appropriate when the detection can no longer operate and no replacement path justifies keeping it active.
+
+### Lifecycle status in rule formats is not your local lifecycle policy
+
+Sigma defines rule-status values including `stable`, `test`, `experimental`, `deprecated`, and `unsupported`. See [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html).
+
+Those values demonstrate that rules can have explicit lifecycle state, but your organization's production lifecycle may use different statuses and approvals.
+
+### A block does not automatically eliminate detection value
+
+Suppose an IP is blocked at the firewall.
+
+Ask:
+- Does the detection recognize only that IP?
+- Can the same behavior occur through other infrastructure?
+- Does detecting attempted access still provide useful evidence?
+- Does the block apply to every path/population?
+- Is the rule useful for verifying attempted activity or control bypass?
+
+If the analytic was only a one-to-one alert on that exact object and the object is permanently blocked everywhere, retirement may be reasonable.
+
+If the analytic detects a broader behavior or can reveal attempts around the control, it may still earn its keep.
+
+### Document the reason
+
+A lifecycle decision should be reproducible.
+
+Examples:
+
+> **Modify:** existing encoded-PowerShell analytic remains valuable, but the log schema changed and the field mapping must be updated.
+
+> **Retire/replace:** old hash-only analytic is redundant with the new behavioral analytic and no longer adds useful coverage.
+
+> **Leave:** rule continues to detect a meaningful behavior with acceptable alert quality; the associated IP block does not remove the broader detection value.
 
 ## 2. Knowledge Check
 
-1. Name the three lifecycle calls.
-2. “We blocked this infrastructure” means you must retire the matching rule. True or false?
-3. A live rule still catches the intended activity. SOC wants it gone because it is busy. Modify, retire, or leave?
-
----
+1. Why does “campaign ended” not automatically mean “retire the detection”?
+2. A required log source disappears but equivalent telemetry now exists elsewhere. What lifecycle action may be appropriate?
+3. An IP was blocked. Name two questions you should ask before retiring the matching analytic.
 
 ## 3. Summary
 
-Managing live detections is regular DE work. Modify, retire, or leave — and cite the reason. A block is not automatic retire. Ask whether the rule still earns its keep.
+Lifecycle decisions balance **coverage value, performance, data, redundancy, durability, and operational cost**.
 
-**Next:** **4.7** Sensor availability and performance.
+Modify when the capability still matters but needs change. Retire or replace when the analytic no longer earns its place. Leave it when it remains useful.
 
----
+A block is one input to that decision—not an automatic retirement command.
 
-## 4. Related modules
+**Next:** **4.7 – Sensor Availability and Performance**.
 
-- 4.4 – Tune requests from SOC
-- 4.5 – Hunt and intel packages
-- 4.7 – Sensor availability and performance
-- 4.1 – What DE owns
+## Supporting Reference
+
+- [Sigma Rules Specification – status and lifecycle metadata](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html)

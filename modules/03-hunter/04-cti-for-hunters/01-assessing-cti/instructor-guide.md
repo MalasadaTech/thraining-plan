@@ -6,97 +6,58 @@
 - SOC: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c  
 - CTI: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c  
 **Estimated Time:** 20–25 minutes  
-**Delivery Method:** Instructor-led
+**Delivery Method:** Instructor-led explanation and discussion
 
----
+## Module Purpose
 
-## Module Overview for Instructors
+Use this lesson to teach the reasoning skill in the student guide, not merely the vocabulary. Keep the A12 examples evidence-bound and connect findings to the next module rather than turning each lesson into a complete hunt exercise.
 
-**Purpose of this module:**  
-Label a CTI report hunt-worthy, awareness-only, or a hand-off, and say why. Do not extract leads yet.
+## Learning Objectives and Mapping
 
-**Context (plain language):**
-
-- What this lesson is for: Hunters read a CTI report and decide whether it is worth a hunt before they pull leads. A report can name an actor and still not be a hunt.
-- How it hooks to the lesson before: 3.3.1 turned an external tool finding into a precise internal query.
-- How it hooks to the lesson after: 3.4.2 extracts leads from reports that passed this gate.
-- Why we are doing it this way: label first so you do not hunt awareness-only reports, and so you do not take work detections or IR already own.
-- What we are *not* doing in this lesson: extracting TTPs or IOCs (3.4.2). Authoring STIX (3.4.3). Mapping ATT&CK coverage (3.5). Inventing a hunt ticket (3.7). No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **hunt-worthy**, **awareness-only**, **hand-off**, **actionable for a hunt**, **question**, **telemetry**, **scope**, and **rapid triage**. **Gate** means this label, not a ticket. Do not say **bulletin** — the student word is **report**. The hunt-worthy given reuses classroom objects (`GET /update.exe`, HKCU Run **`Updater`**, `203.0.113.88:8080`). Do not turn it into the intro plot.
-
-**Key Teaching Points:**
-- Interesting is not a hunt.
-- Actionable for a hunt is question, telemetry, and scope.
-- Rapid triage is a label and one sentence why.
-
-**Common Student Challenges:**
-- Treat an interesting actor profile as hunt-worthy. Why: a named APT feels like a lead. Example: opening a hunt because the PDF named an actor and listed no object, telemetry, or scope.
-- Copy every ATT&CK ID before labeling. Why: they think triage is extract. Example: a TTP table with no hunt / don’t hunt / hand off line.
-- Invent a hunt ticket name. Why: they want a place to put the label. Example: writing “open HUNT-A12.” Local tickets are 3.7.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
-
-## Learning Objectives
-
-Same as the student guide.
-
-**Mapped Proficiency Items:**
 - K: 3.4.1 – Assessing CTI for hunting value
-- T: 3.4.1.1 – Triage a CTI report: hunt / don’t hunt / hand off, and say why
-
----
+- T: 3.4.1.1 – Triage a CTI report: hunt / don't hunt / hand off, and say why
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+| Part | Time |
+|---|---:|
+| Context / prior-module connection | 3 min |
+| Core concepts | 10–12 min |
+| A12 or classroom application | 4–5 min |
+| Knowledge check | 4 min |
+| Summary / transition | 2 min |
 
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Label first; do not extract |
-| Key Concepts            | 12 min    | Three labels; question / telemetry / scope; three givens |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
+## Teaching Notes
 
----
+- Use applicability, testability, visibility, scope and incremental value as the triage lens.
+- Correct the old rule that 'IR already owns it' always means hand-off; a reactive hunt may broaden scope during an incident.
+- Hand-off/coordination applies to immediate containment or a task better owned by another function.
+- Threat severity or actor fame is not hunt-worthiness.
 
-## Detailed Teaching Notes
+## Common Coaching Pattern
 
-### 1. Key Concepts
+When a learner overstates the evidence, ask:
 
-**Talking Points:**
-- Open with the job: a CTI report landed, and you have to say whether it is worth a hunt.
-- Write the three labels. Map them to hunt / don’t hunt / hand off.
-- Walk question, telemetry, and scope. Stop there. Do not extract the lead list.
-- Walk the three givens from the student guide. The product is the label and one sentence why, not a TTP table.
-- If they start copying ATT&CK IDs: that is 3.4.2 and 3.5. Today is only the label.
-- If they invent a hunt ticket: that is 3.7.
-- If they author STIX: that is 3.4.3.
+1. **What did we actually observe?**
+2. **What does that observation support?**
+3. **What additional evidence would be required for the stronger claim?**
 
----
+For hunt modules, also ask whether the required telemetry exists and whether the search is bounded enough for a negative result to mean anything.
 
 ## Knowledge Check – Answer Key
 
-1. **An interesting actor profile is a hunt. True or false?**  
-   **Answer:** False. Awareness-only unless you can name a question, telemetry, and scope.  
-   **Explanation:** A named actor is context. It is not hunt-worthy until the three pieces exist.
+### 1. Five hunt-worthiness checks?
 
-2. **What three things must you name before a report is actionable for a hunt?**  
-   **Answer:** A hunt question. Telemetry that could answer it here. A bound scope.  
-   **Explanation:** Those three are the hunter’s test. “Interesting” is not enough.
+**Expected answer:** Applicability, testability, visibility, scope, incremental value.
 
-3. **Label this report and say why: `GET /update.exe` to `:8080`, HKCU Run `Updater`, registry and HTTP logs exist, no detection on that path, no open IR.**  
-   **Answer:** **Hunt-worthy** — hunt. Named objects, telemetry exists, no detection covers that path, no open IR.  
-   **Explanation:** You can name the question, the telemetry, and the scope. That is the task product: hunt, plus why.
+### 2. Why can hunting continue during IR?
 
----
+**Expected answer:** IR may own containment on known hosts while hunting searches the wider estate for related activity; coordinate to avoid conflict.
 
-## Additional Instructor Resources
+### 3. A12 procedure + telemetry + coverage gap: disposition?
 
-- Next: 3.4.2 Extracting hunt leads from CTI
+**Expected answer:** Hunt. It is locally applicable, testable, visible, bounded, and can expose a detection gap or additional hosts.
+
+## Transition
+
+Use the student's **Next** line to connect this lesson to the following module. Preserve unresolved visibility, detection, attribution, and scope gaps instead of solving them with assumptions.

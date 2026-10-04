@@ -1,0 +1,2855 @@
+{
+  "edits": [
+    {
+      "chapter": "0.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (front door)  \n"
+    },
+    {
+      "chapter": "0.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.1 A / B / B  \n- Hunter: 0.1 A / B / B  \n- CTI: 0.1 A / B / B  \n- DE: 0.1 A / B / B  \n"
+    },
+    {
+      "chapter": "0.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.1 – How this course is laid out\n\n"
+    },
+    {
+      "chapter": "0.1",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.2 – What a SOC is](../02-what-a-soc-is/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.1",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nThis course follows the work of SOC analysts, CTI analysts, threat hunters, and detection engineers. Understanding its structure will help you see why a topic appears where it does and how the later lessons build on what you have already learned. Everyone begins with the same introductory material so that the four roles share a common vocabulary.\n\n"
+    },
+    {
+      "chapter": "0.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  \n"
+    },
+    {
+      "chapter": "0.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.2 A / B / B  \n- Hunter: 0.2 A / B / B  \n- CTI: 0.2 A / B / B  \n- DE: 0.2 A / B / B  \n"
+    },
+    {
+      "chapter": "0.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.2 – What a SOC is\n\n"
+    },
+    {
+      "chapter": "0.2",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.1 – How this course is laid out](../01-course-layout/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.2",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.3 – Jobs in one sentence](../03-jobs-in-one-sentence/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.2",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nA Security Operations Center, or **SOC**, is an organizational function that monitors for suspicious activity, investigates what it finds, and coordinates the start of a response. Understanding that purpose gives you a common starting point for the roles and handoffs in this course.\n\n"
+    },
+    {
+      "chapter": "0.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  \n"
+    },
+    {
+      "chapter": "0.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.3 A / B / B  \n- Hunter: 0.3 A / B / B  \n- CTI: 0.3 A / B / B  \n- DE: 0.3 A / B / B  \n"
+    },
+    {
+      "chapter": "0.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.3 – Jobs in one sentence\n\n"
+    },
+    {
+      "chapter": "0.3",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.2 – What a SOC is](../02-what-a-soc-is/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.3",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.4 – How work can move](../04-how-work-moves/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.3",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nSecurity work often begins with an alert or a question, then involves people with different responsibilities. Knowing the purpose of each role helps you recognize who can carry the work forward and what result to expect. This lesson gives you a short description of each role used in the course.\n\n"
+    },
+    {
+      "chapter": "0.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  \n"
+    },
+    {
+      "chapter": "0.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.4 A / B / B ; 0.4.1 1a / 2b / 2b  \n- Hunter: 0.4 A / B / B ; 0.4.1 1a / 2b / 2b  \n- CTI: 0.4 A / B / B ; 0.4.1 1a / 2b / 2b  \n- DE: 0.4 A / B / B ; 0.4.1 1a / 2b / 2b  \n"
+    },
+    {
+      "chapter": "0.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.4 – How work can move\n- T: 0.4.1 – Given a step in the flow, name the next hand-off and whose product it is\n\n"
+    },
+    {
+      "chapter": "0.4",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.3 – Jobs in one sentence](../03-jobs-in-one-sentence/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.4",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.5 – Where the jobs lightly overlap](../05-where-jobs-overlap/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.4",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nAn investigation can create several kinds of follow-on work. Some work addresses the incident already in progress, while other work improves understanding or future detection. Following one possible workflow helps you identify who receives a request and what they are expected to produce.\n\n"
+    },
+    {
+      "chapter": "0.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  \n"
+    },
+    {
+      "chapter": "0.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.5 A / B / B  \n- Hunter: 0.5 A / B / B  \n- CTI: 0.5 A / B / B  \n- DE: 0.5 A / B / B  \n"
+    },
+    {
+      "chapter": "0.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.5 – Where the jobs lightly overlap\n\n"
+    },
+    {
+      "chapter": "0.5",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.4 – How work can move](../04-how-work-moves/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.5",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.6.1 – MITRE ATT&CK](../06-frameworks/01-attck/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.5",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nSeveral analysts may examine the same host, log, or domain while working toward different outcomes. Understanding those outcomes helps you collaborate without losing track of who is responsible for the remaining work. In this lesson, a **product** means the result a role is expected to deliver.\n\n"
+    },
+    {
+      "chapter": "0.6.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  \n"
+    },
+    {
+      "chapter": "0.6.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.6.1.1 A / B / C ; 0.6.1.2 2b / 3c / 4c  \n- Hunter: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  \n- CTI: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  \n- DE: 0.6.1.1 A / B / B ; 0.6.1.2 1a / 2b / 2b  \n"
+    },
+    {
+      "chapter": "0.6.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.6.1.1 – MITRE ATT&CK\n- T: 0.6.1.2 – Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence\n\n"
+    },
+    {
+      "chapter": "0.6.1",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.5 – Where the jobs lightly overlap](../../05-where-jobs-overlap/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.6.1",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.6.1",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nATT&CK gives analysts a shared vocabulary for describing adversary behavior. A useful mapping connects that vocabulary to evidence, so another analyst can understand why the label fits. This lesson introduces the matrix and shows how to support one mapping from an observed event.\n\n"
+    },
+    {
+      "chapter": "0.6.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  \n"
+    },
+    {
+      "chapter": "0.6.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.6.2.1 A / B / C ; 0.6.2.2 2b / 3c / 4c  \n- Hunter: 0.6.2.1 B / C / C ; 0.6.2.2 3c / 4c / 4d  \n- CTI: 0.6.2.1 B / C / C ; 0.6.2.2 3c / 4c / 4d  \n- DE: 0.6.2.1 A / B / B ; 0.6.2.2 1a / 2b / 2b  \n"
+    },
+    {
+      "chapter": "0.6.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.6.2.1 – Diamond Model\n- T: 0.6.2.2 – Apply the Diamond Model to an incident or set of indicators\n\n"
+    },
+    {
+      "chapter": "0.6.2",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.6.1 – MITRE ATT&CK](../01-attck/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.6.2",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.6.3 – Cyber Kill Chain](../03-cyber-kill-chain/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.6.2",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nThe Diamond Model helps you organize what is known about an intrusion event and identify useful questions about what is missing. Its four vertices keep the activity, the systems involved, and the responsible party visible in one view.\n\n"
+    },
+    {
+      "chapter": "0.6.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  \n"
+    },
+    {
+      "chapter": "0.6.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.6.3.1 A / B / C ; 0.6.3.2 2b / 3c / 4c  \n- Hunter: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  \n- CTI: 0.6.3.1 B / C / C ; 0.6.3.2 3c / 4c / 4c  \n- DE: 0.6.3.1 A / B / B ; 0.6.3.2 1a / 2b / 2b  \n"
+    },
+    {
+      "chapter": "0.6.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.6.3.1 – Cyber Kill Chain\n- T: 0.6.3.2 – Identify the Kill Chain stage of observed activity\n\n"
+    },
+    {
+      "chapter": "0.6.3",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.6.3",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.6.3",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nThe Cyber Kill Chain provides a way to discuss progression through an intrusion. It helps analysts place an observed event in a larger sequence and consider where defensive action could interrupt that sequence. The available evidence may show only part of the activity.\n\n"
+    },
+    {
+      "chapter": "0.7",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  \n"
+    },
+    {
+      "chapter": "0.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.7 A / B / B ; 0.7.1 1a / 2b / 3c  \n- Hunter: 0.7 B / C / C ; 0.7.1 3c / 4c / 4d  \n- CTI: 0.7 B / C / C ; 0.7.1 3c / 4c / 4d  \n- DE: 0.7 A / B / B ; 0.7.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "0.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.7 – External tools (VirusTotal, AnyRun, Silent Push, URLScan)\n- T: 0.7.1 – Select the appropriate external tool for a given enrichment or analysis need\n\n"
+    },
+    {
+      "chapter": "0.7",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.6.3 – Cyber Kill Chain](../../06-frameworks/03-cyber-kill-chain/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.7",
+      "kind": "standalone navigation removed",
+      "text": "Next: [0.8 – Environment / signal flow](../../08-environment/01-orientation/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.7",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nExternal analysis services can help answer questions about files, domains, IP addresses, and web pages. Choosing a useful service starts with the question you need to answer and the input you have. Their capabilities overlap, and results still need interpretation in the context of the investigation.\n\n"
+    },
+    {
+      "chapter": "0.8",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  \n"
+    },
+    {
+      "chapter": "0.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 0.8 A / B / C ; 0.8.1 2b / 3c / 4c  \n- Hunter: 0.8 B / C / C ; 0.8.1 2b / 3c / 4c  \n- CTI: 0.8 A / B / B ; 0.8.1 1a / 2b / 3c  \n- DE: 0.8 A / B / B ; 0.8.1 2b / 3c / 4c  \n"
+    },
+    {
+      "chapter": "0.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 0.8 – Environment / signal flow\n- T: 0.8.1 – Identify which kind of fact applies and why it is not the adjacent kind\n\n"
+    },
+    {
+      "chapter": "0.8",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)\n"
+    },
+    {
+      "chapter": "0.8",
+      "kind": "standalone navigation removed",
+      "text": "Next: the SOC analyst track, beginning with observations and detections.\n"
+    },
+    {
+      "chapter": "0.8",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nAn event becomes easier to interpret when you understand where it occurred and how activity normally moves through the organization. Environment orientation connects a host or account to its role, its access paths, and the evidence available along those paths.\n\n"
+    },
+    {
+      "chapter": "0.9",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, CTI Analyst, Threat Hunter, Detection Engineer  \n"
+    },
+    {
+      "chapter": "0.9",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Section summary — no proficiency mapping\n"
+    },
+    {
+      "chapter": "0.9",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **1.0 – SOC Analyst Fundamentals**.\n"
+    },
+    {
+      "chapter": "1.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Orientation — no proficiency mapping\n"
+    },
+    {
+      "chapter": "1.0",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **1.1.1 – Endpoint Activity (the Map)**.\n"
+    },
+    {
+      "chapter": "1.1.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.1.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.1.1.1 A / B / B ; 1.1.1.2 1a / 2b / 2b  \n- Hunter: 1.1.1.1 A / B / B ; 1.1.1.2 1a / 1a / 2b  \n- CTI: 1.1.1.1 A / A / A ; 1.1.1.2 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.1.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.1.1.1 – Endpoint activity (the map)\n- T: 1.1.1.2 – Given a one-line description, name the activity type\n\n"
+    },
+    {
+      "chapter": "1.1.1",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [0.8 — Environment / signal flow](../../../00-intro/08-environment/01-orientation/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.1",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.1",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.1.1",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nEndpoint evidence helps you describe activity on a device. Recognizing the kind of activity first makes it easier to choose the right fields and explain what the event establishes. The next five lessons build that skill one activity type at a time.\n\n"
+    },
+    {
+      "chapter": "1.1.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.1.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.1.2.1 A / B / C ; 1.1.2.2 2b / 3c / 4c ; 1.1.2.3 2b / 3c / 4c  \n- Hunter: 1.1.2.1 A / B / B ; 1.1.2.2 1a / 2b / 3c ; 1.1.2.3 1a / 2b / 3c  \n- CTI: 1.1.2.1 A / A / A ; 1.1.2.2 1a / 1a / 1a ; 1.1.2.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.1.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.1.2.1 – Process activity concepts\n- T: 1.1.2.2 – Analyze a process event (Sysmon or MDE) and accurately describe what occurred\n- T: 1.1.2.3 – Create a SIEM query to detect specific process activity\n\n"
+    },
+    {
+      "chapter": "1.1.2",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.1.1 – Endpoint activity (the map)](../01-endpoint-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.2",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.1.3 – File System Activity](../03-file-system-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.2",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.1.2",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nA process event helps answer which program ran, what started it, and under which account. Reading those relationships carefully gives the investigation a stronger starting point than relying on the executable name alone.\n\n"
+    },
+    {
+      "chapter": "1.1.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.1.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.1.3.1 A / B / C ; 1.1.3.2 2b / 3c / 4c ; 1.1.3.3 2b / 3c / 4c  \n- Hunter: 1.1.3.1 A / B / B ; 1.1.3.2 1a / 2b / 3c ; 1.1.3.3 1a / 2b / 3c  \n- CTI: 1.1.3.1 A / A / A ; 1.1.3.2 1a / 1a / 1a ; 1.1.3.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.1.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.1.3.1 – File system activity concepts\n- T: 1.1.3.2 – Analyze a file event (Sysmon or MDE) and accurately describe what occurred\n- T: 1.1.3.3 – Create a SIEM query to detect specific file operations\n\n"
+    },
+    {
+      "chapter": "1.1.3",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.3",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.1.4 – Network Activity (Endpoint)](../04-network-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.3",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.1.3",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nFile events help establish what happened to an object on an endpoint and which process performed the operation. Keeping the operation, path, and initiating process together helps distinguish a file arriving from that file later being used.\n\n"
+    },
+    {
+      "chapter": "1.1.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.1.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.1.4.1 A / B / C ; 1.1.4.2 2b / 3c / 4c ; 1.1.4.3 2b / 3c / 4c  \n- Hunter: 1.1.4.1 A / B / B ; 1.1.4.2 1a / 2b / 3c ; 1.1.4.3 1a / 2b / 3c  \n- CTI: 1.1.4.1 A / A / A ; 1.1.4.2 1a / 1a / 1a ; 1.1.4.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.1.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.1.4.1 – Network activity (endpoint) concepts\n- T: 1.1.4.2 – Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred\n- T: 1.1.4.3 – Create a SIEM query to detect specific endpoint network activity\n\n"
+    },
+    {
+      "chapter": "1.1.4",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.1.3 – File System Activity](../03-file-system-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.4",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.1.5 – Registry Activity](../05-registry-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.4",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.1.4",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nEndpoint network events connect network activity to a process on a device. That process context can help explain a connection that a network sensor sees only as traffic between addresses.\n\n"
+    },
+    {
+      "chapter": "1.1.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.1.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.1.5.1 A / B / C ; 1.1.5.2 2b / 3c / 4c ; 1.1.5.3 2b / 3c / 4c  \n- Hunter: 1.1.5.1 A / B / B ; 1.1.5.2 1a / 2b / 3c ; 1.1.5.3 1a / 2b / 3c  \n- CTI: 1.1.5.1 A / A / A ; 1.1.5.2 1a / 1a / 1a ; 1.1.5.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.1.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.1.5.1 – Registry activity concepts\n- T: 1.1.5.2 – Analyze a registry event (Sysmon or MDE) and accurately describe what occurred\n- T: 1.1.5.3 – Create a SIEM query to detect specific registry operations\n\n"
+    },
+    {
+      "chapter": "1.1.5",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.1.4 – Network Activity (Endpoint)](../04-network-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.5",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.1.6 – Image and Driver Load Activity](../06-image-driver-load/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.5",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.1.5",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nRegistry events record changes to Windows configuration. Reading the key, value name, value data, and initiating process separately helps explain exactly what changed and what follow-up evidence would be useful.\n\n"
+    },
+    {
+      "chapter": "1.1.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.1.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.1.6.1 A / B / C ; 1.1.6.2 2b / 3c / 4c ; 1.1.6.3 2b / 3c / 4c  \n- Hunter: 1.1.6.1 A / B / B ; 1.1.6.2 1a / 2b / 3c ; 1.1.6.3 1a / 2b / 3c  \n- CTI: 1.1.6.1 A / A / A ; 1.1.6.2 1a / 1a / 1a ; 1.1.6.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.1.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.1.6.1 – Image and driver load activity concepts\n- T: 1.1.6.2 – Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred\n- T: 1.1.6.3 – Create a SIEM query to detect specific image or driver load activity\n\n"
+    },
+    {
+      "chapter": "1.1.6",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.1.5 – Registry Activity](../05-registry-activity/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.6",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.1 – Zeek Concepts](../../02-zeek/01-concepts/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.1.6",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.1.6",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nAn image-load event shows a module being loaded into a process. A driver-load event concerns code loaded into the kernel. Understanding the difference helps you describe the execution context without confusing a file on disk with a recorded load.\n\n"
+    },
+    {
+      "chapter": "1.2.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.1.1 A / B / C  \n- Hunter: 1.2.1.1 B / C / C  \n- CTI: 1.2.1.1 A / B / B  \n"
+    },
+    {
+      "chapter": "1.2.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.1.1 – Zeek concepts\n\n"
+    },
+    {
+      "chapter": "1.2.1",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.1.6 – Image and Driver Load Activity](../../01-endpoint/06-image-driver-load/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.1",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.2 – Conn Engine](../02-conn-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.1",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.1",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nNetwork-sensor evidence describes traffic visible at an observation point. Zeek turns that traffic into structured records that analysts can search and connect. Understanding how those records are produced helps you choose the right log and recognize when additional evidence is needed.\n\n"
+    },
+    {
+      "chapter": "1.2.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.2.1 A / B / C ; 1.2.2.2 2b / 3c / 4c ; 1.2.2.3 2b / 3c / 4c  \n- Hunter: 1.2.2.1 B / C / C ; 1.2.2.2 3c / 4c / 4c ; 1.2.2.3 3c / 4c / 4c  \n- CTI: 1.2.2.1 A / A / B ; 1.2.2.2 1a / 1a / 2b ; 1.2.2.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.2.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.2.1 – Conn engine\n- T: 1.2.2.2 – Analyze a Zeek conn log and accurately describe what occurred\n- T: 1.2.2.3 – Create a SIEM query to detect specific connection activity\n\n"
+    },
+    {
+      "chapter": "1.2.2",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.1 – Zeek Concepts](../01-concepts/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.2",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.2",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.2",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nA connection record gives you a network-level starting point: the endpoints, transport, and progress Zeek observed. That description helps you select the related protocol records without assigning a purpose to the traffic too early.\n\n"
+    },
+    {
+      "chapter": "1.2.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.3.1 A / B / C ; 1.2.3.2 2b / 3c / 4c ; 1.2.3.3 2b / 3c / 4c  \n- Hunter: 1.2.3.1 B / C / C ; 1.2.3.2 3c / 4c / 4c ; 1.2.3.3 3c / 4c / 4c  \n- CTI: 1.2.3.1 A / B / B ; 1.2.3.2 1a / 2b / 3c ; 1.2.3.3 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "1.2.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.3.1 – DNS engine\n- T: 1.2.3.2 – Analyze a Zeek DNS log and accurately describe what occurred\n- T: 1.2.3.3 – Create a SIEM query to detect specific DNS activity\n\n"
+    },
+    {
+      "chapter": "1.2.3",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.2 – Conn Engine](../02-conn-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.3",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.4 – TLS Engine](../04-tls-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.3",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.3",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nDNS evidence connects a question about a name to the response observed on the network. Distinguishing the resolver from the returned address helps prevent a common error when moving from a lookup to a connection investigation.\n\n"
+    },
+    {
+      "chapter": "1.2.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.4.1 A / B / C ; 1.2.4.2 2b / 3c / 4c ; 1.2.4.3 2b / 3c / 4c  \n- Hunter: 1.2.4.1 B / C / C ; 1.2.4.2 3c / 4c / 4c ; 1.2.4.3 3c / 4c / 4c  \n- CTI: 1.2.4.1 A / A / B ; 1.2.4.2 1a / 1a / 2b ; 1.2.4.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.2.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.4.1 – TLS engine\n- T: 1.2.4.2 – Analyze a Zeek TLS log and accurately describe what occurred\n- T: 1.2.4.3 – Create a SIEM query to detect specific TLS activity\n\n"
+    },
+    {
+      "chapter": "1.2.4",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.4",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.5 – HTTP Engine](../05-http-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.4",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.4",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nTLS can conceal application content while leaving some handshake information visible. Reading that information carefully helps describe the observed session without treating a hostname, certificate, or fingerprint as a verdict.\n\n"
+    },
+    {
+      "chapter": "1.2.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.5.1 A / B / C ; 1.2.5.2 2b / 3c / 4c ; 1.2.5.3 2b / 3c / 4c  \n- Hunter: 1.2.5.1 B / C / C ; 1.2.5.2 3c / 4c / 4c ; 1.2.5.3 3c / 4c / 4c  \n- CTI: 1.2.5.1 A / B / B ; 1.2.5.2 1a / 2b / 3c ; 1.2.5.3 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "1.2.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.5.1 – HTTP engine\n- T: 1.2.5.2 – Analyze a Zeek HTTP log and accurately describe what occurred\n- T: 1.2.5.3 – Create a SIEM query to detect specific HTTP activity\n\n"
+    },
+    {
+      "chapter": "1.2.5",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.4 – TLS Engine](../04-tls-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.5",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.6 – SMTP Engine](../06-smtp-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.5",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.5",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nAn HTTP record helps explain what a client requested and what response status the sensor observed. Separating request details, server response, and any transferred content makes the resulting account more precise.\n\n"
+    },
+    {
+      "chapter": "1.2.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.6.1 A / B / C ; 1.2.6.2 2b / 3c / 4c ; 1.2.6.3 2b / 3c / 4c  \n- Hunter: 1.2.6.1 B / C / C ; 1.2.6.2 3c / 4c / 4c ; 1.2.6.3 3c / 4c / 4c  \n- CTI: 1.2.6.1 A / A / B ; 1.2.6.2 1a / 1a / 2b ; 1.2.6.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.2.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.6.1 – SMTP engine\n- T: 1.2.6.2 – Analyze a Zeek SMTP log and accurately describe what occurred\n- T: 1.2.6.3 – Create a SIEM query to detect specific SMTP activity\n\n"
+    },
+    {
+      "chapter": "1.2.6",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.5 – HTTP Engine](../05-http-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.6",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.7 – Files Engine](../07-files-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.6",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.6",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nSMTP records describe mail transactions visible to a network sensor. They help identify envelope addresses and selected headers while leaving mailbox delivery, user action, and attachment behavior to other evidence.\n\n"
+    },
+    {
+      "chapter": "1.2.7",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.7.1 A / B / C ; 1.2.7.2 2b / 3c / 4c ; 1.2.7.3 2b / 3c / 4c  \n- Hunter: 1.2.7.1 B / C / C ; 1.2.7.2 3c / 4c / 4c ; 1.2.7.3 3c / 4c / 4c  \n- CTI: 1.2.7.1 A / A / B ; 1.2.7.2 1a / 1a / 2b ; 1.2.7.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.2.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.7.1 – Files engine\n- T: 1.2.7.2 – Analyze a Zeek files log and accurately describe what occurred\n- T: 1.2.7.3 – Create a SIEM query to detect specific file transfer activity\n\n"
+    },
+    {
+      "chapter": "1.2.7",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.6 – SMTP Engine](../06-smtp-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.7",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.2.8 – Weird Engine](../08-weird-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.7",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.7",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nZeek file analysis connects observed network content to the flow that carried it. It can help explain a download or attachment, while the available fields also show whether hashes or extracted bytes exist for further examination.\n\n"
+    },
+    {
+      "chapter": "1.2.8",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.2.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.2.8.1 A / B / C ; 1.2.8.2 2b / 3c / 4c ; 1.2.8.3 2b / 3c / 4c  \n- Hunter: 1.2.8.1 B / C / C ; 1.2.8.2 3c / 4c / 4c ; 1.2.8.3 3c / 4c / 4c  \n- CTI: 1.2.8.1 A / A / A ; 1.2.8.2 1a / 1a / 1a ; 1.2.8.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.2.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.2.8.1 – Weird engine\n- T: 1.2.8.2 – Analyze a Zeek weird log and accurately describe what occurred\n- T: 1.2.8.3 – Create a SIEM query to detect specific weird activity\n\n"
+    },
+    {
+      "chapter": "1.2.8",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.7 – Files Engine](../07-files-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.8",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.3.1 – SIGMA Rules](../../03-detection/01-sigma-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.2.8",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.2.8",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nA weird record reports an unexpected condition encountered by Zeek. It is useful because it points to traffic or visibility worth examining, but its meaning depends on the named condition and the surrounding evidence.\n\n"
+    },
+    {
+      "chapter": "1.3.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.3.1.1 A / B / C ; 1.3.1.2 2b / 3c / 4c ; 1.3.1.3 1a / 2b / 3c  \n- Hunter: 1.3.1.1 B / C / C ; 1.3.1.2 2b / 3c / 4c ; 1.3.1.3 2b / 3c / 4c  \n- CTI: 1.3.1.1 A / B / B ; 1.3.1.2 1a / 2b / 3c ; 1.3.1.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.3.1.1 – SIGMA rules\n- T: 1.3.1.2 – Analyze an existing SIGMA rule and describe what it detects\n- T: 1.3.1.3 – Create or modify a basic SIGMA rule\n\n"
+    },
+    {
+      "chapter": "1.3.1",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.2.8 – Weird Engine](../../02-zeek/08-weird-engine/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.1",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.3.2 – Suricata Rules](../02-suricata-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.1",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.3.1",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nSigma expresses a detection idea in a shareable format. Reading its source, field tests, and condition helps you understand what a matching event actually proves and what must be mapped before the rule can run in a local platform.\n\n"
+    },
+    {
+      "chapter": "1.3.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.3.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.3.2.1 A / B / C ; 1.3.2.2 2b / 3c / 4c ; 1.3.2.3 1a / 2b / 3c  \n- Hunter: 1.3.2.1 B / C / C ; 1.3.2.2 2b / 3c / 4c ; 1.3.2.3 2b / 3c / 4c  \n- CTI: 1.3.2.1 A / B / B ; 1.3.2.2 1a / 2b / 3c ; 1.3.2.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.3.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.3.2.1 – Suricata rules\n- T: 1.3.2.2 – Analyze an existing Suricata rule and describe what it detects\n- T: 1.3.2.3 – Create or modify a basic Suricata rule\n\n"
+    },
+    {
+      "chapter": "1.3.2",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.3.1 – SIGMA Rules](../01-sigma-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.2",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.3.3 – YARA Rules](../03-yara-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.2",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.3.2",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nSuricata rules express conditions to inspect in network traffic. Reading the protocol, direction, and inspection buffer helps explain why a signature matched and whether its meaning agrees with the analyst’s description.\n\n"
+    },
+    {
+      "chapter": "1.3.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.3.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.3.3.1 A / B / C ; 1.3.3.2 2b / 3c / 4c ; 1.3.3.3 1a / 2b / 3c  \n- Hunter: 1.3.3.1 B / C / C ; 1.3.3.2 2b / 3c / 4c ; 1.3.3.3 2b / 3c / 4c  \n- CTI: 1.3.3.1 A / B / B ; 1.3.3.2 1a / 2b / 3c ; 1.3.3.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.3.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.3.3.1 – YARA rules\n- T: 1.3.3.2 – Analyze an existing YARA rule and describe what it detects\n- T: 1.3.3.3 – Create or modify a basic YARA rule\n\n"
+    },
+    {
+      "chapter": "1.3.3",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.3.2 – Suricata Rules](../02-suricata-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.3",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.3.4 – SIEM Rules](../04-siem-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.3",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.3.3",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nYARA examines content supplied to a scanner, such as a file or process memory. Understanding what bytes and conditions a rule tests helps you distinguish a content match from a filename, log entry, or conclusion about maliciousness.\n\n"
+    },
+    {
+      "chapter": "1.3.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.3.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.3.4.1 A / B / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 1a / 2b / 3c  \n- Hunter: 1.3.4.1 B / C / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 2b / 3c / 4c  \n- CTI: 1.3.4.1 A / B / B ; 1.3.4.2 1a / 2b / 3c ; 1.3.4.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.3.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.3.4.1 – SIEM rules\n- T: 1.3.4.2 – Analyze an existing SIEM rule and describe what it detects\n- T: 1.3.4.3 – Create a basic SIEM detection rule from log fields or a SIGMA rule\n\n"
+    },
+    {
+      "chapter": "1.3.4",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.3.3 – YARA Rules](../03-yara-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.4",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.4.1 – Alert Context and Investigation](../../04-alerts/01-context-investigation/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.3.4",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.3.4",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nA saved detection combines search logic with operating settings that determine when and how an alert is created. Reading both parts explains what an alert represents and helps turn a query into a reviewable detection proposal.\n\n"
+    },
+    {
+      "chapter": "1.4.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.4.1.1 A / B / C ; 1.4.1.2 2b / 3c / 4c ; 1.4.1.3 2b / 3c / 4c ; 1.4.1.4 2b / 3c / 4c ; 1.4.1.5 2b / 3c / 4c ; 1.4.1.6 2b / 3c / 4c  \n- Hunter: 1.4.1.1 B / C / C ; 1.4.1.2 2b / 3c / 4c ; 1.4.1.3 2b / 3c / 4c ; 1.4.1.4 2b / 3c / 4c ; 1.4.1.5 2b / 3c / 4c ; 1.4.1.6 2b / 3c / 4c  \n- CTI: 1.4.1.1 A / A / B ; 1.4.1.2 1a / 1a / 2b ; 1.4.1.3 1a / 1a / 2b ; 1.4.1.4 1a / 1a / 2b ; 1.4.1.5 1a / 1a / 1a ; 1.4.1.6 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.4.1.1 – Alert context and investigation\n- T: 1.4.1.2 – Review an alert and identify which context is present and which is missing (include VirusTotal on a hash, IP, or domain you have)\n- T: 1.4.1.3 – Review the alert configuration and explain what would fire\n- T: 1.4.1.4 – Trace an alert to its upstream detection logic and name each hop\n- T: 1.4.1.5 – Collect related endpoint logs and state what they add (or fail to add)\n- T: 1.4.1.6 – Collect related PCAP and state what it adds versus the alert fields\n\n"
+    },
+    {
+      "chapter": "1.4.1",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.3.4 – SIEM Rules](../../03-detection/04-siem-rules/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.1",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.4.2 – Alert Classification](../02-classification/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.1",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.4.1",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nAn alert is the starting point for an investigation. Before deciding what it means, establish what evidence it contains, what logic produced it, and what related records can add. This makes the eventual finding traceable to observations rather than to the alert title alone.\n\n"
+    },
+    {
+      "chapter": "1.4.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.4.2.1 A / B / C ; 1.4.2.2 2b / 3c / 4c  \n- Hunter: 1.4.2.1 B / C / C ; 1.4.2.2 2b / 3c / 4c  \n- CTI: 1.4.2.1 A / A / B ; 1.4.2.2 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.4.2.1 – Alert classification (TP/FP/TN/FN)\n- T: 1.4.2.2 – Classify given cases as TP, FP, TN, or FN and cite the evidence\n\n"
+    },
+    {
+      "chapter": "1.4.2",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.4.1 – Alert Context and Investigation](../01-context-investigation/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.2",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.4.3 – Common False Positive Causes](../03-false-positive-causes/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.2",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.4.2",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nClassification compares a detection result with an assessed condition. Keeping those two questions separate helps you distinguish a useful alert, a false alarm, and activity that was missed. Each label needs evidence about both the activity and the detection outcome.\n\n"
+    },
+    {
+      "chapter": "1.4.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.4.3.1 A / B / C ; 1.4.3.2 2b / 3c / 4c  \n- Hunter: 1.4.3.1 B / C / C ; 1.4.3.2 2b / 3c / 4c  \n- CTI: 1.4.3.1 A / A / B ; 1.4.3.2 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "1.4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.4.3.1 – Common false positive causes\n- T: 1.4.3.2 – Given a false positive, identify the cause class and what you would change\n\n"
+    },
+    {
+      "chapter": "1.4.3",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.4.2 – Alert Classification](../02-classification/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.3",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.4.4 – Common Alert Categorizations](../04-categorizations/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.3",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.4.3",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nOnce an alert is assessed as a false positive, the explanation can help reduce repeated unnecessary work. A useful recommendation connects the benign activity to the logic that matched and proposes a specific change with an understood effect on coverage.\n\n"
+    },
+    {
+      "chapter": "1.4.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.4.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.4.4.1 A / B / C ; 1.4.4.2 2b / 3c / 4c  \n- Hunter: 1.4.4.1 B / C / C ; 1.4.4.2 2b / 3c / 4c  \n- CTI: 1.4.4.1 A / A / A ; 1.4.4.2 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.4.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.4.4.1 – Common alert categorizations\n- T: 1.4.4.2 – Assign a category to an alert and justify why it is not the adjacent category\n\n"
+    },
+    {
+      "chapter": "1.4.4",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.4.3 – Common False Positive Causes](../03-false-positive-causes/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.4",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.4.5 – SLA / Response Time Goals](../05-sla-response-times/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.4",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.4.4",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nAn activity category tells the next analyst what kind of behavior or access the evidence supports. It serves a different purpose from TP/FP classification, which evaluates a detection result. Clear category reasoning helps avoid overstating an attacker’s access.\n\n"
+    },
+    {
+      "chapter": "1.4.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.4.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.4.5.1 A / B / C ; 1.4.5.2 2b / 3c / 4c ; 1.4.5.3 2b / 3c / 4c  \n- Hunter: 1.4.5.1 A / B / B ; 1.4.5.2 1a / 2b / 3c ; 1.4.5.3 1a / 2b / 3c  \n- CTI: 1.4.5.1 A / A / A ; 1.4.5.2 1a / 1a / 1a ; 1.4.5.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "1.4.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.4.5.1 – Service Level Agreements / Response Time Goals\n- T: 1.4.5.2 – Given timestamps, identify whether the start clock or the close/escalate clock is at risk\n- T: 1.4.5.3 – Close or escalate an alert and record it against the correct clock\n\n"
+    },
+    {
+      "chapter": "1.4.5",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.4.4 – Common Alert Categorizations](../04-categorizations/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.5",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.5.1 – Report Types](../../05-reporting/01-report-types/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.4.5",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.4.5",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nResponse-time goals help ensure an alert receives attention and reaches an appropriate next state. Keeping each goal’s start point and completion event explicit makes overdue work visible without encouraging premature closure.\n\n"
+    },
+    {
+      "chapter": "1.5.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.5.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.5.1.1 A / B / C ; 1.5.1.2 2b / 3c / 4c  \n- Hunter: 1.5.1.1 B / C / C ; 1.5.1.2 2b / 3c / 4c  \n- CTI: 1.5.1.1 B / C / C ; 1.5.1.2 3c / 4c / 4c  \n"
+    },
+    {
+      "chapter": "1.5.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.5.1.1 – Report types\n- T: 1.5.1.2 – Identify the correct report type for a given situation and why it is not the adjacent type\n\n"
+    },
+    {
+      "chapter": "1.5.1",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.4.5 – SLA / Response Time Goals](../../04-alerts/05-sla-response-times/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.5.1",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.5.2 – Reporting Timeline Requirements](../02-reporting-timelines/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.5.1",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.5.1",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nReport selection begins with the purpose of the communication. An incident report records a case and supports response, while an RFI asks a question needed by the work. The same incident can require both products.\n\n"
+    },
+    {
+      "chapter": "1.5.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.5.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.5.2.1 A / B / C ; 1.5.2.2 2b / 3c / 4c  \n- Hunter: 1.5.2.1 A / B / B ; 1.5.2.2 2b / 3c / 4c  \n- CTI: 1.5.2.1 B / C / C ; 1.5.2.2 3c / 4c / 4c  \n"
+    },
+    {
+      "chapter": "1.5.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.5.2.1 – Reporting timeline requirements\n- T: 1.5.2.2 – Given timestamps, identify which report timeline applies and whether it is at risk\n\n"
+    },
+    {
+      "chapter": "1.5.2",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.5.1 – Report Types](../01-report-types/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.5.2",
+      "kind": "standalone navigation removed",
+      "text": "Next: [1.5.3 – Notification and Distribution](../03-notification-distribution/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.5.2",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.5.2",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nReporting deadlines keep useful information moving while an investigation continues. A submission deadline and a blocker-escalation deadline can run at the same time, so recording their separate start points helps you act on both.\n\n"
+    },
+    {
+      "chapter": "1.5.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.5.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- SOC: 1.5.3.1 A / B / C ; 1.5.3.2 2b / 3c / 4c  \n- Hunter: 1.5.3.1 A / B / B ; 1.5.3.2 2b / 3c / 4c  \n- CTI: 1.5.3.1 B / C / C ; 1.5.3.2 3c / 4c / 4c  \n"
+    },
+    {
+      "chapter": "1.5.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 1.5.3.1 – Notification and distribution\n- T: 1.5.3.2 – Route a report: name recipients, leadership awareness, and the approved channel\n\n"
+    },
+    {
+      "chapter": "1.5.3",
+      "kind": "standalone navigation removed",
+      "text": "Previous: [1.5.2 – Reporting Timeline Requirements](../02-reporting-timelines/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.5.3",
+      "kind": "standalone navigation removed",
+      "text": "Next: [2.1.1 — Data, information, and intelligence](../../../02-cti/01-core-intel/01-data-info-intel/student-guide.md)\n"
+    },
+    {
+      "chapter": "1.5.3",
+      "kind": "standalone navigation removed",
+      "text": "[1.x module index](../../README.md)\n"
+    },
+    {
+      "chapter": "1.5.3",
+      "kind": "purpose moved before learning objectives",
+      "text": "## Why This Matters\n\nA report becomes useful when it reaches the responsible people through a channel that supports the work. A notification chart connects the product to recipients, leadership awareness, and the approved means of delivery.\n\n"
+    },
+    {
+      "chapter": "1.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "1.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Section summary — no proficiency mapping\n"
+    },
+    {
+      "chapter": "1.6",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **2.x – Cyber Threat Intelligence**.\n"
+    },
+    {
+      "chapter": "2.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); SOC Analyst, Threat Hunter (secondary)  \n"
+    },
+    {
+      "chapter": "2.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Orientation — no proficiency mapping\n"
+    },
+    {
+      "chapter": "2.0",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **2.1.1 – Difference Between Data, Information, and Intelligence**.\n"
+    },
+    {
+      "chapter": "2.1.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.1 B / C / C ; 2.1.1.1 3c / 4c / 4c  \n- Hunter: 2.1.1 A / B / B ; 2.1.1.1 1a / 2b / 3c  \n- SOC: 2.1.1 A / A / A ; 2.1.1.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.1 – Difference between data, information, and intelligence\n- T: 2.1.1.1 – Correctly categorize examples as data, information, or intelligence\n\n"
+    },
+    {
+      "chapter": "2.1.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.2 – Intelligence lifecycle](../02-intelligence-lifecycle/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.1",
+      "kind": "structural cross-reference corrected",
+      "text": "- 2.7 – Finished intelligence products"
+    },
+    {
+      "chapter": "2.1.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.2 B / C / C ; 2.1.2.1 3c / 4c / 4c  \n- Hunter: 2.1.2 A / B / B ; 2.1.2.1 1a / 2b / 3c  \n- SOC: 2.1.2 A / A / A ; 2.1.2.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.2 – Intelligence lifecycle\n- T: 2.1.2.1 – Identify the lifecycle stage of an activity and describe the flow\n\n"
+    },
+    {
+      "chapter": "2.1.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.3 – Intelligence Types](../03-intelligence-types/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.2",
+      "kind": "navigation label simplified",
+      "text": "- 2.1.1 – Data, information, and intelligence (previous)"
+    },
+    {
+      "chapter": "2.1.2",
+      "kind": "structural cross-reference corrected",
+      "text": "- 2.7 – Finished intelligence products"
+    },
+    {
+      "chapter": "2.1.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.3 B / C / C ; 2.1.3.1 3c / 4c / 4c  \n- Hunter: 2.1.3 A / B / B ; 2.1.3.1 1a / 2b / 3c  \n- SOC: 2.1.3 A / A / A ; 2.1.3.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.3 – Intelligence types (strategic, operational, tactical, technical)\n- T: 2.1.3.1 – Classify an intelligence product or requirement by type\n\n"
+    },
+    {
+      "chapter": "2.1.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.4 – Intelligence Requirements](../04-intelligence-requirements/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.3",
+      "kind": "navigation label simplified",
+      "text": "- 2.1.2 – Intelligence lifecycle (previous)"
+    },
+    {
+      "chapter": "2.1.3",
+      "kind": "structural cross-reference corrected",
+      "text": "- 2.7 – Finished intelligence products"
+    },
+    {
+      "chapter": "2.1.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.4 B / C / C ; 2.1.4.1 3c / 4c / 4d ; 2.1.4.2 3c / 4c / 4d ; 2.1.4.3 3c / 4c / 4c  \n- Hunter: 2.1.4 A / B / B ; 2.1.4.1 1a / 2b / 3c ; 2.1.4.2 1a / 2b / 3c ; 2.1.4.3 1a / 2b / 3c  \n- SOC: 2.1.4 A / A / B ; 2.1.4.1 1a / 1a / 1a ; 2.1.4.2 1a / 1a / 1a ; 2.1.4.3 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.4 – Intelligence requirements and Priority Intelligence Requirements (PIRs)\n- T: 2.1.4.1 – Develop or refine intelligence requirements\n- T: 2.1.4.2 – Translate stakeholder questions into clear intelligence requirements\n- T: 2.1.4.3 – Explain how a given requirement drives analytic work\n\n"
+    },
+    {
+      "chapter": "2.1.4",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.5 – RFI Intake and Prioritization](../05-rfi-intake/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.4",
+      "kind": "navigation label simplified",
+      "text": "- 2.1.3 – Intelligence types (previous)"
+    },
+    {
+      "chapter": "2.1.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter and SOC Analyst (supporting context)  \n"
+    },
+    {
+      "chapter": "2.1.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.5 B / C / C ; 2.1.5.1 3c / 4c / 4d  \n- Hunter: 2.1.5 A / A / B ; 2.1.5.1 1a / 1a / 2b  \n- SOC: 2.1.5 A / A / A ; 2.1.5.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.5 – RFI intake and prioritization\n- T: 2.1.5.1 – Receive, evaluate, and prioritize an RFI\n\n"
+    },
+    {
+      "chapter": "2.1.5",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.6 – Ensuring Intelligence Is Actionable](../06-actionable-intelligence/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.6 B / C / C ; 2.1.6.1 3c / 4c / 4d  \n- Hunter: 2.1.6 A / B / B ; 2.1.6.1 1a / 2b / 3c  \n- SOC: 2.1.6 A / A / B ; 2.1.6.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.6 – Ensuring intelligence is actionable\n- T: 2.1.6.1 – Evaluate whether a piece of intelligence is actionable and explain why\n\n"
+    },
+    {
+      "chapter": "2.1.6",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.7 – Tailoring Output to the Audience](../07-tailoring-audience/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.7",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.7 B / C / C ; 2.1.7.1 3c / 4c / 4d  \n- Hunter: 2.1.7 A / B / B ; 2.1.7.1 1a / 2b / 3c  \n- SOC: 2.1.7 A / A / B ; 2.1.7.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.1.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.7 – Tailoring output to the audience\n- T: 2.1.7.1 – Adjust an intelligence product for a specified audience\n\n"
+    },
+    {
+      "chapter": "2.1.7",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.8 – Attribution](../08-attribution/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.7",
+      "kind": "navigation label simplified",
+      "text": "- 2.1.6 – Ensuring intelligence is actionable (previous)"
+    },
+    {
+      "chapter": "2.1.8",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.8 B / C / C ; 2.1.8.1 3c / 4c / 4d  \n- Hunter: 2.1.8 A / B / B ; 2.1.8.1 1a / 2b / 3c  \n- SOC: 2.1.8 A / A / A ; 2.1.8.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.8 – Attribution (purpose, confidence, types)\n- T: 2.1.8.1 – Assess attribution statements for confidence and supporting evidence\n\n"
+    },
+    {
+      "chapter": "2.1.8",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.1.9 – Collection Sources and Methods](../09-collection-sources/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.8",
+      "kind": "navigation label simplified",
+      "text": "- 2.1.7 – Tailoring output to the audience (previous)"
+    },
+    {
+      "chapter": "2.1.9",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.1.9",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.1.9 B / C / C ; 2.1.9.1 3c / 4c / 4c ; 2.1.9.2 3c / 4c / 4d  \n- Hunter: 2.1.9 A / B / B ; 2.1.9.1 1a / 1a / 2b ; 2.1.9.2 1a / 1a / 2b  \n- SOC: 2.1.9 A / A / B ; 2.1.9.1 1a / 1a / 1a ; 2.1.9.2 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.1.9",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.1.9 – Collection sources and methods (OSINT, commercial, internal)\n- T: 2.1.9.1 – Identify appropriate collection source classes for a given requirement\n- T: 2.1.9.2 – Plan collection against an intelligence requirement\n\n"
+    },
+    {
+      "chapter": "2.1.9",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.2.1 – Estimative language](../../02-tradecraft/01-estimative-language/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.1.9",
+      "kind": "navigation label simplified",
+      "text": "- 2.1.8 – Attribution (previous)"
+    },
+    {
+      "chapter": "2.2.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.2.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.2.1 B / C / C ; 2.2.1.1 3c / 4c / 4c  \n- Hunter: 2.2.1 A / B / B ; 2.2.1.1 1a / 2b / 3c  \n- SOC: 2.2.1 A / A / A ; 2.2.1.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.2.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.2.1 – Estimative language\n- T: 2.2.1.1 – Use and interpret estimative language in analytic judgments\n\n"
+    },
+    {
+      "chapter": "2.2.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.2.2 – Structured Analytic Techniques](../02-structured-techniques/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.2.1",
+      "kind": "navigation label simplified",
+      "text": "- 2.1.9 – Collection sources (previous)"
+    },
+    {
+      "chapter": "2.2.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.2.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.2.2 B / C / C ; 2.2.2.1 3c / 4c / 4d  \n- Hunter: 2.2.2 A / B / B ; 2.2.2.1 1a / 2b / 3c  \n- SOC: 2.2.2 A / A / A ; 2.2.2.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.2.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.2.2 – Structured analytic techniques\n- T: 2.2.2.1 – Apply a structured analytic technique and select the right one for a scenario\n\n"
+    },
+    {
+      "chapter": "2.2.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.2.3 – Admiralty Code](../03-admiralty-code/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.2.2",
+      "kind": "navigation label simplified",
+      "text": "- 2.2.1 – Estimative language (previous)"
+    },
+    {
+      "chapter": "2.2.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.2.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.2.3 B / C / C ; 2.2.3.1 3c / 4c / 4d  \n- Hunter: 2.2.3 A / B / B ; 2.2.3.1 1a / 2b / 3c  \n- SOC: 2.2.3 A / A / B ; 2.2.3.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.2.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.2.3 – Admiralty Code / source reliability and information credibility\n- T: 2.2.3.1 – Assign Admiralty Code ratings and evaluate source reliability and credibility\n\n"
+    },
+    {
+      "chapter": "2.2.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.2.4 – Cognitive Biases and Mitigation](../04-cognitive-biases/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.2.3",
+      "kind": "navigation label simplified",
+      "text": "- 2.2.2 – Structured analytic techniques (previous)"
+    },
+    {
+      "chapter": "2.2.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.2.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.2.4 B / C / C ; 2.2.4.1 3c / 4c / 4d  \n- Hunter: 2.2.4 A / B / B ; 2.2.4.1 1a / 2b / 3c  \n- SOC: 2.2.4 A / A / A ; 2.2.4.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.2.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.2.4 – Cognitive biases and mitigation\n- T: 2.2.4.1 – Identify cognitive bias in a judgment and apply a mitigation technique\n\n"
+    },
+    {
+      "chapter": "2.2.4",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.3.1 – MITRE ATT&CK for CTI Analysis and Reporting](../../03-frameworks/01-attck-cti/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.2.4",
+      "kind": "navigation label simplified",
+      "text": "- 2.2.3 – Admiralty Code (previous)"
+    },
+    {
+      "chapter": "2.3.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.3.1 B / C / C ; 2.3.1.1 3c / 4c / 4c  \n- Hunter: 2.3.1 B / C / C ; 2.3.1.1 3c / 4c / 4c  \n- SOC: 2.3.1 A / B / B ; 2.3.1.1 2b / 3c / 4c  \n"
+    },
+    {
+      "chapter": "2.3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.3.1 – MITRE ATT&CK for CTI analysis and reporting\n- T: 2.3.1.1 – Map activity or reports to MITRE ATT&CK\n\n"
+    },
+    {
+      "chapter": "2.3.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.3.2 – Diamond Model Application in CTI](../02-diamond-cti/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.3.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.3.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.3.2 B / C / C ; 2.3.2.1 3c / 4c / 4d  \n- Hunter: 2.3.2 B / C / C ; 2.3.2.1 3c / 4c / 4d  \n- SOC: 2.3.2 A / B / B ; 2.3.2.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "2.3.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.3.2 – Diamond Model application in CTI\n- T: 2.3.2.1 – Apply the Diamond Model to an intelligence problem\n\n"
+    },
+    {
+      "chapter": "2.3.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.3.3 – Cyber Kill Chain in Intelligence Analysis](../03-kill-chain-cti/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.3.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.3.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.3.3 B / C / C ; 2.3.3.1 3c / 4c / 4c  \n- Hunter: 2.3.3 B / C / C ; 2.3.3.1 3c / 4c / 4c  \n- SOC: 2.3.3 A / B / B ; 2.3.3.1 2b / 3c / 4c  \n"
+    },
+    {
+      "chapter": "2.3.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.3.3 – Cyber Kill Chain in intelligence analysis\n- T: 2.3.3.1 – Identify the Kill Chain stage of observed or reported activity\n\n"
+    },
+    {
+      "chapter": "2.3.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.4.1 – Internal Threat Intelligence Platform](../../04-platforms/01-internal-tip/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.4.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.4.1 B / C / C ; 2.4.1.1 3c / 4c / 4d  \n- Hunter: 2.4.1 A / B / B ; 2.4.1.1 1a / 2b / 3c  \n- SOC: 2.4.1 A / A / B ; 2.4.1.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.4.1 – Internal threat intelligence platform\n- T: 2.4.1.1 – Search, retrieve, and use the internal TIP for enrichment or analysis\n\n"
+    },
+    {
+      "chapter": "2.4.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.4.2 – Selecting Platforms for CTI Work](../02-platform-selection/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.4.1",
+      "kind": "structural cross-reference label updated",
+      "text": "- 2.4 – Platform enrichment and pivoting"
+    },
+    {
+      "chapter": "2.4.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter and SOC Analyst (supporting context)  \n"
+    },
+    {
+      "chapter": "2.4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.4.2 B / C / C ; 2.4.2.1 3c / 4c / 4d  \n"
+    },
+    {
+      "chapter": "2.4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.4.2 – Selecting platforms for CTI work\n- T: 2.4.2.1 – Select a source and record a question-driven CTI lookup\n\n"
+    },
+    {
+      "chapter": "2.4.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.4.3 – VirusTotal Relations and Behavior](../03-virustotal/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.4.2",
+      "kind": "editorial wording",
+      "text": "For 2.4.3–2.4.6, retrieve a provided report or use an instructor-supplied static result. Identify the object, the report or observation time, one relevant field, and one limitation. Record:"
+    },
+    {
+      "chapter": "2.4.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.4.3 B / C / C ; 2.4.3.1 3c / 4c / 4d  \n- Hunter: 2.4.3 B / C / C ; 2.4.3.1 3c / 4c / 4d  \n- SOC: 2.4.3 A / B / B ; 2.4.3.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "2.4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.4.3 – VirusTotal Relations and Behavior\n- T: 2.4.3.1 – Use Relations and Behavior to pivot and extract events\n\n"
+    },
+    {
+      "chapter": "2.4.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.4.4 – ANY.RUN](../04-anyrun/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.4.3",
+      "kind": "editorial wording",
+      "text": "**Orientation now (about 5 minutes):** retrieve an instructor-provided result, identify the retrieved file/report identity, report time, and one relationship or observed event, and state one limitation. The first pass is about finding and recording evidence."
+    },
+    {
+      "chapter": "2.4.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.4.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.4.4 B / C / C ; 2.4.4.1 3c / 4c / 4c  \n- Hunter: 2.4.4 A / B / B ; 2.4.4.1 2b / 3c / 4c  \n- SOC: 2.4.4 A / A / B ; 2.4.4.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.4.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.4.4 – ANY.RUN\n- T: 2.4.4.1 – Search and review ANY.RUN submissions for actionable intelligence\n\n"
+    },
+    {
+      "chapter": "2.4.4",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.4.5 – Silent Push](../05-silent-push/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.4.4",
+      "kind": "editorial wording",
+      "text": "**Orientation now (about 5 minutes):** retrieve an instructor-provided result, identify the report identity, sample hash, and one process/file/network event, and state one limitation. The first pass is about finding and recording evidence."
+    },
+    {
+      "chapter": "2.4.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.4.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.4.5 B / C / C ; 2.4.5.1 3c / 4c / 4d  \n- Hunter: 2.4.5 A / B / B ; 2.4.5.1 2b / 3c / 4c  \n- SOC: 2.4.5 A / A / B ; 2.4.5.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.4.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.4.5 – Silent Push\n- T: 2.4.5.1 – Enrich an indicator and pivot in Silent Push\n\n"
+    },
+    {
+      "chapter": "2.4.5",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.4.6 – urlscan.io](../06-urlscan/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.4.5",
+      "kind": "editorial wording",
+      "text": "**Orientation now (about 5 minutes):** retrieve an instructor-provided result, identify the queried seed, returned record type, and observation window, and state one limitation. The first pass is about finding and recording evidence."
+    },
+    {
+      "chapter": "2.4.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.4.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.4.6 B / C / C ; 2.4.6.1 3c / 4c / 4c  \n- Hunter: 2.4.6 A / B / B ; 2.4.6.1 2b / 3c / 4c  \n- SOC: 2.4.6 A / A / B ; 2.4.6.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.4.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.4.6 – URLScan\n- T: 2.4.6.1 – Submit or retrieve a URLScan result and extract actionable intelligence\n\n"
+    },
+    {
+      "chapter": "2.4.6",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.5.1 – IOC Handling and Enrichment Concepts](../../05-enrichment/01-ioc-handling/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.4.6",
+      "kind": "editorial wording",
+      "text": "**Orientation now (about 5 minutes):** retrieve an instructor-provided result, identify the scan URL/time, visited page, and one request or redirect, and state one limitation. The first pass is about finding and recording evidence."
+    },
+    {
+      "chapter": "2.5.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter and SOC Analyst (supporting context)  \n"
+    },
+    {
+      "chapter": "2.5.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.5.1 B / C / C ; 2.5.1.1 3c / 4c / 4d  \n- Hunter: 2.5.1 B / C / C ; 2.5.1.1 3c / 4c / 4d  \n- SOC: 2.5.1 A / B / B ; 2.5.1.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "2.5.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.5.1 – IOC handling and enrichment concepts\n- T: 2.5.1.1 – Enrich and pivot on IOCs using internal and external tools\n\n"
+    },
+    {
+      "chapter": "2.5.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.5.2 – Hashing and Similarity Concepts](../02-file-similarity/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.5.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.5.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.5.2 B / C / C ; 2.5.2.1 3c / 4c / 4d ; 2.5.2.2 3c / 4c / 4c  \n- Hunter: 2.5.2 A / B / B ; 2.5.2.1 1a / 2b / 3c ; 2.5.2.2 1a / 2b / 3c  \n- SOC: 2.5.2 A / A / B ; 2.5.2.1 1a / 1a / 2b ; 2.5.2.2 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.5.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.5.2 – Hashing and similarity concepts\n- T: 2.5.2.1 – Use file similarity hashes to identify related samples\n- T: 2.5.2.2 – Extract and interpret certificate / code-signing information from a file\n\n"
+    },
+    {
+      "chapter": "2.5.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.5.3 – RDAP and WHOIS Concepts](../03-rdap-whois/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.5.2",
+      "kind": "structural cross-reference label updated",
+      "text": "- 2.4 – Platform enrichment / file pivots"
+    },
+    {
+      "chapter": "2.5.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.5.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.5.3 B / C / C ; 2.5.3.1 3c / 4c / 4c  \n- Hunter: 2.5.3 A / B / B ; 2.5.3.1 2b / 3c / 4c  \n- SOC: 2.5.3 A / A / B ; 2.5.3.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.5.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.5.3 – RDAP and WHOIS concepts\n- T: 2.5.3.1 – Query RDAP/WHOIS and interpret fields for enrichment or attribution\n\n"
+    },
+    {
+      "chapter": "2.5.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.5.4 – Advanced DNS Concepts](../04-advanced-dns/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.5.3",
+      "kind": "navigation label simplified",
+      "text": "- 2.5.2 – Hashing and similarity concepts (previous)"
+    },
+    {
+      "chapter": "2.5.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.5.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.5.4 B / C / C ; 2.5.4.1 3c / 4c / 4d  \n- Hunter: 2.5.4 B / C / C ; 2.5.4.1 2b / 3c / 4c  \n- SOC: 2.5.4 A / A / B ; 2.5.4.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.5.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.5.4 – Advanced DNS concepts (SOA and other records of intelligence value)\n- T: 2.5.4.1 – Interpret an SOA record and use advanced DNS data to enrich or pivot\n\n"
+    },
+    {
+      "chapter": "2.5.4",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.5.5 – Identifying Additional Adversary Infrastructure from Seed Indicators](../05-infra-pivot/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.5.4",
+      "kind": "navigation label simplified",
+      "text": "- 2.5.3 – RDAP / WHOIS (previous)"
+    },
+    {
+      "chapter": "2.5.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.5.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.5.5 B / C / C ; 2.5.5.1 3c / 4c / 4d  \n- Hunter: 2.5.5 B / C / C ; 2.5.5.1 3c / 4c / 4d  \n- SOC: 2.5.5 A / B / B ; 2.5.5.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "2.5.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.5.5 – Identifying additional adversary infrastructure from seed indicators\n- T: 2.5.5.1 – Pivot from a seed indicator to additional adversary infrastructure\n\n"
+    },
+    {
+      "chapter": "2.5.5",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.5.6 – MalasadaTech Defender's ThreatMesh Framework (DTF)](../06-dtf/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.5.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.5.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.5.6 B / C / C ; 2.5.6.1 3c / 4c / 4d ; 2.5.6.2 3c / 4c / 4d ; 2.5.6.3 3c / 4c / 4c  \n- Hunter: 2.5.6 A / B / B ; 2.5.6.1 1a / 2b / 3c ; 2.5.6.2 1a / 2b / 3c ; 2.5.6.3 1a / 2b / 3c  \n- SOC: 2.5.6 A / A / B ; 2.5.6.1 1a / 1a / 2b ; 2.5.6.2 1a / 1a / 2b ; 2.5.6.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.5.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.5.6 – Defender’s ThreatMesh Framework (DTF) for infrastructure discovery\n- T: 2.5.6.1 – Apply DTF: select a pivot tactic and pivot from a seed and reject the weak neighbor\n- T: 2.5.6.2 – Use a selected DTF pivot to guide the next enrichment or lookup\n- T: 2.5.6.3 – Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain\n\n"
+    },
+    {
+      "chapter": "2.5.6",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.5.7 – Correlation, Link Analysis, and Campaign Tracking](../07-correlation/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.5.7",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter and SOC Analyst (supporting context)  \n"
+    },
+    {
+      "chapter": "2.5.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.5.7 B / C / C ; 2.5.7.1 3c / 4c / 4d  \n- Hunter: 2.5.7 B / C / C ; 2.5.7.1 1a / 2b / 3c  \n- SOC: 2.5.7 A / B / B ; 2.5.7.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.5.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.5.7 – Correlation, link analysis, and campaign tracking\n- T: 2.5.7.1 – Link analysis and campaign tracking\n\n"
+    },
+    {
+      "chapter": "2.5.7",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.6.1 – Extracting Applicable TTPs from Intelligence Reports](../../06-assessment/01-applicable-ttps/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.6.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.6.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.6.1 B / C / C ; 2.6.1.1 3c / 4c / 4d  \n- Hunter: 2.6.1 B / C / C ; 2.6.1.1 3c / 4c / 4d  \n- SOC: 2.6.1 A / B / B ; 2.6.1.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "2.6.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.6.1 – Extracting applicable TTPs from intelligence reports\n- T: 2.6.1.1 – Extract applicable TTPs from an intelligence report\n\n"
+    },
+    {
+      "chapter": "2.6.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.6.2 – Threat Relevance and Organizational Impact](../02-relevance-impact/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.6.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.6.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.6.2 B / C / C ; 2.6.2.1 3c / 4c / 4d  \n- Hunter: 2.6.2 B / C / C ; 2.6.2.1 2b / 3c / 4c  \n- SOC: 2.6.2 A / B / B ; 2.6.2.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "2.6.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.6.2 – Threat relevance and organizational impact\n- T: 2.6.2.1 – Assess threat relevance and potential impact to the organization\n\n"
+    },
+    {
+      "chapter": "2.6.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.7.1 – Core STIX Objects](../../07-production/01-core-objects/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.7.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.7.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.7.1 B / C / C ; 2.7.1.1 3c / 4c / 4c  \n- Hunter: 2.7.1 B / C / C ; 2.7.1.1 2b / 3c / 4c  \n- SOC: 2.7.1 A / B / B ; 2.7.1.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.7.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.7.1 – Core STIX objects\n- T: 2.7.1.1 – Identify and label common STIX objects in a report\n\n"
+    },
+    {
+      "chapter": "2.7.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.7.2 – How STIX Objects Are Used in Intelligence Production](../02-stix-production/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.7.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.7.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.7.2 B / C / C ; 2.7.2.1 3c / 4c / 4d ; 2.7.2.2 3c / 4c / 4d ; 2.7.2.3 3c / 4c / 4c  \n- Hunter: 2.7.2 B / C / C ; 2.7.2.1 2b / 3c / 4c ; 2.7.2.2 2b / 3c / 4c ; 2.7.2.3 2b / 3c / 4c  \n- SOC: 2.7.2 A / B / B ; 2.7.2.1 1a / 1a / 2b ; 2.7.2.2 1a / 1a / 2b ; 2.7.2.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.7.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.7.2 – How STIX objects are used in intelligence production\n- T: 2.7.2.1 – Create STIX-aligned relationships and explain a threat scenario\n- T: 2.7.2.2 – Create and validate STIX objects\n- T: 2.7.2.3 – Use TAXII for sharing and consumption of intelligence\n\n"
+    },
+    {
+      "chapter": "2.7.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.7.3 – Creating Finished Intelligence Products](../03-finished-products/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.7.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.7.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.7.3 B / C / C ; 2.7.3.1 3c / 4c / 4d ; 2.7.3.2 3c / 4c / 4d  \n- Hunter: 2.7.3 A / B / B ; 2.7.3.1 1a / 2b / 3c ; 2.7.3.2 1a / 2b / 3c  \n- SOC: 2.7.3 A / A / B ; 2.7.3.1 1a / 1a / 2b ; 2.7.3.2 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.7.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.7.3 – Creating finished intelligence products\n- T: 2.7.3.1 – Draft a finished product and evaluate it against standards\n- T: 2.7.3.2 – Produce a threat actor profile\n\n"
+    },
+    {
+      "chapter": "2.7.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.7.4 – RFI Responses and Closure](../04-rfi-response/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.7.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter and SOC Analyst (supporting context)  \n"
+    },
+    {
+      "chapter": "2.7.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.7.4 B / C / C ; 2.7.4.1 3c / 4c / 4d  \n- Hunter: 2.7.4 A / A / B ; 2.7.4.1 1a / 1a / 2b  \n- SOC: 2.7.4 A / A / A ; 2.7.4.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.7.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.7.4 – RFI responses and closure\n- T: 2.7.4.1 – Produce an evidence-based RFI response and close or record follow-up\n\n"
+    },
+    {
+      "chapter": "2.7.4",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.7.5 – Disseminating Intelligence to the Correct Audiences](../05-dissemination/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.7.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.7.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.7.5 B / C / C ; 2.7.5.1 3c / 4c / 4c ; 2.7.5.2 3c / 4c / 4d ; 2.7.5.3 3c / 4c / 4c  \n- Hunter: 2.7.5 A / B / B ; 2.7.5.1 1a / 2b / 3c ; 2.7.5.2 1a / 2b / 3c ; 2.7.5.3 1a / 2b / 3c  \n- SOC: 2.7.5 A / A / B ; 2.7.5.1 1a / 1a / 2b ; 2.7.5.2 1a / 1a / 2b ; 2.7.5.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "2.7.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.7.5 – Disseminating intelligence to the correct audiences\n- T: 2.7.5.1 – Select audience and method and apply correct handling markings\n- T: 2.7.5.2 – Tailor products to different audiences\n- T: 2.7.5.3 – Disseminate intelligence products through approved channels\n\n"
+    },
+    {
+      "chapter": "2.7.5",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.8.1 – Local Intelligence Requirements and Priorities](../../08-site-specific/01-local-priorities/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.8.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.8.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.8.1 B / C / C ; 2.8.1.1 3c / 4c / 4c  \n- Hunter: 2.8.1 A / A / B ; 2.8.1.1 1a / 1a / 2b  \n- SOC: 2.8.1 A / A / A ; 2.8.1.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.8.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.8.1 – Local intelligence requirements and priorities\n- T: 2.8.1.1 – Identify current local priorities and align analytic work to them\n\n"
+    },
+    {
+      "chapter": "2.8.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.8.2 – Local Production and Approval Processes](../02-local-production/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.8.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.8.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.8.2 B / C / C ; 2.8.2.1 3c / 4c / 4c ; 2.8.2.2 3c / 4c / 4c  \n- Hunter: 2.8.2 A / A / B ; 2.8.2.1 1a / 1a / 2b ; 2.8.2.2 1a / 1a / 2b  \n- SOC: 2.8.2 A / A / A ; 2.8.2.1 1a / 1a / 1a ; 2.8.2.2 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.8.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.8.2 – Local production and approval processes\n- T: 2.8.2.1 – Follow the local process for requesting collection or producing and approving products\n- T: 2.8.2.2 – Document and archive intelligence products according to local standards\n\n"
+    },
+    {
+      "chapter": "2.8.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** [2.8.3 – Local Dissemination Channels and Customers](../03-local-dissemination/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.8.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "2.8.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- CTI: 2.8.3 B / C / C ; 2.8.3.1 3c / 4c / 4c  \n- Hunter: 2.8.3 A / A / B ; 2.8.3.1 1a / 1a / 2b  \n- SOC: 2.8.3 A / A / A ; 2.8.3.1 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "2.8.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 2.8.3 – Local dissemination channels and customers\n- T: 2.8.3.1 – Disseminate a product using the correct local channels and customers\n\n"
+    },
+    {
+      "chapter": "2.8.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** Continue to [3.x – Threat Hunting](../../../03-hunter/00-intro/student-guide.md).\n"
+    },
+    {
+      "chapter": "2.9",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** CTI Analyst (primary); SOC Analyst, Threat Hunter (secondary)  \n"
+    },
+    {
+      "chapter": "2.9",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Section summary — no proficiency mapping\n"
+    },
+    {
+      "chapter": "2.9",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.x – Threat Hunting**.\n"
+    },
+    {
+      "chapter": "3.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Orientation — no proficiency mapping\n"
+    },
+    {
+      "chapter": "3.0",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.1 – Purpose of Threat Hunting**.\n"
+    },
+    {
+      "chapter": "3.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.1.1 B / C / C ; 3.1.1.1 3c / 4c / 4c ; 3.1.1.2 3c / 4c / 4d  \n- SOC: 3.1.1 A / B / B ; 3.1.1.1 1a / 2b / 3c ; 3.1.1.2 1a / 2b / 3c  \n- CTI: 3.1.1 A / B / B ; 3.1.1.1 1a / 2b / 3c ; 3.1.1.2 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.1.1 – Purpose of Threat Hunting\n- T: 3.1.1.1 – Explain the purpose of threat hunting in the context of the security program\n- T: 3.1.1.2 – Identify examples of activity that existing controls might miss\n\n"
+    },
+    {
+      "chapter": "3.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.2.1 – Hunt Types**.\n"
+    },
+    {
+      "chapter": "3.2.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.2.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.2.1 B / C / C ; 3.2.1.1–3.2.1.4 3c / 4c / 4c  \n- SOC: 3.2.1 A / B / B ; 3.2.1.1–3.2.1.4 1a / 1a / 2b  \n- CTI: 3.2.1 A / B / B ; 3.2.1.1–3.2.1.4 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "3.2.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.2.1 – Hunt types\n- T: 3.2.1.1 – Execute an intel-driven hunt\n- T: 3.2.1.2 – Execute a hypothesis-driven hunt\n- T: 3.2.1.3 – Execute a reactive hunt\n- T: 3.2.1.4 – Execute an anomaly-based hunt\n\n"
+    },
+    {
+      "chapter": "3.2.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.2.2 – Hunt Development Concepts**.\n"
+    },
+    {
+      "chapter": "3.2.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.2.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.2.2 B / C / C ; 3.2.2.1–3.2.2.3 3c / 4c / 4d  \n- SOC: 3.2.2 A / B / B ; 3.2.2.1–3.2.2.3 1a / 1a / 2b  \n- CTI: 3.2.2 A / B / B ; 3.2.2.1–3.2.2.3 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "3.2.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.2.2 – Hunt development concepts\n- T: 3.2.2.1 – Develop and document a hunt hypothesis\n- T: 3.2.2.2 – Scope and prioritize a hunt\n- T: 3.2.2.3 – Identify unique patterns or behaviors suitable for hunting\n\n"
+    },
+    {
+      "chapter": "3.2.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.3.1 – Tool Capabilities for Hunting**.\n"
+    },
+    {
+      "chapter": "3.3.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.3.1 B / C / C ; 3.3.1.1–3.3.1.3 3c / 4c / 4d  \n- SOC: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.3 1a / 2b / 3c  \n- CTI: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.2 2b / 3c / 4c ; 3.3.1.3 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "3.3.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.3.1 – Tool capabilities for hunting\n- T: 3.3.1.1 – Perform advanced querying and pivoting in VirusTotal, ANY.RUN, urlscan.io, and Silent Push\n- T: 3.3.1.2 – Extract actionable hunting leads from external tool results\n- T: 3.3.1.3 – Convert external findings into precise internal SIEM or Zeek queries\n\n"
+    },
+    {
+      "chapter": "3.3.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.4.1 – Assessing CTI for Hunting Value**.\n"
+    },
+    {
+      "chapter": "3.4.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.4.1 B / C / C ; 3.4.1.1 3c / 4c / 4d  \n- SOC: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c  \n- CTI: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "3.4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.4.1 – Assessing CTI for hunting value\n- T: 3.4.1.1 – Triage a CTI report: hunt / don't hunt / hand off, and say why\n\n"
+    },
+    {
+      "chapter": "3.4.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.4.2 – Extracting Hunt Leads from CTI**.\n"
+    },
+    {
+      "chapter": "3.4.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.4.2 B / C / C ; 3.4.2.1–3.4.2.3 3c / 4c / 4d  \n- SOC: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b  \n- CTI: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "3.4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.4.2 – Extracting hunt leads from CTI\n- T: 3.4.2.1 – Extract hunt-suitable TTPs from a CTI report\n- T: 3.4.2.2 – Extract hunt-suitable artifacts (IOCs, patterns, behaviors)\n- T: 3.4.2.3 – State the hunt question those leads support\n\n"
+    },
+    {
+      "chapter": "3.4.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.4.3 – STIX as Hunt Input**.\n"
+    },
+    {
+      "chapter": "3.4.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.4.3 B / C / C ; 3.4.3.1 3c / 4c / 4c ; 3.4.3.2 3c / 4c / 4d  \n- SOC: 3.4.3 A / A / B ; 3.4.3.1 1a / 1a / 2b ; 3.4.3.2 1a / 1a / 2b  \n- CTI: 3.4.3 A / B / B ; 3.4.3.1 1a / 2b / 3c ; 3.4.3.2 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "3.4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.4.3 – STIX as hunt input\n- T: 3.4.3.1 – Identify hunt-relevant objects in a report or bundle\n- T: 3.4.3.2 – Turn those objects into hunt leads\n\n"
+    },
+    {
+      "chapter": "3.4.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.5.1 – Using MITRE ATT&CK for Hunt Planning**.\n"
+    },
+    {
+      "chapter": "3.5.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.5.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.5.1 B / C / C ; 3.5.1.1 3c / 4c / 4c ; 3.5.1.2–3.5.1.3 3c / 4c / 4d  \n- SOC: 3.5.1 A / B / B ; 3.5.1.1–3.5.1.2 1a / 2b / 3c ; 3.5.1.3 1a / 1a / 2b  \n- CTI: 3.5.1 B / C / C ; 3.5.1.1 3c / 4c / 4c ; 3.5.1.2–3.5.1.3 2b / 3c / 4c  \n"
+    },
+    {
+      "chapter": "3.5.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.5.1 – Using MITRE ATT&CK for hunt planning and coverage analysis\n- T: 3.5.1.1 – Map a hunt plan or hunt findings to MITRE ATT&CK\n- T: 3.5.1.2 – Use ATT&CK to identify detection or visibility gaps\n- T: 3.5.1.3 – Use ATT&CK to support hunt prioritization\n\n"
+    },
+    {
+      "chapter": "3.5.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.6.1 – Persistence Techniques**.\n"
+    },
+    {
+      "chapter": "3.6.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.6.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.6.1 B / C / C ; 3.6.1.1 3c / 4c / 4c  \n- SOC: 3.6.1 A / B / B ; 3.6.1.1 1a / 2b / 3c  \n- CTI: 3.6.1 A / B / B ; 3.6.1.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "3.6.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.6.1 – Persistence techniques\n- T: 3.6.1.1 – Recognize persistence techniques in logs or telemetry\n\n"
+    },
+    {
+      "chapter": "3.6.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.6.2 – Privilege Escalation Techniques**.\n"
+    },
+    {
+      "chapter": "3.6.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.6.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.6.2 B / C / C ; 3.6.2.1 3c / 4c / 4c  \n- SOC: 3.6.2 A / B / B ; 3.6.2.1 1a / 2b / 3c  \n- CTI: 3.6.2 A / B / B ; 3.6.2.1 1a / 2b / 3c  \n"
+    },
+    {
+      "chapter": "3.6.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.6.2 – Privilege escalation techniques\n- T: 3.6.2.1 – Recognize privilege escalation techniques in logs or telemetry\n\n"
+    },
+    {
+      "chapter": "3.6.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.6.3 – Hunt for a Specific Persistence or Privilege-Escalation Technique**.\n"
+    },
+    {
+      "chapter": "3.6.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.6.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.6.3 3c / 4c / 4d  \n- SOC: 3.6.3 1a / 1a / 2b  \n- CTI: 3.6.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "3.6.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Item\n\n- T: 3.6.3 – Hunt for specific persistence or privilege escalation techniques\n\n"
+    },
+    {
+      "chapter": "3.6.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.7.1 – Hunt Control and Lead Management**.\n"
+    },
+    {
+      "chapter": "3.7.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.7.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.7.1 B / C / C ; 3.7.1.1 3c / 4c / 4c  \n- SOC: 3.7.1 A / A / B ; 3.7.1.1 1a / 1a / 2b  \n- CTI: 3.7.1 A / A / B ; 3.7.1.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "3.7.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.7.1 – Hunt control and lead management\n- T: 3.7.1.1 – Follow the local process for initiating and controlling a hunt\n\n"
+    },
+    {
+      "chapter": "3.7.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.7.2 – Hunt Documentation Standards**.\n"
+    },
+    {
+      "chapter": "3.7.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.7.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.7.2 B / C / C ; 3.7.2.1 3c / 4c / 4c  \n- SOC: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b  \n- CTI: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "3.7.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.7.2 – Hunt documentation standards\n- T: 3.7.2.1 – Document a hunt according to local standards\n\n"
+    },
+    {
+      "chapter": "3.7.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **3.7.3 – Hunt Outputs and Hand-off**.\n"
+    },
+    {
+      "chapter": "3.7.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.7.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- Hunter: 3.7.3 B / C / C ; 3.7.3.1 3c / 4c / 4c  \n- SOC: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b  \n- CTI: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "3.7.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "## Mapped Proficiency Items\n\n- K: 3.7.3 – Hunt outputs and hand-off\n- T: 3.7.3.1 – Produce required hunt outputs and perform proper hand-off\n\n"
+    },
+    {
+      "chapter": "3.8",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "3.8",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Section summary — no proficiency mapping\n"
+    },
+    {
+      "chapter": "3.8",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.x – Detection Engineering**.\n"
+    },
+    {
+      "chapter": "3.8",
+      "kind": "editorial wording",
+      "text": "The goal of this summary is not to reteach each lesson.\n\nIt is to reconnect the pieces into one defensible hunt process."
+    },
+    {
+      "chapter": "4.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.0",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Orientation — no proficiency mapping\n"
+    },
+    {
+      "chapter": "4.0",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.1 – What Detection Engineering Owns**.\n"
+    },
+    {
+      "chapter": "4.1",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.1 B / C / C ; 4.1.1 3c / 4c / 4c  \n- SOC: 4.1 A / B / B ; 4.1.1 1a / 2b / 2b  \n- Hunter: 4.1 A / B / B ; 4.1.1 1a / 2b / 2b  \n- CTI: 4.1 A / B / B ; 4.1.1 1a / 2b / 2b  \n"
+    },
+    {
+      "chapter": "4.1",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.1 – What DE owns\n- T: 4.1.1 – Sort work to DE, nominator, 1.3, or block/control owner\n\n"
+    },
+    {
+      "chapter": "4.1",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.2 – Making a Detection Sound and Meeting Shop Requirements**.\n"
+    },
+    {
+      "chapter": "4.2",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.2 B / C / C ; 4.2.1 3c / 4c / 4d ; 4.2.2 3c / 4c / 4c ; 4.2.3 3c / 4c / 4c  \n- SOC: 4.2 A / A / B ; 4.2.1 1a / 1a / 2b ; 4.2.2 1a / 1a / 1a ; 4.2.3 1a / 1a / 2b  \n- Hunter: 4.2 A / A / B ; 4.2.1 1a / 1a / 2b ; 4.2.2 1a / 1a / 1a ; 4.2.3 1a / 1a / 2b  \n- CTI: 4.2 A / A / B ; 4.2.1 1a / 1a / 2b ; 4.2.2 1a / 1a / 1a ; 4.2.3 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "4.2",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.2 – Making a detection sound and meeting shop requirements\n- T: 4.2.1 – Test a draft or change: what must fire and what must not\n- T: 4.2.2 – Mark which shop requirements are met and which are still missing\n- T: 4.2.3 – Write the close-the-loop note to the nominator\n\n"
+    },
+    {
+      "chapter": "4.2",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.3 – Nominations from SOC, Hunt, and CTI**.\n"
+    },
+    {
+      "chapter": "4.3",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.3 B / C / C ; 4.3.1 3c / 4c / 4d  \n- SOC: 4.3 A / B / B ; 4.3.1 1a / 2b / 2b  \n- Hunter: 4.3 A / B / B ; 4.3.1 1a / 2b / 2b  \n- CTI: 4.3 A / B / B ; 4.3.1 1a / 2b / 2b  \n"
+    },
+    {
+      "chapter": "4.3",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.3 – Nominations from SOC, hunt, and CTI\n- T: 4.3.1 – Review a nomination and say who finishes what\n\n"
+    },
+    {
+      "chapter": "4.3",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.4 – Tune Requests from SOC**.\n"
+    },
+    {
+      "chapter": "4.4",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.4 B / C / C ; 4.4.1 3c / 4c / 4d ; 4.4.2 3c / 4c / 4c  \n- SOC: 4.4 A / B / B ; 4.4.1 1a / 2b / 3c ; 4.4.2 1a / 2b / 2b  \n- Hunter: 4.4 A / A / B ; 4.4.1 1a / 1a / 2b ; 4.4.2 1a / 1a / 2b  \n- CTI: 4.4 A / A / B ; 4.4.1 1a / 1a / 2b ; 4.4.2 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "4.4",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.4 – Tune requests from SOC\n- T: 4.4.1 – Pick tune / exception / replace / leave / retire and cite why\n- T: 4.4.2 – Reject/route a request that is investigation, block, or IR containment\n\n"
+    },
+    {
+      "chapter": "4.4",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.5 – Hunt and Intel Packages**.\n"
+    },
+    {
+      "chapter": "4.5",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.5 B / C / C ; 4.5.1 3c / 4c / 4d ; 4.5.2 3c / 4c / 4c  \n- SOC: 4.5 A / A / B ; 4.5.1 1a / 1a / 2b ; 4.5.2 1a / 1a / 2b  \n- Hunter: 4.5 A / B / B ; 4.5.1 1a / 2b / 3c ; 4.5.2 1a / 2b / 2b  \n- CTI: 4.5 A / B / B ; 4.5.1 1a / 2b / 3c ; 4.5.2 1a / 2b / 2b  \n"
+    },
+    {
+      "chapter": "4.5",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.5 – Hunt and intel packages\n- T: 4.5.1 – Review a package: one add, one change, or no new rule\n- T: 4.5.2 – Reject turning the package into a block list\n\n"
+    },
+    {
+      "chapter": "4.5",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.6 – Detection Lifecycle**.\n"
+    },
+    {
+      "chapter": "4.6",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.6 B / C / C ; 4.6.1 3c / 4c / 4d ; 4.6.2 3c / 4c / 4d  \n- SOC: 4.6 A / A / B ; 4.6.1 1a / 1a / 2b ; 4.6.2 1a / 1a / 2b  \n- Hunter: 4.6 A / A / B ; 4.6.1 1a / 1a / 2b ; 4.6.2 1a / 1a / 2b  \n- CTI: 4.6 A / A / B ; 4.6.1 1a / 1a / 2b ; 4.6.2 1a / 1a / 2b  \n"
+    },
+    {
+      "chapter": "4.6",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.6 – Detection lifecycle\n- T: 4.6.1 – Call modify / retire / leave and cite the reason\n- T: 4.6.2 – Given a block, decide whether the matching rule still earns its keep\n\n"
+    },
+    {
+      "chapter": "4.6",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.7 – Sensor Availability and Performance**.\n"
+    },
+    {
+      "chapter": "4.7",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.7 A / B / B ; 4.7.1 2b / 3c / 3c ; 4.7.2 2b / 3c / 3c  \n- SOC: 4.7 A / A / A ; 4.7.1 1a / 1a / 1a ; 4.7.2 1a / 1a / 1a  \n- Hunter: 4.7 A / A / A ; 4.7.1 1a / 1a / 1a ; 4.7.2 1a / 1a / 1a  \n- CTI: 4.7 A / A / A ; 4.7.1 1a / 1a / 1a ; 4.7.2 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "4.7",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.7 – Sensor availability and performance\n- T: 4.7.1 – Given “the rule never fired,” check the rule, the sensor/data path, or both\n- T: 4.7.2 – Reject treating missing telemetry as proof the activity did not happen\n\n"
+    },
+    {
+      "chapter": "4.7",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **4.8 – Site-Specific Detection Engineering Knowledge**.\n"
+    },
+    {
+      "chapter": "4.8",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Proficiency Focus:**  \n- DE: 4.8.1 B / C / C ; 4.8.1.1 3c / 4c / 4c ; 4.8.2 B / C / C ; 4.8.2.1 3c / 4c / 4c ; 4.8.2.2 3c / 4c / 4c  \n- SOC: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1–4.8.2.2 1a / 1a / 1a  \n- Hunter: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1–4.8.2.2 1a / 1a / 1a  \n- CTI: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1–4.8.2.2 1a / 1a / 1a  \n"
+    },
+    {
+      "chapter": "4.8",
+      "kind": "mapping moved to Appendix B",
+      "text": "**Mapped Proficiency Items:**\n- K: 4.8.1 – Local detection requirements\n- T: 4.8.1.1 – Align to the local requirements list\n- K: 4.8.2 – Local review, deploy, and retire paths\n- T: 4.8.2.1 – Follow the local path\n- T: 4.8.2.2 – Distinguish verified local policy from an assumed or invented workflow\n\n"
+    },
+    {
+      "chapter": "4.9",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  \n"
+    },
+    {
+      "chapter": "4.9",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Section summary — no proficiency mapping\n"
+    },
+    {
+      "chapter": "4.9",
+      "kind": "standalone navigation removed",
+      "text": "**Next:** **Course Summary – Bringing the Defensive Workflow Together**.\n"
+    },
+    {
+      "chapter": "4.9",
+      "kind": "editorial wording",
+      "text": "The goal of this summary is not to reteach each lesson.\n\nIt is to reconnect the pieces into one maintained detection capability."
+    },
+    {
+      "chapter": "conclusion",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Target Audience:** SOC Analyst, CTI Analyst, Threat Hunter, Detection Engineer  \n"
+    },
+    {
+      "chapter": "conclusion",
+      "kind": "metadata moved to Appendix B",
+      "text": "**Module Type:** Course synthesis — no proficiency mapping\n"
+    },
+    {
+      "chapter": "Appendix A",
+      "kind": "maintainer-only closing instruction removed",
+      "text": "Nothing in this file is a second plot. If a later lesson needs a new fact, add it to the [story bible](../story-bible.md) first."
+    },
+    {
+      "chapter": "Appendix A",
+      "kind": "structural cross-reference corrected",
+      "text": "Jordan receives, evaluates, prioritizes, and answers (**2.7.4**).",
+      "replacement": "Jordan receives, evaluates, prioritizes, and answers (intake: **2.1.5**; response: **2.7.4**)."
+    },
+    {
+      "chapter": "Appendix A",
+      "kind": "structural cross-reference corrected",
+      "text": "(**0.3 f**)",
+      "replacement": "(**0.3**)"
+    }
+  ],
+  "relative_links_converted": [
+    {
+      "source": "modules/02-cti/01-core-intel/04-intelligence-requirements/student-guide.md",
+      "old": "../../08-site-specific/01-local-priorities/student-guide.md",
+      "new": "#281--local-intelligence-requirements-and-priorities"
+    },
+    {
+      "source": "modules/02-cti/01-core-intel/05-rfi-intake/student-guide.md",
+      "old": "../09-collection-sources/student-guide.md",
+      "new": "#219--collection-sources-and-methods"
+    },
+    {
+      "source": "modules/02-cti/01-core-intel/05-rfi-intake/student-guide.md",
+      "old": "../../07-production/04-rfi-response/student-guide.md",
+      "new": "#274--rfi-responses-and-closure"
+    },
+    {
+      "source": "modules/02-cti/01-core-intel/05-rfi-intake/student-guide.md",
+      "old": "../../08-site-specific/01-local-priorities/student-guide.md",
+      "new": "#281--local-intelligence-requirements-and-priorities"
+    },
+    {
+      "source": "modules/02-cti/01-core-intel/09-collection-sources/student-guide.md",
+      "old": "../05-rfi-intake/student-guide.md",
+      "new": "#215--rfi-intake-and-prioritization"
+    },
+    {
+      "source": "modules/02-cti/01-core-intel/09-collection-sources/student-guide.md",
+      "old": "../../08-site-specific/02-local-production/student-guide.md",
+      "new": "#282--local-production-and-approval-processes"
+    },
+    {
+      "source": "modules/02-cti/04-platforms/01-internal-tip/student-guide.md",
+      "old": "../../07-production/01-core-objects/student-guide.md",
+      "new": "#271--core-stix-objects"
+    },
+    {
+      "source": "modules/02-cti/04-platforms/03-virustotal/student-guide.md",
+      "old": "../../05-enrichment/02-file-similarity/student-guide.md",
+      "new": "#252--hashing-and-similarity-concepts"
+    },
+    {
+      "source": "modules/02-cti/04-platforms/04-anyrun/student-guide.md",
+      "old": "../../05-enrichment/02-file-similarity/student-guide.md",
+      "new": "#252--hashing-and-similarity-concepts"
+    },
+    {
+      "source": "modules/02-cti/04-platforms/05-silent-push/student-guide.md",
+      "old": "../../05-enrichment/04-advanced-dns/student-guide.md",
+      "new": "#254--advanced-dns-concepts"
+    },
+    {
+      "source": "modules/02-cti/04-platforms/06-urlscan/student-guide.md",
+      "old": "../../05-enrichment/05-infra-pivot/student-guide.md",
+      "new": "#255--identifying-additional-adversary-infrastructure-from-seed-indicators"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/01-ioc-handling/student-guide.md",
+      "old": "../07-correlation/student-guide.md",
+      "new": "#257--correlation-link-analysis-and-campaign-tracking"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/02-file-similarity/student-guide.md",
+      "old": "../../04-platforms/03-virustotal/student-guide.md",
+      "new": "#243--virustotal-relations-and-behavior"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/02-file-similarity/student-guide.md",
+      "old": "../../04-platforms/04-anyrun/student-guide.md",
+      "new": "#244--anyrun"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/02-file-similarity/student-guide.md",
+      "old": "../01-ioc-handling/student-guide.md",
+      "new": "#251--ioc-handling-and-enrichment-concepts"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/03-rdap-whois/student-guide.md",
+      "old": "../../04-platforms/02-platform-selection/student-guide.md",
+      "new": "#242--selecting-platforms-for-cti-work"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/03-rdap-whois/student-guide.md",
+      "old": "../01-ioc-handling/student-guide.md",
+      "new": "#251--ioc-handling-and-enrichment-concepts"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/04-advanced-dns/student-guide.md",
+      "old": "../../04-platforms/05-silent-push/student-guide.md",
+      "new": "#245--silent-push"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/04-advanced-dns/student-guide.md",
+      "old": "../01-ioc-handling/student-guide.md",
+      "new": "#251--ioc-handling-and-enrichment-concepts"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/05-infra-pivot/student-guide.md",
+      "old": "../../04-platforms/05-silent-push/student-guide.md",
+      "new": "#245--silent-push"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/05-infra-pivot/student-guide.md",
+      "old": "../../04-platforms/06-urlscan/student-guide.md",
+      "new": "#246--urlscanio"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/05-infra-pivot/student-guide.md",
+      "old": "../01-ioc-handling/student-guide.md",
+      "new": "#251--ioc-handling-and-enrichment-concepts"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/06-dtf/student-guide.md",
+      "old": "../05-infra-pivot/student-guide.md",
+      "new": "#255--identifying-additional-adversary-infrastructure-from-seed-indicators"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/07-correlation/student-guide.md",
+      "old": "../01-ioc-handling/student-guide.md",
+      "new": "#251--ioc-handling-and-enrichment-concepts"
+    },
+    {
+      "source": "modules/02-cti/05-enrichment/07-correlation/student-guide.md",
+      "old": "../../01-core-intel/08-attribution/student-guide.md",
+      "new": "#218--attribution"
+    },
+    {
+      "source": "modules/02-cti/07-production/04-rfi-response/student-guide.md",
+      "old": "../../01-core-intel/05-rfi-intake/student-guide.md",
+      "new": "#215--rfi-intake-and-prioritization"
+    },
+    {
+      "source": "modules/02-cti/07-production/04-rfi-response/student-guide.md",
+      "old": "../05-dissemination/student-guide.md",
+      "new": "#275--disseminating-intelligence-to-the-correct-audiences"
+    },
+    {
+      "source": "modules/02-cti/07-production/04-rfi-response/student-guide.md",
+      "old": "../../08-site-specific/02-local-production/student-guide.md",
+      "new": "#282--local-production-and-approval-processes"
+    },
+    {
+      "source": "modules/02-cti/08-site-specific/01-local-priorities/student-guide.md",
+      "old": "../../01-core-intel/05-rfi-intake/student-guide.md",
+      "new": "#215--rfi-intake-and-prioritization"
+    },
+    {
+      "source": "modules/02-cti/08-site-specific/01-local-priorities/student-guide.md",
+      "old": "../../07-production/04-rfi-response/student-guide.md",
+      "new": "#274--rfi-responses-and-closure"
+    }
+  ],
+  "source_line_coverage_exceptions": [],
+  "story_line_coverage_exceptions": []
+}

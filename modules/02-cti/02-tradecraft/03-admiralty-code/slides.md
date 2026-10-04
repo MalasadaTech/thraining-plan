@@ -3,100 +3,114 @@
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.2.3 – Admiralty Code  
-**Subtitle:** Source reliability and information credibility  
+**Subtitle:** Separate the source from the claim  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-2.2.2 was the named method. This lesson is the source and information rating. It is not estimative likelihood and not attribution confidence.
+Frame the lesson around two independent judgments. A familiar or trusted source is not the same thing as confirmed information.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+### Slide 2 – Two questions
+**Title:** Who said it, and does this claim check out?
 
-CTI analysts split **who said it** from **whether this piece checks out**.
+**Source reliability:** How reliable is the source generally?
 
-A report lands. Write a **letter** for the source and a **number** for this claim.
+**Information credibility:** How credible is this particular piece of information?
 
-Do not treat “a shop we trust said it” as “this report is confirmed.”
+The Admiralty Code records both answers.
 
 **Speaker Notes:**  
-This slide is the student intro. The job is the pair, not a single “trusted” stamp. Likelihood words wait for 2.2.1. Confidence words wait for 2.1.7.
+Ask for an example where a strong source could still provide an unconfirmed claim. This makes the need for two ratings intuitive.
 
 ---
 
-### Slide 3 – Two scales
-**Title:** Source reliability and information credibility
+### Slide 3 – Source reliability
+**Title:** The letter rates the source
 
-**Letter — source reliability**  
-**A** completely reliable. **B** usually reliable. **C** fairly reliable.  
-**D** not usually reliable. **E** unreliable. **F** reliability cannot be judged.
+**A** completely reliable  
+**B** usually reliable  
+**C** fairly reliable  
+**D** not usually reliable  
+**E** unreliable  
+**F** reliability cannot be judged
 
-**Number — this information**  
-**1** confirmed by other sources. **2** probably true. **3** possibly true.  
-**4** doubtful. **5** improbable. **6** truth cannot be judged.
-
-**A** is not “true.” **1** is not “trusted source.”
+Base the letter on what is known about the source's history, access, and reporting record—not simply whether it is internal, commercial, or public.
 
 **Speaker Notes:**  
-Write both scales. Stop on F versus 6 so they do not think “cannot be judged” is one rating. If the shop has a card, overlay it. Do not invent letters.
+Highlight F: unknown reliability is not the same as known unreliability.
 
 ---
 
-### Slide 4 – Letter plus number
-**Title:** Combine them
+### Slide 4 – Information credibility
+**Title:** The number rates this claim
 
-A rating is **letter + number** (example **B2**).
+**1** confirmed by other sources  
+**2** probably true  
+**3** possibly true  
+**4** doubtful  
+**5** improbable  
+**6** truth cannot be judged
 
-The letter is the source. The number is this piece.  
-Do not raise one because the other is high.
-
-**B2** — usually reliable source; this piece is probably true.  
-Not confirmed. Not a trusted-source stamp.
+A high source rating does not automatically make the information a **1**.
 
 **Speaker Notes:**  
-This is how the two ratings combine: they stay independent and are written together. If they say “likely,” that is 2.2.1, not Admiralty 2.
+Highlight 6: inability to judge the claim is different from judging it improbable.
 
 ---
 
-### Slide 5 – Assign and explain
-**Title:** Assign and explain
+### Slide 5 – Combine, but do not blend
+**Title:** Read the pair in words
 
-**Internal sensor log you pulled** — about **B** and **1** or **2**. Not **A1** just because it is yours.
+**B1** = usually reliable source; this information is confirmed by another source.
 
-**Anonymous blog, no internals** — **F** or **E** and **5** or **6**. Not **B2** because the title said INTEL.
+The letter and number remain independent.
+
+A stronger letter does not automatically raise the number, and a plausible claim does not automatically raise the source rating.
 
 **Speaker Notes:**  
-Walk both givens before the knowledge check. The product is letter plus number and a one-line meaning. Do not open the course-fiction plot.
+Have learners translate two or three pairs verbally before moving to the scenarios.
 
 ---
 
-### Slide 6 – Knowledge Check
+### Slide 6 – Two scenarios
+**Title:** Rate what the scenario actually tells you
+
+**Scenario A:** Source has a demonstrated history supporting **B**; another independent source confirms the claim → **B1**.
+
+**Scenario B:** Anonymous source, no reliability history; claim cannot be corroborated or evaluated → **F6**.
+
+New evidence can change one side of the pair without changing the other.
+
+**Speaker Notes:**  
+Emphasize conditional reasoning. Do not teach fixed mappings such as “internal equals B.”
+
+---
+
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. A reliable source means the information is confirmed. True or false?  
-2. What are the two parts of an Admiralty Code rating?  
-3. Anonymous blog, no internals, “block these now.” Letter + number, and why.
+1. Why does a reliable source not automatically make a claim confirmed?  
+2. Usually reliable source + independent confirmation: what rating?  
+3. Anonymous source + claim that cannot be evaluated: what rating is reasonable?
 
 **Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+Require learners to explain the letter and number separately.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+### Slide 8 – Summary
+**Title:** Keep the two judgments separate
 
-Letter is the source. Number is this piece. Write both.  
-Do not mix them with “likely.”  
-Do not mark a source **A1** just because it is yours.
+**Letter:** reliability of the source.  
+**Number:** credibility of this information.
 
-**Next:** **2.2.4** Cognitive biases and mitigation
+The pair communicates both without turning one into the other.
 
-**Speaker Notes:**  
-2.2.4 names the bias that makes people skip this rating. Do not open bias names unless that lesson is scheduled.
+**Next:** [2.2.4 – Cognitive Biases and Mitigation](../04-cognitive-biases/student-guide.md).

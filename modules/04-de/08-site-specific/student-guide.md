@@ -1,74 +1,159 @@
-# Module 4.8 – Site-specific DE knowledge
+# Module 4.8 – Site-Specific Detection Engineering Knowledge
 
 **Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
 - DE: 4.8.1 B / C / C ; 4.8.1.1 3c / 4c / 4c ; 4.8.2 B / C / C ; 4.8.2.1 3c / 4c / 4c ; 4.8.2.2 3c / 4c / 4c  
-- SOC: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1 1a / 1a / 1a ; 4.8.2.2 1a / 1a / 1a  
-- Hunter: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1 1a / 1a / 1a ; 4.8.2.2 1a / 1a / 1a  
-- CTI: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1 1a / 1a / 1a ; 4.8.2.2 1a / 1a / 1a  
-**Estimated Time:** 15–20 minutes  
-
----
+- SOC: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1–4.8.2.2 1a / 1a / 1a  
+- Hunter: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1–4.8.2.2 1a / 1a / 1a  
+- CTI: 4.8.1 A / A / A ; 4.8.1.1 1a / 1a / 1a ; 4.8.2 A / A / A ; 4.8.2.1–4.8.2.2 1a / 1a / 1a  
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
-
-1. Say that **local policy** exists — a requirements list, and a review / deploy / retire path — and that it **varies by shop**.
-2. **Obtain** that policy, **follow** only what you were shown, and **reject** inventing a list, change board, or ticket name.
+1. Locate and verify the organization's current detection requirements and production standards.
+2. Map the local **review → test → approve → deploy → monitor → change/retire** path, including who owns each decision.
+3. Follow the verified process and clearly identify any onboarding element that has not yet been obtained.
 
 **Mapped Proficiency Items:**
 - K: 4.8.1 – Local detection requirements
-- T: 4.8.1.1 – Identify whether you have the local list and align only to a list you were shown
+- T: 4.8.1.1 – Align to the local requirements list
 - K: 4.8.2 – Local review, deploy, and retire paths
-- T: 4.8.2.1 – Follow the local path you were shown (or record that you do not have it yet)
-- T: 4.8.2.2 – Reject inventing a change board or ticket name as policy
-
----
+- T: 4.8.2.1 – Follow the local path
+- T: 4.8.2.2 – Distinguish verified local policy from an assumed or invented workflow
 
 ## 1. Key Concepts
 
-A detection engineer ships a new rule, changes a live one, or retires one that no longer earns its keep. That work has to match this shop’s rules: which checks a detection must pass, how a change is reviewed and deployed, and how a retire is recorded. Those rules are local. They are not in this course. That is the job in this lesson: obtain the current list and the path, then follow only what you were shown, so you do not invent policy to make a nomination look complete.
+The previous modules taught Detection Engineering tradecraft that transfers between organizations.
 
-**4.2** named the kinds of shop requirements (meta fields, naming, IDs, tags, logging) and said the *list* is local. **4.6** said you retire and deploy. This lesson is *this shop’s* current list and *this shop’s* path. You do **not** invent either. You do **not** write a rule (**1.3**). This course does **not** publish policy for the classroom firm (**DYA**).
+This module asks:
 
-Every shop has its own DE **policy**. It has two parts.
+> **How does this organization actually run that work?**
 
-| Piece | What it is |
-|-------|------------|
-| **Local detection requirements** (the **list**) | Required meta fields, naming, and other deploy checks. They vary by shop. Obtain the current list. Do not invent one. |
-| **Local review, deploy, and retire paths** (the **path**) | How a change is reviewed and deployed, and how a retire is recorded. Obtain that path. Do not invent a change board or a ticket name. |
+The answer must come from the current local standards and process owners.
 
-**Obtain-and-follow** means you get the current list and path from the role or place your lead names, then use only that. If no one has shown you the list or the path, write **I do not have it yet.** If an instructor overlays a real shop list or path, that overlay is for the room. It is still not DYA policy.
+### Part 1: the local detection requirements list
 
-**What good looks like:** someone asks you to align a nomination, ship a change, or record a retire.
+A mature local standard may address categories such as:
+- required metadata;
+- naming/ID conventions;
+- ownership;
+- references;
+- ATT&CK mapping;
+- severity/priority;
+- required data sources;
+- test evidence;
+- known benign/false-positive context;
+- runbook/triage guidance;
+- version/change information.
 
-- Given: someone showed you the list. You **have** it. Align the nomination or change **only** to that list. Mark met versus missing.
-- Given: no one has shown you the list or the path. You **do not have it yet**. Record that. Do not fill the gap with made-up fields or a made-up ticket.
-- Given: you invent “change board X” or a ticket name and treat it as policy. **Reject.**
+Those are **examples of categories**, not a field list for DYA or your organization.
 
-Do not write the rule (**1.3**). Do not invent DYA policy.
+For comparison, public formats such as Sigma define their own metadata and rule-status fields. See [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html). Your local organization may adopt, extend, or ignore parts of that format.
 
----
+What matters in this lesson is locating the **actual local list**.
+
+### Verify that the list is current
+
+Capture:
+- authoritative location;
+- owner/maintainer;
+- version/effective date;
+- supersession or review cadence;
+- which platforms/use cases it applies to.
+
+A copied checklist with no owner or version may be useful background but is not enough to confidently describe current policy.
+
+### Part 2: the local lifecycle path
+
+Map how a detection becomes official:
+
+| Step | Local answer |
+|---|---|
+| Intake / nomination | ______ |
+| Engineering owner | ______ |
+| Test/staging method | ______ |
+| Reviewer | ______ |
+| Approval authority | ______ |
+| Deployment mechanism | ______ |
+| Monitoring / post-deploy validation | ______ |
+| Tune/change path | ______ |
+| Rollback/disable authority | ______ |
+| Retirement / replacement path | ______ |
+| Authoritative repository / source control | ______ |
+
+The blanks are the learning objective. Fill them from the real shop.
+
+### Review, approval, deployment, and rollback are different decisions
+
+One person or system may perform several of these locally, but the concepts should remain clear:
+
+- **Review:** Is the analytic technically and analytically sound?
+- **Approval:** Who is authorized to make the production decision?
+- **Deployment:** How does the change reach production?
+- **Rollback/disable:** Who can reverse the change when it causes a problem?
+- **Retirement:** How is the old detection formally removed/superseded?
+
+That distinction becomes important during urgent changes and production failures.
+
+### Source control and deployment platform may be different
+
+A detection may be authored/stored in:
+- a version-controlled repository;
+- a content-management platform;
+- a SIEM/EDR console;
+- an internal detection-as-code pipeline.
+
+The authoritative source must be known.
+
+Otherwise, two engineers can edit different copies and both believe they changed production.
+
+### When local information is missing
+
+Use precise onboarding status.
+
+Examples:
+
+> **Local required metadata list not yet verified.**
+
+> **Deployment approval authority not yet verified.**
+
+> **Rollback path not yet verified.**
+
+This is more useful than inventing a “change board” or ticket because it tells the team exactly which operating fact still needs to be supplied.
+
+### A12 onboarding exercise
+
+Assume DE has built and validated an A12-related analytic.
+
+Before production, the learner should be able to identify:
+
+1. Which local required fields/test evidence must be present?
+2. Who reviews it?
+3. Who approves it?
+4. How is it deployed?
+5. How is post-deploy health checked?
+6. Who can roll it back?
+7. Where is the authoritative version stored?
+8. How will future tune/retire decisions be recorded?
+
+If those answers are not known, the analytic may be technically ready while the **production process is not yet ready**.
 
 ## 2. Knowledge Check
 
-1. This course publishes the DYA field list and deploy path. True or false?
-2. You do not have the local requirements list. Do you invent the fields?
-3. You invent a change board or ticket name and treat it as policy. Follow it, or reject?
-
----
+1. Why is a public Sigma specification not the same thing as your organization's local deployment standard?
+2. Name four roles/steps you should identify in the local lifecycle path.
+3. You know how to deploy a rule but do not know who can approve or roll it back. What should you record?
 
 ## 3. Summary
 
-Local policy exists. It varies by shop. Obtain the list and the path. Follow only what you were shown. Do not invent policy.
+Site-specific DE knowledge is an **orientation and governance** skill.
 
-**Next:** Section 4 is complete.
+Find the current requirements list, its owner and version, and the real review/deploy/change/retire path.
 
----
+Follow verified local process. When a piece is missing, identify that specific onboarding gap so the organization can close it.
 
-## 4. Related modules
+This completes the **4.x Detection Engineering track**.
 
-- 4.2 – Making a detection sound and meeting shop requirements
-- 4.6 – Detection lifecycle
-- 4.7 – Sensor availability and performance
+## Supporting Reference
+
+- [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html) – an example external rule format; not a substitute for local policy.

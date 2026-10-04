@@ -5,30 +5,36 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.4.2 B / C / C ; 3.4.2.1–3.4.2.3 3c / 4c / 4d  
+- SOC: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b  
+- CTI: 3.4.2 A / B / B ; 3.4.2.1–3.4.2.2 1a / 2b / 3c ; 3.4.2.3 1a / 1a / 2b
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.4.2 | K | Extracting hunt leads from CTI | 3.4.2 a–c | A / B / B | B / C / C | A / B / B |
-| 3.4.2.1 | T | Extract hunt-suitable TTPs | 3.4.2.1 task 1 | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-| 3.4.2.2 | T | Extract hunt-suitable artifacts | 3.4.2.1 task 2 | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-| 3.4.2.3 | T | State the hunt question those leads support | 3.4.2.1 task 3 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 1a / 2b |
-
-The teaching-unit ID is **3.4.2**. Assessing hunting value is **3.4.1**. STIX input is **3.4.3**. ATT&CK mapping is **3.5**. Hunt-card format is **3.2.2**. No lab.
+- K: 3.4.2 – Extracting hunt leads from CTI
+- T: 3.4.2.1 – Extract hunt-suitable TTPs from a CTI report
+- T: 3.4.2.2 – Extract hunt-suitable artifacts
+- T: 3.4.2.3 – State the hunt question those leads support
 
 ## Concepts taught
 
-- extracting hunt leads from CTI
-- TTPs vs IOCs vs behaviors
-- hunt-suitable TTPs
-- hunt-suitable artifacts
-- what to drop from CTI (no telemetry, expired IOCs, noise)
-- recording ATT&CK IDs from a report
-- hunt question from leftovers
+- procedure extraction
+- hunt-suitable observables and indicators
+- provenance
+- timeliness and validity
+- visibility gaps
+- distinctiveness
+- hunt-question construction
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

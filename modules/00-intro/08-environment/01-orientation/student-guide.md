@@ -6,70 +6,66 @@
 - Hunter: 0.8 B / C / C ; 0.8.1 2b / 3c / 4c  
 - CTI: 0.8 A / B / B ; 0.8.1 1a / 2b / 3c  
 - DE: 0.8 A / B / B ; 0.8.1 2b / 3c / 4c  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 15–20 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name the seven kinds of environment facts every role must obtain from their shop.
-2. Given a situation, say which kind applies and why it is not the adjacent kind.
+1. Describe the seven environment areas used for orientation.
+2. Identify which areas are relevant to a simple investigation question.
+3. Distinguish the environment area relevant to a question from a related area, including traffic paths versus sensor coverage.
 
 **Mapped Proficiency Items:**
 - K: 0.8 – Environment / signal flow
 - T: 0.8.1 – Identify which kind of fact applies and why it is not the adjacent kind
 
----
+## Why This Matters
 
-## 1. Key Concepts
+An event becomes easier to interpret when you understand where it occurred and how activity normally moves through the organization. Environment orientation connects a host or account to its role, its access paths, and the evidence available along those paths.
 
-An alert, a hunt, an intel note, and a detection all look at the same host or log. Before you treat a gap as “nothing happened,” you have to know **where your site can see and where it cannot**. That is the job in this lesson: name the **kind** of environment fact you need — how traffic and logs move on this site — take the question to **your shop**, and do not invent a network, a firewall, or a sensor you were not shown. This course does not publish those answers.
+## 1. Building a useful environment picture
 
-**Environment / signal flow** is the site’s infrastructure and how traffic (and the logs of that traffic) move. **0.7** named outside tools. Those tools do not tell you what *this* network can see.
+| Area | What to establish | Why it matters |
+|---|---|---|
+| Egress | How systems reach external networks, including proxies and other gateways. | Helps locate outbound activity and the controls it crosses. |
+| Segments and data flow | Major network or workload boundaries and expected paths between them. | Helps distinguish expected communication from activity needing explanation. |
+| Email | How messages enter, are processed, and reach users. | Helps locate delivery evidence and relevant email controls. |
+| Edge firewalls and chokepoints | Where traffic is filtered or concentrated. | Identifies useful control and observation points. |
+| Third-party access and federation | How external organizations or identities receive access and what that access permits. | Helps explain access paths and responsibility for relevant records. |
+| Crown jewels | Systems, services, or information whose loss would have high impact. | Helps prioritize investigation according to organizational consequence. |
+| PCAP and sensors | Where packet capture or other sensors exist and what they actually retain. | Establishes which activity may be observable and at what detail. |
 
-| Kind | What you need from your shop |
-|------|------------------------------|
-| **Path to the internet / egress** | How traffic leaves for the internet, and where those doors are |
-| **Key network segments and data flow** | The main pieces of the network, and how data moves between them |
-| **Email flow and related systems** | How mail enters and leaves, and which systems sit on that path |
-| **Edge firewall / choke points** | Where the shop can block or see at the edge |
-| **Trusted third-party access / federation** | Who else is trusted onto the network |
-| **Crown jewel / critical assets** | Which assets are critical. Do not guess them |
-| **PCAP collection points / sensors** | Where a sensor sits, and where one does not |
+These categories organize questions for the local environment. Use maintained diagrams, service documentation, and system owners to establish the actual design. The fictional course setting does not supply a complete production architecture.
 
-**PCAP / sensors** means where a collector sits. It is not how to read a Zeek log (**1.2**). It is not host-observed network (**1.1.4**) — the host logging that *this device* talked.
+## 2. Tracing an event through the environment
 
-A **gap** is still a fact. “No sensor there” is the sensor kind. If no one has shown you the answer, write that you do not have it yet. Do not fill the blank with a classroom network, a ticket name, or the course-fiction firm’s gear.
+Suppose an alert reports that a workstation contacted an external domain. Begin by establishing the workstation's segment and the expected egress path. Then identify the relevant gateway or proxy and ask what records are available for the time in question. If packet capture is needed, confirm whether a sensor covered that path and retained the traffic.
 
-**What good looks like:** someone gives you a situation. You name the **kind**. You say why the neighbor is the wrong kind. You do not name a firewall you were not shown.
+This sequence separates three questions: where traffic could travel, where it could be observed, and what evidence is actually available. A diagram may show a gateway even when its logs were not enabled or retained. A sensor may cover one segment without seeing another.
 
-- Given: a user clicked a link and the host talked to the internet. Question: how did that traffic leave? **Path to the internet / egress.** Not **email** — that is how a message arrived. Not **PCAP / sensors** unless the question is whether anything could have recorded that path.
-- Given: you need to know whether any collector could have recorded that talk. **PCAP collection points / sensors.** Not a Zeek-field question (**1.2**). Not host-observed network (**1.1.4**).
-- Given: you need to know which assets must not be guessed. **Crown jewel / critical assets.** Not **trusted third-party / federation** — that is who else is trusted onto the network.
+## 3. Recording useful gaps and next questions
 
----
+If the expected evidence is missing, record the visibility gap and identify the owner or documentation needed to resolve it. An absence of logs does not establish that the activity did not occur. It may reflect routing, collection, access, or retention limits.
 
-## 2. Knowledge Check
+Also connect the affected system to its purpose and importance. A third-party account accessing a critical service raises questions about the authorized access method, scope, and responsible owner. Understanding those relationships helps you ask a focused question and choose an appropriate next step.
 
-1. Why must every role know where the site can see, and where it cannot?
-2. A user clicked a link and the host talked to the internet. You ask how that traffic left. Which kind of fact is that, and why is it not email?
-3. You need to know whether any sensor could have recorded that talk. Which kind of fact is that, and why is it not a Zeek-field question?
+## Knowledge Check
 
----
+1. Which environment areas would help you investigate a workstation contacting an external domain?
+2. You know the expected egress path but need to determine whether packet-level evidence exists. Which environment area should you check, and how does it differ from egress?
+3. How do third-party access and crown jewels help orient an investigation?
 
-## 3. Summary
+## Summary
 
-Seven kinds of questions. Obtain the answers from your shop. Name the kind that applies and reject the neighbor. A gap is a fact. Do not invent the network.
+Environment orientation helps you connect an event to expected paths, organizational importance, and available evidence. Use the seven areas to ask focused questions, verify the actual environment, and make visibility gaps clear.
 
-**Next:** **1.1.1** Endpoint activity (the map).
+## Course Connections
 
----
+Previous: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)
 
-## 4. Related modules
+Next: the SOC analyst track, beginning with observations and detections.
 
-- 0.7 – External tools (previous)
-- 1.1.1 – Endpoint activity (next)
-- 1.1.4 – Host-observed network (later)
-- 1.2 – Zeek (later)
+## References and Further Reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.

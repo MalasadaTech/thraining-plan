@@ -1,115 +1,91 @@
-# Module 1.3.3 – YARA Rules  
-## Slide Deck Content
+# Module 1.3.3 – YARA Rules
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Interpret YARA structure, text/hex/regex patterns, and conditions.
+- Describe what a rule matches in its intended input.
+- Create or modify a basic file rule and explain file-versus-memory limits.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.3.3 – YARA Rules  
-**Subtitle:** Byte patterns in a file or in memory  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.3.2 was the network signature. This lesson is YARA: read a byte-pattern rule and propose a basic one. It is not SIGMA, not Suricata, and not how to dump memory.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts match **byte patterns** on a file they already have.
+YARA examines content supplied to a scanner, such as a file or process memory. Understanding what bytes and conditions a rule tests helps you distinguish a content match from a filename, log entry, or conclusion about maliciousness.
 
-A log can name the file. It does not show the bytes inside.
-
-Read a rule. Propose a basic create or modify.  
-Not a SIEM query. Not how to dump memory. Not deploy.
-
-**Speaker Notes:**  
-This slide is the student intro. The job is to say what a YARA rule would hit, then propose a basic one. Suricata stays on the wire. SIEM is the next lesson.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Purpose and structure
-**Title:** Purpose and structure
+## Understanding the rule structure
 
-**YARA** matches bytes in a file or in process memory.
+YARA tests supplied content. The condition is required; metadata and strings are optional.
 
-A useful rule needs **`strings`** and a real **`condition`**.  
-**`meta`** is notes, not the match.
-
-**Speaker Notes:**  
-Name the three blocks, then stop. A rule with strings and `condition: true` is not a useful proposal. Deploy is not this lesson.
+**Speaker notes:** Identify which blocks are optional and which condition is mandatory. Distinguish a string embedded in content from the object’s filename.
 
 ---
 
-### Slide 4 – ASCII, hex, regex
-**Title:** ASCII, hex, regex
+## Reading a basic file rule
 
-**ASCII** — `"update.exe" ascii nocase`.  
-**Hex** — `{ 4D 5A }` (`MZ`). Not Suricata `content:"|4d 5a|"`.  
-**Regex** — `/update\.(exe|dll)/ nocase`. Easy to over-match.
+The example matches MZ-prefixed files containing update.exe and smaller than 5 MB. It does not test the filename.
 
-Named patterns plus a boolean: `and`, `or`, `filesize`, `at 0`.
-
-**Speaker Notes:**  
-Same three techniques as Suricata, different syntax. If they paste pipe-hex from last lesson, switch them to braces. Regex is a technique, not a requirement on every rule.
+**Speaker notes:** Ask whether a benign file could match. Explain why MZ is a preliminary byte check rather than a full PE parser.
 
 ---
 
-### Slide 5 – File vs memory
-**Title:** File vs memory
+## Worked example — Reading a basic file rule
 
-**File** — disk or a saved extract. `at 0` and `filesize` can apply.
+```yara
+rule Training_Update_Marker
+{
+    meta:
+        description = "Teaching example: MZ prefix and update.exe string"
+    strings:
+        $mz = { 4D 5A }
+        $name = "update.exe" ascii nocase
+    condition:
+        $mz at 0 and $name and filesize < 5MB
+}
+```
 
-**Memory** — a process the shop already scans. Drop `filesize`. Drop `at 0` for a PE header.
-
-If your shop does not scan memory, say so and stay on files.
-
-**Speaker Notes:**  
-`filesize` does not apply on a process scan, so that condition will not match. MZ at offset 0 assumes the scanned blob starts with the PE. Do not teach how to acquire memory.
-
----
-
-### Slide 6 – Read it. Propose a basic one.
-**Title:** Read it. Propose a basic one.
-
-**Given:** MZ at 0 **and** `"update.exe"`, `filesize < 5MB`.
-
-**Detects:** a PE file that contains that name, under 5 MB.
-
-`{ 4D 5A } at 0` alone matches Notepad.
-
-SOC **proposes**. DE reviews.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: a file that starts with MZ and contains update.exe, under 5 MB. It can fit a 1.2.7 extract if you scan those bytes. It is not a files-log match and not a conviction. Do not tell the PRD plot.
+**Speaker notes:** Ask whether a benign file could match. Explain why MZ is a preliminary byte check rather than a full PE parser. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Modifying a rule and choosing the input
 
-1. YARA is a SIEM query language. True or false?  
-2. The given rule — what does it detect, in one sentence?  
-3. Why is `{ 4D 5A } at 0` alone a poor proposal?
+Change the occurrence count to alter matching. File-size and offset semantics differ for process-memory scans.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Have learners write the count condition and explain the changed behavior. Discuss memory semantics without adding a memory-acquisition exercise.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Knowledge check
 
-Meta + strings + condition.  
-ASCII / hex / regex.  
-File rules may use `at 0` and `filesize`. Memory often must not.  
-You propose. You do not deploy.
+1. What does the teaching rule match, and does the filename itself matter?
+2. Modify the rule to require two occurrences of the name.
+3. Why should the same rule not be assumed to work as intended on process memory?
 
-**Next:** **1.3.4** SIEM rules
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
 
-**Speaker Notes:**  
-1.3.4 is log fields or a SIGMA rule, not bytes. Stay off YARA syntax when you get there.
+---
+
+## Summary and next step
+
+A YARA description explains the supplied input, patterns, and condition. Basic modifications should have predictable matching behavior, and file versus memory use requires attention to input semantics.
+
+Previous: [1.3.2 – Suricata Rules](../02-suricata-rules/student-guide.md)
+
+Next: [1.3.4 – SIEM Rules](../04-siem-rules/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [YARA — Writing rules](https://yara.readthedocs.io/en/stable/writingrules.html)
+- [YARA — Command-line input options](https://yara.readthedocs.io/en/stable/commandline.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

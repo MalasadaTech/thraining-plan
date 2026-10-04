@@ -5,27 +5,45 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.3.1 B / C / C ; 3.3.1.1–3.3.1.3 3c / 4c / 4d  
+- SOC: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.3 1a / 2b / 3c  
+- CTI: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.2 2b / 3c / 4c ; 3.3.1.3 1a / 2b / 3c
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.3.1 | K | Tool capabilities for hunting | 3.3.1 a–d | A / B / B | B / C / C | A / B / B |
-| 3.3.1.1 | T | Advanced querying and pivoting | 3.3.2 task 1 | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 3.3.1.2 | T | Extract actionable hunting leads | 3.3.2 task 2 | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 3.3.1.3 | T | Convert findings to SIEM or Zeek queries | 3.3.2 task 3 | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-
-The teaching-unit ID is **3.3.1**. Survey (purpose / when to pick) is **0.7**. CTI platform tabs are **2.9**. Classroom result card only. No live lab.
+- K: 3.3.1 – Tool capabilities for hunting
+- T: 3.3.1.1 – Perform advanced querying and pivoting in VirusTotal, ANY.RUN, urlscan.io, and Silent Push
+- T: 3.3.1.2 – Extract actionable hunting leads from external tool results
+- T: 3.3.1.3 – Convert external findings into precise internal SIEM or Zeek queries
 
 ## Concepts taught
 
-- tool capabilities for hunting
-- hunt strengths and limits of VirusTotal / AnyRun / URLScan / Silent Push
-- hunting leads from external tools
-- converting a lead to a precise internal SIEM or Zeek query
+- external-tool pivots
+- hunt leads
+- internal query conversion
+- VirusTotal
+- ANY.RUN
+- urlscan.io
+- Silent Push
+- external evidence limitations
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Supporting references
+
+- [VirusTotal Relationships](https://docs.virustotal.com/reference/relationships)
+- [VirusTotal File Behaviours](https://docs.virustotal.com/reference/file-object-behaviours)
+- [ANY.RUN TI Lookup Query Guide](https://intelligence.any.run/TI_Lookup_Query_Guide_v6.pdf)
+- [Silent Push DNS Data](https://help.silentpush.com/docs/dns-data)
+- [urlscan Result API](https://urlscan.io/docs/result/)
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

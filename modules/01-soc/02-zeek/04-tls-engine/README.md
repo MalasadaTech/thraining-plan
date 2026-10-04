@@ -5,6 +5,10 @@
 **Secondary:** Threat Hunter, CTI Analyst  
 **Time:** about 25–30 minutes
 
+## Purpose
+
+TLS can conceal application content while leaving some handshake information visible. Reading that information carefully helps describe the observed session without treating a hostname, certificate, or fingerprint as a verdict.
+
 ## Mapped proficiency items
 
 | Matrix ID | Type | Item | Outline heading |
@@ -12,8 +16,6 @@
 | 1.2.4.1 | K | TLS engine | 1.2.6 a–f |
 | 1.2.4.2 | T | Analyze a Zeek TLS log and accurately describe what occurred | 1.2.7 task 1 |
 | 1.2.4.3 | T | Create a SIEM query to detect specific TLS activity | 1.2.7 task 2 |
-
-The teaching-unit ID is **1.2.4**. Outline headings `1.2.6` / `1.2.7` are the K/T pair. Zeek writes this data to the `ssl` log. DNS is **1.2.3**. HTTP is **1.2.5**. Not decrypted HTTP. Not the process. No lab.
 
 ## Concepts taught
 
@@ -27,7 +29,19 @@ The teaching-unit ID is **1.2.4**. Outline headings `1.2.6` / `1.2.7` are the K/
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- [Student guide](student-guide.md)
+- [Instructor guide and answer key](instructor-guide.md)
+- [Slides and speaker notes](slides.md)
+
+## Course connections
+
+Previous: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)
+
+Next: [1.2.5 – HTTP Engine](../05-http-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — ssl.log](https://docs.zeek.org/en/current/reference/logs/ssl.html)
+- [Zeek — x509.log](https://docs.zeek.org/en/current/reference/logs/x509.html)

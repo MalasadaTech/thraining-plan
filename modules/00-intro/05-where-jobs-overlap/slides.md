@@ -1,108 +1,75 @@
-# Module 0.5 – Where the jobs lightly overlap  
-## Slide Deck Content
+# Module 0.5 – Where the jobs lightly overlap
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
-**Estimated Delivery Time:** 15–20 minutes  
-**Total Suggested Slides:** 8
+- Explain how shared evidence can support different role-specific products.
+- Distinguish a handoff request from the work needed to complete it.
+- Explain why responsibilities remain distinct when one person performs several roles.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 0.5 – Where the jobs lightly overlap  
-**Subtitle:** Same evidence, different product  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson names the overlap. The same evidence can sit on more than one desk. It does not teach how to do each job.
+**Speaker notes:** Introduce the purpose and connect it to the shared course sequence. The objectives describe the understanding learners should demonstrate by the end.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-The same host, log, or domain can sit on more than one desk.
+Several analysts may examine the same host, log, or domain while working toward different outcomes. Understanding those outcomes helps you collaborate without losing track of who is responsible for the remaining work. In this lesson, a **product** means the result a role is expected to deliver.
 
-Looking at that evidence is not finishing that desk’s job.
-
-This lesson names the **product** that makes each job different.
-
-**Speaker Notes:**  
-This slide is the student intro. Name the product before anyone starts writing an alert close, an intel note, a hunt, or a rule. Do not teach how to write those products today.
+**Speaker notes:** Ask learners where this topic could help them understand an investigation. Use their answers to introduce the example without requiring prior operational experience.
 
 ---
 
-### Slide 3 – Same evidence
-**Title:** Same host, log, or domain
+## Shared evidence and different products
 
-Everyone may look at the same **host**, **log**, or **domain**.
+The same evidence can support several products.
 
-That does not make the jobs the same.
+Identify the outcome: alert finding, intelligence answer, hunt findings, or detection coverage.
 
-**Speaker Notes:**  
-Same evidence is the overlap. The next slide is the split: the product. Do not open an alert pane or tell the course-fiction plot.
+**Speaker notes:** Walk through the domain example without adding a second incident plot. Reuse is useful: the purpose is to avoid unnecessary reinvestigation while making each remaining responsibility clear. A product can be a finding or decision as well as a file.
 
 ---
 
-### Slide 4 – Different product
-**Title:** The product is different
+## What a request contributes
 
-The **product** is the thing that job finishes.
+A handoff should explain what is known and what work remains.
 
-**Alert** — close or escalate (SOC analyst).  
-**Intel note** — CTI analyst.  
-**Hunt** — threat hunter.  
-**Rule** — detection engineer.
+The receiving role develops the answer, findings, or change requested.
 
-**Speaker Notes:**  
-These are the four products. Write them and stop. How to produce each one is a later lesson.
+**Speaker notes:** Use the RFI and hunt-package examples to separate preparation from completion. Learners should be able to name what the request enables and what the recipient must still contribute. Keep local forms out of the example unless supplied by the organization.
 
 ---
 
-### Slide 5 – Asking is not doing
-**Title:** Asking is not doing that job
+## When one person fills several roles
 
-Asking the next desk is not that desk’s whole job.
+One person may perform several roles.
 
-A Request for Information (RFI) is a question, not the intel note.  
-A hunt package is a hand-off, not the hunt.
+Keep the purpose and completion of each product clear so others can follow the work.
 
-**Speaker Notes:**  
-A look and a question are not the next desk’s product. If they start writing the intel note, that is not this lesson.
+**Speaker notes:** Explain that the distinction does not require duplicate paperwork. A shared record can contain several products if each result and its purpose are understandable. The lesson concerns responsibility and completion, not staffing levels or mandatory document counts.
 
 ---
 
-### Slide 6 – Two jobs, one person
-**Title:** Two jobs can be one person
+## Knowledge check
 
-A smaller shop may have one person fill more than one of these jobs.
+1. SOC and CTI examine the same domain. How could their products differ?
+2. What remains to be done when CTI receives an RFI?
+3. Why distinguish roles when one person performs both alert investigation and hunting?
 
-This course still names the jobs separately so each product stays clear.
-
-**Speaker Notes:**  
-Two hats still two products. If they are both SOC and intel, they still finish two write-ups. Naming the jobs keeps those products from collapsing.
+**Speaker notes:** Ask learners to explain the evidence or reasoning behind each answer. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for expected responses and feedback.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Summary and next step
 
-1. Everyone may look at the same host. Does that mean they are doing the same job?  
-2. Asking the next desk is doing that desk’s whole job. True or false?  
-3. In a smaller shop, one person may write two products. Why does this course still name the jobs separately?
+Collaboration works best when shared evidence is paired with clear responsibilities. A request prepares the next task, and each role develops a result suited to its purpose. Those distinctions remain useful when a single person performs several roles.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+Previous: [0.4 – How work can move](../04-how-work-moves/student-guide.md)
+
+Next: [0.6.1 – MITRE ATT&CK](../06-frameworks/01-attck/student-guide.md)
+
+**Speaker notes:** Revisit any uncertainty from the knowledge check, then connect the lesson to the next topic.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## References and further reading
 
-Same evidence. Different product.  
-Asking is not doing the next job.  
-One person may fill two jobs; they still finish two products.
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.
 
-**Next:** **0.6** Frameworks
-
-**Speaker Notes:**  
-Frameworks are next, still before SOC. That lesson is a shared language for behavior, not how to write these four products.
+**Speaker notes:** These linked resources support the lesson and provide a place to check definitions and service details.

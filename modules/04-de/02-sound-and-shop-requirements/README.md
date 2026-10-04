@@ -1,31 +1,28 @@
-# Making a detection sound and meeting shop requirements
+# Making a Detection Sound and Meeting Shop Requirements
 
-**Path:** `modules/04-de/02-sound-and-shop-requirements`  
-**Primary role:** Detection Engineer  
-**Secondary:** SOC Analyst, Threat Hunter, CTI Analyst  
-**Time:** about 15–20 minutes
+**Path:** `modules/04-de/02-sound-and-shop-requirements`
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 4.2 | K | Making a detection sound and meeting shop requirements | 4.2 a–d |
-| 4.2.1 | T | Test a draft or change: what must fire and what must not | 4.2.1 task 1 |
-| 4.2.2 | T | Mark which shop requirements are met and which are still missing | 4.2.1 task 2 |
-| 4.2.3 | T | Write the close-the-loop note to the nominator | 4.2.1 task 3 |
-
-The teaching-unit ID is **4.2**. What DE owns is **4.1**. Nomination review is **4.3**. The field *list* is **4.8**. No lab. Do not invent fields or tickets.
+| Matrix ID | Type | Item |
+|---|---|---|
+| 4.2 | K | Making a detection sound and meeting shop requirements |
+| 4.2.1 | T | Test a draft or change |
+| 4.2.2 | T | Mark local requirements met/missing |
+| 4.2.3 | T | Close the loop with the nominator |
 
 ## Concepts taught
 
-- sound (fires / must not fire)
-- test before it goes live
-- shop requirements (list is local)
-- close the loop with the nominator
+- positive detection tests
+- negative / benign-control tests
+- data-availability tests
+- behavioral validation
+- local requirements vs external rule formats
+- meaningful nominator feedback
 
-## Artifacts
+## Supporting references
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html)
+- [Sigma Logsources](https://sigmahq.io/docs/basics/log-sources.html)
+- [Sigma Filters](https://sigmahq.io/docs/meta/)
+- [CTID – Continuous Emulation as Detection Validation](https://ctid.mitre.org/blog/2025/08/04/lessons-from-sharepoint-vulnerability-cve-2025-53770/)

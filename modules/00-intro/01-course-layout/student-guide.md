@@ -6,63 +6,60 @@
 - Hunter: 0.1 A / B / B  
 - CTI: 0.1 A / B / B  
 - DE: 0.1 A / B / B  
-**Estimated Time:** 15 minutes  
-
----
+**Estimated Time:** 15 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name the order of this course: front door, then shared lessons for every role, then four tracks.
-2. Say that SOC ends at reporting, and that the RFI is the door into CTI.
-3. Name the shared lessons that sit before SOC and apply to everyone.
+1. Describe the course sequence and explain why the shared lessons come first.
+2. Explain why detections precede alert investigation and identify where the SOC track ends.
+3. Explain how an RFI connects the course example to the CTI track.
 
 **Mapped Proficiency Items:**
 - K: 0.1 – How this course is laid out
 
----
+## Why This Matters
 
-## 1. Key Concepts
+This course follows the work of SOC analysts, CTI analysts, threat hunters, and detection engineers. Understanding its structure will help you see why a topic appears where it does and how the later lessons build on what you have already learned. Everyone begins with the same introductory material so that the four roles share a common vocabulary.
 
-This course trains four jobs that sit next to each other. Before you sit a track, you have to know **the order of the course** — what applies to everyone, and where the four tracks sit. That is the job in this lesson: name the layout first, so you do not treat a shared lesson as SOC-only, or the SOC track as the whole program.
+## 1. How the course progresses
 
-This lesson is **not** what a SOC is. It is **not** the jobs. It is **not** how work moves.
+The introductory lessons explain the setting, the roles, and how their work connects. They are followed by three shared topics: frameworks, external tools, and the organization's environment. These topics support every role, so they are taught before the SOC material.
 
-**Order:** this **front door** (the intro lessons everyone sits first), then **shared lessons** that also apply to every role, then four **tracks** — SOC analyst, then CTI, then hunting, then detection engineers.
+The four role tracks then follow this order:
 
-| Block | What sits there |
-|-------|-----------------|
-| **Front door** | This intro — the first lessons everyone sits |
-| **Shared lessons** | Still before SOC, and they apply to every role |
-| **Four tracks** | SOC analyst, then CTI, then hunting, then detection engineers |
+| Track | What the sequence introduces |
+|---|---|
+| SOC analyst | Understand observations and detections, investigate alerts, and report findings. |
+| CTI analyst | Develop answers to intelligence questions using evidence and context. |
+| Threat hunter | Search for relevant activity and examine gaps in what detections reveal. |
+| Detection engineer | Develop and maintain detections that use what the organization has learned. |
 
-**Inside SOC:** you learn what detections *are* before you live in the alert queue. SOC **ends at reporting (`1.5`)**. The RFI is the door into CTI.
+This sequence lets you encounter the same work from several perspectives. Each track develops the responsibilities introduced in the shared lessons.
 
-**Still before SOC, for everyone:** **frameworks**, **tool survey**, and **environment / signal flow**. Those are not SOC-only. Role-local hunt / CTI / DE lists come later and differ by shop. Do not invent your shop’s ticket names here.
+## 2. Why detections come before alert work
 
-**Fiction.** This course uses one company and one adversary as fiction, not your site’s policy. Those **names** come in the next lesson. After the lessons, a **companion story** retells the same flow as one incident. We do not write that story in this lesson.
+Within the SOC track, you first learn what a detection is and what activity it is intended to identify. That background helps you interpret an alert when you later investigate one. The SOC track ends with reporting in module 1.5.
 
----
+A Request for Information, or **RFI**, provides the teaching connection into CTI. An analyst may have a question that remains after investigating an alert; the CTI track explains how intelligence work develops an answer. Later modules explain the local procedures used to request and deliver that work.
 
-## 2. Knowledge Check
+## 3. Using the shared examples
 
-1. After this front door, what comes before the four tracks?
-2. Where does the SOC track end? What is the door into CTI?
-3. Name two shared lessons that sit before SOC and apply to everyone.
+The course uses a fictional company and adversary, introduced in the next lesson. Reusing the same setting makes it easier to focus on the new concept in each module. After the lessons, a companion story brings the work together as one incident.
 
----
+When applying the material at work, obtain the site's own procedures and environment details. The role-specific lessons explain where those local requirements enter the workflow.
 
-## 3. Summary
+## Knowledge Check
 
-Front door, then shared lessons for everyone, then four tracks: SOC analyst, CTI, hunting, detection engineers. Inside SOC, detections come before the alert queue. SOC ends at reporting. The RFI is the door into CTI. Names of the company and adversary come next.
+1. What do learners complete before the four role tracks, and why are those topics shared?
+2. Why does the SOC track teach detections before alert investigation, and where does that track end?
+3. How does an RFI connect the SOC and CTI parts of this course?
 
-**Next:** **0.2** What a SOC is.
+## Summary
 
----
+The course begins with shared foundations and then follows SOC, CTI, Hunt, and Detection Engineering. Its ordering helps you understand the evidence and products that later work depends on. The fictional setting and companion story connect the lessons, while local procedures are introduced where they are needed.
 
-## 4. Related modules
+## Course Connections
 
-- 0.2 – What a SOC is
-- 0.3 – Jobs in one sentence
-- 0.4 – How work can move
+Next: [0.2 – What a SOC is](../02-what-a-soc-is/student-guide.md)

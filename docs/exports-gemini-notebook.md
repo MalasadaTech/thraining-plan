@@ -10,13 +10,13 @@ The files under [exports/gemini-notebook/](../exports/gemini-notebook/) are **ex
 |-----|------|-------------|-------|
 | Whole course | [student-corpus.md](../exports/gemini-notebook/student-corpus.md) | Bible + every student guide + companion story | 1 |
 | Layer 1 — track | [by-track/](../exports/gemini-notebook/by-track/) | First digit (`00` … `04`) | 5 |
-| Layer 2 — unit | [by-unit/](../exports/gemini-notebook/by-unit/) | First two ID segments (`1.1`, `2.8`, `4.1`) | 40 |
-| Layer 3 — lesson | [by-lesson/](../exports/gemini-notebook/by-lesson/) | Full lesson ID (`1.1.1`, `2.4.1`, `4.1`) | 94 |
+| Layer 2 — unit | [by-unit/](../exports/gemini-notebook/by-unit/) | First two ID segments (`1.1`, `2.5`, `4.1`) | 40 |
+| Layer 3 — lesson | [by-lesson/](../exports/gemini-notebook/by-lesson/) | Full lesson ID (`1.1.1`, `2.5.2`, `4.1`) | 94 |
 | Fiction (shared) | [fiction/](../exports/gemini-notebook/fiction/) | Bible; companion story | 2 |
 
 Grouping uses the ID on the student-guide `# Module` line, not the folder name.
 
-**Depth as available:** if the lesson ID is only `X.X` (`0.1`, `3.1`, `4.1`–`4.8`), the layer-3 file **is** that `X.X`. Do not invent `4.1.1`. If the only child is already `X.X.X` (`2.4.1`), layer 2 is `2.4.md` and layer 3 is `2.4.1.md`.
+**Depth as available:** if the lesson ID is only `X.X` (`0.1`, `3.1`, `4.1`–`4.8`), the layer-3 file **is** that `X.X`. Do not invent `4.1.1`. If the only child is already `X.X.X` (`2.5.2`), layer 2 is `2.5.2.md` and layer 3 is `2.5.2.md`.
 
 Track and unit files concatenate their lessons in teach order. Each lesson keeps a `Source:` path.
 

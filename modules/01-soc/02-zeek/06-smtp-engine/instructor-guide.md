@@ -8,98 +8,85 @@
 **Estimated Time:** 25–30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Read a Zeek `smtp` log and describe it. Say what a specific SIEM query looks like.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts read the Zeek `smtp` log to see a mail transaction on the wire. An alert names a session, and you have to say who the session claimed mail was from and to, what subject was logged, and which hosts talked.
-- How it hooks to the lesson before: 1.2.5 was the HTTP extract on the same wire. This lesson is mail.
-- How it hooks to the lesson after: 1.2.7 is the files extract — hashes of what crossed the wire.
-- Why we are doing it this way: after other protocol extracts, read this engine so you can describe the envelope before you open a file hash or a phishing playbook.
-- What we are *not* doing in this lesson: process name (1.1.4). Attachment hash (1.2.7). Phishing playbook. uid-pivot as a unit. Site mail-gateway names. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **mail from**, **rcpt to**, **subject**, **message ID**, and **source / dest**. **Row** is the SIEM-table gloss from the student intro, not the headline word. `mailfrom` is envelope MAIL FROM, not the From header.
-
-**Key Teaching Points:**
-- `mailfrom` / `rcptto` are the envelope.
-- Subject and `msg_id` when logged. Empty means not logged.
-- Attachment hash is 1.2.7. The process is 1.1.4.
-- A query is specific, not every `smtp` event.
-
-**Common Student Challenges:**
-- Treat `mailfrom` as the attachment hash. Why: the next engine is files. Example: writing a SHA256 from the `smtp` event.
-- Name the process that sent the mail. Why: Zeek does not carry the process. Example: “`outlook.exe` sent this” from `smtp` fields alone.
-- Write `smtp=*` as a “specific” query. Why: the task is a named pattern. Example: matching every `smtp` event with no `mailfrom`, `rcptto`, subject, or dest filter.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+SMTP records describe mail transactions visible to a network sensor. They help identify envelope addresses and selected headers while leaving mailbox delivery, user action, and attachment behavior to other evidence.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Interpret SMTP envelope addresses, subject, Message-ID, and endpoints.
+2. Describe a transaction without assuming delivery or user action.
+3. Create or modify a query for specific SMTP activity.
 
 **Mapped Proficiency Items:**
 - K: 1.2.6.1 – SMTP engine
 - T: 1.2.6.2 – Analyze a Zeek SMTP log and accurately describe what occurred
 - T: 1.2.6.3 – Create a SIEM query to detect specific SMTP activity
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required. For query tasks, ask learners to write or modify the shown query and explain its predicates. Confirm the local schema if demonstrating it in an approved teaching environment.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Envelope on the wire, not a mailbox |
-| Key Concepts            | 16 min    | Fields; two products |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~25 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 17 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **27** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Reading a mail transaction
 
-**Talking Points:**
-- Open with the job: an alert names a mail session, and you have to say who the session claimed mail was from and to.
-- Walk `mailfrom` and `rcptto` as the envelope. Stop: `mailfrom` is not the From header, and it is not a file hash. `rcptto` can be more than one address.
-- Walk `subject` and `msg_id`. Empty means not logged, not “no mail.” Encrypted submission may have no SMTP fields; that handshake is 1.2.4.
-- Walk orig → resp. Ports are often 25 or 587. Do not invent a site mail-gateway name.
-- Walk the given: outside `mailfrom`, `rcptto` a user, subject present. One sentence. Do not name a process. Do not call it phishing.
-- If they name `outlook.exe`: that is 1.1.4.
-- If they open a hash: that is 1.2.7.
-- If they write `smtp=*`: that is not a specific query.
+Use two distinct sender identities to illustrate envelope versus header. Explain that neither alone proves authenticity.
 
----
+**Key point to reinforce:** Envelope sender and recipients differ from message headers. Message-ID supplies context rather than a file hash.
 
-## Knowledge Check – Answer Key
+### 2. Working through the example
 
-1. **`mailfrom` is the attachment hash. True or false?**  
-   **Answer:** False. It is envelope MAIL FROM. Hashes are 1.2.7.  
-   **Explanation:** `mailfrom` is who the session claimed as sender. A file hash is the files engine, not this log.
+Ask what would support “delivered” or “opened.” Learners should name additional evidence, not assume it from the subject.
 
-2. **Envelope from an outside address, `rcptto` a user, subject present. What occurred?**  
-   **Answer:** That client sent envelope mail from A to B with that subject.  
-   **Explanation:** One sentence from the envelope and the subject. Do not name a process. Do not declare phishing.
+**Key point to reinforce:** The observed transaction contains the supplied addresses and subject. Delivery and user action need additional evidence.
 
-3. **A query that matches every `smtp` event is specific. True or false?**  
-   **Answer:** False. A good query names a specific pattern (`mailfrom`, `rcptto`, subject, or dest).  
-   **Explanation:** “All SMTP events” is a table dump, not a detection for this task.
+### 3. Creating a focused SMTP query
 
----
+Discuss why array and string recipient searches differ. Keep the worked query on verified scalar fields.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Search the chosen sender and subject; confirm recipient data types before writing a membership test.
 
-- Next: 1.2.7 Files engine
+## Knowledge Check — Answer Key
+
+### 1. How does mailfrom differ from a displayed From header?
+
+**Expected answer:** mailfrom is the SMTP envelope sender; the displayed header is a separate message field and can differ.
+
+### 2. Describe the example without claiming mailbox delivery.
+
+**Expected answer:** Zeek observed the transaction with the specified envelope addresses, subject, and Message-ID. Successful delivery and user action remain unestablished.
+
+### 3. Modify the query for the same sender regardless of subject.
+
+**Expected answer:** Remove the subject predicate and keep the sender filter; retain subject and recipient output to assess the broader results.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+SMTP evidence describes the observed mail transaction and selected headers. Use it to develop a precise lead while keeping delivery, user action, and attachment behavior tied to their own evidence.
+
+Previous: [1.2.5 – HTTP Engine](../05-http-engine/student-guide.md)
+
+Next: [1.2.7 – Files Engine](../07-files-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — smtp.log](https://docs.zeek.org/en/current/reference/logs/smtp.html)

@@ -230,7 +230,7 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 
 ## 0.6 Frameworks
 
-Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 3.5. DTF is 2.7.4.
+Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 3.5. DTF is 2.5.6.
 
 | # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
 |---|------|------|-------|-------|-------|---------------|

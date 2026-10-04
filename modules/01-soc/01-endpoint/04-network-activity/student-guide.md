@@ -5,77 +5,79 @@
 - SOC: 1.1.4.1 A / B / C ; 1.1.4.2 2b / 3c / 4c ; 1.1.4.3 2b / 3c / 4c  
 - Hunter: 1.1.4.1 A / B / B ; 1.1.4.2 1a / 2b / 3c ; 1.1.4.3 1a / 2b / 3c  
 - CTI: 1.1.4.1 A / A / A ; 1.1.4.2 1a / 1a / 1a ; 1.1.4.3 1a / 1a / 1a  
-**Estimated Time:** 25–30 minutes  
-
----
+**Estimated Time:** 25–30 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a host-network event: IP/port, protocol, direction, domain/URL when logged, and which process talked.
-2. Describe what a Sysmon or MDE endpoint network event shows, and say what a **specific** SIEM query looks like.
+1. Interpret endpoint network addresses, operations, direction, names, and process context.
+2. Describe the supplied event with its evidence limits.
+3. Create or modify a query for specific endpoint network activity.
 
 **Mapped Proficiency Items:**
 - K: 1.1.4.1 – Network activity (endpoint) concepts
 - T: 1.1.4.2 – Analyze an endpoint network event (Sysmon or MDE) and accurately describe what occurred
 - T: 1.1.4.3 – Create a SIEM query to detect specific endpoint network activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+Endpoint network events connect network activity to a process on a device. That process context can help explain a connection that a network sensor sees only as traffic between addresses.
 
-SOC analysts read **host-network** events on a host to see which process on this device talked, and to where. That is daily alert work: an alert names a host, and you have to say who opened the socket — to which IP and port, or which name. **1.1.1** named the five kinds of host activity. This lesson is the **host-network** kind. The point of this lesson versus Zeek is the **initiating process**. Zeek watches the wire and does not name the process that opened the socket. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
+## 1. Reading the endpoint view
 
-**Network activity (endpoint)** is host telemetry that a process **connected** (or tried to) or issued a **DNS query** (when that is logged here). In a SIEM, that event usually shows up as a row in a network table.
+| Detail | What it contributes |
+|---|---|
+| Local and remote address/port | MDE `LocalIP`, `LocalPort`, `RemoteIP`, and `RemotePort` identify the endpoints. Local/remote alone does not establish who initiated. |
+| Protocol and operation | Read the protocol and `ActionType` to distinguish the recorded connection outcome. |
+| Direction | Sysmon 3 `Initiated` helps identify whether the process initiated the connection; interpret direction using the source's semantics. |
+| Process | Sysmon `Image` or MDE `InitiatingProcess*` associates the activity with a process. |
+| Name information | Sysmon 22 `QueryName` records DNS queries when collected. MDE `RemoteUrl` may contain a URL or FQDN; a blank field does not establish that DNS was unused. |
 
-| Idea | What to read |
-|------|----------------|
-| **Source / dest IP and port, protocol, direction** | Sysmon `Source*` / `Destination*`, `Protocol`, `Initiated`. MDE `Local*` / `Remote*`, `Protocol`. `Initiated=true` = this process started the connection. |
-| **Domain / URL when logged** | Sysmon 3 `DestinationHostname`; Sysmon **22** `QueryName` if 22 is in the feed; MDE `RemoteUrl`. Empty ≠ “no DNS happened.” |
-| **Initiating process** | Sysmon `Image`; MDE `InitiatingProcess*`. **Who talked.** A Zeek `conn` log will not give you this field. |
+Sysmon 3 concerns network connections; Sysmon 22 concerns DNS queries. MDE uses `DeviceNetworkEvents` for network connections and related observations. Its table and action coverage should be checked locally. A DNS lookup and a subsequent connection are separate observations.
 
-**How this shows up:** Sysmon **3** (connect) and **22** (DNS, if logged here); MDE `DeviceNetworkEvents` (`ActionType`, `InitiatingProcess*`, `RemoteUrl`, `Local*` / `Remote*`). Same activity, different field names. This is **host-observed** activity. Protocol deep-dive is **1.2**.
+## 2. Working through the example
 
-MDE `ActionType` values on **this** table:
+A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=203.0.113.88`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
 
-| `ActionType` | What it is | Sysmon cousin |
-|--------------|------------|---------------|
-| **ConnectionSuccess** | This process completed a connection | Event **3** (`Initiated` tells direction) |
+A supported description is: “The endpoint recorded a successful TCP connection associated with PowerShell to the remote endpoint `203.0.113.88:443`; no remote URL or FQDN is recorded.” The port alone does not establish HTTPS or Command and Control. The abbreviated command does not establish hidden-window execution. Use source-specific direction evidence before adding “outbound” to the finding.
 
-The full set is in the Defender portal schema. Do not invent a value. **DNS** on the endpoint is Sysmon **22** when that event is in the feed. If Event **22** is not in the Sysmon feed, write “DNS not logged on the endpoint,” not “no DNS happened.”
+## 3. Creating a focused network query
 
-If a field is empty in your tenant, say so. Do not invent it.
+The following KQL example illustrates the requested search. Confirm the table, fields, and supported `ActionType` values in your environment before using it. Adjust the time range to the investigation.
 
-**What good looks like:**
+```kusto
+DeviceNetworkEvents
+| where Timestamp > ago(1d)
+| where ActionType == "ConnectionSuccess"
+| where InitiatingProcessFileName =~ "powershell.exe"
+| where RemoteIP == "203.0.113.88" and RemotePort == 443
+| project Timestamp, DeviceName, Protocol, LocalIP, LocalPort,
+          RemoteIP, RemotePort, RemoteUrl, InitiatingProcessCommandLine
+```
 
-- Describe: one sentence — which process talked, to which IP/port (or which name), which direction. Do not jump to a process create (**1.1.2**), a file drop (**1.1.3**), or a Zeek `conn` / `dns` field (**1.2**).
-- Given: MDE `ConnectionSuccess`, `powershell.exe -enc …` → `203.0.113.88:443`, `RemoteUrl` empty. **What occurred:** hidden encoded PowerShell successfully connected outbound TCP/443 to that IP. URL not logged. The process create is a different event.
-- Query: names a **specific** pattern (initiator + dest port or remote IP), not “all connections.”
+This looks for successful connections associated with PowerShell to the specified endpoint. It is an exact destination search for the example, not a general detector for malicious PowerShell. A DNS question instead calls for a DNS-capable source and its query-name field.
 
-Registry and image-load events are the next **1.1** lessons.
+## Knowledge Check
 
----
+1. What does endpoint network evidence add to a native Zeek connection record?
+2. What can you say about the supplied TCP/443 event when RemoteUrl is blank?
+3. How would you modify the query to find the same destination used by any process?
 
-## 2. Knowledge Check
+## Summary
 
-1. A Zeek `conn` log names the initiating process. True or false?
-2. `powershell.exe -enc …` has `ConnectionSuccess` to `203.0.113.88:443` and no `RemoteUrl`. In one sentence, what occurred?
-3. A SIEM query that matches every endpoint network event is a good “specific endpoint network activity” query. True or false?
+Endpoint network evidence helps connect a process to a recorded network operation. Describe the outcome, endpoints, protocol, and available names, then use a focused query to investigate the chosen pattern.
 
----
+## Course Connections
 
-## 3. Summary
+Previous: [1.1.3 – File System Activity](../03-file-system-activity/student-guide.md)
 
-A host-network event tells you which process talked, and to where. Direction and initiator tell the story. A missing name is a gap. Zeek does not name the process. A query names a specific pattern.
+Next: [1.1.5 – Registry Activity](../05-registry-activity/student-guide.md)
 
-**Next:** **1.1.5** Registry activity.
+[1.x module index](../../README.md)
 
----
+## References and Further Reading
 
-## 4. Related modules
-
-- 1.1.3 – File system activity
-- 1.1.5 – Registry activity
-- 1.1.2 – Process activity
-- 1.2 – Zeek
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceNetworkEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)

@@ -1,120 +1,87 @@
-# Module 1.4.1 – Alert Context and Investigation  
-## Slide Deck Content
+# Module 1.4.1 – Alert Context and Investigation
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 30 minutes  
-**Total Suggested Slides:** 8
+- Identify present and missing alert context, including an approved lookup of an available indicator.
+- Explain the alert configuration and trace its actual upstream detection path.
+- Select related endpoint logs and describe what they add or fail to add.
+- Select related PCAP for a network question and describe its contribution or availability limit.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.4.1 – Alert Context and Investigation  
-**Subtitle:** Work the object that fired  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson is the start of alert handling. The object in the queue already fired. You do not write a new rule. You do not classify TP or FP yet.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-An alert is the **object that fired**.
+An alert is the starting point for an investigation. Before deciding what it means, establish what evidence it contains, what logic produced it, and what related records can add. This makes the eventual finding traceable to observations rather than to the alert title alone.
 
-SOC analysts gather **context** on that object before they classify it.
-
-This lesson is that first pass.
-
-**Speaker Notes:**  
-This slide is the student intro. The job is to say what the alert already shows, what it does not, and what related host logs or a packet capture add. Classification is the next lesson.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Present, missing, VirusTotal
-**Title:** Present, missing, VirusTotal
+## Establishing context and detection lineage
 
-**Context** is two lists: **present** and **missing**.
+Record present and missing context, explain the rule, and trace the actual event-to-alert path.
 
-Host, user, time, rule name, and the field the rule keys on.
-
-If you have a hash, IP, or domain, look it up on **VirusTotal**. Write the one-line result.
-
-Missing is a **gap**, not benign. Do not open Relations (**2.9**).
-
-**Speaker Notes:**  
-Name the gap. Do not fill it with a guess. VirusTotal here is reputation on a value you already have. Relations is later.
+**Speaker notes:** Draw only the supplied lineage. Ask learners to explain the rule’s actual predicates rather than paraphrasing its title.
 
 ---
 
-### Slide 4 – Config and hops
-**Title:** What would fire, and each hop
+## Adding relevant evidence
 
-**Configuration** — one sentence: what would fire.
+Collect related endpoint events, approved indicator lookups, and relevant retained packets. State what each contributes.
 
-**Upstream hops** — name each hop from detection logic to the alert.
-
-Classroom pattern: Suricata rule → SIEM correlation search → SIEM alert.
-
-Some alerts are **SIEM-only**. Do not invent a Suricata hop.
-
-**Speaker Notes:**  
-Walk configuration first, then hops. The given in this course is a SIEM rule that fired a SIEM alert. Inventing Suricata adds a hop that is not on the given.
+**Speaker notes:** Use the table to connect each collection action to a question. Explain that finding a record is not the same as establishing its relevance.
 
 ---
 
-### Slide 5 – Endpoint logs and PCAP
-**Title:** What logs and PCAP add
+## Reference — Adding relevant evidence
 
-**Endpoint logs** — pull related host events for that host and window. State what they **add** or **fail to add**. Opening the table is not the task.
+| Evidence source | How to use it | What to record |
+|---|---|---|
+| Related endpoint events | Select the host and relevant time, then correlate process identity, paths, account, and operation. | What each event adds and any unresolved gap. |
+| VirusTotal lookup | Look up an available hash, IP, or domain through the approved workflow. | The exact indicator, report reference/time, relevant result, and interpretation limit. |
+| Related PCAP | Request retained traffic for a relevant flow, time range, and sensor. | What becomes visible beyond the alert, or why the capture cannot answer the question. |
 
-**PCAP** — for a network alert, state what the capture adds versus the alert fields.
-
-If the alert is process-only and there is no capture, write **PCAP not applicable**.
-
-**Speaker Notes:**  
-A file event can add Temp invoice.vbs. The Run key waits for hunt. Why you pull PCAP is 1.2.1. Sensors are 0.8. Do not invent a packet capture.
+**Speaker notes:** Use the table to connect each collection action to a question. Explain that finding a record is not the same as establishing its relevance. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – The first alert
-**Title:** The first alert
+## Working through a reviewable finding
 
-The first alert is **`wscript` → encoded PowerShell** as `jlee`.
+Preserve evidence references and unresolved questions. Distinguish unavailable capture from an irrelevant network question.
 
-**Present:** host, user, `-enc`, parent `wscript`.  
-**VirusTotal:** hash of `invoice.vbs` and/or IP `203.0.113.88` — one line.  
-**Config:** PowerShell with `-enc` and parent `wscript` fires.  
-**Hops:** SIEM rule → SIEM alert.  
-**Host logs:** add Temp `invoice.vbs`.  
-**PCAP:** not applicable on this process alert.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. Do not tell the rest of the incident. Do not classify.
+**Speaker notes:** Have learners produce the present/missing and contribution statements from the examples. Use a provided sanitized lookup result if available; otherwise label it pending rather than making a live submission.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Knowledge check
 
-1. The alert context is missing a parent process. That means the activity was benign. True or false?  
-2. Name the hops for a SIEM-only process alert.  
-3. You have the hash of Temp `invoice.vbs` and IP `203.0.113.88`. What do you look up on VirusTotal, and what is **not** this lesson?
+1. For the process example, name what is present and two unresolved questions.
+2. Explain the configuration and upstream path for the SIEM-only alert.
+3. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute?
+4. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Summary and next step
 
-Present versus missing. A hash, IP, or domain you have goes to **VirusTotal**.  
-Say what the configuration would fire.  
-Name each hop.  
-Logs and PCAP must add something — or you say they failed to.
+An investigation record should explain the alert’s evidence, logic, and lineage, then show what related endpoint records, lookups, and packets contribute. Clear unresolved questions make the next decision easier to support.
 
-**Next:** **1.4.2** Alert classification
+Previous: [1.3.4 – SIEM Rules](../../03-detection/04-siem-rules/student-guide.md)
 
-**Speaker Notes:**  
-TP, FP, TN, and FN are next. Stay off classification until that lesson.
+Next: [1.4.2 – Alert Classification](../02-classification/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — Investigate and classify alerts](https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts)
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching)
+- [Zeek — http.log](https://docs.zeek.org/en/current/reference/logs/http.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

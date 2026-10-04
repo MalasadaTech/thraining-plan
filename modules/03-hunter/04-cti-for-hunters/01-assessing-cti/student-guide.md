@@ -5,69 +5,69 @@
 - Hunter: 3.4.1 B / C / C ; 3.4.1.1 3c / 4c / 4d  
 - SOC: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c  
 - CTI: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Evaluate whether a CTI report can support a useful local hunt.
+2. Classify the next step as **hunt**, **awareness/monitor**, or **coordinate/hand off**, and explain the reason.
 
-1. Sort a CTI report as **hunt-worthy**, **awareness-only**, or a **hand-off** to detections or IR.
-2. Triage a report: **hunt** / **don’t hunt** / **hand off**, and say why.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.4.1 – Assessing CTI for hunting value
-- T: 3.4.1.1 – Triage a CTI report: hunt / don’t hunt / hand off, and say why
-
----
+- T: 3.4.1.1 – Triage a CTI report: hunt / don't hunt / hand off, and say why
 
 ## 1. Key Concepts
 
-A CTI report usually names an actor, a method, or a set of indicators. Before you hunt from it, you have to know whether it is worth a hunt at all. Hunters do **not** hunt every report. That is the job in this lesson: label the report first — **hunt-worthy**, **awareness-only**, or a **hand-off** — and say why. Extracting leads is **3.4.2**. STIX objects are **3.4.3**. ATT&CK coverage is **3.5**. This lesson is the **gate**: you decide whether a hunt starts.
+A report is hunt-worthy when it can produce a **local, testable question with enough visibility and enough incremental value to justify the search**.
 
-| Label | Meaning |
-|-------|---------|
-| **Hunt-worthy** | You can name a question, telemetry that could answer it here, and a bound scope |
-| **Awareness-only** | Useful context. No hunt from this report |
-| **Hand-off** | Not a hunt. Detections or IR already own it |
+Five quick checks help:
 
-The task product is **hunt**, **don’t hunt**, or **hand off**, plus why. Hunt-worthy is hunt. Awareness-only is don’t hunt. Hand-off is hand off.
+1. **Applicability** – Does the environment contain the relevant platform, service, user population, or exposure?
+2. **Testability** – Does the report contain a behavior, procedure, artifact, or relationship that can become a question?
+3. **Visibility** – Do we have telemetry capable of testing that question?
+4. **Scope** – Can the search be bounded to a reasonable population and time window?
+5. **Incremental value** – Will hunting add something beyond work already adequately covered by an active response or existing analytic?
 
-**Actionable for a hunt** means you can name three things: a **question** the hunt would answer, **telemetry** that could answer it here, and a bound **scope**. “Interesting” is not a hunt. CTI’s own actionable test (**2.1.5**) is whether a product names a who and a next step. This lesson is the hunter’s test: can you hunt from the report.
+### Three practical dispositions
 
-**Rapid triage** is a **label and one sentence why**. You read enough to decide hunt, don’t hunt, or hand off. You do not copy every ATT&CK ID. You do not extract the lead list (**3.4.2**). If you start mapping coverage, you have left this lesson (**3.5**).
+| Disposition | When it fits |
+|---|---|
+| **Hunt** | A relevant, testable question exists; telemetry and scope are sufficient; broader discovery can add value. |
+| **Awareness / monitor** | The report is useful context but does not currently support a useful local search. |
+| **Coordinate / hand off** | The immediate next action belongs to IR, SOC, DE, or another function; hunting may still support later if a broader search question remains. |
 
-**What good looks like:** someone gives you a report. You label it and say why. You do not pull the TTP table yet.
+The third category is not “IR touched the hash, therefore hunting stops.”
 
-- Given: the report names `GET /update.exe` to `203.0.113.88:8080` and HKCU Run **`Updater`**. User workstations. Registry and HTTP logs exist. No detection covers that path. No open IR on that hash. **Hunt-worthy** — hunt. You can name the question, the telemetry, and the scope.
-- Given: “This APT exists.” No object, no telemetry, no scope. **Awareness-only** — don’t hunt.
-- Given: IR is already working the same `update.exe` hash. **Hand-off** — detections or IR already own it.
+During an active incident, a reactive hunt can be especially valuable for finding additional affected systems. Coordination matters because containment and evidence preservation may take priority over an independent search on the same hosts.
 
-Do not invent a hunt ticket (**3.7**). Do not author STIX (**3.4.3**).
+### A12 examples
 
----
+**Hunt**
+> Report describes Run-key persistence and `/update.exe`; registry and HTTP telemetry exist; the question is whether related artifacts exist on additional workstations.
+
+**Awareness / monitor**
+> Report describes a platform the organization does not operate, with no applicable procedure elsewhere in the report.
+
+**Coordinate / hand off**
+> A specific endpoint shows confirmed active compromise requiring containment. IR owns immediate response. Hunting coordinates with IR and may run an estate-wide search for related behavior.
+
+### Hunt-worthiness is not the same as “interesting”
+
+Actor reputation, severity language, or a long ATT&CK appendix do not create a hunt by themselves.
+
+The hunter needs a test.
 
 ## 2. Knowledge Check
 
-1. An interesting actor profile is a hunt. True or false?
-2. What three things must you name before a report is actionable for a hunt?
-3. Label this report and say why: `GET /update.exe` to `:8080`, HKCU Run **`Updater`**, registry and HTTP logs exist, no detection on that path, no open IR.
-
----
+1. What five checks help determine hunt-worthiness?
+2. Why does an active IR case not automatically mean “do not hunt”?
+3. A report gives a locally applicable Run-key procedure, registry telemetry exists, and no detection covers it. Which disposition fits and why?
 
 ## 3. Summary
 
-Hunt, don’t hunt, or hand off — plus why. Actionable for a hunt means question, telemetry, and scope. Interesting is not a hunt.
+Assess CTI for **local testability and value**, not just threat severity.
 
-**Next:** **3.4.2** Extracting hunt leads from CTI.
+Hunt when a bounded question and visibility exist. Monitor when the report cannot support a useful local search. Coordinate when another operational function owns the immediate action.
 
----
-
-## 4. Related modules
-
-- 3.3.1 – Tool capabilities for hunting
-- 3.4.2 – Extracting hunt leads from CTI
-- 3.4.3 – STIX as hunt input
-- 2.1.5 – Ensuring intelligence is actionable
-- 3.5.1 – Using MITRE ATT&CK for hunt planning
+**Next:** **3.4.2 – Extracting Hunt Leads from CTI**.

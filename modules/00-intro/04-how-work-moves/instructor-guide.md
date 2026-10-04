@@ -9,94 +9,84 @@
 **Estimated Time:** 20–25 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
+An investigation can create several kinds of follow-on work. Some work addresses the incident already in progress, while other work improves understanding or future detection. Following one possible workflow helps you identify who receives a request and what they are expected to produce.
 
-**Purpose of this module:**  
-Name one possible path of work after an alert, and whose product is next.
-
-**Context (plain language):**
-
-- What this lesson is for: After an alert, work has to go to the next desk. This lesson names one possible path those hand-offs can take, and whose product is next.
-- How it hooks to the lesson before: 0.3 named each job in one sentence. This lesson is the path between those desks.
-- How it hooks to the lesson after: 0.5 is overlap — same evidence, different product, and one person may wear two hats.
-- Why we are doing it this way: desks first, then one possible path, so later lessons sit on a shared sequence. It is not every shop’s policy.
-- What we are *not* doing in this lesson: How to triage, write an RFI, hunt, or write a rule. No lab. No DYA ticket names, PIR lists, or approval chains. Not the companion story.
-- Extra step: none.
-
-Use the same names as the student guide: **triage**, **RFI**, **enrich**, **hunt package**, **block**, **hand-off**, and **product**. **RFI** is Request for Information. **Flow** in the task name is this path.
-
-**Key Teaching Points:**
-- One possible path, not every shop.
-- Extra infrastructure → block (firewall / IA). Hunt package → hunters and detection engineers.
-- Name the next hand-off and whose product it is. Do not invent a ticket path.
-- Two hats is 0.5, not this lesson.
-
-**Common Student Challenges:**
-- Send extra infrastructure to the hunt team. Why: both hand-offs come after intel. Example: “hunt these IPs” when the next hand-off is whoever blocks (firewall / IA).
-- Invent a ticket name. Why: shops file work differently. Example: naming a DYA Jira queue or a PIR.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+Teach this as a shared introductory lesson using the supplied examples and discussion. Match the depth to the proficiency levels above. The focus is the mapped knowledge and task; operational procedures are developed in the later role tracks.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Describe one possible workflow after an alert is triaged.
+2. Explain how intelligence findings can support blocking, hunting, and detection work.
+3. Given a step in the workflow, identify the receiving role and the product it owns.
 
 **Mapped Proficiency Items:**
 - K: 0.4 – How work can move
 - T: 0.4.1 – Given a step in the flow, name the next hand-off and whose product it is
 
----
+## Preparation
+
+Read the [student guide](student-guide.md) and use [slides.md](slides.md) to support the explanation. Review the answer key before teaching so the discussion and feedback reinforce the same concepts. This lesson uses discussion and worked examples; no lab is required.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | One possible path after an alert |
-| Key Concepts            | 14 min    | Steps a–g; two products on a given |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~23 min** | |
-
----
+| Section | Time | Teaching purpose |
+|---|---|---|
+| Opening and purpose | 2 min | Connect this lesson to the previous topic. |
+| Explanation and worked examples | 14 min | Use the three teaching sections below. |
+| Knowledge check and feedback | 4 min | Ask for reasoning as well as an answer. |
+| Summary and transition | 2 min | Consolidate the lesson and introduce the next topic. |
+| **Total** | **22 min** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. From an alert to response and a question
 
-**Talking Points:**
-- Open with the job: after an alert, work has to go to the next desk. This lesson names one possible path, not the only way a shop runs.
-- Walk the seven steps. Stop. Do not teach how to triage, write an RFI, hunt, or write a rule.
-- Extra infrastructure goes to whoever blocks (firewall / IA). A hunt package goes to hunters, and that same package can go to detection engineers. Those are different hand-offs.
-- Walk the “given” lines from the student guide. The product is the next hand-off and whose work it is, not a ticket name.
-- If they ask “what if I am both SOC and intel?”: that is 0.5. The path is the same.
-- If they start a DYA ticket path, a PIR list, or an approval chain: this lesson does not invent those.
+Walk learners from evidence to the reason for each handoff. The example is an escalated case; it does not imply every alert requires IR or leadership notification. Emphasize that responding to harm and answering an intelligence question can happen at the same time.
 
----
+**Student-facing emphasis:** Triage establishes what attention the alert requires. In this example, IR receives the incident, leadership is notified, and CTI receives an RFI.
 
-## Knowledge Check – Answer Key
+### 2. How the intelligence work branches
 
-1. **After triage, what two things can the analyst do with the alert besides asking intel?**  
-   **Answer:** Send it to incident response and notify leadership.  
-   **Explanation:** After triage, the analyst can send the alert to IR and notify leadership. The RFI to intel is the other ask, not these two.
+Explain the branches by the outcome expected. A domain can appear in more than one product. The reason for a blocking handoff is an evaluated control need, not merely discovering another name. Keep the same-package relationship between Hunt and DE explicit.
 
-2. **Extra infrastructure goes to the hunt team. True or false?**  
-   **Answer:** False. Extra infrastructure can go to whoever blocks (firewall / IA). Hunters get a hunt package.  
-   **Explanation:** Those are two later hand-offs, not the same one.
+**Student-facing emphasis:** CTI develops an answer and supporting context. Findings can support blocking review, a hunt, and detection work. The same intelligence package can serve Hunt and DE.
 
-3. **Intel found extra infrastructure. Name the next hand-off and whose product it is.**  
-   **Answer:** Whoever blocks (firewall / IA). Product: the block. Not a hunt.  
-   **Explanation:** Extra infrastructure is a block hand-off. A hunt package is a different product.
+### 3. Naming the next handoff
 
----
+Ask learners to explain what the recipient still has to do. Receiving a package does not mean the hunt or rule is already complete. Tool names illustrate possible downstream implementations and are not requirements to author anything in this lesson.
 
-## Additional Instructor Resources
+**Student-facing emphasis:** Name the recipient, the requested outcome, and the product they own. Hunt returns findings and gaps. DE assesses coverage and develops or tunes detections.
 
-- Next: 0.5 Where the jobs overlap
+## Knowledge Check — Answer Key
+
+### 1. In the escalated course example, what can the analyst do after triage while CTI works on an RFI?
+
+**Expected answer:** Hand the incident to IR and notify leadership according to the applicable procedure. Those activities can proceed while CTI develops an answer.
+
+**Feedback and assessment:** Check that learners understand parallel work and the example’s escalation context.
+
+### 2. CTI has evidence supporting consideration of a domain block. Who receives that work, and what product does that function own?
+
+**Expected answer:** The function responsible for blocking, described here as firewall / IA, evaluates and implements an authorized control change.
+
+**Feedback and assessment:** Accept the local function’s equivalent name. Discovery of a candidate alone is not sufficient support for a block.
+
+### 3. The same intelligence package goes to Hunt and DE. What result should each produce?
+
+**Expected answer:** Hunt searches for relevant activity and returns findings and visibility gaps. DE assesses existing coverage and decides whether to develop or tune detections.
+
+**Feedback and assessment:** The answer should distinguish the search result from the detection outcome and allow existing coverage to satisfy the need.
+
+## Closing and Transition
+
+A single alert can lead to response, notification, intelligence analysis, hunting, and detection work. Identify each handoff by its purpose and the product the receiving role owns. The example explains how the responsibilities connect while leaving local routing and approval procedures to the organization.
+
+Previous: [0.3 – Jobs in one sentence](../03-jobs-in-one-sentence/student-guide.md)
+
+Next: [0.5 – Where the jobs lightly overlap](../05-where-jobs-overlap/student-guide.md)
+
+## References and Further Reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.

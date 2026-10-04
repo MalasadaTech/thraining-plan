@@ -1,105 +1,60 @@
-# Module 4.8 – Site-specific DE knowledge  
+# Module 4.8 – Site-Specific Detection Engineering
 ## Slide Deck Content
 
-**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 15–20 minutes  
-**Total Suggested Slides:** 8
+**Total Suggested Slides:** 9
 
----
+### Slide 1 – Title
+**How Detection Engineering Works Here**
 
-### Slide 1 – Title Slide
-**Title:** Module 4.8 – Site-specific DE knowledge  
-**Subtitle:** Obtain the list and the path. Do not invent policy.  
-**Footer:** SOC / Hunter / CTI / DE Training Program
+### Slide 2 – Find two local sources
+1. Detection requirements list  
+2. Lifecycle / change path
 
-**Speaker Notes:**  
-This is the last DE teaching unit. Local policy exists. The analyst obtains it. This course does not publish a shop handbook.
+### Slide 3 – Verify currency
+Location  
+Owner  
+Version/date  
+Scope  
+Supersession
 
----
+### Slide 4 – Public format ≠ local policy
+Sigma can show common fields.
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+Your organization decides what is required.
 
-A detection engineer ships, changes, or retires a rule against **this shop’s** rules.
+Reference: [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html)
 
-Those rules are local. They are not in this course.
+### Slide 5 – Map the lifecycle
+Intake  
+Test  
+Review  
+Approve  
+Deploy  
+Monitor  
+Change  
+Rollback  
+Retire
 
-Obtain the current **list** and **path**. Follow only what you were shown.
+### Slide 6 – Authority matters
+Review ≠ approval  
+Approval ≠ deployment  
+Deployment ≠ rollback authority
 
-**Speaker Notes:**  
-This slide is the student intro. The job is obtain-and-follow so nobody invents policy to make a nomination look complete. Do not start a field list on the board.
+### Slide 7 – Know the authoritative copy
+Repository?  
+Detection-as-code?  
+Platform console?
 
----
+Which one is source of truth?
 
-### Slide 3 – Local detection requirements
-**Title:** Local detection requirements
+### Slide 8 – Missing information
+Record the exact gap:
 
-Required **meta fields**, **naming**, and other **deploy checks**.
+**Deployment approval authority not yet verified.**
 
-They **vary by shop**. Obtain the current list.  
-Do **not** invent one.
+### Slide 9 – Knowledge Check
+1. Sigma vs local standard?  
+2. Four lifecycle steps/roles?  
+3. Deploy known, approval/rollback unknown: what do you record?
 
-This course does **not** publish the classroom firm’s (**DYA**) list.
-
-**Speaker Notes:**  
-4.2 named those kinds. Today is obtaining the current list, not writing a DYA handbook. If you overlay a real shop list, say it is overlay, not DYA policy.
-
----
-
-### Slide 4 – Review, deploy, retire
-**Title:** Review, deploy, retire
-
-How a change is **reviewed** and **deployed**.  
-How a **retire** is recorded.
-
-Obtain the path. Do **not** invent a change board or a ticket name.
-
-**Speaker Notes:**  
-4.6 said you retire and deploy. This lesson is this shop’s path. Same rule as the list: have it, or record that you do not.
-
----
-
-### Slide 5 – Follow only what you were shown
-**Title:** Have it / do not have it
-
-Shown a list → you **have** it. Align **only** to that list.  
-No list or path → **I do not have it yet.**  
-Invented “change board X” or a ticket name → **reject**.
-
-**Speaker Notes:**  
-Walk the three student-guide givens if you need them. “Not yet” is a pass. Inventing policy is the fail. Do not fill a blank page with fields or a ticket.
-
----
-
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
-
-1. This course publishes the DYA field list and deploy path. True or false?  
-2. You do not have the local requirements list. Do you invent the fields?  
-3. You invent a change board or ticket name and treat it as policy. Follow it, or reject?
-
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
-
----
-
-### Slide 7 – Summary
-**Title:** Summary
-
-Local policy exists. It varies by shop.  
-Obtain the list and the path.  
-Follow only what you were shown.  
-Do not invent policy.
-
-**Speaker Notes:**  
-That is the whole of 4.8. The DE track ends here.
-
----
-
-### Slide 8 – Next
-**Title:** Next
-
-Section **4** is complete.
-
-**Speaker Notes:**  
-There is no 4.9. Do not invent a next DE lesson.
+**4.x Detection Engineering complete**

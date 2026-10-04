@@ -8,98 +8,87 @@
 **Estimated Time:** 25–30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Read a host file event and describe it. Say what a specific SIEM query looks like.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts read file events on a host to see what happened to a file, where, and by which process.
-- How it hooks to the lesson before: 1.1.1 named the five kinds of host activity. 1.1.2 was the process kind. This lesson is the file kind on the same host telemetry.
-- How it hooks to the lesson after: 1.1.4 is host-observed network on that same host — not Zeek.
-- Why we are doing it this way: after process, read the file kind on the same host telemetry so you can describe what happened to the file before you open network events.
-- What we are *not* doing in this lesson: Zeek `files` / `conn` (1.2). Sysmon install. Process-create write-up (1.1.2). Persistence how-to. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **create**, **rename-move**, **delete**, **modify**, **read**, and **initiating process**. MDE `ActionType` on this table: **FileCreated**, **FileRenamed**, **FileDeleted**, **FileModified**. Do not invent `FileRead` here — read is where that action is logged. The given continues the 1.1.2 names (`wscript`, Temp `update.exe`). Do not turn it into the intro plot.
-
-**Key Teaching Points:**
-- Endpoint file event, not Zeek.
-- Event 11 is create, not rename. 23 / 26 are delete.
-- Path + initiator are what you write down. Empty hash is a gap.
-- A query is specific, not “all file events.”
-
-**Common Student Challenges:**
-- Treat Event 11 as a rename. Why: create and rename both put a new path on the event. Example: writing “file renamed to update.exe” from a Sysmon 11.
-- Write `DeviceFileEvents` with no filter as a “specific” query. Why: the task is a named pattern. Example: every file event, no initiator or path.
-- Describe the process create of `wscript` as the file story. Why: this lesson is what happened to the file. Example: “script host launched PowerShell” when the event is Sysmon 11 creating `update.exe`.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+File events help establish what happened to an object on an endpoint and which process performed the operation. Keeping the operation, path, and initiating process together helps distinguish a file arriving from that file later being used.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Interpret file operations, paths, hashes, and initiating processes.
+2. Describe a file event without inferring execution.
+3. Create or modify a query for a specific file operation.
 
 **Mapped Proficiency Items:**
 - K: 1.1.3.1 – File system activity concepts
 - T: 1.1.3.2 – Analyze a file event (Sysmon or MDE) and accurately describe what occurred
 - T: 1.1.3.3 – Create a SIEM query to detect specific file operations
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required. For query tasks, ask learners to write or modify the shown query and explain its predicates. Confirm the local schema if demonstrating it in an approved teaching environment.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | File event, not Zeek |
-| Key Concepts            | 16 min    | Fields; two products |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~25 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 17 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **27** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Reading file operations
 
-**Talking Points:**
-- Open with the job: an alert names a host, and you have to say what happened to a file, where, and by which process.
-- Walk the field table. Stop on Event 11: it is create, not rename.
-- MDE create is `FileCreated`. Rename-move is `FileRenamed` when logged. Delete is Sysmon 23 / 26 and MDE `FileDeleted`. Do not invent `FileRead` on `DeviceFileEvents`.
-- Walk the given: Sysmon 11, `wscript.exe` → Temp `update.exe`, no hash. One sentence. Path + initiator. Hash not logged.
-- If they start installing Sysmon: that is not this lesson.
-- If they describe the process create of `wscript`: that is 1.1.2. Stay on the file event.
-- If they open Zeek `files`: that is 1.2.
-- If they write `DeviceFileEvents` with no filter: that is not a specific query.
+Explain create/overwrite and distinguish event-time deletion from a current filesystem assessment. Ask what coverage would be needed to discuss file reads.
 
----
+**Key point to reinforce:** Read the operation, path, initiating process, and available identity data. Sysmon 11 records creation or overwrite.
 
-## Knowledge Check – Answer Key
+### 2. Working through the example
 
-1. **Event 11 is a rename. True or false?**  
-   **Answer:** False. It is file create. Rename-move is an MDE `FileRenamed` when logged.  
-   **Explanation:** Sysmon 11 is a create. Rename-move is a different action and is not Event 11.
+Require the path, operation, and initiator in the description. A missing hash does not change the observed operation.
 
-2. **wscript → Temp update.exe (Sysmon 11, no hash). What occurred?**  
-   **Answer:** Script host created `update.exe` under Temp. Hash not logged.  
-   **Explanation:** Path and initiator are what you write down. A missing hash is a gap, not clean. The process create of `wscript` is a different event.
+**Key point to reinforce:** Script Host creates or overwrites the recorded Temp file. A hash and later execution require their own evidence.
 
-3. **A query that matches every file event is specific. True or false?**  
-   **Answer:** False. A good query names a specific pattern (initiator + path + extension).  
-   **Explanation:** “All file events” is a table dump, not a detection for this task.
+### 3. Creating a focused file query
 
----
+Use one .exe and one .dll name to discuss the filter change. Keep the query task separate from a verdict about the returned files.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Search the operation, initiator, path, and filename pattern. A name filter does not inspect file contents.
 
-- Next: 1.1.4 Network activity (endpoint)
+## Knowledge Check — Answer Key
+
+### 1. What does Sysmon 11 establish, and does it prove execution?
+
+**Expected answer:** It records file creation or overwrite. It does not establish execution.
+
+### 2. Describe the supplied event when its hash is unavailable.
+
+**Expected answer:** Script Host created or overwrote update.exe at the recorded Temp path on WS-JLEE; the event supplies no hash.
+
+### 3. Modify the query to search for DLL-named files and explain the limitation.
+
+**Expected answer:** Change `FileName endswith ".exe"` to `FileName endswith ".dll"`. The query matches names and file operations; it does not establish DLL loading or content.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+File evidence describes an operation on a path by an associated process. Use the available identity fields, preserve coverage gaps, and query the operation that answers the investigation question.
+
+Previous: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)
+
+Next: [1.1.4 – Network Activity (Endpoint)](../04-network-activity/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceFileEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicefileevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)

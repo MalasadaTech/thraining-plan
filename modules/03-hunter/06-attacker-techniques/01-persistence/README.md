@@ -5,27 +5,40 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.6.1 B / C / C ; 3.6.1.1 3c / 4c / 4c  
+- SOC: 3.6.1 A / B / B ; 3.6.1.1 1a / 2b / 3c  
+- CTI: 3.6.1 A / B / B ; 3.6.1.1 1a / 2b / 3c
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.6.1 | K | Persistence techniques | 3.6.1 a–d | A / B / B | B / C / C | A / B / B |
-| 3.6.1.1 | T | Recognize persistence techniques in logs or telemetry | 3.6.3 task 1 | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-
-The teaching-unit ID is **3.6.1**. Registry activity reading is **1.1.5**. Privilege escalation is **3.6.2**. Named-technique hunt is **3.6.3**. ATT&CK remapping is **3.5**. No lab.
+- K: 3.6.1 – Persistence techniques
+- T: 3.6.1.1 – Recognize persistence techniques in logs or telemetry
 
 ## Concepts taught
 
-- persistence techniques
-- registry-based persistence
-- start menu / startup folder persistence
-- scheduled-task persistence
-- other common persistence methods
-- recognizing persistence techniques in logs or telemetry
+- persistence recognition
+- Run keys and Startup Folder
+- scheduled tasks
+- Windows services
+- WMI and other recurring mechanisms
+- benign vs malicious context
+- visibility requirements
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Supporting references
+
+- [T1547.001 Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)
+- [T1053.005 Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)
+- [T1543.003 Windows Service](https://attack.mitre.org/techniques/T1543/003/)
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

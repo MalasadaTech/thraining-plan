@@ -1,73 +1,94 @@
-# Module 3.7.1 – Hunt control and lead management
+# Module 3.7.1 – Hunt Control and Lead Management
 
 **Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Proficiency Focus:**  
 - Hunter: 3.7.1 B / C / C ; 3.7.1.1 3c / 4c / 4c  
 - SOC: 3.7.1 A / A / B ; 3.7.1.1 1a / 1a / 2b  
 - CTI: 3.7.1 A / A / B ; 3.7.1.1 1a / 1a / 2b  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 15–20 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Locate the site's authoritative process for initiating, controlling, pausing/stopping, and changing the scope of a hunt.
+2. Explain how out-of-scope hunt leads are recorded, triaged, and assigned locally.
 
-1. Say that **how hunts are initiated and controlled**, and **how leftover leads are managed**, **varies by site**.
-2. **Follow** the local process you were shown — or record that you **do not have the local process yet**. Do not invent a ticket or a board.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.7.1 – Hunt control and lead management
 - T: 3.7.1.1 – Follow the local process for initiating and controlling a hunt
 
----
-
 ## 1. Key Concepts
 
-A hunter who already has a named technique still does not start searching the live environment on their own. The shop decides **how a hunt is opened**, **who can change its scope or stop it**, and **where leftover findings go**. That path is local. Every shop builds its own. That is the job in this lesson: obtain that path and follow it, so a hunt is official — not only interesting.
+The hunt methodology learned in 3.2 tells you **how to formulate a hunt**.
 
-You do **not** invent a hunt ticket, a lead board, or policy for the classroom firm (**DYA**). This course does **not** publish those. **3.2.2** taught the classroom hunt card. **3.6.3** scoped one named technique. This lesson is the site path that makes a hunt official. How the hunt is written down is **3.7.2**. Finished outputs and hand-off are **3.7.3**. The SOC queue is **1.5**.
+This module asks:
 
-| Piece | What it is | You do not invent |
-|------|------------|-------------------|
-| **Initiate** | How a hunt is opened here — who may start it, and on what path | A ticket name so the hunt looks official |
-| **Control** | Who may widen scope, pause, or stop | Running a hunt because the technique is interesting |
-| **Leads** | Where leftovers that are not this hunt’s scope are parked, and who triages them | A personal spreadsheet or classroom board as shop policy |
+> How does this organization authorize and govern one?
 
-A hunt **lead** in this lesson is leftover work from a hunt that is not this hunt’s scope. It is not the TTP you extracted from a CTI report (**3.4.2**). You obtain where those leftovers go. You do not stand up a board.
+Those answers are local.
 
-**Obtain-and-follow.** Ask where the initiate / control / lead path lives (the role or place your lead names). Use that path. If no one has shown you the process, write **I do not have the local process yet.** If an instructor overlays a real shop path, that overlay is the path for the room. It is still not DYA policy.
+### Build the local governance map
 
-A made-up ticket number, a DYA hunt board, and a spreadsheet treated as the shop’s lead process are invented. Do not use them.
+| Question | Local answer |
+|---|---|
+| Who may initiate a hunt? | ______ |
+| What prerequisites/approval are required? | ______ |
+| Where is the hunt opened/tracked? | ______ |
+| Who can expand or narrow scope? | ______ |
+| Who can pause/stop a hunt? | ______ |
+| What triggers escalation to incident response? | ______ |
+| Where do out-of-scope leads go? | ______ |
+| Who owns lead triage/deduplication? | ______ |
 
-**What good looks like:** someone asks you to open a hunt, change its scope, or park a leftover.
+The blanks are filled from the real shop process.
 
-- **Obtain:** “I obtain the initiate, control, and lead path from [the role or place the instructor names, or my lead].” If none was shown: **“I do not have the local process yet.”**
-- **Follow:** Use only the path you were shown. Do not open a hunt on a made-up ticket. “Not yet” is a pass.
+### Why hunt control matters
 
-Do not rewrite the classroom card (**3.2.2**). Do not invent a documentation form (**3.7.2**).
+A query can affect:
 
----
+- analyst time;
+- search infrastructure;
+- regulated/sensitive data;
+- live incident handling;
+- other teams' workload.
+
+A scope change from 50 user workstations to the entire enterprise may be operationally significant even when the query itself is harmless.
+
+### Lead management prevents uncontrolled scope growth
+
+A hunt often discovers something interesting that does not answer the current hypothesis.
+
+Instead of silently expanding the hunt forever:
+
+1. record the lead;
+2. preserve why it matters and the evidence/source;
+3. follow the local triage/ownership process;
+4. decide whether it becomes a follow-on hunt, CTI question, detection task, or incident lead.
+
+### Missing local process
+
+Use an explicit onboarding status:
+
+> **Local hunt-governance path not yet verified.**
+
+Then identify the missing owner/source.
+
+That is actionable because it tells the team what still needs to be learned.
 
 ## 2. Knowledge Check
 
-1. You should invent a DYA hunt ticket so the exercise has a number. True or false?
-2. What three path pieces does this lesson obtain?
-3. What do you write if no one has shown you the process?
-
----
+1. Why might expanding a hunt's scope require local authorization?
+2. What should happen to an interesting finding that is outside the current hunt scope?
+3. What should you record if the local hunt-control process has not been provided?
 
 ## 3. Summary
 
-Every shop has a path to initiate a hunt, control it, and manage leftover leads. Obtain that path. Follow what you were shown. If you do not have the process, write that. Do not invent a ticket or a board.
+Local hunt control defines how hunts become official, how scope changes are governed, and how follow-on leads are managed.
 
-**Next:** **3.7.2** Hunt documentation standards.
+Learn the authoritative process and use it.
 
----
+**Next:** **3.7.2 – Hunt Documentation Standards**.
 
-## 4. Related modules
+## Reference Model
 
-- 3.6.3 – Hunt for a specific persistence or privilege-escalation technique (previous)
-- 3.7.2 – Hunt documentation standards
-- 3.2.2 – Hunt development concepts (classroom card)
-- 2.12.1 – Local intelligence requirements and priorities (same obtain-and-follow rule)
+This module intentionally relies on the organization's local hunt-governance process.

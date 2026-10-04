@@ -5,6 +5,10 @@
 **Secondary:** Threat Hunter, CTI Analyst  
 **Time:** about 25–30 minutes
 
+## Purpose
+
+DNS evidence connects a question about a name to the response observed on the network. Distinguishing the resolver from the returned address helps prevent a common error when moving from a lookup to a connection investigation.
+
 ## Mapped proficiency items
 
 | Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
@@ -12,8 +16,6 @@
 | 1.2.3.1 | K | DNS engine | 1.2.4 a–d | A / B / C | B / C / C | A / B / B |
 | 1.2.3.2 | T | Analyze a Zeek DNS log and accurately describe what occurred | 1.2.5 task 1 | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 2b / 3c |
 | 1.2.3.3 | T | Create a SIEM query to detect specific DNS activity | 1.2.5 task 2 | 2b / 3c / 4c | 3c / 4c / 4c | 1a / 2b / 3c |
-
-This folder is **not** outline item `1.2.3` (that heading is Conn engine tasks). Matrix IDs `1.2.3.*` are the canonical references. Conn is **1.2.2**. TLS is **1.2.4**. Host-observed DNS is **1.1.4**. No lab.
 
 ## Concepts taught
 
@@ -25,7 +27,18 @@ This folder is **not** outline item `1.2.3` (that heading is Conn engine tasks).
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- [Student guide](student-guide.md)
+- [Instructor guide and answer key](instructor-guide.md)
+- [Slides and speaker notes](slides.md)
+
+## Course connections
+
+Previous: [1.2.2 – Conn Engine](../02-conn-engine/student-guide.md)
+
+Next: [1.2.4 – TLS Engine](../04-tls-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — dns.log](https://docs.zeek.org/en/current/reference/logs/dns.html)

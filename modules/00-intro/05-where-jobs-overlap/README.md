@@ -4,13 +4,15 @@
 **Primary role:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
 **Time:** about 15–20 minutes
 
+## Purpose
+
+Several analysts may examine the same host, log, or domain while working toward different outcomes. Understanding those outcomes helps you collaborate without losing track of who is responsible for the remaining work. In this lesson, a **product** means the result a role is expected to deliver.
+
 ## Mapped proficiency items
 
 | Matrix ID | Type | Item | Outline heading |
 |-----------|------|------|-----------------|
 | 0.5 | K | Where the jobs lightly overlap | 0.5 a–d |
-
-The teaching-unit ID is **0.5**. How work moves is **0.4**. Jobs in one sentence is **0.3**. Frameworks are **0.6**. Same evidence, different product. One person may fill two jobs; still two products. Not how to close an alert, write an intel note, hunt, or write a rule. No lab. No DYA ticket names.
 
 ## Concepts taught
 
@@ -21,7 +23,16 @@ The teaching-unit ID is **0.5**. How work moves is **0.4**. Jobs in one sentence
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- [Student guide](student-guide.md)
+- [Instructor guide and answer key](instructor-guide.md)
+- [Slides and speaker notes](slides.md)
+
+## Course connections
+
+Previous: [0.4 – How work can move](../04-how-work-moves/student-guide.md)
+
+Next: [0.6.1 – MITRE ATT&CK](../06-frameworks/01-attck/student-guide.md)
+
+## References and Further Reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.

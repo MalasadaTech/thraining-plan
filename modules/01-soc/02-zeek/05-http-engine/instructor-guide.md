@@ -8,98 +8,86 @@
 **Estimated Time:** 25–30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Read a Zeek `http` log and describe it. Say what a specific SIEM query looks like.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts read Zeek HTTP logs to see a request and response on the wire — method, host, URI, User-Agent, status, and who talked to whom.
-- How it hooks to the lesson before: 1.2.4 was the TLS handshake. This lesson is HTTP that Zeek still parsed.
-- How it hooks to the lesson after: 1.2.6 is SMTP. File extract of an HTTP GET is 1.2.7.
-- Why we are doing it this way: after the handshake, read one protocol extract so you can describe a request before you open mail or files.
-- What we are *not* doing in this lesson: the initiating process (1.1.4). uid-pivot as a unit. Body content. SMTP fields. Course-fiction plot. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **method**, **host**, **URI**, **URL**, **User-Agent**, **status**, and **orig / resp**. **Row** is the SIEM-table gloss from the student intro, not the headline word. **host** is the Host header, not the destination IP. The given uses `GET /update.exe` to `203.0.113.88:8080` with status `200` and an empty User-Agent. Do not invent a Host header if the log does not have one. Do not turn the given into the intro plot.
-
-**Key Teaching Points:**
-- URL is host + URI. There is often no single `url` field.
-- User-Agent can lie. Empty means it was not logged.
-- Status 200 is not a verdict.
-- A query is specific, not every `http` log.
-
-**Common Student Challenges:**
-- Treat `host` as the destination IP. Why: the word sounds like a machine. Example: writing `203.0.113.88` as `host` when that value is `id.resp_h`.
-- Treat status 200 as benign. Why: 200 means the server answered OK, not that the request is safe. Example: calling `/update.exe` fine because the status is 200.
-- Write `http=*` as a “specific” query. Why: the task is a named pattern. Example: every HTTP log with no method, host, URI, User-Agent, or dest filter.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+An HTTP record helps explain what a client requested and what response status the sensor observed. Separating request details, server response, and any transferred content makes the resulting account more precise.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Interpret HTTP method, host, URI, User-Agent, response status, and endpoints.
+2. Describe the request and response without inventing content or execution.
+3. Create or modify a query for specific HTTP activity.
 
 **Mapped Proficiency Items:**
 - K: 1.2.5.1 – HTTP engine
 - T: 1.2.5.2 – Analyze a Zeek HTTP log and accurately describe what occurred
 - T: 1.2.5.3 – Create a SIEM query to detect specific HTTP activity
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required. For query tasks, ask learners to write or modify the shown query and explain its predicates. Confirm the local schema if demonstrating it in an approved teaching environment.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | HTTP request/response on the wire, not body or process |
-| Key Concepts            | 16 min    | Fields; two products |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~25 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 17 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **27** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Reading HTTP fields
 
-**Talking Points:**
-- Open with the job: an alert names a web request, and you have to say method, host, URI, status, and who talked to whom.
-- Walk the field table. Stop on `host`: it is the Host header, not `id.resp_h`.
-- URL is host plus URI. Do not invent a Host header if the log does not have one.
-- Stop on status: 200 is not benign. 404 is not safe.
-- Walk the given: `GET /update.exe` to `203.0.113.88:8080`, status `200`, User-Agent empty. One sentence. Do not name a process. Do not invent the body.
-- If they name `powershell.exe`: that is 1.1.4. Stay on this log.
-- If they open TLS SNI: that is a different log. 1.2.4.
-- If they write `http=*`: that is not a specific query.
+Explain why Host plus URI can still leave scheme or port uncertain. Emphasize that User-Agent is a claim made by the client.
 
----
+**Key point to reinforce:** Read method, Host, URI, User-Agent, response status, endpoints, and transaction context.
 
-## Knowledge Check – Answer Key
+### 2. Working through the example
 
-1. **`host` is the destination IP. True or false?**  
-   **Answer:** False. It is the Host header. Destination IP is `id.resp_h`.  
-   **Explanation:** `host` is what the client put in the Host header. Empty means it was not logged, not that there was no destination.
+Ask what evidence would establish file contents and what would establish execution. Preserve the distinction between the two.
 
-2. **GET /update.exe to 203.0.113.88:8080, 200, User-Agent empty. What occurred?**  
-   **Answer:** The originator requested GET `/update.exe` from `203.0.113.88` on port 8080 and received status 200. User-Agent was not logged.  
-   **Explanation:** Describe this log only. Do not invent a Host header. Do not name a process. Do not mix in a TLS handshake.
+**Key point to reinforce:** GET /update.exe receives status 200. That establishes neither the returned file’s identity nor its execution.
 
-3. **A query that matches every `http` log is specific. True or false?**  
-   **Answer:** False. A good query names a specific pattern (method, host, URI, User-Agent, or dest).  
-   **Explanation:** Every HTTP log is a table dump, not a detection for this task.
+### 3. Creating a focused HTTP query
 
----
+Compare exact path, path-plus-query, and a different path containing the same filename. Have learners explain their intended scope.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Exact URI and path-plus-query matching return different results. Choose and explain the intended comparison.
 
-- Next: 1.2.6 SMTP engine
+## Knowledge Check — Answer Key
+
+### 1. How do the Host header, destination IP, and URI differ?
+
+**Expected answer:** Host identifies the requested host name as recorded in the header; the IP identifies the network destination; URI identifies the requested resource.
+
+### 2. What does the example establish, and does it prove update.exe ran?
+
+**Expected answer:** It establishes the observed GET request and 200 response. It does not establish the content’s identity, saving to disk, or execution.
+
+### 3. Would uri == "/update.exe" match /update.exe?id=1? How could you broaden it?
+
+**Expected answer:** No. A scoped alternative such as `uri == "/update.exe" or uri startswith "/update.exe?"` includes the exact path with a query string without matching every occurrence of the name.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+An HTTP finding connects the request, response status, and endpoints. Preserve missing headers and distinguish a requested path from transferred content or endpoint execution.
+
+Previous: [1.2.4 – TLS Engine](../04-tls-engine/student-guide.md)
+
+Next: [1.2.6 – SMTP Engine](../06-smtp-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — http.log](https://docs.zeek.org/en/current/reference/logs/http.html)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)

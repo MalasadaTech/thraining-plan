@@ -7,57 +7,38 @@
 - CTI: 1.3.3.1 A / B / B ; 1.3.3.2 1a / 2b / 3c ; 1.3.3.3 1a / 1a / 2b  
 **Estimated Time:** 25–30 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Say what a YARA rule is for, name its blocks, and when it runs on a file vs memory.
-2. Read an existing rule and say what it detects; propose a **basic** create or modify.
+1. Interpret YARA structure, text/hex/regex patterns, and conditions.
+2. Describe what a rule matches in its intended input.
+3. Create or modify a basic file rule and explain file-versus-memory limits.
 
 **Mapped Proficiency Items:**
 - K: 1.3.3.1 – YARA rules
 - T: 1.3.3.2 – Analyze an existing YARA rule and describe what it detects
 - T: 1.3.3.3 – Create or modify a basic YARA rule
 
----
+## Why This Matters
 
-## 1. Key Concepts
+YARA examines content supplied to a scanner, such as a file or process memory. Understanding what bytes and conditions a rule tests helps you distinguish a content match from a filename, log entry, or conclusion about maliciousness.
 
-SOC analysts match **byte patterns** on a file they already have, or on memory the shop already scans. A log can name a file, a hash, or a URI. It does not show the bytes inside. That is the job in this lesson: read a **YARA** rule so you can say what would hit those bytes, and propose a basic create or modify. **1.3.2** was Suricata on the wire. This lesson is the file (or memory). You do **not** deploy the rule. You do **not** dump memory. How detections run as a service is **4.x**.
+## 1. Understanding the rule structure
 
-**YARA** matches **byte patterns** in a file or in process memory. It is not SIGMA and not Suricata. It is not a SIEM query language.
+A YARA rule has a name and a required `condition`. Optional `meta` entries describe it, while a `strings` section defines named text, hexadecimal, or regular-expression patterns used by the condition. Not every valid rule needs strings or metadata.
 
-```
-rule RuleName
+Text such as `"update.exe" ascii nocase` matches that content without case sensitivity. Hexadecimal `{ 4D 5A }` matches the bytes MZ. A regex such as `/update\.(exe|dll)/ nocase` allows alternatives. Conditions can combine patterns with AND/OR, positions such as `$mz at 0`, a count such as `#name >= 2`, or a file-size test.
+
+The scanner must receive the relevant bytes. A network file log that names a hash is not the same input as an extracted file.
+
+## 2. Reading a basic file rule
+
+```yara
+rule Training_Update_Marker
 {
     meta:
-        description = "..."
-    strings:
-        $a = "..."
-    condition:
-        $a
-}
-```
-
-| Idea | What to read |
-|------|----------------|
-| **Purpose / structure** | `rule` name, `meta` (notes, not the match), `strings`, `condition`. A strings block with no real condition is not a useful proposal. |
-| **Strings and condition** | Named patterns plus boolean (`and`, `or`, `filesize`, `uint16(0) == 0x5A4D`, `#s >= 2`). `$mz at 0` is the same *idea* as that `uint16` check: MZ at the start of the file. |
-| **ASCII / hex / regex** | ASCII = `"update.exe" ascii nocase`. Hex = `{ 4D 5A }` (`MZ`) — not Suricata `content:"\|4d 5a\|"`. Regex = `/update\.(exe\|dll)/ nocase`. Regex is easy to over-match. |
-| **Files vs memory** | **File** — disk or a saved extract. `at 0` and `filesize` can apply. **Memory** — a process the shop already scans. Drop `filesize` (it does not apply there, so the rule will not match). Drop `at 0` for a PE header; the image may not sit at the start of the region. If your shop does not scan memory, say so and stay on files. |
-
-**What good looks like:**
-
-- Analyze: name the strings, the condition, file vs memory, and what would fire. `{ 4D 5A } at 0` alone matches every PE, including Notepad.
-- Given:
-
-```
-rule Train_UpdateExe
-{
-    meta:
-        description = "PE that contains update.exe"
+        description = "Teaching example: MZ prefix and update.exe string"
     strings:
         $mz = { 4D 5A }
         $name = "update.exe" ascii nocase
@@ -66,31 +47,35 @@ rule Train_UpdateExe
 }
 ```
 
-**What it detects:** a **file** that starts with MZ and contains `update.exe`, under 5 MB. That can fit a PE extract of `update.exe` (**1.2.7**) **if you scan those bytes**. It does not match a `files` log line. It is not a conviction.
+The rule matches files smaller than 5 MB whose first two bytes are MZ and whose content includes `update.exe`. It does not test the filesystem name. MZ is consistent with a DOS/PE-style header but alone does not validate a complete PE file. The string is intentionally simple for teaching and is not a distinctive malware-family signature.
 
-- Modify / create: a **basic** file rule with one distinctive string **and** a header or size check. Tightening “MZ only” by adding `update.exe` is a modify. SOC **proposes**. DE reviews.
+A benign file could satisfy every condition. Explain a hit as a content match and use additional analysis to determine its significance.
 
----
+## 3. Modifying a rule and choosing the input
 
-## 2. Knowledge Check
+To require two occurrences of the example name, replace `$name` with `#name >= 2` in the condition. This changes a measurable property of the content; it still does not make the rule a reliable maliciousness verdict.
 
-1. YARA is a SIEM query language. True or false?
-2. The given rule above — what does it detect, in one sentence?
-3. Why is `{ 4D 5A } at 0` alone a poor proposal?
+File and process-memory scans have different semantics. `filesize` is undefined during a process-memory scan, and offsets in memory are virtual addresses rather than file-relative positions. Adapt and test a rule for its intended input instead of assuming a file rule will work unchanged in memory. The basic proposal here remains a file rule for review by Detection Engineering.
 
----
+## Knowledge Check
 
-## 3. Summary
+1. What does the teaching rule match, and does the filename itself matter?
+2. Modify the rule to require two occurrences of the name.
+3. Why should the same rule not be assumed to work as intended on process memory?
 
-YARA is meta + strings + condition. ASCII, hex, and regex. File rules may use `at 0` and `filesize`. Memory often must not. You propose. You do not deploy.
+## Summary
 
-**Next:** **1.3.4** SIEM rules.
+A YARA description explains the supplied input, patterns, and condition. Basic modifications should have predictable matching behavior, and file versus memory use requires attention to input semantics.
 
----
+## Course Connections
 
-## 4. Related modules
+Previous: [1.3.2 – Suricata Rules](../02-suricata-rules/student-guide.md)
 
-- 1.3.2 – Suricata rules (previous)
-- 1.2.7 – Files engine
-- 1.3.4 – SIEM rules
-- 4.x – How detections run as a service
+Next: [1.3.4 – SIEM Rules](../04-siem-rules/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [YARA — Writing rules](https://yara.readthedocs.io/en/stable/writingrules.html)
+- [YARA — Command-line input options](https://yara.readthedocs.io/en/stable/commandline.html)

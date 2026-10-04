@@ -1,83 +1,85 @@
-# Module 0.6.2 – Diamond Model  
-## Slide Deck Content
+# Module 0.6.2 – Diamond Model
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
-**Estimated Delivery Time:** 15 minutes  
-**Total Suggested Slides:** 6
+- Describe the four Diamond Model vertices.
+- Organize a simple event using the available evidence.
+- Identify the weakest-supported vertex and explain the evidence gap.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 0.6.2 – Diamond Model  
-**Subtitle:** Four vertices and the weakest one  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson is the Diamond Model on the shared floor. It names four vertices and the weakest one. It is not ATT&CK and not a CTI product.
+**Speaker notes:** Introduce the purpose and connect it to the shared course sequence. The objectives describe the understanding learners should demonstrate by the end.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-You get a host, a tool, a domain. Someone still wants a group name.
+The Diamond Model helps you organize what is known about an intrusion event and identify useful questions about what is missing. Its four vertices keep the activity, the systems involved, and the responsible party visible in one view.
 
-This lesson puts what you have on four corners and names the empty one.
-
-**Speaker Notes:**  
-This slide is the student intro. The job is an honest write-up, not a verdict. Do not teach ATT&CK IDs or a CTI product write-up.
+**Speaker notes:** Ask learners where this topic could help them understand an investigation. Use their answers to introduce the example without requiring prior operational experience.
 
 ---
 
-### Slide 3 – Four vertices
-**Title:** Four vertices
+## The four vertices
 
-**Adversary** — who (only with evidence).  
-**Capability** — what they used.  
-**Infrastructure** — IP, domain, or mailbox.  
-**Victim** — host, user, or org.
+Adversary: responsible party.
 
-The model shows what you do **not** know. It is not a verdict.
+Capability: tools or techniques.
 
-**Speaker Notes:**  
-Name the four corners. A vendor name on a PDF is not Adversary evidence. Do not fill this from last lesson’s ATT&CK ID.
+Infrastructure: enabling systems or services.
 
----
+Victim: targeted or affected entity.
 
-### Slide 4 – Weakest vertex
-**Title:** Weakest vertex
-
-Least evidence.  
-That is the next question.  
-Not a guess you write as fact.
-
-**Given:** encoded PowerShell on a workstation talking to a domain.  
-**Weakest:** Adversary.
-
-**Speaker Notes:**  
-Walk the given. Victim is the host. Capability is encoded PowerShell. Infrastructure is the domain. Adversary is empty. If they write PRD, stop them.
+**Speaker notes:** Introduce each vertex as a question analysts can answer from evidence. Explain that a partially filled model is useful because it makes uncertainty visible. Avoid implying that every investigation can identify the adversary.
 
 ---
 
-### Slide 5 – Knowledge Check
-**Title:** Knowledge Check
+## Organizing a small example
 
-1. Name the four Diamond vertices.  
-2. What do you do with the weakest vertex?  
-3. Encoded PowerShell on a workstation talking to a domain. Which vertex is usually weakest, and why?
+Capability: observed PowerShell execution.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+Infrastructure: contacted domain; role still under assessment.
+
+Victim: observed workstation.
+
+Adversary: unknown from these events.
+
+**Speaker notes:** Trace each entry to its source. Ask what the network event proves: contact occurred. Then ask what remains uncertain: ownership, purpose, and relevance. This distinction prevents the diagram from making an inference appear established.
 
 ---
 
-### Slide 6 – Summary
-**Title:** Summary
+## Using gaps to guide a question
 
-Four vertices. Fill what you have.  
-Name the weakest. Do not invent the adversary.
+Identify the weakest-supported vertex.
 
-**Next:** **0.6.3** Cyber Kill Chain
+Explain what evidence is missing.
 
-**Speaker Notes:**  
-Kill Chain is the same activity in time. It is not another Diamond vertex.
+Choose the next question according to the investigation’s purpose.
+
+**Speaker notes:** Ask learners to distinguish the largest evidence gap from the highest-priority next step. Vendor research can supply evidence; a label without its basis cannot resolve attribution. Keep the discussion at the four-vertex level.
+
+---
+
+## Knowledge check
+
+1. Name the four Diamond Model vertices and what each describes.
+2. How would you organize the PowerShell and domain-contact example?
+3. Which vertex is weakest in the example, and must it be resolved first?
+
+**Speaker notes:** Ask learners to explain the evidence or reasoning behind each answer. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for expected responses and feedback.
+
+---
+
+## Summary and next step
+
+The Diamond Model organizes an event around adversary, capability, infrastructure, and victim. Populate it from evidence, mark uncertainty, and use the gaps to develop questions that matter to the investigation.
+
+Previous: [0.6.1 – MITRE ATT&CK](../01-attck/student-guide.md)
+
+Next: [0.6.3 – Cyber Kill Chain](../03-cyber-kill-chain/student-guide.md)
+
+**Speaker notes:** Revisit any uncertainty from the knowledge check, then connect the lesson to the next topic.
+
+---
+
+## References and further reading
+
+- [Sergio Caltagirone — The Diamond Model](https://www.activeresponse.org/the-diamond-model/) — Author resource for the model introduced by Caltagirone, Pendergast, and Betz in 2013.
+
+**Speaker notes:** These linked resources support the lesson and provide a place to check definitions and service details.

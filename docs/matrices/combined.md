@@ -38,7 +38,7 @@ Everyone. Taught before SOC. Same codes for SOC, Hunter, CTI, and DE. Firewall /
 
 ## 0.6 Frameworks (all four roles)
 
-Taught after **0.5**, before SOC **1.1** (`00.06`). Three teaching units. Outline K/T IDs match this table (`0.6.1.1` K, `0.6.1.2` T). Hunt planning with ATT&CK is **3.5**. Actor profiles are **2.11**. DTF is **2.7.4**. DE codes match the shared-intro pattern (not DE-primary).
+Taught after **0.5**, before SOC **1.1** (`00.06`). Three teaching units. Outline K/T IDs match this table (`0.6.1.1` K, `0.6.1.2` T). Hunt planning with ATT&CK is **3.5**. Actor profiles are **2.7**. DTF is **2.5.6**. DE codes match the shared-intro pattern (not DE-primary).
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
 |---|------|------|-----------|--------------|-----------|----------|
@@ -53,7 +53,7 @@ Taught after **0.5**, before SOC **1.1** (`00.06`). Three teaching units. Outlin
 
 ## 0.7 External tools (all four roles)
 
-Taught after **0.6**, before SOC **1.1** (`00.07`). Outline K/T IDs match this table (`0.7` K, `0.7.1` T). Internal TIP is **2.3.1**. Advanced enrichment / pivot is **2.9**. DE codes match the shared-intro pattern (not DE-primary).
+Taught after **0.6**, before SOC **1.1** (`00.07`). Outline K/T IDs match this table (`0.7` K, `0.7.1` T). Internal TIP is **2.4.1**. Advanced enrichment / pivot is **2.4**. DE codes match the shared-intro pattern (not DE-primary).
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
 |---|------|------|-----------|--------------|-----------|----------|
@@ -151,7 +151,7 @@ Host-observed activity (Sysmon / MDE). Protocol deep-dive is 1.2 Zeek.
 
 ## 1.4 Alert Handling (Primarily SOC)
 
-Five teaching units. Tasks apply the knowledge item they sit under. False-positive *causes* are **1.4.3**, not a second K row under classification. Detection authoring is 1.3. **1.4.1** context includes a VirusTotal lookup of a hash, IP, or domain you already have (`0.7`). Not Relations (`2.9`).
+Five teaching units. Tasks apply the knowledge item they sit under. False-positive *causes* are **1.4.3**, not a second K row under classification. Detection authoring is 1.3. **1.4.1** context includes a VirusTotal lookup of a hash, IP, or domain you already have (`0.7`). Not Relations (`2.4`).
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
 |---|------|------|-----------|--------------|-----------|
@@ -188,12 +188,10 @@ Three teaching units. Tasks apply the knowledge they sit under. Alert SLA clocks
 
 ---
 
-## 2.1 Core Intelligence Concepts
-
-Taught after SOC. Hunt `3.x` is after this block.
+## 2.1 Intelligence Foundations and Requirements
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
+|---|---|---|---|---|---|
 | 2.1.1 | Difference between data, information, and intelligence | K | A / A / A | A / B / B | B / C / C |
 | 2.1.1.1 | Correctly categorize examples as data, information, or intelligence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
 | 2.1.2 | Intelligence lifecycle | K | A / A / A | A / B / B | B / C / C |
@@ -204,22 +202,24 @@ Taught after SOC. Hunt `3.x` is after this block.
 | 2.1.4.1 | Develop or refine intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 | 2.1.4.2 | Translate stakeholder questions into clear intelligence requirements | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
 | 2.1.4.3 | Explain how a given requirement drives analytic work | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
-| 2.1.5 | Ensuring intelligence is actionable | K | A / A / B | A / B / B | B / C / C |
-| 2.1.5.1 | Evaluate whether a piece of intelligence is actionable and explain why | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.1.6 | Tailoring output to the audience | K | A / A / B | A / B / B | B / C / C |
-| 2.1.6.1 | Adjust an intelligence product for a specified audience | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.1.7 | Attribution (purpose, confidence, types) | K | A / A / A | A / B / B | B / C / C |
-| 2.1.7.1 | Assess attribution statements for confidence and supporting evidence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.1.8 | Collection sources and methods (OSINT, commercial, internal) | K | A / A / B | A / B / B | B / C / C |
-| 2.1.8.1 | Identify appropriate collection source classes for a given requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 2.1.8.2 | Plan collection against an intelligence requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
+| 2.1.5 | RFI intake and prioritization | K | A / A / A | A / A / B | B / C / C |
+| 2.1.5.1 | Receive, evaluate, and prioritize an RFI | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
+| 2.1.6 | Ensuring intelligence is actionable | K | A / A / B | A / B / B | B / C / C |
+| 2.1.6.1 | Evaluate whether a piece of intelligence is actionable and explain why | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.1.7 | Tailoring output to the audience | K | A / A / B | A / B / B | B / C / C |
+| 2.1.7.1 | Adjust an intelligence product for a specified audience | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.1.8 | Attribution (purpose, confidence, types) | K | A / A / A | A / B / B | B / C / C |
+| 2.1.8.1 | Assess attribution statements for confidence and supporting evidence | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.1.9 | Collection sources and methods (OSINT, commercial, internal) | K | A / A / B | A / B / B | B / C / C |
+| 2.1.9.1 | Identify appropriate collection source classes for a given requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 2.1.9.2 | Plan collection against an intelligence requirement | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
 
 ---
 
-## 2.2 Analytic Tradecraft
+## 2.2 Analytical Tradecraft
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
+|---|---|---|---|---|---|
 | 2.2.1 | Estimative language | K | A / A / A | A / B / B | B / C / C |
 | 2.2.1.1 | Use and interpret estimative language in analytic judgments | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
 | 2.2.2 | Structured analytic techniques | K | A / A / A | A / B / B | B / C / C |
@@ -231,133 +231,106 @@ Taught after SOC. Hunt `3.x` is after this block.
 
 ---
 
-## 2.3 Tools
+## 2.3 Analytical Frameworks
 
-The external-tool survey is **`0.7`**. Do not re-teach it here. Advanced enrichment / pivot is **2.9**. Internal TIP (`2.3.1`) stays CTI.
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 | DE 3/5/7 |
-|---|------|------|-----------|--------------|-----------|----------|
-| 2.3.1 | Internal threat intelligence platform | K | A / A / B | A / B / B | B / C / C | — |
-| 2.3.1.1 | Search, retrieve, and use the internal TIP for enrichment or analysis | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d | — |
+| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|---|---|---|---|---|
+| 2.3.1 | MITRE ATT&CK for CTI analysis and reporting | K | A / B / B | B / C / C | B / C / C |
+| 2.3.1.1 | Map activity or reports to MITRE ATT&CK | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
+| 2.3.2 | Diamond Model application in CTI | K | A / B / B | B / C / C | B / C / C |
+| 2.3.2.1 | Apply the Diamond Model to an intelligence problem | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.3.3 | Cyber Kill Chain in intelligence analysis | K | A / B / B | B / C / C | B / C / C |
+| 2.3.3.1 | Identify the Kill Chain stage of observed or reported activity | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
 
 ---
 
-## 2.4 File Similarity & Hashing Techniques
+## 2.4 CTI Tools and Platforms
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.4.1 | Hashing and similarity concepts (imphash, ssdeep, TLSH, code-signing certificates) | K | A / A / B | A / B / B | B / C / C |
-| 2.4.1.1 | Use file similarity hashes to identify related samples | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.4.1.2 | Extract and interpret certificate / code-signing information from a file | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+|---|---|---|---|---|---|
+| 2.4.1 | Internal threat intelligence platform | K | A / A / B | A / B / B | B / C / C |
+| 2.4.1.1 | Search, retrieve, and use the internal TIP for enrichment or analysis | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.4.2 | Selecting platforms for CTI work | K | — | — | B / C / C |
+| 2.4.2.1 | Select a source and record a question-driven CTI lookup | T | — | — | 3c / 4c / 4d |
+| 2.4.3 | VirusTotal (Relations and Behavior tabs) | K | A / B / B | B / C / C | B / C / C |
+| 2.4.3.1 | Use VirusTotal Relations and Behavior to pivot and extract events | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.4.4 | AnyRun | K | A / A / B | A / B / B | B / C / C |
+| 2.4.4.1 | Search and review AnyRun submissions for actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 2.4.5 | Silent Push | K | A / A / B | A / B / B | B / C / C |
+| 2.4.5.1 | Enrich an indicator and pivot in Silent Push | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 2.4.6 | URLScan | K | A / A / B | A / B / B | B / C / C |
+| 2.4.6.1 | Submit or retrieve a URLScan result and extract actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
 
 ---
 
-## 2.5 RDAP / WHOIS
+## 2.5 Technical Enrichment and Discovery
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.5.1 | RDAP and WHOIS concepts | K | A / A / B | A / B / B | B / C / C |
-| 2.5.1.1 | Query RDAP/WHOIS and interpret fields for enrichment or attribution | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+|---|---|---|---|---|---|
+| 2.5.1 | IOC handling and enrichment concepts | K | A / B / B | B / C / C | B / C / C |
+| 2.5.1.1 | Enrich and pivot on IOCs using internal and external tools | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.5.2 | Hashing and similarity concepts (imphash, ssdeep, TLSH, code-signing certificates) | K | A / A / B | A / B / B | B / C / C |
+| 2.5.2.1 | Use file similarity hashes to identify related samples | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.5.2.2 | Extract and interpret certificate / code-signing information from a file | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 2.5.3 | RDAP and WHOIS concepts | K | A / A / B | A / B / B | B / C / C |
+| 2.5.3.1 | Query RDAP/WHOIS and interpret fields for enrichment or attribution | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 2.5.4 | Advanced DNS concepts (SOA and other records of intel value) | K | A / A / B | B / C / C | B / C / C |
+| 2.5.4.1 | Interpret an SOA record and use advanced DNS data to enrich or pivot | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 2.5.5 | Identifying additional adversary infrastructure from seed indicators | K | A / B / B | B / C / C | B / C / C |
+| 2.5.5.1 | Pivot from a seed indicator to additional adversary infrastructure | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.5.6 | Defender’s ThreatMesh Framework (DTF) for infrastructure discovery | K | A / A / B | A / B / B | B / C / C |
+| 2.5.6.1 | Apply DTF: select a pivot tactic and pivot from a seed and reject the weak neighbor | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.5.6.2 | Use a selected DTF pivot to guide the next enrichment or lookup | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.5.6.3 | Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 2.5.7 | Correlation, link analysis, and campaign tracking | K | A / B / B | B / C / C | B / C / C |
+| 2.5.7.1 | Link analysis and campaign tracking | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
 
 ---
 
-## 2.6 Advanced DNS
+## 2.6 Threat Assessment and Organizational Significance
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.6.1 | Advanced DNS concepts (SOA and other records of intel value) | K | A / A / B | B / C / C | B / C / C |
-| 2.6.1.1 | Interpret an SOA record and use advanced DNS data to enrich or pivot | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+|---|---|---|---|---|---|
+| 2.6.1 | Extracting applicable TTPs from intelligence reports | K | A / B / B | B / C / C | B / C / C |
+| 2.6.1.1 | Extract applicable TTPs from an intelligence report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
+| 2.6.2 | Threat relevance and organizational impact | K | A / B / B | B / C / C | B / C / C |
+| 2.6.2.1 | Assess threat relevance and potential impact to the organization | T | 1a / 2b / 3c | 2b / 3c / 4c | 3c / 4c / 4d |
 
 ---
 
-## 2.7 Frameworks
+## 2.7 Intelligence Production and Dissemination
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.7.1 | MITRE ATT&CK for CTI analysis and reporting | K | A / B / B | B / C / C | B / C / C |
-| 2.7.1.1 | Map activity or reports to MITRE ATT&CK | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 2.7.2 | Diamond Model application in CTI | K | A / B / B | B / C / C | B / C / C |
-| 2.7.2.1 | Apply the Diamond Model to an intelligence problem | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.7.3 | Cyber Kill Chain in intelligence analysis | K | A / B / B | B / C / C | B / C / C |
-| 2.7.3.1 | Identify the Kill Chain stage of observed or reported activity | T | 2b / 3c / 4c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 2.7.4 | Defender’s ThreatMesh Framework (DTF) for infrastructure discovery | K | A / A / B | A / B / B | B / C / C |
-| 2.7.4.1 | Apply DTF: select a pivot tactic and pivot from a seed and reject the weak neighbor | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.7.4.2 | Use a selected DTF pivot to guide the next enrichment or lookup | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.7.4.3 | Explain how DTF integrates with or complements ATT&CK, Diamond, and Kill Chain | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+|---|---|---|---|---|---|
+| 2.7.1 | Core STIX objects | K | A / B / B | B / C / C | B / C / C |
+| 2.7.1.1 | Identify and label common STIX objects in a report | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 2.7.2 | How STIX objects are used in intelligence production | K | A / B / B | B / C / C | B / C / C |
+| 2.7.2.1 | Create STIX-aligned relationships and explain a threat scenario | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 2.7.2.2 | Create and validate STIX objects | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
+| 2.7.2.3 | Use TAXII for sharing and consumption of intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
+| 2.7.3 | Creating finished intelligence products | K | A / A / B | A / B / B | B / C / C |
+| 2.7.3.1 | Draft a finished product and evaluate it against standards | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.7.3.2 | Produce a threat actor profile | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.7.4 | RFI responses and closure | K | A / A / A | A / A / B | B / C / C |
+| 2.7.4.1 | Produce an evidence-based RFI response and close or record follow-up | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
+| 2.7.5 | Disseminating intelligence to the correct audiences | K | A / A / B | A / B / B | B / C / C |
+| 2.7.5.1 | Select audience and method and apply correct handling markings | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
+| 2.7.5.2 | Tailor products to different audiences (technical, leadership, etc.) | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
+| 2.7.5.3 | Disseminate intelligence products through approved channels | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
 
 ---
 
-## 2.8 Enrichment & Analysis
+## 2.8 Local Application
 
 | # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.8.1 | Identifying additional adversary infrastructure from seed indicators | K | A / B / B | B / C / C | B / C / C |
-| 2.8.1.1 | Pivot from a seed indicator to additional adversary infrastructure | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.8.2 | Extracting applicable TTPs from intelligence reports | K | A / B / B | B / C / C | B / C / C |
-| 2.8.2.1 | Extract applicable TTPs from an intelligence report | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.8.3 | IOC handling and enrichment concepts | K | A / B / B | B / C / C | B / C / C |
-| 2.8.3.1 | Enrich and pivot on IOCs using internal and external tools | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.8.3.2 | Link analysis and campaign tracking | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.8.4 | Threat relevance and organizational impact | K | A / B / B | B / C / C | B / C / C |
-| 2.8.4.1 | Assess threat relevance and potential impact to the organization | T | 1a / 2b / 3c | 2b / 3c / 4c | 3c / 4c / 4d |
-
----
-
-## 2.9 Platform-Specific Skills
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.9.1 | VirusTotal (Relations and Behavior tabs) | K | A / B / B | B / C / C | B / C / C |
-| 2.9.1.1 | Use VirusTotal Relations and Behavior to pivot and extract events | T | 1a / 2b / 3c | 3c / 4c / 4d | 3c / 4c / 4d |
-| 2.9.2 | AnyRun | K | A / A / B | A / B / B | B / C / C |
-| 2.9.2.1 | Search and review AnyRun submissions for actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
-| 2.9.3 | Silent Push | K | A / A / B | A / B / B | B / C / C |
-| 2.9.3.1 | Enrich an indicator and pivot in Silent Push | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
-| 2.9.4 | URLScan | K | A / A / B | A / B / B | B / C / C |
-| 2.9.4.1 | Submit or retrieve a URLScan result and extract actionable intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
-
----
-
-## 2.10 Common STIX Objects
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.10.1 | Core STIX objects | K | A / B / B | B / C / C | B / C / C |
-| 2.10.1.1 | Identify and label common STIX objects in a report | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
-| 2.10.2 | How STIX objects are used in intelligence production | K | A / B / B | B / C / C | B / C / C |
-| 2.10.2.1 | Create STIX-aligned relationships and explain a threat scenario | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
-| 2.10.2.2 | Create and validate STIX objects | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4d |
-| 2.10.2.3 | Use TAXII for sharing and consumption of intelligence | T | 1a / 1a / 2b | 2b / 3c / 4c | 3c / 4c / 4c |
-
----
-
-## 2.11 Intelligence Production & Dissemination
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.11.1 | Creating finished intelligence products | K | A / A / B | A / B / B | B / C / C |
-| 2.11.1.1 | Draft a finished product and evaluate it against standards | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.11.1.2 | Produce a threat actor profile | T | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.11.2 | Disseminating intelligence to the correct audiences | K | A / A / B | A / B / B | B / C / C |
-| 2.11.2.1 | Select audience and method and apply correct handling markings | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
-| 2.11.2.2 | Tailor products to different audiences (technical, leadership, etc.) | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4d |
-| 2.11.2.3 | Disseminate intelligence products through approved channels | T | 1a / 1a / 2b | 1a / 2b / 3c | 3c / 4c / 4c |
-| 2.11.3 | Handling RFIs | K | A / A / A | A / A / B | B / C / C |
-| 2.11.3.1 | Evaluate, prioritize, and produce a response to an RFI | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4d |
-
----
-
-## 2.12 Site-Specific CTI Knowledge and Tasks
-
-| # | Item | Type | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|---|------|------|-----------|--------------|-----------|
-| 2.12.1 | Local intelligence requirements and priorities | K | A / A / A | A / A / B | B / C / C |
-| 2.12.1.1 | Identify current local priorities and align analytic work to them | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 2.12.2 | Local production and approval processes | K | A / A / A | A / A / B | B / C / C |
-| 2.12.2.1 | Follow the local process for requesting collection or producing and approving products | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 2.12.2.2 | Document and archive intelligence products according to local standards | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
-| 2.12.3 | Local dissemination channels and customers | K | A / A / A | A / A / B | B / C / C |
-| 2.12.3.1 | Disseminate a product using the correct local channels and customers | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+|---|---|---|---|---|---|
+| 2.8.1 | Local intelligence requirements and priorities | K | A / A / A | A / A / B | B / C / C |
+| 2.8.1.1 | Identify current local priorities and align analytic work to them | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 2.8.2 | Local production and approval processes | K | A / A / A | A / A / B | B / C / C |
+| 2.8.2.1 | Follow the local process for requesting collection or producing and approving products | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 2.8.2.2 | Document and archive intelligence products according to local standards | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
+| 2.8.3 | Local dissemination channels and customers | K | A / A / A | A / A / B | B / C / C |
+| 2.8.3.1 | Disseminate a product using the correct local channels and customers | T | 1a / 1a / 1a | 1a / 1a / 2b | 3c / 4c / 4c |
 
 ---
 
@@ -494,4 +467,4 @@ Taught last. **1.3** is rule syntax / first read-write. Nominations from SOC, hu
 - Section `0` includes `0.6` frameworks, `0.7` tool survey, and `0.8` environment / signal flow. Those tables include a DE column. SOC ends at `1.5`. Other `1`–`3` rows stay three columns until we rate DE on them.
 - **`1.8.2` is retired.** PCAP why/when is `1.2.1`. Apply-versus-alert is `1.4.1.6`. Sensors are `0.8.g`. Download/view is `1.8.3` if the shop lists them.
 - Section `4` is Detection Engineer (`4.1`–`4.8`). DE is primary (`docs/matrices/de.md`). Cross-role awareness lives **only** on this combined sheet — not on the SOC, hunter, or CTI sheets. Sensor unit `4.7` is lighter. Site unit `4.8` is obtain-and-follow.
-- Hunt `3.x` and CTI `2.x` tasks are children of their knowledge item (`2.2.1` K, `2.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.5.1`–`1.5.3`) at the SOC/CTI seam. Shift change is two units (`1.7.1`–`1.7.2`). Leftover SOC site is `1.8.4` notes and `1.8.5` IR. Collection sources are `2.1.8`; relevance/impact is `2.8.4`; actor profile is `2.11.1.2`; local collection request is `2.12.2.1`.
+- Hunt `3.x` and CTI `2.x` tasks are children of their knowledge item (`2.2.1` K, `2.2.1.1` T), matching the outline. SOC Zeek units keep the existing `1.2.x.1` K / `1.2.x.2` T pattern. Alert handling is five units (`1.4.1`–`1.4.5`); FP causes are `1.4.3`. Reporting is three units (`1.5.1`–`1.5.3`) at the SOC/CTI seam. Shift change is two units (`1.7.1`–`1.7.2`). Leftover SOC site is `1.8.4` notes and `1.8.5` IR. Collection sources are `2.1.9`; relevance/impact is `2.6.2`; actor profile is `2.7.3.2`; local collection request is `2.8.2.1`.

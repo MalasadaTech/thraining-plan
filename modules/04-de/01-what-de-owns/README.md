@@ -1,4 +1,4 @@
-# What DE owns
+# What Detection Engineering Owns
 
 **Path:** `modules/04-de/01-what-de-owns`  
 **Primary role:** Detection Engineer  
@@ -7,24 +7,19 @@
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 4.1 | K | What DE owns | 4.1 a–d |
-| 4.1.1 | T | Sort work to DE, nominator, 1.3, or block | 4.1.1 tasks 1–2 |
-
-The teaching-unit ID is **4.1**. Rule syntax is **1.3**. Sound/test is **4.2**. Nomination review is **4.3**. Lifecycle after a block is **4.6**. Not tickets or field lists (**4.8**). No lab.
+| Matrix ID | Type | Item |
+|---|---|---|
+| 4.1 | K | What DE owns |
+| 4.1.1 | T | Sort work to DE, nominator, 1.3, or block/control owner |
 
 ## Concepts taught
 
-- what DE owns
-- nominations need not be perfect
-- 1.3 is how a rule works
-- a block is not a DE deploy
-- sort work to DE, nominator, 1.3, or a block
+- detection lifecycle ownership
+- nominations can be rough
+- rule syntax vs operating detections
+- detection vs enforcement/control ownership
+- new / change / deploy / maintain / retire
 
-## Artifacts
+## Revision note
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+The module preserves the course role boundary while avoiding the universal claim that Detection Engineering can never own blocking or prevention controls; that authority is organization-specific.

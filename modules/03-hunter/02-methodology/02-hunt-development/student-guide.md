@@ -4,77 +4,101 @@
 **Proficiency Focus:**  
 - Hunter: 3.2.2 B / C / C ; 3.2.2.1–3.2.2.3 3c / 4c / 4d  
 - SOC: 3.2.2 A / B / B ; 3.2.2.1–3.2.2.3 1a / 1a / 2b  
-- CTI: 3.2.2 A / B / B ; 3.2.2.1 1a / 2b / 3c ; 3.2.2.2 1a / 2b / 3c ; 3.2.2.3 1a / 2b / 3c  
-**Estimated Time:** 20–25 minutes  
-
----
+- CTI: 3.2.2 A / B / B ; 3.2.2.1–3.2.2.3 1a / 2b / 3c  
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Write a testable hunt hypothesis and define a scope that states population, time window, and telemetry.
+2. Prioritize the hunt and identify a **distinctive/discriminating pattern** suitable for internal search.
 
-1. Write a **hypothesis**, **scope**, and **priority** for a hunt.
-2. Name a **unique pattern** worth searching internally.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.2.2 – Hunt development concepts
 - T: 3.2.2.1 – Develop and document a hunt hypothesis
 - T: 3.2.2.2 – Scope and prioritize a hunt
 - T: 3.2.2.3 – Identify unique patterns or behaviors suitable for hunting
 
----
-
 ## 1. Key Concepts
 
-Hunters bound a search **before** they query. An unbounded look — “search everything for malware” — is not a hunt. That is the job in this lesson: write a short **hunt card** so someone else can tell what you are looking for, where, why now, and which pattern is specific enough to search internally. The card is the four-line write-up: **hypothesis**, **scope**, **priority**, and **unique pattern**.
+A hunt becomes useful when another hunter can understand **what is being tested, where it will be tested, why it matters now, and what evidence would be meaningful**.
 
-**3.2.1** named the hunt types. This lesson is the **write-up**. It is **not** a SIEM session (**3.3.1**). It is **not** your site’s hunt ticket or form (**3.7**). It is **not** “hunt persistence” (**3.6.3**).
+This course captures that in four core fields:
 
-| Piece | Meaning | A12 example |
-|-------|---------|-------------|
-| **Hypothesis** | If X is true, we should see Y | If A12 persistors exist elsewhere, we see HKCU Run **`Updater`** → `%TEMP%\update.exe` |
-| **Scope** | Where / how long / which telemetry | User workstations, last 14 days, registry and file events (not every log source) |
-| **Priority** | Why this hunt now | Open A12 incident plus the missed `GET /update.exe` download (a false negative); not a blog read |
-| **Unique pattern** | Something specific enough to search internally | Run value name **`Updater`**, not “any Run key” |
+| Field | Purpose |
+|---|---|
+| **Hypothesis** | A proposition that evidence can support or fail to support. |
+| **Scope** | Population, time window, telemetry, and important exclusions. |
+| **Priority** | Why this hunt should consume time now. |
+| **Distinctive pattern** | The behavior or artifact that makes the search selective enough to investigate. |
 
-A **hypothesis** is a testable if/then, not a topic. “Hunt persistence” names a class of techniques. “If A12 persistors exist elsewhere, we see HKCU Run `Updater` pointing at `%TEMP%\update.exe`” is a hypothesis you can document and check.
+### Hypothesis
 
-**Scope** names hosts, a time window, and which telemetry you will use. It does not say the whole estate, all time, and every log source.
+A good hypothesis is not a topic such as “hunt persistence.”
 
-**Priority** is why this hunt now. An open incident and a known miss beat a vendor write-up you just read.
+It connects a condition to expected evidence.
 
-A **unique pattern** is a behavior or artifact you can actually search for inside the network. The Run value name `Updater` is unique enough. “Any Run key” is not.
+> If A12-style persistence exists on additional user workstations, we expect to observe Run-key values pointing to `update.exe` or closely related payloads in user-writable paths.
 
-**What good looks like:** four lines on the card. Not a SIEM query this lesson. Not “hunt persistence.”
+That statement can produce findings, or it can produce no findings within the tested scope.
 
-- **Hypothesis:** If A12 persistors exist elsewhere, we see HKCU Run **`Updater`** → `%TEMP%\update.exe`.
-- **Scope:** User workstations, last 14 days, registry and file events.
-- **Priority:** Open A12 incident plus the missed download.
-- **Unique pattern:** Value name **`Updater`**, not any Run key.
+### Scope
 
-Do not invent a ticket name or a tracking board. That is local process (**3.7**).
+Scope should make a negative result interpretable.
 
----
+For example:
+
+- **Population:** managed Windows user workstations
+- **Window:** previous 14 days
+- **Telemetry:** registry modification + file/process telemetry
+- **Exclusions:** known software-deployment systems or approved updater paths, where appropriate
+
+“Entire enterprise, all time, every log” is not automatically better. It often makes the search expensive and the result harder to interpret.
+
+### Priority
+
+Useful priority factors include:
+
+- active incident or mission need;
+- strength and freshness of the lead;
+- local applicability;
+- available telemetry;
+- likely defensive value;
+- search cost and analyst capacity;
+- existing detection coverage.
+
+ATT&CK mapping can support priority later, but an ATT&CK tactic name is not a priority score by itself.
+
+### Distinctive pattern
+
+The curriculum calls this a “unique pattern,” but in practice **distinctive** or **discriminating** is the better idea.
+
+`Updater` alone may be useful if rare locally. A stronger pattern can combine:
+
+- Run-key location;
+- value name;
+- user-writable target path;
+- uncommon parent process;
+- file/signing context.
+
+The goal is not perfect uniqueness. The goal is enough specificity to separate a manageable set of candidates from normal activity.
+
+### Visibility comes before interpretation
+
+A hunt that depends on registry modification data cannot produce a meaningful “not found” result on systems where registry telemetry is absent.
+
+Document that limitation in scope.
 
 ## 2. Knowledge Check
 
-1. A hunt card is “search everything for malware.” True or false?
-2. What four pieces does the hunt card have?
-3. Write a one-line **A12** hypothesis and one unique pattern (not “any Run key”).
-
----
+1. Why is “hunt persistence” not a sufficient hypothesis?
+2. What four core fields does this course use to develop a hunt?
+3. Write a scoped A12 hypothesis using user workstations, a 14-day window, and registry/file telemetry.
 
 ## 3. Summary
 
-Hypothesis, scope, priority, unique pattern. Bound the search. The classroom card is training, not a ticket name you invent.
+Develop the hunt before running the search.
 
-**Next:** **3.3.1** Hunt tool capabilities.
+A useful hunt has a testable hypothesis, bounded scope, defensible priority, and a distinctive pattern grounded in telemetry you actually have.
 
----
-
-## 4. Related modules
-
-- 3.2.1 – Hunt types (previous)
-- 3.3.1 – Hunt tools
-- 3.6.3 – Hunt one named technique
-- 3.7.2 – Local documentation
+**Next:** **3.3.1 – Tool Capabilities for Hunting**.

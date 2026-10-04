@@ -3,94 +3,107 @@
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.2.4 – Cognitive Biases and Mitigation  
-**Subtitle:** Name the bias. Apply a method.  
+**Subtitle:** Give the judgment a fair chance to change  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-This lesson names three biases in a judgment and applies a method so the product can still change. It is not Admiralty, not the TIP, and not a new official method.
+Frame bias as a normal reasoning risk. The task is to recognize vulnerable reasoning in the product and use a process that can correct it.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+### Slide 2 – Why mitigation matters
+**Title:** Good intentions are not a control
 
-CTI analysts write **judgments** other people act on.
+Analysts cannot remove cognitive bias simply by deciding to “be objective.”
 
-A first label, a favorite story, or the last incident can lock that product.
+A useful mitigation changes what the analyst **does** with the reasoning.
 
-This lesson names the **bias** in the judgment and applies a **named method**.
+The goal is to expose assumptions and alternatives before the judgment becomes fixed.
 
 **Speaker Notes:**  
-This slide is the student intro. Stay on the product. Do not diagnose the author. Do not open Admiralty letters or the TIP.
+Keep the discussion on analytic process, not personality or motives.
 
 ---
 
-### Slide 3 – Three biases, and what they do
-**Title:** Confirmation, anchoring, availability
+### Slide 3 – Confirmation bias
+**Title:** The favored explanation gets the easier test
 
-**Confirmation** — keep what fits the first story. Alternatives never get a fair look.  
-**Anchoring** — first name or number sticks. Later internals cannot move the call.  
-**Availability** — the last incident becomes this one. A new event is treated as **A12** with no link.
+**Confirmation bias:** evidence that fits the current explanation receives more attention or weight than evidence that challenges it.
+
+**Risk:** alternatives never receive a fair comparison.
+
+**Useful mitigation:** ACH.
 
 **Speaker Notes:**  
-Write the three names and the product effect. Stop. A longer psychology list is not required. A12 is the classroom incident — availability copies it onto a new event.
+Connect ACH to its purpose from 2.2.2: compare the same evidence against competing explanations and look for inconsistency with the favorite one.
 
 ---
 
-### Slide 4 – Mitigation is a named method
-**Title:** Mitigation is a named method
+### Slide 4 – Anchoring
+**Title:** The first frame keeps pulling the analysis back
 
-A mitigation is a method you run on the product.  
-“Be more objective” is not a mitigation.
+**Anchoring:** an early label, number, or explanation has too much influence on later reasoning.
 
-**Key Assumptions Check** — one claim is carrying the call. List it; say what would break it.  
-**ACH** — two stories are live. See which evidence **hurts** each one.
+**Example:** “PRD APT” appears first, and later evidence is interpreted as though the label already proves sponsorship.
+
+**Useful mitigation:** Key Assumptions Check.
 
 **Speaker Notes:**  
-These two methods were named in 2.2.2. Gloss them so this lesson stands alone. Do not rebuild that lesson. Do not invent a third official method.
+Ask what premise the early label caused the analyst to treat as given.
 
 ---
 
-### Slide 5 – Spot it. Mitigate it.
-**Title:** Spot it. Mitigate it.
+### Slide 5 – Availability bias
+**Title:** The memorable case feels more representative than it is
 
-**Given:** “Vendor PDF says PRD APT, so high nation-state.”
+**Availability bias:** recent or vivid examples come to mind easily and feel more relevant than the evidence supports.
 
-**Spot:** anchoring (and confirmation). **PRD APT** is a vendor label. The first label stuck.
-
-**Mitigate:** Key Assumptions Check. Assumption: vendor name = who they are. That assumption breaks.
+**Example:** a new PowerShell case is assumed to be A12-related even though no meaningful linkage has been established.
 
 **Speaker Notes:**  
-Show this given before the knowledge check. The product is the sentence, not the vendor as a person. ACH is fine if they list a competing cluster. Do not write an actor profile.
+Ask what actual evidence would connect the new case to A12. This turns a vague similarity into a testable question.
 
 ---
 
-### Slide 6 – Knowledge Check
+### Slide 6 – Mitigation is a process
+**Title:** Change the reasoning, not the attitude
+
+**Key Assumptions Check:** expose a premise carrying the judgment and test its fragility.
+
+**ACH:** compare competing explanations against the same evidence and seek evidence that distinguishes among them.
+
+The goal is not to force the first judgment to lose. It is to make sure it received a fair test.
+
+**Speaker Notes:**  
+This slide deliberately reuses the two methods rather than introducing another technique list.
+
+---
+
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. “Be more objective” is a mitigation technique. True or false?  
-2. Name two biases from this lesson.  
-3. “Vendor PDF says PRD APT, so high nation-state.” Bias, and one mitigation.
+1. Why is “be more objective” not a sufficient mitigation?  
+2. A vendor label appears first and continues to frame later evidence. Bias and mitigation?  
+3. A new case is assumed to be A12-related mainly because A12 is recent. Bias and mitigation?
 
 **Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+Accept overlapping bias answers when the learner can explain the mechanism. Require a concrete process change for the mitigation.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+### Slide 8 – Summary
+**Title:** Protect the reasoning process
 
-Name the bias in the product.  
-Apply a method you can run.  
-Do not pep-talk it away.
+**Confirmation:** favored evidence gets the easier test.  
+**Anchoring:** the first frame keeps too much influence.  
+**Availability:** memorable examples feel more representative than they are.
 
-**Next:** **2.3.1** Internal threat intelligence platform
+Use a structured method so the judgment can change when the evidence warrants it.
 
-**Speaker Notes:**  
-Tradecraft ends here. The next lesson is the internal platform. Do not open it unless that lesson is scheduled.
+**Next:** [2.3.1 – MITRE ATT&CK for CTI Analysis and Reporting](../../03-frameworks/01-attck-cti/student-guide.md).

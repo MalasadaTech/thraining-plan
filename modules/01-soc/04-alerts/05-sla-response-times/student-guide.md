@@ -7,68 +7,69 @@
 - CTI: 1.4.5.1 A / A / A ; 1.4.5.2 1a / 1a / 1a ; 1.4.5.3 1a / 1a / 1a  
 **Estimated Time:** 20–25 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name the two clocks: time to **begin** investigation, and time to **close or escalate**.
-2. Given timestamps, say **which clock is at risk**.
-3. Close or escalate and **record it against the correct clock**.
+1. Explain the start and close/escalate clocks and their origins.
+2. Calculate which response-time goal is at risk or breached.
+3. Record a supported closure or escalation against the correct clock.
 
 **Mapped Proficiency Items:**
 - K: 1.4.5.1 – Service Level Agreements / Response Time Goals
 - T: 1.4.5.2 – Given timestamps, identify whether the start clock or the close/escalate clock is at risk
 - T: 1.4.5.3 – Close or escalate an alert and record it against the correct clock
 
----
+## Why This Matters
 
-## 1. Key Concepts
+Response-time goals help ensure an alert receives attention and reaches an appropriate next state. Keeping each goal’s start point and completion event explicit makes overdue work visible without encouraging premature closure.
 
-SOC analysts keep an alert from sitting untouched, and from sitting open with no close or escalate. That is the job in this lesson: name **which** response-time goal is at risk, then record closed or escalated against it. “Work faster” is not the task.
+## 1. Understanding the two classroom clocks
 
-A **service-level agreement (SLA)** here is a **response-time goal**: the maximum time allowed for a step. This lesson uses two **clocks** — the short word for those goals.
+An SLA can contain several commitments. This lesson focuses on two response-time goals, called clocks for convenience. The numbers and start points below are classroom assumptions, not workplace requirements.
 
-| Clock | What it measures | Classroom goal |
-|-------|------------------|----------------|
-| **Start** | Alert **created** → first touch (`started`) | **15 minutes** |
-| **Close / escalate** | First touch → `closed` or `escalated` | **45 minutes** |
+| Clock | Starts at | Completed by | Classroom goal |
+|---|---|---|---|
+| Start | Alert creation. | Recorded beginning of investigation. | 15 minutes. |
+| Close / escalate | Beginning of investigation. | Supported closure or documented escalation. | 45 minutes. |
 
-The 15-minute and 45-minute figures are **this lesson only**. They are not a live shop policy. If your real shop uses different minutes, use those. The obligation is **two clocks**, not 15 and 45.
+Before investigation begins, the start clock is running and the second clock has not started in this model. Afterward, preserve whether the start goal was met or breached while tracking close/escalate. Real procedures may use different origins, severity tiers, pauses, or deadlines; consult them rather than transferring these numbers directly.
 
-If nobody has touched the alert, only the **start** clock exists. Close/escalate has no origin until a first touch. After a first touch, start is already met (or already breached); the remaining clock is **close/escalate**.
+## 2. Calculating status from timestamps
 
-This is **not** re-investigating the alert (**1.4.1**). It is **not** true-positive / false-positive or a category (**1.4.2**, **1.4.4**). It is **not** a report, and it is **not** the report clocks in **1.5**.
+Use one stated time zone and a complete date where needed. Compute the due time from the defined origin before deciding which clock needs attention.
 
-**Record** is one classroom line: **closed** or **escalated**, **which clock**, and the **time**. If you have not touched the alert yet, the first line is **started** against the **start** clock. Do not close an untouched alert to “meet SLA.” This is a classroom line, not a ticketing-product class.
+| Supplied facts | Calculation | Status |
+|---|---|---|
+| Created 14:00; untouched at 14:18. | Start due 14:15; elapsed 18 minutes. | Start breached by 3 minutes. |
+| Created 13:20; started 13:28; open at 14:20. | Start took 8 minutes. Close/escalate due 14:13; elapsed 52 minutes since start. | Start met; close/escalate breached by 7 minutes. |
 
-**What good looks like:**
+A goal is breached after its deadline. Before the deadline, it may be at risk if the remaining work is unlikely to finish in time. State the evidence for that forecast. If only the start timestamp is supplied, the earlier start-goal result cannot be reconstructed without creation time.
 
-- **Start at risk:** Created `14:00`. No `started`. Now `14:18`. Clock: **start** (18 minutes, past 15). Close/escalate has no origin. Record: `started | start (breached) | 14:18`. Then investigate. Do not write `closed` yet.
-- **Close/escalate at risk:** An alert first touched at `13:28` is still open at `14:20`. Clock: **close/escalate** (52 minutes since start, past 45). Start already met. Record: `escalated | close-escalate (breached) | 14:20` — or `closed` if the investigation is actually done.
+## 3. Recording the appropriate action
 
----
+For the first example, begin the investigation and record `started | start breached | 14:18`, with the creation time and due time retained. For the second, record a supported closure if the work is complete, or document escalation, the reason, receiving owner, and time if further handling is needed.
 
-## 2. Knowledge Check
+A classroom escalation line could be `escalated | close/escalate breached | 14:20 | unresolved investigation; duty lead notified`. Escalation records a transfer or request for attention; local procedure determines whether acceptance is also required. A breached goal remains breached after the action. Keep the investigation finding and the timing record consistent.
 
-1. If nobody has touched the alert, which clock can be at risk?
-2. What are the two clocks, and when does each start?
-3. An alert was first touched at `13:28` and is still open at `14:20`. Which clock is at risk, and what do you record?
+## Knowledge Check
 
----
+1. Created 14:00 and untouched at 14:18: which clock applies, when was it due, and what is the first action?
+2. Created 13:20, started 13:28, and open at 14:20: calculate both clock results.
+3. Write an appropriate record for the second case if the investigation still needs the duty lead’s help.
 
-## 3. Summary
+## Summary
 
-Two clocks: **start** from created; **close/escalate** from first touch. Name the clock. Record closed or escalated against it.
+Identify the applicable clock, calculate its due time, and record the action actually taken. Preserve both timing status and investigation state, using the organization’s definitions outside the classroom.
 
-**Next:** **1.5.1** Report types. This closes unit **1.4**.
+## Course Connections
 
----
+Previous: [1.4.4 – Common Alert Categorizations](../04-categorizations/student-guide.md)
 
-## 4. Related modules
+Next: [1.5.1 – Report Types](../../05-reporting/01-report-types/student-guide.md)
 
-- 1.4.4 – Common alert categorizations (previous)
-- 1.5.1 – Report types
-- 1.4.1 – Alert context and investigation
-- 1.5.2 – Reporting timeline requirements (not these alert clocks)
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)

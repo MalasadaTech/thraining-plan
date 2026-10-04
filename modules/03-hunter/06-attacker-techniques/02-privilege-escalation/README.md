@@ -5,25 +5,41 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.6.2 B / C / C ; 3.6.2.1 3c / 4c / 4c  
+- SOC: 3.6.2 A / B / B ; 3.6.2.1 1a / 2b / 3c  
+- CTI: 3.6.2 A / B / B ; 3.6.2.1 1a / 2b / 3c
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.6.2 | K | Privilege escalation techniques | 3.6.2 a–b |
-| 3.6.2.1 | T | Recognize privilege escalation techniques in logs or telemetry | 3.6.3 task 2 |
-
-The teaching-unit ID is **3.6.2**. Persistence recognition is **3.6.1**. Named-technique hunt is **3.6.3**. ATT&CK remapping is **3.5**. Local hunt control is **3.7**. The A12 Run key is not this class. No lab.
+- K: 3.6.2 – Privilege escalation techniques
+- T: 3.6.2.1 – Recognize privilege escalation techniques in logs or telemetry
 
 ## Concepts taught
 
-- privilege escalation techniques
-- common Windows privilege escalation methods
-- indicators associated with privilege escalation
-- recognizing privilege escalation techniques in logs or telemetry
+- privilege escalation outcome
+- method attribution
+- UAC bypass
+- access token manipulation
+- Windows service elevation
+- exploitation for privilege escalation
+- method-evidence boundary
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Supporting references
+
+- [T1548.002 Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002/)
+- [T1134 Access Token Manipulation](https://attack.mitre.org/techniques/T1134/)
+- [T1543.003 Windows Service](https://attack.mitre.org/techniques/T1543/003/)
+- [T1068 Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068/)
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

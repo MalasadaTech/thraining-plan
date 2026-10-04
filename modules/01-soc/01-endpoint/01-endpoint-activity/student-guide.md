@@ -5,73 +5,69 @@
 - SOC: 1.1.1.1 A / B / B ; 1.1.1.2 1a / 2b / 2b  
 - Hunter: 1.1.1.1 A / B / B ; 1.1.1.2 1a / 1a / 2b  
 - CTI: 1.1.1.1 A / A / A ; 1.1.1.2 1a / 1a / 1a  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 15–20 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name the five kinds of **host activity** this unit will teach.
-2. Given a one-line description, say whether it is **process**, **file**, **registry**, **host-network**, or **image/driver load**.
+1. Recognize the five endpoint activity types.
+2. Classify a short description by its recorded operation.
+3. Explain why source and collection coverage matter when interpreting an event.
 
 **Mapped Proficiency Items:**
 - K: 1.1.1.1 – Endpoint activity (the map)
 - T: 1.1.1.2 – Given a one-line description, name the activity type
 
----
+## Why This Matters
 
-## 1. Key Concepts
+Endpoint evidence helps you describe activity on a device. Recognizing the kind of activity first makes it easier to choose the right fields and explain what the event establishes. The next five lessons build that skill one activity type at a time.
 
-An alert usually names a **host** — a laptop, server, or other device. Something on that host generated a log. Before you describe what happened, you have to know **what kind of activity** the log is about. That is the job in this lesson: name the kind first, so you do not mix process, file, and network details into one write-up.
+## 1. Five kinds of endpoint activity
 
-A host generates **logs** when something happens on it. Each log is one **event**. In a SIEM, that event usually shows up as a **row** in a table. Later lessons may still say “row.” Here it means the same thing as the log.
+An event is a recorded observation. A log can contain many events, and a SIEM may display each event as a row. Collection settings determine which observations are recorded.
 
-| Kind | What happened |
-|------|----------------|
-| **Process** | A program ran, ended, or touched another program |
-| **File** | A file was created, moved, changed, read, or deleted |
-| **Registry** | A key or value was set, deleted, or renamed |
-| **Host-network** | This host talked (IP, port, domain) — the *process* started it |
-| **Image / driver load** | A DLL or driver was loaded |
+| Activity type | What the event concerns | Example |
+|---|---|---|
+| Process | A program starts, ends, or accesses another process. | A script interpreter launches PowerShell. |
+| File | A file operation such as creation, rename, modification, reading, or deletion, where collected. | A process writes a file under Temp. |
+| Registry | A Windows registry key or value changes. | A process sets a Run-key value. |
+| Host-network | A connection or DNS operation observed by the endpoint. | PowerShell connects to a remote IP address. |
+| Image / driver load | A module loads into a process, or a driver loads into the kernel. | A program loads a DLL. |
 
-**Host-network** means the *host* logged that this device talked. It is not a Zeek lesson. Zeek watches the wire and does not name the process that opened the socket.
+One sequence can generate several event types. Each observation adds a different part of the account.
 
-**Sysmon** and **MDE** (Microsoft Defender for Endpoint) are two tools that record those **same** five kinds of activity. They use different field names. They are not two different sets of facts. This course uses both as examples. This is **not** how to install Sysmon.
+## 2. Recognizing the observation
 
-You will learn **one activity type at a time** after this lesson. This lesson only names the five kinds. The next lessons each cover one kind in detail.
+“A file named `update.dll` was created” describes file activity. “PowerShell loaded `update.dll`” describes image-load activity. The filename is shared, but the recorded operation differs. A creation event alone leaves loading or execution unestablished.
 
-This is **endpoint** telemetry: logs from the host itself. Protocol deep-dive is Zeek (**1.2**).
+Likewise, a process-start event can explain how a program began, while a related host-network event can identify a connection associated with it. Linking the events develops the sequence without asking one record to prove everything.
 
-**What good looks like:** someone gives you one line. You name the kind. You do not describe fields yet.
+## 3. Understanding the source
 
-- Given: “A program started on the host.” **Process.**
-- Given: “A file appeared in Temp.” **File.**
-- Given: “This host connected to an IP and port.” **Host-network.**
+Sysmon and Microsoft Defender for Endpoint (MDE) can provide overlapping endpoint observations. Their event types, fields, and collection coverage differ, so translating between them requires checking the actual schema. They should not be treated as interchangeable copies of the same dataset.
 
-Do not tell the rest of the incident. Do not try to read process fields yet (**1.1.2**).
+Zeek observes network traffic at a sensor. Its native connection records generally identify network endpoints rather than the operating-system process that opened a socket. Endpoint and network evidence complement one another when host identity, timing, and the observed flow can be connected.
 
----
+## Knowledge Check
 
-## 2. Knowledge Check
+1. Name the five activity types and give an example of each.
+2. How does a file-create event differ from an image-load event for the same DLL?
+3. Why should you check the schema when moving from Sysmon to MDE?
 
-1. Sysmon and MDE are two different stories. True or false?
-2. “A program started on the host.” Which activity type is that?
-3. “This host connected to an IP and port.” Process, or host-network?
+## Summary
 
----
+Identify the recorded operation, then use the fields and coverage of its source to describe it. Related events can build a fuller sequence while retaining what each observation actually establishes.
 
-## 3. Summary
+## Course Connections
 
-There are five kinds of host activity. Sysmon and MDE record the same kinds with different field names. Name the kind before you describe the event. Zeek is later.
+Previous: [0.8 — Environment / signal flow](../../../00-intro/08-environment/01-orientation/student-guide.md)
 
-**Next:** **1.1.2** Process activity.
+Next: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)
 
----
+[1.x module index](../../README.md)
 
-## 4. Related modules
+## References and Further Reading
 
-- 0.1 – How this course is laid out
-- 1.1.2 – Process activity
-- 1.2 – Zeek
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — Advanced hunting schema](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables)

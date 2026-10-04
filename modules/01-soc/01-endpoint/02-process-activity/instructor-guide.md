@@ -8,97 +8,87 @@
 **Estimated Time:** 25–30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Read a host process event and describe it. Say what a specific SIEM query looks like.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts read process events on a host to see who ran what — create, terminate, or who touched whom.
-- How it hooks to the lesson before: 1.1.1 named the five kinds of host activity. This lesson is the process kind.
-- How it hooks to the lesson after: 1.1.3 is file activity on the same host telemetry.
-- Why we are doing it this way: after naming the kinds, read one kind so you can describe who ran what before you open file or network events.
-- What we are *not* doing in this lesson: Zeek (1.2). Sysmon install. File, registry, or image-load write-ups. Persistence how-to. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **create**, **terminate**, **process access**, and **command line**. MDE `ActionType` on this table: **ProcessCreated**, **OpenProcess**. Do not invent `ProcessTerminated` here — terminate is Sysmon 5. The given uses course-fiction names (`jlee`, Temp `invoice.vbs`). Do not turn it into the intro plot.
-
-**Key Teaching Points:**
-- Endpoint process event, not Zeek.
-- Command line and parent are what you write down. The image name can be fake.
-- Event 10 is who touched whom, not a start.
-- A query is specific, not “all processes.”
-
-**Common Student Challenges:**
-- Treat Event 10 as a process start. Why: Event 1 is create; 10 is a handle open. Example: writing “powershell started” from an Event 10.
-- Write `process=*` as a “specific” query. Why: the task is a named pattern. Example: `DeviceProcessEvents` with no parent or command-line filter.
-- Describe the file path as the process story. Why: the file is 1.1.3. Example: “malware dropped in Temp” when the event is `wscript` creating PowerShell.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+A process event helps answer which program ran, what started it, and under which account. Reading those relationships carefully gives the investigation a stronger starting point than relying on the executable name alone.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Interpret process creation, termination, and access events.
+2. Describe a process event using its recorded fields and limitations.
+3. Create or modify a query for a specific process pattern.
 
 **Mapped Proficiency Items:**
 - K: 1.1.2.1 – Process activity concepts
 - T: 1.1.2.2 – Analyze a process event (Sysmon or MDE) and accurately describe what occurred
 - T: 1.1.2.3 – Create a SIEM query to detect specific process activity
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required. For query tasks, ask learners to write or modify the shown query and explain its predicates. Confirm the local schema if demonstrating it in an approved teaching environment.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Process event, not Zeek |
-| Key Concepts            | 16 min    | Fields; two products |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~25 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 17 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **27** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Reading a process event
 
-**Talking Points:**
-- Open with the job: an alert names a host, and you have to say who ran what.
-- Walk the field table. Stop on Event 10: it is not a create.
-- MDE create is `ProcessCreated`. Terminate is Sysmon 5. Do not invent `ProcessTerminated` on `DeviceProcessEvents`.
-- Walk the given: `wscript.exe` → `powershell.exe -enc …` as `jlee`. One sentence. Parent + command line.
-- If they start installing Sysmon: that is not this lesson.
-- If they open a file path as the story: that is 1.1.3. Stay on the process event.
-- If they write `process=*`: that is not a specific query.
+Have learners identify the operation first, then explain parent, user, and stable identity. Clarify that hash and original-name fields describe files or metadata rather than intent.
 
----
+**Key point to reinforce:** Read the operation, process identity, command line, parent, account, integrity, and available hashes. Process access differs from creation.
 
-## Knowledge Check – Answer Key
+### 2. Working through the example
 
-1. **Event 10 is a process start. True or false?**  
-   **Answer:** False. It is process access — who touched whom.  
-   **Explanation:** Sysmon 1 is a create. Event 10 is a handle open from one process to another.
+Ask which field supports each phrase. Challenge the word “hidden” if a learner introduces it without evidence.
 
-2. **wscript (Temp vbs) → powershell -enc. What occurred?**  
-   **Answer:** Script host launched hidden encoded PowerShell. Parent + command line is what you write down.  
-   **Explanation:** The image name of `powershell.exe` can still look fine. The parent and the `-enc` command line are the event.
+**Key point to reinforce:** Script Host launches PowerShell with an encoded argument as jlee. Decoded behavior and hidden-window execution remain unestablished.
 
-3. **A query that matches every process is specific. True or false?**  
-   **Answer:** False. A good query names a specific pattern (parent + command-line fragment).  
-   **Explanation:** “All processes” is a table dump, not a detection for this task.
+### 3. Creating a focused process query
 
----
+Read each query filter aloud and compare one matching event with a nonmatching parent. This is a worked query discussion; execution in a live tenant is not required.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Filter the process-created event by image, parent, and command-line pattern. Explain substring matching and coverage limits.
 
-- Next: 1.1.3 File system activity
+## Knowledge Check — Answer Key
+
+### 1. What distinguishes Sysmon events 1, 5, and 10?
+
+**Expected answer:** They record process creation, termination, and process access respectively.
+
+### 2. Describe the supplied wscript-to-PowerShell event and identify one unknown.
+
+**Expected answer:** Script Host launched PowerShell with an encoded-command argument as jlee. The abbreviated command does not establish decoded behavior or hidden-window execution.
+
+### 3. Modify the query to look for the same PowerShell pattern started by cscript.exe. What changes?
+
+**Expected answer:** Replace the initiating-process predicate with `InitiatingProcessFileName =~ "cscript.exe"`; keep the process and command-line predicates. The results now concern that parent.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+A useful process description connects the operation, program, command line, parent, and account to recorded evidence. A focused query expresses the chosen pattern and makes its coverage limits clear.
+
+Previous: [1.1.1 – Endpoint activity (the map)](../01-endpoint-activity/student-guide.md)
+
+Next: [1.1.3 – File System Activity](../03-file-system-activity/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceProcessEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)

@@ -48,7 +48,7 @@ Registry is a fifth kind. It is not required to close this pass. Image and drive
 
 If the tenant has no parent process, they write that the logs **fail to add** it.
 
-The file event has a hash. They look that hash up on VirusTotal (**1.4.1** / **0.7**) during this first pass. The one-line result: the hash is **not in VT**. Relations is a later CTI skill (**2.9**), not this first pass. AnyRun is the wrong first tool: they have a hash, not a sample to detonate.
+The file event has a hash. They look that hash up on VirusTotal (**1.4.1** / **0.7**) during this first pass. The one-line result: the hash is **not in VT**. Relations is a later CTI skill (**2.4**), not this first pass. AnyRun is the wrong first tool: they have a hash, not a sample to detonate.
 
 Once they have a flow, they can read the talk two ways. A **host-network** event names the initiating process: encoded PowerShell connected to `203.0.113.88` on port **8080**. A Zeek HTTP log names the protocol: method `GET`, Host `prd-updates.net`, URI `/update.exe`. Zeek does not name the process that opened the socket. If a capture exists for that flow, PCAP can **add** the URI when the alert only had IP:port.
 
@@ -90,7 +90,7 @@ The body is that one question. CTI will answer it. They will not rewrite the lea
 
 ## 5. CTI answers
 
-Jordan receives, evaluates, prioritizes, and answers (**2.11.3**).
+Jordan receives, evaluates, prioritizes, and answers (**2.7.4**).
 
 **Evaluate:** The question is bounded. They have the Zeek **A** record — the name-to-IP the network sensor logged — and the host file. They can answer.
 
@@ -100,9 +100,9 @@ The objects on the desk sit on three layers (**2.1.1**). `203.0.113.88` is **dat
 
 **Respond:** **Likely** yes — the update domain / `203.0.113.88` is the payload host for A12. Treat it as such.
 
-**Likely** is estimative language (**2.2.1**): more probable than not. It is not the confidence scale from **2.1.7**. Medium confidence names how good the sourcing is (Zeek A and the host file). It is not a country.
+**Likely** is estimative language (**2.2.1**): more probable than not. It is not the confidence scale from **2.1.8**. Medium confidence names how good the sourcing is (Zeek A and the host file). It is not a country.
 
-Diamond (**0.6.2** / **2.7.2**), filled only from evidence this beat has:
+Diamond (**0.6.2** / **2.3.2**), filled only from evidence this beat has:
 
 | Vertex | Fill |
 |--------|------|
@@ -113,7 +113,7 @@ Diamond (**0.6.2** / **2.7.2**), filled only from evidence this beat has:
 
 Weakest is **Adversary**. That gap constrains the write-up. The weakest vertex is the next question, not a guess. Beacon POST is not this activity set.
 
-The answer is not a second incident. Local queue policy is obtain-and-follow (**2.12**). A **Priority Intelligence Requirement (PIR)** list is a shop document; they obtain it.
+The answer is not a second incident. Local queue policy is obtain-and-follow (**2.8**). A **Priority Intelligence Requirement (PIR)** list is a shop document; they obtain it.
 
 ---
 
@@ -121,19 +121,19 @@ The answer is not a second incident. Local queue policy is obtain-and-follow (**
 
 While answering, CTI enriches the seed they already have: the update domain / `203.0.113.88`.
 
-**Registration (**2.5**).** They look up registration on the domain (RDAP first; WHOIS if RDAP has no record). The nameservers on the record are `ns1.cdn-test.net` and `ns2.cdn-test.net`. Distinctive nameservers are enrichment, not a country. The IP sits in `203.0.113.0/24`. The org on that block is **Example Cloud** — who holds the address, not the actor.
+**Registration (**2.5.3**).** They look up registration on the domain (RDAP first; WHOIS if RDAP has no record). The nameservers on the record are `ns1.cdn-test.net` and `ns2.cdn-test.net`. Distinctive nameservers are enrichment, not a country. The IP sits in `203.0.113.0/24`. The org on that block is **Example Cloud** — who holds the address, not the actor.
 
-**Authoritative DNS (**2.6**).** The SOA (Start of Authority) RNAME is `hostmaster.cdn-test.net`: the mailbox that runs the zone is `hostmaster` at `cdn-test.net`. That is an operator mailbox, not a country. The sibling name **`login-prd.net`** publishes the same nameserver pair and the same A record (`203.0.113.88`). Same control and same address. The whole Example Cloud prefix is not theirs.
+**Authoritative DNS (**2.5.4**).** The SOA (Start of Authority) RNAME is `hostmaster.cdn-test.net`: the mailbox that runs the zone is `hostmaster` at `cdn-test.net`. That is an operator mailbox, not a country. The sibling name **`login-prd.net`** publishes the same nameserver pair and the same A record (`203.0.113.88`). Same control and same address. The whole Example Cloud prefix is not theirs.
 
-**Hop sentence (**2.8.1**).** Seed | shared characteristic | candidate | why not coincidence:
+**Hop sentence (**2.5.5**).** Seed | shared characteristic | candidate | why not coincidence:
 
 `prd-updates.net` / `203.0.113.88` | distinctive nameserver pair `ns1.cdn-test.net` + `ns2.cdn-test.net` | candidate **`login-prd.net`** | same nameservers, same A, not a public resolver.
 
 They reject the whole `203.0.113.0/24`. Shared hosting is not a hop.
 
-**IOC handling (**2.8.3**).** Keep the cited current objects: the update domain, `203.0.113.88`, `login-prd.net`, and the hash of Temp `invoice.vbs`. Expire the whole `203.0.113.0/24` as shared-infrastructure noise. Link the sibling to the seed because they share nameservers and the same A — one activity set. “PRD APT” on the PDF is not a link.
+**IOC handling (**2.5.1**).** Keep the cited current objects: the update domain, `203.0.113.88`, `login-prd.net`, and the hash of Temp `invoice.vbs`. Expire the whole `203.0.113.0/24` as shared-infrastructure noise. Link the sibling to the seed because they share nameservers and the same A — one activity set. “PRD APT” on the PDF is not a link.
 
-**So what here (**2.8.4**).** DYA is a law firm that runs Windows workstations. Encoded PowerShell and the update-domain fetch already happened on **WS-JLEE**, so the finding applies here. The sibling shares that payload host’s control; if it is live, other workstations could use it. That is relevance and impact, not a PIR and not a country.
+**So what here (**2.6.2**).** DYA is a law firm that runs Windows workstations. Encoded PowerShell and the update-domain fetch already happened on **WS-JLEE**, so the finding applies here. The sibling shares that payload host’s control; if it is live, other workstations could use it. That is relevance and impact, not a PIR and not a country.
 
 `login-prd.net` is extra infrastructure. It is not a SOC notify field. It is not a hunt of every name in the zone.
 

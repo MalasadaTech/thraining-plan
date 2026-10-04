@@ -6,63 +6,62 @@
 - Hunter: 0.5 A / B / B  
 - CTI: 0.5 A / B / B  
 - DE: 0.5 A / B / B  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 15–20 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Say that the same host, log, or domain can sit on more than one desk.
-2. Name the **product** that makes each job different — even when one person fills more than one job.
+1. Explain how shared evidence can support different role-specific products.
+2. Distinguish a handoff request from the work needed to complete it.
+3. Explain why responsibilities remain distinct when one person performs several roles.
 
 **Mapped Proficiency Items:**
 - K: 0.5 – Where the jobs lightly overlap
 
----
+## Why This Matters
 
-## 1. Key Concepts
+Several analysts may examine the same host, log, or domain while working toward different outcomes. Understanding those outcomes helps you collaborate without losing track of who is responsible for the remaining work. In this lesson, a **product** means the result a role is expected to deliver.
 
-The same host, log, or domain can sit on more than one desk. Looking at that evidence is not finishing that desk’s job. That is the job in this lesson: name the **product** you are writing — close or escalate an alert, an intel note, a hunt, or a rule — so you do not treat a look or a question as doing the next job.
+## 1. Shared evidence and different products
 
-Everyone may look at the same **host**, **log**, or **domain**. That does not make the jobs the same.
+| Role | Product developed from the evidence |
+|---|---|
+| SOC analyst | A finding that supports closing or escalating an alert. |
+| CTI analyst | An intelligence answer that explains the evidence's significance for a question. |
+| Threat hunter | Search findings, their scope, and relevant gaps or limitations. |
+| Detection engineer | A tested detection or a justified change to detection coverage. |
 
-The **product** is the thing that job finishes. The products are different:
+For example, a domain found in an alert may help SOC establish what the host contacted. CTI may examine the domain's role in the activity. A hunter may search for other hosts that contacted it, while DE considers whether the associated behavior warrants a detection. Each role can reuse the earlier evidence and reasoning while developing the product it owes.
 
-| Product | Whose job |
-|---------|-----------|
-| Close or escalate an **alert** | SOC analyst |
-| An **intel note** | CTI analyst |
-| A **hunt** | Threat hunter |
-| A **rule** | Detection engineer |
+## 2. What a request contributes
 
-This lesson names those products. It does not teach how to write them.
+An RFI communicates a question and the context needed to begin answering it. The CTI analyst still has to evaluate the evidence and develop the answer. Similarly, an intelligence package can prepare a hunter to search, while the hunter still needs to execute the search and explain the results.
 
-**Asking** the next desk is not doing that desk’s whole job. A **Request for Information (RFI)** is a question to intel, not the intel note. Handing over a **hunt package** is a hand-off, not the hunt.
+When passing work, be clear about what has already been established and what the recipient is being asked to do. This prevents a request from being mistaken for completed analysis and helps the receiving role build on work already done.
 
-A smaller shop may have **one person** fill more than one of these jobs (two hats). This course still names the jobs separately so each **product** stays clear — even if the same person writes two of them.
+## 3. When one person fills several roles
 
----
+In a smaller organization, the same person may investigate an alert and later perform intelligence or detection work. The responsibilities still matter because the purpose and completion criteria change as that person moves between tasks.
 
-## 2. Knowledge Check
+For example, documenting why an alert was escalated does not answer every intelligence question about the activity. The analyst can use the same evidence, but should make the additional question, reasoning, and result clear. Distinguishing the products helps others understand what is complete and what still needs attention.
 
-1. Everyone may look at the same host. Does that mean they are doing the same job?
-2. Asking the next desk is doing that desk’s whole job. True or false?
-3. In a smaller shop, one person may write two products. Why does this course still name the jobs separately?
+## Knowledge Check
 
----
+1. SOC and CTI examine the same domain. How could their products differ?
+2. What remains to be done when CTI receives an RFI?
+3. Why distinguish roles when one person performs both alert investigation and hunting?
 
-## 3. Summary
+## Summary
 
-The same evidence can sit on more than one desk. The product is what makes the jobs different. Asking is not doing the next job. One person may fill two jobs; they still finish two products.
+Collaboration works best when shared evidence is paired with clear responsibilities. A request prepares the next task, and each role develops a result suited to its purpose. Those distinctions remain useful when a single person performs several roles.
 
-**Next:** **0.6** Frameworks.
+## Course Connections
 
----
+Previous: [0.4 – How work can move](../04-how-work-moves/student-guide.md)
 
-## 4. Related modules
+Next: [0.6.1 – MITRE ATT&CK](../06-frameworks/01-attck/student-guide.md)
 
-- 0.3 – Jobs in one sentence
-- 0.4 – How work can move
-- 0.6 – Frameworks
+## References and Further Reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.

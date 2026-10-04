@@ -5,80 +5,98 @@
 - Hunter: 3.5.1 B / C / C ; 3.5.1.1 3c / 4c / 4c ; 3.5.1.2–3.5.1.3 3c / 4c / 4d  
 - SOC: 3.5.1 A / B / B ; 3.5.1.1–3.5.1.2 1a / 2b / 3c ; 3.5.1.3 1a / 1a / 2b  
 - CTI: 3.5.1 B / C / C ; 3.5.1.1 3c / 4c / 4c ; 3.5.1.2–3.5.1.3 2b / 3c / 4c  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Map the behavior a hunt will test—or has found—to the most specific ATT&CK technique/sub-technique supported by evidence.
+2. Use that mapping to describe detection/visibility gaps and support hunt priority without treating ATT&CK as a scoring system.
 
-1. Map a hunt plan or hunt findings to ATT&CK tactics and techniques.
-2. Use that map to name a **detection** or **visibility** gap, and to **support** hunt priority.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.5.1 – Using MITRE ATT&CK for hunt planning and coverage analysis
 - T: 3.5.1.1 – Map a hunt plan or hunt findings to MITRE ATT&CK
 - T: 3.5.1.2 – Use ATT&CK to identify detection or visibility gaps
 - T: 3.5.1.3 – Use ATT&CK to support hunt prioritization
 
----
-
 ## 1. Key Concepts
 
-Hunters look for activity the alerts missed. Before they search, they need a shared name for the **method** they will hunt, or for the method they already found. ATT&CK is that name. Putting **this hunt** on it shows whether you can see that method, whether a detection already covers it, and whether this hunt is worth doing now. That is the job in this lesson: map this hunt, name the gap, and use the map to support priority.
+ATT&CK gives the hunt a shared behavioral vocabulary.
 
-You **map** a hunt when you write the method as a **tactic** (why — the goal) and a **technique** or **sub-technique** (how — the named way). Map this hunt. Do not paint the whole Enterprise matrix because a group was named. Do not invent an ID so the card looks complete.
+Reference: [MITRE ATT&CK](https://attack.mitre.org/)
 
-A report may already print an ATT&CK ID. Copying that ID onto a hunt card is not a hunt map. The map is the method **this** hunt will search, or the finding **this** hunt already has.
+### Map the behavior this hunt is testing
 
-| You write | You do not |
-|-----------|------------|
-| Method you will search → tactic + technique (or sub-technique) | Color every ATT&CK Navigator cell (the heatmap view) because a group was named |
-| What you observed → the technique that describes *that* method | Invent an ID so the card looks complete |
+Do not map every technique associated with a named actor.
 
-This lesson maps a **hunt**. It is not labeling one alert. It is not putting IDs on a CTI product.
+Map:
 
-Reading that map for holes is **coverage analysis**. Two kinds of hole:
+> the procedure or behavior this hunt is searching for
 
-| Gap | Meaning |
-|-----|---------|
-| **Detection gap** | Telemetry exists; no detection covers that technique in this scope |
-| **Visibility gap** | You cannot see the technique here — name it; do not hunt it as written |
+to:
 
-ATT&CK **supports** priority. It does not replace scope, how fresh the lead is, or whether an incident is already open. “The tactic is red” is not a reason.
+> the most specific ATT&CK technique/sub-technique the evidence supports.
 
-**What good looks like:**
+### Technique and tactic are related but not identical
 
-- **Map:** the A12 hunt for the current-user (HKCU) Run value named **`Updater`** → **TA0003** Persistence / **T1547.001** Registry Run Keys / Startup Folder.
-- **Detection gap:** registry telemetry exists; no detection on value name `Updater`.
-- **Visibility gap:** no registry logging on that host class — not a hunt as written.
-- **Priority:** open incident + a download with no alert + a mapped technique you can see. Not “Persistence is always first.”
+One ATT&CK technique can support more than one tactic.
 
-How the Run key works on disk is **3.6.1**. Hunt-card format is **3.2.2**.
+For example, [T1547.001 – Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/) is currently associated with both **Persistence** and **Privilege Escalation**.
 
----
+The A12 HKCU Run value executes in the logged-on user's context. In that scenario, the supported use is **Persistence**. Nothing in the Run-key observation by itself establishes higher privileges.
+
+So the hunt mapping is:
+
+> **Persistence / T1547.001 – Registry Run Keys / Startup Folder**
+
+The same technique could support a different tactic in another context when the evidence demonstrates that role.
+
+### Use ATT&CK for coverage analysis
+
+After mapping the hunt, ask:
+
+**Visibility**
+> Do we collect telemetry that can observe this procedure on the in-scope systems?
+
+**Detection**
+> If the telemetry exists, does an analytic meaningfully cover the behavior?
+
+Examples:
+
+- registry data absent on a host class → **visibility gap**;
+- registry data present but no analytic covers suspicious Run-key changes → **detection gap**.
+
+### ATT&CK supports priority; it does not determine it
+
+Hunt priority also depends on:
+
+- active incident/mission relevance;
+- strength and freshness of the lead;
+- local applicability;
+- visibility;
+- current detection coverage;
+- expected defensive value;
+- analyst/search cost.
+
+A technique being mapped to Persistence does not make it automatically higher priority than another hunt.
 
 ## 2. Knowledge Check
 
-1. Copying T1547.001 from a report is the same as mapping this hunt. True or false?
-2. What is the difference between a detection gap and a visibility gap?
-3. Map the A12 Run-**`Updater`** hunt to one tactic and one technique. If registry logs exist and no detection fires on that value name, which gap is it?
-
----
+1. Why should you map the behavior being hunted instead of every technique associated with an actor?
+2. T1547.001 is associated with more than one tactic. Why is **Persistence** the relevant tactic for the A12 HKCU Run example?
+3. Registry telemetry exists but no analytic covers suspicious Run-key changes. Which gap is that?
 
 ## 3. Summary
 
-Map this hunt. Name the gap. ATT&CK supports priority; it does not replace it.
+Map the hunt's **actual behavior** to ATT&CK.
 
-**Next:** **3.6.1** Persistence techniques.
+Use context to choose the relevant tactic when a technique spans more than one. Then use the mapping to reason about visibility and detection coverage.
 
----
+ATT&CK informs priority; it does not replace operational judgment.
 
-## 4. Related modules
+**Next:** **3.6.1 – Persistence Techniques**.
 
-- 3.4.3 – STIX as hunt input (previous)
-- 3.6.1 – Persistence techniques
-- 0.6.1 – ATT&CK floor (one activity, not this hunt)
-- 2.7.1 – ATT&CK for CTI products
-- 3.2.2 – Hunt card
+## Supporting References
+
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [T1547.001 – Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)

@@ -7,75 +7,89 @@
 - CTI: 1.1.6.1 A / A / A ; 1.1.6.2 1a / 1a / 1a ; 1.1.6.3 1a / 1a / 1a  
 **Estimated Time:** 25–30 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read an image or driver load event: user-mode image vs kernel driver, path, hash, signed vs unsigned (where logged), and who loaded it.
-2. Describe what a Sysmon or MDE image or driver load event shows, and say what a **specific** SIEM query looks like.
+1. Distinguish user-mode image loads from kernel driver loads.
+2. Describe load paths, process context, hashes, and signature evidence.
+3. Create or modify a query for specific image or driver load activity.
 
 **Mapped Proficiency Items:**
 - K: 1.1.6.1 – Image and driver load activity concepts
 - T: 1.1.6.2 – Analyze an image or driver load event (Sysmon or MDE) and accurately describe what occurred
 - T: 1.1.6.3 – Create a SIEM query to detect specific image or driver load activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+An image-load event shows a module being loaded into a process. A driver-load event concerns code loaded into the kernel. Understanding the difference helps you describe the execution context without confusing a file on disk with a recorded load.
 
-SOC analysts read **image and driver load** events on a host to see that a module entered a process, or that a driver entered the kernel. That is daily alert work: an alert names a host, and you have to say what was loaded, into whom (or into the kernel), from where, and whether it was signed if that is logged. **1.1.1** named the five kinds of host activity. This lesson is the **image / driver load** kind. It is **not** Zeek (**1.2**). It is **not** how to install Sysmon.
+## 1. Reading image and driver loads
 
-**Image and driver load activity** is endpoint telemetry that a **user-mode image** (usually a DLL) was mapped into a process, or that a **kernel driver** was loaded. In a SIEM, that event usually shows up as a row in a table.
+| Detail | Interpretation |
+|---|---|
+| User-mode image load | Sysmon 7: `Image` identifies the process and `ImageLoaded` the module. MDE `DeviceImageLoadEvents` concerns DLL loads. |
+| Kernel driver load | Sysmon 6 records the loaded driver. It does not provide a user-mode parent-process relationship equivalent to event 7. |
+| Path and hash | Identify the loaded object using the available path and hashes. A .sys extension by itself does not prove a kernel load. |
+| Signature | Interpret signature fields for the loaded object where supplied. Missing is different from explicitly unsigned, and signed does not mean harmless. |
+| Coverage | Image-load collection can be high volume and selectively enabled. Confirm collection and retention before interpreting an absence. |
 
-| Idea | What to read |
-|------|----------------|
-| **User-mode vs kernel** | User-mode = a process loaded a module (Sysmon **7** / MDE). Kernel = a driver entered the kernel (Sysmon **6**). Not a process start. |
-| **Path, hashes, signed vs unsigned** | Path is where it loaded from (Sysmon `ImageLoaded`; MDE `FolderPath` + `FileName`). Hashes of the loaded bytes when present (SHA256; MDE often carries SHA1 instead). `Signed` / signature fields **where logged**. Empty is a gap, not “unsigned.” |
-| **Initiating process** | Sysmon 7 `Image` is the process; `ImageLoaded` is the module. MDE `InitiatingProcess*` is the process that loaded the module. Event **6** is kernel-wide — it has no user-mode parent field. Do not invent one. |
+In MDE, fields prefixed `InitiatingProcess` describe the initiating process; they should not be mistaken for the loaded DLL's identity or signing status. A loaded-object SHA1/SHA256, when available, concerns the object named by the event.
 
-**How this shows up:** Sysmon **6** (driver) / **7** (image load); MDE `DeviceImageLoadEvents`. Same activity, different field names. Event **7** is noisy and often sampled or off. If you have no 7 / no `DeviceImageLoadEvents`, write “image load not logged.” Do not invent a load from a file-create event (**1.1.3**).
+## 2. Working through the example
 
-MDE `ActionType` on **this** table:
+A Sysmon 7 event records `Image=powershell.exe`, `ImageLoaded=C:\Users\jlee\AppData\Local\Temp\update.dll`, and `Signed=false`.
 
-| `ActionType` | What it is | Sysmon cousin |
-|--------------|------------|---------------|
-| **ImageLoaded** | A process loaded a module | Event **7** |
+A supported description is: “PowerShell loaded the DLL at the recorded Temp path; Sysmon reports the loaded object as unsigned.” The load, path, and reported signature state warrant examination in context. They do not alone establish how the DLL arrived, what code it executed, or whether the activity was malicious. A related file event may explain arrival, while process and other evidence may explain subsequent behavior.
 
-`DeviceImageLoadEvents` is DLL load activity. Driver load on the endpoint is Sysmon **6**. Do not treat a `.sys` path on this MDE table as a kernel driver load, and do not invent a driver `ActionType` here. The full set is in the Defender portal schema.
+## 3. Creating a focused image-load query
 
-If a field is empty in your tenant, say so. Do not invent it.
+The following KQL example illustrates the requested search. Confirm the table, fields, and supported `ActionType` values in your environment before using it. Adjust the time range to the investigation.
 
-**What good looks like:**
+```kusto
+DeviceImageLoadEvents
+| where Timestamp > ago(1d)
+| where InitiatingProcessFileName =~ "powershell.exe"
+| where FolderPath contains @"\Temp\"
+| where FileName endswith ".dll"
+| project Timestamp, DeviceName, FolderPath, FileName, SHA1, SHA256,
+          InitiatingProcessFileName, InitiatingProcessCommandLine
+```
 
-- Describe: one sentence — what was loaded, into whom (or into the kernel), from where, signed or not if logged. Do not jump to a file create (**1.1.3**) or a persistence / BYOVD write-up.
-- Given: Sysmon **7**, `Image` `powershell.exe`, `ImageLoaded` Temp `update.dll`, `Signed=false`. **What occurred:** PowerShell loaded an unsigned DLL from Temp. The file create of that DLL, if you have one, is a different event.
-- Query: names a **specific** pattern (process + path, or Event **6** + driver path), not every image or driver load.
+This searches for DLL loads associated with PowerShell from Temp paths. It does not filter for unsigned DLLs because no loaded-object signature field has been assumed. A kernel-driver question calls for verified driver-load telemetry, such as Sysmon 6, and a query mapped to that source.
 
-This is the last **1.1** host-activity lesson. Protocol deep-dive is **1.2**.
+For a driver-specific question, this separate KQL example assumes a classroom `SysmonEvents` table with normalized `TimeGenerated`, `EventID`, `Computer`, and `ImageLoaded` columns:
 
----
+```kusto
+SysmonEvents
+| where TimeGenerated > ago(1d)
+| where EventID == 6
+| where ImageLoaded endswith @"\trainingdriver.sys"
+| project TimeGenerated, Computer, ImageLoaded
+```
 
-## 2. Knowledge Check
+It finds recorded driver loads for the specified path suffix; it does not determine whether that driver is safe. Map the table and parsed fields to the actual Sysmon ingestion schema.
 
-1. Sysmon Event 6 is a DLL load into a process. True or false?
-2. `powershell.exe` loads Temp `update.dll` (`Signed=false`). In one sentence, what occurred?
-3. A SIEM query that matches every image or driver load event is a good “specific image or driver load” query. True or false?
+## Knowledge Check
 
----
+1. How do Sysmon 6 and 7 differ?
+2. Describe the supplied event and distinguish missing signature data from Signed=false.
+3. Modify the query for DLLs loaded by rundll32.exe. Does it become a driver-load query?
 
-## 3. Summary
+## Summary
 
-An image or driver load event is a module entering a process, or a driver entering the kernel. Path and initiator tell the story. Signed empty is a gap. A file create is not a load. A query names a specific pattern.
+Image and driver events describe different kinds of loads. Identify the loaded object, execution context, and available signature evidence, then search the source that actually records the operation of interest.
 
-**Next:** **1.2.1** Zeek concepts.
+## Course Connections
 
----
+Previous: [1.1.5 – Registry Activity](../05-registry-activity/student-guide.md)
 
-## 4. Related modules
+Next: [1.2.1 – Zeek Concepts](../../02-zeek/01-concepts/student-guide.md)
 
-- 1.1.1 – Endpoint activity (the map)
-- 1.1.5 – Registry activity
-- 1.1.3 – File system activity
-- 1.2.1 – Zeek concepts
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceImageLoadEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceimageloadevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)

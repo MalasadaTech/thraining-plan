@@ -5,78 +5,77 @@
 - SOC: 1.2.3.1 A / B / C ; 1.2.3.2 2b / 3c / 4c ; 1.2.3.3 2b / 3c / 4c  
 - Hunter: 1.2.3.1 B / C / C ; 1.2.3.2 3c / 4c / 4c ; 1.2.3.3 3c / 4c / 4c  
 - CTI: 1.2.3.1 A / B / B ; 1.2.3.2 1a / 2b / 3c ; 1.2.3.3 1a / 2b / 3c  
-**Estimated Time:** 25–30 minutes  
-
----
+**Estimated Time:** 25–30 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek `dns` log: question, answer, record type, and who asked which DNS server.
-2. Describe what a `dns` log shows, and say what a **specific** SIEM query looks like.
+1. Interpret DNS question, response, record type, and endpoints.
+2. Describe a DNS observation and distinguish it from later communication.
+3. Create or modify a query for specific DNS activity.
 
 **Mapped Proficiency Items:**
 - K: 1.2.3.1 – DNS engine
 - T: 1.2.3.2 – Analyze a Zeek DNS log and accurately describe what occurred
 - T: 1.2.3.3 – Create a SIEM query to detect specific DNS activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+DNS evidence connects a question about a name to the response observed on the network. Distinguishing the resolver from the returned address helps prevent a common error when moving from a lookup to a connection investigation.
 
-SOC analysts read Zeek **`dns`** logs to see a name lookup on the **wire**. That is daily alert work: an alert names a domain or a lookup, and you have to say who asked, for which name, which type, and what came back. **1.2.2** was the connection. This lesson is the **DNS** extract. It does **not** name the initiating process. That was **1.1.4**. It is **not** TLS (**1.2.4**).
+## 1. Reading a DNS transaction
 
-The DNS engine writes the **`dns`** log. Each log is one **event** for a query (and the response Zeek saw). In a SIEM, that event usually shows up as a **row** in a dns table. Later lessons may still say “row.” Here it means the same thing as the log.
+| Field | Meaning |
+|---|---|
+| `query` | The requested name. |
+| `qtype_name` | The requested record type. |
+| `answers` | Observed answer values, which may contain addresses or names. |
+| `rcode_name` | Response code, where recorded, useful when interpreting an empty answer. |
+| `id.orig_h` | The querying endpoint visible to the sensor. |
+| `id.resp_h` | The DNS server contacted, often a recursive resolver. |
+| `uid` | Connection identifier for related records; multiple DNS transactions may share it. |
 
-| Idea | What to read |
-|------|----------------|
-| **Query (question)** | `query` — the name that was asked |
-| **Response (answer)** | `answers` — what came back (an address, another name, or empty) |
-| **Record type** | `qtype_name` — **A**, **AAAA**, **MX**, **CNAME**, **NS**, **TXT**, and the rest when you see them |
-| **Source / dest** | `id.orig_h` = who asked. `id.resp_h` = the DNS server that was asked |
+A requests an IPv4 address; AAAA an IPv6 address; MX a mail exchanger; NS a name server; TXT text data; and CNAME a canonical-name alias. A response can include an alias chain. The responder address is the server asked, while returned addresses belong in the answer data. A blank answer needs interpretation using the response code and capture context.
 
-`id.resp_h` is often a recursive resolver. It is **not** the address the name resolved to. That value, when present, is in `answers`.
+## 2. Working through the example
 
-| `qtype_name` | What was asked for |
-|--------------|-------------------|
-| **A** | IPv4 address |
-| **AAAA** | IPv6 address |
-| **MX** | Mail exchanger |
-| **CNAME** | Another name (canonical name), not an address |
-| **NS** | Name server |
-| **TXT** | Text data |
+The example records `192.0.2.10` asking resolver `192.0.2.53` for an A record for `update.example`, with `answers=["203.0.113.88"]` and `rcode_name=NOERROR`.
 
-A **CNAME** answer is another name, not an address. An empty `answers` list means this log does not show a returned record — say that. Do not invent NXDOMAIN hunting or DGA methodology here.
+A supported description is: “The observed client asked `192.0.2.53` for the IPv4 address of `update.example` and received `203.0.113.88`.” A subsequent connection to that address would be separate evidence. If the observed client is itself a resolver, additional records may be needed to identify the original endpoint behind the request.
 
-This is the **extract**. PCAP still verifies or expands (**1.2.1**). Do not open TLS or HTTP fields yet.
+## 3. Creating a focused DNS query
 
-**What good looks like:**
+This KQL teaching example assumes an ingested table named `ZeekDns`, a datetime `TimeGenerated` column, and columns retaining the Zeek field names shown below. These are classroom table names, not built-in Zeek or SIEM tables. Map names and data types to your ingestion schema before use.
 
-- Describe: one sentence — who asked, for which name, which type, what answered. Do not name a process. Do not call it C2 from a single A record.
-- Given: `id.orig_h` a workstation, `query` a hostname, `qtype_name` `A`, `answers` `["203.0.113.88"]`. **What occurred:** that host asked for that name and got **A** `203.0.113.88`. The TCP connection to `:443` is a different log (**1.2.2**). Who launched the lookup is on the **host** (**1.1.4**).
-- Query: names a **specific** pattern (`query`, `qtype_name`, or `answers`), not every `dns` event.
+```kusto
+ZeekDns
+| where TimeGenerated > ago(1d)
+| where query =~ "update.example" and qtype_name == "A"
+| project TimeGenerated, uid, ['id.orig_h'], ['id.resp_h'],
+          query, qtype_name, answers, rcode_name
+```
 
----
+This selects questions for one name and record type. To include IPv6 questions, use `qtype_name in ("A", "AAAA")`. Compare actual answer values and response codes rather than assuming every matching question received an address.
 
-## 2. Knowledge Check
+## Knowledge Check
 
-1. `id.resp_h` on a `dns` log is the IP the name resolved to. True or false?
-2. Workstation queries a hostname, type `A`, answers `["203.0.113.88"]`. In one sentence, what occurred?
-3. A SIEM query that matches every `dns` log is a good “specific DNS activity” query. True or false?
+1. Where do you find the DNS server and the returned address?
+2. Describe the example and explain whether it proves a connection to the answer.
+3. Modify the query for both IPv4 and IPv6 questions for the same name.
 
----
+## Summary
 
-## 3. Summary
+A DNS description identifies the observed client, resolver, question, type, and response. It supplies a lead for subsequent activity rather than proving that the client contacted the returned address.
 
-A `dns` log is the question, the type, the answer, and who asked which DNS server. The process is not on this log. A query names a specific pattern.
+## Course Connections
 
-**Next:** **1.2.4** TLS engine.
+Previous: [1.2.2 – Conn Engine](../02-conn-engine/student-guide.md)
 
----
+Next: [1.2.4 – TLS Engine](../04-tls-engine/student-guide.md)
 
-## 4. Related modules
+[1.x module index](../../README.md)
 
-- 1.2.2 – Conn engine (previous)
-- 1.2.4 – TLS engine
-- 1.1.4 – Host-observed network
+## References and Further Reading
+
+- [Zeek — dns.log](https://docs.zeek.org/en/current/reference/logs/dns.html)

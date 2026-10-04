@@ -1,30 +1,19 @@
-# Nominations from SOC, hunt, and CTI
+# Nominations from SOC, Hunt, and CTI
 
-**Path:** `modules/04-de/03-nominations`  
-**Primary role:** Detection Engineer  
-**Secondary:** SOC Analyst, Threat Hunter, CTI Analyst  
-**Time:** about 15–20 minutes
+**Path:** `modules/04-de/03-nominations`
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 4.3 | K | Nominations from SOC, hunt, and CTI | 4.3 a–e |
-| 4.3.1 | T | Review a nomination: accept, send back, or reject, and say who finishes what | 4.3.1 tasks 1–2 |
-
-The teaching-unit ID is **4.3**. Sound/test is **4.2**. Tunes are **4.4**. Packages are **4.5**. No lab. Do not invent tickets or a form.
+| Matrix ID | Type | Item |
+|---|---|---|
+| 4.3 | K | Nominations from SOC, hunt, and CTI |
+| 4.3.1 | T | Review a nomination: accept, send back, or reject/route |
 
 ## Concepts taught
 
-- who can nominate
-- nomination need not be production-ready
-- accept, send back, or reject
-- nominator owes vs DE finishes
-- nomination need and reference
-
-## Artifacts
-
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- need + evidence/context pointer
+- nominators do not need production-ready rules
+- accept for engineering work
+- precise send-back requests
+- reject/route to other workflows
+- DE owns the final technical solution

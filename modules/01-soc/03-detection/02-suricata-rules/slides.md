@@ -1,120 +1,82 @@
-# Module 1.3.2 – Suricata Rules  
-## Slide Deck Content
+# Module 1.3.2 – Suricata Rules
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Interpret rule action, header, options, and text/hex/regex matching.
+- Describe a rule’s traffic and match conditions.
+- Create or modify a basic rule and relate a hit to other network evidence.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.3.2 – Suricata Rules  
-**Subtitle:** What on the wire would fire  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson is the network signature. Read a Suricata rule and propose a basic one. It is not how detections run as a service, and it is not YARA.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read a **network signature** to see what on the wire would fire.
+Suricata rules express conditions to inspect in network traffic. Reading the protocol, direction, and inspection buffer helps explain why a signature matched and whether its meaning agrees with the analyst’s description.
 
-An alert names a rule. Say what it matches, and whether the match is specific.
-
-You **propose** a basic create or modify. You do **not** deploy it.
-
-**Speaker Notes:**  
-This slide is the student intro. Name the parts of a Suricata rule and read one example. Do not teach YARA or how detections run as a service.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Action, header, options
-**Title:** Action, header, options
+## Understanding header and options
 
-`alert proto src port -> dst port ( options )`
+Read action, header, variables, flow, and buffer-specific tests. Actual variable values determine network scope.
 
-**Action** — `alert` in this lesson. Not drop.  
-**Header** — protocol, addresses, ports, direction.  
-**Options** — `msg`, `sid`, `rev`, and the match keywords.
-
-`$HOME_NET` and `$EXTERNAL_NET` are site variables. Do not invent the range.
-
-**Speaker Notes:**  
-Walk the three parts. Stop on action: this lesson is alert only. If they ask for the address range, it is a site variable.
+**Speaker notes:** Explain the variables from actual configuration or label their values unspecified. Distinguish text, hex, and regex as matching representations.
 
 ---
 
-### Slide 4 – Buffers, ASCII, hex, regex
-**Title:** Buffers, ASCII, hex, regex
+## Reading a basic proposal
 
-Put **`content`** in the right buffer: `http.uri`, `http.method`, `tls.sni`.
+The example matches GET and a URI containing /update.exe. A longer URI can also match.
 
-**ASCII** — `/update.exe`.  
-**Hex** — `|4d 5a|` (`MZ`).  
-**Regex** — `pcre`. Easy to over-match.
-
-Do not paste exploit payloads.
-
-**Speaker Notes:**  
-A string in the wrong buffer is a different match. Hex is the MZ bytes only. Regex can over-match. Do not start an exploit-payload example.
+**Speaker notes:** Read the rule by action, header, flow, method, then URI. Emphasize that bsize on the method and a substring on the URI have different effects.
 
 ---
 
-### Slide 5 – Same session, different job
-**Title:** Same session, different job
+## Worked example — Reading a basic proposal
 
-**Suricata** — this signature matched.  
-**Zeek** — parsed fields (method, URI, who talked).
+```suricata
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TRAINING HTTP update path"; flow:established,to_server; http.method; content:"GET"; bsize:3; http.uri; content:"/update.exe"; sid:1000001; rev:1;)
+```
 
-Join them with time plus the **5-tuple** (source IP, source port, destination IP, destination port, protocol).
-
-Do not put Zeek field names in the Suricata rule.
-
-**Speaker Notes:**  
-Both can come from the same traffic. They are not two incidents. If they write `uri` into the rule, that is a Zeek field, not a Suricata buffer.
+**Speaker notes:** Read the rule by action, header, flow, method, then URI. Emphasize that bsize on the method and a substring on the URI have different effects. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
 
 ---
 
-### Slide 6 – Read it. Propose a basic one.
-**Title:** Read it. Propose a basic one.
+## Modifying the matching scope
 
-**Given:** `alert http`, GET, `http.uri` `/update.exe`.
+Adding URI bsize:11 requires the exact-length URI. Explain whether query strings should be included.
 
-**Detects:** outbound HTTP GET whose URI contains `/update.exe`.
-
-`content:"GET"` on `tcp any any` is too broad.
-
-SOC proposes. Detection Engineering reviews.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: outbound GET of `/update.exe`. Tightening any GET by adding the URI is a modify. Do not tell the intro plot.
+**Speaker notes:** Use exact path, longer path, and query-string cases to evaluate the change. Production deployment and packet replay are outside this worked discussion.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Knowledge check
 
-1. Suricata and Zeek do the same job on a session. True or false?  
-2. The given rule — what does it detect, in one sentence?  
-3. Why is `content:"GET"` on `tcp any any` a poor proposal?
+1. What do the header and sticky buffer each control?
+2. Does the example match /folder/update.exe? Explain.
+3. Modify the URI test for exactly /update.exe and name an excluded request.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Summary and next step
 
-Action, header, and options.  
-Put the match in the right buffer.  
-ASCII, hex, and regex are techniques.  
-Zeek tells you the session. You propose. You do not deploy.
+A clear Suricata proposal identifies the traffic scope and the exact buffer and pattern inspected. Explain what matches, what does not, and what related network evidence could add.
 
-**Next:** **1.3.3** YARA rules
+Previous: [1.3.1 – SIGMA Rules](../01-sigma-rules/student-guide.md)
 
-**Speaker Notes:**  
-1.3.3 is files and memory. Stay off this network signature when you get there.
+Next: [1.3.3 – YARA Rules](../03-yara-rules/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Suricata — Rule format](https://docs.suricata.io/en/latest/rules/intro.html)
+- [Suricata — HTTP keywords](https://docs.suricata.io/en/latest/rules/http-keywords.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

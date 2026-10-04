@@ -1,97 +1,91 @@
-# Module 1.4.3 – Common False Positive Causes  
-## Slide Deck Content
+# Module 1.4.3 – Common False Positive Causes
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+- Recognize analyst/tool activity and overly broad logic as common causes.
+- Identify a supported cause for a supplied false positive.
+- Propose a specific change and explain its coverage tradeoff.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.4.3 – Common False Positive Causes  
-**Subtitle:** Why a false positive fired, and what you would change  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson sits after classification. The case is already a false positive. The work here is the cause class and one named change. Analysts do not deploy that change.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-A **false positive** already used queue time.
+Once an alert is assessed as a false positive, the explanation can help reduce repeated unnecessary work. A useful recommendation connects the benign activity to the logic that matched and proposes a specific change with an understood effect on coverage.
 
-Say **why** it matched, and **one change** that would stop the same fire.
-
-You do not re-decide true positive versus false positive.  
-You do not deploy the change.
-
-**Speaker Notes:**  
-This slide is the student intro. A false positive still used queue time. The job is the cause class and one change so the same benign fire does not keep repeating. Do not re-open classification.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Two cause classes
-**Title:** Analyst or tool versus overly broad
+## Recognizing two common causes
 
-**Analyst or tool activity** — someone tested or downloaded a live rule; replayed a capture; ran a shop-owned scanner.  
-Change: exclude that identity or window. Do not delete a good signature.
+Common causes include analyst/tool activity and overly broad logic. They can overlap.
 
-**Untuned or overly broad detection logic** — any PowerShell; GET on any TCP; MZ-only YARA wired to an alert.  
-Change: add a selector. Hand it to detection engineering.
-
-**Speaker Notes:**  
-Those two classes are the whole set. If neither fits, say other and still name a change. Do not invent a third official class.
+**Speaker notes:** Keep the prior classification visible so cause analysis does not become an unsupported benignness assumption. Discuss overlap between the two classes.
 
 ---
 
-### Slide 4 – Class plus one sentence
-**Title:** Class plus one sentence
+## Reference — Recognizing two common causes
 
-**Overly broad** — `Get-Help` on any-PowerShell.  
-Change: require `-enc` and parent `wscript`.
+| Cause class | Example | Direction for a proposal |
+|---|---|---|
+| Analyst or tool activity | An authorized scanner or documented test/replay produces the observed pattern. | Separate test traffic or narrowly identify the approved activity. |
+| Untuned or overly broad logic | A threat rule matches every PowerShell process, including verified helpdesk use. | Align predicates or thresholds with the intended threat condition. |
 
-**Analyst or tool** — replay of `GET /update.exe` into production.  
-Change: exclude the replay. Do not delete the signature.
-
-**Speaker Notes:**  
-Show these two givens before the knowledge check. “Tune it” is not a change. Do not tell the PRD plot.
+**Speaker notes:** Keep the prior classification visible so cause analysis does not become an unsupported benignness assumption. Discuss overlap between the two classes. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 5 – Name the change. You do not deploy it.
-**Title:** Name the change. You do not deploy it.
+## Working through a recommendation
 
-Do not reclassify true positive versus false positive.  
-Do not deploy the change.  
-Do not pick scan, root, or user (**1.4.4**).
+Tie proposed predicates or test-traffic handling to a verified cause and the intended requirement.
 
-**Speaker Notes:**  
-Stay on cause and change. Category is the next lesson. Detection engineering deploys.
+**Speaker notes:** Ask which requirement the added predicates serve. More predicates are useful only if they preserve the intended coverage.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Supplied example
 
-1. This lesson is for deciding true positive versus false positive. True or false?  
-2. What are the two cause classes?  
-3. False positive: any-PowerShell on `Get-Help`. Name the class and one change sentence.
+For a threat rule that matches any PowerShell process, verified interactive `Get-Help` is routine activity. If the intended requirement is specifically encoded PowerShell from Script Host, propose the image, parent, and command-line predicates that express that requirement. Explain that this narrows coverage and does not detect every form of PowerShell misuse.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Ask which requirement the added predicates serve. More predicates are useful only if they preserve the intended coverage.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Making the change reviewable
 
-After a false positive: class plus change.  
-Analyst or tool activity versus overly broad logic.  
-Name the change. You do not deploy it.
+Name the exact change, expected match/nonmatch, and coverage tradeoff for review.
 
-**Next:** **1.4.4** Common alert categorizations
+**Speaker notes:** Have learners name a match and nonmatch after the change. Specificity makes the recommendation reviewable; “tune it” alone does not.
 
-**Speaker Notes:**  
-1.4.4 is the site category, not the false-positive cause. Stay off cause class when you get there.
+---
+
+## Knowledge check
+
+1. What are the two cause classes taught here, and can they overlap?
+2. For verified Get-Help noise on an any-PowerShell threat rule, propose a change tied to the Script Host requirement.
+3. Why is excluding every event from a scanner a weak recommendation?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Explain why the benign activity matched, then propose a concrete change tied to the detection requirement. Review its effect on expected matches and missed activity before it is applied.
+
+Previous: [1.4.2 – Alert Classification](../02-classification/student-guide.md)
+
+Next: [1.4.4 – Common Alert Categorizations](../04-categorizations/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — Investigate and classify alerts](https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts)
+- [Sigma — Rule basics](https://sigmahq.io/docs/basics/rules.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

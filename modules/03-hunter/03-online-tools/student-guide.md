@@ -3,76 +3,95 @@
 **Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Proficiency Focus:**  
 - Hunter: 3.3.1 B / C / C ; 3.3.1.1–3.3.1.3 3c / 4c / 4d  
-- SOC: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.2 1a / 2b / 3c ; 3.3.1.3 1a / 2b / 3c  
+- SOC: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.3 1a / 2b / 3c  
 - CTI: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.2 2b / 3c / 4c ; 3.3.1.3 1a / 2b / 3c  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Use VirusTotal, ANY.RUN, urlscan.io, and Silent Push outputs to identify hunt-relevant pivots.
+2. Convert an external finding into a precise **internal query plan** that names the local data source, fields, value, and time window.
 
-1. Name each tool’s **hunt** strength and **hunt** limit (VirusTotal, AnyRun, URLScan, Silent Push).
-2. From a classroom result card, pull a **hunt lead** and turn it into a **precise** internal SIEM or Zeek query.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.3.1 – Tool capabilities for hunting
-- T: 3.3.1.1 – Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push
+- T: 3.3.1.1 – Perform advanced querying and pivoting in VirusTotal, ANY.RUN, urlscan.io, and Silent Push
 - T: 3.3.1.2 – Extract actionable hunting leads from external tool results
 - T: 3.3.1.3 – Convert external findings into precise internal SIEM or Zeek queries
 
----
-
 ## 1. Key Concepts
 
-Hunters take a finding from an external tool and turn it into a search they can run **here**, in the SIEM or in Zeek. They do that because a public detection count, a “malicious” tag, or a screenshot does not tell you whether that activity happened on your network. That is the job in this lesson: name each tool’s hunt strength and hunt limit, pull a lead you can actually search, and write a **precise** internal query.
+External tools provide **context and candidates**. Internal telemetry tells you whether the activity occurred in your environment.
 
-You work from a **classroom result card** — a copy of an external-tool result this lesson provides. You write what the card shows. You do not log in. You do not need a live vendor account.
+| Tool | Hunt-relevant strength | Important limit |
+|---|---|---|
+| **VirusTotal** | Object relationships and sandbox behavior can expose related files, domains, IPs, processes, files, registry, and network events. | A relationship or sandbox event is external evidence, not proof it occurred internally. |
+| **ANY.RUN** | TI Lookup can search IOCs and sandbox event fields such as processes, registry activity, commands, mutexes, and network events. | A threat label or one sandbox session is not the internal hunt result. |
+| **urlscan.io** | A scan can expose redirects, requested domains/IPs/URLs, page metadata, certificates, and HTTP artifacts. | One browser scan is time/environment specific and may include unrelated third-party services. |
+| **Silent Push** | Passive DNS can expose historical domain/IP and other DNS relationships. | Provider-observed PADNS associations require time and hosting-density context. |
 
-When to pick a tool is **0.7**. How CTI reads each platform’s tabs is **2.9**. This lesson is that conversion. It is not those lessons.
+### Supporting documentation
 
-| Tool | Hunt strength | Hunt limit |
-|------|---------------|------------|
-| **VirusTotal** | Linked objects and sandbox events (Relations / Behavior) can name a host or dropped file | A detection count is not a hunt query |
-| **AnyRun** | Process and network facts from a detonation | A “malicious” tag is not a query |
-| **URLScan** | Requested hosts on a URL | A screenshot is not a query |
-| **Silent Push** | Other names on an **A** record (an IPv4 mapping) or an **NS** (nameserver) | The whole **/24** (a 256-address block) is noise |
+- [VirusTotal Relationships](https://docs.virustotal.com/reference/relationships)
+- [VirusTotal File Behaviours](https://docs.virustotal.com/reference/file-object-behaviours)
+- [ANY.RUN TI Lookup Query Guide](https://intelligence.any.run/TI_Lookup_Query_Guide_v6.pdf)
+- [Silent Push DNS Data](https://help.silentpush.com/docs/dns-data)
+- [urlscan Result API](https://urlscan.io/docs/result/)
 
-**Query** means you look up a seed the card already has — a hash, an IP, a URL — and you write the related object the card shows. **Pivot** means you take that object and name the next related object on the **same** card: a contacted host, a dropped file, another name on the same A record. You do not invent a sibling. You do not open a live account.
+### What makes a good hunt lead?
 
-A **hunt lead** is a named artifact you can search internally: an IP, a port, a URI, a file name, a hostname. A detection count, a “malicious” tag, or a screenshot is not a lead.
+A hunt lead should be **internally queryable** and retain enough context to avoid becoming a blind IOC search.
 
-A **precise** query names that lead in SIEM or Zeek — the IP **and** the port **and** the URI. It is not a filter that matches every destination (`dest=*`). It is not the whole `/24`.
+Examples:
 
-**What good looks like:**
+- destination `203.0.113.88`, TCP port `8080`, URI `/update.exe`;
+- registry value `Updater` under a Run key, pointing to a user-writable path;
+- a dropped filename plus parent process or hash;
+- a rare domain paired with an observed time window.
 
-- **Query / pivot:** the card shows the hash of `update.exe` contacted `203.0.113.88` on port `8080`. You name that host and port. You do not write a sibling domain you did not see. You do not query `203.0.113.0/24`.
-- **Lead:** `GET /update.exe` to `203.0.113.88:8080`. Not “VirusTotal said malicious.”
-- **Convert:** Zeek `http` `id.resp_h == 203.0.113.88 && id.resp_p == 8080 && uri == "/update.exe"` (or the SIEM equivalent). **Not** `dest=*`. **Not** a `/24`.
+A detection count, verdict label, or screenshot can provide context but is not itself the internal search.
 
----
+### Convert the finding into an internal query plan
+
+Write:
+
+1. **Local data source** – e.g., Zeek `http.log`, EDR process events, registry telemetry.
+2. **Fields** – the fields that express the lead.
+3. **Values/relationship** – the exact artifact or behavior.
+4. **Time window / population** – where and when to search.
+5. **Expected review context** – what would make a hit interesting or benign.
+
+Example:
+
+> **Data source:** Zeek HTTP telemetry  
+> **Predicate:** `id.resp_h = 203.0.113.88`, `id.resp_p = 8080/tcp`, `uri = /update.exe`  
+> **Window:** A12 window ± 14 days across user-workstation traffic  
+> **Review:** identify originating hosts, repeated requests, response metadata, and associated file/process evidence.
+
+Those are **field constraints**, not a claim that Zeek itself has a universal query language. The exact SIEM syntax depends on where your Zeek data is stored.
+
+### Preserve external-source provenance
+
+Phrase the lead as:
+
+> VirusTotal behavior report observed...
+
+or:
+
+> Silent Push PADNS associated...
+
+Then ask whether internal telemetry contains the same or related activity.
 
 ## 2. Knowledge Check
 
-1. A VirusTotal detection count is a hunt query. True or false?
-2. Name one hunt limit for Silent Push.
-3. The classroom result card shows `GET /update.exe` to `203.0.113.88:8080`. Write one precise Zeek or SIEM query. Do not use a `/24`.
-
----
+1. Why is a VirusTotal relationship useful but not proof of internal activity?
+2. What four or five elements make an external finding into a good internal query plan?
+3. Convert `203.0.113.88:8080` + `/update.exe` into a Zeek/SIEM field predicate and scope.
 
 ## 3. Summary
 
-Each tool has a hunt strength and a hunt limit. A lead is a named artifact you can search here. The query names that lead — not a count, not a tag, not a screenshot, and not a whole `/24`.
+External tools generate context and candidates. Hunting converts them into precise internal tests.
 
-**Next:** **3.4.1** Assessing CTI for hunting value.
+Carry forward the artifact **and** its context, then search the local telemetry that can actually answer the question.
 
----
-
-## 4. Related modules
-
-- 3.2.2 – Hunt development concepts
-- 3.4.1 – Assessing CTI for hunting value
-- 0.7 – External tools (when to pick)
-- 2.9 – Platform-specific skills
-- 1.2.5 – HTTP engine
+**Next:** **3.4.1 – Assessing CTI for Hunting Value**.

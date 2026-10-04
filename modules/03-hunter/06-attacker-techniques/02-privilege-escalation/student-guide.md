@@ -5,68 +5,105 @@
 - Hunter: 3.6.2 B / C / C ; 3.6.2.1 3c / 4c / 4c  
 - SOC: 3.6.2 A / B / B ; 3.6.2.1 1a / 2b / 3c  
 - CTI: 3.6.2 A / B / B ; 3.6.2.1 1a / 2b / 3c  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Recognize evidence that a process or actor obtained a higher security context than it previously had.
+2. Distinguish the **elevation outcome** from the specific technique used to achieve it.
 
-1. Name common Windows privilege-escalation methods and the indicators that prove elevation.
-2. Recognize those methods in logs or telemetry — not persistence, and not a process that was already privileged.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.6.2 – Privilege escalation techniques
 - T: 3.6.2.1 – Recognize privilege escalation techniques in logs or telemetry
 
----
-
 ## 1. Key Concepts
 
-Threat hunters read host telemetry to see whether an actor **gained a higher privilege** than they started with. That change is **privilege escalation** (elevation): typically a standard user to administrator or **SYSTEM**. Persistence is a method that will **run again**. That was **3.6.1**. If you call a Run key elevation, you hunt the wrong class. The job in this lesson is to name the method and the indicator that proves the privilege changed. You do not hunt a named technique (**3.6.3**).
+Privilege escalation occurs when an actor obtains a higher level of effective privilege than the context it previously controlled.
 
-The A12 Run key **`Updater`** is **not** privilege escalation. It starts as the logged-on user. A scheduled task that runs as SYSTEM is persistence unless you also see **how** a non-privileged actor got SYSTEM.
+Seeing a process run as **SYSTEM** may establish an elevated outcome. It does **not automatically tell you how the elevation happened**.
 
-| Method | Indicator that proves elevation |
-|--------|---------------------------------|
-| **Token theft / impersonation** | A user-context parent starts a child as SYSTEM (or High integrity). The parent was not already that privileged, and it is not an auto-elevate Windows binary. |
-| **UAC bypass** | An **auto-elevate** Windows binary — a built-in program Windows will raise without a real consent prompt — launches an unexpected payload, and there is no real consent. |
-| **Privileged service / image abuse** | The service image path points at a user-writable file, or a user who was not already privileged creates a service that then runs as SYSTEM. |
-| **Other** | A named tool, named pipe, or other method you can point at, plus a SYSTEM spawn. Say which. |
+That method/evidence distinction is the core of this lesson.
 
-A process that was **already** SYSTEM is not elevation. A user who clicked **Yes** on a signed installer is usual User Account Control (UAC) consent, not a bypass.
+### UAC bypass
 
-If you cannot see integrity level, tokens, or service-image changes, name a **visibility gap**. Do not invent a method.
+MITRE ATT&CK: [T1548.002 – Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002/)
 
-**What good looks like** (classroom examples — not A12 facts):
+Evidence should support the bypass mechanism—for example:
 
-- Given: user `helpdesk.exe` → `cmd.exe` as SYSTEM, no consent event. **Token theft.** Proof: parent identity versus child identity, and no consent.
-- Given: `fodhelper.exe` → unknown executable, no consent. **UAC bypass.**
-- Given: HKCU Run **`Updater`**. **Not** this class. That is persistence (**3.6.1**).
+- use of an auto-elevated component;
+- associated registry/protocol/COM abuse or other known bypass mechanism;
+- high-integrity child/result;
+- absence of normal consent where that matters to the technique.
 
-Do not hunt “privilege escalation” as a tactic. That is **3.6.3**.
+`fodhelper.exe` followed by an elevated child can be suspicious, but the process name alone is not enough to prove a UAC bypass.
 
----
+### Access Token Manipulation
+
+MITRE ATT&CK: [T1134 – Access Token Manipulation](https://attack.mitre.org/techniques/T1134/)
+
+Useful evidence can include:
+
+- token duplication or impersonation operations from EDR/API telemetry;
+- source and target security contexts;
+- creation of a process using a manipulated token;
+- linkage to a privileged token source.
+
+A user process followed by a SYSTEM child does **not by itself prove token theft**. It proves that the child ran in a higher context; the method remains unresolved until token-manipulation evidence supports it.
+
+### Windows Service abuse
+
+MITRE ATT&CK: [T1543.003 – Windows Service](https://attack.mitre.org/techniques/T1543/003/)
+
+Services can execute as SYSTEM. If an adversary with sufficient rights creates/modifies a service and uses it to move from a lower effective context to SYSTEM, the service activity can contribute to privilege escalation.
+
+Preserve:
+- who created/modified it;
+- image path;
+- service account;
+- resulting process context.
+
+### Exploitation for Privilege Escalation
+
+MITRE ATT&CK: [T1068 – Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068/)
+
+Evidence should connect:
+- vulnerable component/driver or exploit behavior;
+- exploitation activity;
+- resulting higher privilege.
+
+A SYSTEM process appearing after a crash or driver load is not enough by itself to name a specific exploit.
+
+### Outcome first, method second
+
+A useful analytic sequence is:
+
+1. What was the original security context?
+2. What higher context appeared?
+3. What telemetry explains **how** the transition occurred?
+4. Is the technique specific enough to name, or is the method unresolved?
+
+### A12 boundary
+
+The A12 HKCU Run value is evidence of user-context persistence. It does not establish a privilege change.
 
 ## 2. Knowledge Check
 
-1. HKCU Run **`Updater`** is privilege escalation. True or false?
-2. Name two privilege-escalation methods.
-3. A user `helpdesk.exe` launches `cmd.exe` as SYSTEM with no consent event. What method, and what indicator proves it?
-
----
+1. A user-context process launches a SYSTEM child. What can you say immediately, and what remains unresolved?
+2. What additional evidence would help support Access Token Manipulation?
+3. Why is `fodhelper.exe` alone insufficient to prove UAC bypass?
 
 ## 3. Summary
 
-Privilege escalation is a privilege change, not an autorun. Name the method and the indicator, or name a visibility gap.
+Recognize the privilege change, then require method-specific evidence before naming the escalation technique.
 
-**Next:** **3.6.3** Hunt one named technique.
+High privilege is an **outcome**. Token manipulation, UAC bypass, service abuse, and exploitation are **methods**.
 
----
+**Next:** **3.6.3 – Hunt for a Specific Persistence or Privilege-Escalation Technique**.
 
-## 4. Related modules
+## Supporting References
 
-- 3.6.1 – Persistence techniques
-- 3.6.3 – Hunt one named technique
-- 3.5.1 – ATT&CK map
+- [T1548.002 – Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002/)
+- [T1134 – Access Token Manipulation](https://attack.mitre.org/techniques/T1134/)
+- [T1543.003 – Windows Service](https://attack.mitre.org/techniques/T1543/003/)
+- [T1068 – Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068/)

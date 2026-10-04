@@ -42,14 +42,14 @@ Taught after **0**, before SOC **1.1**. Same IDs as the SOC/CTI sheets. Not DE-p
 
 | # | Item | Type | DE 3 | DE 5 | DE 7 | Justification |
 |---|------|------|------|------|------|---------------|
-| 0.6.1.1 | MITRE ATT&CK | K | A | B | B | Shared floor. Hunt planning is 3.5. DTF is 2.7.4. |
+| 0.6.1.1 | MITRE ATT&CK | K | A | B | B | Shared floor. Hunt planning is 3.5. DTF is 2.5.6. |
 | 0.6.1.2 | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | T | 1a | 2b | 2b | Awareness map. Do not start at 3c. |
 | 0.6.2.1 | Diamond Model | K | A | B | B | Shared floor. |
 | 0.6.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 1a | 2b | 2b | Awareness apply. |
 | 0.6.3.1 | Cyber Kill Chain | K | A | B | B | Shared floor. |
 | 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 1a | 2b | 2b | Awareness apply. |
-| 0.7 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A | B | B | Purpose and when to pick. Platform depth is 2.9. |
-| 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a | 2b | 3c | Select. Not a 2.9 pivot. Matches SOC awareness. |
+| 0.7 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A | B | B | Purpose and when to pick. Platform depth is 2.4. |
+| 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a | 2b | 3c | Select. Not a 2.4 pivot. Matches SOC awareness. |
 | 0.8 | Environment orientation | K | A | B | B | Seven facts including PCAP sensors. Sensor *health* is 4.7. |
 | 0.8.1 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b | 3c | 4c | Same apply-task as SOC. Needed for 4.7. |
 

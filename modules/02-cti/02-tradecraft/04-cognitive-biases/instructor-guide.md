@@ -6,99 +6,95 @@
 - Hunter: 2.2.4 A / B / B ; 2.2.4.1 1a / 2b / 3c  
 - SOC: 2.2.4 A / A / A ; 2.2.4.1 1a / 1a / 1a  
 **Estimated Time:** 20–25 minutes  
-**Delivery Method:** Instructor-led
-
----
+**Delivery Method:** Instructor-led explanation and discussion
 
 ## Module Overview for Instructors
 
-**Purpose of this module:**  
-Name the bias in a judgment and apply a Key Assumptions Check or ACH. Not a pep talk.
+**Purpose:** Help learners recognize three common cognitive biases in the reasoning visible on the page and apply a structured mitigation that can change the analysis if the evidence warrants it.
 
-**Context (plain language):**
+**Context:** The earlier tradecraft lessons provided tools for expressing probability, testing reasoning, and evaluating sources. This lesson explains why analysts still need deliberate safeguards: human judgment naturally gives extra weight to favored explanations, early frames, and memorable examples.
 
-- What this lesson is for: CTI analysts write judgments other people act on. A first label, a favorite story, or the last incident can lock that product. This lesson names the bias in the judgment and applies a named method so the product can still change.
-- How it hooks to the lesson before: 2.2.3 was Admiralty — rating who said it and how this piece checks out. This lesson is why a first label still wins after a rating exists.
-- How it hooks to the lesson after: 2.3.1 is the internal threat intelligence platform. The tradecraft unit ends here.
-- Why we are doing it this way: name three biases and apply a method this course already named, so the product can still move. Do not invent a new method.
-- What we are *not* doing in this lesson: a third official structured analytic technique. Diagnosing the author. Admiralty letters. Estimative wording. TIP navigation. Actor profiles. No lab.
-- Extra step: none.
+Keep the focus on the **product and process** rather than diagnosing the analyst. The lesson teaches confirmation bias, anchoring, and availability bias, with Key Assumptions Check and ACH as the available mitigations.
 
-Use the same names as the student guide: **confirmation**, **anchoring**, **availability**, **Key Assumptions Check**, **Analysis of Competing Hypotheses (ACH)**, and **mitigation**. **PRD APT** is a vendor label on a PDF, not proof of who they are. **A12** is this course’s classroom incident — availability would copy it onto a new event with no shared host, malware, or infrastructure. **Structured analytic technique** means a named method; do not use SAT as the headline word.
-
-**Key Teaching Points:**
-- Confirmation, anchoring, and availability — and what each does to the product.
-- A mitigation is a named method, not “try harder.”
-- The product is the task, not the person who wrote it.
-
-**Common Student Challenges:**
-- Treat “be more objective” as a mitigation. Why: a pep talk is not a method you can run. Example: writing “I will stay objective” instead of listing the assumption that the vendor name is who they are.
-- Treat extra bias names as required syllabus. Why: this lesson only requires three. Example: listing sunk cost and recency as names they must produce on the knowledge check.
-- Diagnose the author. Why: the task is the judgment on the page. Example: “the vendor is biased” instead of “the first label stuck, so later internals cannot move the call.”
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+**Required materials:** The aligned student guide and slide deck.
 
 ## Learning Objectives
 
-Same as the student guide.
+By the end of this module, learners will be able to:
+
+1. Recognize confirmation bias, anchoring, and availability bias in an analytic judgment and explain how each can distort the product.
+2. Select and apply a structured mitigation that gives the judgment a meaningful opportunity to change.
 
 **Mapped Proficiency Items:**
 - K: 2.2.4 – Cognitive biases and mitigation
 - T: 2.2.4.1 – Identify cognitive bias in a judgment and apply a mitigation technique
 
----
-
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Name the bias in the product |
-| Key Concepts            | 12 min    | Three biases; two methods; PDF example |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
-
----
+| Part | Time | Teaching purpose |
+|---|---:|---|
+| Introduction | 3 minutes | Explain why intent alone does not remove bias. |
+| Three biases | 7 minutes | Recognize how each changes the reasoning process. |
+| Structured mitigation | 6 minutes | Reuse Key Assumptions Check and ACH as practical controls. |
+| Worked examples | 4 minutes | Apply the concepts to attribution and A12 similarity. |
+| Knowledge check | 4 minutes | Identify bias and choose a mitigation. |
+| **Total** | **24 minutes** | Adjust discussion time as needed. |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Frame bias as a reasoning risk
 
-**Talking Points:**
-- Open with the job: analysts write judgments other people act on, and a first label or last incident can lock the product.
-- Write the three biases and what each does to the product. Stop there. Do not require a longer list.
-- Gloss the two methods in one line each. Key Assumptions Check when one claim is carrying the call. ACH when two stories are live. Do not rebuild the 2.2.2 lesson.
-- Walk the given: “Vendor PDF says PRD APT, so high nation-state.” Anchoring and confirmation. Mitigation is a Key Assumptions Check on “vendor name = who they are.”
-- If they say “be more objective”: that is not a method. Name Key Assumptions Check or ACH.
-- If they add ten more bias names as required: this lesson names three.
-- If they diagnose the vendor or the author: the task is the judgment on the page, not the person.
-- If they start Admiralty letters or an actor profile: that is 2.2.3 or 2.11. Stay on the bias in this sentence.
-- If they open the TIP: that is 2.3.1.
+Explain that cognitive biases are normal features of human judgment. The course is not asking learners to diagnose colleagues or claim immunity from bias. It is teaching them to notice patterns in an analytic product that suggest the reasoning did not receive a fair test.
 
----
+### 2. Distinguish the three biases by mechanism
+
+**Confirmation bias:** the preferred explanation affects which evidence receives attention or weight.
+
+**Anchoring:** an early label, number, or frame continues to shape reasoning even after new evidence arrives.
+
+**Availability bias:** a recent or vivid example is easier to recall and therefore feels more representative than the actual evidence justifies.
+
+Use the effect on the product to distinguish them. A single scenario can contain more than one bias, but learners should identify the clearest mechanism first.
+
+### 3. Connect each bias to a process change
+
+For confirmation bias, ACH is often useful because the analyst must compare the same evidence against alternatives and consider inconsistency with the favored explanation.
+
+For anchoring, a Key Assumptions Check can expose what the first frame caused the analyst to treat as given.
+
+For availability, either technique may help. The important step is to force the analyst to state what evidence actually connects the current event to the memorable prior case.
+
+### 4. Use the vendor-label example carefully
+
+“Vendor PDF says PRD APT, so high nation-state” is useful because the first label can act as an anchor and the analyst may then seek confirming evidence. Ask learners what assumption is carrying the conclusion rather than simply asking them to call the author biased.
+
+### 5. Use A12 to teach availability
+
+Present a new PowerShell case with no shared infrastructure, file, host, or other linkage. If the analyst treats it as A12-related because A12 is recent and memorable, availability is the clearest issue. Ask what evidence would actually be required to support a relationship.
+
+## Common Student Challenges
+
+| Misunderstanding | Teaching response |
+|---|---|
+| “Be more objective” is an adequate mitigation. | Ask what repeatable action changes the analysis. Name a structured method. |
+| Bias is a personality flaw in the author. | Redirect to the reasoning visible in the product and the process that can correct it. |
+| Every scenario must have exactly one bias. | Explain that biases can overlap; identify the mechanism most directly demonstrated. |
+| Mitigation is meant to disprove the original judgment. | Emphasize that mitigation gives the judgment a fair chance to change, not a requirement to reverse it. |
 
 ## Knowledge Check – Answer Key
 
-1. **“Be more objective” is a mitigation technique. True or false?**  
-   **Answer:** False. A named method is a mitigation.  
-   **Explanation:** “Be more objective” is a pep talk. Key Assumptions Check or ACH is a method you can run on the product.
+### 1. Why is “be more objective” insufficient?
 
-2. **Name two biases from this lesson.**  
-   **Answer:** Any two of confirmation, anchoring, availability.  
-   **Explanation:** Those three are the syllabus set. Extra psychology names are not required.
+**Expected answer:** It expresses intent but does not create a repeatable test of the reasoning. A structured method changes what the analyst actually does with the judgment.
 
-3. **“Vendor PDF says PRD APT, so high nation-state.” Bias, and one mitigation.**  
-   **Answer:** Anchoring and/or confirmation. Key Assumptions Check (or ACH if they list a competing cluster, such as activity group versus nation-state).  
-   **Explanation:** The first vendor label stuck. A Key Assumptions Check tests “vendor name = who they are.” That assumption breaks.
+### 2. Early vendor tracking name continues to frame later evidence
 
----
+**Expected answer:** Anchoring is the most direct bias. A Key Assumptions Check can test the premise that the vendor label establishes the actor or sponsor. Confirmation bias may also appear if contradictory evidence is being discounted.
 
-## Additional Instructor Resources
+### 3. New PowerShell incident assumed related to A12 because A12 is recent
 
-- Next: 2.3.1 Internal threat intelligence platform
+**Expected answer:** Availability bias. The analyst can compare “related to A12” and “unrelated activity” using ACH or test the assumption that superficial similarity implies linkage with a Key Assumptions Check.
+
+## Summary and Transition
+
+Close by reinforcing that bias mitigation is part of analytic process design. The analyst does not need to eliminate human judgment; they need methods that expose vulnerable reasoning before it becomes a fixed conclusion. The next module applies analytical frameworks to supported activity, starting with ATT&CK.

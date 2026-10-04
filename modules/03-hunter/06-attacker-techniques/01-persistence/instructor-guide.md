@@ -6,99 +6,64 @@
 - SOC: 3.6.1 A / B / B ; 3.6.1.1 1a / 2b / 3c  
 - CTI: 3.6.1 A / B / B ; 3.6.1.1 1a / 2b / 3c  
 **Estimated Time:** 20–25 minutes  
-**Delivery Method:** Instructor-led
+**Delivery Method:** Instructor-led explanation and discussion
 
----
+## Module Purpose
 
-## Module Overview for Instructors
+Use this lesson to teach the reasoning skill in the student guide, not merely the vocabulary. Keep the A12 examples evidence-bound and connect findings to the next module rather than turning each lesson into a complete hunt exercise.
 
-**Purpose of this module:**  
-Recognize four persistence classes in telemetry. Name the class and the field that proves it. Not a tactic hunt. Not privilege escalation. Not a registry-event write-up.
+## Learning Objectives and Mapping
 
-**Context (plain language):**
-
-- What this lesson is for: Hunters name the method that will run again after reboot, logon, or a time trigger, and the field that proves it, so they do not confuse a one-off run with autorun.
-- How it hooks to the lesson before: 3.5.1 mapped the classroom hunt to Persistence / Run keys. This lesson is that mechanism in telemetry.
-- How it hooks to the lesson after: 3.6.2 is privilege escalation — elevation, not autorun.
-- Why we are doing it this way: 1.1.5 taught reading the registry event (what changed, who changed it). This lesson is hunt persistence — recognize the class.
-- What we are *not* doing in this lesson: Named-technique hunt (3.6.3). Privilege escalation (3.6.2). Registry-event field reading as the product (1.1.5). ATT&CK remapping (3.5). Hunt cards and hunt-type execute (3.2). Local hunt tickets (3.7). No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **persistence**, **registry-based**, **start menu / startup folder**, **scheduled tasks**, and **other common methods** (**service**, **WMI** subscription, **logon script**). The product is **class** plus **proof**, or a **visibility gap**. The given uses course-fiction names (`WS-JLEE`, Run **`Updater`**, Temp `invoice.vbs`). Do not turn it into the intro plot or a hunt of every Run key.
-
-**Key Teaching Points:**
-- Persistence is a method that will run again. A one-off process is not persistence.
-- Four classes. Name the one you see. Under other, say which method.
-- 1.1.5 describes the registry set. This lesson names the class.
-- Class plus proof, or a visibility gap. Do not invent a method.
-
-**Common Student Challenges:**
-- Treat a one-off `wscript` launch as persistence. Why: it ran, so it feels like the story. Example: writing “`invoice.vbs` persisted” from a process create.
-- Stop after a 1.1.5 registry write-up. Why: hive, key, and initiator already feel complete. Example: “PowerShell set HKCU Run `Updater`” with no class.
-- Hunt all Run keys, or write “hunt persistence.” Why: recognition is this lesson; a scoped hunt is 3.6.3. Example: searching every Run value, or hunting the whole Persistence tactic.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
-
-## Learning Objectives
-
-Same as the student guide.
-
-**Mapped Proficiency Items:**
 - K: 3.6.1 – Persistence techniques
 - T: 3.6.1.1 – Recognize persistence techniques in logs or telemetry
 
----
-
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+| Part | Time |
+|---|---:|
+| Context / prior-module connection | 3 min |
+| Core concepts | 10–12 min |
+| A12 or classroom application | 4–5 min |
+| Knowledge check | 4 min |
+| Summary / transition | 2 min |
 
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Runs again; not a registry write-up |
-| Key Concepts            | 12 min    | Four classes; given Run key |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
+## Teaching Notes
 
----
+- Broaden persistence beyond the overly narrow 'runs after reboot/logon/time trigger' definition, while keeping the course's Windows examples.
+- Technique recognition does not equal maliciousness; baseline/context matters.
+- Scheduled Tasks and Windows Services can map to multiple tactics depending on how they are used.
+- A12 HKCU Run supports user-context persistence, not privilege escalation by itself.
 
-## Detailed Teaching Notes
+## Common Coaching Pattern
 
-### 1. Key Concepts
+When a learner overstates the evidence, ask:
 
-**Talking Points:**
-- Open with the job: an alert or a hunt lead names a host, and you have to say whether something will run again — and which method that is.
-- Walk the four-class table. Stop. Services, WMI subscriptions, and logon scripts live under other; name the one you see. Do not inventory every persistence technique.
-- Stop on 1.1.5: hive, key, value, and who changed it are already taught. This lesson is the class.
-- Walk the given: HKCU Run **`Updater`** → `%TEMP%\update.exe` on **WS-JLEE**. One sentence: registry-based persistence. Proof is the value name plus the payload path.
-- If they call the `wscript` launch persistence: that is one-off execution. The Run key is persistence.
-- If they hunt all Run keys or say “hunt persistence”: that is 3.6.3.
-- If they call the Run key privilege escalation: it starts as the user. Elevation is 3.6.2.
-- If they skip a vendor Run key because it sits under `Program Files`: still persistence as a method.
+1. **What did we actually observe?**
+2. **What does that observation support?**
+3. **What additional evidence would be required for the stronger claim?**
 
----
+For hunt modules, also ask whether the required telemetry exists and whether the search is bounded enough for a negative result to mean anything.
 
 ## Knowledge Check – Answer Key
 
-1. **A one-off `wscript invoice.vbs` is persistence. True or false?**  
-   **Answer:** False. One-off execution is not persistence.  
-   **Explanation:** Persistence is a method that will run again. The Run key is the persistence, not the first `wscript` launch.
+### 1. Run-key evidence fields?
 
-2. **Name the four persistence classes.**  
-   **Answer:** Registry-based. Start menu / startup folder. Scheduled tasks. Other common methods (service, WMI subscription, or logon script).  
-   **Explanation:** Those four are the classes this lesson names. Under other, say which method you see.
+**Expected answer:** Exact key path, value name, value data/target, creator/user/process, and target file context.
 
-3. **Class + proof for HKCU Run `Updater` → `%TEMP%\update.exe`.**  
-   **Answer:** Registry-based persistence. Proof: value name **`Updater`** plus payload path `%TEMP%\update.exe`.  
-   **Explanation:** Windows will launch that path at logon. Class plus the field that proves it is the product.
+### 2. Why can scheduled task serve multiple tactics?
 
----
+**Expected answer:** Task Scheduler can be used for Execution, Persistence, or Privilege Escalation depending on trigger, account, prerequisites, and purpose.
 
-## Additional Instructor Resources
+### 3. Legitimate updater + Run key: still persistence technique?
 
-- Next: 3.6.2 Privilege escalation techniques
+**Expected answer:** No. It is still a persistence mechanism; benign/malicious judgment comes from context.
+
+## Transition
+
+Use the student's **Next** line to connect this lesson to the following module. Preserve unresolved visibility, detection, attribution, and scope gaps instead of solving them with assumptions.
+
+## Supporting References
+
+- [T1547.001 Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)
+- [T1053.005 Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)
+- [T1543.003 Windows Service](https://attack.mitre.org/techniques/T1543/003/)

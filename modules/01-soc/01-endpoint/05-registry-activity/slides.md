@@ -1,119 +1,125 @@
-# Module 1.1.5 – Registry Activity  
-## Slide Deck Content
+# Module 1.1.5 – Registry Activity
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Interpret registry structure and create, set, delete, and rename operations.
+- Describe a registry change and its evidence limits.
+- Create or modify a query for specific registry operations.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.1.5 – Registry Activity  
-**Subtitle:** What changed in a key or value  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.1.1 named the five kinds of host activity. This lesson is the registry kind. It is not a persistence catalog, not Zeek, and not how to install Sysmon.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read **registry** events to see what changed in a key or value, and which process changed it.
+Registry events record changes to Windows configuration. Reading the key, value name, value data, and initiating process separately helps explain exactly what changed and what follow-up evidence would be useful.
 
-Set. Delete. Rename.  
-Not a persistence catalog. Not Zeek. Not how to install Sysmon.
-
-**Speaker Notes:**  
-This is daily alert work: describe the registry event. Persistence techniques wait for a later lesson. File and process write-ups wait too.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Hive, key, value
-**Title:** Hive, key, value
+## Reading the registry structure
 
-**Hive** — `HKLM` / `HKCU`, or `\REGISTRY\MACHINE\` / `\REGISTRY\USER\`.  
-**Key** — the path.  
-**Value** — the named slot plus data.
+Separate hive, key, value name, and value data. Read the specific create, set, delete, or rename operation.
 
-Sysmon often writes `HKU\<SID>` for the user hive. That is the same tree as HKCU.
-
-**Speaker Notes:**  
-Walk hive vs key vs value first. Native prefix and friendly name are the same tree. Do not teach every hive in Windows.
+**Speaker notes:** Draw the hierarchy in words using the table: hive, key, value name, data. Explain that HKCU depends on account context.
 
 ---
 
-### Slide 4 – Set, delete, rename, who did it
-**Title:** Set, delete, rename, initiator
+## Reference — Reading the registry structure
 
-**Set** — something was written.  
-**Delete** — it is gone.  
-**Rename** — same object, new name.
+| Operation or field | What to read |
+|---|---|
+| Create/delete | Sysmon 12 records creation or deletion of registry objects; read the event's operation detail. |
+| Set value | Sysmon 13 records a value being set, with details subject to the value type and logging behavior. |
+| Rename | Sysmon 14 records key or value rename. |
+| MDE fields | `DeviceRegistryEvents`: `RegistryKey`, `RegistryValueName`, `RegistryValueData`, `ActionType`, and `InitiatingProcess*`. |
+| Locations | Run/RunOnce and service configuration keys can be relevant to startup behavior. Location alone does not establish malicious persistence. |
 
-**Initiating process** — who changed the key.
-
-**Run / Services** — example **locations**. Not a persistence catalog.
-
-**Speaker Notes:**  
-Name Run or Services when that is where the change sat. Do not inventory every persistence method. Who changed the key is this event, not a process-create write-up.
+**Speaker notes:** Draw the hierarchy in words using the table: hive, key, value name, data. Explain that HKCU depends on account context. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 5 – How it shows up
-**Title:** Sysmon and MDE
+## Working through the example
 
-Sysmon **12** / **13** / **14**.
+PowerShell sets the user’s Run value Updater to a Temp executable path. Later execution remains a separate question.
 
-MDE `DeviceRegistryEvents` `ActionType`:  
-**RegistryValueSet**. **RegistryKeyCreated**.  
-**RegistryKeyDeleted** / **RegistryValueDeleted**. **RegistryKeyRenamed**.
-
-Same activity. Different field names.  
-The full `ActionType` list is in the Defender portal — do not invent values.
-
-**Speaker Notes:**  
-Event 13 is SetValue. Event 12 is create or delete. Event 14 is rename. Do not invent `RegistryValueRenamed` on this MDE table. Do not teach Sysmon install.
+**Speaker notes:** Ask learners to separate configured behavior from later execution. This preserves the useful persistence connection without claiming a completed hunt.
 
 ---
 
-### Slide 6 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
+## Supplied example
 
-One sentence: what happened to which key/value, by whom.
+The supplied event records PowerShell setting value `Updater` under the user's `Software\Microsoft\Windows\CurrentVersion\Run` key to `C:\Users\jlee\AppData\Local\Temp\update.exe`.
 
-**Given:** Sysmon **13**, `powershell.exe`, `Run\Updater` = Temp `update.exe`.
-
-A query names a **specific** pattern — initiator + key path.  
-Not “all registry events.”
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: PowerShell set HKCU Run value Updater to that Temp path. The file create of update.exe is a different event. Do not tell the intro plot.
+**Speaker notes:** Ask learners to separate configured behavior from later execution. This preserves the useful persistence connection without claiming a completed hunt.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Creating a focused registry query
 
-1. A Run-key event is a finished persistence hunt. True or false?  
-2. `powershell.exe` SetValue on HKCU `Run\Updater` = Temp `update.exe`. In one sentence, what occurred?  
-3. A SIEM query that matches every registry event is a good “specific registry operation” query. True or false?
+Query the set operation, initiating process, key suffix, and value name. Explain which locations the predicates cover.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Check that learners broaden only the requested value-name scope. Do not accept replacing the query with every registry event.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Reference — Creating a focused registry query
 
-What changed in the hive, by whom.  
-Set, delete, or rename.  
-Key, value, and initiator are what you write down.  
-Run and Services are locations, not a hunt course.  
-A query is specific.
+| where Timestamp > ago(1d)
+| where ActionType == "RegistryValueSet"
+| where InitiatingProcessFileName =~ "powershell.exe"
+| where RegistryKey endswith @"\Software\Microsoft\Windows\CurrentVersion\Run"
+| where RegistryValueName =~ "Updater"
+| project Timestamp, DeviceName, RegistryKey, RegistryValueName,
 
-**Next:** **1.1.6** Image and driver load
+**Speaker notes:** Check that learners broaden only the requested value-name scope. Do not accept replacing the query with every registry event. Use the surrounding student-guide explanation to interpret the table and its limits.
 
-**Speaker Notes:**  
-1.1.6 is the load event on the same host telemetry. Stay off this registry event when you get there.
+---
+
+## Worked example — Creating a focused registry query
+
+```kusto
+DeviceRegistryEvents
+| where Timestamp > ago(1d)
+| where ActionType == "RegistryValueSet"
+| where InitiatingProcessFileName =~ "powershell.exe"
+| where RegistryKey endswith @"\Software\Microsoft\Windows\CurrentVersion\Run"
+| where RegistryValueName =~ "Updater"
+| project Timestamp, DeviceName, RegistryKey, RegistryValueName,
+          RegistryValueData, InitiatingProcessCommandLine
+```
+
+**Speaker notes:** Check that learners broaden only the requested value-name scope. Do not accept replacing the query with every registry event. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. How do a key, value name, and value data differ?
+2. Describe the supplied Updater change and one thing it leaves unknown.
+3. Modify the query to find any value set by PowerShell under the same Run key.
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+A registry finding should identify the operation, key, named value, available data, and initiating process. This makes the configuration change clear while leaving later behavior and authorization to additional evidence.
+
+Previous: [1.1.4 – Network Activity (Endpoint)](../04-network-activity/student-guide.md)
+
+Next: [1.1.6 – Image and Driver Load Activity](../06-image-driver-load/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceRegistryEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceregistryevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

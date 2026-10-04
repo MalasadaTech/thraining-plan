@@ -1,110 +1,94 @@
-# Module 1.1.1 – Endpoint activity (the map)  
-## Slide Deck Content
+# Module 1.1.1 – Endpoint activity (the map)
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 15–20 minutes  
-**Total Suggested Slides:** 8
+- Recognize the five endpoint activity types.
+- Classify a short description by its recorded operation.
+- Explain why source and collection coverage matter when interpreting an event.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.1.1 – Endpoint activity  
-**Subtitle:** Overview of host activity types  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This is the start of the SOC analyst track. This lesson names the five kinds of host activity. It does not teach how to read a process-create event.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-An alert usually names a **host**.
+Endpoint evidence helps you describe activity on a device. Recognizing the kind of activity first makes it easier to choose the right fields and explain what the event establishes. The next five lessons build that skill one activity type at a time.
 
-That host generated a **log**. Before you describe it, know **what kind of activity** it is.
-
-This lesson is the overview.
-
-**Speaker Notes:**  
-This slide is the student intro. Name the kinds before anyone reads process, file, or registry fields. Do not teach fields today.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Five kinds of host activity
-**Title:** Five kinds of host activity
+## Five kinds of endpoint activity
 
-A host generates **logs** when something happens on it.
+Classify the recorded operation: process, file, registry, host-network, or image/driver load. A log can contain many events.
 
-**Process** — a program ran, ended, or touched another.  
-**File** — a file changed.  
-**Registry** — a key or value changed.  
-**Host-network** — this host talked.  
-**Image / driver load** — a DLL or driver loaded.
-
-**Speaker Notes:**  
-One line each. Stop. Host-network is the host logging a talk, not Zeek. If they ask about SIEM tables, a log line is an event; in a SIEM it often shows up as a row.
+**Speaker notes:** Ask learners to classify the recorded operation before discussing suspiciousness. Explain event versus log once so later lessons can use both terms naturally.
 
 ---
 
-### Slide 4 – Same activities, two tools
-**Title:** Sysmon and MDE
+## Reference — Five kinds of endpoint activity
 
-Two tools. Same five kinds of activity.  
-Different field names — not two different sets of facts.
+| Activity type | What the event concerns | Example |
+|---|---|---|
+| Process | A program starts, ends, or accesses another process. | A script interpreter launches PowerShell. |
+| File | A file operation such as creation, rename, modification, reading, or deletion, where collected. | A process writes a file under Temp. |
+| Registry | A Windows registry key or value changes. | A process sets a Run-key value. |
+| Host-network | A connection or DNS operation observed by the endpoint. | PowerShell connects to a remote IP address. |
+| Image / driver load | A module loads into a process, or a driver loads into the kernel. | A program loads a DLL. |
 
-This course uses both as examples.  
-This is not how to install Sysmon.
-
-**Speaker Notes:**  
-Do not dump Event IDs. The point is that Sysmon and MDE are two encodings of the same host activity.
-
----
-
-### Slide 5 – Overview now, one kind next
-**Title:** Overview now, one kind next
-
-This lesson only names the five kinds.  
-The next lessons each cover one kind in detail.
-
-This is **endpoint** telemetry — logs from the host.  
-Protocol deep-dive is Zeek (**1.2**).
-
-Name the **kind** before you describe the event.
-
-**Speaker Notes:**  
-Keep them on the overview. If you need the classify-the-line examples, use the three givens in the student guide.
+**Speaker notes:** Ask learners to classify the recorded operation before discussing suspiciousness. Explain event versus log once so later lessons can use both terms naturally. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Recognizing the observation
 
-1. Sysmon and MDE are two different stories. True or false?  
-2. “A program started on the host.” Which activity type is that?  
-3. “This host connected to an IP and port.” Process, or host-network?
+The same DLL can appear in a file-create event and an image-load event. The operation determines what each record establishes.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Use the same DLL name in both statements and ask which verb changes the activity type. Preserve the possibility of linking both events later.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Supplied example
 
-Five kinds of host activity.  
-Sysmon and MDE record the same kinds with different names.  
-Name the kind before you describe the event.
+“A file named `update.dll` was created” describes file activity. “PowerShell loaded `update.dll`” describes image-load activity. The filename is shared, but the recorded operation differs. A creation event alone leaves loading or execution unestablished.
 
-**Speaker Notes:**  
-Process activity is next. That lesson is who ran what, not another overview.
+**Speaker notes:** Use the same DLL name in both statements and ask which verb changes the activity type. Preserve the possibility of linking both events later.
 
 ---
 
-### Slide 8 – Next
-**Title:** Next
+## Understanding the source
 
-**1.1.2** Process activity
+Sysmon and MDE overlap but differ in coverage and schema. Network-sensor records add a different viewpoint.
 
-**Speaker Notes:**  
-1.1.2 is who ran what. The `wscript` → `powershell -enc` example lives there, not here.
+**Speaker notes:** Contrast the sensor viewpoints, then ask what endpoint evidence adds to a network connection. Avoid promising that either product records all five types completely.
+
+---
+
+## Knowledge check
+
+1. Name the five activity types and give an example of each.
+2. How does a file-create event differ from an image-load event for the same DLL?
+3. Why should you check the schema when moving from Sysmon to MDE?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Identify the recorded operation, then use the fields and coverage of its source to describe it. Related events can build a fuller sequence while retaining what each observation actually establishes.
+
+Previous: [0.8 — Environment / signal flow](../../../00-intro/08-environment/01-orientation/student-guide.md)
+
+Next: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — Advanced hunting schema](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

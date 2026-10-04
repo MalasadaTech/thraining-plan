@@ -7,67 +7,78 @@
 - CTI: 1.2.4.1 A / A / B ; 1.2.4.2 1a / 1a / 2b ; 1.2.4.3 1a / 1a / 2b  
 **Estimated Time:** 25–30 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a TLS event: SNI, certificate subject and issuer, JA3 where logged, version, cipher, and who talked to whom.
-2. Describe what a Zeek TLS log shows, and say what a **specific** SIEM query looks like.
+1. Interpret SNI, certificate information, optional fingerprints, version, cipher, and endpoints.
+2. Describe TLS activity using the observed establishment state.
+3. Create or modify a query for specific TLS activity.
 
 **Mapped Proficiency Items:**
 - K: 1.2.4.1 – TLS engine
 - T: 1.2.4.2 – Analyze a Zeek TLS log and accurately describe what occurred
 - T: 1.2.4.3 – Create a SIEM query to detect specific TLS activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+TLS can conceal application content while leaving some handshake information visible. Reading that information carefully helps describe the observed session without treating a hostname, certificate, or fingerprint as a verdict.
 
-SOC analysts read Zeek **TLS** events to see the **handshake** when the payload is encrypted. That is daily alert work: traffic on 443 still needs a description — who talked to whom, which hostname the client asked for, what name is on the certificate, and which version and cipher were negotiated. This lesson is the **TLS** engine. Zeek writes it to the **`ssl`** log (the name is historical). It is **not** decrypted HTTP. It does **not** name the initiating process. That is host-observed network (**1.1.4**).
+## 1. Reading TLS evidence
 
-Each handshake Zeek saw is one **event** in that log. In a SIEM, that event usually shows up as a **row**. Later lessons may still say “row.” Here it means the same thing as the TLS log.
+Zeek records TLS information in `ssl.log`; the name is historical.
 
-| Idea | What to read |
-|------|----------------|
-| **SNI** | `server_name` — the hostname in the Client Hello. Empty means it was not sent or not logged. |
-| **Subject / issuer** | `subject` / `issuer` — the name on the certificate, and who signed it. SNI is not the certificate subject. |
-| **JA3 / JA3S** | Client / server TLS fingerprints **where the shop logs them**. Missing means not logged, not “no TLS.” |
-| **Version / cipher** | `version`, `cipher` — what was negotiated |
-| **Source / dest** | `id.orig_h` / `id.orig_p` → `id.resp_h` / `id.resp_p` — originator to responder |
+| Field or feature | Interpretation |
+|---|---|
+| `server_name` | Observed Server Name Indication (SNI), when visible. It is distinct from a certificate subject. |
+| `subject`, `issuer` | Certificate identity fields where available; detailed certificate records may be linked through `x509.log`. |
+| `version`, `cipher` | Observed TLS negotiation details. |
+| `established` | Zeek's indication that the TLS session was successfully established. Version and cipher alone should not substitute for that assessment. |
+| JA3 / JA3S | Optional client/server fingerprints when the deployment collects them. A shared fingerprint does not uniquely identify malware. |
+| Endpoint fields and `uid` | Identify the observed connection and related records. |
 
-JA3 is how the client spoke TLS, not a malware name. Do not treat a JA3 value as a verdict. Do not invent a JA3 value. If the field is empty, say so.
+Encryption, TLS version, encrypted Client Hello, capture quality, and configuration affect visibility. A blank SNI or certificate field does not establish that no name or certificate existed. TLS 1.3 can conceal certificate details from a passive sensor.
 
-This is the **extract**. PCAP still verifies or expands (**1.2.1**). Do not open HTTP fields yet (**1.2.5**).
+## 2. Working through the example
 
-**What good looks like:**
+A record shows `192.0.2.10` communicating with `203.0.113.88:443`, a recorded TLS version and cipher, `established=true`, and no `server_name`.
 
-- Describe: one sentence — who talked to whom, SNI if present, subject/issuer, version/cipher, JA3 only if logged. Do not name a process. Do not call it phishing from one SNI and subject mismatch.
-- Given: `id.resp_h` `203.0.113.88`, `id.resp_p` `443`, `server_name` empty, `version` / `cipher` present. **What occurred:** that host completed a TLS handshake to `203.0.113.88:443`. SNI was not logged.
-- Query: names a **specific** pattern (SNI, subject, version, or dest IP/port), not every `ssl` event.
+Describe it as: “Zeek reports an established TLS session between the supplied endpoints with the recorded version and cipher; SNI is unavailable in this record.” If `established` were absent, limit the conclusion to the observed handshake details. Even an established session does not reveal the encrypted HTTP path or prove the application's purpose.
 
----
+## 3. Creating a focused TLS query
 
-## 2. Knowledge Check
+This KQL teaching example assumes an ingested table named `ZeekTls`, a datetime `TimeGenerated` column, and columns retaining the Zeek field names shown below. These are classroom table names, not built-in Zeek or SIEM tables. Map names and data types to your ingestion schema before use.
 
-1. `server_name` is the name on the server certificate. True or false?
-2. Workstation → `203.0.113.88:443`, `server_name` empty, version and cipher present. In one sentence, what occurred?
-3. A SIEM query that matches every `ssl` event is a good “specific TLS activity” query. True or false?
+```kusto
+ZeekTls
+| where TimeGenerated > ago(1d)
+| where ['id.resp_h'] == "203.0.113.88" and ['id.resp_p'] == 443
+| where established == true
+| project TimeGenerated, uid, ['id.orig_h'], ['id.resp_h'],
+          server_name, version, cipher, established
+```
 
----
+This searches for established TLS sessions to the example endpoint. To ask about a hostname instead, use `server_name =~ "update.example"`; that query only finds records where the name is visible and populated.
 
-## 3. Summary
+## Knowledge Check
 
-A TLS event is the handshake: SNI, certificate, version, cipher, and who talked to whom. JA3 only if logged. The process is not on this log. A query names a specific pattern.
+1. How does SNI differ from the certificate subject?
+2. What supports calling the example an established TLS session?
+3. Modify the query to search for visible SNI update.example and explain a blind spot.
 
-**Next:** **1.2.5** HTTP engine.
+## Summary
 
----
+TLS records describe the visible handshake and session state. State which names, certificate details, and fingerprints are available, and keep encrypted application behavior separate from those observations.
 
-## 4. Related modules
+## Course Connections
 
-- 1.2.3 – DNS engine (previous)
-- 1.2.5 – HTTP engine
-- 1.2.2 – Conn engine
-- 1.1.4 – Host-observed network
+Previous: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)
+
+Next: [1.2.5 – HTTP Engine](../05-http-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — ssl.log](https://docs.zeek.org/en/current/reference/logs/ssl.html)
+- [Zeek — x509.log](https://docs.zeek.org/en/current/reference/logs/x509.html)

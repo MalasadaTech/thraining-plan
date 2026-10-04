@@ -1,29 +1,25 @@
-# Detection lifecycle
+# Detection Lifecycle
 
-**Path:** `modules/04-de/06-detection-lifecycle`  
-**Primary role:** Detection Engineer  
-**Secondary:** SOC Analyst, Threat Hunter, CTI Analyst  
-**Time:** about 15–20 minutes
+**Path:** `modules/04-de/06-detection-lifecycle`
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 4.6 | K | Detection lifecycle | 4.6 a–d |
-| 4.6.1 | T | Call modify / retire / leave and cite the reason | 4.6.1 task 1 |
-| 4.6.2 | T | Given a block, decide whether the matching rule still earns its keep | 4.6.1 task 2 |
-
-The teaching-unit ID is **4.6**. Tune requests are **4.4**. Packages are **4.5**. Sensors are **4.7**. No lab. A block is not automatic retire. Do not invent tickets.
+| Matrix ID | Type | Item |
+|---|---|---|
+| 4.6 | K | Detection lifecycle |
+| 4.6.1 | T | Modify / retire / leave |
+| 4.6.2 | T | Re-evaluate detection after a block/control change |
 
 ## Concepts taught
 
-- when to modify, retire, or leave
-- lifecycle reasons
-- a block is not automatic retire
+- coverage-value review
+- modify / retire-or-replace / leave
+- data-source migration
+- redundancy
+- behavioral durability
+- operational cost
+- blocked IOC is not automatic retirement
 
-## Artifacts
+## Supporting reference
 
-- [instructor-guide.md](instructor-guide.md)
-- [student-guide.md](student-guide.md)
-- [slides.md](slides.md)
-- `assets/` — empty
+- [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html)

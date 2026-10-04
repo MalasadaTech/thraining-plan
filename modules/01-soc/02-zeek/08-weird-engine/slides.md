@@ -1,106 +1,119 @@
-# Module 1.2.8 – Weird Engine  
-## Slide Deck Content
+# Module 1.2.8 – Weird Engine
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 8
+- Interpret a weird type, notice flag, endpoints, and available UID.
+- Describe the reported condition from the sensor’s viewpoint.
+- Create or modify a query for a specific weird condition.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.2.8 – Weird Engine  
-**Subtitle:** Protocol behavior that is off-spec or uncommon  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.2.7 was the file on the wire. This lesson is the last 1.2 engine: the protocol looked off. It is not `notice.log` and not a process event.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read the Zeek **weird** log when the protocol looked off-spec or uncommon.
+A weird record reports an unexpected condition encountered by Zeek. It is useful because it points to traffic or visibility worth examining, but its meaning depends on the named condition and the surrounding evidence.
 
-A **weird** event is a **lead**, not a verdict.  
-It does not name the process.
-
-**Speaker Notes:**  
-This slide is the student intro. Daily alert work: say what Zeek flagged, who talked to whom, and which connection to open. Do not call it malware today.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Type and notice
-**Title:** Type and notice
+## Reading an unexpected condition
 
-**`name`** — the weird type. The string you query.
+Read the weird name, available endpoints/UID, and notice flag. The name describes an analysis condition.
 
-**`notice`** — a boolean: whether *this* type was also raised as a notice.  
-This is not a `notice.log` lesson.
-
-Do not memorize the catalog. Describe the `name` you have.
-
-**Speaker Notes:**  
-This slide is the type. The field `notice` lives on this log. If they open the notices table, bring them back. Many names fire on noisy or broken traffic. The next slide is who talked and the connection ID.
+**Speaker notes:** Distinguish the weird type from its notice flag and from an incident decision. A condition can warrant a ticket under local procedure without proving compromise.
 
 ---
 
-### Slide 4 – Who talked, and the UID
-**Title:** Who talked, and the UID
+## Reference — Reading an unexpected condition
 
-**`id.orig_*` → `id.resp_*`** — who talked to whom.
+| Field | What to examine |
+|---|---|
+| `name` | The specific unexpected condition reported by Zeek. |
+| Endpoint fields | Connection endpoints when the condition is associated with a connection. |
+| `uid` | Related connection identifier when available. |
+| `notice` | Whether the condition also resulted in a notice under the applicable policy. |
+| `addl` | Additional explanatory detail when supplied. |
 
-**`uid`** — the same join as other Zeek logs (`conn`, `http`, `files`).  
-If `uid` is empty, write “no uid.” Use IP, port, and time if they are logged.
-
-**Speaker Notes:**  
-A weird event often belongs to a connection. Copy the uid and open conn. If uid is missing, you still have the type and whatever addresses were logged.
-
----
-
-### Slide 5 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
-
-One sentence: Zeek flagged this `name` between these IPs.
-
-**Given:** `name` `data_before_established`, dest `203.0.113.88:8080`, `uid` present.
-
-A query names a **specific** `name` (or dest).  
-Not every **weird** event.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: data before the handshake finished to that dest. Open conn on the uid. Do not name a process. Do not tell the course fiction plot.
+**Speaker notes:** Distinguish the weird type from its notice flag and from an incident decision. A condition can warrant a ticket under local procedure without proving compromise. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Working through the example
 
-1. A single **weird** event is an incident. True or false?  
-2. `name` `data_before_established`, dest `203.0.113.88:8080`, `uid` present. In one sentence, what occurred?  
-3. A SIEM query that matches every **weird** event is a good “specific weird activity” query. True or false?
+Zeek reports data before observed establishment. That does not prove the endpoints skipped a handshake.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Emphasize “observed” when discussing handshake progress. Ask what packet loss or midstream capture would change.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Supplied example
 
-A **weird** event is a type, two endpoints, and a UID.  
-It is a lead, not a verdict.  
-A query names a specific type.
+The example records `name=data_before_established`, responder `203.0.113.88:8080`, and `uid=CTrain1`.
 
-**Speaker Notes:**  
-SIGMA is next. Stay off this engine when you get there. How detections run as a service is 4.x.
+**Speaker notes:** Emphasize “observed” when discussing handshake progress. Ask what packet loss or midstream capture would change.
 
 ---
 
-### Slide 8 – Next
-**Title:** Next
+## Creating a focused weird query
 
-**1.3.1** SIGMA rules
+Select the named condition and use available connection context to investigate its cause.
 
-**Speaker Notes:**  
-1.2 is done. Detection syntax is next. Do not start writing SIGMA on this weird event today.
+**Speaker notes:** Have learners explain the broader scope and the correlation limits of a missing UID.
+
+---
+
+## Reference — Creating a focused weird query
+
+| where TimeGenerated > ago(1d)
+| where name == "data_before_established"
+| where ['id.resp_h'] == "203.0.113.88"
+| project TimeGenerated, uid, name, ['id.orig_h'], ['id.resp_h'],
+
+**Speaker notes:** Have learners explain the broader scope and the correlation limits of a missing UID. Use the surrounding student-guide explanation to interpret the table and its limits.
+
+---
+
+## Worked example — Creating a focused weird query
+
+```kusto
+ZeekWeird
+| where TimeGenerated > ago(1d)
+| where name == "data_before_established"
+| where ['id.resp_h'] == "203.0.113.88"
+| project TimeGenerated, uid, name, ['id.orig_h'], ['id.resp_h'],
+          ['id.resp_p'], notice
+```
+
+**Speaker notes:** Have learners explain the broader scope and the correlation limits of a missing UID. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. What does a weird record establish?
+2. Describe data_before_established without overstating what happened at the endpoints.
+3. How would you broaden the query to that condition across all destinations, and what would you use to investigate matches?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+A weird record supplies a named condition and any available connection context. Use it to ask a focused follow-up question and separate the sensor’s observation from an explanation of its cause.
+
+Previous: [1.2.7 – Files Engine](../07-files-engine/student-guide.md)
+
+Next: [1.3.1 – SIGMA Rules](../../03-detection/01-sigma-rules/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Zeek — weird.log and notice.log](https://docs.zeek.org/en/current/reference/logs/weird-and-notice.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

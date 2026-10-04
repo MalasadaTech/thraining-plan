@@ -1,99 +1,76 @@
-# Module 0.3 – Jobs in one sentence  
-## Slide Deck Content
+# Module 0.3 – Jobs in one sentence
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared intro)  
-**Estimated Delivery Time:** 15–20 minutes  
-**Total Suggested Slides:** 8
+- Summarize each role’s responsibility in one sentence.
+- Identify IR and firewall / IA as supporting functions introduced for handoffs.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 0.3 – Jobs in one sentence  
-**Subtitle:** Shared intro (SOC / Hunter / CTI / DE)  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-0.2 said the SOC is a team sport. This lesson names the jobs. One sentence each. How work moves is next (0.4).
+**Speaker notes:** Introduce the purpose and connect it to the shared course sequence. The objectives describe the understanding learners should demonstrate by the end.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-Work lands as an **alert**, a **question**, a **hunt**, a **rule**, or a **block**.
+Security work often begins with an alert or a question, then involves people with different responsibilities. Knowing the purpose of each role helps you recognize who can carry the work forward and what result to expect. This lesson gives you a short description of each role used in the course.
 
-Before you take it or send it, know **whose job** it is.
-
-This lesson is one sentence per desk. It is not how to do the job.
-
-**Speaker Notes:**  
-This slide is the student intro. Name the desks so the next lesson can talk about how work moves. Do not teach triage, RFIs, or hunts today.
+**Speaker notes:** Ask learners where this topic could help them understand an investigation. Use their answers to introduce the example without requiring prior operational experience.
 
 ---
 
-### Slide 3 – SOC analyst and incident response
-**Title:** SOC analyst and incident response
+## The roles and their responsibilities
 
-**SOC analyst:** Work the alert in front of you; start the hand-offs.
+SOC investigates alerts; IR handles containment and recovery.
 
-**Incident response:** Contain and recover. This course **points at** them. It does not train IR.
+CTI develops answers; Hunt searches for additional activity.
 
-**Speaker Notes:**  
-The SOC analyst works the alert and starts the hand-offs. IR contains and recovers. We do not train IR here.
+DE maintains detections; the firewall / IA function handles authorized blocking changes.
 
----
-
-### Slide 4 – CTI analyst and threat hunter
-**Title:** CTI analyst and threat hunter
-
-**CTI analyst:** Answer the RFI; add context; find more of the adversary.
-
-**Threat hunter:** Look for more activity the alerts missed, from a hunt package or a hypothesis.
-
-**Speaker Notes:**  
-RFI means Request for Information — asking intel for more work on an alert. Do not teach how to write one. Do not teach how to hunt.
+**Speaker notes:** Give each responsibility enough context to explain its purpose. A detection engineer’s output must remain useful over time, which is why testing and maintenance matter. Blocking ownership is an example of a local assignment, not a universal meaning of the term IA.
 
 ---
 
-### Slide 5 – Detection engineer and firewall / IA
-**Title:** Detection engineer and firewall / IA
+## Recognizing the work being requested
 
-**Detection engineer:** Turn what we learned into lasting rules.
+An RFI asks CTI for an answer.
 
-**Firewall / IA** (Information Assurance): Block what intel names. A **hand-off**, not a track in this course.
+A blocking request and a detection need can arise from the same finding, but they require different work.
 
-**Speaker Notes:**  
-DE is a later part of this course. Firewall / IA is only a neighbor. IA means Information Assurance. Two hats is 0.5.
+**Speaker notes:** Use the requested outcome to distinguish responsibilities. Learners often identify the tool first; guide them back to whether the request needs analysis, an operational control change, or a detection. Explain that a newly discovered related domain still requires evaluation.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## What the course develops
 
-1. In one sentence, what does the SOC analyst do?  
-2. Which two jobs does this course point at but not train?  
-3. What does the detection engineer do, in one sentence?
+The four tracks develop SOC, CTI, Hunt, and DE work.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+IR and firewall / IA are introduced to make the handoffs understandable.
+
+**Speaker notes:** Set scope once here. A concise description is useful after learners understand the responsibility. It should be a summary of an explanation rather than a phrase they have to memorize without understanding.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Knowledge check
 
-Six jobs, one sentence each.  
-IR and firewall / IA are neighbors, not tracks here.
+1. Describe each of the six roles in one sentence.
+2. Which two supporting functions are introduced for handoffs rather than developed as full tracks, and what does each contribute?
+3. How does a detection engineer’s responsibility differ from a request to block a domain?
 
-**Speaker Notes:**  
-Do not walk the seven-step path. That is 0.4.
+**Speaker notes:** Ask learners to explain the evidence or reasoning behind each answer. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for expected responses and feedback.
 
 ---
 
-### Slide 8 – Next
-**Title:** Next
+## Summary and next step
 
-**0.4** How work can move
+Identify a responsibility by the work requested and the result it should produce. The six roles introduced here support connected parts of security operations; the course develops four of them in depth and explains the other two as handoff destinations.
 
-**Speaker Notes:**  
-Now the names have a path to sit on.
+Previous: [0.2 – What a SOC is](../02-what-a-soc-is/student-guide.md)
+
+Next: [0.4 – How work can move](../04-how-work-moves/student-guide.md)
+
+**Speaker notes:** Revisit any uncertainty from the knowledge check, then connect the lesson to the next topic.
+
+---
+
+## References and further reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.
+
+**Speaker notes:** These linked resources support the lesson and provide a place to check definitions and service details.

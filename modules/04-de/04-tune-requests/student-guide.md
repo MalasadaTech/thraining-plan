@@ -1,4 +1,4 @@
-# Module 4.4 – Tune requests from SOC
+# Module 4.4 – Tune Requests from SOC
 
 **Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
@@ -6,87 +6,106 @@
 - SOC: 4.4 A / B / B ; 4.4.1 1a / 2b / 3c ; 4.4.2 1a / 2b / 2b  
 - Hunter: 4.4 A / A / B ; 4.4.1 1a / 1a / 2b ; 4.4.2 1a / 1a / 2b  
 - CTI: 4.4 A / A / B ; 4.4.1 1a / 1a / 2b ; 4.4.2 1a / 1a / 2b  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
-
-1. Say that a **tune request** is about a *live* rule, that it sits in a different **inbox** from a nomination, and that it must name **which rule** and a **pointer**.
-2. Given a SOC tune request, pick **tune**, **exception**, **replace**, **leave**, or **retire** and cite why — or reject a request that is really an investigation, a **block**, or IR containment.
+1. Review a SOC request concerning a **live detection** and choose **tune, exception/filter, replace, leave, or retire** with supporting evidence.
+2. Distinguish detection-tuning work from investigation, containment, blocking, or other operational requests.
 
 **Mapped Proficiency Items:**
 - K: 4.4 – Tune requests from SOC
 - T: 4.4.1 – Pick tune / exception / replace / leave / retire and cite why
-- T: 4.4.2 – Reject a request that is investigation, a block, or IR containment
-
----
+- T: 4.4.2 – Reject/route a request that is investigation, block, or IR containment
 
 ## 1. Key Concepts
 
-After a detection is **live**, SOC lives with the alerts it fires. When that rule is noisy, brittle, or missing context, they ask Detection Engineering to change it. That ask is a **tune request**. This lesson is that work: you name the live rule, you point at the investigation or intel report, and you pick what to do — or you reject an ask that is really investigation, a block, or IR containment.
+A tune request begins with a detection that is **already live**.
 
-**4.3** was a **nomination** (something new). A tune is about a rule that is already live.
+SOC has operational evidence that something about the current analytic may need attention:
+- excessive benign volume;
+- a known blind spot;
+- missing context;
+- a pattern the current logic handles poorly;
+- an old analytic that may no longer provide value.
 
-A tune request is about a *live* rule that is **noisy**, **brittle**, or **missing context**. “Missing context” here means the **rule** fires without enough of the picture. It is not the pointer below.
+That makes tuning different from a **new nomination**.
 
-You sit at the same desk as nominations. The work sits in a different pile — a different **inbox**. Do not treat a tune as a new nomination.
+Whether the organization uses a separate queue, ticket type, or shared workflow is local. The important conceptual distinction is the **work type**, not the existence of a separate “inbox.”
 
-**Clear enough to review** means two things are present:
+### A reviewable tune request
 
-- **Which live rule.**
-- **Context or a reference** — this came from an investigation or an intel **report**. The pointer is an investigation number, or the report title and URL.
+Useful inputs include:
 
-Do not invent a ticket name or a DYA form. The *kinds* of pointer are enough. The local form is **4.8**. If the pointer is missing, **send it back**. You cannot cite why without it.
+- the live detection/rule ID or name;
+- representative alert/case examples;
+- the observed problem;
+- what SOC believes should behave differently;
+- a pointer to the investigation or case where the problem was observed.
 
-**Possible answers** (only after it is clear enough):
+If evidence is missing, send the request back with a precise ask.
 
-| Answer | What it means |
-|--------|----------------|
-| **Tune** the logic | Change the rule so it still catches the intended activity and fires less on the rest. |
-| Add an **exception** | Leave the rule; carve out what must not fire. |
-| **Replace** the rule | This live rule is the wrong shape. A different rule should take its place. |
-| **Leave** it | The rule is doing its job. Do not change it because someone is tired of the alert. |
-| **Retire** it | This live rule should come out. When to retire in general is **4.6**. |
+### Five engineering outcomes
 
-**Reject** a request that is really:
+| Outcome | Use when |
+|---|---|
+| **Tune** | Adjust logic while preserving the detection's purpose. |
+| **Exception / filter** | Exclude a narrow, understood benign condition. |
+| **Replace** | A different analytic design should supersede the live rule. |
+| **Leave** | Evidence shows the rule is behaving as intended and the alert burden is justified. |
+| **Retire** | The rule no longer provides enough value to remain active. |
 
-- an **investigation** (“go look at the host”)
-- a **block** (“stop this IP at the firewall”)
-- **IR containment** (“take the host off the network”)
+### Exceptions create blind spots if they are too broad
 
-**What good looks like:**
+A filter should be as narrow as the benign condition permits.
 
-- Given: the live rule fires on a nightly backup *and* on the intended encoded PowerShell, plus an investigation number. **Tune** or **exception**. Keep the intended fire.
-- Given: which live rule, no pointer. **Send back.** SOC owes the investigation number, or the report title and URL.
-- Given: “This rule is noisy — investigate the host” or “block that IP.” **Reject.** Not a tune.
+After adding an exception, rerun the **positive test** from 4.2. A filter that removes the noise but also suppresses the malicious/target behavior is not a successful tune.
 
-Do not write the rule (**1.3**). Hunt and intel **packages** are **4.5**.
+Sigma supports filters as a formal mechanism for excluding matching events, but a filter's existence does not make the exclusion safe. See [Sigma Filters](https://sigmahq.io/docs/meta/).
 
----
+### “Noisy” is evidence to investigate—not an automatic reason to disable
+
+Ask:
+- What benign population is producing the volume?
+- Is the target behavior still valuable?
+- Can the benign pattern be distinguished?
+- Does the rule need broader redesign?
+- Is the operational cost still justified?
+
+A rule can be noisy and still deserve to remain active while DE works on a safer improvement.
+
+### Requests that are not tuning
+
+**“Investigate why this host ran PowerShell.”**  
+→ investigation workflow
+
+**“Isolate this endpoint.”**  
+→ IR/containment owner
+
+**“Block this IP.”**  
+→ enforcement/control owner
+
+**“Create a new analytic for behavior we do not cover.”**  
+→ nomination/new detection work
+
+Route those requests instead of trying to turn them into tune outcomes.
 
 ## 2. Knowledge Check
 
-1. A tune request and a nomination are the same inbox. True or false?
-2. A tune request names the live rule but has no investigation or report pointer. Pick a tune answer, or send it back?
-3. SOC says a live rule is noisy and asks you to investigate the host. Tune or reject?
-
----
+1. What makes a tune request different from a nomination?
+2. Why should an exception/filter be followed by a positive re-test?
+3. SOC says “this rule is noisy; investigate the host.” Is that a tune request?
 
 ## 3. Summary
 
-Tunes are about *live* rules. Same desk, different inbox. Clear enough = which rule plus a pointer. Then tune, exception, replace, leave, or retire — and reject investigation, block, or IR.
+Tune requests use operational evidence from a **live detection**.
 
-**Next:** **4.5** Hunt and intel packages.
+Choose tune, narrow exception, replace, leave, or retire based on what the evidence shows. Re-test after change, especially after adding exclusions.
 
----
+Investigation, containment, and blocking are separate operational workflows.
 
-## 4. Related modules
+**Next:** **4.5 – Hunt and Intel Packages**.
 
-- 4.3 – Nominations from SOC, hunt, and CTI
-- 4.5 – Hunt and intel packages
-- 4.6 – Detection lifecycle
-- 4.8 – Site-specific DE knowledge (the local form)
-- 1.3 – Detection authoring (how a rule works)
+## Supporting Reference
+
+- [Sigma Filters](https://sigmahq.io/docs/meta/)

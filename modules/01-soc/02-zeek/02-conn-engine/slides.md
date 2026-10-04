@@ -1,100 +1,122 @@
-# Module 1.2.2 – Conn Engine  
-## Slide Deck Content
+# Module 1.2.2 – Conn Engine
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 7
+- Interpret connection endpoints, state, history, and identifiers.
+- Describe a connection using the supplied evidence.
+- Create or modify a query for specific connection activity.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.2.2 – Conn Engine  
-**Subtitle:** Who talked to whom on the wire  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.2.1 said engines extract protocol data. This lesson is the `conn` extract. It is not the initiating process, and it is not a scan course.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read the Zeek **`conn`** log to see who talked to whom on the **wire**.
+A connection record gives you a network-level starting point: the endpoints, transport, and progress Zeek observed. That description helps you select the related protocol records without assigning a purpose to the traffic too early.
 
-Originator. Responder. How the connection ended.  
-It does **not** name the initiating process. That is **1.1.4**.
-
-**Speaker Notes:**  
-This slide is the student intro. Daily alert work is to describe the connection, not to name a process or open DNS yet.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Originator and responder
-**Title:** Originator and responder
+## Reading connection fields
 
-**`id.orig_h` / `id.orig_p`** — originator IP and port. Who started the talk from Zeek’s view.
+Read originator, responder, transport, state, history, and UID. Originator is a connection role, not a synonym for internal.
 
-**`id.resp_h` / `id.resp_p`** — responder IP and port. Who was contacted.
-
-Originator is not automatically an internal host. It is not the destination.
-
-**Speaker Notes:**  
-Walk source as originator and destination as responder. If they treat orig as “our network,” correct it here before state.
+**Speaker notes:** Read endpoint pairs together and use the case of history letters to distinguish direction. Keep state explanations grounded in the TCP example.
 
 ---
 
-### Slide 4 – How it ended
-**Title:** State and history
+## Reference — Reading connection fields
 
-**`SF`** — established and torn down cleanly.  
-**`S0`** — attempt, no reply.  
-**`REJ`** — attempt refused.
+| Field | Meaning |
+|---|---|
+| `uid` | Connection identifier used to relate records from the same Zeek observation context. |
+| `id.orig_h`, `id.orig_p` | Originator address and port from the sensor's view. |
+| `id.resp_h`, `id.resp_p` | Responder address and port. |
+| `proto`, `service` | Transport and identified application service when available. Port alone does not establish service. |
+| `conn_state` | A summary of observed connection progress. Interpret it for the protocol. |
+| `history` | Encoded observations; case distinguishes the originator and responder sides. |
 
-**`history`** — short flags of what was seen (`S` SYN, `H` SYN-ACK, `F` FIN, `R` RST).
-
-If you see another state, say what the field shows.
-
-**Speaker Notes:**  
-These three states are enough to start. Do not inventory every rare `conn_state`. History is the flag string, not a second story.
-
----
-
-### Slide 5 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
-
-One sentence: originator IP/port → responder IP/port, state.
-
-**Given:** workstation → `203.0.113.88:443`, `conn_state` `SF`.
-
-A query names a **specific** pattern — responder IP or port + state.  
-Not every connection.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: that host completed a TCP connection to that IP on 443. Who launched the socket is 1.1.4. Do not tell the course-fiction plot.
+**Speaker notes:** Read endpoint pairs together and use the case of history letters to distinguish direction. Keep state explanations grounded in the TCP example. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Working through the example
 
-1. `id.orig_h` is the destination IP. True or false?  
-2. Workstation → `203.0.113.88:443`, `SF`. In one sentence, what occurred?  
-3. A SIEM query that matches every connection is a good “specific connection activity” query. True or false?
+The example records TCP to 203.0.113.88:443 with normal establishment and termination. CTrain1 is the connection pivot.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Have learners cite proto before calling it TCP. Ask what evidence would be needed to name an application or process.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Supplied example
 
-Who talked to whom, on which ports, how it ended.  
-The process is not on this log.  
-A query is specific.
+The supplied record shows originator `192.0.2.10:51000`, responder `203.0.113.88:443`, `proto=tcp`, `conn_state=SF`, and `uid=CTrain1`.
 
-**Next:** **1.2.3** DNS engine
+**Speaker notes:** Have learners cite proto before calling it TCP. Ask what evidence would be needed to name an application or process.
 
-**Speaker Notes:**  
-1.2.3 is the DNS extract on the same wire telemetry. Stay off `conn` fields when you get there.
+---
+
+## Creating a focused connection query
+
+Select destination, transport, and state. S0 means no response observed; it does not explain why.
+
+**Speaker notes:** Use SF and S0 to show that changing a predicate changes the question. Explain sensor visibility as a possible limit.
+
+---
+
+## Reference — Creating a focused connection query
+
+| where TimeGenerated > ago(1d)
+| where ['id.resp_h'] == "203.0.113.88"
+| where ['id.resp_p'] == 443 and proto == "tcp"
+| where conn_state == "SF"
+| project TimeGenerated, uid, ['id.orig_h'], ['id.orig_p'],
+
+**Speaker notes:** Use SF and S0 to show that changing a predicate changes the question. Explain sensor visibility as a possible limit. Use the surrounding student-guide explanation to interpret the table and its limits.
+
+---
+
+## Worked example — Creating a focused connection query
+
+```kusto
+ZeekConn
+| where TimeGenerated > ago(1d)
+| where ['id.resp_h'] == "203.0.113.88"
+| where ['id.resp_p'] == 443 and proto == "tcp"
+| where conn_state == "SF"
+| project TimeGenerated, uid, ['id.orig_h'], ['id.orig_p'],
+          ['id.resp_h'], ['id.resp_p'], conn_state, history
+```
+
+**Speaker notes:** Use SF and S0 to show that changing a predicate changes the question. Explain sensor visibility as a possible limit. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. How do originator and responder differ from internal and external?
+2. Describe the supplied record and name the pivot identifier.
+3. Modify the query for unanswered attempts and explain the limit.
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+A connection finding describes the endpoints, transport, and observed progress. Use the connection identifier to seek related records and keep explanations of purpose or failure tied to additional evidence.
+
+Previous: [1.2.1 – Zeek Concepts](../01-concepts/student-guide.md)
+
+Next: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Zeek — conn.log](https://docs.zeek.org/en/current/reference/logs/conn.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

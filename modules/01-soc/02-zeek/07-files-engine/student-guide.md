@@ -7,65 +7,75 @@
 - CTI: 1.2.7.1 A / A / B ; 1.2.7.2 1a / 1a / 2b ; 1.2.7.3 1a / 1a / 2b  
 **Estimated Time:** 25–30 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek **files** event: name, MIME type, hash, who sent and received it, and the connection UID that joins other Zeek logs.
-2. Describe what a `files` log shows, and say what a **specific** SIEM query looks like.
+1. Interpret file names, MIME types, hashes, direction, and connection identifiers.
+2. Describe observed file content without assuming endpoint creation.
+3. Create or modify a query using the file-log schema actually available.
 
 **Mapped Proficiency Items:**
 - K: 1.2.7.1 – Files engine
 - T: 1.2.7.2 – Analyze a Zeek files log and accurately describe what occurred
 - T: 1.2.7.3 – Create a SIEM query to detect specific file transfer activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+Zeek file analysis connects observed network content to the flow that carried it. It can help explain a download or attachment, while the available fields also show whether hashes or extracted bytes exist for further examination.
 
-SOC analysts read the Zeek **files** log to see a file on the **wire**. An alert may name a download, an attachment, or a hash. The job in this lesson is to say what moved: the name if the protocol gave one, the MIME type, the hash if Zeek calculated it, who sent it, and who received it. **1.2.1** said engines extract protocol. This lesson is the **files** engine. It is **not** host file activity (**1.1.3**). It is **not** YARA (**1.3**).
+## 1. Reading file-analysis records
 
-The **files** log is one **event** for a file Zeek analyzed on the wire. In a SIEM, that event usually shows up as a **row** in a files table. Later lessons may still say “row.” Here it means the same thing as the log.
+| Field or representation | What it contributes |
+|---|---|
+| `fuid` | File-analysis identifier; this is different from a connection UID. |
+| `filename`, `mime_type` | A supplied filename when available and an assessment of content type. These may disagree. |
+| `md5`, `sha1`, `sha256` | Hashes when the relevant analysis is enabled and values are available. |
+| Current `uid`, endpoint fields, `is_orig` | Connection context; `is_orig=false` indicates the responder supplied the content, and true indicates the originator. |
+| Legacy `tx_hosts`, `rx_hosts`, `conn_uids` | Sender/receiver sets and connection identifiers in older or compatibility-enabled schemas. Check which representation your feed uses. |
+| Completeness and extraction fields | Observed/missing byte information and extraction details help assess what was actually available. |
 
-| Idea | What to read |
-|------|----------------|
-| **File name** | `filename` — when the protocol gave one. It can lie. Empty means not logged. |
-| **MIME type** | `mime_type` — what Zeek thinks the bytes are (for a Windows executable, often `application/x-dosexec`). It can disagree with the name. |
-| **Hash** | `md5` / `sha1` / `sha256` when calculated. Empty is not “clean.” Do not invent a hash. |
-| **Source / dest** | `tx_hosts` sent the bytes. `rx_hosts` received them. These are not `id.orig_h` / `id.resp_h`. |
-| **Connection UID** | `conn_uids` — those values *are* the `uid` on `conn` / `http` / `smtp`. Copy one and search. |
+A `files.log` record does not guarantee that Zeek saved a file to disk or captured its complete content. Extraction and hashing are configuration-dependent. A network file observation also does not establish an endpoint filesystem path.
 
-This is the **extract**. Zeek does not have to write the bytes to disk. The host may or may not create a file. A Temp path on the host is a different sensor (**1.1.3**).
+## 2. Working through the example
 
-**What good looks like:**
+Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `203.0.113.88`, and `is_orig=false`. A related HTTP record associates it with `/update.exe`.
 
-- Describe: one sentence — name if logged, MIME, hash if logged, who sent to whom. Then say which `uid` you would open on `conn` or `http`. Do not describe a Sysmon 11.
-- Given: `filename` `update.exe`, `mime_type` `application/x-dosexec`, `sha256` present, `tx_hosts` `203.0.113.88`, `rx_hosts` a workstation, `conn_uids` present. **What occurred:** that IP sent `update.exe` (executable MIME, hash logged) to that host on the wire. Copy `conn_uids` and search the other Zeek logs. The Temp file-create is **1.1.3**.
-- Query: names a **specific** pattern (name, MIME, hash, or tx/rx), not every `files` event.
+The supported account is that Zeek observed executable-type content supplied by the responder to the originator in that HTTP context. Use `CTrain1` for the connection and `FTrain1` for file references such as an HTTP `resp_fuids` entry. In a legacy record, `tx_hosts` and `rx_hosts` supply direction and `conn_uids` supplies the connection pivot. State separately whether a hash, complete bytes, or an extracted object is available.
 
----
+## 3. Creating a focused file-analysis query
 
-## 2. Knowledge Check
+This KQL teaching example assumes an ingested table named `ZeekFiles`, a datetime `TimeGenerated` column, and columns retaining the Zeek field names shown below. These are classroom table names, not built-in Zeek or SIEM tables. Map names and data types to your ingestion schema before use.
 
-1. A Zeek `files` event is the same thing as a Sysmon 11 file create. True or false?
-2. `update.exe`, MIME `application/x-dosexec`, hash logged, from `203.0.113.88` to a workstation. In one sentence, what occurred?
-3. A SIEM query that matches every `files` event is a good “specific file transfer” query. True or false?
+```kusto
+ZeekFiles
+| where TimeGenerated > ago(1d)
+| where mime_type == "application/x-dosexec"
+| where ['id.resp_h'] == "203.0.113.88" and is_orig == false
+| project TimeGenerated, fuid, uid, ['id.orig_h'], ['id.resp_h'],
+          mime_type, is_orig
+```
 
----
+This example uses the current endpoint/direction representation and selects executable-type content sent by the specified responder. A legacy feed needs equivalent membership tests against `tx_hosts` and suitable `conn_uids` output. Searching hashes requires a populated hash column; the file-analysis identifier is not a substitute for a hash.
 
-## 3. Summary
+## Knowledge Check
 
-A `files` event is a transfer on the wire: name, MIME, hash, who sent and received. `conn_uids` joins `conn` / `http` / `smtp`. The host file event is a different sensor.
+1. How do fuid and uid differ?
+2. Who supplied the content when is_orig=false in the example, and does it establish a Temp file on the host?
+3. Modify the query for files supplied by the originator and identify the legacy equivalent.
 
-**Next:** **1.2.8** Weird engine.
+## Summary
 
----
+File-analysis records describe observed network content and its connection context. Check the schema, direction, completeness, and available hashes or extracted bytes before choosing the next pivot.
 
-## 4. Related modules
+## Course Connections
 
-- 1.2.6 – SMTP engine (previous)
-- 1.2.5 – HTTP engine
-- 1.2.8 – Weird engine
-- 1.1.3 – File system activity (host)
+Previous: [1.2.6 – SMTP Engine](../06-smtp-engine/student-guide.md)
+
+Next: [1.2.8 – Weird Engine](../08-weird-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — files.log](https://docs.zeek.org/en/current/reference/logs/files.html)

@@ -6,67 +6,67 @@
 - Hunter: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  
 - CTI: 0.6.1.1 B / C / C ; 0.6.1.2 3c / 4c / 4c  
 - DE: 0.6.1.1 A / B / B ; 0.6.1.2 1a / 2b / 2b  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 15–20 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Say what ATT&CK is for, and tell a **tactic** from a **technique** (or **sub-technique**).
-2. Given one line of activity, name a tactic and a technique (or sub-technique) and cite the evidence.
+1. Explain the purpose and structure of ATT&CK.
+2. Distinguish a tactic, technique, and sub-technique.
+3. Map one observed behavior and cite the evidence supporting the mapping.
 
 **Mapped Proficiency Items:**
 - K: 0.6.1.1 – MITRE ATT&CK
 - T: 0.6.1.2 – Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence
 
----
+## Why This Matters
 
-## 1. Key Concepts
+ATT&CK gives analysts a shared vocabulary for describing adversary behavior. A useful mapping connects that vocabulary to evidence, so another analyst can understand why the label fits. This lesson introduces the matrix and shows how to support one mapping from an observed event.
 
-People on different desks will look at the same host or log. They need one name for **what the adversary was trying to do** and **how**. ATT&CK is that shared language. That is the job in this lesson: label the behavior you saw, so those desks are not using four different names for the same thing.
+## 1. Reading the matrix
 
-ATT&CK is a knowledge base of adversary **behavior**. You use it to name what you saw. You do not use it to decorate a ticket.
+The [Enterprise ATT&CK matrix](https://attack.mitre.org/matrices/enterprise/) organizes behavior by tactics, techniques, and sub-techniques.
 
-The **Enterprise** matrix puts **tactics** as columns and **techniques** (and **sub-techniques**) as cells. You do not memorize every cell. You must know what the columns and cells are.
+| Element | Meaning | Example |
+|---|---|---|
+| Tactic | The goal the behavior serves. | Execution |
+| Technique | A way to achieve a goal. | T1059 — Command and Scripting Interpreter |
+| Sub-technique | A more specific form of a technique. | T1059.001 — PowerShell |
 
-| Piece | What it is |
-|-------|------------|
-| **Tactic** | *Why* — the goal at that step (Execution, Persistence, Command and Control) |
-| **Technique** | *How* — a named way (`T1059` Command and Scripting Interpreter) |
-| **Sub-technique** | A more specific how (`T1059.001` PowerShell) |
+Tactics appear as columns. Techniques and their sub-techniques describe behaviors within that structure. The matrix helps you find a relevant description; the description and your evidence determine whether a mapping is supported.
 
-A finished **map** is that label: tactic + technique or sub-technique + **one cited field**. Read the line of activity in front of you (later lessons may still say **row**; here it means that one log or event). Name the goal. Name the how. Cite one field that actually shows it, such as the command line. If two IDs fit, pick the **primary** for this line and reject the neighbor. An ID with no cited field is not a map.
+## 2. Building an evidence-supported mapping
 
-**What good looks like:** someone gives you one line. You name the tactic and the technique or sub-technique. You cite the field. You do not tell the rest of the incident.
+Suppose a process event records `wscript.exe` starting `powershell.exe`, and the command-line field contains an encoded PowerShell command. The event supports **Execution / T1059.001 — PowerShell** because it shows the PowerShell interpreter being invoked to run commands. The parent process and command line provide the evidence to cite.
 
-- Given: “`wscript` launched encoded PowerShell.” **Label:** Execution / `T1059.001` PowerShell. **Cite:** the encoded command line. **Not:** Command and Control — this line does not show a beacon.
+A short mapping could read: “Execution / T1059.001 — PowerShell; the process event shows `wscript.exe` launching `powershell.exe` with an encoded command.” Include the event reference or relevant fields in the actual record so the reader can check your reasoning.
 
-This is one line of activity, not an alert queue (**1.4**). Hunt planning with ATT&CK is later (**3.5**). Putting IDs on a CTI product is later (**2.7.1**). Diamond is next (**0.6.2**).
+The broader T1059 label describes the interpreter family. When the evidence identifies PowerShell, the sub-technique gives a more precise description.
 
----
+## 3. Keeping the conclusion within the evidence
 
-## 2. Knowledge Check
+This event alone does not establish Command and Control: it contains no evidence of communication with an external controller. That behavior might appear in another event and support an additional mapping. More than one mapping can be appropriate when each has evidence.
 
-1. What is a tactic, and what is a technique?
-2. An ATT&CK ID with no cited field is a finished map. True or false?
-3. Encoded PowerShell ran from a script. Name a tactic and a technique (or sub-technique) and what you would cite.
+An ATT&CK label also does not establish that an event is malicious. Administrators use PowerShell for legitimate tasks. The mapping describes behavior; assessing its significance requires context such as the command, user, parent process, and surrounding activity.
 
----
+## Knowledge Check
 
-## 3. Summary
+1. How do a tactic, technique, and sub-technique differ?
+2. A process event shows wscript.exe launching powershell.exe with an encoded command. Give a supported mapping and identify the evidence.
+3. Does that event establish Command and Control or malicious intent? Explain.
 
-ATT&CK labels behavior. A tactic is why. A technique is how. Name both for the line in front of you and cite the field.
+## Summary
 
-**Next:** **0.6.2** Diamond Model.
+ATT&CK provides names for behavior. A useful mapping identifies the tactic and technique or sub-technique, cites the supporting evidence, and explains why the label fits. Keep additional conclusions tied to additional evidence.
 
----
+## Course Connections
 
-## 4. Related modules
+Previous: [0.5 – Where the jobs lightly overlap](../../05-where-jobs-overlap/student-guide.md)
 
-- 0.5 – Where the jobs lightly overlap
-- 0.6.2 – Diamond Model
-- 0.6.3 – Cyber Kill Chain
-- 2.7.1 – ATT&CK for CTI (later)
-- 3.5 – Hunt planning with ATT&CK (later)
+Next: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)
+
+## References and Further Reading
+
+- [MITRE ATT&CK — Enterprise matrix](https://attack.mitre.org/matrices/enterprise/) — Explore the matrix structure.
+- [MITRE ATT&CK — PowerShell (T1059.001)](https://attack.mitre.org/techniques/T1059/001/) — Read the behavior description used in the example.

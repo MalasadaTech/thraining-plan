@@ -1,100 +1,91 @@
-# Module 1.5.3 – Notification and Distribution  
-## Slide Deck Content
+# Module 1.5.3 – Notification and Distribution
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+- Interpret a notification chart’s recipients, awareness requirements, and channels.
+- Route a supplied report using the chart.
+- Explain why an alternative route does not meet the stated requirements.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.5.3 – Notification and Distribution  
-**Subtitle:** Who gets the report, and which channel carries it  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson is who receives the report and how it travels. It closes unit 1.5. SOC ends. Next is CTI at 2.1.1, not 1.7.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts put the case and the CTI question on an **approved path**.
+A report becomes useful when it reaches the responsible people through a channel that supports the work. A notification chart connects the product to recipients, leadership awareness, and the approved means of delivery.
 
-**Who** gets it.  
-**Leadership** yes or no.  
-**Which channel** — and reject the wrong one.
-
-An incident that only lives in chat is not a handoff.
-
-**Speaker Notes:**  
-This slide is the student intro. Type and clock are already taught. This lesson is the route so IR and leadership actually see the case. Do not write the report body.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Who, leadership, channel
-**Title:** Who, leadership, channel
+## Reading a notification chart
 
-A **notification chart** names who, leadership yes or no, and the approved channel.
+Read the product’s work recipients, leadership-awareness requirement, and approved channel together.
 
-**Incident** — SOC + IR. Leadership **yes**. **Ticket**.  
-**RFI** — named team. Leadership **no**. Ticket or RFI form.
-
-**Approved** (classroom): ticket, approved RFI form.  
-**Not approved:** personal SMS, private chat, off-domain mail.
-
-**Speaker Notes:**  
-This chart is a classroom stand-in, not a live shop matrix. Overlay a real shop chart if they have one. Do not invent an informational row.
+**Speaker notes:** Read the chart across a row so recipient and channel remain connected. Explain the difference between a work owner and someone receiving awareness.
 
 ---
 
-### Slide 4 – Route and reject
-**Title:** Route and reject
+## Reference — Reading a notification chart
 
-Right people on the **wrong path** still fails.
+| Product | Work recipients | Leadership awareness | Approved classroom channel |
+|---|---|---|---|
+| Incident report | SOC queue and IR. | Yes, through the duty SOC lead. | The case-system ticket. |
+| RFI | The named responsible team, such as CTI, Hunt, or IT. | No routine separate notification unless requested or required. | Ticket or approved RFI form. |
 
-**Incident** — **A12** to IR. Leadership yes. Ticket.  
-Reject personal email or chat.
-
-**RFI** — CTI on the update domain. Leadership no. Form or ticket.  
-Reject texting a CTI friend.
-
-**Speaker Notes:**  
-Walk both givens before the knowledge check. Do not retell the plot. The product is four facts: recipients, leadership yes or no, channel, rejected channel.
+**Speaker notes:** Read the chart across a row so recipient and channel remain connected. Explain the difference between a work owner and someone receiving awareness. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 5 – Knowledge Check
-**Title:** Knowledge Check
+## Routing the course examples
 
-1. This lesson is when the report is due. True or false?  
-2. What three things does the notification chart tell you?  
-3. First IR handoff for **A12**. Recipients, leadership yes/no, channel, and one rejected channel?
+A12 goes to SOC and IR through the case ticket with duty-lead awareness. The CTI RFI follows its own chart row.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Have learners provide all routing elements for each example. Keep channels explicitly tied to the classroom policy rather than declaring all organizational chat invalid.
 
 ---
 
-### Slide 6 – Summary
-**Title:** Summary
+## Supplied example
 
-The chart names who, leadership, and channel.  
-Reject the unofficial path.  
-This closes **1.5**. SOC reporting ends here.
+For the first IR handoff of supported case A12, route the incident record to the SOC queue and IR through the case-system ticket and provide awareness to the duty SOC lead. Include a clear link or reference to the evidence and work being handed off.
 
-**Speaker Notes:**  
-The remaining job after type and clock was the route. CTI is next. Stay off 1.7.
+**Speaker notes:** Have learners provide all routing elements for each example. Keep channels explicitly tied to the classroom policy rather than declaring all organizational chat invalid.
 
 ---
 
-### Slide 7 – Next
-**Title:** Next
+## Making the handoff traceable
 
-**2.1.1** Data, information, and intelligence
+Preserve a traceable handoff and any required acknowledgement. Explain why an alternative fails the stated route.
 
-The RFI is the door into CTI.
+**Speaker notes:** Ask how another analyst would verify the handoff. Discuss acknowledgement as a local requirement without inventing a new universal gate.
 
-**Speaker Notes:**  
-Do not open 2.1.1 unless that lesson is scheduled. Do not open 1.7.
+---
+
+## Knowledge check
+
+1. What does a notification chart tell you?
+2. Route the first A12 incident handoff using the classroom chart and reject an unsuitable alternative.
+3. Route the CTI RFI and explain when the leadership decision could change.
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Use the notification chart to route the product, provide appropriate leadership awareness, and preserve a traceable handoff. The approved route connects the completed SOC work to the next responsible function.
+
+Previous: [1.5.2 – Reporting Timeline Requirements](../02-reporting-timelines/student-guide.md)
+
+Next: [2.1.1 — Data, information, and intelligence](../../../02-cti/01-core-intel/01-data-info-intel/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

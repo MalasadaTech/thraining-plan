@@ -3,102 +3,71 @@
 **Target Audience:** Threat Hunter (primary); SOC Analyst, CTI Analyst (secondary)  
 **Proficiency Focus:**  
 - Hunter: 3.3.1 B / C / C ; 3.3.1.1–3.3.1.3 3c / 4c / 4d  
-- SOC: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.2 1a / 2b / 3c ; 3.3.1.3 1a / 2b / 3c  
+- SOC: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.3 1a / 2b / 3c  
 - CTI: 3.3.1 A / B / B ; 3.3.1.1–3.3.1.2 2b / 3c / 4c ; 3.3.1.3 1a / 2b / 3c  
 **Estimated Time:** 20–25 minutes  
-**Delivery Method:** Instructor-led
+**Delivery Method:** Instructor-led explanation and discussion
 
----
+## Module Purpose
 
-## Module Overview for Instructors
+Use this lesson to teach the reasoning skill in the student guide, not merely the vocabulary. Keep the A12 examples evidence-bound and connect findings to the next module rather than turning each lesson into a complete hunt exercise.
 
-**Purpose of this module:**  
-Name each tool’s hunt strength and hunt limit. Convert a classroom-result-card lead into a precise internal SIEM or Zeek query. No `/24`. No live account.
+## Learning Objectives and Mapping
 
-**Context (plain language):**
-
-- What this lesson is for: Hunters take a finding from an external tool and turn it into a search they can run here, in the SIEM or in Zeek. A public detection count, a “malicious” tag, or a screenshot does not tell you whether that activity happened on your network.
-- How it hooks to the lesson before: 3.2.2 bounded the hunt (hypothesis, scope, priority, unique pattern). This lesson is how an external finding becomes the internal search.
-- How it hooks to the lesson after: 3.4.1 is whether a CTI report is hunt-worthy at all.
-- Why we are doing it this way: same four tools as the survey and the platform lessons, but the product here is a hunt lead and a precise internal query — not a first-tool pick, and not a tab extract.
-- What we are *not* doing in this lesson: when to pick a tool (0.7). How CTI reads Relations, Behavior, or the other platform tabs (2.9). A live vendor account. A lab.
-- Extra step: none.
-
-Use the same names as the student guide: **classroom result card**, **query**, **pivot**, **hunt lead**, and **precise** query. **A** is an IPv4 mapping. **NS** is a nameserver. **/24** is a 256-address block. **Relations / Behavior** are the VirusTotal sections that name linked hosts or files and sandbox events — not a tab class today.
-
-**Key Teaching Points:**
-- Four hunt limits: detection count, “malicious” tag, screenshot, whole `/24`.
-- A lead is a named artifact you can search here.
-- A precise query is IP + port + URI, not every destination.
-
-**Common Student Challenges:**
-- Treat a detection count as a hunt query. Why: the survey taught reputation. Example: writing “51/70 on VirusTotal” as the hunt.
-- Convert a Silent Push name into a `/24` search. Why: more addresses feel like more coverage. Example: `dest=203.0.113.0/24`.
-- Redo when-to-pick or tab reading. Why: these are the same four tools. Example: arguing AnyRun versus URLScan as the first tool, or walking the Relations tab.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
-
-## Learning Objectives
-
-Same as the student guide.
-
-**Mapped Proficiency Items:**
 - K: 3.3.1 – Tool capabilities for hunting
-- T: 3.3.1.1 – Perform advanced querying and pivoting in VirusTotal, AnyRun, URLScan, and Silent Push
+- T: 3.3.1.1 – Perform advanced querying and pivoting in VirusTotal, ANY.RUN, urlscan.io, and Silent Push
 - T: 3.3.1.2 – Extract actionable hunting leads from external tool results
 - T: 3.3.1.3 – Convert external findings into precise internal SIEM or Zeek queries
 
----
-
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+| Part | Time |
+|---|---:|
+| Context / prior-module connection | 3 min |
+| Core concepts | 10–12 min |
+| A12 or classroom application | 4–5 min |
+| Knowledge check | 4 min |
+| Summary / transition | 2 min |
 
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Convert, not survey |
-| Key Concepts            | 12 min    | Four limits; lead; query |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
+## Teaching Notes
 
----
+- Use the current vendor documentation links; avoid teaching stale UI navigation.
+- Separate external evidence from internal occurrence.
+- Treat the Zeek example as field predicates over Zeek data, not a universal Zeek query syntax.
+- Require data source, fields, values, time/population and review context when converting a lead.
 
-## Detailed Teaching Notes
+## Common Coaching Pattern
 
-### 1. Key Concepts
+When a learner overstates the evidence, ask:
 
-**Talking Points:**
-- Open with the job: an external finding is only useful if you can search for it here. A count, a tag, or a screenshot is not that search.
-- Write the four hunt strengths and four hunt limits. Stop. Do not teach when to pick a tool. Do not walk the platform tabs.
-- Define classroom result card, query, pivot, and hunt lead in the student-guide words. The product is what the card shows, not a live login.
-- Walk the given: `GET /update.exe` to `203.0.113.88:8080` becomes IP + port + URI. Fail `dest=*` and fail the `/24`.
-- If they start the 0.7 pick table: that is when to pick. This lesson is the conversion, not the pick.
-- If they open Relations or Behavior as a tab class: that is 2.9.1. Today you only need the host or dropped file the card already named.
-- If they query `203.0.113.0/24`: that is noise, not coverage.
+1. **What did we actually observe?**
+2. **What does that observation support?**
+3. **What additional evidence would be required for the stronger claim?**
 
----
+For hunt modules, also ask whether the required telemetry exists and whether the search is bounded enough for a negative result to mean anything.
 
 ## Knowledge Check – Answer Key
 
-1. **A VirusTotal detection count is a hunt query. True or false?**  
-   **Answer:** False.  
-   **Explanation:** A detection count is reputation. It is not a host, URI, or file you can search internally.
+### 1. Why isn't a VT relationship proof of internal activity?
 
-2. **Name one hunt limit for Silent Push.**  
-   **Answer:** The whole `/24` is noise.  
-   **Explanation:** Other names on the same A or NS can be leads. Neighboring addresses on that 256-address block are shared hosting, not a hunt query.
+**Expected answer:** It establishes an external dataset relationship, not that the relationship occurred in the local environment.
 
-3. **The classroom result card shows `GET /update.exe` to `203.0.113.88:8080`. Write one precise Zeek or SIEM query. Do not use a `/24`.**  
-   **Answer:** Zeek `http` `id.resp_h == 203.0.113.88 && id.resp_p == 8080 && uri == "/update.exe"` (or the SIEM equivalent: that dest IP + port 8080 + URI `/update.exe`). Not a `/24`. Not `dest=*`.  
-   **Explanation:** Precise means the lead’s IP, port, and URI together. A range or “every destination” is not this task.
+### 2. What belongs in an internal query plan?
 
----
+**Expected answer:** Local data source, fields, exact values/relationship, time window/population, and review context.
 
-## Additional Instructor Resources
+### 3. Convert the A12 HTTP lead into fields and scope.
 
-- Next: 3.4.1 Assessing CTI for hunting value
+**Expected answer:** Example: Zeek HTTP data; id.resp_h=203.0.113.88, id.resp_p=8080/tcp, uri=/update.exe; scoped to A12-relevant user-workstation traffic and time window.
+
+## Transition
+
+Use the student's **Next** line to connect this lesson to the following module. Preserve unresolved visibility, detection, attribution, and scope gaps instead of solving them with assumptions.
+
+## Supporting References
+
+- [VirusTotal Relationships](https://docs.virustotal.com/reference/relationships)
+- [VirusTotal File Behaviours](https://docs.virustotal.com/reference/file-object-behaviours)
+- [ANY.RUN TI Lookup Query Guide](https://intelligence.any.run/TI_Lookup_Query_Guide_v6.pdf)
+- [Silent Push DNS Data](https://help.silentpush.com/docs/dns-data)
+- [urlscan Result API](https://urlscan.io/docs/result/)

@@ -5,27 +5,34 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.4.1 B / C / C ; 3.4.1.1 3c / 4c / 4d  
+- SOC: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c  
+- CTI: 3.4.1 A / B / B ; 3.4.1.1 1a / 2b / 3c
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.4.1 | K | Assessing CTI for hunting value | 3.4.1 a–c | A / B / B | B / C / C | A / B / B |
-| 3.4.1.1 | T | Triage a CTI report: hunt / don’t hunt / hand off, and say why | 3.4.1.1 task 1 | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-
-The teaching-unit ID is **3.4.1**. Extracting leads is **3.4.2**. STIX as hunt input is **3.4.3**. ATT&CK mapping is **3.5**. Local hunt tickets are **3.7**. No lab.
+- K: 3.4.1 – Assessing CTI for hunting value
+- T: 3.4.1.1 – Triage a CTI report: hunt / don't hunt / hand off, and say why
 
 ## Concepts taught
 
-- assessing CTI for hunting value
-- hunt-worthy CTI
-- awareness-only CTI
-- hand-off to detections / IR
-- actionable for a hunt
-- rapid triage of a CTI report
+- CTI hunt-worthiness
+- local applicability
+- testability
+- visibility
+- incremental hunt value
+- awareness-only reporting
+- coordination and hand-off
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

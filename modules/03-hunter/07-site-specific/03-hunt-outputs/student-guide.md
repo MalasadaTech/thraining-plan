@@ -5,71 +5,101 @@
 - Hunter: 3.7.3 B / C / C ; 3.7.3.1 3c / 4c / 4c  
 - SOC: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b  
 - CTI: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Locate the site's definition of a complete hunt output and the local hand-off map.
+2. Produce the required package and route each finding to the locally authorized consumer.
 
-1. Say that **what a finished hunt must produce** and **who it is handed to** (SOC, IR, or CTI) **varies by site**.
-2. **Produce** those required outputs and **hand off** only on the path you were shown — or record that you **do not have the local list yet**. Do not invent a recipient.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.7.3 – Hunt outputs and hand-off
 - T: 3.7.3.1 – Produce required hunt outputs and perform proper hand-off
 
----
-
 ## 1. Key Concepts
 
-Hunters finish a hunt by producing what this shop calls **done** and sending that product to the team this shop names. Inventing an output or a recipient so the hunt can close sends the work to the wrong place, or as the wrong product. That is the job in this lesson: obtain the required outputs and the hand-off path, then follow them — or write that you do not have them yet.
+A hunt is not complete merely because the query finished.
 
-The hunt **product** is a **package**: more hosts, a gap. That idea is already in **3.1**. It is **not** a rewrite of the SOC ticket. **3.7.2** is where the hunt is written down. This lesson is what **leaves** the hunt.
+The organization decides what the finished hunt must contain and which teams receive which outcomes.
 
-This course does **not** publish a DYA output list or a DYA recipient list. You know **SOC**, **IR**, and **CTI** exist as kinds of teams. You do **not** know this site's names, queues, or “always IR if **A12**.”
+### Common output categories
 
-| Idea | What it is |
-|------|------------|
-| **Expected outputs** | What this shop always wants when a hunt is finished. Obtain that list. Do not invent “always file an incident report.” |
-| **Hand-off** | Which team and which local channel receive the package. Obtain that path. Do not invent a queue. |
+A local output standard may require some combination of:
 
-**Hand-off** here means sending the finished hunt product. Shops often keep the path as a **hand-off chart**: who gets it, and on which channel. You **obtain** the output list and that chart from the role or place your lead names. You use the names **on that chart**. You do **not** invent a DYA ticket, an email address, or a DE queue so the package has somewhere to go.
+- hypothesis and scope;
+- queries/data sources used;
+- findings and affected hosts/accounts;
+- evidence and confidence/limitations;
+- **detection gaps**;
+- **visibility gaps**;
+- reusable search logic;
+- follow-on hunt leads;
+- recommended hand-offs or actions.
 
-SOC reporting is **1.5**. How DE reviews a hunt package is **4.5**. Those are not this site's recipient list.
+These are examples, not a universal local checklist.
 
-**What good looks like:** someone asks you to close the **A12** hunt. You name what “done” includes here and who receives the package, or you say those lists are missing. You do not invent a recipient.
+### Findings can require different consumers
 
-- List and chart shown: produce what the output list requires. Send the **A12** package (more hosts, the gap) on the path the chart names. Do not add a team the chart does not name.
-- No list or chart: **I do not have the local output list / hand-off chart yet.** Do not email a made-up queue.
+A useful hand-off map may distinguish outcomes such as:
 
-If an instructor overlays a real shop list, that overlay is for the room. It is still not DYA policy.
+| Finding type | Possible consumer category |
+|---|---|
+| Active/suspected compromise | SOC / IR |
+| Detection coverage gap | Detection engineering or equivalent |
+| New infrastructure / intelligence question | CTI |
+| Missing telemetry | Telemetry/platform owner |
+| Out-of-scope investigative lead | Local lead-management process |
 
-This closes **3.x** Hunt. Detection Engineer is **4.x**.
+The actual team names, queues, and approval paths are site-specific.
 
----
+### Preserve the evidence boundary
+
+A hunt package should make clear:
+
+- what was observed;
+- what was inferred;
+- what scope was searched;
+- what telemetry was unavailable;
+- whether additional hosts were found;
+- whether a negative result is limited by visibility.
+
+### A12 example
+
+A finished A12 hunt might report:
+
+- 2 additional hosts with the exact `Updater → %TEMP%\update.exe` persistence pattern;
+- 18 hosts searched with complete registry visibility;
+- 7 hosts without the required registry telemetry;
+- no existing analytic covering the exact pattern;
+- a follow-on lead involving a different Run-value name pointing to a user-writable path.
+
+The **facts** remain the same regardless of which local team receives each part. The local hand-off map determines who owns response, detection improvement, visibility remediation, and follow-on intelligence.
+
+### Missing local list/map
+
+Use:
+
+> **Local hunt output requirements / hand-off path not yet verified.**
+
+Then identify the owner/source needed to close that onboarding gap.
 
 ## 2. Knowledge Check
 
-1. You should email a made-up SOC queue so the hunt is “handed off.” True or false?
-2. What two things do you obtain so a hunt can close here?
-3. You have not been shown a list or a chart. What do you write, and what do you **not** send?
-
----
+1. Why is “the query finished” not enough to call the hunt complete?
+2. Which two gap types should a hunt output distinguish?
+3. A hunt finds active compromise, a detection gap, and missing registry telemetry. Why might those outcomes have different consumers?
 
 ## 3. Summary
 
-Obtain the required outputs and the hand-off path. Follow them. Or write that you do not have them yet, and do not send. Do not invent a recipient. Hunt `3.x` ends.
+A finished hunt communicates findings, scope, evidence, gaps, and follow-on work in the form required locally.
 
-**Next track:** **4.x** Detection Engineer.
+Then route each outcome through the organization's authorized hand-off map.
 
----
+This completes the **3.x threat-hunting block**.
 
-## 4. Related modules
+**Next track:** **4.x – Detection Engineering**.
 
-- 3.7.2 – Hunt documentation standards (previous)
-- 3.1 – Purpose of threat hunting (the package)
-- 1.5 – SOC reporting
-- 4.1 – What DE owns
-- 4.5 – Hunt and intel packages
+## Reference Model
+
+This module intentionally relies on the organization's local hunt-output and hand-off standard.

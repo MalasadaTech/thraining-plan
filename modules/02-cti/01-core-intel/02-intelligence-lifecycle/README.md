@@ -7,12 +7,12 @@
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 2.1.2 | K | Intelligence lifecycle | 2.1.2 a–b | A / A / A | A / B / B | B / C / C |
-| 2.1.2.1 | T | Identify the lifecycle stage of an activity and describe the flow | 2.1.2.1 tasks 1–2 | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
+| Matrix ID | Type | Item | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
+|---|---|---|---|---|---|
+| 2.1.2 | K | Intelligence lifecycle | A / A / A | A / B / B | B / C / C |
+| 2.1.2.1 | T | Identify the lifecycle stage of an activity and describe the flow | 1a / 1a / 1a | 1a / 2b / 3c | 3c / 4c / 4c |
 
-The teaching-unit ID is **2.1.2**. Data / information / intelligence is **2.1.1**. Types are **2.1.3**. Requirements are **2.1.4**. Audience tailoring is **2.1.6**. Collection *source classes* are **2.1.8** (not the collection *stage* in this lesson). Finished production is **2.11**. No lab.
+The teaching-unit ID is **2.1.2**. Data / information / intelligence is **2.1.1**. Types are **2.1.3**. Requirements are **2.1.4**. Audience tailoring is **2.1.7**. Collection *source classes* are **2.1.9**. Finished production is **2.7**. No lab.
 
 ## Concepts taught
 
@@ -25,7 +25,8 @@ The teaching-unit ID is **2.1.2**. Data / information / intelligence is **2.1.1*
 - analysis and production
 - dissemination
 - evaluation and feedback
-- flow of the intelligence lifecycle
+- iterative flow of the intelligence lifecycle
+- classification of lifecycle activities by purpose
 
 ## Artifacts
 
@@ -33,3 +34,7 @@ The teaching-unit ID is **2.1.2**. Data / information / intelligence is **2.1.1*
 - [student-guide.md](student-guide.md)
 - [slides.md](slides.md)
 - `assets/` — empty
+
+## Revision status
+
+The canonical student guide, instructor guide, and slide deck are aligned to the explanatory voice established in Module 2.1.1. The lesson now follows the A12 question through all six lifecycle stages, emphasizes the purpose of the work rather than tool or folder labels, and explains iteration through both evidence gaps and recipient feedback.

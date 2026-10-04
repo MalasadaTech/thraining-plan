@@ -6,97 +6,92 @@
 - Hunter: 2.2.2 A / B / B ; 2.2.2.1 1a / 2b / 3c  
 - SOC: 2.2.2 A / A / A ; 2.2.2.1 1a / 1a / 2b  
 **Estimated Time:** 20–25 minutes  
-**Delivery Method:** Instructor-led
-
----
+**Delivery Method:** Instructor-led explanation and discussion
 
 ## Module Overview for Instructors
 
-**Purpose of this module:**  
-Pick Analysis of Competing Hypotheses (ACH) or a Key Assumptions Check and apply it. Do not invent a third official technique.
+**Purpose:** Help learners select and apply a structured analytic technique that addresses the reasoning problem in front of them. The lesson uses a Key Assumptions Check for hidden premises and ACH for competing explanations.
 
-**Context (plain language):**
+**Context:** Module 2.2.1 taught learners how to communicate the probability of a judgment. This lesson moves behind the wording and asks how the analyst tests the reasoning that supports the judgment.
 
-- What this lesson is for: CTI analysts use a named method so a favorite story does not win by habit. A draft often already has a preferred explanation. This lesson is how you pick a method that matches the problem and apply it.
-- How it hooks to the lesson before: 2.2.1 was the likelihood word. This lesson is the method behind the call.
-- How it hooks to the lesson after: 2.2.3 is source letters. 2.2.4 names the bias.
-- Why we are doing it this way: two syllabus techniques only. Pick the one the problem needs. Do not run both to fill time.
-- What we are *not* doing in this lesson: Admiralty. Bias names. A full ACH spreadsheet. No lab.
-- Extra step: none.
+The emphasis should be practical. Learners do not need a large ACH spreadsheet or a catalog of techniques. They should be able to recognize the difference between an untested assumption and competing hypotheses, then apply the appropriate method to a small A12 example.
 
-Use the same names as the student guide: **structured analytic technique**, **Key Assumptions Check**, and **Analysis of Competing Hypotheses (ACH)**. **Hurt** means evidence that is hard for a hypothesis to live with, not a vote for the favorite story. The given uses course-fiction names (**A12**, `WS-JLEE`, `update.exe` on port **8080**). Do not turn it into the intro plot.
-
-**Key Teaching Points:**
-- Pick the technique that matches the problem.
-- A Key Assumptions Check lists the claim that is carrying the call and what would break it.
-- ACH asks what evidence *hurts* a hypothesis.
-
-**Common Student Challenges:**
-- Run both techniques on every product. Why: it looks thorough. Example: a Key Assumptions Check plus a 12-row ACH when only one claim is carrying the call.
-- Score ACH by how much evidence supports H1. Why: confirmation feels like analysis. Example: “H1 has three hits so it wins” instead of “`:8080` `GET /update.exe` hurts ordinary browse.”
-- Add devil’s advocacy as a required third class. Why: they have heard the name. Example: listing it as syllabus for this lesson.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+**Required materials:** The aligned student guide and slide deck.
 
 ## Learning Objectives
 
-Same as the student guide.
+By the end of this module, learners will be able to:
+
+1. Explain why structured analytic techniques are useful and choose between a Key Assumptions Check and ACH for a given problem.
+2. Apply the selected technique to a short analytic problem and explain what it reveals about the judgment.
 
 **Mapped Proficiency Items:**
 - K: 2.2.2 – Structured analytic techniques
 - T: 2.2.2.1 – Apply a structured analytic technique and select the right one for a scenario
 
----
-
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Named method so habit does not pick the story |
-| Key Concepts            | 12 min    | ACH vs Key Assumptions Check; A12 givens |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
-
----
+| Part | Time | Teaching purpose |
+|---|---:|---|
+| Introduction | 3 minutes | Explain why analysts externalize and test reasoning. |
+| Key Assumptions Check | 6 minutes | Identify and test premises carrying a judgment. |
+| ACH | 7 minutes | Compare competing explanations using discriminating evidence. |
+| Technique selection | 3 minutes | Choose the method that fits the problem. |
+| Knowledge check | 4 minutes | Apply both concepts to short scenarios. |
+| Summary and transition | 1 minute | Connect reasoning quality to source evaluation. |
+| **Total** | **24 minutes** | Adjust discussion time as needed. |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Start with the reason for structure
 
-**Talking Points:**
-- Open with the job: a draft already has a preferred explanation, and you pick a named method so that story does not win by habit.
-- Write the two techniques. Stop there. Do not add a third official class.
-- Walk vendor-name as a Key Assumptions Check. Walk payload-host versus ordinary browse as ACH. Name H1, H2, and what hurts. Stop.
-- If they add devil’s advocacy as required: that is not a third official class for this lesson.
-- If they want a 12-row ACH matrix: name H1, H2, and what hurts. Stop.
-- If they start Admiralty letters: that is 2.2.3.
-- If they start naming biases: that is 2.2.4. Today is the method, not the bias list.
+Explain that analysts naturally form explanations as they work. A structured technique does not eliminate judgment; it slows down a vulnerable part of the reasoning and records what was tested.
 
----
+The useful teaching question is: **What could make this conclusion wrong even if it currently feels plausible?**
+
+### 2. Teach the Key Assumptions Check as a dependency test
+
+Use the vendor-label example. The draft conclusion treats “PRD APT” as proof of identity or sponsorship. Ask learners what must be true for that leap to work.
+
+Once they identify “vendor label = actual sponsor,” ask what evidence supports it and what evidence would weaken it. The goal is to show that assumptions are not automatically bad; they become dangerous when a critical one remains invisible and untested.
+
+### 3. Teach ACH as comparison, not evidence counting
+
+Use H1 payload delivery versus H2 ordinary activity. List a few pieces of evidence and ask which ones actually help distinguish between the hypotheses.
+
+Emphasize that ACH is not “H1 has three supporting facts and H2 has one.” Evidence that both hypotheses predict is less useful than evidence that one has difficulty explaining. Encourage learners to look for inconsistency and disconfirming evidence, particularly against the favored explanation.
+
+### 4. Choose based on the reasoning problem
+
+Give two quick prompts:
+- One conclusion rests on an untested premise → Key Assumptions Check.
+- Two explanations plausibly account for the same event → ACH.
+
+Acknowledge that mature analyses may use several techniques, but the classroom task is selection and application, not maximum technique count.
+
+## Common Student Challenges
+
+| Misunderstanding | Teaching response |
+|---|---|
+| More techniques always means better analysis. | Ask which specific reasoning risk each technique is addressing. |
+| ACH means counting supporting evidence. | Redirect attention to evidence that is inconsistent with, or diagnostic among, the hypotheses. |
+| An assumption is automatically an error. | Explain that analysis necessarily uses assumptions; the task is to identify critical ones and test their fragility. |
+| A full ACH matrix is required for any comparison. | Use the compact classroom version to demonstrate the reasoning principle before introducing heavier documentation elsewhere. |
 
 ## Knowledge Check – Answer Key
 
-1. **You should always run ACH and a Key Assumptions Check on every product. True or false?**  
-   **Answer:** False. Pick the one the problem needs.  
-   **Explanation:** Running both to fill time is not the task. One claim carrying the call is a Key Assumptions Check. Two live explanations is ACH.
+### 1. Vendor tracking name assumed to identify a government sponsor
 
-2. **When do you pick a Key Assumptions Check instead of ACH?**  
-   **Answer:** When one claim is carrying the call, not when two full stories are competing.  
-   **Explanation:** ACH is for competing explanations. A Key Assumptions Check tests the claim the draft is already standing on.
+**Expected answer:** Key Assumptions Check. The problem is an untested premise carrying the attribution judgment.
 
-3. **For A12, name one assumption a Key Assumptions Check would test.**  
-   **Answer:** A vendor APT name is who they are.  
-   **Explanation:** The vendor PDF label is the claim carrying a who-they-are call. What would break it: the name is a PDF, not internals.
+### 2. Two plausible explanations for an A12 network request
 
----
+**Expected answer:** ACH. The analyst should compare the same evidence against both explanations and focus on evidence that distinguishes between them.
 
-## Additional Instructor Resources
+### 3. Why `/update.exe` on port `8080` during suspicious activity is useful
 
-- Next: 2.2.3 Admiralty Code
+**Expected answer:** It is more diagnostic than the mere presence of the domain because it is harder for the ordinary-activity hypothesis to explain in the incident context. Learners should still identify what evidence could weaken the payload-delivery hypothesis.
+
+## Summary and Transition
+
+Close by reinforcing that structured techniques make reasoning inspectable. The next lesson turns to a different analytic problem: separately evaluating the reliability of a source and the credibility of a particular piece of information.

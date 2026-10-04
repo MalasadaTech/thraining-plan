@@ -1,107 +1,98 @@
-# Module 1.4.2 – Alert Classification  
-## Slide Deck Content
+# Module 1.4.2 – Alert Classification
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 8
+- Define TP, FP, TN, and FN against an explicit target condition.
+- Classify supplied cases and cite activity evidence and detection outcome.
+- Recognize uncertainty and the evidence needed to establish a false negative.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.4.2 – Alert Classification  
-**Subtitle:** Whether the detection was right  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson is the four classification labels and a cite of evidence. It is not why a false positive fired, and it is not scan / root / user.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-After you have looked at a case, you **classify** it.
+Classification compares a detection result with an assessed condition. Keeping those two questions separate helps you distinguish a useful alert, a false alarm, and activity that was missed. Each label needs evidence about both the activity and the detection outcome.
 
-A classification says whether the detection was right. You **cite the evidence**.
-
-This lesson is the four labels.
-
-**Speaker Notes:**  
-This slide is the student intro. Without a label, the next person cannot tell a real hit from a miss. Without a cite, “malicious” is a slogan. Context gathering was the previous lesson. Why a false positive fired waits.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Four labels
-**Title:** TP, FP, TN, FN
+## Defining what counts as positive
 
-**True Positive** — a fired alert, and the activity is what the rule is for.  
-**False Positive** — a fired alert, and the activity is benign.  
-**True Negative** — no alert, ordinary activity.  
-**False Negative** — no alert, bad activity that should have fired.
+State the target condition, then compare its assessed presence with the detection result: TP, FP, TN, or FN.
 
-Fired alerts sit in an **alert queue**. TN and FN usually do not.
-
-**Speaker Notes:**  
-Walk detection-said versus reality. Stop on true negative and false negative so they do not assume every case is a queue item. Do not open cause class or category.
+**Speaker notes:** State the target condition before presenting the matrix. Explain how a behavior match can be technically accurate yet benign.
 
 ---
 
-### Slide 4 – A miss, and a cite
-**Title:** A miss, and a cite
+## Reference — Defining what counts as positive
 
-A **false negative** is not a fired alert you dislike. It is a **miss**.
+| Label | Detection result | Assessed target condition |
+|---|---|---|
+| True positive (TP) | Alerted. | Present. |
+| False positive (FP) | Alerted. | Absent. |
+| True negative (TN) | Did not alert. | Absent. |
+| False negative (FN) | Did not alert. | Present and within the expected detection requirement. |
 
-**Evidence** is a short cite — parent plus `-enc`, destination plus URI, “no alert on that GET.”  
-A slogan is not a cite.
-
-**Speaker Notes:**  
-This is the task extension: cite the field or log. If they call a disliked queue alert an FN, send them back to the table. Why the false positive fired is the next lesson.
-
----
-
-### Slide 5 – Four cases
-**Title:** Classify and cite
-
-**TP** — alert `Encoded PowerShell from script host`; `wscript` plus `-enc`.  
-**FP** — any-PowerShell alert on interactive `Get-Help`.  
-**TN** — ordinary browse, no alert.  
-**FN** — `GET /update.exe` to `203.0.113.88:8080`, no alert.
-
-Do not invent an alert so you can classify it.
-
-**Speaker Notes:**  
-Show these givens before the knowledge check. The product is the label plus the cite. Do not tell the course-fiction plot. Do not explain why the PowerShell rule is broad.
+**Speaker notes:** State the target condition before presenting the matrix. Explain how a behavior match can be technically accurate yet benign. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Classifying evidence-supported examples
 
-1. FN is a bad alert sitting in the queue. True or false?  
-2. Alert `Encoded PowerShell from script host`, `wscript` + `-enc` confirmed. Classify and cite.  
-3. `GET /update.exe` to `203.0.113.88:8080`, no alert. Classify and cite.
+Technical pattern matches alone do not establish maliciousness. The examples supply independent activity assessments.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Require the additional supplied evidence in every case. Avoid teaching that a filename or encoding flag establishes maliciousness.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Reference — Classifying evidence-supported examples
 
-Four labels.  
-Cite the evidence.  
-True negatives and false negatives usually have no alert in the queue.
+| Supplied classroom case | Classification and reason |
+|---|---|
+| The Script Host/PowerShell rule alerts; follow-up evidence confirms the command performed unauthorized activity within the rule's intended scope. | TP: the alert and assessed target condition are both present. |
+| An overly broad threat rule alerts on interactive `Get-Help`; the activity is verified as authorized helpdesk use. | FP against this lesson's threat condition: an alert occurred but the target condition is absent. |
+| Verified ordinary browsing is within the evaluation sample and the relevant detector produces no alert. | TN: the target condition and alert are both absent. |
+| A download is independently confirmed malicious and within required coverage; relevant logs show it occurred, but a checked alert record shows no alert during the evaluated period. | FN: the required target condition occurred without the expected alert. |
 
-**Speaker Notes:**  
-The next lesson is why a false positive fired — the cause class, not another label.
+**Speaker notes:** Require the additional supplied evidence in every case. Avoid teaching that a filename or encoding flag establishes maliciousness. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 8 – Next
-**Title:** Next
+## Writing the classification and evidence
 
-**1.4.3** Common false positive causes
+Cite activity and alert evidence. A miss needs a coverage expectation and a reliable scoped check.
 
-**Speaker Notes:**  
-1.4.3 is why this false positive happened and what you would change. Stay off the four labels when you get there.
+**Speaker notes:** For the FN, ask whether the data reached the rule. Distinguish a coverage failure from a conclusion about the specific cause.
+
+---
+
+## Knowledge check
+
+1. Classify the four supplied cases and cite both sides of each decision.
+2. Does confirmed wscript-to-encoded-PowerShell behavior alone establish a malicious true positive?
+3. What is needed before calling an unalerted download a false negative?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Classify the detection outcome against an explicit, evidence-supported target condition. Preserve uncertainty, use local disposition definitions, and investigate misses using both activity evidence and the expected coverage.
+
+Previous: [1.4.1 – Alert Context and Investigation](../01-context-investigation/student-guide.md)
+
+Next: [1.4.3 – Common False Positive Causes](../03-false-positive-causes/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — Investigate and classify alerts](https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts)
+- [Microsoft — Alert classification playbooks](https://learn.microsoft.com/en-us/defender-xdr/alert-classification-playbooks)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

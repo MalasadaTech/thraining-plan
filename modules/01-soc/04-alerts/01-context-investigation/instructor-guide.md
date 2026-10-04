@@ -8,45 +8,16 @@
 **Estimated Time:** 30 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Investigate the fired alert: context, configuration, hops, related host events, and PCAP versus the alert fields.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts work the object that fired — not write a new rule, not call TP/FP yet. They gather context so a gap is not treated as benign and a hop that is not there is not invented.
-- How it hooks to the lesson before: 1.3.4 proposed the SIEM rule. In this lesson that rule has fired on `wscript` → encoded PowerShell.
-- How it hooks to the lesson after: 1.4.2 is classification (TP/FP/TN/FN).
-- Why we are doing it this way: all five tasks as what good looks like, not a lab. The first alert is the process create only. VirusTotal is a one-line lookup of a value you already have, not Relations.
-- What we are *not* doing in this lesson: Classify. Author a rule. Invent a Suricata hop. Invent a PCAP. Relations / 2.9. Live-account lab. The Run key (hunt is 3.x). No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **context**, **present**, **missing**, **configuration**, **upstream hops**, **endpoint logs**, and **PCAP**. Say **host event** or **host log**, not unexplained “host row.” Keep `jlee` as the given user. Do not require WS-JLEE as site policy. Do not tell the rest of the incident.
-
-**Key Teaching Points:**
-- Present / missing. A hash, IP, or domain you have goes to VirusTotal (**0.7**).
-- Configuration is what would fire.
-- Name each hop. SIEM-only is allowed.
-- Endpoint logs must add or fail to add.
-- PCAP is not applicable on a process-only alert.
-
-**Common Student Challenges:**
-- Treat missing context as benign. Why: a blank field feels like “nothing bad.” Example: writing “benign” because the parent process is empty.
-- Invent a Suricata hop. Why: the classroom pattern includes Suricata. Example: naming a Suricata rule on this SIEM-only process alert.
-- Invent a packet capture. Why: the task mentions PCAP. Example: writing a URI from a capture that does not exist on this process alert.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+An alert is the starting point for an investigation. Before deciding what it means, establish what evidence it contains, what logic produced it, and what related records can add. This makes the eventual finding traceable to observations rather than to the alert title alone.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Identify present and missing alert context, including an approved lookup of an available indicator.
+2. Explain the alert configuration and trace its actual upstream detection path.
+3. Select related endpoint logs and describe what they add or fail to add.
+4. Select related PCAP for a network question and describe its contribution or availability limit.
 
 **Mapped Proficiency Items:**
 - K: 1.4.1.1 – Alert context and investigation
@@ -56,56 +27,76 @@ Same as the student guide.
 - T: 1.4.1.5 – Collect related endpoint logs and state what they add (or fail to add)
 - T: 1.4.1.6 – Collect related PCAP and state what it adds versus the alert fields
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | The object that fired |
-| Key Concepts            | 20 min    | Five jobs; one given |
-| Knowledge Check         | 5 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~30 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 20 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **30** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Establishing context and detection lineage
 
-**Talking Points:**
-- Open with the job: an alert fired, and you gather context before you classify it.
-- Walk present versus missing. Missing is a gap. Do not invent a command line.
-- Once a file event adds Temp `invoice.vbs` (or they have `203.0.113.88`), look that hash or IP up on VirusTotal. One line. Not Relations.
-- Config: one sentence on what would fire. Hops: name each. This given is SIEM rule → SIEM alert.
-- Pull related host events. A file event **adds** Temp `invoice.vbs`. If there is no parent in the tenant, the logs **fail to add** it.
-- PCAP is not applicable on this process-only first alert. On a network alert, say what the capture adds versus the alert fields.
-- If they classify TP: that is 1.4.2.
-- If they invent Suricata: not on this given.
-- If they open the Run key: hunt. Not this first pass.
-- If they invent a PCAP: process-only. Not applicable.
+Draw only the supplied lineage. Ask learners to explain the rule’s actual predicates rather than paraphrasing its title.
 
----
+**Key point to reinforce:** Record present and missing context, explain the rule, and trace the actual event-to-alert path.
 
-## Knowledge Check – Answer Key
+### 2. Adding relevant evidence
 
-1. **The alert context is missing a parent process. That means the activity was benign. True or false?**  
-   **Answer:** False. Missing is a gap.  
-   **Explanation:** Present versus missing names what you have and what you do not. An empty parent is not evidence the activity was benign.
+Use the table to connect each collection action to a question. Explain that finding a record is not the same as establishing its relevance.
 
-2. **Name the hops for a SIEM-only process alert.**  
-   **Answer:** SIEM rule → SIEM alert.  
-   **Explanation:** Name each hop that is on the given. Do not add a Suricata rule that is not there.
+**Key point to reinforce:** Collect related endpoint events, approved indicator lookups, and relevant retained packets. State what each contributes.
 
-3. **You have the hash of Temp `invoice.vbs` and IP `203.0.113.88`. What do you look up on VirusTotal, and what is not this lesson?**  
-   **Answer:** Look up the hash and the IP (and a domain if you have one). Not Relations or a pivot graph (**2.9**).  
-   **Explanation:** VirusTotal here is a one-line lookup of a value you already have (**0.7**). Platform depth is later.
+### 3. Working through a reviewable finding
 
----
+Have learners produce the present/missing and contribution statements from the examples. Use a provided sanitized lookup result if available; otherwise label it pending rather than making a live submission.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Preserve evidence references and unresolved questions. Distinguish unavailable capture from an irrelevant network question.
 
-- Next: 1.4.2 Alert classification
+## Knowledge Check — Answer Key
+
+### 1. For the process example, name what is present and two unresolved questions.
+
+**Expected answer:** Present are host, account, process creation, parent, and command-line pattern. Unresolved questions include decoded behavior, authorization, and related activity.
+
+### 2. Explain the configuration and upstream path for the SIEM-only alert.
+
+**Expected answer:** The rule tests the specified process pattern and trigger; the path is endpoint event → ingested table → SIEM rule → alert. A Suricata stage is not supplied.
+
+### 3. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute?
+
+**Expected answer:** Preserve and correlate the file event using host, time, path, and process evidence. Look up the actual hash and record the report/time and relevant result or absence of a report, explaining what each adds.
+
+### 4. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
+
+**Expected answer:** Request the relevant flow/time/sensor to seek details such as a visible HTTP URI. Record what the packets add, or explicitly state that relevant capture is unavailable; do not invent content.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+An investigation record should explain the alert’s evidence, logic, and lineage, then show what related endpoint records, lookups, and packets contribute. Clear unresolved questions make the next decision easier to support.
+
+Previous: [1.3.4 – SIEM Rules](../../03-detection/04-siem-rules/student-guide.md)
+
+Next: [1.4.2 – Alert Classification](../02-classification/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — Investigate and classify alerts](https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts)
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching)
+- [Zeek — http.log](https://docs.zeek.org/en/current/reference/logs/http.html)

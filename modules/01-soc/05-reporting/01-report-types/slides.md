@@ -1,99 +1,92 @@
-# Module 1.5.1 – Report Types  
-## Slide Deck Content
+# Module 1.5.1 – Report Types
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+- Describe incident reports, RFIs, and local report types.
+- Select the type suited to a supplied reporting purpose.
+- Explain why a plausible alternative serves a different purpose.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.5.1 – Report Types  
-**Subtitle:** Which kind of record  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.4.5 closed the alert clocks. This lesson opens reporting. It names the type. It is not clocks and not routing.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-After an alert is a case, or you need another desk's help, you pick the **kind of record**.
+Report selection begins with the purpose of the communication. An incident report records a case and supports response, while an RFI asks a question needed by the work. The same incident can require both products.
 
-The next desk needs a **case** or a **question**, not both mixed.
-
-This lesson names the type.
-
-**Speaker Notes:**  
-This slide is the student intro. Name the type before anyone writes a body, assigns a clock, or names recipients. Do not write the report in this lesson.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Incident, RFI, other
-**Title:** Incident, RFI, other
+## Choosing the product by purpose
 
-**Incident report** — records the case / IR handoff.  
-**RFI** — asks another desk for information.  
-**Other** — a name your shop already uses.
+Choose the product by purpose: incident record, information question, or an actual local type.
 
-An RFI can sit beside an incident. It is not a second case.
-
-**Speaker Notes:**  
-Three names. Stop. Other is not a new DYA list. A finished intel paper is 2.11, not a 1.5 type. The RFI is the door into CTI.
+**Speaker notes:** Focus on product purpose rather than team names. Explain that one system can contain linked products without duplicate paperwork.
 
 ---
 
-### Slide 4 – Type + not the neighbor
-**Title:** Type + not the neighbor
+## Reference — Choosing the product by purpose
 
-The next-closest wrong type is the **adjacent** type (the **neighbor**).
+| Type | Primary purpose | Useful comparison |
+|---|---|---|
+| Incident report | Records an incident or supported suspected incident for handling under local criteria. | An RFI asks for information rather than replacing the incident record. |
+| Request for Information (RFI) | States a question and needed information or analysis, with relevant context. | It can link to an existing case without creating a duplicate incident. |
+| Other (local) | Meets a reporting purpose defined by the organization. | Use the actual type and instructions applicable to that purpose. |
 
-**Incident, not RFI** — first record for **A12** (`wscript` → `-enc`, Temp `invoice.vbs`).  
-You are recording the case.
-
-**RFI, not incident** — **A12** exists; ask CTI to work the update domain / file.  
-The case is open. This product is the question.
-
-**Speaker Notes:**  
-Walk the two givens. The product is two sentences: type, and why the neighbor is wrong. An RFI can sit beside an incident. Do not dump the Run key or the plot.
+**Speaker notes:** Focus on product purpose rather than team names. Explain that one system can contain linked products without duplicate paperwork. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 5 – Name the type. Stop.
-**Title:** Name the type. Stop.
+## Working through the course case
 
-This lesson is which **type**.
+A12 supplies the incident context. A linked CTI RFI asks the additional intelligence question.
 
-You do not write the body.  
-Due clocks are **1.5.2**. Recipients and channel are **1.5.3**.  
-A finished intel product is **2.11**. **1.7** is retired — not a 1.5 type.
-
-**Speaker Notes:**  
-Keep them on the type. If they write a shift log as other, stop. Do not send them to 1.7.
+**Speaker notes:** Make the supplied incident-handling determination explicit. Avoid treating encoded PowerShell alone as the criterion for an incident.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Supplied example
 
-1. An RFI is a second incident case. True or false?  
-2. What is an incident report for, versus an RFI?  
-3. **A12** already exists. You want CTI to work the update domain. Type, and why not the adjacent one?
+For this example, assume the investigation of case `A12` on `WS-JLEE` has met the organization's criteria for a suspected incident and IR handoff. The supporting case record includes the Script Host/PowerShell activity and the evidence for that escalation decision. The command pattern alone is not the incident determination.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Make the supplied incident-handling determination explicit. Avoid treating encoded PowerShell alone as the criterion for an incident.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Explaining the choice
 
-Incident records the case. RFI asks a question. Other is a shop name.  
-Reject the neighbor.
+Explain why the chosen product serves the request. Unanswered questions do not automatically delay incident reporting.
 
-**Next:** **1.5.2** Reporting timeline requirements
+**Speaker notes:** Ask learners to give the type and its reason in connected prose. Their explanation should distinguish the case record from the unanswered question.
 
-**Speaker Notes:**  
-1.5.2 is when the report is due. Stay off the type when you get there.
+---
+
+## Knowledge check
+
+1. How do an incident report and an RFI differ?
+2. A12 is already open and CTI is asked to assess a related domain. Which type fits, and why?
+3. If a suspected incident meets reporting criteria but attribution is unknown, should the incident record wait for the RFI answer?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Select the report type by the work it must accomplish. Record the supported incident and use linked RFIs for additional questions, following the organization’s definitions for other products.
+
+Previous: [1.4.5 – SLA / Response Time Goals](../../04-alerts/05-sla-response-times/student-guide.md)
+
+Next: [1.5.2 – Reporting Timeline Requirements](../02-reporting-timelines/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

@@ -8,93 +8,85 @@
 **Estimated Time:** 20–25 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Name which of two clocks is at risk, then record a close or escalate against that clock.
-
-**Context (plain language):**
-
-- What this lesson is for: SOC analysts keep an alert from sitting untouched, and from sitting open with no close or escalate. They name the clock and write closed or escalated against it.
-- How it hooks to the lesson before: 1.4.4 was the site bucket (scan / root / user).
-- How it hooks to the lesson after: 1.5 is reports. Those have their own timelines. This lesson is the alert clocks only.
-- Why we are doing it this way: two clocks, with classroom 15 / 45 so the timestamp task has numbers. Those minutes are this lesson only — not a live shop SLA.
-- What we are *not* doing in this lesson: re-investigate. Re-label TP/FP or category. Write a report. Invent shop minutes. No lab. **1.7** is retired — do not open shift change.
-- Extra step: none.
-
-Use the same names as the student guide: **start clock**, **close/escalate clock**, **created**, **started**, **closed**, and **escalated**. Do not invent a Harbor or DYA SLA card. The givens are timestamps only; do not retell an earlier investigation plot.
-
-**Key Teaching Points:**
-- Start from **created**. Close/escalate from **started**.
-- Untouched → only start exists.
-- Record: closed or escalated, which clock, the time. Do not close an untouched alert.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+Response-time goals help ensure an alert receives attention and reaches an appropriate next state. Keeping each goal’s start point and completion event explicit makes overdue work visible without encouraging premature closure.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Explain the start and close/escalate clocks and their origins.
+2. Calculate which response-time goal is at risk or breached.
+3. Record a supported closure or escalation against the correct clock.
 
 **Mapped Proficiency Items:**
 - K: 1.4.5.1 – Service Level Agreements / Response Time Goals
 - T: 1.4.5.2 – Given timestamps, identify whether the start clock or the close/escalate clock is at risk
 - T: 1.4.5.3 – Close or escalate an alert and record it against the correct clock
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Two clocks, not “work faster” |
-| Key Concepts            | 12 min    | 15 / 45 classroom; two givens |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | Close 1.4; next is 1.5 |
-| **Total**               | **~20 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 12 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **22** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Understanding the two classroom clocks
 
-**Talking Points:**
-- Open with the job: an alert must not sit untouched, and it must not sit open with no close or escalate. Name which clock is at risk. “Work faster” is not the task.
-- Write the two clocks. Start is created → first touch (classroom 15 minutes). Close/escalate is first touch → closed or escalated (classroom 45 minutes). Those minutes are this lesson only.
-- Walk the untouched given as **start**. Close/escalate has no origin yet.
-- Walk the still-open given as **close/escalate**. Start already met.
-- If they say “we’re late” with no clock: ask which one.
-- If they close an untouched alert: start first. Close/escalate has no origin.
-- If they measure close/escalate from created: measure from first touch.
-- If they reopen TP or category: those lessons are done. Stay on the clocks.
-- If they ask for shop minutes: classroom 15 / 45. Their real shop substitutes.
+Ask learners to identify the origin and completion event before doing arithmetic. Keep all classroom times in a single stated time zone.
 
----
+**Key point to reinforce:** Classroom clocks: creation to investigation start, 15 minutes; investigation start to close/escalate, 45 minutes.
 
-## Knowledge Check – Answer Key
+### 2. Calculating status from timestamps
 
-1. **If nobody has touched the alert, which clock can be at risk?**  
-   **Answer:** Only the **start** clock. Close/escalate has no origin yet.  
-   **Explanation:** Until a first touch, the close/escalate clock has nothing to measure from.
+Walk both calculations and distinguish overdue from a forecasted risk. Highlight the added creation time needed to establish that start was met.
 
-2. **What are the two clocks, and when does each start?**  
-   **Answer:** Start = created → first touch (classroom 15 min). Close/escalate = first touch → closed or escalated (classroom 45 min).  
-   **Explanation:** Two response-time goals, two origins. Do not measure both from created.
+**Key point to reinforce:** Calculate due times first. Preserve the result of the start goal while tracking the second clock.
 
-3. **An alert was first touched at 13:28 and is still open at 14:20. Which clock is at risk, and what do you record?**  
-   **Answer:** **Close/escalate** (52 minutes, past 45). Record `escalated` (or `closed` if the investigation is done) against the close/escalate clock at `14:20`.  
-   **Explanation:** Start already has a first touch. The remaining clock is close/escalate. Record the disposition against that clock.
+### 3. Recording the appropriate action
 
----
+Have learners write the action line and explain why it reflects the actual work state. Completion of a timing task must not change the evidence-based finding.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Record the supported action, actual time, reason, and owner. A later action does not erase a breach.
 
-- Next: 1.5.1 Report types
+## Knowledge Check — Answer Key
+
+### 1. Created 14:00 and untouched at 14:18: which clock applies, when was it due, and what is the first action?
+
+**Expected answer:** Start clock, due 14:15 and breached by 3 minutes. Begin investigation and record the actual start time and breach.
+
+### 2. Created 13:20, started 13:28, and open at 14:20: calculate both clock results.
+
+**Expected answer:** Start met in 8 minutes. Close/escalate was due 14:13 and is breached by 7 minutes.
+
+### 3. Write an appropriate record for the second case if the investigation still needs the duty lead’s help.
+
+**Expected answer:** Record escalation at 14:20 against the breached close/escalate clock, including the unresolved issue and receiving owner. Do not record unsupported closure or erase the breach.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+Identify the applicable clock, calculate its due time, and record the action actually taken. Preserve both timing status and investigation state, using the organization’s definitions outside the classroom.
+
+Previous: [1.4.4 – Common Alert Categorizations](../04-categorizations/student-guide.md)
+
+Next: [1.5.1 – Report Types](../../05-reporting/01-report-types/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)

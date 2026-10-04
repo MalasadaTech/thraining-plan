@@ -1,83 +1,93 @@
-# Module 1.4.4 – Common Alert Categorizations  
-## Slide Deck Content
+# Module 1.4.4 – Common Alert Categorizations
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 6
+- Describe the syllabus activity categories and their local use.
+- Assign a supported category to a supplied event.
+- Explain why a plausible adjacent category is less supported.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.4.4 – Common Alert Categorizations  
-**Subtitle:** Category plus why the neighbor is wrong  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This lesson names alert categories. It is not true positive versus false positive, and it is not ATT&CK.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts put a **category** on an alert so the next desk can see what kind of activity it was.
+An activity category tells the next analyst what kind of behavior or access the evidence supports. It serves a different purpose from TP/FP classification, which evaluates a detection result. Clear category reasoning helps avoid overstating an attacker’s access.
 
-A true-positive or false-positive label is not that name.
-
-This lesson names the category and rejects the neighbor.
-
-**Speaker Notes:**  
-This slide is the student intro. A label says whether the detection was right. A category tells the next desk the kind of activity. Do not teach clocks today.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Five alert categories
-**Title:** Five alert categories
+## Using the course categories
 
-**Scanning / reconnaissance** — wide probe, no access attempt.  
-**Root-level** — SYSTEM / admin / service control.  
-**User-level** — a normal user account.  
-**Unsuccessful** — a failed access attempt.  
-**Other** — a name your shop already uses.
+Use scanning, root-level, user-level, unsuccessful, or an actual local category according to its definition.
 
-**Speaker Notes:**  
-One line each. Stop. Other is a name the shop already uses, not an ATT&CK ID and not a new DYA list.
+**Speaker notes:** Explain that the course taxonomy is preserved for syllabus alignment. Focus on evidence, not assumptions about account names.
 
 ---
 
-### Slide 4 – Category plus why not the neighbor
-**Title:** Category plus why not the neighbor
+## Reference — Using the course categories
 
-**User-level, not root** — `wscript` + `-enc` as Medium `jlee`.  
-Encoded does not upgrade the account.
+| Category | Evidence that supports it | Useful distinction |
+|---|---|---|
+| Scanning / reconnaissance | Probing intended to discover hosts, services, or other information. | Compare discovery activity with a failed access attempt. |
+| Root-level access | Evidence of privileged control, such as root, SYSTEM, or relevant elevated administrative execution. | A service account or service process is not automatically privileged. |
+| User-level access | Evidence of activity within a standard or non-elevated user execution context. | A suspicious command does not itself establish elevation. |
+| Unsuccessful activity | Evidence that an access or exploitation attempt failed. | Distinguish the attempted action from a discovery probe. |
+| Other (local) | An applicable category defined by the organization. | Use its actual definition rather than inventing a local label. |
 
-**Scanning, not unsuccessful** — many unanswered SYN, no login.  
-A sweep is not a failed logon.
-
-**Speaker Notes:**  
-Show both givens before the knowledge check. Two sentences: the category, then why the neighbor is wrong. The same command as SYSTEM would be root.
-
----
-
-### Slide 5 – Knowledge Check
-**Title:** Knowledge Check
-
-1. A category is the same thing as a true-positive or false-positive label. True or false?  
-2. Name the four syllabus categories plus **other**.  
-3. `wscript` + `-enc` as Medium `jlee`. Category, and why not the adjacent one?
-
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Explain that the course taxonomy is preserved for syllabus alignment. Focus on evidence, not assumptions about account names. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Summary
-**Title:** Summary
+## Comparing similar cases
 
-A category names the kind of activity and rejects the neighbor.  
-A scan is not failed authorization. A user account is not root.
+Execution context supports privilege conclusions. A suspicious command or service label does not establish elevation.
 
-**Next:** **1.4.5** Service Level Agreements / Response Time Goals
+**Speaker notes:** Use the same command under two explicitly different execution contexts. Ask learners to change only the conclusion supported by that difference.
 
-**Speaker Notes:**  
-Clocks are next. Stay off this category when you get there.
+---
+
+## Supplied example
+
+The course PowerShell example runs under `jlee` with a recorded Medium integrity, non-elevated context. That supports user-level activity for this event. It does not prove that the account lacks every administrative membership or that no privileged activity occurred elsewhere.
+
+**Speaker notes:** Use the same command under two explicitly different execution contexts. Ask learners to change only the conclusion supported by that difference.
+
+---
+
+## Writing a justified category
+
+State the category, evidence, and why a plausible alternative is less supported.
+
+**Speaker notes:** Require a plausible alternative and a concrete reason. Permit uncertainty when the supplied facts do not establish an attempt or privilege level.
+
+---
+
+## Knowledge check
+
+1. Name the four syllabus categories and explain how Other is used.
+2. Categorize the supplied non-elevated jlee event and explain why root-level is unsupported.
+3. How would you distinguish a port sweep from a failed login, and why is HTTP 401 alone insufficient?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Choose an activity category from the observed behavior and access context. Explain the evidence and a plausible alternative, and use local definitions for mixed activity or additional categories.
+
+Previous: [1.4.3 – Common False Positive Causes](../03-false-positive-causes/student-guide.md)
+
+Next: [1.4.5 – SLA / Response Time Goals](../05-sla-response-times/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

@@ -5,82 +5,84 @@
 - SOC: 1.3.4.1 A / B / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 1a / 2b / 3c  
 - Hunter: 1.3.4.1 B / C / C ; 1.3.4.2 2b / 3c / 4c ; 1.3.4.3 2b / 3c / 4c  
 - CTI: 1.3.4.1 A / B / B ; 1.3.4.2 1a / 2b / 3c ; 1.3.4.3 1a / 1a / 2b  
-**Estimated Time:** 25–30 minutes  
-
----
+**Estimated Time:** 25–30 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name the pieces of a SIEM detection, and how log fields (or a SIGMA rule) become one.
-2. Read an existing SIEM rule and say what it detects; propose a **basic** create from fields or from SIGMA.
+1. Identify the source, logic, timing, trigger, and output of a saved detection.
+2. Explain what a rule would match and what would create an alert.
+3. Create a basic proposal from known log fields or a Sigma rule.
 
 **Mapped Proficiency Items:**
 - K: 1.3.4.1 – SIEM rules
 - T: 1.3.4.2 – Analyze an existing SIEM rule and describe what it detects
 - T: 1.3.4.3 – Create a basic SIEM detection rule from log fields or a SIGMA rule
 
----
+## Why This Matters
 
-## 1. Key Concepts
+A saved detection combines search logic with operating settings that determine when and how an alert is created. Reading both parts explains what an alert represents and helps turn a query into a reviewable detection proposal.
 
-SOC analysts **read** a saved detection and **propose** a basic one. That is daily work: an alert names a rule, and you have to say what that rule looks at — which table, which fields, which match — before you treat the alert as a fact. This lesson is that saved rule. It is **not** opening the alert (**1.4**). It is **not** how detections run as a service (**4.x**). You **propose**. You do **not** deploy.
+## 1. Understanding the detection proposal
 
-A **SIEM rule** is named logic that runs on ingested logs and can fire an alert. Shops also call this an **analytics rule** or a **correlation search**. Here those names mean the saved detection, not a requirement to join events.
+| Component | What to specify |
+|---|---|
+| Name and purpose | The activity the detection is intended to identify. |
+| Source | Required table, event types, and populated fields. |
+| Logic | Matching predicates and any grouping, count, or threshold. |
+| Lookback | How far back each run searches. |
+| Frequency | How often it runs; distinct from lookback. |
+| Output | Evidence and entity fields needed to investigate a result. |
+| Alert behavior | How matches become alerts and how repeated matches are handled. |
 
-| Idea | What to read |
-|------|----------------|
-| **Structure** | **Name**, **table** (which log store), **logic** (the filter), **window** (how far back / how often), **output** fields. A table with no filter is not a detection. A join or count across events in a window is extra. A basic rule can be a filter on one table. |
-| **Fields → detection** | Name the table. Pick fields that exist on that table (`FileName`, `ProcessCommandLine` on process events). Add a parent, token, or destination so it is not “all PowerShell.” |
-| **Wildcards / regex** | **Wildcard** or substring when a path or fixed token is enough (`*\\Temp\\*`, `-enc`). **Regex** when the token itself varies (`-e` / `-enc` / `-EncodedCommand`). Do not regex an empty field into existence. |
+A basic rule can filter one table; joining multiple sources is not required. A broad search may be useful for exploration, but a detection proposal should explain why the returned activity warrants attention and how much routine activity it may include.
 
-**From SIGMA (second create path):** SIGMA is a portable detection: you write what to look for once. Turn it into a SIEM rule by mapping **logsource** (which telemetry) → table, **selectors** (field tests) → logic, **condition** (and / or / not) → how those tests combine. Then name it, give it a window, and list output fields. You are not required to run a converter.
+## 2. Reading a worked proposal
 
-**What good looks like:**
+**Name:** PowerShell encoded argument from Script Host. **Classroom schedule:** run every five minutes with a five-minute lookback. **Trigger:** one or more matching events. **Output:** event and host identifiers plus the command-line context below. Grouping and duplicate handling remain settings to confirm in the target platform.
 
-- Analyze: name table, logic, window, and what would fire.
-- Given:
-
+```kusto
+DeviceProcessEvents
+| where Timestamp > ago(5m)
+| where ActionType == "ProcessCreated"
+| where FileName =~ "powershell.exe"
+| where InitiatingProcessFileName =~ "wscript.exe"
+| where ProcessCommandLine contains "-enc"
+| project Timestamp, DeviceId, DeviceName, ReportId, AccountName,
+          ProcessCommandLine, InitiatingProcessCommandLine
 ```
-Name: Encoded PowerShell from script host
-Source: DeviceProcessEvents
-Window: 5 minutes
-Logic:
-  FileName =~ "powershell.exe"
-  and ProcessCommandLine has "-enc"
-  and InitiatingProcessFileName == "wscript.exe"
-Output: Timestamp, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine
-```
 
-**What it detects:** a process create of PowerShell with `-enc` in the command line, parent `wscript`.
+This KQL illustrates the three-field process pattern. It requires the supported MDE source and action. The simplified schedule may miss late-arriving data; a deployable rule needs appropriate lookback, timing, and duplicate handling. It has not been validated against a live tenant.
 
-If you started from SIGMA, the same three tests were `Image` / `CommandLine` / `ParentImage` on `process_creation`. The SIEM wrap is the name, table, window, and outputs.
+## 3. Creating or translating a basic rule
 
-- Create: a **basic** proposed rule from those fields **or** from that SIGMA mapping. An unfiltered `DeviceProcessEvents` is not a create. SOC **proposes**. Detection engineering reviews.
+From log fields, choose the operation and predicates that express the target behavior, then specify schedule, trigger, and outputs. From Sigma, map `logsource` to the appropriate table/event and preserve the meaning of selections and condition. Translation is more than renaming fields.
 
----
+Choose comparison operators according to the question. In KQL, `contains` is a substring operation, `has` is term-based, and `=~` is case-insensitive equality. A literal asterisk inside `contains` is not a general wildcard. Other SIEM languages have different wildcard and regex rules. Use regex when its additional pattern control is needed and describe the intended matches.
 
-## 2. Knowledge Check
+For example, broadening the parent predicate to `InitiatingProcessFileName in~ ("wscript.exe", "cscript.exe")` includes either Script Host program while retaining the other conditions. Submit the proposal with a matching and nonmatching example for review.
 
-1. A SIEM table with no filter is a detection. True or false?
-2. The given rule above — what does it detect, in one sentence?
-3. When do you use a wildcard instead of a regex?
+## Knowledge Check
 
----
+1. How do lookback and run frequency differ?
+2. Describe the example’s matching logic and trigger.
+3. Create a modified proposal that permits both Script Host parents. What besides the predicate should it specify?
 
-## 3. Summary
+## Summary
 
-A SIEM rule is named logic on a table, in a window, with outputs. Build it from fields you know, or translate SIGMA. You propose. You do not deploy.
+A SIEM detection proposal connects clear logic to a source, schedule, trigger, and useful output. Preserve matching semantics when translating Sigma and review timing and alert behavior before deployment.
 
-**Next:** **1.4.1** Alert context and investigation.
+## Course Connections
 
----
+Previous: [1.3.3 – YARA Rules](../03-yara-rules/student-guide.md)
 
-## 4. Related modules
+Next: [1.4.1 – Alert Context and Investigation](../../04-alerts/01-context-investigation/student-guide.md)
 
-- 1.3.1 – SIGMA rules
-- 1.3.3 – YARA rules
-- 1.1.2 – Process activity
-- 1.4.1 – Alert context and investigation
-- 4.x – How detections run as a service
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)
+- [Microsoft — Custom detection rules](https://learn.microsoft.com/en-us/defender-xdr/custom-detection-rules)
+- [Sigma — Rule basics](https://sigmahq.io/docs/basics/rules.html)

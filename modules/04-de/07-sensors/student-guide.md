@@ -1,4 +1,4 @@
-# Module 4.7 – Sensor availability and performance
+# Module 4.7 – Sensor and Data Availability for Detection
 
 **Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
@@ -6,66 +6,124 @@
 - SOC: 4.7 A / A / A ; 4.7.1 1a / 1a / 1a ; 4.7.2 1a / 1a / 1a  
 - Hunter: 4.7 A / A / A ; 4.7.1 1a / 1a / 1a ; 4.7.2 1a / 1a / 1a  
 - CTI: 4.7 A / A / A ; 4.7.1 1a / 1a / 1a ; 4.7.2 1a / 1a / 1a  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
-By the end of this module, you will be able to:
-
-1. Say that DE sometimes checks whether **sensors** are up and seeing the right place — and that this is **not** a vendor-admin course.
-2. Given “the rule never fired,” say whether you would check the **rule**, the **sensor**, or **both**, and reject treating a down sensor as proof the activity did not happen.
+1. Given “the detection never fired,” distinguish a **logic problem**, a **data-path problem**, a **coverage problem**, or a combination.
+2. Explain why absent or unhealthy telemetry limits the conclusion you can draw from a silent detection.
 
 **Mapped Proficiency Items:**
 - K: 4.7 – Sensor availability and performance
-- T: 4.7.1 – Given “the rule never fired,” check the rule, the sensor, or both
-- T: 4.7.2 – Reject treating a down sensor as proof the activity did not happen
-
----
+- T: 4.7.1 – Given “the rule never fired,” check the rule, the sensor/data path, or both
+- T: 4.7.2 – Reject treating missing telemetry as proof the activity did not happen
 
 ## 1. Key Concepts
 
-Detections only fire on what a **sensor** actually saw. When a rule never fires, Detection Engineering sometimes has to ask whether that sensor was **up** and looking at the **right place**. A silent rule is not always a broken rule. A **dead** or **blind** sensor is not proof the activity did not happen. That is the job in this lesson: check the **rule**, the **sensor**, or **both**. This is **not** how to administer those tools, and it is **not** an architecture course.
+A detection can only evaluate evidence that reaches it in the expected form.
 
-A **sensor** here is a collector that records host or network activity for detections. **Sometimes** DE watches whether those collectors are up and seeing the right place. Examples: **MDE**, **Zeek**, **IDS**. “Up and seeing the right place” means the collector is working and looking at the host or path the rule needs. You are not the vendor admin. This lesson does not place sensors, size them, or log into the box.
+When a rule is silent, the problem may be:
+- the target behavior did not occur;
+- the analytic logic missed it;
+- the required data was not collected;
+- data was collected but not transported;
+- parsing/normalization changed;
+- required fields were empty;
+- the analytic did not cover the relevant host/user/network population;
+- data arrived too late for the analytic's time logic.
 
-| Word | What it means here |
-|------|--------------------|
-| **Dead** | The sensor is down or not sending. |
-| **Blind** | The sensor is up, but it is not looking at that host or path. |
+That is why **“no alert” is not enough to explain what happened.**
 
-A **dead** or **blind** sensor is **not** “no threat.” The activity may still have happened. You just could not see it.
+### Think in a data path
 
-**What good looks like:**
+A practical DE check moves through:
 
-- Given: “the rule never fired,” and the sensor was up and seeing that host. Check the **rule**.
-- Given: “the rule never fired,” and the sensor was down or not seeing that place. Check the **sensor**, or **both**.
-- Given: the sensor was down all week, so “nothing happened.” **Reject.** A down sensor is not proof the activity did not happen.
+1. **Source / sensor** – was the underlying event recorded?
+2. **Transport / ingestion** – did the event reach the platform?
+3. **Parsing / normalization** – are the expected fields present and mapped?
+4. **Coverage** – was the relevant host/user/network path actually monitored?
+5. **Timeliness** – did the data arrive within the analytic window?
+6. **Logic** – would the rule match the resulting event?
 
-Do not log into the vendor box. Do not size a sensor. Do not invent a ticket or a site architecture.
+This is a troubleshooting model, not a requirement that DE administer every platform in the chain.
 
----
+### “Dead” and “blind” are useful shorthand but incomplete
+
+A sensor may be:
+- **down** – no data;
+- **blind to the target population** – it is healthy but does not cover the needed host/path;
+- **degraded** – data arrives partially or late;
+- **semantically broken** – events arrive but required fields/parsing changed.
+
+The last two cases matter because a dashboard can say “sensor healthy” while the analytic still cannot operate correctly.
+
+### Current ATT&CK terminology
+
+MITRE ATT&CK changed its defensive model in **ATT&CK v18 (October 2025)**: the old **Data Sources** objects were deprecated, and ATT&CK now emphasizes **Detection Strategies** and platform-specific **Analytics** with explicit log-source information.
+
+References:
+- [MITRE ATT&CK – Analytics](https://attack.mitre.org/analytics/)
+- [MITRE ATT&CK – Data Sources deprecation notice](https://attack.mitre.org/datasources/)
+
+This course still uses the ordinary phrase **data source** in the generic engineering sense: the telemetry/log evidence a detection needs. Do not confuse that everyday phrase with ATT&CK's deprecated Data Source object type.
+
+### External rule requirements are data assumptions
+
+Sigma log sources similarly express what type of logs an analytic expects. A mismatch can make a valid rule ineffective. See [Sigma Logsources](https://sigmahq.io/docs/basics/log-sources.html).
+
+The engineering skill is to connect:
+
+> detection logic → required fields → required telemetry → covered population
+
+### A12 example
+
+Suppose the encoded-PowerShell analytic does not fire during a safe replay.
+
+Check:
+
+- Was process creation captured on the test host?
+- Does the event include the expected command-line field?
+- Did the pipeline parse that field under the name the rule expects?
+- Did the event arrive in time?
+- Does the analytic include that host population?
+- Does the condition match the replayed command?
+
+If process events never arrived, you have a **visibility/data-path problem**.
+
+If the event is present with the required fields but the condition misses it, you have a **logic problem**.
+
+If both are wrong, fix both.
+
+### Missing telemetry narrows the conclusion
+
+If the endpoint sensor was absent for the relevant period, you can say:
+
+> We lack the endpoint telemetry required to determine whether this analytic would have matched the activity on that host.
+
+You cannot say:
+
+> The activity did not happen.
+
+That distinction protects later investigation and coverage reporting.
 
 ## 2. Knowledge Check
 
-1. A down sensor means the activity did not happen. True or false?
-2. Someone says “the rule never fired.” What two things might you check?
-3. Name three kinds of sensor this lesson uses as examples.
-
----
+1. Name three places in the data path that can break a detection even when the rule logic is correct.
+2. What is the difference between a healthy sensor and usable detection data?
+3. ATT&CK deprecated its old Data Sources objects. Does that mean detection engineers no longer need to understand the telemetry their analytics depend on?
 
 ## 3. Summary
 
-Sometimes DE checks whether sensors are up and seeing the right place. A dead sensor is not “no threat.” Check the rule, the sensor, or both. This is not vendor admin.
+A silent detection can be a **behavior, logic, data, coverage, parsing, or timing** problem.
 
-**Next:** **4.8** Site-specific DE knowledge.
+Trace the data path before concluding the rule failed—or that the activity never occurred.
 
----
+Detection Engineering needs to understand telemetry dependencies even when another team administers the sensors and pipelines.
 
-## 4. Related modules
+**Next:** **4.8 – Site-Specific Detection Engineering Knowledge**.
 
-- 4.6 – Detection lifecycle
-- 4.8 – Site-specific DE knowledge
-- 1.2 – Zeek (how those logs work)
-- 1.1 – Endpoint logs (MDE as a source)
+## Supporting References
+
+- [MITRE ATT&CK – Analytics](https://attack.mitre.org/analytics/)
+- [MITRE ATT&CK – Data Sources deprecation notice](https://attack.mitre.org/datasources/)
+- [Sigma Logsources](https://sigmahq.io/docs/basics/log-sources.html)

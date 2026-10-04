@@ -3,112 +3,132 @@
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 8
+**Total Suggested Slides:** 9
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.1.4 – Intelligence Requirements  
-**Subtitle:** The question the work exists to answer  
+**Subtitle:** Define the question before you collect  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-This lesson is the question the work exists to answer. It is not a shop PIR list you invent, and it is not the later test of whether a product can be used.
+Frame requirements as the mechanism that gives collection and analysis a purpose, not as administrative paperwork.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+### Slide 2 – Why requirements matter
+**Title:** A clear question keeps the work focused
 
-CTI analysts write the **question** the work exists to answer.
+Without a requirement, analysts can collect everything interesting and still not know when the stakeholder's need has been answered.
 
-Without it, collection becomes everything interesting.
-
-This lesson is that question. Not a shop PIR list you invent.
+A requirement tells the team:
+- **what needs to be known**;
+- **why the answer matters**; and
+- **what scope the work should cover**.
 
 **Speaker Notes:**  
-This slide is the student intro. Name the requirement before anyone scores a product or picks a source class. Do not teach the local PIR card today.
+Connect the requirement to a stopping condition and a reason for each collection step.
 
 ---
 
-### Slide 3 – Purpose of intelligence requirements
-**Title:** Purpose of intelligence requirements
+### Slide 3 – What makes a useful requirement
+**Title:** Question, decision need, scope
 
-An intelligence requirement focuses collection and analysis on a **decision**.
+**Question** — what needs to be known?  
+**Decision or need** — what will the stakeholder do with the answer?  
+**Scope** — what subject, environment, and time window matter?
 
-A clear requirement names the **question**, **whose decision**, and **what you will not chase**.
+The requirement should guide collection without predetermining the answer.
 
 **Speaker Notes:**  
-Purpose first. Types and the A12 translate come next. If they start listing sources, that is a later lesson.
+Do not turn this into a mandatory template. The goal is clarity and direction.
 
 ---
 
-### Slide 4 – Types of requirements
-**Title:** A PIR is ranked
+### Slide 4 – PIR means priority
+**Title:** Priority is one characteristic of a requirement
 
-A **Priority Intelligence Requirement (PIR)** is a requirement leadership or the program ranked.
+A **Priority Intelligence Requirement (PIR)** is a requirement leadership or the program has identified as especially important.
 
-**Standing** and **ad-hoc** requirements are still requirements.  
-They are not all PIRs.
+A **standing** requirement remains active over time.  
+An **ad-hoc** requirement addresses a one-time or event-driven need.
 
-If your shop publishes PIR IDs, use those. Do not invent a list.
+These labels can overlap. A standing requirement can also be a PIR.
 
 **Speaker Notes:**  
-PIR is a type, not a synonym for every requirement. Standing stays until leadership takes it off. Ad-hoc is one-time, often from an RFI. Do not overlay a made-up DYA list.
+Correct the common misconception that PIR, standing, and ad-hoc are mutually exclusive categories.
 
 ---
 
-### Slide 5 – How a requirement drives work
-**Title:** What you collect, analyze, and skip
+### Slide 5 – Refine the stakeholder's question
+**Title:** “Are we seeing them?” is a starting point
 
-The requirement names what you **collect** and what you **analyze**.
-
-It also names what you will **not** chase on this question.
-
-The sibling domain is later enrichment, not this requirement.
+Before collecting, clarify:
+- Who or what is **“them”**?
+- What activity counts as **“seeing”** them?
+- In what environment?
+- During what time window?
 
 **Speaker Notes:**  
-This is outline “drives collection and analysis.” The next slide is the A12 given. Do not open OSINT versus commercial here.
+Have learners name the ambiguities before showing the A12 refinement.
 
 ---
 
-### Slide 6 – Translate the slogan
-**Title:** Translate the slogan
+### Slide 6 – A12 requirement
+**Title:** Turn the ask into something analysts can work
 
-Slogan: “Are we seeing them?”
+**Stakeholder ask:** “Are we seeing them?”
 
-**A12** — `wscript` launched encoded PowerShell on **WS-JLEE**. An update domain is in the traffic.
+**Refined requirement:**  
+**What role did the update domain play in the activity on WS-JLEE during A12?**
 
-Refine: “Is the update domain the payload host for **A12** in this window?”
-
-Collect the A record and the file you have.  
-**Not** the sibling domain on this requirement.
+A narrower follow-on could ask whether the domain delivered `/update.exe` during the A12 window.
 
 **Speaker Notes:**  
-Show this given before the knowledge check. The product is the refined question plus what you skip. Do not invent PIR-01. Do not tell the rest of the incident.
+Explain that the appropriate specificity depends on the decision the stakeholder actually needs to make.
 
 ---
 
-### Slide 7 – Knowledge Check
+### Slide 7 – The requirement directs the evidence
+**Title:** What helps answer this question?
+
+Potentially relevant evidence:
+- HTTP and DNS activity;
+- host or file evidence;
+- incident notes and process context.
+
+A sibling domain may be worth recording, but it can be deferred if it does not help answer the current requirement.
+
+**Speaker Notes:**  
+Teach scope control as prioritization, not as discarding unexpected evidence.
+
+---
+
+### Slide 8 – Knowledge Check
 **Title:** Knowledge Check
 
-1. Every intelligence requirement is a PIR. True or false?  
-2. What does a PIR add that a standing or ad-hoc requirement may not have?  
-3. “Are we seeing them?” Translate it for **A12**, and name one thing **not** to chase.
+1. Every intelligence requirement is a PIR. True or false? What makes a PIR different?  
+2. “Are we seeing them?” What two things would you clarify before collecting?  
+3. Write a clearer A12 requirement and name one piece of evidence that would help answer it and one pivot that could reasonably wait.
 
 **Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+Use the instructor answer key. Accept equivalent requirements when the learner can explain how they direct the work.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+### Slide 9 – Summary
+**Title:** The requirement gives analysis direction
 
-A requirement is the question.  
-A PIR is ranked.  
-It names what you collect, analyze, and skip.
+A clear requirement identifies the **question**, the **need**, and the **scope**.
 
-**Next:** **2.1.5** Ensuring intelligence is actionable
+A PIR is distinguished by **priority**.  
+Standing and ad-hoc describe persistence or trigger and can overlap with priority.
+
+The requirement helps analysts decide what evidence matters now and what can wait.
+
 
 **Speaker Notes:**  
-2.1.5 is whether the product can be used. Stay off that test unless that lesson is scheduled.
+Transition from defining the question to judging whether the resulting product is usable.
+
+**Next:** [2.1.5 – RFI Intake and Prioritization](../05-rfi-intake/student-guide.md).

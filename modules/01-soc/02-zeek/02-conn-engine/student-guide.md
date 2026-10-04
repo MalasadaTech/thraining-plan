@@ -5,72 +5,78 @@
 - SOC: 1.2.2.1 A / B / C ; 1.2.2.2 2b / 3c / 4c ; 1.2.2.3 2b / 3c / 4c  
 - Hunter: 1.2.2.1 B / C / C ; 1.2.2.2 3c / 4c / 4c ; 1.2.2.3 3c / 4c / 4c  
 - CTI: 1.2.2.1 A / A / B ; 1.2.2.2 1a / 1a / 2b ; 1.2.2.3 1a / 1a / 2b  
-**Estimated Time:** 25–30 minutes  
-
----
+**Estimated Time:** 25–30 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek `conn` event: originator and responder IP and port, and how the connection ended.
-2. Describe what a `conn` log shows, and say what a **specific** SIEM query looks like.
+1. Interpret connection endpoints, state, history, and identifiers.
+2. Describe a connection using the supplied evidence.
+3. Create or modify a query for specific connection activity.
 
 **Mapped Proficiency Items:**
 - K: 1.2.2.1 – Conn engine
 - T: 1.2.2.2 – Analyze a Zeek conn log and accurately describe what occurred
 - T: 1.2.2.3 – Create a SIEM query to detect specific connection activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+A connection record gives you a network-level starting point: the endpoints, transport, and progress Zeek observed. That description helps you select the related protocol records without assigning a purpose to the traffic too early.
 
-SOC analysts read the Zeek **`conn`** log to see who talked to whom on the **wire**, and how the connection ended. That is daily alert work: an alert names an IP or a connection, and you have to say which address started the talk, which address was contacted, on which ports, and whether the attempt completed, sat unanswered, or was refused. **1.2.1** taught that Zeek engines extract protocol data from the wire. This lesson is the **`conn`** extract. It does **not** name the initiating process. That is host-network telemetry (**1.1.4**).
+## 1. Reading connection fields
 
-The **`conn`** log is one **event** per connection Zeek saw. In a SIEM, that event usually shows up as a **row** in a table. Later lessons may still say “row.” Here it means the same thing as the log.
+| Field | Meaning |
+|---|---|
+| `uid` | Connection identifier used to relate records from the same Zeek observation context. |
+| `id.orig_h`, `id.orig_p` | Originator address and port from the sensor's view. |
+| `id.resp_h`, `id.resp_p` | Responder address and port. |
+| `proto`, `service` | Transport and identified application service when available. Port alone does not establish service. |
+| `conn_state` | A summary of observed connection progress. Interpret it for the protocol. |
+| `history` | Encoded observations; case distinguishes the originator and responder sides. |
 
-| Idea | What to read |
-|------|----------------|
-| **Source IP** | `id.orig_h` — **originator** IP. Who started the talk from Zeek’s view. Not automatically an internal host. |
-| **Source port** | `id.orig_p` — originator port |
-| **Destination IP** | `id.resp_h` — **responder** IP. Who was contacted. |
-| **Destination port** | `id.resp_p` — responder port |
-| **Connection state / history** | `conn_state` / `history`. How it ended, and a short flag string of what was seen (`S` SYN, `H` SYN-ACK, `F` FIN, `R` RST) |
+For the TCP examples, `SF` indicates normal establishment and termination; `S0` indicates an attempt with no reply observed; `REJ` indicates rejection. In history, letters such as S, H, F, and R concern SYN, SYN-ACK, FIN, and reset observations, with lowercase representing the responder. An originator can be external to your network. Partial capture can limit what the state tells you.
 
-**States you will use:** **`SF`** = established and torn down cleanly. **`S0`** = attempt, no reply. **`REJ`** = attempt refused. If you see another state, say what the field shows. Do not invent a story the flags do not support.
+## 2. Working through the example
 
-`id.orig_h` is the originator, not the destination. Originator is not a synonym for “our network.” Zeek labels the side that started the talk, wherever that address lives.
+The supplied record shows originator `192.0.2.10:51000`, responder `203.0.113.88:443`, `proto=tcp`, `conn_state=SF`, and `uid=CTrain1`.
 
-This is the **extract**. PCAP still verifies or expands (**1.2.1**). Do not open DNS or TLS fields yet.
+Describe it as: “Zeek observed a TCP connection from `192.0.2.10:51000` to `203.0.113.88:443` with normal establishment and termination.” The addresses, ports, protocol, and state support that description. Look for `CTrain1` in relevant protocol logs to learn more. The record alone does not identify a process, establish HTTPS, or prove a malicious purpose.
 
-**What good looks like:**
+## 3. Creating a focused connection query
 
-- Describe: one sentence — originator IP/port → responder IP/port, state. Do not name a process. Do not call it C2 from port 443 alone.
-- Given: `id.orig_h` a workstation, `id.resp_h` `203.0.113.88`, `id.resp_p` `443`, `conn_state` `SF`. **What occurred:** that host completed a TCP connection to `203.0.113.88:443`. Who launched the socket is on the **host** (**1.1.4**).
-- Query: names a **specific** pattern (responder IP or port + state), not every connection.
+This KQL teaching example assumes an ingested table named `ZeekConn`, a datetime `TimeGenerated` column, and columns retaining the Zeek field names shown below. These are classroom table names, not built-in Zeek or SIEM tables. Map names and data types to your ingestion schema before use.
 
-DNS fields are the next Zeek lesson (**1.2.3**).
+```kusto
+ZeekConn
+| where TimeGenerated > ago(1d)
+| where ['id.resp_h'] == "203.0.113.88"
+| where ['id.resp_p'] == 443 and proto == "tcp"
+| where conn_state == "SF"
+| project TimeGenerated, uid, ['id.orig_h'], ['id.orig_p'],
+          ['id.resp_h'], ['id.resp_p'], conn_state, history
+```
 
----
+The query selects the specified responder, port, transport, and state. Change the state to `S0` to investigate attempts for which the sensor observed no response; the results would not establish why a response was absent.
 
-## 2. Knowledge Check
+## Knowledge Check
 
-1. `id.orig_h` is the destination IP. True or false?
-2. Workstation → `203.0.113.88:443`, `conn_state` `SF`. In one sentence, what occurred?
-3. A SIEM query that matches every connection is a good “specific connection activity” query. True or false?
+1. How do originator and responder differ from internal and external?
+2. Describe the supplied record and name the pivot identifier.
+3. Modify the query for unanswered attempts and explain the limit.
 
----
+## Summary
 
-## 3. Summary
+A connection finding describes the endpoints, transport, and observed progress. Use the connection identifier to seek related records and keep explanations of purpose or failure tied to additional evidence.
 
-A `conn` event is who talked to whom, on which ports, and how it ended. State and history are on the wire. The process is not. A query names a specific pattern.
+## Course Connections
 
-**Next:** **1.2.3** DNS engine.
+Previous: [1.2.1 – Zeek Concepts](../01-concepts/student-guide.md)
 
----
+Next: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)
 
-## 4. Related modules
+[1.x module index](../../README.md)
 
-- 1.2.1 – Zeek concepts
-- 1.2.3 – DNS engine
-- 1.1.4 – Host-observed network
+## References and Further Reading
+
+- [Zeek — conn.log](https://docs.zeek.org/en/current/reference/logs/conn.html)

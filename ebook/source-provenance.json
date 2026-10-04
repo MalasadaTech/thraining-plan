@@ -1,0 +1,3138 @@
+{
+  "build_date": "2026-10-03",
+  "source_snapshot_date": "2026-10-02",
+  "chapters": [
+    {
+      "order": 1,
+      "part": "I",
+      "number": "0.1",
+      "title": "How this course is laid out",
+      "source_path": "/thraining-plan/modules/00-intro/01-course-layout/student-guide.md",
+      "library_file_id": "libfile_e32afce0a6bc81919f76919665995af7",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:03.501409Z",
+      "sha256": "33f38afc2428382b37c7bd0f5aff0865c407111d69dba725f318050affb5dfb6",
+      "anchor": "01--how-this-course-is-laid-out",
+      "assets": [],
+      "references": [],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 2,
+      "part": "I",
+      "number": "0.2",
+      "title": "What a SOC is",
+      "source_path": "/thraining-plan/modules/00-intro/02-what-a-soc-is/student-guide.md",
+      "library_file_id": "libfile_2e8cf5c0e8188191b39370bc5c568dda",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:03.444498Z",
+      "sha256": "eb92add82009cc80e0d13fa2451606be9eb41aabad1905d16276cbce45d35613",
+      "anchor": "02--what-a-soc-is",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [
+        "Dixon, Yamada",
+        "Pink River Dolphin"
+      ],
+      "a12_sections": [
+        "3. The setting used in this course"
+      ],
+      "notes": []
+    },
+    {
+      "order": 3,
+      "part": "I",
+      "number": "0.3",
+      "title": "Jobs in one sentence",
+      "source_path": "/thraining-plan/modules/00-intro/03-jobs-in-one-sentence/student-guide.md",
+      "library_file_id": "libfile_4c1961736bac81918777b878cf0c21a4",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:03.573472Z",
+      "sha256": "ab04bd4543d07f43c5a672087278be127d2c58e6124ca4f46572b38d4d1c4bb6",
+      "anchor": "03--jobs-in-one-sentence",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 4,
+      "part": "I",
+      "number": "0.4",
+      "title": "How work can move",
+      "source_path": "/thraining-plan/modules/00-intro/04-how-work-moves/student-guide.md",
+      "library_file_id": "libfile_9b1af1efb560819190fde9fc138f7c68",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:04.069502Z",
+      "sha256": "98abb259bc8a9f0353aa8b9b248604741534c5e3821bbce8a8a41ae851dcebb3",
+      "anchor": "04--how-work-can-move",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 5,
+      "part": "I",
+      "number": "0.5",
+      "title": "Where the jobs lightly overlap",
+      "source_path": "/thraining-plan/modules/00-intro/05-where-jobs-overlap/student-guide.md",
+      "library_file_id": "libfile_5d1f1160d37481919ae8aef8660298d9",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:03.552845Z",
+      "sha256": "6cd92b8e0230370d39b2886dafa7d1d728036147451155eef6d636abd18e39df",
+      "anchor": "05--where-the-jobs-lightly-overlap",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 6,
+      "part": "I",
+      "number": "0.6.1",
+      "title": "MITRE ATT&CK",
+      "source_path": "/thraining-plan/modules/00-intro/06-frameworks/01-attck/student-guide.md",
+      "library_file_id": "libfile_001714f747988191a3bd33f414c95749",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:10.877598Z",
+      "sha256": "6c293ce2e98ddfcee473d98a96b5f7ffc5e0e98793c50fbe5e0ab9a390ac276a",
+      "anchor": "061--mitre-attck",
+      "assets": [],
+      "references": [
+        {
+          "label": "Enterprise ATT&CK matrix",
+          "url": "https://attack.mitre.org/matrices/enterprise/"
+        },
+        {
+          "label": "MITRE ATT&CK — Enterprise matrix",
+          "url": "https://attack.mitre.org/matrices/enterprise/"
+        },
+        {
+          "label": "MITRE ATT&CK — PowerShell (T1059.001)",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 7,
+      "part": "I",
+      "number": "0.6.2",
+      "title": "Diamond Model",
+      "source_path": "/thraining-plan/modules/00-intro/06-frameworks/02-diamond-model/student-guide.md",
+      "library_file_id": "libfile_feccb31308148191be78e4cab1d2c747",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:10.822489Z",
+      "sha256": "8d1724bffbab62d8232ce84d55ad81df84ada21857c325731bb0d465ec02585d",
+      "anchor": "062--diamond-model",
+      "assets": [],
+      "references": [
+        {
+          "label": "Sergio Caltagirone — The Diamond Model",
+          "url": "https://www.activeresponse.org/the-diamond-model/"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 8,
+      "part": "I",
+      "number": "0.6.3",
+      "title": "Cyber Kill Chain",
+      "source_path": "/thraining-plan/modules/00-intro/06-frameworks/03-cyber-kill-chain/student-guide.md",
+      "library_file_id": "libfile_e391f0d8ca948191bba20fcb80be49a6",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:10.745641Z",
+      "sha256": "2e92ff17ec6736a242036e8c36f00f0342cfd921d7407ad7d1c4b67cbc03cfa1",
+      "anchor": "063--cyber-kill-chain",
+      "assets": [],
+      "references": [
+        {
+          "label": "Lockheed Martin — Cyber Kill Chain",
+          "url": "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 9,
+      "part": "I",
+      "number": "0.7",
+      "title": "External tools",
+      "source_path": "/thraining-plan/modules/00-intro/07-tool-survey/01-external-tools/student-guide.md",
+      "library_file_id": "libfile_5673b8b92d848191a480494efd4311bf",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:10.799049Z",
+      "sha256": "8d448794a14ebb4ce65b4d27cd6aa982ab1c16217d823d73c6f17dab390a20d7",
+      "anchor": "07--external-tools",
+      "assets": [],
+      "references": [
+        {
+          "label": "VirusTotal — Searching",
+          "url": "https://docs.virustotal.com/docs/searching"
+        },
+        {
+          "label": "VirusTotal — Private scanning",
+          "url": "https://docs.virustotal.com/docs/private-scanning"
+        },
+        {
+          "label": "ANY.RUN — Features",
+          "url": "https://any.run/features/"
+        },
+        {
+          "label": "Silent Push — Passive DNS lookups",
+          "url": "https://help.silentpush.com/docs/perform-passive-dns-scans-and-record-specific-lookups"
+        },
+        {
+          "label": "urlscan.io — FAQ",
+          "url": "https://urlscan.io/docs/faq/"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 10,
+      "part": "I",
+      "number": "0.8",
+      "title": "Environment / signal flow",
+      "source_path": "/thraining-plan/modules/00-intro/08-environment/01-orientation/student-guide.md",
+      "library_file_id": "libfile_f6c9e2c547908191a3eef9f33520c1a0",
+      "version_id": "1",
+      "modified_at": "2026-10-02T06:32:10.788653Z",
+      "sha256": "e4fdeea34972d2eb1f12efdfff121cadcecd19663ca57b509971ce957202e44e",
+      "anchor": "08--environment--signal-flow",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 11,
+      "part": "I",
+      "number": "0.9",
+      "title": "Shared Foundations Section Summary",
+      "source_path": "/thraining-plan/modules/00-intro/09-summary/student-guide.md",
+      "library_file_id": "libfile_ba57752f7f8081919c1b19e9bbc0b453",
+      "version_id": null,
+      "modified_at": "2026-10-02T17:34:27.624712Z",
+      "sha256": "6b3789352e761ea7b8f463a52a86c30fbdd26f463c019989679ad068da907be0",
+      "anchor": "09--shared-foundations-section-summary",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "3. One A12 Story Across the Shared Foundations",
+        "Detection Engineering",
+        "10. Integrated Review Exercise"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 12,
+      "part": "II",
+      "number": "1.0",
+      "title": "SOC Analyst Fundamentals: How the 1.x Block Fits Together",
+      "source_path": "/thraining-plan/modules/01-soc/00-intro/student-guide.md",
+      "library_file_id": "libfile_8f88a96937008191865a0079bee56179",
+      "version_id": null,
+      "modified_at": "2026-10-02T16:03:39.257406Z",
+      "sha256": "bf0823819c31e95b6fdf51ac360f8ec494fe98b275abf127b504cd5fd32197da",
+      "anchor": "10--soc-analyst-fundamentals-how-the-1x-block-fits-together",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "4. One Activity, Several Views"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 13,
+      "part": "II",
+      "number": "1.1.1",
+      "title": "Endpoint activity (the map)",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/01-endpoint-activity/student-guide.md",
+      "library_file_id": "libfile_1d569c6ded2081919d1039478ab18c23",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:30.452147Z",
+      "sha256": "b27e5c92a084c479e0df7313cdf5f2bd1ed47438f4a1ef7d372dbffbf358945e",
+      "anchor": "111--endpoint-activity-the-map",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Sysmon events",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon"
+        },
+        {
+          "label": "Microsoft — Advanced hunting schema",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 14,
+      "part": "II",
+      "number": "1.1.2",
+      "title": "Process Activity",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/02-process-activity/student-guide.md",
+      "library_file_id": "libfile_d4b94d40b81081918e3b83cebbb1fea4",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:30.737838Z",
+      "sha256": "a5d25b85c4ab9675ab0d5db5c680355bb4e5e0a95de983042661a469238cd9a3",
+      "anchor": "112--process-activity",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Sysmon events",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon"
+        },
+        {
+          "label": "Microsoft — DeviceProcessEvents",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table"
+        },
+        {
+          "label": "Microsoft — KQL string operators",
+          "url": "https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators"
+        }
+      ],
+      "a12_terms": [
+        "jlee"
+      ],
+      "a12_sections": [
+        "2. Working through the example"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 15,
+      "part": "II",
+      "number": "1.1.3",
+      "title": "File System Activity",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/03-file-system-activity/student-guide.md",
+      "library_file_id": "libfile_068c45fdb8c48191b271ac9006efa5a5",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:30.723325Z",
+      "sha256": "f4cbee3b8df519491c72c43d120a252f41e3bfada8e0237d5673b54326e4a3bc",
+      "anchor": "113--file-system-activity",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Sysmon events",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon"
+        },
+        {
+          "label": "Microsoft — DeviceFileEvents",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicefileevents-table"
+        },
+        {
+          "label": "Microsoft — KQL string operators",
+          "url": "https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators"
+        }
+      ],
+      "a12_terms": [
+        "jlee",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "2. Working through the example"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 16,
+      "part": "II",
+      "number": "1.1.4",
+      "title": "Network Activity (Endpoint)",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/04-network-activity/student-guide.md",
+      "library_file_id": "libfile_02b512848b648191be7c565dba446a82",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:30.604879Z",
+      "sha256": "e98969156ab9033608f27cc630ed634e2154a84aace14f992e9724408f146c03",
+      "anchor": "114--network-activity-endpoint",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Sysmon events",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon"
+        },
+        {
+          "label": "Microsoft — DeviceNetworkEvents",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table"
+        },
+        {
+          "label": "Microsoft — KQL string operators",
+          "url": "https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "2. Working through the example",
+        "3. Creating a focused network query"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 17,
+      "part": "II",
+      "number": "1.1.5",
+      "title": "Registry Activity",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/05-registry-activity/student-guide.md",
+      "library_file_id": "libfile_f12072328e1881919ed2469910114ec2",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:30.428027Z",
+      "sha256": "74dd59dd32e807b8c63e50c4b9c678037079c5beef6f5a6df79153df1ce51918",
+      "anchor": "115--registry-activity",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Sysmon events",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon"
+        },
+        {
+          "label": "Microsoft — DeviceRegistryEvents",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceregistryevents-table"
+        },
+        {
+          "label": "Microsoft — KQL string operators",
+          "url": "https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators"
+        }
+      ],
+      "a12_terms": [
+        "jlee",
+        "Updater"
+      ],
+      "a12_sections": [
+        "2. Working through the example",
+        "3. Creating a focused registry query",
+        "Knowledge Check"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 18,
+      "part": "II",
+      "number": "1.1.6",
+      "title": "Image and Driver Load Activity",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/06-image-driver-load/student-guide.md",
+      "library_file_id": "libfile_75fed03019e88191be074868f9e9b500",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:39.423867Z",
+      "sha256": "f14162372c3104b55ede143d6e0b6e75a952246d0ce9da2231610680327c9eac",
+      "anchor": "116--image-and-driver-load-activity",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Sysmon events",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon"
+        },
+        {
+          "label": "Microsoft — DeviceImageLoadEvents",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceimageloadevents-table"
+        },
+        {
+          "label": "Microsoft — KQL string operators",
+          "url": "https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators"
+        }
+      ],
+      "a12_terms": [
+        "jlee"
+      ],
+      "a12_sections": [
+        "2. Working through the example"
+      ],
+      "notes": [
+        "2 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 19,
+      "part": "II",
+      "number": "1.2.1",
+      "title": "Zeek Concepts",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/01-concepts/student-guide.md",
+      "library_file_id": "libfile_b1e02722a4948191bfa04492421f2cc3",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:39.413414Z",
+      "sha256": "7a709fef0050e057b92f44672b0a40617810bb6f0ba9cbbf47c2f7bf9dceb6ed",
+      "anchor": "121--zeek-concepts",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — Log files",
+          "url": "https://docs.zeek.org/en/master/reference/zeekscript/log-files.html"
+        },
+        {
+          "label": "Zeek — conn.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/conn.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 20,
+      "part": "II",
+      "number": "1.2.2",
+      "title": "Conn Engine",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/02-conn-engine/student-guide.md",
+      "library_file_id": "libfile_2d7200aa91408191aa7116460689431a",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:39.471961Z",
+      "sha256": "ddb1ee39b6dab52013359a3c414a3154ba053f8d326f0cbf899142beaf001f7a",
+      "anchor": "122--conn-engine",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — conn.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/conn.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "2. Working through the example",
+        "3. Creating a focused connection query"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 21,
+      "part": "II",
+      "number": "1.2.3",
+      "title": "DNS Engine",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/03-dns-engine/student-guide.md",
+      "library_file_id": "libfile_e7cfaa71d3dc8191bce7f4dbc046d450",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:40.876571Z",
+      "sha256": "615ea0ff60f1a5f31d6caf54c59970cb8ece876ddb3c8cb4103bf8903011eb9f",
+      "anchor": "123--dns-engine",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — dns.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/dns.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "2. Working through the example"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 22,
+      "part": "II",
+      "number": "1.2.4",
+      "title": "TLS Engine",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/04-tls-engine/student-guide.md",
+      "library_file_id": "libfile_b44803450ee08191ab4878bb051fbb5f",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:39.406069Z",
+      "sha256": "286587acf4a7f7c3813931ed5ff481e8090d6c09fe055766b54143bdf61c192d",
+      "anchor": "124--tls-engine",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — ssl.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/ssl.html"
+        },
+        {
+          "label": "Zeek — x509.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/x509.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "2. Working through the example",
+        "3. Creating a focused TLS query"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 23,
+      "part": "II",
+      "number": "1.2.5",
+      "title": "HTTP Engine",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/05-http-engine/student-guide.md",
+      "library_file_id": "libfile_71c192f313a48191bdfd26f7189fa752",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:46.126901Z",
+      "sha256": "f819b7c3552eb7199efbde6e3b0ed1a204e0d6a589dc06103dad177109c80590",
+      "anchor": "125--http-engine",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — http.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/http.html"
+        },
+        {
+          "label": "Microsoft — KQL string operators",
+          "url": "https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "2. Working through the example",
+        "3. Creating a focused HTTP query"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 24,
+      "part": "II",
+      "number": "1.2.6",
+      "title": "SMTP Engine",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/06-smtp-engine/student-guide.md",
+      "library_file_id": "libfile_4564b94069b4819191a8fad3cd5528e5",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:46.122858Z",
+      "sha256": "b0f3b43fdb1b9e7210b692643887546e9620f4210cc77ee46fc511fe83d6b9b3",
+      "anchor": "126--smtp-engine",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — smtp.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/smtp.html"
+        }
+      ],
+      "a12_terms": [
+        "jlee"
+      ],
+      "a12_sections": [
+        "2. Working through the example"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 25,
+      "part": "II",
+      "number": "1.2.7",
+      "title": "Files Engine",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/07-files-engine/student-guide.md",
+      "library_file_id": "libfile_20bdd779160881918fd3488dbb44aeca",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:46.202376Z",
+      "sha256": "17c000644a57b0923c3604c9857b79e0675f93c65dfbbc6bdd5584388c06277f",
+      "anchor": "127--files-engine",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — files.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/files.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "2. Working through the example",
+        "3. Creating a focused file-analysis query"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 26,
+      "part": "II",
+      "number": "1.2.8",
+      "title": "Weird Engine",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/08-weird-engine/student-guide.md",
+      "library_file_id": "libfile_2606156e3a2c8191b6af715e7e847dc8",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:46.151899Z",
+      "sha256": "a3c33e1fb6c8eb984ed6e863d0e008dc13a855652dcc69b82a273bf0685b9770",
+      "anchor": "128--weird-engine",
+      "assets": [],
+      "references": [
+        {
+          "label": "Zeek — weird.log and notice.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/weird-and-notice.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "2. Working through the example",
+        "3. Creating a focused weird query"
+      ],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 27,
+      "part": "II",
+      "number": "1.3.1",
+      "title": "SIGMA Rules",
+      "source_path": "/thraining-plan/modules/01-soc/03-detection/01-sigma-rules/student-guide.md",
+      "library_file_id": "libfile_bbf6fd04e0388191a3c75b84291723b9",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:46.210905Z",
+      "sha256": "c2b1d653bf67d0df8aee37357096dc4d0707b510139ef7d78540c6e475a24a72",
+      "anchor": "131--sigma-rules",
+      "assets": [],
+      "references": [
+        {
+          "label": "Sigma — Rule basics",
+          "url": "https://sigmahq.io/docs/basics/rules.html"
+        },
+        {
+          "label": "Sigma — Conditions",
+          "url": "https://sigmahq.io/docs/basics/conditions.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": [
+        "2 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 28,
+      "part": "II",
+      "number": "1.3.2",
+      "title": "Suricata Rules",
+      "source_path": "/thraining-plan/modules/01-soc/03-detection/02-suricata-rules/student-guide.md",
+      "library_file_id": "libfile_86755bc5bda081919f35848c567ffd88",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:55.059525Z",
+      "sha256": "d843b4e45cde2b1d0d724cef9909468149d0bb4864fed9ddda2457704e1c8b17",
+      "anchor": "132--suricata-rules",
+      "assets": [],
+      "references": [
+        {
+          "label": "Suricata — Rule format",
+          "url": "https://docs.suricata.io/en/latest/rules/intro.html"
+        },
+        {
+          "label": "Suricata — HTTP keywords",
+          "url": "https://docs.suricata.io/en/latest/rules/http-keywords.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 29,
+      "part": "II",
+      "number": "1.3.3",
+      "title": "YARA Rules",
+      "source_path": "/thraining-plan/modules/01-soc/03-detection/03-yara-rules/student-guide.md",
+      "library_file_id": "libfile_f49e2e917224819193af73b4e76dc798",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:56.403835Z",
+      "sha256": "44424659284298856758318e76eb333685d8e0aee6a7776bc7f8915defc84846",
+      "anchor": "133--yara-rules",
+      "assets": [],
+      "references": [
+        {
+          "label": "YARA — Writing rules",
+          "url": "https://yara.readthedocs.io/en/stable/writingrules.html"
+        },
+        {
+          "label": "YARA — Command-line input options",
+          "url": "https://yara.readthedocs.io/en/stable/commandline.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 30,
+      "part": "II",
+      "number": "1.3.4",
+      "title": "SIEM Rules",
+      "source_path": "/thraining-plan/modules/01-soc/03-detection/04-siem-rules/student-guide.md",
+      "library_file_id": "libfile_2802c5d7ec2081918ff727c5cbf660b6",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:55.009434Z",
+      "sha256": "6813faf5e8cd4dc141880e87ffe7fcf15817b015f675385a2a9c3dafa420556b",
+      "anchor": "134--siem-rules",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — KQL string operators",
+          "url": "https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators"
+        },
+        {
+          "label": "Microsoft — Custom detection rules",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/custom-detection-rules"
+        },
+        {
+          "label": "Sigma — Rule basics",
+          "url": "https://sigmahq.io/docs/basics/rules.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": [
+        "1 fenced code block(s), preserved exactly"
+      ]
+    },
+    {
+      "order": 31,
+      "part": "II",
+      "number": "1.4.1",
+      "title": "Alert Context and Investigation",
+      "source_path": "/thraining-plan/modules/01-soc/04-alerts/01-context-investigation/student-guide.md",
+      "library_file_id": "libfile_a11307f926fc8191848ed1c04fe6ac8f",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:56.221708Z",
+      "sha256": "e0e16605015485fe009b8521f12c0146757a2b1285dae2731894f9aac120c1de",
+      "anchor": "141--alert-context-and-investigation",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Investigate and classify alerts",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts"
+        },
+        {
+          "label": "VirusTotal — Searching",
+          "url": "https://docs.virustotal.com/docs/searching"
+        },
+        {
+          "label": "Zeek — http.log",
+          "url": "https://docs.zeek.org/en/current/reference/logs/http.html"
+        }
+      ],
+      "a12_terms": [
+        "invoice.vbs",
+        "jlee",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "1. Establishing context and detection lineage",
+        "2. Adding relevant evidence",
+        "3. Working through a reviewable finding"
+      ],
+      "notes": []
+    },
+    {
+      "order": 32,
+      "part": "II",
+      "number": "1.4.2",
+      "title": "Alert Classification",
+      "source_path": "/thraining-plan/modules/01-soc/04-alerts/02-classification/student-guide.md",
+      "library_file_id": "libfile_d5a491d850008191922afaf89ffbb848",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:26:56.262265Z",
+      "sha256": "4a9ba6090c3549accf06db8a88d519c52fa7eccd84cfb32a71fa7b32a3584db4",
+      "anchor": "142--alert-classification",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Investigate and classify alerts",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts"
+        },
+        {
+          "label": "Microsoft — Alert classification playbooks",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/alert-classification-playbooks"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 33,
+      "part": "II",
+      "number": "1.4.3",
+      "title": "Common False Positive Causes",
+      "source_path": "/thraining-plan/modules/01-soc/04-alerts/03-false-positive-causes/student-guide.md",
+      "library_file_id": "libfile_688a1d4a591c819192e05827e09f6ebd",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:27:04.001603Z",
+      "sha256": "08211c0392ac16f11c18d009244ad9778342cb874547817010d4363bbe9e786c",
+      "anchor": "143--common-false-positive-causes",
+      "assets": [],
+      "references": [
+        {
+          "label": "Microsoft — Investigate and classify alerts",
+          "url": "https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts"
+        },
+        {
+          "label": "Sigma — Rule basics",
+          "url": "https://sigmahq.io/docs/basics/rules.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 34,
+      "part": "II",
+      "number": "1.4.4",
+      "title": "Common Alert Categorizations",
+      "source_path": "/thraining-plan/modules/01-soc/04-alerts/04-categorizations/student-guide.md",
+      "library_file_id": "libfile_057ca58c73d88191ae41e7eff669c4fe",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:27:03.956333Z",
+      "sha256": "251357d69aff8fb4312137147ad09f2aa0ad2edb78bf09d3a7c07b2703b9d714",
+      "anchor": "144--common-alert-categorizations",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [
+        "jlee"
+      ],
+      "a12_sections": [
+        "2. Comparing similar cases",
+        "Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 35,
+      "part": "II",
+      "number": "1.4.5",
+      "title": "SLA / Response Time Goals",
+      "source_path": "/thraining-plan/modules/01-soc/04-alerts/05-sla-response-times/student-guide.md",
+      "library_file_id": "libfile_1566a443b1208191baa96c236c40af02",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:27:04.721645Z",
+      "sha256": "148a2019c2d210fe8fb40c5c4f209503b97ccd56570791b4200b3dba3adfcde2",
+      "anchor": "145--sla--response-time-goals",
+      "assets": [],
+      "references": [
+        {
+          "label": "NIST SP 800-61 Rev. 3 — Incident response recommendations",
+          "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 36,
+      "part": "II",
+      "number": "1.5.1",
+      "title": "Report Types",
+      "source_path": "/thraining-plan/modules/01-soc/05-reporting/01-report-types/student-guide.md",
+      "library_file_id": "libfile_b0f7dbd166488191ad6f94cc81d8cf55",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:27:04.231528Z",
+      "sha256": "8dfe9f0efbe42978eac3c5e33beafd49c60d85dc2be1d9d7973e3223364197d3",
+      "anchor": "151--report-types",
+      "assets": [],
+      "references": [
+        {
+          "label": "NIST SP 800-61 Rev. 3 — Incident response recommendations",
+          "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+        },
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "2. Working through the course case",
+        "3. Explaining the choice",
+        "Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 37,
+      "part": "II",
+      "number": "1.5.2",
+      "title": "Reporting Timeline Requirements",
+      "source_path": "/thraining-plan/modules/01-soc/05-reporting/02-reporting-timelines/student-guide.md",
+      "library_file_id": "libfile_6985633ac82c8191879d049e8379d469",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:27:04.031864Z",
+      "sha256": "03973ed22011cf3fb822b6272b6579ca134bcf5da586450b9cd950929c6f16ca",
+      "anchor": "152--reporting-timeline-requirements",
+      "assets": [],
+      "references": [
+        {
+          "label": "NIST SP 800-61 Rev. 3 — Incident response recommendations",
+          "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 38,
+      "part": "II",
+      "number": "1.5.3",
+      "title": "Notification and Distribution",
+      "source_path": "/thraining-plan/modules/01-soc/05-reporting/03-notification-distribution/student-guide.md",
+      "library_file_id": "libfile_a27a2a27f2608191aca1618faf15c84f",
+      "version_id": "1",
+      "modified_at": "2026-10-02T14:27:11.031761Z",
+      "sha256": "c3030cfe0705e336c1255e934e0be365c244502edb75078139f906eb00022573",
+      "anchor": "153--notification-and-distribution",
+      "assets": [],
+      "references": [
+        {
+          "label": "NIST SP 800-61 Rev. 3 — Incident response recommendations",
+          "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+        },
+        {
+          "label": "MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center",
+          "url": "https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center"
+        }
+      ],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "2. Routing the course examples",
+        "3. Making the handoff traceable",
+        "Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 39,
+      "part": "II",
+      "number": "1.6",
+      "title": "SOC Analyst Section Summary",
+      "source_path": "/thraining-plan/modules/01-soc/06-summary/student-guide.md",
+      "library_file_id": "libfile_8f44e496e0cc8191911ddcd6faf3128e",
+      "version_id": null,
+      "modified_at": "2026-10-02T17:11:27.457960Z",
+      "sha256": "63be25b43f851d672a88f14be5712a19a1738c96f83ca37815e046fd022bea2e",
+      "anchor": "16--soc-analyst-section-summary",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "jlee",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "3. A12 End to End",
+        "Step 1 – Endpoint evidence",
+        "Step 6 – Reporting and handoff",
+        "5. Integrated Review Exercise"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 40,
+      "part": "III",
+      "number": "2.0",
+      "title": "Cyber Threat Intelligence: How the 2.x Block Fits Together",
+      "source_path": "/thraining-plan/modules/02-cti/00-intro/student-guide.md",
+      "library_file_id": "libfile_be30cc6a130c8191bad571f1c3cfa9f2",
+      "version_id": null,
+      "modified_at": "2026-10-02T20:08:25.849887Z",
+      "sha256": "3b43f63d91c411e41f7de42c6202a1ce30d6828a290a116eba21a7330fd97ab7",
+      "anchor": "20--cyber-threat-intelligence-how-the-2x-block-fits-together",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "3. Start With the Requirement",
+        "9. One A12 CTI Flow"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 41,
+      "part": "III",
+      "number": "2.1.1",
+      "title": "Difference between data, information, and intelligence",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/01-data-info-intel/student-guide.md",
+      "library_file_id": "libfile_a5baaabd57c88191aa2674c8a8f59c39",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:27.980210Z",
+      "sha256": "db99b3f2a4ed8e9f87831378a4b6114ba4e7b96935023c7b8d4be8997460bd5b",
+      "anchor": "211--difference-between-data-information-and-intelligence",
+      "assets": [],
+      "references": [
+        {
+          "label": "ODNI, ICD 203 — Analytic Standards",
+          "url": "https://www.dni.gov/files/documents/ICD/ICD-203.pdf"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Following one example",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 42,
+      "part": "III",
+      "number": "2.1.2",
+      "title": "Intelligence lifecycle",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/02-intelligence-lifecycle/student-guide.md",
+      "library_file_id": "libfile_66be33829e6c8191a0d65222240d054d",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:31.136213Z",
+      "sha256": "aa060e50bef5b26051c4d40195007e18c9d481a59d329d43bcaa31491bed9ba1",
+      "anchor": "212--intelligence-lifecycle",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Following one question through the lifecycle",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 43,
+      "part": "III",
+      "number": "2.1.3",
+      "title": "Intelligence Types",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/03-intelligence-types/student-guide.md",
+      "library_file_id": "libfile_a78f661ea0f8819190eb587fdca4f1c9",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:31.089852Z",
+      "sha256": "7e9b94934a45bbdd1f950daae2506fa12edf435aec0c1262b41f29ea68bdc4de",
+      "anchor": "213--intelligence-types",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Type follows the question",
+        "Technical and tactical are related, but not interchangeable",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 44,
+      "part": "III",
+      "number": "2.1.4",
+      "title": "Intelligence Requirements",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/04-intelligence-requirements/student-guide.md",
+      "library_file_id": "libfile_c9c1aebcff50819183337909bfd173b8",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:31.134179Z",
+      "sha256": "e6dbb99437e400a668002c10b3ce892e5571bf7415dbe3817c6ba81ad8792ab5",
+      "anchor": "214--intelligence-requirements",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Refining a stakeholder question",
+        "How requirements drive collection and analysis",
+        "Requirements and intelligence types",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 45,
+      "part": "III",
+      "number": "2.1.5",
+      "title": "RFI Intake and Prioritization",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/05-rfi-intake/student-guide.md",
+      "library_file_id": "libfile_d01c237d08c481919c5bb68e7668bfe8",
+      "version_id": null,
+      "modified_at": "2026-10-02T19:42:31.119642Z",
+      "sha256": "7dae4a7dfcaab09e8d2aeef6b588788127b900dfd21a9c3b0a9b11a4ff43cbfc",
+      "anchor": "215--rfi-intake-and-prioritization",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "A12 intake decision",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 46,
+      "part": "III",
+      "number": "2.1.6",
+      "title": "Ensuring Intelligence Is Actionable",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/06-actionable-intelligence/student-guide.md",
+      "library_file_id": "libfile_52167c9b09508191928c5de06b51f495",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:31.207209Z",
+      "sha256": "50ba1806c9af912c3981c91252ee13c4ff32a91e354adc0aba4865c919bc5fe8",
+      "anchor": "216--ensuring-intelligence-is-actionable",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Compare two A12 products",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 47,
+      "part": "III",
+      "number": "2.1.7",
+      "title": "Tailoring Output to the Audience",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/07-tailoring-audience/student-guide.md",
+      "library_file_id": "libfile_762e7da0d15c81918b1ada9f1f97a56c",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:34.480918Z",
+      "sha256": "6adcf5bfec2395a9ed0fe013986e558c33bff27145fcc6706cf447d2e5ebc804",
+      "anchor": "217--tailoring-output-to-the-audience",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Follow the same A12 assessment for two audiences",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 48,
+      "part": "III",
+      "number": "2.1.8",
+      "title": "Attribution",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/08-attribution/student-guide.md",
+      "library_file_id": "libfile_1c4342ecf9f081919570d9fe5b81317e",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:34.584735Z",
+      "sha256": "fb7d8f407e40f2a9a1f9a1892caaa59b6678b545fdaf2dd2c70b1289365ff808",
+      "anchor": "218--attribution",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "Assess the claim, not the label",
+        "Use A12 without overreaching"
+      ],
+      "notes": []
+    },
+    {
+      "order": 49,
+      "part": "III",
+      "number": "2.1.9",
+      "title": "Collection Sources and Methods",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/09-collection-sources/student-guide.md",
+      "library_file_id": "libfile_630a2747b3ec8191b9544f9db7810855",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:34.667178Z",
+      "sha256": "eb521487d63954aa6a2db010d68371c34e03b8c3d7a6d0f91224726a277a6b6a",
+      "anchor": "219--collection-sources-and-methods",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Collection order follows the requirement",
+        "A short collection plan",
+        "Plan for the evidence gap, not for the tool",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 50,
+      "part": "III",
+      "number": "2.2.1",
+      "title": "Estimative language",
+      "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/01-estimative-language/student-guide.md",
+      "library_file_id": "libfile_5db683eec570819197544b64681d904f",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:34.395275Z",
+      "sha256": "d58a60695fa1108d193d23fb6533a6ea032aaa9f574eadab4697ff35932ffd0e",
+      "anchor": "221--estimative-language",
+      "assets": [],
+      "references": [
+        {
+          "label": "ODNI, ICD 203 — Analytic Standards",
+          "url": "https://www.dni.gov/files/documents/ICD/ICD-203.pdf"
+        }
+      ],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "Likelihood and confidence answer different questions",
+        "Why vague possibility words are not enough",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 51,
+      "part": "III",
+      "number": "2.2.2",
+      "title": "Structured Analytic Techniques",
+      "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/02-structured-techniques/student-guide.md",
+      "library_file_id": "libfile_4af9a39e16a48191895df08903d4d034",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:34.716900Z",
+      "sha256": "289ed7170a101499333cb304b3167fc772789062c18093b9368620278371fd44",
+      "anchor": "222--structured-analytic-techniques",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "Analysis of Competing Hypotheses",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 52,
+      "part": "III",
+      "number": "2.2.3",
+      "title": "Admiralty Code",
+      "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/03-admiralty-code/student-guide.md",
+      "library_file_id": "libfile_4bfb995405d88191854ed30ddf5667bd",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:34.530712Z",
+      "sha256": "3289551d915d29551e9a245794ef4d3b0aa6bd76585cd3d58fe6a5b941c5e4d1",
+      "anchor": "223--admiralty-code",
+      "assets": [],
+      "references": [],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 53,
+      "part": "III",
+      "number": "2.2.4",
+      "title": "Cognitive Biases and Mitigation",
+      "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/04-cognitive-biases/student-guide.md",
+      "library_file_id": "libfile_29dc4b9135d08191a3ae1587262ec8aa",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:38.222779Z",
+      "sha256": "8a56205b224b32d3608a5242c1fef61c1b5d9dc150a57348cc64d40ccad0caf8",
+      "anchor": "224--cognitive-biases-and-mitigation",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "Availability bias",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 54,
+      "part": "III",
+      "number": "2.3.1",
+      "title": "MITRE ATT&CK for CTI Analysis and Reporting",
+      "source_path": "/thraining-plan/modules/02-cti/03-frameworks/01-attck-cti/student-guide.md",
+      "library_file_id": "libfile_68643d3022ec8191894622f7cfebe2ad",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:38.170980Z",
+      "sha256": "6270329a52321dc617020b5765234a0ca880170d20a15a65de69999de7ee4878",
+      "anchor": "231--mitre-attck-for-cti-analysis-and-reporting",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE ATT&CK Enterprise knowledge base",
+          "url": "https://attack.mitre.org/"
+        },
+        {
+          "label": "MITRE ATT&CK – T1059.001 PowerShell",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "label": "MITRE ATT&CK – T1105 Ingress Tool Transfer",
+          "url": "https://attack.mitre.org/techniques/T1105/"
+        },
+        {
+          "label": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/"
+        },
+        {
+          "label": "T1059.001 – PowerShell",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "label": "T1105 – Ingress Tool Transfer",
+          "url": "https://attack.mitre.org/techniques/T1105/"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 55,
+      "part": "III",
+      "number": "2.3.2",
+      "title": "Diamond Model Application in CTI",
+      "source_path": "/thraining-plan/modules/02-cti/03-frameworks/02-diamond-cti/student-guide.md",
+      "library_file_id": "libfile_658a68f4475c8191bb4819af28ea8ed3",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:38.093959Z",
+      "sha256": "914d2d2beee485257fb749614a13c743c65d33e217c182110478cf034cc2d56a",
+      "anchor": "232--diamond-model-application-in-cti",
+      "assets": [],
+      "references": [
+        {
+          "label": "The Diamond Model of Intrusion Analysis",
+          "url": "https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "jlee",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Apply the model to A12",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 56,
+      "part": "III",
+      "number": "2.3.3",
+      "title": "Cyber Kill Chain in Intelligence Analysis",
+      "source_path": "/thraining-plan/modules/02-cti/03-frameworks/03-kill-chain-cti/student-guide.md",
+      "library_file_id": "libfile_6436cba9b8d08191ba3a40e426523530",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:38.173396Z",
+      "sha256": "17d85c490b4c8ff659680bc15843e7f3a60bca2faa068221c0ea585ef9535c40",
+      "anchor": "233--cyber-kill-chain-in-intelligence-analysis",
+      "assets": [],
+      "references": [
+        {
+          "label": "Lockheed Martin – Cyber Kill Chain",
+          "url": "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html"
+        },
+        {
+          "label": "Lockheed Martin overview PDF",
+          "url": "https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/Gaining_the_Advantage_Cyber_Kill_Chain.pdf"
+        },
+        {
+          "label": "Cyber Kill Chain overview PDF",
+          "url": "https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/Gaining_the_Advantage_Cyber_Kill_Chain.pdf"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "invoice.vbs"
+      ],
+      "a12_sections": [
+        "A download is not automatically Installation",
+        "Worked progression example"
+      ],
+      "notes": []
+    },
+    {
+      "order": 57,
+      "part": "III",
+      "number": "2.4.1",
+      "title": "Internal Threat Intelligence Platform",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/01-internal-tip/student-guide.md",
+      "library_file_id": "libfile_daaeae2dd214819191ed8d3dfa65b00d",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:42.019942Z",
+      "sha256": "c63e3db7c241383c69ef922219b0282a57cb77345d49fe306a33bbba8e0c5a55",
+      "anchor": "241--internal-threat-intelligence-platform",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "A hit adds context; it does not automatically prove the current case",
+        "Following one A12 lookup",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 58,
+      "part": "III",
+      "number": "2.4.2",
+      "title": "Selecting Platforms for CTI Work",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/02-platform-selection/student-guide.md",
+      "library_file_id": "libfile_ca805b6cca4c8191a56d645046698640",
+      "version_id": null,
+      "modified_at": "2026-10-02T19:42:41.844384Z",
+      "sha256": "71011412af93acc572c3b5c1c9d1c1e637d81f376703bcc1fa94eb99edf72b26",
+      "anchor": "242--selecting-platforms-for-cti-work",
+      "assets": [],
+      "references": [],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 59,
+      "part": "III",
+      "number": "2.4.3",
+      "title": "VirusTotal Relations and Behavior",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/03-virustotal/student-guide.md",
+      "library_file_id": "libfile_935a71a53c208191a9040f6f0c44aaee",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:42.022803Z",
+      "sha256": "3ee703f5901dca80d33b1608dd487a3823beb9240eb9844261005b925e9ae371",
+      "anchor": "243--virustotal-relations-and-behavior",
+      "assets": [],
+      "references": [
+        {
+          "label": "VirusTotal – Relationships",
+          "url": "https://docs.virustotal.com/reference/relationships"
+        },
+        {
+          "label": "VirusTotal – File Behaviours",
+          "url": "https://docs.virustotal.com/reference/file-object-behaviours"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "login-prd",
+        "Updater"
+      ],
+      "a12_sections": [
+        "Relations: linked objects, not automatic ownership",
+        "Behavior: sandbox observations",
+        "Classroom card",
+        "2. Knowledge Check"
+      ],
+      "notes": [
+        "two-pass platform use retained; total time covers both passes"
+      ]
+    },
+    {
+      "order": 60,
+      "part": "III",
+      "number": "2.4.4",
+      "title": "ANY.RUN",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/04-anyrun/student-guide.md",
+      "library_file_id": "libfile_1ecc4444da90819192e400729e350968",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:42.048347Z",
+      "sha256": "93074965ddb6210601a614e4cce2e418d0cc59b12d94e8953717fa1565bc4443",
+      "anchor": "244--anyrun",
+      "assets": [],
+      "references": [
+        {
+          "label": "ANY.RUN Threat Intelligence Lookup",
+          "url": "https://any.run/threat-intelligence-lookup/"
+        },
+        {
+          "label": "ANY.RUN TI Lookup Query Guide",
+          "url": "https://intelligence.any.run/TI_Lookup_Query_Guide_v6.pdf"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88"
+      ],
+      "a12_sections": [
+        "Search from evidence you already have",
+        "Classroom card"
+      ],
+      "notes": [
+        "two-pass platform use retained; total time covers both passes"
+      ]
+    },
+    {
+      "order": 61,
+      "part": "III",
+      "number": "2.4.5",
+      "title": "Silent Push",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/05-silent-push/student-guide.md",
+      "library_file_id": "libfile_437819fbcca08191b559dabf8dad7a51",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:42.024466Z",
+      "sha256": "b1fd29287c223dc8840a48169acbb191e1ae0e4eec37b36f06cb26f63ef7e831",
+      "anchor": "245--silent-push",
+      "assets": [],
+      "references": [
+        {
+          "label": "Silent Push – DNS Data",
+          "url": "https://help.silentpush.com/docs/dns-data"
+        },
+        {
+          "label": "Silent Push – Passive DNS and Record-Specific Lookups",
+          "url": "https://help.silentpush.com/v1/docs/perform-passive-dns-scans-and-record-specific-lookups"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "login-prd"
+      ],
+      "a12_sections": [
+        "A12 example",
+        "2. Knowledge Check"
+      ],
+      "notes": [
+        "two-pass platform use retained; total time covers both passes"
+      ]
+    },
+    {
+      "order": 62,
+      "part": "III",
+      "number": "2.4.6",
+      "title": "urlscan.io",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/06-urlscan/student-guide.md",
+      "library_file_id": "libfile_105f692e4c5c81918192ec099ff68d12",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:47.490015Z",
+      "sha256": "2697699bf5ad3caa092fd514616999abf8460e0df1b254e8afd335278ee5315f",
+      "anchor": "246--urlscanio",
+      "assets": [],
+      "references": [
+        {
+          "label": "urlscan.io API Documentation",
+          "url": "https://urlscan.io/docs/api/"
+        },
+        {
+          "label": "urlscan.io Result API Reference",
+          "url": "https://urlscan.io/docs/result/"
+        },
+        {
+          "label": "urlscan.io API Documentation – Submission and visibility",
+          "url": "https://urlscan.io/docs/api/"
+        },
+        {
+          "label": "urlscan.io Quickstart",
+          "url": "https://docs.urlscan.io/guides/quickstart"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 classroom example",
+        "2. Knowledge Check"
+      ],
+      "notes": [
+        "two-pass platform use retained; total time covers both passes"
+      ]
+    },
+    {
+      "order": 63,
+      "part": "III",
+      "number": "2.5.1",
+      "title": "IOC Handling and Enrichment Concepts",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/01-ioc-handling/student-guide.md",
+      "library_file_id": "libfile_b473350318ec8191b3eb934cd552e0ab",
+      "version_id": "3",
+      "modified_at": "2026-10-02T19:42:47.578944Z",
+      "sha256": "72eea06996d753160e34b882ae052bbd04535fd532969750c3490bf9c0afc165",
+      "anchor": "251--ioc-handling-and-enrichment-concepts",
+      "assets": [],
+      "references": [
+        {
+          "label": "OASIS STIX 2.1",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        },
+        {
+          "label": "STIX 2.1 specification",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "invoice.vbs"
+      ],
+      "a12_sections": [
+        "IOC is a practical course term",
+        "Enrichment should answer a question",
+        "A first enrichment record"
+      ],
+      "notes": []
+    },
+    {
+      "order": 64,
+      "part": "III",
+      "number": "2.5.2",
+      "title": "Hashing and Similarity Concepts",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/02-file-similarity/student-guide.md",
+      "library_file_id": "libfile_35a816e5682881919318c494f838af9d",
+      "version_id": "3",
+      "modified_at": "2026-10-02T19:42:47.525525Z",
+      "sha256": "c704db8c22b57b7de676acc2d7eb37358b64364841a1294705097ee74bceab2e",
+      "anchor": "252--hashing-and-similarity-concepts",
+      "assets": [],
+      "references": [
+        {
+          "label": "Mandiant, **Tracking Malware with Import Hashing**",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/tracking-malware-import-hashing"
+        },
+        {
+          "label": "ssdeep project documentation",
+          "url": "https://ssdeep-project.github.io/ssdeep/usage.html"
+        },
+        {
+          "label": "Trend Micro, **TLSH**",
+          "url": "https://github.com/trendmicro/tlsh"
+        },
+        {
+          "label": "Microsoft, **Authenticode Digital Signatures**",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/authenticode"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 65,
+      "part": "III",
+      "number": "2.5.3",
+      "title": "RDAP and WHOIS Concepts",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/03-rdap-whois/student-guide.md",
+      "library_file_id": "libfile_3dbfa62c597881919dde923945f8f426",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:47.030388Z",
+      "sha256": "6550dccd4334c587febc4f7a965fd2d21f8b9a05159b4a85daab05c60c3dc4cb",
+      "anchor": "253--rdap-and-whois-concepts",
+      "assets": [],
+      "references": [
+        {
+          "label": "ICANN — Launching RDAP; Sunsetting WHOIS",
+          "url": "https://www.icann.org/en/announcements/details/icann-update-launching-rdap-sunsetting-whois-27-01-2025-en"
+        },
+        {
+          "label": "RFC 9082 — RDAP Query Format",
+          "url": "https://www.rfc-editor.org/rfc/rfc9082.html"
+        },
+        {
+          "label": "RFC 9083 — RDAP JSON Responses",
+          "url": "https://www.rfc-editor.org/rfc/rfc9083.html"
+        },
+        {
+          "label": "RFC 3912 — WHOIS Protocol Specification",
+          "url": "https://www.rfc-editor.org/rfc/rfc3912.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "login-prd"
+      ],
+      "a12_sections": [
+        "Useful IP-network fields",
+        "Worked example: the A12 update domain",
+        "Worked example: the A12 IP",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 66,
+      "part": "III",
+      "number": "2.5.4",
+      "title": "Advanced DNS Concepts",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/04-advanced-dns/student-guide.md",
+      "library_file_id": "libfile_99946dcca3388191b622f71224e9e1b2",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:47.187704Z",
+      "sha256": "4079bb2f74a126f7bb765761b20cd413d39a20afdf15d6a68223e0dcd4e092d4",
+      "anchor": "254--advanced-dns-concepts",
+      "assets": [],
+      "references": [
+        {
+          "label": "RFC 1035",
+          "url": "https://www.rfc-editor.org/rfc/rfc1035.html"
+        },
+        {
+          "label": "RFC 1034",
+          "url": "https://www.rfc-editor.org/rfc/rfc1034.html"
+        },
+        {
+          "label": "RFC 2782",
+          "url": "https://www.rfc-editor.org/rfc/rfc2782.html"
+        },
+        {
+          "label": "RFC 1034 — Domain Names: Concepts and Facilities",
+          "url": "https://www.rfc-editor.org/rfc/rfc1034.html"
+        },
+        {
+          "label": "RFC 1035 — Domain Names: Implementation and Specification",
+          "url": "https://www.rfc-editor.org/rfc/rfc1035.html"
+        },
+        {
+          "label": "RFC 2782 — A DNS RR for Specifying the Location of Services (SRV)",
+          "url": "https://www.rfc-editor.org/rfc/rfc2782.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "login-prd"
+      ],
+      "a12_sections": [
+        "Shared DNS records create candidates, not automatic siblings",
+        "Do not promote one address to an entire network",
+        "A practical pivot workflow"
+      ],
+      "notes": []
+    },
+    {
+      "order": 67,
+      "part": "III",
+      "number": "2.5.5",
+      "title": "Identifying Additional Adversary Infrastructure from Seed Indicators",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/05-infra-pivot/student-guide.md",
+      "library_file_id": "libfile_2bd073a2443481918556733ae14b6ebd",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:50.666340Z",
+      "sha256": "5119bc2e04f0e345ee9b9cdb690950ec26c8390ac5c4ca8d43710e1bb703faae",
+      "anchor": "255--identifying-additional-adversary-infrastructure-from-seed-indicators",
+      "assets": [],
+      "references": [
+        {
+          "label": "ICANN RDAP transition guidance",
+          "url": "https://www.icann.org/en/announcements/details/icann-update-launching-rdap-sunsetting-whois-27-01-2025-en"
+        },
+        {
+          "label": "RFC 1035",
+          "url": "https://www.rfc-editor.org/rfc/rfc1035.html"
+        },
+        {
+          "label": "Defender's ThreatMesh Framework",
+          "url": "https://github.com/MalasadaTech/defenders-threatmesh-framework"
+        },
+        {
+          "label": "ICANN – Launching RDAP; Sunsetting WHOIS",
+          "url": "https://www.icann.org/en/announcements/details/icann-update-launching-rdap-sunsetting-whois-27-01-2025-en"
+        },
+        {
+          "label": "RFC 1035 – Domain Names: Implementation and Specification",
+          "url": "https://www.rfc-editor.org/rfc/rfc1035.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "login-prd"
+      ],
+      "a12_sections": [
+        "The hop sentence",
+        "Worked A12 example",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 68,
+      "part": "III",
+      "number": "2.5.6",
+      "title": "MalasadaTech Defender's ThreatMesh Framework (DTF)",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/06-dtf/student-guide.md",
+      "library_file_id": "libfile_9b3414824d54819199397cd8473b7b1f",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:50.849846Z",
+      "sha256": "96c1b0cbf7a993cb031f3da1ff519ca989eb9ffd5d48a90b548b910fe343e802",
+      "anchor": "256--malasadatech-defenders-threatmesh-framework-dtf",
+      "assets": [],
+      "references": [
+        {
+          "label": "Defender's ThreatMesh Framework repository",
+          "url": "https://github.com/MalasadaTech/defenders-threatmesh-framework"
+        },
+        {
+          "label": "Current DTF matrix",
+          "url": "https://github.com/MalasadaTech/defenders-threatmesh-framework/blob/main/matrix.md"
+        },
+        {
+          "label": "Defender's ThreatMesh Framework",
+          "url": "https://github.com/MalasadaTech/defenders-threatmesh-framework"
+        },
+        {
+          "label": "DTF Matrix",
+          "url": "https://github.com/MalasadaTech/defenders-threatmesh-framework/blob/main/matrix.md"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "login-prd"
+      ],
+      "a12_sections": [
+        "Classify the existing A12 hops",
+        "A concise DTF record",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 69,
+      "part": "III",
+      "number": "2.5.7",
+      "title": "Correlation, Link Analysis, and Campaign Tracking",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/07-correlation/student-guide.md",
+      "library_file_id": "libfile_c4e2e3849f148191a16e83794552cd44",
+      "version_id": null,
+      "modified_at": "2026-10-02T19:42:50.454402Z",
+      "sha256": "d5c1f82f80f95889fa04d74d59487951f895a8d330ac5d60976474a37b1861b6",
+      "anchor": "257--correlation-link-analysis-and-campaign-tracking",
+      "assets": [],
+      "references": [
+        {
+          "label": "OASIS STIX 2.1",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "login-prd"
+      ],
+      "a12_sections": [
+        "Combine evidence at the strength it supports",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 70,
+      "part": "III",
+      "number": "2.6.1",
+      "title": "Extracting Applicable TTPs from Intelligence Reports",
+      "source_path": "/thraining-plan/modules/02-cti/06-assessment/01-applicable-ttps/student-guide.md",
+      "library_file_id": "libfile_d62a87a615f08191bfa334df8993f3c6",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:50.687910Z",
+      "sha256": "1be21f53cbd134d3b21a0d5208ebac79b19aff8404dd292fa68b27af082f9883",
+      "anchor": "261--extracting-applicable-ttps-from-intelligence-reports",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE ATT&CK Enterprise Matrix",
+          "url": "https://attack.mitre.org/matrices/enterprise/"
+        },
+        {
+          "label": "T1059.001 – PowerShell",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "label": "T1059.001",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "label": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "a12_terms": [
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Classroom environment"
+      ],
+      "notes": [
+        "nested source headings retained within level 6"
+      ]
+    },
+    {
+      "order": 71,
+      "part": "III",
+      "number": "2.6.2",
+      "title": "Threat Relevance and Organizational Impact",
+      "source_path": "/thraining-plan/modules/02-cti/06-assessment/02-relevance-impact/student-guide.md",
+      "library_file_id": "libfile_0b3137008c488191b9ef2ca025f70276",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:50.670942Z",
+      "sha256": "7c8769d729a0b4e65ecc465fa9ae6a5e7714e4422b468fbaea4543e399f661ea",
+      "anchor": "262--threat-relevance-and-organizational-impact",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "login-prd",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Worked A12 example",
+        "Relevance should be requirement-aware",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 72,
+      "part": "III",
+      "number": "2.7.1",
+      "title": "Core STIX Objects",
+      "source_path": "/thraining-plan/modules/02-cti/07-production/01-core-objects/student-guide.md",
+      "library_file_id": "libfile_9171394f24248191b565d03605939cb9",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:54.320053Z",
+      "sha256": "ec059f841d44c09920e1a5ca89da73f00830ec031479bf90b42342b2f1dd0d58",
+      "anchor": "271--core-stix-objects",
+      "assets": [],
+      "references": [
+        {
+          "label": "OASIS STIX 2.1",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        },
+        {
+          "label": "STIX 2.1 – Observed Data and Cyber-observable Objects",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        },
+        {
+          "label": "STIX 2.1 Interoperability Test Document",
+          "url": "https://docs.oasis-open.org/cti/stix-2.1-interop/v1.0/stix-2.1-interop-v1.0.html"
+        }
+      ],
+      "a12_terms": [
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Identity does not mean “the attacker”"
+      ],
+      "notes": []
+    },
+    {
+      "order": 73,
+      "part": "III",
+      "number": "2.7.2",
+      "title": "How STIX Objects Are Used in Intelligence Production",
+      "source_path": "/thraining-plan/modules/02-cti/07-production/02-stix-production/student-guide.md",
+      "library_file_id": "libfile_01c438c280888191b8acddaac477b95b",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:54.272009Z",
+      "sha256": "4ba6ffaf1024d5cdb5590adf0e6507222e9be84a7ce6065a303485d633f01690",
+      "anchor": "272--how-stix-objects-are-used-in-intelligence-production",
+      "assets": [],
+      "references": [
+        {
+          "label": "OASIS STIX 2.1",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        },
+        {
+          "label": "STIX 2.1 – Sighting",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        },
+        {
+          "label": "STIX 2.1 Interoperability Test Document",
+          "url": "https://docs.oasis-open.org/cti/stix-2.1-interop/v1.0/stix-2.1-interop-v1.0.html"
+        },
+        {
+          "label": "STIX 2.1 – Bundle Object",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        },
+        {
+          "label": "OASIS TAXII 2.1",
+          "url": "https://docs.oasis-open.org/cti/taxii/v2.1/os/taxii-v2.1-os.html"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "invoice.vbs",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Build the A12 graph with defensible semantics"
+      ],
+      "notes": []
+    },
+    {
+      "order": 74,
+      "part": "III",
+      "number": "2.7.3",
+      "title": "Creating Finished Intelligence Products",
+      "source_path": "/thraining-plan/modules/02-cti/07-production/03-finished-products/student-guide.md",
+      "library_file_id": "libfile_908351bf71c88191b263ada8f9116737",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:53.925271Z",
+      "sha256": "386e6f1376a4bbdd5828fbb72e5bbf48521e70144eaf9947bdc6d36ec75099a7",
+      "anchor": "273--creating-finished-intelligence-products",
+      "assets": [],
+      "references": [
+        {
+          "label": "ODNI – ICD 203, Analytic Standards",
+          "url": "https://www.dni.gov/files/documents/ICD/ICD-203.pdf"
+        },
+        {
+          "label": "ODNI – Objectivity and Analytic Standards",
+          "url": "https://www.dni.gov/index.php/how-we-work/objectivity"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Facts and judgments should remain distinguishable",
+        "The “so what” should be proportional",
+        "Activity profile before actor identity",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 75,
+      "part": "III",
+      "number": "2.7.4",
+      "title": "RFI Responses and Closure",
+      "source_path": "/thraining-plan/modules/02-cti/07-production/04-rfi-response/student-guide.md",
+      "library_file_id": "libfile_68fc5e48ee608191bffdd509912a6dcf",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:54.315699Z",
+      "sha256": "69bc65e19434340944e961d9477593da40d58e5b843e01719e079f5a07e8a149",
+      "anchor": "274--rfi-responses-and-closure",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Complete the A12 RFI",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 76,
+      "part": "III",
+      "number": "2.7.5",
+      "title": "Disseminating Intelligence to the Correct Audiences",
+      "source_path": "/thraining-plan/modules/02-cti/07-production/05-dissemination/student-guide.md",
+      "library_file_id": "libfile_8180d1b773b08191be50b485c4afc9bf",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:57.391611Z",
+      "sha256": "3151ae3d87bdd4c7301269b373e93678c59eba63caa9a6eea4e42d2744897f96",
+      "anchor": "275--disseminating-intelligence-to-the-correct-audiences",
+      "assets": [],
+      "references": [
+        {
+          "label": "FIRST – Traffic Light Protocol",
+          "url": "https://www.first.org/tlp/"
+        },
+        {
+          "label": "FIRST – TLP 2.0 Definitions and Usage Guidance",
+          "url": "https://www.first.org/tlp/docs/tlp-a4.pdf"
+        },
+        {
+          "label": "FIRST – TLP Use Cases",
+          "url": "https://www.first.org/tlp/use-cases"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Classroom handling card",
+        "Tailoring changes detail, not truth",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 77,
+      "part": "III",
+      "number": "2.8.1",
+      "title": "Local Intelligence Requirements and Priorities",
+      "source_path": "/thraining-plan/modules/02-cti/08-site-specific/01-local-priorities/student-guide.md",
+      "library_file_id": "libfile_e3e2de1672a081919c0344fa105d9940",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:57.427863Z",
+      "sha256": "7d49265769f776b85a7179b0e2b2ad4787090cea6e971414c1c861d0ca6bb0e3",
+      "anchor": "281--local-intelligence-requirements-and-priorities",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Align work only when the connection is explicit",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 78,
+      "part": "III",
+      "number": "2.8.2",
+      "title": "Local Production and Approval Processes",
+      "source_path": "/thraining-plan/modules/02-cti/08-site-specific/02-local-production/student-guide.md",
+      "library_file_id": "libfile_e4ecb00e4c4c8191bb89a48f7db335c8",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:57.552099Z",
+      "sha256": "0bb3aef4daf960755bb410367579f947b114896eb0cb293b2e5d46950709fa79",
+      "anchor": "282--local-production-and-approval-processes",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 walkthrough",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 79,
+      "part": "III",
+      "number": "2.8.3",
+      "title": "Local Dissemination Channels and Customers",
+      "source_path": "/thraining-plan/modules/02-cti/08-site-specific/03-local-dissemination/student-guide.md",
+      "library_file_id": "libfile_d902426ca76081919c9b6c9449c3db32",
+      "version_id": "2",
+      "modified_at": "2026-10-02T19:42:57.626491Z",
+      "sha256": "870e5024e301bb045757213d5c42f448e1ae5e06d17045aa3f89812eb76a7a5e",
+      "anchor": "283--local-dissemination-channels-and-customers",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 example",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 80,
+      "part": "III",
+      "number": "2.9",
+      "title": "Cyber Threat Intelligence Section Summary",
+      "source_path": "/thraining-plan/modules/02-cti/09-summary/student-guide.md",
+      "library_file_id": "libfile_d2b5640dcfe08191ab04fad0054513c8",
+      "version_id": null,
+      "modified_at": "2026-10-02T20:08:33.844528Z",
+      "sha256": "fd7a8c3384ea65837889e98f677e5ed47079789192d3a0ce247dde6e8646f1fa",
+      "anchor": "29--cyber-threat-intelligence-section-summary",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "login-prd"
+      ],
+      "a12_sections": [
+        "3. A12 End to End",
+        "Step 1 – Intake the requirement",
+        "Step 2 – Separate data, information, and intelligence",
+        "Step 9 – Produce the answer",
+        "5. Integrated Review Exercise"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 81,
+      "part": "IV",
+      "number": "3.0",
+      "title": "Threat Hunting: How the 3.x Block Fits Together",
+      "source_path": "/thraining-plan/modules/03-hunter/00-intro/student-guide.md",
+      "library_file_id": "libfile_1cf4c0dada308191b7d4ead6d8f6102f",
+      "version_id": null,
+      "modified_at": "2026-10-02T16:14:37.262995Z",
+      "sha256": "3ef385562f1e9de691640729deafa62f88985753fe2a4796b44b67be25eb4e9d",
+      "anchor": "30--threat-hunting-how-the-3x-block-fits-together",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "Updater"
+      ],
+      "a12_sections": [
+        "3. Hunting Starts With a Question",
+        "4. Turn the Question Into a Testable Hypothesis",
+        "9. The A12 Hunt Loop",
+        "Question",
+        "Refine"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 82,
+      "part": "IV",
+      "number": "3.1",
+      "title": "Purpose of Threat Hunting",
+      "source_path": "/thraining-plan/modules/03-hunter/01-purpose/student-guide.md",
+      "library_file_id": "libfile_3be82faf867c819181aeaea76dc476be",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:46:08.564152Z",
+      "sha256": "6ebfc4b84f4d5c5397bced80c261c74ab4d5be114ea942df5816220fcd25a8cd",
+      "anchor": "31--purpose-of-threat-hunting",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "Updater",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "A12 example"
+      ],
+      "notes": []
+    },
+    {
+      "order": 83,
+      "part": "IV",
+      "number": "3.2.1",
+      "title": "Hunt Types",
+      "source_path": "/thraining-plan/modules/03-hunter/02-methodology/01-hunt-types/student-guide.md",
+      "library_file_id": "libfile_b0a43f9dbf3c81919aa34045277d8142",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:46:25.706909Z",
+      "sha256": "d010a9c0302dddfe9c9a66f300eaba07cb74eb082dbc1b5682df94332744af8f",
+      "anchor": "321--hunt-types",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "Updater"
+      ],
+      "a12_sections": [
+        "1. Key Concepts",
+        "Every hunt should become testable",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 84,
+      "part": "IV",
+      "number": "3.2.2",
+      "title": "Hunt Development Concepts",
+      "source_path": "/thraining-plan/modules/03-hunter/02-methodology/02-hunt-development/student-guide.md",
+      "library_file_id": "libfile_492ab91947d88191bdb435298cbb16f1",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:46:41.734703Z",
+      "sha256": "4c1cabb3d815905971712975d961d615ddb62efd5cf59aef9be3d0f2bc208fc7",
+      "anchor": "322--hunt-development-concepts",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "Updater",
+        "updater"
+      ],
+      "a12_sections": [
+        "Hypothesis",
+        "Scope",
+        "Distinctive pattern",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 85,
+      "part": "IV",
+      "number": "3.3.1",
+      "title": "Tool Capabilities for Hunting",
+      "source_path": "/thraining-plan/modules/03-hunter/03-online-tools/student-guide.md",
+      "library_file_id": "libfile_6f20cee233288191a5fb7d97bd0dbf72",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:46:58.181208Z",
+      "sha256": "d786bf9bbfd1c8bcae6447696eb17632d169ca4c3ad3bceec642981d6619a881",
+      "anchor": "331--tool-capabilities-for-hunting",
+      "assets": [],
+      "references": [
+        {
+          "label": "VirusTotal Relationships",
+          "url": "https://docs.virustotal.com/reference/relationships"
+        },
+        {
+          "label": "VirusTotal File Behaviours",
+          "url": "https://docs.virustotal.com/reference/file-object-behaviours"
+        },
+        {
+          "label": "ANY.RUN TI Lookup Query Guide",
+          "url": "https://intelligence.any.run/TI_Lookup_Query_Guide_v6.pdf"
+        },
+        {
+          "label": "Silent Push DNS Data",
+          "url": "https://help.silentpush.com/docs/dns-data"
+        },
+        {
+          "label": "urlscan Result API",
+          "url": "https://urlscan.io/docs/result/"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "Updater"
+      ],
+      "a12_sections": [
+        "What makes a good hunt lead?",
+        "Convert the finding into an internal query plan",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 86,
+      "part": "IV",
+      "number": "3.4.1",
+      "title": "Assessing CTI for Hunting Value",
+      "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/01-assessing-cti/student-guide.md",
+      "library_file_id": "libfile_934ebc881be4819197f5f6e8c4cd46f3",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:47:19.058582Z",
+      "sha256": "e73000bcc4a1cc5ddb9ecc5ba2dcdf149f14230530cb9abf7d35b212f9a64b5d",
+      "anchor": "341--assessing-cti-for-hunting-value",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 examples"
+      ],
+      "notes": []
+    },
+    {
+      "order": 87,
+      "part": "IV",
+      "number": "3.4.2",
+      "title": "Extracting Hunt Leads from CTI",
+      "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/02-extracting-leads/student-guide.md",
+      "library_file_id": "libfile_443b06ff89d081918fe2826e07bcf66c",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:47:35.554021Z",
+      "sha256": "665db398c08e532a892d8544ad235674b2bfe3fd73597633d67e0bb768dae4d7",
+      "anchor": "342--extracting-hunt-leads-from-cti",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12",
+        "Updater"
+      ],
+      "a12_sections": [
+        "A12 extraction",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 88,
+      "part": "IV",
+      "number": "3.4.3",
+      "title": "STIX as Hunt Input",
+      "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/student-guide.md",
+      "library_file_id": "libfile_1b1d88587c688191969619e8905e3c60",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:47:51.991513Z",
+      "sha256": "31d3d9ed47e36e5113ef831d823dffcbc02dadcc9f2a2abb553c4d278ac40185",
+      "anchor": "343--stix-as-hunt-input",
+      "assets": [],
+      "references": [
+        {
+          "label": "OASIS STIX 2.1",
+          "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html"
+        }
+      ],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 example"
+      ],
+      "notes": []
+    },
+    {
+      "order": 89,
+      "part": "IV",
+      "number": "3.5.1",
+      "title": "Using MITRE ATT&CK for Hunt Planning",
+      "source_path": "/thraining-plan/modules/03-hunter/05-framework-application/student-guide.md",
+      "library_file_id": "libfile_147b411813348191ba24e338aa829ea9",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:48:07.437956Z",
+      "sha256": "27b20cac70db290f0b54d6f707dd728e6b41936de93c3f97ebd68dbdd43ca71c",
+      "anchor": "351--using-mitre-attck-for-hunt-planning",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/"
+        },
+        {
+          "label": "T1547.001 – Registry Run Keys / Startup Folder",
+          "url": "https://attack.mitre.org/techniques/T1547/001/"
+        }
+      ],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "Technique and tactic are related but not identical",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 90,
+      "part": "IV",
+      "number": "3.6.1",
+      "title": "Persistence Techniques",
+      "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/01-persistence/student-guide.md",
+      "library_file_id": "libfile_7632b402e26c8191b0494a5fb0aa59b9",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:48:28.340676Z",
+      "sha256": "4fa5a705c354904020f8fe67f5daeeb14f39ce00adfab295181ce5e5cb0130f5",
+      "anchor": "361--persistence-techniques",
+      "assets": [],
+      "references": [
+        {
+          "label": "T1547.001 – Registry Run Keys / Startup Folder",
+          "url": "https://attack.mitre.org/techniques/T1547/001/"
+        },
+        {
+          "label": "T1053.005 – Scheduled Task",
+          "url": "https://attack.mitre.org/techniques/T1053/005/"
+        },
+        {
+          "label": "T1543.003 – Windows Service",
+          "url": "https://attack.mitre.org/techniques/T1543/003/"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "Updater",
+        "updater"
+      ],
+      "a12_sections": [
+        "Registry Run keys and Startup Folder",
+        "Recognizing a technique does not mean declaring malware",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 91,
+      "part": "IV",
+      "number": "3.6.2",
+      "title": "Privilege Escalation Techniques",
+      "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/02-privilege-escalation/student-guide.md",
+      "library_file_id": "libfile_b0009b5822cc8191960a9bd5373a0746",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:48:44.509468Z",
+      "sha256": "6384b772e8820f097eb53ee0f003562b75e306d14f6b2bc540bfb2ae6e16bd35",
+      "anchor": "362--privilege-escalation-techniques",
+      "assets": [],
+      "references": [
+        {
+          "label": "T1548.002 – Bypass User Account Control",
+          "url": "https://attack.mitre.org/techniques/T1548/002/"
+        },
+        {
+          "label": "T1134 – Access Token Manipulation",
+          "url": "https://attack.mitre.org/techniques/T1134/"
+        },
+        {
+          "label": "T1543.003 – Windows Service",
+          "url": "https://attack.mitre.org/techniques/T1543/003/"
+        },
+        {
+          "label": "T1068 – Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068/"
+        }
+      ],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 boundary"
+      ],
+      "notes": []
+    },
+    {
+      "order": 92,
+      "part": "IV",
+      "number": "3.6.3",
+      "title": "Hunt for a Specific Persistence or Privilege-Escalation Technique",
+      "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/03-hunt-specific/student-guide.md",
+      "library_file_id": "libfile_7cad43def4c08191a9ecc6e83ed854a8",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:49:01.755384Z",
+      "sha256": "2550538b592bef5aee86ab65f06df634418451621fad3248417f71a3d95ced06",
+      "anchor": "363--hunt-for-a-specific-persistence-or-privilege-escalation-technique",
+      "assets": [],
+      "references": [
+        {
+          "label": "T1547.001 – Registry Run Keys / Startup Folder",
+          "url": "https://attack.mitre.org/techniques/T1547/001/"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "Updater"
+      ],
+      "a12_sections": [
+        "A12 example",
+        "Hunt line",
+        "2. Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 93,
+      "part": "IV",
+      "number": "3.7.1",
+      "title": "Hunt Control and Lead Management",
+      "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/01-hunt-control/student-guide.md",
+      "library_file_id": "libfile_f8d038b07d9c8191a3ef6128edf9720d",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:49:22.270430Z",
+      "sha256": "9d31243838345621e0821008a9bbf4ca4e3c324f2faa55aea159a1435c222be3",
+      "anchor": "371--hunt-control-and-lead-management",
+      "assets": [],
+      "references": [],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 94,
+      "part": "IV",
+      "number": "3.7.2",
+      "title": "Hunt Documentation Standards",
+      "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/02-hunt-documentation/student-guide.md",
+      "library_file_id": "libfile_0a9a7a8c41e4819195890557701008eb",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:49:39.570958Z",
+      "sha256": "90fc2d9aba746586d1af58cd4eb006417a5a64b9c3ce94f6237385eecf012d4a",
+      "anchor": "372--hunt-documentation-standards",
+      "assets": [],
+      "references": [],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 95,
+      "part": "IV",
+      "number": "3.7.3",
+      "title": "Hunt Outputs and Hand-off",
+      "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/03-hunt-outputs/student-guide.md",
+      "library_file_id": "libfile_e7e3a0cb3174819197aaf5ef1c5bc7a1",
+      "version_id": "1",
+      "modified_at": "2026-10-02T04:49:56.727368Z",
+      "sha256": "530444243be941560181922ddf92fc64b2feae2fcfbc33fbd1a377d072b11e65",
+      "anchor": "373--hunt-outputs-and-hand-off",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "Updater"
+      ],
+      "a12_sections": [
+        "A12 example"
+      ],
+      "notes": []
+    },
+    {
+      "order": 96,
+      "part": "IV",
+      "number": "3.8",
+      "title": "Threat Hunting Section Summary",
+      "source_path": "/thraining-plan/modules/03-hunter/08-summary/student-guide.md",
+      "library_file_id": "libfile_f638462b57b4819194179fcbcb35383f",
+      "version_id": null,
+      "modified_at": "2026-10-02T17:18:44.932032Z",
+      "sha256": "57e6f19954ee6fe08c8fd0bc38dd98d0a4a8228837f4ed3c3977befb057b852a",
+      "anchor": "38--threat-hunting-section-summary",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "updater",
+        "Updater",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "3. A12 End to End",
+        "Step 1 – Starting signal",
+        "Step 2 – Hypothesis",
+        "Step 3 – Scope",
+        "Step 8 – Findings",
+        "Topic ≠ hypothesis",
+        "5. Integrated Review Exercise",
+        "7. Bridge Into 4.x Detection Engineering"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 97,
+      "part": "V",
+      "number": "4.0",
+      "title": "Detection Engineering: How the 4.x Block Fits Together",
+      "source_path": "/thraining-plan/modules/04-de/00-intro/student-guide.md",
+      "library_file_id": "libfile_678093dc0e34819199539c98d63618a5",
+      "version_id": null,
+      "modified_at": "2026-10-02T16:38:55.793285Z",
+      "sha256": "3488f36d5fbbba9d880b004fb1c7dd1858113b659521fa569151464c28b27afd",
+      "anchor": "40--detection-engineering-how-the-4x-block-fits-together",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "3. Start With the Defensive Need",
+        "10. The A12 Detection Lifecycle"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 98,
+      "part": "V",
+      "number": "4.1",
+      "title": "What Detection Engineering Owns",
+      "source_path": "/thraining-plan/modules/04-de/01-what-de-owns/student-guide.md",
+      "library_file_id": "libfile_bcdf814972f48191b90ac36167851300",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:00:59.694845Z",
+      "sha256": "c54c99b1e46aba598f2cf266b44c69440fbe4418c3a189b9400aaf3b29483186",
+      "anchor": "41--what-detection-engineering-owns",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12"
+      ],
+      "a12_sections": [
+        "A nomination does not need to arrive production-ready",
+        "A12 examples"
+      ],
+      "notes": []
+    },
+    {
+      "order": 99,
+      "part": "V",
+      "number": "4.2",
+      "title": "Making a Detection Sound and Meeting Shop Requirements",
+      "source_path": "/thraining-plan/modules/04-de/02-sound-and-shop-requirements/student-guide.md",
+      "library_file_id": "libfile_338be2669ba88191be2b175da7a689dc",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:01:15.047061Z",
+      "sha256": "714ed943a3ca464abfdad68d8ab9591ee5c5073679f25549e625fcc66d692e23",
+      "anchor": "42--making-a-detection-sound-and-meeting-shop-requirements",
+      "assets": [],
+      "references": [
+        {
+          "label": "Sigma Rules – false positives and rule metadata",
+          "url": "https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html"
+        },
+        {
+          "label": "Sigma Filters",
+          "url": "https://sigmahq.io/docs/meta/"
+        },
+        {
+          "label": "Sigma Logsources",
+          "url": "https://sigmahq.io/docs/basics/log-sources.html"
+        },
+        {
+          "label": "CTID – Continuous Emulation as Detection Validation",
+          "url": "https://ctid.mitre.org/blog/2025/08/04/lessons-from-sharepoint-vulnerability-cve-2025-53770/"
+        },
+        {
+          "label": "Sigma Rules Specification",
+          "url": "https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html"
+        },
+        {
+          "label": "Center for Threat-Informed Defense – Continuous Emulation as Detection Validation",
+          "url": "https://ctid.mitre.org/blog/2025/08/04/lessons-from-sharepoint-vulnerability-cve-2025-53770/"
+        }
+      ],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "Positive tests: what must fire"
+      ],
+      "notes": []
+    },
+    {
+      "order": 100,
+      "part": "V",
+      "number": "4.3",
+      "title": "Nominations from SOC, Hunt, and CTI",
+      "source_path": "/thraining-plan/modules/04-de/03-nominations/student-guide.md",
+      "library_file_id": "libfile_754be005ab448191af0cbf49f16139f9",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:01:30.419398Z",
+      "sha256": "a757809c81818da742098be98b084e3bf33f1a27dcc7cde38031783fe1eb84ea",
+      "anchor": "43--nominations-from-soc-hunt-and-cti",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "Updater",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "Send back",
+        "A12 examples"
+      ],
+      "notes": [
+        "nested source headings retained within level 6"
+      ]
+    },
+    {
+      "order": 101,
+      "part": "V",
+      "number": "4.4",
+      "title": "Tune Requests from SOC",
+      "source_path": "/thraining-plan/modules/04-de/04-tune-requests/student-guide.md",
+      "library_file_id": "libfile_f685679e811881918e4413a0deb9e78d",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:01:46.236067Z",
+      "sha256": "26f576e7610dada43ffb44115ab8fbdfc2ece6829b54f995e61d1cc90b60020f",
+      "anchor": "44--tune-requests-from-soc",
+      "assets": [],
+      "references": [
+        {
+          "label": "Sigma Filters",
+          "url": "https://sigmahq.io/docs/meta/"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 102,
+      "part": "V",
+      "number": "4.5",
+      "title": "Hunt and Intel Packages",
+      "source_path": "/thraining-plan/modules/04-de/05-hunt-and-intel-packages/student-guide.md",
+      "library_file_id": "libfile_9eb66e4b65748191a1cbf2c1acac6a78",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:02:05.643180Z",
+      "sha256": "8186423e46d8beda044f0bc9f89bd1be2c63d7ac8434595096d0679c3f642e75",
+      "anchor": "45--hunt-and-intel-packages",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "203.0.113.88",
+        "A12"
+      ],
+      "a12_sections": [
+        "Exact indicators can be useful without being durable"
+      ],
+      "notes": []
+    },
+    {
+      "order": 103,
+      "part": "V",
+      "number": "4.6",
+      "title": "Detection Lifecycle",
+      "source_path": "/thraining-plan/modules/04-de/06-detection-lifecycle/student-guide.md",
+      "library_file_id": "libfile_4c3fb19c952c819189be5f7b292fd738",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:02:20.559051Z",
+      "sha256": "1a0477a521d331cabf5ccac008e88835bc9c8775e03e51ba15e9b394b3aad72b",
+      "anchor": "46--detection-lifecycle",
+      "assets": [],
+      "references": [
+        {
+          "label": "Sigma Rules Specification",
+          "url": "https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html"
+        },
+        {
+          "label": "Sigma Rules Specification – status and lifecycle metadata",
+          "url": "https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html"
+        }
+      ],
+      "a12_terms": [],
+      "a12_sections": [],
+      "notes": []
+    },
+    {
+      "order": 104,
+      "part": "V",
+      "number": "4.7",
+      "title": "Sensor and Data Availability for Detection",
+      "source_path": "/thraining-plan/modules/04-de/07-sensors/student-guide.md",
+      "library_file_id": "libfile_3fbaab9185dc81918af3a93f02d7d063",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:02:37.397449Z",
+      "sha256": "3ea1a8353e234e976c238b335e11bee5d3dd6ebc33f119f3ae4e489f734e6792",
+      "anchor": "47--sensor-and-data-availability-for-detection",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE ATT&CK – Analytics",
+          "url": "https://attack.mitre.org/analytics/"
+        },
+        {
+          "label": "MITRE ATT&CK – Data Sources deprecation notice",
+          "url": "https://attack.mitre.org/datasources/"
+        },
+        {
+          "label": "Sigma Logsources",
+          "url": "https://sigmahq.io/docs/basics/log-sources.html"
+        }
+      ],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 example"
+      ],
+      "notes": []
+    },
+    {
+      "order": 105,
+      "part": "V",
+      "number": "4.8",
+      "title": "Site-Specific Detection Engineering Knowledge",
+      "source_path": "/thraining-plan/modules/04-de/08-site-specific/student-guide.md",
+      "library_file_id": "libfile_d59e9e475e7c819199eabc9f8f9c49b7",
+      "version_id": "1",
+      "modified_at": "2026-10-02T05:02:52.298352Z",
+      "sha256": "6652785e9a8ccad68175ebbb880fa692293646f174e1fbdc0205cbca2b935ce4",
+      "anchor": "48--site-specific-detection-engineering-knowledge",
+      "assets": [],
+      "references": [
+        {
+          "label": "Sigma Rules Specification",
+          "url": "https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html"
+        }
+      ],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "A12 onboarding exercise"
+      ],
+      "notes": []
+    },
+    {
+      "order": 106,
+      "part": "V",
+      "number": "4.9",
+      "title": "Detection Engineering Section Summary",
+      "source_path": "/thraining-plan/modules/04-de/09-summary/student-guide.md",
+      "library_file_id": "libfile_a76421fdc10481918a53ff9fc2ea4596",
+      "version_id": "1",
+      "modified_at": "2026-10-02T20:31:49.933787Z",
+      "sha256": "45e1994372d8e0f2094ddbb5f9bed554f7fa8ca18498d02b5636a6dabf2fd5ee",
+      "anchor": "49--detection-engineering-section-summary",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "3. A12 End to End",
+        "Step 1 – Need",
+        "Positive test",
+        "Step 7 – Improve",
+        "5. Integrated Review Exercise"
+      ],
+      "notes": [
+        "nested source headings retained within level 6",
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 107,
+      "part": "VI",
+      "number": "conclusion",
+      "title": "Course Summary – Bringing the Defensive Workflow Together",
+      "source_path": "/thraining-plan/modules/course-summary/student-guide.md",
+      "library_file_id": "libfile_9560a3ca230881918b3741bf885a035c",
+      "version_id": null,
+      "modified_at": "2026-10-02T20:31:35.184173Z",
+      "sha256": "08cb4f3866457d9bde7ae8b7a014dadd9f9d2f714aa3b6a80a26dc718100320c",
+      "anchor": "course-summary--bringing-the-defensive-workflow-together",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "login-prd",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "2. One A12 Story Across the Entire Course",
+        "1.x – SOC: Observe and Investigate",
+        "2.x – CTI: Answer the Intelligence Requirement",
+        "Enrich and discover relationships",
+        "Produce and close the RFI",
+        "Back to the SOC"
+      ],
+      "notes": [
+        "nested source headings retained within level 6",
+        "no proficiency mapping",
+        "secondary source H1 demoted to a section"
+      ]
+    }
+  ],
+  "supporting_sources": [
+    {
+      "source_path": "/thraining-plan/docs/companion-story/story.md",
+      "library_file_id": "libfile_8bdc2461717c8191a4a315261961a978",
+      "version_id": "1",
+      "modified_at": "2026-10-02T19:42:28.044234Z",
+      "sha256": "f913e2cba7c535047ad5db34627c5694b2cbc76f5d3073155cbf47ed47ca4d88"
+    },
+    {
+      "source_path": "/thraining-plan/docs/story-bible.md",
+      "library_file_id": "libfile_0c6f85cf31288191ad6388d2a1f8d563",
+      "version_id": "1",
+      "modified_at": "2026-10-02T19:42:27.986080Z",
+      "sha256": "57d5774a6d5a5d7a86d8d67ed380a133776cf20d866b036a40e53ae119014ef5"
+    },
+    {
+      "source_path": "/thraining-plan/docs/companion-story/README.md",
+      "library_file_id": "libfile_7305dbdfbc448191944314720ccb7190",
+      "version_id": null,
+      "modified_at": "2026-10-02T01:15:23.145014Z",
+      "sha256": "3f2415a23948df413ae72182045a2fab6ff4fb4739ebef29b587f5de09c41777"
+    },
+    {
+      "source_path": "/thraining-plan/docs/proficiency-legend.md",
+      "library_file_id": "libfile_80962a6c37d08191aeb7c9d3d7467853",
+      "version_id": null,
+      "modified_at": "2026-10-02T01:15:22.931935Z",
+      "sha256": "8b4bf6b6c62983983d26c9ac697e0a1b2ab0a70fd0ee2883bce52da8bf6140df"
+    }
+  ]
+}

@@ -1,91 +1,94 @@
-# Module 1.5.2 – Reporting Timeline Requirements  
-## Slide Deck Content
+# Module 1.5.2 – Reporting Timeline Requirements
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+- Describe submission and blocker-escalation clocks.
+- Calculate applicable deadlines from supplied timestamps.
+- Distinguish an at-risk deadline from one already breached.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.5.2 – Reporting Timeline Requirements  
-**Subtitle:** Which report clock, and whether it is at risk  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.5.1 named the type. This lesson is the clock for that type. It is not the alert 15 / 45, and it is not who gets the report.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts watch **report** clocks so a case record and a CTI question leave the desk on time.
+Reporting deadlines keep useful information moving while an investigation continues. A submission deadline and a blocker-escalation deadline can run at the same time, so recording their separate start points helps you act on both.
 
-This lesson names **which clock** applies and whether it is **at risk**.
-
-It is not the alert 15 / 45.
-
-**Speaker Notes:**  
-This slide is the student intro. A blocker also needs an escalate clock so it does not sit. Do not pick the type again. Do not route the report.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Submit vs escalate-for-more-info
-**Title:** Submit vs escalate-for-more-info
+## Understanding the classroom reporting clocks
 
-**Submit — incident** — from the decision. Classroom **30 minutes**.  
-**Submit — RFI** — from the question. Classroom **60 minutes**.  
-**Escalate-for-more-info** — from the moment you are blocked. Classroom **15 minutes**.
+Classroom limits: incident submission 30 minutes; RFI submission 60; blocker escalation 15, each from its own origin.
 
-These minutes are this lesson only. They are not a live shop policy.
-
-**Speaker Notes:**  
-Write the three rows and stop. Do not invent an informational or changeover clock. If the shop has another named type, that type has its own submit number.
+**Speaker notes:** Write each origin next to its duration. Explain that these are teaching assumptions rather than externally mandated reporting times.
 
 ---
 
-### Slide 4 – Which clock + at risk
-**Title:** Which clock + at risk
+## Reference — Understanding the classroom reporting clocks
 
-**Submit — RFI, at risk** — question `13:30`, still unsent at `14:40`.  
-That is not the 30-minute incident clock.
+| Clock | Origin | Classroom limit |
+|---|---|---|
+| Submit incident report | Decision that an incident report is required. | 30 minutes. |
+| Submit RFI | The information question arises. | 60 minutes. |
+| Escalate for more information | A blocker prevents completion without help from another function. | 15 minutes. |
 
-**Escalate-for-more-info, at risk** — blocked at `14:10`, still blocked at `14:28`.  
-Submit is still running. Act on the blocker.
-
-**Speaker Notes:**  
-A12 is the case they already opened. The RFI is the update-domain question. Walk both givens before the knowledge check. Do not retell the plot.
+**Speaker notes:** Write each origin next to its duration. Explain that these are teaching assumptions rather than externally mandated reporting times. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 5 – Knowledge Check
-**Title:** Knowledge Check
+## Calculating overlapping deadlines
 
-1. This lesson uses the same 15 / 45 clocks as **1.4.5**. True or false?  
-2. When does the **escalate-for-more-info** clock start?  
-3. RFI question at `13:30`, still unsent at `14:40`. Which clock, and is it at risk?
+The blocker and submission clocks can overlap. Escalation does not pause the submission goal in this example.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Have learners calculate due times first, then elapsed time. Distinguish a missed escalation from a submission deadline that is still approaching.
 
 ---
 
-### Slide 6 – Summary
-**Title:** Summary
+## Reference — Calculating overlapping deadlines
 
-Submit by type. When blocked, escalate.  
-Name the clock. These are not the alert SLA clocks.
+| Supplied situation | Due time and status |
+|---|---|
+| RFI question at 13:30; unsent at 14:40. | RFI due 14:30; breached by 10 minutes. |
+| Incident-report decision at 14:00; blocked at 14:10; still blocked at 14:28. | Blocker escalation due 14:25; breached by 3 minutes. Incident report due 14:30; 2 minutes remain. |
 
-**Speaker Notes:**  
-Routing is next. Stay off who gets the report until that lesson.
+**Speaker notes:** Have learners calculate due times first, then elapsed time. Distinguish a missed escalation from a submission deadline that is still approaching. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 7 – Next
-**Title:** Next
+## Recording the timing decision
 
-**1.5.3** Notification and distribution
+Record type, origin, due time, status, and next action. Distinguish at risk from already breached.
 
-**Speaker Notes:**  
-1.5.3 is who gets the report and which channel. It is not another clock lesson.
+**Speaker notes:** Ask for a record that preserves both obligations. Avoid implying a blocker automatically suspends reporting.
+
+---
+
+## Knowledge check
+
+1. When does each classroom reporting clock begin?
+2. Calculate the RFI status for a 13:30 question still unsent at 14:40.
+3. At 14:28, an incident report was required at 14:00 and blocked at 14:10. Identify both deadlines and the next action.
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Track submission by report type and escalation from the time a blocker arises. When both apply, retain both due times and act on the blocker without losing the submission requirement.
+
+Previous: [1.5.1 – Report Types](../01-report-types/student-guide.md)
+
+Next: [1.5.3 – Notification and Distribution](../03-notification-distribution/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

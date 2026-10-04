@@ -7,64 +7,67 @@
 - CTI: 1.5.2.1 B / C / C ; 1.5.2.2 3c / 4c / 4c  
 **Estimated Time:** 20–25 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name the two kinds of report clock: **submit** (by type) and **escalate-for-more-info**.
-2. Given timestamps, say **which clock applies** and whether it is **at risk**.
+1. Describe submission and blocker-escalation clocks.
+2. Calculate applicable deadlines from supplied timestamps.
+3. Distinguish an at-risk deadline from one already breached.
 
 **Mapped Proficiency Items:**
 - K: 1.5.2.1 – Reporting timeline requirements
 - T: 1.5.2.2 – Given timestamps, identify which report timeline applies and whether it is at risk
 
----
+## Why This Matters
 
-## 1. Key Concepts
+Reporting deadlines keep useful information moving while an investigation continues. A submission deadline and a blocker-escalation deadline can run at the same time, so recording their separate start points helps you act on both.
 
-SOC analysts watch **report** clocks so a case record and a CTI question leave the desk on time, and so a blocker is escalated instead of sitting. **1.5.1** already named the type — **incident report** (the case record) or **RFI** (the question to another desk). This lesson is **which clock** applies to that type, and whether it is **at risk**. It is **not** the alert 15 / 45 clocks (**1.4.5**). It is **not** who gets the report (**1.5.3**).
+## 1. Understanding the classroom reporting clocks
 
-**Classroom numbers (this lesson only — not a live shop policy):**
+The following times are classroom assumptions, separate from the alert-response clocks in 1.4.5. Operational and contractual requirements must come from the organization's current procedures.
 
-| Clock | From | Classroom |
-|-------|------|-----------|
-| **Submit — incident** | Decision that an **incident report** is required | **30 minutes** |
-| **Submit — RFI** | The **question** arises | **60 minutes** |
-| **Escalate-for-more-info** | You become **blocked** (cannot finish without another desk) | **15 minutes** |
+| Clock | Origin | Classroom limit |
+|---|---|---|
+| Submit incident report | Decision that an incident report is required. | 30 minutes. |
+| Submit RFI | The information question arises. | 60 minutes. |
+| Escalate for more information | A blocker prevents completion without help from another function. | 15 minutes. |
 
-If your shop uses different minutes, use those. The obligation is **submit-by-type** plus **blocked → escalate**, not 30 / 60 / 15. If your shop has an **other** type, that type has its own submit number — do not invent one here.
+A blocker does not pause the submission clock in this example. Escalating the blocker and submitting an available preliminary report may both be needed, according to the applicable process. Other local report types may have their own deadlines.
 
-**At risk** means the named clock will miss if you wait, or it is already past. “Late” with no clock name is not the task.
+## 2. Calculating overlapping deadlines
 
-Two clocks can be live. When you are blocked, name **escalate-for-more-info** first. Submit is still running.
+| Supplied situation | Due time and status |
+|---|---|
+| RFI question at 13:30; unsent at 14:40. | RFI due 14:30; breached by 10 minutes. |
+| Incident-report decision at 14:00; blocked at 14:10; still blocked at 14:28. | Blocker escalation due 14:25; breached by 3 minutes. Incident report due 14:30; 2 minutes remain. |
 
-**What good looks like:**
+In the second example, the submission deadline has not passed, but it is at risk because the blocker remains with little time available. Name both clocks and their status. The overdue escalation deserves immediate action while the submission obligation remains visible.
 
-- **Submit — RFI, at risk:** **A12** exists. Question to CTI on the update domain at `13:30`. Still unsent. Now `14:40`. Clock: **submit — RFI** (70 minutes, past 60). Not the 30-minute incident clock. Not the alert-close clock.
-- **Escalate-for-more-info, at risk:** **A12** incident decision `14:00`. At `14:10` you cannot finish without another desk. Still blocked. Now `14:28`. Clock: **escalate-for-more-info** (18 minutes, past 15). Submit-incident is still running (28 of 30) — act on the blocker.
+## 3. Recording the timing decision
 
----
+Use a record that makes the report type, origin, due time, current state, and next action clear. For the blocked incident example: “Incident report due 14:30; blocker escalation due 14:25 and overdue at 14:28. Escalate the missing-information need now and coordinate the available submission under the reporting procedure.”
 
-## 2. Knowledge Check
+Keep actual timestamps when actions occur. An escalation does not retroactively meet a missed deadline, and completing an alert does not automatically submit its report. Use a consistent time zone and dates when the work crosses midnight.
 
-1. This lesson uses the same 15 / 45 clocks as **1.4.5**. True or false?
-2. When does the **escalate-for-more-info** clock start?
-3. RFI question at `13:30`, still unsent at `14:40`. Which clock, and is it at risk?
+## Knowledge Check
 
----
+1. When does each classroom reporting clock begin?
+2. Calculate the RFI status for a 13:30 question still unsent at 14:40.
+3. At 14:28, an incident report was required at 14:00 and blocked at 14:10. Identify both deadlines and the next action.
 
-## 3. Summary
+## Summary
 
-Submit by type. When blocked, escalate. Name the clock. These are not the alert SLA clocks.
+Track submission by report type and escalation from the time a blocker arises. When both apply, retain both due times and act on the blocker without losing the submission requirement.
 
-**Next:** **1.5.3** Notification and distribution.
+## Course Connections
 
----
+Previous: [1.5.1 – Report Types](../01-report-types/student-guide.md)
 
-## 4. Related modules
+Next: [1.5.3 – Notification and Distribution](../03-notification-distribution/student-guide.md)
 
-- 1.5.1 – Report types (previous)
-- 1.5.3 – Notification and distribution
-- 1.4.5 – SLA / response time goals (alert clocks, not these)
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)

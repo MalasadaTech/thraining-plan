@@ -1,113 +1,123 @@
-# Module 1.1.4 – Network Activity (Endpoint)  
-## Slide Deck Content
+# Module 1.1.4 – Network Activity (Endpoint)
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Interpret endpoint network addresses, operations, direction, names, and process context.
+- Describe the supplied event with its evidence limits.
+- Create or modify a query for specific endpoint network activity.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.1.4 – Network Activity (Endpoint)  
-**Subtitle:** Which process on this device talked  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.1.3 was the file event on the same host. This lesson is the host-network kind. It is not Zeek and not how to install Sysmon.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read **host-network** events to see which process on this device talked, and to where.
+Endpoint network events connect network activity to a process on a device. That process context can help explain a connection that a network sensor sees only as traffic between addresses.
 
-The point versus Zeek is the initiating process.  
-Not Zeek. Not how to install Sysmon.
-
-**Speaker Notes:**  
-This is daily alert work: describe the endpoint network log. Registry and Zeek wait for later lessons.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Address, direction, name
-**Title:** IP, port, direction, name when logged
+## Reading the endpoint view
 
-**Source / dest / protocol / direction** — who talked to whom. `Initiated=true` = this process started it.
+Read outcome, endpoints, protocol, direction evidence, names, and associated process. Local/remote does not by itself establish initiation.
 
-**Domain / URL** — when the endpoint logged them. Empty ≠ no DNS.
-
-**Speaker Notes:**  
-Walk address and direction first. Port 443 does not make an unexpected initiator “expected.” A missing name is a gap, not proof that DNS never happened.
+**Speaker notes:** Distinguish local/remote from source/destination and initiation. Use Sysmon Initiated as one concrete source-specific example.
 
 ---
 
-### Slide 4 – Who talked
-**Title:** Initiating process
+## Reference — Reading the endpoint view
 
-Sysmon `Image`. MDE `InitiatingProcess*`.
+| Detail | What it contributes |
+|---|---|
+| Local and remote address/port | MDE `LocalIP`, `LocalPort`, `RemoteIP`, and `RemotePort` identify the endpoints. Local/remote alone does not establish who initiated. |
+| Protocol and operation | Read the protocol and `ActionType` to distinguish the recorded connection outcome. |
+| Direction | Sysmon 3 `Initiated` helps identify whether the process initiated the connection; interpret direction using the source's semantics. |
+| Process | Sysmon `Image` or MDE `InitiatingProcess*` associates the activity with a process. |
+| Name information | Sysmon 22 `QueryName` records DNS queries when collected. MDE `RemoteUrl` may contain a URL or FQDN; a blank field does not establish that DNS was unused. |
 
-This is the point of this lesson versus Zeek.  
-A `conn` log will not give you this field.
-
-**Speaker Notes:**  
-The host-network event names who opened the socket. Do not teach JA3 or Zeek `uid` here.
-
----
-
-### Slide 5 – How it shows up
-**Title:** Sysmon and MDE
-
-Sysmon **3** (connect). Sysmon **22** (DNS, if in the feed).
-
-MDE `DeviceNetworkEvents` `ActionType`:  
-**ConnectionSuccess** (this process completed a connection).
-
-Same activity. Different field names.  
-The full `ActionType` list is in the Defender portal — do not invent values.
-
-**Speaker Notes:**  
-DNS on the endpoint is Sysmon 22 when that event is in the feed. No Event 22 → “DNS not logged on the endpoint.” Do not teach Sysmon install.
+**Speaker notes:** Distinguish local/remote from source/destination and initiation. Use Sysmon Initiated as one concrete source-specific example. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
+## Working through the example
 
-One sentence: which process, to which IP/port, which direction.
+PowerShell is associated with a recorded successful TCP connection to 203.0.113.88:443. The record lacks a URL/FQDN.
 
-**Given:** `powershell.exe -enc …` `ConnectionSuccess` → `203.0.113.88:443`, no URL.
-
-A query names a **specific** pattern — initiator + dest port or remote IP.  
-Not “all connections.”
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: hidden encoded PowerShell connected outbound 443. URL not logged. Do not tell the intro plot.
+**Speaker notes:** Have learners build the sentence from supplied fields; discuss why a commonly used port is insufficient to identify application behavior.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Supplied example
 
-1. A Zeek `conn` log names the initiating process. True or false?  
-2. `powershell.exe -enc …` has `ConnectionSuccess` to `203.0.113.88:443` and no `RemoteUrl`. In one sentence, what occurred?  
-3. A SIEM query that matches every endpoint network event is a good “specific endpoint network activity” query. True or false?
+A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=203.0.113.88`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Have learners build the sentence from supplied fields; discuss why a commonly used port is insufficient to identify application behavior.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Creating a focused network query
 
-Which process talked, to where.  
-Direction and initiator tell the story.  
-A missing name is a gap.  
-Zeek does not name the process.  
-A query is specific.
+Search the specified process and destination. A connection query and a DNS query answer different questions.
 
-**Next:** **1.1.5** Registry activity
+**Speaker notes:** Ask what broadens when the process filter is removed. This tests query reasoning without requiring a live connection or tenant.
 
-**Speaker Notes:**  
-1.1.5 is the registry event on the same host telemetry. Stay off this host-network event when you get there.
+---
+
+## Reference — Creating a focused network query
+
+| where Timestamp > ago(1d)
+| where ActionType == "ConnectionSuccess"
+| where InitiatingProcessFileName =~ "powershell.exe"
+| where RemoteIP == "203.0.113.88" and RemotePort == 443
+| project Timestamp, DeviceName, Protocol, LocalIP, LocalPort,
+
+**Speaker notes:** Ask what broadens when the process filter is removed. This tests query reasoning without requiring a live connection or tenant. Use the surrounding student-guide explanation to interpret the table and its limits.
+
+---
+
+## Worked example — Creating a focused network query
+
+```kusto
+DeviceNetworkEvents
+| where Timestamp > ago(1d)
+| where ActionType == "ConnectionSuccess"
+| where InitiatingProcessFileName =~ "powershell.exe"
+| where RemoteIP == "203.0.113.88" and RemotePort == 443
+| project Timestamp, DeviceName, Protocol, LocalIP, LocalPort,
+          RemoteIP, RemotePort, RemoteUrl, InitiatingProcessCommandLine
+```
+
+**Speaker notes:** Ask what broadens when the process filter is removed. This tests query reasoning without requiring a live connection or tenant. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. What does endpoint network evidence add to a native Zeek connection record?
+2. What can you say about the supplied TCP/443 event when RemoteUrl is blank?
+3. How would you modify the query to find the same destination used by any process?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+Endpoint network evidence helps connect a process to a recorded network operation. Describe the outcome, endpoints, protocol, and available names, then use a focused query to investigate the chosen pattern.
+
+Previous: [1.1.3 – File System Activity](../03-file-system-activity/student-guide.md)
+
+Next: [1.1.5 – Registry Activity](../05-registry-activity/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceNetworkEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

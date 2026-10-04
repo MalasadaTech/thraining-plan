@@ -1,97 +1,80 @@
-# Module 1.2.1 – Zeek Concepts  
-## Slide Deck Content
+# Module 1.2.1 – Zeek Concepts
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 15–20 minutes  
-**Total Suggested Slides:** 7
+- Explain Zeek’s purpose and the role of analyzers and scripts.
+- Distinguish network-sensor records from endpoint evidence.
+- Explain when PCAP can verify or expand a logged observation.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.2.1 – Zeek Concepts  
-**Subtitle:** Network-sensor logs from the wire  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.1 was host and endpoint activity — logs from the host. This unit is network-sensor telemetry. This lesson does not teach conn fields or Wireshark.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-An alert can name traffic on the **wire**, not only a host.
+Network-sensor evidence describes traffic visible at an observation point. Zeek turns that traffic into structured records that analysts can search and connect. Understanding how those records are produced helps you choose the right log and recognize when additional evidence is needed.
 
-**1.1** was host and endpoint activity — logs from the host.  
-This unit is **network-sensor** telemetry.
-
-Zeek writes structured logs. It does **not** name the initiating process.
-
-**Speaker Notes:**  
-This slide is the student intro. Analysts read Zeek when the work is on the wire. Name what Zeek is before anyone opens conn fields.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – What Zeek is
-**Title:** A network analysis framework
+## How traffic becomes a log
 
-Not primarily a signature IDS.
+Analyzers interpret traffic; scripts use events to produce structured records. Different logs expose different observations.
 
-It classifies traffic and writes logs you query in a SIEM.
-
-**Speaker Notes:**  
-Stay on what Zeek is. Do not teach Bro history as a unit. Do not turn this into a Suricata lesson.
+**Speaker notes:** Explain analyzer versus logging script without introducing a scripting course. Use conn, DNS, and files as examples of different record purposes.
 
 ---
 
-### Slide 4 – Engines
-**Title:** Engines extract protocol
+## Relating Zeek to endpoint evidence
 
-An **engine** (script / analyzer) looks at a flow, decides the protocol, and **extracts** the fields.
+Correlate sensor and endpoint evidence using supported identity, timing, and flow details. Account for visibility.
 
-That is how applications and protocols **surface** as logs you can query.
-
-Conn, DNS, TLS, HTTP, SMTP, files, and weird are later lessons.
-
-**Speaker Notes:**  
-Surface means the application or protocol shows up as a log. Do not walk `orig_h`. Those fields are 1.2.2.
+**Speaker notes:** Ask what makes two records plausibly related and what could break the association, such as address translation or time differences.
 
 ---
 
-### Slide 5 – PCAP
-**Title:** Why pull PCAP
+## Supplied example
 
-A Zeek log is an **extract**.
+A native Zeek record generally identifies network endpoints, times, and protocol details. An endpoint record may identify the responsible operating-system process. To connect them, examine the host/address relationship, time, ports, protocol, and available identifiers.
 
-Pull **PCAP** (a packet capture) to **verify** that extract, or to **expand** what the log does not carry.
-
-Not Wireshark. Not the site download path.
-
-**Speaker Notes:**  
-PCAP is why you pull the packets, not how you read them. Sensors are 0.8. Applying PCAP against an alert is 1.4.1.
+**Speaker notes:** Ask what makes two records plausibly related and what could break the association, such as address translation or time differences.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## When packet capture helps
 
-1. Zeek is primarily a signature-based IDS. True or false?  
-2. What does an engine do?  
-3. You already have a Zeek log. Why pull PCAP?
+Retained PCAP can add headers or visible content. Missing, partial, or encrypted capture may leave the question unresolved.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Compare an IP-and-port alert with a cleartext request. Then change only the visibility to encrypted traffic and ask how the possible answer changes.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Knowledge check
 
-Framework, not signature IDS.  
-Engines extract protocol.  
-PCAP verifies or expands the extract.
+1. How do analyzers and scripts contribute to Zeek logs?
+2. What can endpoint evidence add to a Zeek connection record?
+3. When would PCAP add information, and when might it not?
 
-**Next:** **1.2.2** Conn engine
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
 
-**Speaker Notes:**  
-1.2.2 is the conn log on the same network-sensor telemetry. Stay off conn fields until then.
+---
+
+## Summary and next step
+
+Zeek supplies structured observations from network traffic. Choose a log according to the question, account for the sensor’s view, and use retained PCAP when it can add relevant evidence.
+
+Previous: [1.1.6 – Image and Driver Load Activity](../../01-endpoint/06-image-driver-load/student-guide.md)
+
+Next: [1.2.2 – Conn Engine](../02-conn-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Zeek — Log files](https://docs.zeek.org/en/master/reference/zeekscript/log-files.html)
+- [Zeek — conn.log](https://docs.zeek.org/en/current/reference/logs/conn.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

@@ -6,98 +6,61 @@
 - SOC: 3.6.3 1a / 1a / 2b  
 - CTI: 3.6.3 1a / 1a / 2b  
 **Estimated Time:** 20–25 minutes  
-**Delivery Method:** Instructor-led
+**Delivery Method:** Instructor-led explanation and discussion
 
----
+## Module Purpose
 
-## Module Overview for Instructors
+Use this lesson to teach the reasoning skill in the student guide, not merely the vocabulary. Keep the A12 examples evidence-bound and connect findings to the next module rather than turning each lesson into a complete hunt exercise.
 
-**Purpose of this module:**  
-Turn one named persistence or privilege-escalation method into a bounded hunt. Reject the whole tactic and the wrong class.
+## Learning Objectives and Mapping
 
-**Context (plain language):**
-
-- What this lesson is for: Hunters search for activity the alerts missed. After they can recognize a method, they still have to turn it into a hunt someone can run — one named method, a unique pattern, and a bound.
-- How it hooks to the lesson before: 3.6.2 recognized elevation. 3.6.1 recognized persistence.
-- How it hooks to the lesson after: 3.7.1 is how the shop starts and controls a hunt.
-- Why we are doing it this way: recognition already happened; this lesson is the hunt product so they do not treat the class as the hunt.
-- What we are *not* doing in this lesson: hunt types (3.2.1). Full card rewrite (3.2.2). ATT&CK remapping (3.5). Invented tickets (3.7). Recognition drill. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **named technique**, **class**, **unique pattern**, **scope**, and **hunt line**. **Privilege escalation** is the student-guide word, not a shop shortening. The given uses the course-fiction Run value **`Updater`** → `%TEMP%\update.exe`. Do not retell the incident. Do not invent a ticket name.
-
-**Key Teaching Points:**
-- Named method, not the class.
-- Unique pattern is what you search — the value name `Updater`, not any Run key.
-- Wrong class fails: a SYSTEM scheduled task is not privilege escalation unless elevation is shown.
-- The product is a bounded hunt, not a SOC-ticket rewrite and not a ticket you invent.
-
-**Common Student Challenges:**
-- Write “hunt persistence” as the hunt. Why: the class is what they just learned to recognize. Example: “search all Run keys / all scheduled tasks.”
-- Call a SYSTEM scheduled task privilege escalation. Why: SYSTEM looks high-privilege. Example: hunting “SYSTEM tasks” as elevation when no user-to-SYSTEM step is in the log.
-- Invent a ticket so the hunt has a number. Why: they want a place to file it. Example: “open Hunt-17.” That is 3.7.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
-
-## Learning Objectives
-
-Same as the student guide.
-
-**Mapped Proficiency Items:**
 - T: 3.6.3 – Hunt for specific persistence or privilege escalation techniques
-
----
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+| Part | Time |
+|---|---:|
+| Context / prior-module connection | 3 min |
+| Core concepts | 10–12 min |
+| A12 or classroom application | 4–5 min |
+| Knowledge check | 4 min |
+| Summary / transition | 2 min |
 
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | One named method, not the class |
-| Key Concepts            | 12 min    | Hunt line; two fails |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~21 min** | |
+## Teaching Notes
 
----
+- Use the ATT&CK technique name correctly; 'Updater' is a procedure/artifact, not the technique.
+- Teach exact-observed vs behavior-broadened hunting as a precision/coverage trade-off.
+- Require scope and telemetry in the hunt line.
+- Prevent wrong-class hunts by requiring evidence of the technique's role and prerequisites.
 
-## Detailed Teaching Notes
+## Common Coaching Pattern
 
-### 1. Key Concepts
+When a learner overstates the evidence, ask:
 
-**Talking Points:**
-- Open with the job: hunters look for missed activity, and a class is not a hunt.
-- Write the five hunt-line pieces from the student guide. Stop there. Do not rewrite the 3.2.2 card.
-- Walk the given: HKCU Run **`Updater`** → `%TEMP%\update.exe` on user workstations, last 14 days, registry + file. Unique pattern is the value name.
-- Fail “hunt persistence”: no unique pattern and no bound.
-- Fail swapping a SYSTEM scheduled task into privilege escalation when no elevation was shown.
-- If they invent a ticket name: that is 3.7. This lesson does not open one.
-- If they rewrite the SOC ticket: different product. This lesson is a bounded hunt.
-- If they remap to ATT&CK: that is 3.5. Naming the technique here is enough.
+1. **What did we actually observe?**
+2. **What does that observation support?**
+3. **What additional evidence would be required for the stronger claim?**
 
----
+For hunt modules, also ask whether the required telemetry exists and whether the search is bounded enough for a negative result to mean anything.
 
 ## Knowledge Check – Answer Key
 
-1. **“Hunt persistence” is a valid 3.6.3 hunt. True or false?**  
-   **Answer:** False. Persistence is a class, not a hunt.  
-   **Explanation:** A hunt names one method and a unique pattern. “Hunt persistence” has neither a unique pattern nor a bound.
+### 1. Technique vs procedure pattern?
 
-2. **What does named mean in this lesson?**  
-   **Answer:** A method you can point at — a value name, a parent/child pair, a specific binary — not the tactic.  
-   **Explanation:** HKCU Run **`Updater`** is named. “Persistence” is not.
+**Expected answer:** The ATT&CK technique is the behavior class; the procedure pattern is the concrete implementation/artifact searched locally.
 
-3. **Write one hunt line for HKCU Run `Updater` → `%TEMP%\update.exe` (named technique, class, unique pattern, scope).**  
-   **Answer:** Run **`Updater`** → `%TEMP%\update.exe` \| persistence \| value name `Updater` (not any Run key) \| user workstations / last 14 days / registry + file.  
-   **Explanation:** Unique pattern is the value name. Class is persistence. Scope is bounded. Why not the whole tactic: this value, not every autorun.
+### 2. Exact vs broadened trade-off?
 
----
+**Expected answer:** Exact searches are precise but can miss variants; broadened behavior searches improve coverage but increase benign candidates.
 
-## Additional Instructor Resources
+### 3. Write A12 T1547.001 hunt line.
 
-- Next: 3.7.1 Hunt control and lead management
+**Expected answer:** Example: T1547.001/Persistence; user workstations; last 14 days; registry+file telemetry; exact Updater→%TEMP%\update.exe then broaden to rare Run values launching from user-writable Temp paths.
+
+## Transition
+
+Use the student's **Next** line to connect this lesson to the following module. Preserve unresolved visibility, detection, attribution, and scope gaps instead of solving them with assumptions.
+
+## Supporting References
+
+- [T1547.001 Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)

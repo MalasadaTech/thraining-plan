@@ -1,115 +1,126 @@
-# Module 1.1.2 – Process Activity  
-## Slide Deck Content
+# Module 1.1.2 – Process Activity
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Interpret process creation, termination, and access events.
+- Describe a process event using its recorded fields and limitations.
+- Create or modify a query for a specific process pattern.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.1.2 – Process Activity  
-**Subtitle:** Who ran what on the host  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.1.1 named the five kinds of host activity. This lesson is the process kind. It is not Zeek and not how to install Sysmon.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read **process** events to see who ran what.
+A process event helps answer which program ran, what started it, and under which account. Reading those relationships carefully gives the investigation a stronger starting point than relying on the executable name alone.
 
-Create. Terminate. Who touched whom.  
-Not Zeek. Not how to install Sysmon.
-
-**Speaker Notes:**  
-This is daily alert work: describe the process event. File and DNS wait for later lessons.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Create, parent, command line
-**Title:** Create, terminate, parent, command line
+## Reading a process event
 
-**Create / terminate** — Sysmon 1 / 5. MDE create is `ProcessCreated`. Terminate is Sysmon 5, not an MDE `ProcessTerminated` value on this table.
+Read the operation, process identity, command line, parent, account, integrity, and available hashes. Process access differs from creation.
 
-**PID, name, command line** — the image name can be fake. The command line is often what actually ran.
-
-**Parent-child** — who launched it. MDE `InitiatingProcess*` is the parent.
-
-**Speaker Notes:**  
-Walk create, parent, and command line first. `Office` launching `cmd` is a different event than `explorer` launching `notepad`.
+**Speaker notes:** Have learners identify the operation first, then explain parent, user, and stable identity. Clarify that hash and original-name fields describe files or metadata rather than intent.
 
 ---
 
-### Slide 4 – User, hash, who touched whom
-**Title:** User, hash, who touched whom
+## Reference — Reading a process event
 
-**Integrity / user** — where logged. Empty is a gap, not “not admin.”
+| Detail | What to examine |
+|---|---|
+| Operation | Sysmon 1 records process creation, 5 termination, and 10 process access. These are different operations. |
+| Process identity | Image path, PID, event time, and a stable process identifier where available. PIDs can be reused. |
+| Command line | Recorded arguments explain how the program was invoked; they may be incomplete or attacker-controlled. |
+| Parent and account | Parent fields and user context help explain the launch relationship. In an MDE creation event, `InitiatingProcess*` describes the initiating process. |
+| Integrity and elevation | Use recorded integrity and token information to assess execution context. An empty field leaves a gap. |
+| Hash and original filename | Identify the file and its embedded metadata. MDE uses `ProcessVersionInfoOriginalFileName`; a name or trusted hash alone does not establish benign use. |
 
-**Hash / original filename** — file bytes vs PE resource. They can disagree.
-
-**Process access** — Sysmon **10**. Source → target. Not a create.
-
-**Speaker Notes:**  
-Event 10 is who touched whom. Do not turn it into a credential-dump lesson. Do not treat it as a process start.
-
----
-
-### Slide 5 – How it shows up
-**Title:** Sysmon and MDE
-
-Sysmon **1** / **5** / **10**.
-
-MDE `DeviceProcessEvents` `ActionType`:  
-**ProcessCreated** (create). **OpenProcess** (who touched whom).
-
-Same activity. Different field names.  
-The full `ActionType` list is in the Defender portal — do not invent values.
-
-**Speaker Notes:**  
-Terminate is Sysmon 5. Do not invent `ProcessTerminated` on this MDE table. Do not teach Sysmon install.
+**Speaker notes:** Have learners identify the operation first, then explain parent, user, and stable identity. Clarify that hash and original-name fields describe files or metadata rather than intent. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
+## Working through the example
 
-One sentence: who ran what, from whom, as whom.
+Script Host launches PowerShell with an encoded argument as jlee. Decoded behavior and hidden-window execution remain unestablished.
 
-**Given:** `wscript.exe` (Temp `invoice.vbs`) → `powershell.exe -enc …` as `jlee`.
-
-A query names a **specific** pattern — parent + command-line fragment.  
-Not “all processes.”
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: script host launched hidden encoded PowerShell. Parent and command line are what you write down. Do not tell the intro plot.
+**Speaker notes:** Ask which field supports each phrase. Challenge the word “hidden” if a learner introduces it without evidence.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Supplied example
 
-1. Sysmon Event 10 is a process start. True or false?  
-2. `wscript.exe` (Temp `.vbs`) creates `powershell.exe -enc …`. In one sentence, what occurred?  
-3. A SIEM query that matches every process is a good “specific process activity” query. True or false?
+The supplied creation event records `wscript.exe` launching `powershell.exe -enc …` as `jlee`. A supported description is: “Script Host launched PowerShell with an encoded-command argument under the recorded account `jlee`.” The parent, command line, and account fields support the sentence.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Ask which field supports each phrase. Challenge the word “hidden” if a learner introduces it without evidence.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Creating a focused process query
 
-Who ran what, from whom, as whom.  
-Create, terminate, or access.  
-Command line and parent are what you trust.  
-A query is specific.
+Filter the process-created event by image, parent, and command-line pattern. Explain substring matching and coverage limits.
 
-**Next:** **1.1.3** File system activity
+**Speaker notes:** Read each query filter aloud and compare one matching event with a nonmatching parent. This is a worked query discussion; execution in a live tenant is not required.
 
-**Speaker Notes:**  
-1.1.3 is the file event on the same host telemetry. Stay off this process event when you get there.
+---
+
+## Reference — Creating a focused process query
+
+| where Timestamp > ago(1d)
+| where ActionType == "ProcessCreated"
+| where FileName =~ "powershell.exe"
+| where InitiatingProcessFileName =~ "wscript.exe"
+| where ProcessCommandLine contains "-enc"
+| project Timestamp, DeviceName, AccountName, ProcessCommandLine,
+
+**Speaker notes:** Read each query filter aloud and compare one matching event with a nonmatching parent. This is a worked query discussion; execution in a live tenant is not required. Use the surrounding student-guide explanation to interpret the table and its limits.
+
+---
+
+## Worked example — Creating a focused process query
+
+```kusto
+DeviceProcessEvents
+| where Timestamp > ago(1d)
+| where ActionType == "ProcessCreated"
+| where FileName =~ "powershell.exe"
+| where InitiatingProcessFileName =~ "wscript.exe"
+| where ProcessCommandLine contains "-enc"
+| project Timestamp, DeviceName, AccountName, ProcessCommandLine,
+          InitiatingProcessCommandLine, ProcessId, SHA1, SHA256
+```
+
+**Speaker notes:** Read each query filter aloud and compare one matching event with a nonmatching parent. This is a worked query discussion; execution in a live tenant is not required. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. What distinguishes Sysmon events 1, 5, and 10?
+2. Describe the supplied wscript-to-PowerShell event and identify one unknown.
+3. Modify the query to look for the same PowerShell pattern started by cscript.exe. What changes?
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+A useful process description connects the operation, program, command line, parent, and account to recorded evidence. A focused query expresses the chosen pattern and makes its coverage limits clear.
+
+Previous: [1.1.1 – Endpoint activity (the map)](../01-endpoint-activity/student-guide.md)
+
+Next: [1.1.3 – File System Activity](../03-file-system-activity/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — DeviceProcessEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table)
+- [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

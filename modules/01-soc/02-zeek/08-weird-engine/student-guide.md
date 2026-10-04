@@ -5,67 +5,76 @@
 - SOC: 1.2.8.1 A / B / C ; 1.2.8.2 2b / 3c / 4c ; 1.2.8.3 2b / 3c / 4c  
 - Hunter: 1.2.8.1 B / C / C ; 1.2.8.2 3c / 4c / 4c ; 1.2.8.3 3c / 4c / 4c  
 - CTI: 1.2.8.1 A / A / A ; 1.2.8.2 1a / 1a / 1a ; 1.2.8.3 1a / 1a / 1a  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Read a Zeek **weird** log: the type, who talked to whom, and the UID that joins other Zeek logs.
-2. Describe what a **weird** log shows, and say what a **specific** SIEM query looks like.
+1. Interpret a weird type, notice flag, endpoints, and available UID.
+2. Describe the reported condition from the sensor’s viewpoint.
+3. Create or modify a query for a specific weird condition.
 
 **Mapped Proficiency Items:**
 - K: 1.2.8.1 – Weird engine
 - T: 1.2.8.2 – Analyze a Zeek weird log and accurately describe what occurred
 - T: 1.2.8.3 – Create a SIEM query to detect specific weird activity
 
----
+## Why This Matters
 
-## 1. Key Concepts
+A weird record reports an unexpected condition encountered by Zeek. It is useful because it points to traffic or visibility worth examining, but its meaning depends on the named condition and the surrounding evidence.
 
-SOC analysts read the Zeek **weird** log when the sensor saw protocol behavior that is off-spec or uncommon. That is daily alert work: a log names a type, two endpoints, and often a connection ID, and you have to say what Zeek flagged — not whether it is an incident. A **weird** event is a **lead**, not a verdict. It does **not** name the initiating process. That was **1.1.4**.
+## 1. Reading an unexpected condition
 
-Zeek watches the **wire**. Each **weird** log is one **event**. In a SIEM, that event usually shows up as a **row** in a table. Later lessons may still say “row.” Here it means the same thing as the log.
+| Field | What to examine |
+|---|---|
+| `name` | The specific unexpected condition reported by Zeek. |
+| Endpoint fields | Connection endpoints when the condition is associated with a connection. |
+| `uid` | Related connection identifier when available. |
+| `notice` | Whether the condition also resulted in a notice under the applicable policy. |
+| `addl` | Additional explanatory detail when supplied. |
 
-| Idea | What to read |
-|------|----------------|
-| **Type / notice** | `name` — the weird type (the string you query). `notice` is a boolean: whether *this* type was also raised as a notice. This is **not** a `notice.log` lesson. |
-| **Source / dest** | `id.orig_h` / `id.orig_p` → `id.resp_h` / `id.resp_p` |
-| **Connection UID** | `uid` — the same join as `conn`, `http`, and `files`. Empty → write “no uid” and use IP, port, and time if they are logged. |
+Weird records may reflect unusual protocol behavior, malformed traffic, sensor visibility gaps, or other analysis conditions. Some do not have a complete connection context. Use the recorded type to develop a question rather than treating “weird” as a severity or malware label.
 
-Do not memorize the Zeek catalog. Describe the `name` you have. Do not invent a story from the word “weird.” Many types fire on noisy, broken, or mid-stream traffic.
+## 2. Working through the example
 
-This lesson only reads the **weird** log. It is not a PCAP analysis lesson. Detection rule syntax is **1.3**.
+The example records `name=data_before_established`, responder `203.0.113.88:8080`, and `uid=CTrain1`.
 
-**What good looks like:**
+A supported description is: “Zeek reported data before it had observed an established TCP connection for the supplied flow.” This wording preserves the sensor's viewpoint: it does not prove that the endpoints themselves skipped a handshake. Examine the connection history and, if available, the relevant packets to understand whether traffic behavior or incomplete visibility explains the record.
 
-- Describe: one sentence — Zeek flagged this `name` between these IPs/ports. Then say which `uid` you would open on `conn`. Do not call it malware.
-- Given: `name` `data_before_established`, `id.resp_h` `203.0.113.88`, `id.resp_p` `8080`, `uid` present. **What occurred:** Zeek saw data before the TCP handshake finished to `203.0.113.88:8080`. Open `conn` on that `uid`. Do not name a process.
-- Query: names a **specific** `name` (or dest), not every **weird** event.
+## 3. Creating a focused weird query
 
----
+This KQL teaching example assumes an ingested table named `ZeekWeird`, a datetime `TimeGenerated` column, and columns retaining the Zeek field names shown below. These are classroom table names, not built-in Zeek or SIEM tables. Map names and data types to your ingestion schema before use.
 
-## 2. Knowledge Check
+```kusto
+ZeekWeird
+| where TimeGenerated > ago(1d)
+| where name == "data_before_established"
+| where ['id.resp_h'] == "203.0.113.88"
+| project TimeGenerated, uid, name, ['id.orig_h'], ['id.resp_h'],
+          ['id.resp_p'], notice
+```
 
-1. A single **weird** event is an incident. True or false?
-2. `name` `data_before_established`, dest `203.0.113.88:8080`, `uid` present. In one sentence, what occurred?
-3. A SIEM query that matches every **weird** event is a good “specific weird activity” query. True or false?
+The query selects a named condition at the example destination. If the record has no UID, use the available endpoints and time to seek context, acknowledging a less certain correlation. A resulting lead can justify investigation even before an incident determination is possible.
 
----
+## Knowledge Check
 
-## 3. Summary
+1. What does a weird record establish?
+2. Describe data_before_established without overstating what happened at the endpoints.
+3. How would you broaden the query to that condition across all destinations, and what would you use to investigate matches?
 
-A **weird** event is a type, two endpoints, and a UID. It is a lead. The process is not on this log. A query names a specific type.
+## Summary
 
-**Next:** **1.3.1** SIGMA rules.
+A weird record supplies a named condition and any available connection context. Use it to ask a focused follow-up question and separate the sensor’s observation from an explanation of its cause.
 
----
+## Course Connections
 
-## 4. Related modules
+Previous: [1.2.7 – Files Engine](../07-files-engine/student-guide.md)
 
-- 1.2.7 – Files engine (previous)
-- 1.2.2 – Conn engine
-- 1.1.4 – Host-observed network
-- 1.3.1 – SIGMA rules
+Next: [1.3.1 – SIGMA Rules](../../03-detection/01-sigma-rules/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Zeek — weird.log and notice.log](https://docs.zeek.org/en/current/reference/logs/weird-and-notice.html)

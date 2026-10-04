@@ -7,72 +7,77 @@
 - CTI: 3.4.3 A / B / B ; 3.4.3.1 1a / 2b / 3c ; 3.4.3.2 1a / 1a / 2b  
 **Estimated Time:** 20–25 minutes
 
----
-
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Identify STIX objects and references that can supply hunt-relevant evidence.
+2. Convert STIX content into a local hunt lead without assuming that every object—or every object in the same Bundle—is directly searchable.
 
-1. Name the STIX objects a hunter actually uses in a report or bundle.
-2. Turn those objects into hunt leads — you do **not** author STIX here.
+## Mapped Proficiency Items
 
-**Mapped Proficiency Items:**
 - K: 3.4.3 – STIX as hunt input
 - T: 3.4.3.1 – Identify hunt-relevant objects in a report or bundle
 - T: 3.4.3.2 – Turn those objects into hunt leads
 
----
-
 ## 1. Key Concepts
 
-Hunters read CTI that arrives as a **report** or as a **STIX** package. **STIX** (Structured Threat Information Expression) is the language CTI uses to label threat facts as objects. Version **2.1** is the spec this course uses. A **bundle** is a wrapper that carries those objects as one package. Structured JSON looks official. It is not automatically a hunt. Your job is to name the objects that can actually drive a search, then turn those objects into a hunt question that can fail. That is the job in this lesson.
+STIX gives CTI a structured way to represent threat and observable information. Hunters consume that structure; they do not need to author it in this lesson.
 
-You do **not** author, validate, or share STIX here (**2.10**). Extracting leads from prose is **3.4.2**. Mapping this hunt onto ATT&CK is **3.5**. Classroom bundle only. Do not stand up a TAXII server.
+Reference: [OASIS STIX 2.1](https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html)
 
-These are the objects a hunter actually uses. The name in the first column is the STIX **2.1** `type` you see in the bundle.
+### Objects with direct hunt value
 
-| Object | Hunt-relevant when |
-|--------|--------------------|
-| **indicator** | It is a current pattern you can query (hash, host, IP, URL) |
-| **attack-pattern** | It names a method specific enough to search, and you have telemetry |
-| **observed-data** | It is a recorded sample that still names something searchable |
-| **malware** | It gives a current hash or named installer — not the family slogan |
-| **threat-actor** / **intrusion-set** | It is a scope or priority hook. It is not a search by itself |
-| **relationship** | It ties the other objects together (`indicates`, `uses`) |
+| STIX content | Hunt use |
+|---|---|
+| **Indicator** | Parse the pattern into observable fields/values that local telemetry can search. Check validity and context. |
+| **Observed Data + referenced SCOs** | Identify the file, IP, domain, process, registry key, or other observable that was actually recorded. |
+| **Attack Pattern** | Use the named behavior as a hunt seed when locally applicable and visible. |
+| **Sighting** | Understand that an SDO was reported as seen; inspect `observed_data_refs` and where it was sighted when available. |
+| **Relationship** | Preserve why objects are connected (`indicates`, `uses`, `based-on`, etc.) so the lead keeps its analytic context. |
 
-**Campaign**, **course-of-action**, **identity**, and **sighting** exist in STIX **2.1**. Hunters may see them in a bundle. They are not the objects this lesson asks you to use as hunt input.
+### Context objects are useful without being direct queries
 
-A bundle **seeds** a hunt when the objects you pick can support a question that can fail. An actor name is not a search. Dumping every IPv4 **indicator** into a block list is not a seed.
+**Malware**, **Threat Actor**, **Intrusion Set**, and **Campaign** can help prioritize or group a hunt, but the object name itself may not be searchable in local telemetry.
 
-**What good looks like:** someone gives you a classroom bundle for incident **A12**. You name the hunt-relevant objects. You write the lead. You do not write STIX.
+A STIX Malware object does **not inherently contain a file hash**. File hashes are represented through cyber-observable objects or Indicator patterns/observations linked to the malware.
 
-- **Identify:** `indicator` for `GET /update.exe` to `203.0.113.88:8080`; `attack-pattern` for HKCU Run **`Updater`**; `relationship` `uses`.
-- **Seed:** if more persistors exist, we see that Run value or that URI.
-- **Not a seed:** dump every IPv4 `indicator` into a block list.
+That distinction prevents a hunter from expecting every `malware` object to produce an IOC automatically.
 
-Do not author the bundle (**2.10**). Do not open Navigator (**3.5**).
+### Bundle membership has no semantic meaning
 
----
+Two objects are not related merely because they appear in the same STIX Bundle.
+
+Use explicit Relationships, Sightings, embedded references, and object properties to understand the graph.
+
+### A12 example
+
+Suppose a classroom package contains:
+
+- `indicator` pattern for `203.0.113.88`;
+- `attack-pattern` for T1547.001;
+- `observed-data` referencing a File and Process;
+- `relationship` tying the Indicator to Malware;
+- a `sighting` with supporting Observed Data.
+
+A hunter can derive:
+
+> Search internal network telemetry for the IP during the relevant window, and search registry/file telemetry for the T1547.001 procedure described by the related report/observations.
+
+The actor or malware name can help prioritize the search. The actual local query comes from the observable pattern and behavior.
 
 ## 2. Knowledge Check
 
-1. Hunters author STIX in this lesson. True or false?
-2. Name four objects a hunter actually uses.
-3. A classroom bundle has an `indicator` for `GET /update.exe` on `203.0.113.88:8080` and an `attack-pattern` for HKCU Run **`Updater`**. Name one hunt-relevant object and the lead it seeds.
-
----
+1. Why does a STIX Malware object not automatically give you a file hash?
+2. Which STIX object is most likely to contain a machine-readable detection pattern?
+3. Why should a hunter inspect Relationships rather than assume objects in the same Bundle are connected?
 
 ## 3. Summary
 
-Identify hunt-relevant STIX objects. Seed a question that can fail. Do not author STIX. Structured JSON is not automatically a hunt.
+Use STIX structure to preserve **what the lead is and why it is related**.
 
-**Next:** **3.5.1** ATT&CK for hunt planning.
+Indicator patterns and observed cyber-observables often provide direct query material. Attack Patterns provide behavior. Context objects provide scope and priority.
 
----
+**Next:** **3.5.1 – Using MITRE ATT&CK for Hunt Planning**.
 
-## 4. Related modules
+## Supporting Reference
 
-- 3.4.2 – Extract leads (previous)
-- 3.5.1 – ATT&CK map
-- 2.10.1 – STIX types (label)
-- 2.10.2 – STIX production (author / TAXII)
+- [OASIS STIX 2.1](https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html)

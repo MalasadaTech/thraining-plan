@@ -7,69 +7,75 @@
 - CTI: 3.6.3 1a / 1a / 2b  
 **Estimated Time:** 20–25 minutes
 
----
-
 ## Learning Objectives
 
-By the end of this module, you will be able to:
+1. Turn one named persistence or privilege-escalation technique into a bounded, telemetry-backed hunt.
+2. Distinguish the ATT&CK technique from the **procedure-level pattern** that makes the hunt selective.
 
-1. Turn **one named** persistence or privilege-escalation technique into a **scoped hunt**.
-2. Reject “hunt persistence / hunt privilege escalation” and a hunt that uses the **wrong class**.
+## Mapped Proficiency Item
 
-**Mapped Proficiency Items:**
 - T: 3.6.3 – Hunt for specific persistence or privilege escalation techniques
-
----
 
 ## 1. Key Concepts
 
-Hunters search for activity the alerts missed. After you can recognize a persistence or privilege-escalation method, you still have to turn it into a hunt someone can run. That is the job in this lesson: name **one method**, a **unique pattern**, and a **bound**, so you do not sweep a whole tactic and call it a hunt.
+“Hunt persistence” is too broad.
 
-**3.6.1** and **3.6.2** taught you to *recognize* the method. This lesson **hunts one named technique**. You do not rewrite the hunt-development card (**3.2.2**). You do not open the local ticket path (**3.7**).
+A useful hunt names:
 
-**Named** means a method you can point at: a current-user (HKCU) Run value named **`Updater`**, or a user parent launching a SYSTEM child. “Persistence” and “privilege escalation” are **classes**, not hunts.
+1. **Technique** – the behavioral category.
+2. **Procedure/pattern** – what this threat actually did, or the behavior variant you intend to test.
+3. **Scope** – population, time, telemetry.
+4. **Expected evidence** – fields/events that would make a hit reviewable.
 
-A **unique pattern** is the specific thing you search — a value name, a parent/child pair, a specific binary — not every method in the class. **Scope** is where you look, how long, and which telemetry. Together those pieces are the **hunt line** — the bounded hunt in one pass:
+### A12 example
 
-| Piece | What you name |
-|-------|----------------|
-| **Named technique** | The method you can point at |
-| **Class** | Persistence or privilege escalation |
-| **Unique pattern** | What you search (not the whole tactic) |
-| **Scope** | Where / how long / which telemetry |
-| **Why not the whole tactic** | Why this pattern, not “all persistence” or “all privilege escalation” |
+**Technique**
+> [T1547.001 – Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)
 
-**What good looks like:**
+**Relevant tactic/context**
+> Persistence
 
-- **Hunt:** HKCU Run **`Updater`** → `%TEMP%\update.exe` on user workstations, last 14 days, registry + file. Unique pattern is the **value name `Updater`**, not “any Run key.” Class is persistence. Why not the whole tactic: you are looking for this value, not every autorun.
-- **Fail:** “Hunt persistence.” No unique pattern and no bound.
-- **Fail:** Call a SYSTEM scheduled task privilege escalation when no elevation was shown. Wrong class. A task that *runs as* SYSTEM is persistence unless the log also shows how a non-privileged actor *got* SYSTEM.
+**Observed procedure**
+> HKCU Run value `Updater` → `%TEMP%\update.exe`
 
-The product is a **bounded hunt**, not a rewrite of the SOC ticket, and not a ticket name you invent.
+**Exact-observed hunt**
+> Search user workstations for Run value `Updater` or the exact target path during the scoped window.
 
-Hunt types (**3.2.1**), the full hunt card (**3.2.2**), and ATT&CK remapping (**3.5**) are other lessons. Local control of the hunt is **3.7**.
+**Behavior-broadened hunt**
+> Search for newly created/modified Run values that launch executables from user-writable Temp locations, then prioritize rare value names, unusual creators, unsigned files, and hosts related to A12.
 
----
+The first search has high specificity but may miss variants.
+
+The second can find variants but produces more benign candidates.
+
+A mature hunt can use both layers.
+
+### Wrong-class avoidance
+
+A task that runs as SYSTEM is not automatically “privilege escalation.” The hunt should require evidence that the actor moved from a lower context to a higher one and, if naming a specific escalation method, evidence supporting that method.
+
+### Hunt line
+
+A concise hunt line can be:
+
+> **T1547.001 / Persistence** — Windows user workstations, previous 14 days, registry + file telemetry; search exact `Updater → %TEMP%\update.exe` first, then broaden to rare Run values launching from user-writable Temp paths.
+
+That is specific enough to execute and broad enough to explain the behavior family.
 
 ## 2. Knowledge Check
 
-1. “Hunt persistence” is a valid 3.6.3 hunt. True or false?
-2. What does **named** mean in this lesson?
-3. Write one hunt line for HKCU Run **`Updater`** → `%TEMP%\update.exe` (named technique, class, unique pattern, scope).
-
----
+1. What is the difference between an ATT&CK technique and the procedure-level pattern used by the hunt?
+2. What trade-off exists between exact-observed and behavior-broadened hunts?
+3. Write an A12 T1547.001 hunt line with scope and telemetry.
 
 ## 3. Summary
 
-One named method. A unique pattern. A bound. Wrong class fails. Persistence and privilege escalation are classes, not hunts.
+Hunt one named technique through a procedure-level pattern.
 
-**Next:** **3.7.1** Hunt control and lead management.
+Start exact when intelligence gives you exact evidence; broaden deliberately when you want variants. Keep the scope and required telemetry explicit.
 
----
+**Next:** **3.7.1 – Hunt Control and Lead Management**.
 
-## 4. Related modules
+## Supporting Reference
 
-- 3.6.2 – Privilege escalation (previous)
-- 3.6.1 – Persistence recognition
-- 3.2.2 – Hunt card
-- 3.7.1 – Local control
+- [T1547.001 – Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)

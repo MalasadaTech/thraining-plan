@@ -1,4 +1,4 @@
-# Module 4.1 – What DE owns
+# Module 4.1 – What Detection Engineering Owns
 
 **Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  
 **Proficiency Focus:**  
@@ -6,71 +6,103 @@
 - SOC: 4.1 A / B / B ; 4.1.1 1a / 2b / 2b  
 - Hunter: 4.1 A / B / B ; 4.1.1 1a / 2b / 2b  
 - CTI: 4.1 A / B / B ; 4.1.1 1a / 2b / 2b  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 15–20 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Say what Detection Engineering **owns**.
-2. Given a piece of work, say whether it is **DE**, a **nominator**, **1.3**, or a **block**.
+1. Explain what Detection Engineering owns across the lifecycle of a detection.
+2. Route a piece of work to **DE**, a **nominator**, **rule-authoring instruction (1.3)**, or the locally authorized **enforcement/control owner**.
 
 **Mapped Proficiency Items:**
 - K: 4.1 – What DE owns
-- T: 4.1.1 – Sort work to DE, nominator, 1.3, or block
-
----
+- T: 4.1.1 – Sort work to DE, nominator, 1.3, or block/control owner
 
 ## 1. Key Concepts
 
-Detection engineers turn what the other desks learned into lasting rules. That only works if you know which work is yours. Before you write or ship a detection, sort the request: DE owning the detections, someone nominating work, how a rule is written, or a firewall block. Mix those up and you send a rough ask away as “not DE’s problem,” or you treat a block request as a deploy. That is the job in this lesson.
+Detection Engineering turns recurring defensive needs into **maintained detection capability**.
 
-DE owns the **set of detections** — the rules the shop runs: **new**, **change**, **retire**, and **deploy**. This lesson names those four. It does not teach how to do them.
+That is broader than writing a query. A detection only provides lasting value when someone owns what happens after the first draft: review, validation, deployment, tuning, change, health checks, and retirement.
 
-| Kind of work | What it is |
-|--------------|------------|
-| **DE** | New, change, retire, or deploy — owning the set |
-| **Nominator** | SOC, hunt, or CTI asking DE to look. A sketch is enough |
-| **1.3** | How a rule *works* (syntax, a first read or write) |
-| **Block** | Firewall / IA stopping traffic. Not a DE deploy |
+For this course, DE owns the **detection lifecycle**:
 
-**SOC**, **hunt**, and **CTI** **nominate**. The draft need not be perfect. A sketch is still DE’s to review. “Rough” is not “not DE’s problem.”
+- create or accept new detection work;
+- change and tune existing detections;
+- validate behavior and data requirements;
+- deploy through the local process;
+- maintain coverage as data and adversary behavior change;
+- retire or replace detections that no longer provide value.
 
-How a rule *works* is **1.3** — syntax, a first read or write. Detection Engineering is how we **run** detections as a service. Do not write SIGMA, Suricata, YARA, or a SIEM rule in this lesson.
+### Four adjacent kinds of work
 
-**Firewall / IA** **blocks** what intel names. DE does not. A block request is not a DE deploy.
+| Work | Primary responsibility in this course |
+|---|---|
+| **Detection lifecycle** | DE evaluates, validates, deploys, maintains, changes, and retires detection logic. |
+| **Nomination** | SOC, hunt, or CTI identifies a need and gives DE enough context to review it. |
+| **Rule-authoring mechanics (1.3)** | How a Sigma, SIEM, IDS, YARA, or other rule is expressed and interpreted. |
+| **Enforcement / blocking / containment** | The locally authorized owner of firewall, EDR-prevention, isolation, or other control action. |
 
-**What good looks like:** someone hands you a piece of work. You say DE, nominator, 1.3, or a block. You reject two mixes: treating a rough nomination as not DE, and treating a block request as a deploy.
+The fourth boundary is an **operating-model decision**, not a universal law. Some organizations give DE authority over prevention controls; others separate detection from enforcement. In this course, treat a request such as “block this IP at the firewall” as an enforcement request and route it to the authorized control owner unless the local policy says DE owns that action.
 
-- Given: “Write me a SIGMA rule for this log.” **1.3.** That is how a rule is written, not how we run detections.
-- Given: “We keep missing this. Can you look?” A **nomination**. Rough is still DE’s to review.
-- Given: “Block this IP at the firewall.” A **block**, not a DE deploy.
+### A nomination does not need to arrive production-ready
 
-Do not invent a ticket name. Do not invent a field list. Those wait for **4.8**, and you obtain them.
+SOC, hunters, and CTI often see the defensive need before they know the final detection logic.
 
----
+A useful nomination can begin as:
+
+> We observed encoded PowerShell during A12 and want durable visibility for similar execution.
+
+DE then evaluates:
+- what behavior should be detected;
+- which telemetry can support it;
+- whether an existing analytic already covers it;
+- what implementation and testing are required.
+
+A rough nomination is not “bad DE work.” It is **input to DE work**.
+
+### Detection Engineering is not only syntax
+
+Module 1.3 teaches how a rule works.
+
+The 4.x track is about **operating detections as a capability**:
+- intake;
+- design;
+- validation;
+- deployment;
+- monitoring;
+- tuning;
+- lifecycle decisions;
+- feedback to the nominator.
+
+That distinction prevents the team from treating a syntactically valid query as a finished detection.
+
+### A12 examples
+
+**“We need durable detection for encoded PowerShell similar to A12.”**  
+→ **Nomination / DE lifecycle work**
+
+**“How do I express this condition in Sigma?”**  
+→ **1.3 rule-authoring mechanics**
+
+**“This live analytic is firing on our backup process.”**  
+→ **DE tune/change work**
+
+**“Block `203.0.113.88` at the firewall.”**  
+→ **Enforcement/control-owner request under the course operating model**
 
 ## 2. Knowledge Check
 
-1. What four things does DE own on the set of detections?
-2. A rough nomination is not DE’s problem. True or false?
-3. Someone asks you to block an IP at the firewall. Is that DE, a nominator, 1.3, or a block?
-
----
+1. Why is Detection Engineering broader than writing a rule?
+2. A hunter sends a rough behavior description with hunt evidence but no rule. Is that enough to enter DE review?
+3. Why should “block this IP” be routed according to the local control-ownership model rather than treated automatically as a DE deployment?
 
 ## 3. Summary
 
-DE owns new, change, retire, and deploy. Nominations can be rough. 1.3 is how a rule works. A block is not a DE deploy.
+Detection Engineering owns **maintained detection capability**, not just rule syntax.
 
-**Next:** **4.2** Making a detection sound and meeting shop requirements.
+SOC, hunt, and CTI can nominate work before the final analytic exists. DE turns the need into a validated, deployable, maintainable detection—or explains why a new detection is not the right answer.
 
----
+Enforcement actions follow the organization's control-ownership model.
 
-## 4. Related modules
-
-- 0.3 – Jobs in one sentence
-- 0.4 – How work can move
-- 1.3 – Detection authoring (how a rule works)
-- 4.2 – Making a detection sound and meeting shop requirements
+**Next:** **4.2 – Making a Detection Sound and Meeting Shop Requirements**.

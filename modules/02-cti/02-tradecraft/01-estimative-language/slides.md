@@ -3,100 +3,115 @@
 
 **Target Audience:** CTI Analyst (primary); Threat Hunter, SOC Analyst (secondary)  
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 7
+**Total Suggested Slides:** 8
 
 ---
 
 ### Slide 1 – Title Slide
 **Title:** Module 2.2.1 – Estimative language  
-**Subtitle:** Likelihood words, not the evidence scale  
+**Subtitle:** Communicating how probable a judgment is  
 **Footer:** SOC / Hunter / CTI / DE Training Program
 
 **Speaker Notes:**  
-This lesson is the likelihood word in a judgment. It is not the 2.1.7 confidence scale, and it is not “could be.”
+Introduce estimative language as a way to communicate probability consistently. The goal is not simply to memorize a word list; learners should understand what the terms tell the reader and what they do not.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+### Slide 2 – Why estimative language matters
+**Title:** Do not make the reader guess
 
-CTI analysts write judgments other people act on.
+Analysts often have to make judgments before every uncertainty is resolved.
 
-Those people should not guess whether “could be” means **likely** or **remote**.
+A phrase such as **“could be”** tells the reader something is possible, but not how strongly the analyst favors that explanation.
 
-This lesson is the **likelihood** word.
+Estimative language makes the analyst's probability judgment explicit.
 
 **Speaker Notes:**  
-This slide is the student intro. Pick a term so the next reader can compare products. Confidence (low / medium / high) is how good the evidence is — that scale is 2.1.7. This lesson is how probable.
+Ask learners what “could be” means numerically or comparatively. Their different answers demonstrate why a more consistent vocabulary is useful.
 
 ---
 
-### Slide 3 – Classroom terms
-**Title:** Almost certainly … remote
+### Slide 3 – Classroom likelihood scale
+**Title:** From almost certainly to remote
 
-**almost certainly** — near certain.  
-**highly likely** — very probable.  
-**likely** — more probable than not.  
-**even chance** — about as likely as not.  
-**unlikely** — more probable that it is not so.  
-**highly unlikely** — very improbable.  
-**remote** — almost no chance.
+**Almost certainly** → **Highly likely** → **Likely** → **Even chance** → **Unlikely** → **Highly unlikely** → **Remote**
 
-Use your shop card if you have one.  
-Do not invent percents as policy.
+The terms move from very high probability to very low probability.
+
+Use an organization's published scale when one exists; this course does not invent operational percentages.
 
 **Speaker Notes:**  
-These are classroom terms for this lesson, not a live ODNI card. Walk the list and stop. Meanings are ordinary words, not percents.
+Walk the order and relative meaning. The learning objective is interpretation and use, not memorizing unofficial numeric bands.
 
 ---
 
-### Slide 4 – Likelihood is not confidence
-**Title:** Likelihood is not confidence
+### Slide 4 – Likelihood and confidence
+**Title:** Two different questions
 
-The estimative term is how **probable** the claim is.
+**Likelihood:** How probable is the claim?
 
-**Confidence** (low / medium / high) is how good the evidence is.
+**Confidence:** How strongly do the available evidence and reasoning support the judgment?
 
-You can write both: “**likely**, medium confidence.”  
-They are not the same word.
+Both can appear in one assessment:
+
+**Likely, medium confidence.**
 
 **Speaker Notes:**  
-If they call the term a “confidence level,” that still means how probable. It is not the 2.1.7 evidence scale. Admiralty letters are 2.2.3. The actor profile is 2.11.
+Make the distinction explicit. Stronger likelihood wording does not automatically mean stronger evidence.
 
 ---
 
-### Slide 5 – Write and interpret
-**Title:** Write and interpret
+### Slide 5 – Apply it to A12
+**Title:** Make the judgment visible
 
-**Write** — “The update domain is **likely** the payload host for **A12**.”  
-**Interpret** — “**Remote** that this is ordinary browsing” = very low likelihood.
+Vague:
 
-**Fail** — “Could be PRD.” No term.
+“The update domain **could be** the payload host for A12.”
+
+More precise:
+
+“The update domain is **likely** the payload host for A12.”
+
+If useful, add confidence separately and explain the remaining evidence gaps.
 
 **Speaker Notes:**  
-A12 is the course incident. PRD is the course-fiction adversary. Likelihood and confidence can both appear. “Could be” is still not a term.
+Connect the statement to the earlier A12 assessment. The estimative term summarizes the probability judgment; it does not replace the supporting reasoning.
 
 ---
 
-### Slide 6 – Knowledge Check
+### Slide 6 – Interpret the term in context
+**Title:** Remote does not mean “we have no idea”
+
+“It is **remote** that this was ordinary browsing.”
+
+The analyst is making a judgment: ordinary browsing has very low likelihood.
+
+The statement still needs evidence and reasoning behind it.
+
+**Speaker Notes:**  
+Use this to separate low probability from low confidence or absence of analysis.
+
+---
+
+### Slide 7 – Knowledge Check
 **Title:** Knowledge Check
 
-1. “Likely” and “high confidence” mean the same thing. True or false?  
-2. Why does estimative language exist?  
-3. Write one **A12** sentence that uses a classroom term (not “could be”).
+1. Why are **likely** and **high confidence** not interchangeable?  
+2. What is missing from “the update domain could be related to A12”?  
+3. Write one A12 judgment using a classroom likelihood term.
 
 **Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+Listen for probability versus evidentiary strength. Accept defensible wording when the learner uses the term consistently.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+### Slide 8 – Summary
+**Title:** Communicate probability deliberately
 
-Pick a term. Likelihood is not confidence.  
-“Could be” is not a term.
+A likelihood term tells the reader **how probable** the analyst judges a claim to be.
 
-**Next:** **2.2.2** Structured analytic techniques
+Confidence tells the reader **how strongly the evidence and reasoning support** that judgment.
 
-**Speaker Notes:**  
-2.2.2 is a named method (ACH / assumptions). Stay off that word list unless that lesson is scheduled.
+Use clear terms so the reader does not have to infer either one.
+
+**Next:** [2.2.2 – Structured Analytic Techniques](../02-structured-techniques/student-guide.md).

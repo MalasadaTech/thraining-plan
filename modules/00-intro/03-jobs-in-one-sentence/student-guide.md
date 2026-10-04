@@ -6,61 +6,63 @@
 - Hunter: 0.3 A / B / B  
 - CTI: 0.3 A / B / B  
 - DE: 0.3 A / B / B  
-**Estimated Time:** 15–20 minutes  
-
----
+**Estimated Time:** 15–20 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name each job in **one sentence**.
-2. Say which two are **neighbors** this course points at but does not train (IR, and firewall / IA).
+1. Summarize each role’s responsibility in one sentence.
+2. Identify IR and firewall / IA as supporting functions introduced for handoffs.
 
 **Mapped Proficiency Items:**
 - K: 0.3 – Jobs in one sentence
 
----
+## Why This Matters
 
-## 1. Key Concepts
+Security work often begins with an alert or a question, then involves people with different responsibilities. Knowing the purpose of each role helps you recognize who can carry the work forward and what result to expect. This lesson gives you a short description of each role used in the course.
 
-Work lands as an alert, a question, a hunt, a rule, or a block. Before you take it or send it, you have to know **whose job** it is. That is this lesson: name each desk in one sentence so you do not treat every neighbor as the same work, and so you know which two desks this course only points at.
+## 1. The roles and their responsibilities
 
-**0.2** said a SOC is a team sport: more than one job sits in or next to it. This lesson names those jobs. How work moves between them is **0.4**. One person may do more than one job — that is **0.5**.
+| Role | Core responsibility in this course |
+|---|---|
+| **SOC analyst** | Investigates an alert, records the finding, and starts the appropriate handoffs. |
+| **Incident response (IR)** | Coordinates containment and recovery when incident handling is required. |
+| **CTI analyst** | Answers intelligence questions, adds context, and examines related adversary activity or infrastructure. |
+| **Threat hunter** | Searches for relevant activity that existing alerts may have missed, using an intelligence package or a hypothesis. |
+| **Detection engineer (DE)** | Develops, tests, and maintains detections using identified needs and findings. |
+| **Firewall / Information Assurance (IA) function** | Evaluates and implements blocking changes through the organization's authorized process. |
 
-**RFI** means Request for Information: asking intel for more work on an alert.
+These descriptions identify the main contribution of each role. An organization may assign those responsibilities to teams with different names or combine several responsibilities in one position.
 
-| Job | One sentence |
-|-----|----------------|
-| **SOC analyst** | Work the alert in front of you; start the hand-offs. |
-| **Incident response** | Contain and recover. This course **points at** them. It does not train IR. |
-| **CTI analyst** | Answer the RFI; add context; find more of the adversary. |
-| **Threat hunter** | Look for more activity the alerts missed, from a hunt package or a hypothesis. |
-| **Detection engineer** | Turn what we learned into lasting rules. |
-| **Firewall / IA** (Information Assurance) | Block what intel names. A **hand-off**, not a track in this course. |
+## 2. Recognizing the work being requested
 
-Do not learn how to do each job in this lesson. One sentence each. Stop. This lesson does not name tickets.
+A **Request for Information (RFI)** asks for information or analysis needed to answer a question. In this course's workflow, it is directed to CTI. A question arising from an alert is one reason for an RFI; other intelligence needs can also produce requests.
 
----
+Consider a question about the role of a suspicious domain. CTI may develop an answer about that role. If the organization decides to restrict access to the domain, the function responsible for blocking evaluates and carries out that change. If the finding reveals activity worth detecting in the future, DE considers the detection need. The shared domain connects the work, while the requested outcome identifies the responsibility.
 
-## 2. Knowledge Check
+## 3. What the course develops
 
-1. In one sentence, what does the SOC analyst do?
-2. Which two jobs does this course point at but not train?
-3. What does the detection engineer do, in one sentence?
+The four role tracks develop SOC analysis, CTI, hunting, and detection engineering. Incident response and firewall / IA responsibilities are included so learners understand the handoffs, while detailed training for those functions sits outside this course.
 
----
+For now, aim to explain each role clearly in one sentence. That short description should convey the responsibility and intended result. The following lessons show how those results connect and how responsibilities can overlap.
 
-## 3. Summary
+## Knowledge Check
 
-Six jobs, one sentence each. IR and firewall / IA are neighbors, not tracks here. How work moves is next.
+1. Describe each of the six roles in one sentence.
+2. Which two supporting functions are introduced for handoffs rather than developed as full tracks, and what does each contribute?
+3. How does a detection engineer’s responsibility differ from a request to block a domain?
 
-**Next:** **0.4** How work can move.
+## Summary
 
----
+Identify a responsibility by the work requested and the result it should produce. The six roles introduced here support connected parts of security operations; the course develops four of them in depth and explains the other two as handoff destinations.
 
-## 4. Related modules
+## Course Connections
 
-- 0.2 – What a SOC is
-- 0.4 – How work can move
-- 0.5 – Where the jobs overlap
+Previous: [0.2 – What a SOC is](../02-what-a-soc-is/student-guide.md)
+
+Next: [0.4 – How work can move](../04-how-work-moves/student-guide.md)
+
+## References and Further Reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.

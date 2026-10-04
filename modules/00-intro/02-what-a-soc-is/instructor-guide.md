@@ -9,90 +9,83 @@
 **Estimated Time:** 15–20 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
+A Security Operations Center, or **SOC**, is an organizational function that monitors for suspicious activity, investigates what it finds, and coordinates the start of a response. Understanding that purpose gives you a common starting point for the roles and handoffs in this course.
 
-**Purpose of this module:**  
-Get everyone to the same three facts: what a SOC is, that more than one job sits in or next to it, and that DYA / PRD are course fiction.
-
-**Context (plain language):**
-
-- What this lesson is for: You will work in or next to a SOC. Later lessons name desks and move work between them. That only works if everyone means the same thing by the word. This lesson is that shared meaning.
-- How it hooks to the lesson before: 0.1 was the map of the course. It promised the company and adversary names in this lesson.
-- How it hooks to the lesson after: 0.3 names each job in one sentence.
-- Why we are doing it this way: name the SOC before naming desks and hand-offs. This lesson is only what it is.
-- What we are *not* doing in this lesson: job one-liners (0.3), how work moves (0.4), overlap (0.5), the course map (0.1), the companion-story plot, Zeek, ATT&CK, DYA ticket names, PIR lists, approval chains. No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **SOC**, **team sport**, **DYA**, **PRD**. **SOC** means Security Operations Center. **DYA** is Dixon, Yamada, & Associates. **PRD** is Pink River Dolphin.
-
-**Key Teaching Points:**
-- Watch and **start** the response — not every security job.
-- Team sport means more than one job sits in or next to the SOC. Names of those jobs are 0.3.
-- DYA / PRD are this course’s story names, not site policy.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+Teach this as a shared introductory lesson using the supplied examples and discussion. Match the depth to the proficiency levels above. The focus is the mapped knowledge and task; operational procedures are developed in the later role tracks.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Explain the purpose of a SOC.
+2. Explain why several roles contribute to security operations.
+3. Identify DYA and PRD as the course setting and distinguish that setting from local procedures.
 
 **Mapped Proficiency Items:**
 - K: 0.2 – What a SOC is
 
----
+## Preparation
+
+Read the [student guide](student-guide.md) and use [slides.md](slides.md) to support the explanation. Review the answer key before teaching so the discussion and feedback reinforce the same concepts. This lesson uses discussion and worked examples; no lab is required.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Shared meaning of SOC |
-| Key Concepts            | 10 min    | Watch and start; team sport; DYA / PRD |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~19 min** | |
-
----
+| Section | Time | Teaching purpose |
+|---|---|---|
+| Opening and purpose | 2 min | Connect this lesson to the previous topic. |
+| Explanation and worked examples | 10 min | Use the three teaching sections below. |
+| Knowledge check and feedback | 4 min | Ask for reasoning as well as an answer. |
+| Summary and transition | 2 min | Consolidate the lesson and introduce the next topic. |
+| **Total** | **18 min** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. What a SOC contributes
 
-**Talking Points:**
-- Open with the job: you work in or next to a SOC, and later lessons only work if everyone means the same thing by the word.
-- A SOC watches for bad or suspicious activity and starts the response. Stop there. It is not every security job.
-- If their shop uses another name than SOC, this lesson still applies. The job is watch-and-start.
-- Team sport means more than one job sits in or next to the SOC, not the whole company. Do not name those jobs or their products. That is 0.3.
-- DYA and PRD are course fiction. Show the names, not the plot. They are not a live hunt order and not ticket names.
-- If they start listing desks: that is 0.3. Today is only what a SOC is.
-- If they start the DYA / PRD plot: names only. The incident is not this lesson.
+Explain the purpose before discussing tools or job titles. An alert is a starting point for assessment. Avoid describing every alert as a confirmed incident, because that would remove the reason for investigation.
 
----
+**Student-facing emphasis:** The SOC monitors, investigates, and coordinates response. Analysts turn observations and alerts into findings that others can use.
 
-## Knowledge Check – Answer Key
+### 2. How a team supports that purpose
 
-1. **In one sentence, what is a SOC?**  
-   **Answer:** A place that watches for bad or suspicious activity and starts the response.  
-   **Explanation:** “Starts” is the useful word. The SOC does not have to finish every security job in this definition.
+If learners associate SOC with a room of monitors, broaden that picture to the function being performed. The specific reporting structure varies. This prepares learners to understand responsibilities without assuming every organization uses identical team names.
 
-2. **A SOC is a team sport. What does that mean?**  
-   **Answer:** More than one job sits in or next to the SOC.  
-   **Explanation:** Nearby desks, not the whole company. Who does what is 0.3.
+**Student-facing emphasis:** Security operations depends on several connected roles. Teams can work together across organizational or physical boundaries.
 
-3. **DYA and PRD are your site’s policy. True or false?**  
-   **Answer:** False. They are course fiction — Dixon, Yamada, & Associates and Pink River Dolphin. Not site policy.  
-   **Explanation:** The names let later lessons reuse the same company and adversary. They are not your shop’s rules.
+### 3. The setting used in this course
 
----
+Introduce the full names once and use the abbreviations consistently. Explain the difference between knowing a story’s cast and having evidence within an investigation. This supports later lessons on attribution without trying to teach that entire topic here.
 
-## Additional Instructor Resources
+**Student-facing emphasis:** DYA is the fictional law firm. PRD is the fictional adversary name. Use the evidence supplied in each example and obtain real procedures from your site.
 
-- [docs/story-bible.md](../../../docs/story-bible.md)
-- Next: 0.3 Jobs in one sentence
+## Knowledge Check — Answer Key
+
+### 1. What does a SOC contribute after a security tool produces an alert?
+
+**Expected answer:** It reviews the evidence, assesses what the activity means, and coordinates appropriate handling or response.
+
+**Feedback and assessment:** The answer should describe human assessment and routing, not only watching screens.
+
+### 2. Why can several roles contribute to a SOC investigation even if they belong to different teams?
+
+**Expected answer:** Their responsibilities depend on shared evidence and connected products, such as incident response actions, intelligence answers, and detection improvements.
+
+**Feedback and assessment:** Accept a clear explanation of collaboration; the learner does not yet need a complete handoff sequence.
+
+### 3. What are DYA and PRD, and where should you obtain the procedures used at your workplace?
+
+**Expected answer:** DYA is Dixon, Yamada, & Associates, the fictional law firm; PRD is Pink River Dolphin, the fictional adversary name. Workplace procedures come from the actual organization.
+
+**Feedback and assessment:** Check that learners distinguish the teaching setting from real local policy.
+
+## Closing and Transition
+
+A SOC monitors and investigates activity so the organization can respond appropriately. Several roles contribute to that purpose, and their arrangement varies by organization. DYA and PRD provide a consistent fictional setting for learning how the work connects.
+
+Previous: [0.1 – How this course is laid out](../01-course-layout/student-guide.md)
+
+Next: [0.3 – Jobs in one sentence](../03-jobs-in-one-sentence/student-guide.md)
+
+## References and Further Reading
+
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.

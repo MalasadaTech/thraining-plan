@@ -1,116 +1,121 @@
-# Module 1.2.4 – TLS Engine  
-## Slide Deck Content
+# Module 1.2.4 – TLS Engine
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Interpret SNI, certificate information, optional fingerprints, version, cipher, and endpoints.
+- Describe TLS activity using the observed establishment state.
+- Create or modify a query for specific TLS activity.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.2.4 – TLS Engine  
-**Subtitle:** The handshake Zeek saw  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.2.3 was the DNS extract. This lesson is TLS. It is the handshake, not decrypted HTTP, and not the initiating process.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read **TLS** events to see the **handshake** when the payload is encrypted.
+TLS can conceal application content while leaving some handshake information visible. Reading that information carefully helps describe the observed session without treating a hostname, certificate, or fingerprint as a verdict.
 
-Who talked to whom. SNI. Certificate. Version and cipher.
-
-Not decrypted HTTP. Not the initiating process.
-
-**Speaker Notes:**  
-This slide is the student intro. Encrypted traffic still needs a description. Do not teach HTTP fields today. Do not name a process from this log.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – SNI and the certificate
-**Title:** SNI, subject, issuer
+## Reading TLS evidence
 
-**`server_name`** — hostname in the Client Hello. Empty means not sent or not logged.
+Read visible SNI, certificate information, optional fingerprints, version, cipher, and establishment state.
 
-**`subject` / `issuer`** — name on the certificate, and who signed it.
-
-SNI is not the certificate subject.
-
-**Speaker Notes:**  
-Walk SNI first, then the certificate names. If they treat `server_name` as the cert, stop: Client Hello versus what the certificate presents.
+**Speaker notes:** Distinguish client-indicated name, certificate identity, and fingerprint. Explain why unavailable fields can reflect encryption or collection.
 
 ---
 
-### Slide 4 – JA3, version, cipher, who
-**Title:** Fingerprint, version, cipher, addresses
+## Reference — Reading TLS evidence
 
-**JA3 / JA3S** — where the shop logs them. Not a malware name. Missing means not logged, not “no TLS.”
+| Field or feature | Interpretation |
+|---|---|
+| `server_name` | Observed Server Name Indication (SNI), when visible. It is distinct from a certificate subject. |
+| `subject`, `issuer` | Certificate identity fields where available; detailed certificate records may be linked through `x509.log`. |
+| `version`, `cipher` | Observed TLS negotiation details. |
+| `established` | Zeek's indication that the TLS session was successfully established. Version and cipher alone should not substitute for that assessment. |
+| JA3 / JA3S | Optional client/server fingerprints when the deployment collects them. A shared fingerprint does not uniquely identify malware. |
+| Endpoint fields and `uid` | Identify the observed connection and related records. |
 
-**`version` / `cipher`** — what was negotiated.
-
-**`id.orig_*` → `id.resp_*`** — originator to responder.
-
-**Speaker Notes:**  
-JA3 is how the client spoke TLS. Do not invent a value. Originator started the talk from Zeek’s view.
-
----
-
-### Slide 5 – How it shows up
-**Title:** The ssl log
-
-Zeek writes TLS to the **`ssl`** log. The name is historical.
-
-One event per handshake Zeek saw.
-
-This is the **extract**. PCAP still verifies or expands (**1.2.1**).
-
-The initiating process is not on this log. That is host-observed network (**1.1.4**).
-
-**Speaker Notes:**  
-Keep them on this engine. HTTP fields wait for 1.2.5. If they ask about SIEM tables, a TLS log line is an event; in a SIEM it often shows up as a row.
+**Speaker notes:** Distinguish client-indicated name, certificate identity, and fingerprint. Explain why unavailable fields can reflect encryption or collection. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
+## Working through the example
 
-One sentence: who talked to whom, SNI if present, version/cipher.
+Established=true supports the example’s session-state claim. Missing SNI leaves the requested name unavailable.
 
-**Given:** `203.0.113.88:443`, `server_name` empty, version and cipher present.
-
-A query names a **specific** pattern — SNI, subject, version, or dest.  
-Not every `ssl` event.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. Handshake to that IP on 443. SNI not logged. Do not tell the intro plot. Do not name a process.
+**Speaker notes:** Compare the example with the established field removed. Ask learners to revise their sentence accordingly.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Supplied example
 
-1. `server_name` is the name on the server certificate. True or false?  
-2. Workstation → `203.0.113.88:443`, `server_name` empty, version and cipher present. In one sentence, what occurred?  
-3. A SIEM query that matches every `ssl` event is a good “specific TLS activity” query. True or false?
+A record shows `192.0.2.10` communicating with `203.0.113.88:443`, a recorded TLS version and cipher, `established=true`, and no `server_name`.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Compare the example with the established field removed. Ask learners to revise their sentence accordingly.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Creating a focused TLS query
 
-Handshake: SNI, certificate, version, cipher, who talked to whom.  
-JA3 only if logged.  
-The process is not on this log.  
-A query is specific.
+A hostname query only matches records with that visible, populated field. Preserve the visibility limit.
 
-**Next:** **1.2.5** HTTP engine
+**Speaker notes:** Explain that a populated-field search has a visibility prerequisite. A blank field cannot be filled by choosing a more complex query.
 
-**Speaker Notes:**  
-1.2.5 is cleartext HTTP fields on the same wire. Stay off this handshake when you get there.
+---
+
+## Reference — Creating a focused TLS query
+
+| where TimeGenerated > ago(1d)
+| where ['id.resp_h'] == "203.0.113.88" and ['id.resp_p'] == 443
+| where established == true
+| project TimeGenerated, uid, ['id.orig_h'], ['id.resp_h'],
+
+**Speaker notes:** Explain that a populated-field search has a visibility prerequisite. A blank field cannot be filled by choosing a more complex query. Use the surrounding student-guide explanation to interpret the table and its limits.
+
+---
+
+## Worked example — Creating a focused TLS query
+
+```kusto
+ZeekTls
+| where TimeGenerated > ago(1d)
+| where ['id.resp_h'] == "203.0.113.88" and ['id.resp_p'] == 443
+| where established == true
+| project TimeGenerated, uid, ['id.orig_h'], ['id.resp_h'],
+          server_name, version, cipher, established
+```
+
+**Speaker notes:** Explain that a populated-field search has a visibility prerequisite. A blank field cannot be filled by choosing a more complex query. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. How does SNI differ from the certificate subject?
+2. What supports calling the example an established TLS session?
+3. Modify the query to search for visible SNI update.example and explain a blind spot.
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+TLS records describe the visible handshake and session state. State which names, certificate details, and fingerprints are available, and keep encrypted application behavior separate from those observations.
+
+Previous: [1.2.3 – DNS Engine](../03-dns-engine/student-guide.md)
+
+Next: [1.2.5 – HTTP Engine](../05-http-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Zeek — ssl.log](https://docs.zeek.org/en/current/reference/logs/ssl.html)
+- [Zeek — x509.log](https://docs.zeek.org/en/current/reference/logs/x509.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

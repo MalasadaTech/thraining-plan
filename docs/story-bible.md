@@ -126,8 +126,8 @@ Do not invent a second plot. Extra classroom examples (`helpdesk.exe`, Word → 
 | `invoice.vbs` in Temp (file event, hash) | **1.1.3** file | **1.4.1** investigation; **1.5** notify / escalate (path + hash we have) | Leadership one-liner does not need the hash |
 | First-pass VT on that `invoice.vbs` hash: not in VT | **0.7** survey | **1.4.1** first pass | Relations tab; leadership one-liner |
 | HKCU Run **`Updater`** → `%TEMP%\update.exe` | **1.1.5** registry | **3.x** hunt (more hosts the alert missed) | Not in the first alert. Not required on the leadership notify |
-| Host GET `update.exe` :8080 to PRD domain / `203.0.113.88` | **1.1.4** host-network + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **2.11.3** RFI seed (the domain) | Not all of this in the leadership notify |
-| Sibling `login-prd.net`, same NS, same A, SOA | **2.5** / **2.6** / **2.8** | **2.x** enrichment; extra infra → **block** (0.3 f) | Not a SOC notify field |
+| Host GET `update.exe` :8080 to PRD domain / `203.0.113.88` | **1.1.4** host-network + **1.2** Zeek | **1.4.1** if they pull PCAP/Zeek; **2.7.4** RFI seed (the domain) | Not all of this in the leadership notify |
+| Sibling `login-prd.net`, same NS, same A, SOA | **2.5.3** / **2.5.4** / **2.5** | **2.x** enrichment; extra infra → **block** (0.3 f) | Not a SOC notify field |
 | Hunt package: look for `Updater` / `update.exe` / more `invoice.vbs` | **3.x** | Hunt product; same package can go to **4.x** DE | Not a rewrite of the SOC ticket |
 | Nomination / tune / new rule | **4.x** | After the hunt or SOC “we keep missing this” | Not invented in 1.1 |
 

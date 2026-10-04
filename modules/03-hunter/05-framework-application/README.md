@@ -5,26 +5,41 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.5.1 B / C / C ; 3.5.1.1 3c / 4c / 4c ; 3.5.1.2–3.5.1.3 3c / 4c / 4d  
+- SOC: 3.5.1 A / B / B ; 3.5.1.1–3.5.1.2 1a / 2b / 3c ; 3.5.1.3 1a / 1a / 2b  
+- CTI: 3.5.1 B / C / C ; 3.5.1.1 3c / 4c / 4c ; 3.5.1.2–3.5.1.3 2b / 3c / 4c
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.5.1 | K | Using MITRE ATT&CK for hunt planning and coverage analysis | 3.5.1 a–c | A / B / B | B / C / C | B / C / C |
-| 3.5.1.1 | T | Map a hunt plan or hunt findings to MITRE ATT&CK | 3.5.2 task 1 | 1a / 2b / 3c | 3c / 4c / 4c | 3c / 4c / 4c |
-| 3.5.1.2 | T | Use ATT&CK to identify detection or visibility gaps | 3.5.2 task 2 | 1a / 2b / 3c | 3c / 4c / 4d | 2b / 3c / 4c |
-| 3.5.1.3 | T | Use ATT&CK to support hunt prioritization | 3.5.2 task 3 | 1a / 1a / 2b | 3c / 4c / 4d | 2b / 3c / 4c |
-
-The teaching-unit ID is **3.5.1**. Outline T block is **3.5.2** (not a separate module). Shared-floor ATT&CK is **0.6.1**. CTI product mapping is **2.7.1**. Hunt-card format is **3.2.2**. Persistence how-to is **3.6**. No lab.
+- K: 3.5.1 – Using MITRE ATT&CK for hunt planning and coverage analysis
+- T: 3.5.1.1 – Map a hunt plan or findings to MITRE ATT&CK
+- T: 3.5.1.2 – Use ATT&CK to identify detection or visibility gaps
+- T: 3.5.1.3 – Use ATT&CK to support hunt prioritization
 
 ## Concepts taught
 
-- mapping a hunt to ATT&CK
-- detection gap vs visibility gap
-- ATT&CK-supported hunt priority
+- ATT&CK hunt mapping
+- tactic context
+- technique/sub-technique
+- coverage analysis
+- detection gaps
+- visibility gaps
+- hunt prioritization
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Supporting references
+
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [T1547.001 Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

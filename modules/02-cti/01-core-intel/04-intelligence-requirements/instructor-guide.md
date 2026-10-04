@@ -6,45 +6,26 @@
 - Hunter: 2.1.4 A / B / B ; 2.1.4.1 1a / 2b / 3c ; 2.1.4.2 1a / 2b / 3c ; 2.1.4.3 1a / 2b / 3c  
 - SOC: 2.1.4 A / A / B ; 2.1.4.1 1a / 1a / 1a ; 2.1.4.2 1a / 1a / 1a ; 2.1.4.3 1a / 1a / 1a  
 **Estimated Time:** 20–25 minutes  
-**Delivery Method:** Instructor-led
-
----
+**Delivery Method:** Instructor-led explanation and discussion
 
 ## Module Overview for Instructors
 
-**Purpose of this module:**  
-Turn a messy question into a requirement that drives collection and analysis — and say what you will not chase.
+**Purpose:** Teach learners to turn a stakeholder's need into a clear question that directs collection and analysis, while understanding that a PIR is a prioritized requirement rather than a synonym for every intelligence question.
 
-**Context (plain language):**
+**Context:** Module 2.1.3 classified the kind of answer a stakeholder needs. This lesson moves one step earlier in the work: defining the question clearly enough that analysts know what evidence to pursue and what would count as an answer.
 
-- What this lesson is for: CTI analysts write the question the work exists to answer so they do not collect everything interesting.
-- How it hooks to the lesson before: 2.1.3 was the kind of answer. This lesson is the question.
-- How it hooks to the lesson after: 2.1.5 is whether the product can be used. Not whether the question is a PIR.
-- Why we are doing it this way: name the requirement, including PIR as a ranked type, before anyone scores a product or picks a source class. Do not invent a DYA PIR list.
-- What we are *not* doing in this lesson: source classes (2.1.8). Actionable test (2.1.5). Local standing list (2.12.1). No lab.
-- Extra step: none.
+Use the A12 stakeholder question to demonstrate refinement. The emphasis should be on improving the question and explaining how that improvement changes the work, not on memorizing a particular requirement template.
 
-Use the same names as the student guide: **intelligence requirement**, **Priority Intelligence Requirement (PIR)**, **standing**, **ad-hoc**, and **drives collection and analysis**. Do not invent **PIR-01**. The **A12** RFI question is enough. **IR** in this course also means incident response, so say **intelligence requirement** (or **requirement**) unless you mean Sam’s desk.
+**Important distinction:** Priority and duration are separate characteristics. A standing requirement can also be a PIR; an ad-hoc requirement can also be prioritized. Do not teach PIR, standing, and ad-hoc as mutually exclusive categories.
 
-**Key Teaching Points:**
-- A requirement focuses work on a decision. It is the question, not the product.
-- A PIR is ranked. Standing and ad-hoc requirements are still requirements. They are not all PIRs.
-- The requirement names what you collect, what you analyze, and what you will not chase.
-
-**Common Student Challenges:**
-- Treat every requirement as a PIR. Why: PIR is the label people remember. Example: tagging the A12 RFI as PIR-01 when leadership did not rank it.
-- Invent a shop PIR list. Why: the classroom wants numbers. Example: writing PIR-01 through PIR-05 for DYA.
-- File the slogan. Why: it already looks like a question. Example: recording “Are we seeing them?” as the requirement.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+**Required materials:** The aligned student guide and slide deck.
 
 ## Learning Objectives
 
-Same as the student guide.
+By the end of this module, learners will be able to:
+
+1. Explain why intelligence requirements exist and distinguish a **Priority Intelligence Requirement (PIR)** from other requirements.
+2. Refine a stakeholder question into a clear intelligence requirement and explain how that requirement directs collection and analysis.
 
 **Mapped Proficiency Items:**
 - K: 2.1.4 – Intelligence requirements and Priority Intelligence Requirements (PIRs)
@@ -52,54 +33,98 @@ Same as the student guide.
 - T: 2.1.4.2 – Translate stakeholder questions into clear intelligence requirements
 - T: 2.1.4.3 – Explain how a given requirement drives analytic work
 
----
-
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | The question the work exists to answer |
-| Key Concepts            | 12 min    | Purpose; PIR vs other types; A12 translate |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 1 min     | |
-| **Total**               | **~20 min** | |
-
----
+| Part | Time | Teaching purpose |
+|---|---|---|
+| Introduction | 2 minutes | Explain why requirements prevent unfocused collection. |
+| Requirement characteristics | 5 minutes | Question, decision need, scope, and answerability. |
+| PIR / standing / ad-hoc | 4 minutes | Separate priority from duration or trigger. |
+| A12 refinement exercise | 7 minutes | Translate a vague stakeholder ask into a useful requirement. |
+| Knowledge check | 4 minutes | Evaluate clarity and explain how the requirement drives work. |
+| Summary | 1 minute | Reinforce question-driven analysis. |
+| **Total** | **23 minutes** | Allow minor flexibility for discussion. |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Explain why the requirement matters
 
-**Talking Points:**
-- Open with the job: write the question so collection is not everything interesting.
-- Walk purpose, then types. A PIR is ranked. Standing and ad-hoc still count. They are not all PIRs.
-- Walk “drives collection and analysis”: what you collect, what you analyze, and what you will not chase.
-- Walk the given: “Are we seeing them?” → “Is the update domain the payload host for **A12** in this window?” Name the sibling domain as out of scope for this requirement.
-- If they invent PIR-01: that list is 2.12.1. Obtain it. Do not invent it.
-- If they pick VirusTotal versus RDAP: that is 2.1.8.
-- If they score whether the product can be used: that is 2.1.5.
-- If they tell the rest of the A12 plot: stay on the question. The given is enough.
+Open with a familiar failure mode: analysts collect every interesting indicator, pivot, and report but cannot say when they have answered the stakeholder's need. A requirement gives the work a stopping condition and a reason for each collection step.
 
----
+A useful requirement should tell the team what needs to be known and why it matters. It should provide enough scope to keep the effort coherent without predetermining the answer.
+
+### 2. Teach the components of a useful requirement
+
+Use three elements:
+
+- **Question:** What needs to be known?
+- **Decision or need:** What will the stakeholder do with the answer?
+- **Scope:** What subject, environment, and time window are relevant?
+
+Avoid presenting these as a mandatory form unless the local organization has one. The teaching goal is clarity and direction.
+
+Explain that a requirement should generally avoid over-specifying the collection method. “Check VirusTotal for X” is an analytical task or collection action, not the requirement itself, unless the stakeholder specifically needs information from that source.
+
+### 3. Clarify PIR, standing, and ad-hoc
+
+A **PIR** is distinguished by priority. Leadership or the program has identified it as especially important relative to other requirements.
+
+A **standing requirement** describes persistence. It remains active over time.
+
+An **ad-hoc requirement** describes how the need arose: one-time or event-driven.
+
+Make the overlap explicit. A standing requirement may be a PIR. An ad-hoc requirement may become a PIR. The course should not imply that these labels form one mutually exclusive list.
+
+### 4. Refine the A12 question
+
+Start with: **“Are we seeing them?”**
+
+Ask learners what is ambiguous. Good answers include the actor or activity being referenced, the environment, the observable behavior, and the time window.
+
+Then use the course example:
+
+**What role did the update domain play in the activity on WS-JLEE during A12?**
+
+Discuss why this version is more useful. It gives the analyst an object, an incident context, and a relationship to establish. Then show how a follow-on question can be narrower if the stakeholder specifically needs to know whether `/update.exe` was delivered.
+
+### 5. Show how the requirement drives work
+
+Ask what evidence could answer the question. Accept multiple defensible sources: DNS, HTTP, EDR or file evidence, incident notes, and process activity.
+
+Then ask what might be interesting but not necessary for the current question. Use the sibling-domain example. Explain that deferring a pivot is not the same as discarding it; it can be preserved as a possible follow-on requirement.
+
+This is an important analytical habit: separate **scope control** from **curiosity suppression**.
+
+## Common Student Challenges
+
+| Misunderstanding | Why it occurs | Teaching response |
+|---|---|---|
+| Every requirement is a PIR. | PIR is the most memorable requirement term. | Ask who prioritized it and where that priority is documented. |
+| Standing, ad-hoc, and PIR are three mutually exclusive types. | They are often listed together in simplified training. | Separate priority from duration/trigger; show that the labels can overlap. |
+| A broad conversational question is already sufficient. | It sounds meaningful to the stakeholder. | Ask what object, environment, or time window the analyst would actually collect against. |
+| A requirement should name the exact tool to use. | Learners want a concrete first action. | Keep the requirement focused on the information need; source selection comes later. |
+| Scope control means ignoring unexpected evidence. | “Stay on requirement” can sound rigid. | Preserve useful pivots and create or refine a requirement when they matter. |
 
 ## Knowledge Check – Answer Key
 
-1. **Every intelligence requirement is a PIR. True or false?**  
-   **Answer:** False. A PIR is a *priority* requirement.  
-   **Explanation:** Standing and ad-hoc requirements are still requirements. Leadership or the program has to rank a PIR.
+### 1. Every intelligence requirement is a PIR. True or false? Explain what makes a PIR different.
 
-2. **What does a PIR add that a standing or ad-hoc requirement may not have?**  
-   **Answer:** Rank — leadership or the program put it first.  
-   **Explanation:** The extra fact is priority, not a different grammar of the question.
+**Expected answer:** False. A PIR is an intelligence requirement that leadership or the program has prioritized.
 
-3. **“Are we seeing them?” Translate it for A12, and name one thing not to chase.**  
-   **Answer:** “Is the update domain the payload host for **A12** in this window?” Do not chase the sibling domain on this requirement.  
-   **Explanation:** The slogan has no object and no window. The refined question names both. The sibling hop is later enrichment, not this requirement.
+**Reasoning:** Priority is the distinguishing characteristic. Other requirements can still be valid and important without being PIRs.
 
----
+### 2. A stakeholder asks, “Are we seeing them?” Identify two things you would clarify before treating that as an intelligence requirement.
 
-## Additional Instructor Resources
+**Expected answer:** Any two defensible clarifications such as who or what “them” refers to, what activity counts as seeing them, the environment, the time window, or the stakeholder's decision need.
 
-- Next: 2.1.5 Ensuring intelligence is actionable
+**Reasoning:** The original question is too ambiguous to direct collection consistently.
+
+### 3. Using A12, write a clearer requirement and name one piece of evidence plus one pivot that could be deferred.
+
+**Expected answer:** Example requirement: “What role did the update domain play in the activity on WS-JLEE during A12?” Evidence could include HTTP/DNS records or host/file evidence. A sibling domain could be deferred if it does not help answer the current question.
+
+**Acceptable response:** Other clearly bounded A12 requirements are acceptable if the learner can explain how the evidence relates to the question.
+
+## Summary and Transition
+
+Close by emphasizing that a requirement is not paperwork added before analysis; it is the mechanism that gives analysis direction. The next lesson, **2.1.5 – RFI Intake and Prioritization**, applies this requirement discipline to an incoming request.

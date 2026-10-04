@@ -8,89 +8,85 @@
 **Estimated Time:** 15–20 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
-
-**Purpose of this module:**  
-Name the five kinds of host activity so the next lessons can stay on one kind each.
-
-**Context (plain language):**
-
-- What this lesson is for: An alert usually names a host. That host generated a log. Before you describe what happened, you have to know what kind of activity the log is about. This lesson names those kinds.
-- How it hooks to the lesson before: the shared intro block (course layout, what a SOC is, jobs, frameworks, tools, environment). This is the start of the SOC analyst track.
-- How it hooks to the lesson after: 1.1.2 is process activity — who ran what.
-- Why we are doing it this way: name process, file, registry, host-network, and image/driver load before anyone reads a single event.
-- What we are *not* doing in this lesson: process fields, Sysmon install, Zeek, the course fiction plot (DYA / PRD), no lab.
-- Extra step: none.
-
-Use the same names as the student guide: **log**, **event**, **process**, **file**, **registry**, **host-network**, and **image/driver load**. **Row** is the SIEM-table gloss from the student intro, not the headline word. **Host-network** means the endpoint logged a talk, not a Zeek protocol lesson.
-
-**Key Teaching Points:**
-- Five kinds of host activity. This lesson is the overview.
-- Sysmon and MDE record the same activities with different field names.
-- Name the kind. Do not describe the event yet.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+Endpoint evidence helps you describe activity on a device. Recognizing the kind of activity first makes it easier to choose the right fields and explain what the event establishes. The next five lessons build that skill one activity type at a time.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Recognize the five endpoint activity types.
+2. Classify a short description by its recorded operation.
+3. Explain why source and collection coverage matter when interpreting an event.
 
 **Mapped Proficiency Items:**
 - K: 1.1.1.1 – Endpoint activity (the map)
 - T: 1.1.1.2 – Given a one-line description, name the activity type
 
----
+## Preparation and Scope
+
+Use the [student guide](student-guide.md) and [slide source](slides.md). Review the worked example and expected answers before teaching. Use the supplied fictional evidence for discussion; no live system access or new lab is required.
+
+Use the proficiency levels above to adjust prompting and explanation depth. The module focuses on its mapped knowledge and tasks; the linked next lesson develops the next step.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | After the shared intro block |
-| Key Concepts            | 10 min    | Five kinds; three givens |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~19 min** | |
-
----
+| Section | Minutes | Focus |
+|---|---|---|
+| Opening | 2 | Connect the lesson to its purpose. |
+| Explanation and worked example | 8 | Read the supplied evidence and demonstrate the reasoning. |
+| Knowledge check and feedback | 6 | Complete the interpretation or modification tasks. |
+| Summary and transition | 2 | Consolidate the result and connect the next lesson. |
+| **Total** | **18** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Five kinds of endpoint activity
 
-**Talking Points:**
-- Open with the job: an alert names a host, that host generated a log, and you have to know the kind of activity before you describe it.
-- Write the five kinds. Stop there. Do not add fields or Event IDs.
-- Walk the three “given” lines from the student guide. The product is the kind, not a story of the incident.
-- If they start listing Event IDs: that is 1.1.2. Today is only the kind of activity.
-- If they say host-network is Zeek: the host logged the talk. Zeek is 1.2.
-- If they start the DYA / PRD plot: that fiction is from the intro. It is not this lesson.
+Ask learners to classify the recorded operation before discussing suspiciousness. Explain event versus log once so later lessons can use both terms naturally.
 
----
+**Key point to reinforce:** Classify the recorded operation: process, file, registry, host-network, or image/driver load. A log can contain many events.
 
-## Knowledge Check – Answer Key
+### 2. Recognizing the observation
 
-1. **Sysmon and MDE are two different stories. True or false?**  
-   **Answer:** False. Two tools, same five kinds of activity, different field names.  
-   **Explanation:** The course uses both as examples of the same host activity, not as two separate facts.
+Use the same DLL name in both statements and ask which verb changes the activity type. Preserve the possibility of linking both events later.
 
-2. **“A program started on the host.” Which type?**  
-   **Answer:** Process.  
-   **Explanation:** A program ran. That is process activity, not file or network.
+**Key point to reinforce:** The same DLL can appear in a file-create event and an image-load event. The operation determines what each record establishes.
 
-3. **“This host connected to an IP and port.” Process or host-network?**  
-   **Answer:** Host-network.  
-   **Explanation:** A process started the connection, but the log that recorded the talk is host-network. Process would be “a program started,” not “this host connected.”
+### 3. Understanding the source
 
----
+Contrast the sensor viewpoints, then ask what endpoint evidence adds to a network connection. Avoid promising that either product records all five types completely.
 
-## Additional Instructor Resources
+**Key point to reinforce:** Sysmon and MDE overlap but differ in coverage and schema. Network-sensor records add a different viewpoint.
 
-- Next: 1.1.2 Process activity
+## Knowledge Check — Answer Key
+
+### 1. Name the five activity types and give an example of each.
+
+**Expected answer:** Process, file, registry, host-network, and image/driver load; examples should identify the operation shown in the table.
+
+### 2. How does a file-create event differ from an image-load event for the same DLL?
+
+**Expected answer:** Creation records a file operation; image load records the module loading into a process. One does not establish the other.
+
+### 3. Why should you check the schema when moving from Sysmon to MDE?
+
+**Expected answer:** They have overlapping capabilities but different field names, event types, and collection coverage.
+
+## Assessment Guidance
+
+Accept equivalent wording when it preserves the evidence and reasoning. For a query or rule modification, check the selected source, changed predicate or condition, and the learner’s explanation of what now matches. For an interpretation or routing decision, ask which supplied fact or classroom requirement supports it. Do not require an operational result from a system learners have not been given.
+
+## Closing and Transition
+
+Identify the recorded operation, then use the fields and coverage of its source to describe it. Related events can build a fuller sequence while retaining what each observation actually establishes.
+
+Previous: [0.8 — Environment / signal flow](../../../00-intro/08-environment/01-orientation/student-guide.md)
+
+Next: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — Sysmon events](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Microsoft — Advanced hunting schema](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables)

@@ -1,114 +1,65 @@
-# Module 0.1 – How this course is laid out  
-## Slide Deck Content
+# Module 0.1 – How this course is laid out
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (front door)  
-**Estimated Delivery Time:** 15 minutes  
-**Total Suggested Slides:** 8
+- Describe the course sequence and explain why the shared lessons come first.
+- Explain why detections precede alert investigation and identify where the SOC track ends.
+- Explain how an RFI connects the course example to the CTI track.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 0.1 – How this course is laid out  
-**Subtitle:** The order of the course  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-This is the first lesson. This lesson names the order of the course. It does not teach what a SOC is.
+**Speaker notes:** Introduce the purpose and connect it to the shared course sequence. The objectives describe the understanding learners should demonstrate by the end.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-This course trains four jobs that sit next to each other.
+This course follows the work of SOC analysts, CTI analysts, threat hunters, and detection engineers. Understanding its structure will help you see why a topic appears where it does and how the later lessons build on what you have already learned. Everyone begins with the same introductory material so that the four roles share a common vocabulary.
 
-Before you sit a track, know **the order of the course** — what applies to everyone, and where the four tracks sit.
-
-This lesson is the layout.
-
-**Speaker Notes:**  
-This slide is the student intro. Name the layout before anyone defines a SOC or a job. Do not teach those topics today.
+**Speaker notes:** Ask learners where this topic could help them understand an investigation. Use their answers to introduce the example without requiring prior operational experience.
 
 ---
 
-### Slide 3 – Order of the course
-**Title:** Order of the course
+## How the course progresses
 
-This **front door** — the intro lessons everyone sits first.
+Everyone completes the introduction and shared topics first.
 
-Then **shared lessons** that also apply to every role.
+The role tracks follow in order: SOC → CTI → Hunt → Detection Engineering.
 
-Then four **tracks**: SOC analyst, then CTI, then hunting, then detection engineers.
-
-**Speaker Notes:**  
-Four tracks after the shared lessons. SOC is first among the four. Keep them on the order. If they ask what a SOC is, that is the next lesson.
+**Speaker notes:** Walk through the sequence as a learning path. Explain that the earlier tracks supply context for the later ones, even when the learner already works in one of those roles. The order describes this course; it does not establish an organization chart.
 
 ---
 
-### Slide 4 – Inside SOC
-**Title:** Inside SOC
+## Why detections come before alert work
 
-You learn what detections *are* before you live in the alert queue.
+Detections help explain why an alert appeared.
 
-SOC **ends at reporting**.
+SOC reporting concludes at 1.5. An RFI connects the course example to CTI work.
 
-The RFI is the door into CTI.
-
-**Speaker Notes:**  
-This is teaching order, not a claim about every shop. Do not walk an alert or write an RFI today.
+**Speaker notes:** Use the learner’s experience of receiving an alert to explain the ordering. Understanding what a rule looks for helps the learner interpret its output. Expand RFI when you first say it, then explain that the course will develop the request and answer in later lessons.
 
 ---
 
-### Slide 5 – Shared lessons before SOC
-**Title:** Shared lessons before SOC
+## Using the shared examples
 
-**Frameworks. Tool survey. Environment / signal flow.**
+A shared fictional setting connects the lessons.
 
-Those sit after this intro and still before SOC. They apply to everyone.
+The companion story brings the incident together after the individual lessons.
 
-Role-local hunt / CTI / DE lists come later and differ by shop.
-
-**Speaker Notes:**  
-Those three are not SOC-only. If they offer a ticket name from their shop, do not write it on the board as course vocabulary.
+**Speaker notes:** Explain why the names are deferred to the next lesson: learners first need the route through the course. Present the companion story as a way to connect the products they will learn about. Local procedures remain matters to obtain from the actual organization.
 
 ---
 
-### Slide 6 – Course fiction
-**Title:** Course fiction
+## Knowledge check
 
-This course uses one company and one adversary as **fiction**, not your site’s policy.
+1. What do learners complete before the four role tracks, and why are those topics shared?
+2. Why does the SOC track teach detections before alert investigation, and where does that track end?
+3. How does an RFI connect the SOC and CTI parts of this course?
 
-Those **names** come in the next lesson.
-
-After the lessons, a **companion story** retells the same flow as one incident.
-
-**Speaker Notes:**  
-Do not name DYA or PRD today. If they ask, those names are the next lesson. Do not start the companion story.
+**Speaker notes:** Ask learners to explain the evidence or reasoning behind each answer. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for expected responses and feedback.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Summary and next step
 
-1. After this front door, what comes before the four tracks?  
-2. Where does the SOC track end? What is the door into CTI?  
-3. Name two shared lessons that sit before SOC and apply to everyone.
+The course begins with shared foundations and then follows SOC, CTI, Hunt, and Detection Engineering. Its ordering helps you understand the evidence and products that later work depends on. The fictional setting and companion story connect the lessons, while local procedures are introduced where they are needed.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+Next: [0.2 – What a SOC is](../02-what-a-soc-is/student-guide.md)
 
----
-
-### Slide 8 – Summary
-**Title:** Summary
-
-Front door, then shared lessons for everyone, then four tracks.
-
-Detections before the alert queue. SOC ends at reporting. The RFI is the door into CTI.
-
-Names of the company and adversary come next.
-
-**Next:** **0.2** What a SOC is
-
-**Speaker Notes:**  
-0.2 is what a SOC is. That lesson names the company and the adversary. This lesson does not.
+**Speaker notes:** Revisit any uncertainty from the knowledge check, then connect the lesson to the next topic.

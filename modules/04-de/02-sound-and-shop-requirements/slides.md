@@ -1,102 +1,59 @@
-# Module 4.2 – Making a detection sound and meeting shop requirements  
+# Module 4.2 – Sound Detections
 ## Slide Deck Content
 
-**Target Audience:** Detection Engineer (primary); SOC Analyst, Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 15–20 minutes  
-**Total Suggested Slides:** 8
+**Total Suggested Slides:** 9
 
----
+### Slide 1 – Title
+**Sound Detection Engineering**  
+Test behavior, non-target behavior, and data
 
-### Slide 1 – Title Slide
-**Title:** Module 4.2 – Making a detection sound and meeting shop requirements  
-**Subtitle:** Detection Engineer (SOC / Hunter / CTI sit this too)  
-**Footer:** SOC / Hunter / CTI / DE Training Program
+### Slide 2 – Parsing is not validation
+A rule can be syntactically valid and operationally useless.
 
-**Speaker Notes:**  
-4.1 named what DE owns. This lesson is what good enough to ship looks like. It is not how to write the rule.
+### Slide 3 – Positive test
+What **must fire**?
 
----
+Use known or safely emulated intended behavior.
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+### Slide 4 – Negative test
+What **must not fire**?
 
-A detection on DE’s desk does not ship because someone asked.
+Use realistic benign / near-neighbor activity.
 
-It ships when it is **sound** and meets the shop list you were **shown**.
+### Slide 5 – Data test
+Do the required:
+- logs
+- fields
+- population
+- parsing
+- timing
+exist?
 
-This lesson is that ship bar.
+Reference: [Sigma Logsources](https://sigmahq.io/docs/basics/log-sources.html)
 
-**Speaker Notes:**  
-This slide is the student intro. Name sound, the list you were shown, and the note back. Do not write a rule today. Do not invent a DYA field list.
+### Slide 6 – Test behavior
+Exact IOC replay can help.
 
----
+Behavioral validation is more durable.
 
-### Slide 3 – Sound, then test
-**Title:** Sound, then test
+Reference: [CTID detection validation](https://ctid.mitre.org/blog/2025/08/04/lessons-from-sharepoint-vulnerability-cve-2025-53770/)
 
-**Sound:** fires on the intended activity. Does **not** fire on what it must not.
+### Slide 7 – Local requirements
+Public formats ≠ local deployment policy.
 
-**Test** a draft or a change **before it goes live.** State what **must fire** and what **must not**.
+Use the list from 4.8.
 
-**Speaker Notes:**  
-If they cannot name both, they are not ready to ship. Do not write SIGMA. A change to a live rule gets the same two lines as a draft.
+### Slide 8 – Close the loop
+Shipped  
+Changed  
+Sent back  
+Retired / superseded
 
----
+Explain meaningful changes.
 
-### Slide 4 – The list you were shown
-**Title:** Shop requirements
+### Slide 9 – Knowledge Check
+1. Three test categories?  
+2. Why can logic be right but detection fail?  
+3. Does Sigma define local policy?
 
-Kinds DE owns: meta fields, naming, IDs, tags, logging.
-
-The *list* is local (**4.8**). Check the list you were **shown**. Met vs missing.
-
-No list? Say so. Do not invent fields.
-
-**Speaker Notes:**  
-Do not put a fake DYA field list on the board. This lesson names the kinds. Obtain-and-follow is 4.8.
-
----
-
-### Slide 5 – Close the loop
-**Title:** Close the loop
-
-Tell the nominator (and SOC):
-
-**Shipped. Changed. Sent back. Retired.**
-
-**Speaker Notes:**  
-That is the note, not a ticket name. Accept / send back / reject as a *review* is 4.3. Sent back here is the close-the-loop note.
-
----
-
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
-
-1. A detection is sound when it does what two things?  
-2. You were not shown a shop list. Do you invent the fields?  
-3. Name the four close-the-loop notes.
-
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
-
----
-
-### Slide 7 – Summary
-**Title:** Summary
-
-Sound = fire / must-not-fire. Test both before a draft or a change goes live.  
-Check the list you were shown.  
-Shipped, changed, sent back, or retired.
-
-**Speaker Notes:**  
-Nomination review is next. Stay off the test itself when you get there.
-
----
-
-### Slide 8 – Next
-**Title:** Next
-
-**4.3** Nominations from SOC, hunt, and CTI
-
-**Speaker Notes:**  
-4.3 is who can nominate, and accept / send back / reject. Not the test itself.
+**Next:** 4.3 – Nominations

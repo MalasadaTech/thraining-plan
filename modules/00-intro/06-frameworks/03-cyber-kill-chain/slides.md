@@ -1,99 +1,81 @@
-# Module 0.6.3 – Cyber Kill Chain  
-## Slide Deck Content
+# Module 0.6.3 – Cyber Kill Chain
 
-**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer  
-**Estimated Delivery Time:** 15 minutes  
-**Total Suggested Slides:** 7
+- Describe the purpose and seven stages of the Cyber Kill Chain.
+- Assign a stage to a simple observed event and explain the evidence.
+- Distinguish observed progression from unestablished activity.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 0.6.3 – Cyber Kill Chain  
-**Subtitle:** Where this activity sits in time  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-Diamond organized what you know into four corners. This lesson stages the same activity in time. It does not teach ATT&CK IDs, and it is not the later CTI product lesson.
+**Speaker notes:** Introduce the purpose and connect it to the shared course sequence. The objectives describe the understanding learners should demonstrate by the end.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-You often see **one step** of an attack.
+The Cyber Kill Chain provides a way to discuss progression through an intrusion. It helps analysts place an observed event in a larger sequence and consider where defensive action could interrupt that sequence. The available evidence may show only part of the activity.
 
-Name **where that step sits** in the sequence.
-
-Do not call a first payload the whole intrusion.
-
-**Speaker Notes:**  
-This slide is the student intro. Place the activity you have on one stage. Refuse the previous or next stage you did not see. Do not fill the rest of the chain today.
+**Speaker notes:** Ask learners where this topic could help them understand an investigation. Use their answers to introduce the example without requiring prior operational experience.
 
 ---
 
-### Slide 3 – A staging tool
-**Title:** A staging tool
+## The seven stages
 
-The Cyber Kill Chain stages attack **progression**.
+Reconnaissance → Weaponization → Delivery → Exploitation → Installation → Command and Control → Actions on Objectives.
 
-It is a staging tool, not a complete model of every intrusion.
+Use the stages to describe progression and opportunities to interrupt it.
 
-**Speaker Notes:**  
-Purpose first, then the names. If they ask whether every intrusion has all seven stages, the answer is no — that is why you only place what you saw.
+**Speaker notes:** Read the stages in order with a brief explanation of each. Emphasize that unobserved stages remain unknown. Execution of a program does not automatically demonstrate vulnerability exploitation, and a file on disk does not by itself establish installation of a foothold.
 
 ---
 
-### Slide 4 – Seven stages
-**Title:** Seven stages
+## Placing an observed event
 
-**Reconnaissance** — research the target  
-**Weaponization** — build the payload  
-**Delivery** — the weapon arrives  
-**Exploitation** — it runs  
-**Installation** — implant on the host  
-**Command and Control** — a callback  
-**Actions on Objectives** — the goal
+Observed: email with an established malicious attachment reaches a mailbox.
 
-**Speaker Notes:**  
-Lockheed Martin Cyber Kill Chain, in that order. Do not add extra stages. Do not rename these as ATT&CK tactics. If they ask about SIEM tables, the activity in front of you is often one row; here it means the same thing as the one-line activity.
+Supported stage: Delivery.
+
+Evidence: the email delivery record.
+
+Opening, exploitation, and installation remain unestablished.
+
+**Speaker notes:** Keep the example anchored to the delivery record. If learners choose Weaponization, ask what evidence shows preparation. If they choose Exploitation or Installation, ask what happened on the endpoint and whether any such event was supplied.
 
 ---
 
-### Slide 5 – Place this activity
-**Title:** Place this activity
+## Explaining a stage assignment
 
-A `.vbs` in email is **Delivery**.
+State the stage and supporting event.
 
-Not **Weaponization** — you did not see them build it.  
-Not **Exploitation** — you did not see it run.
+Identify what remains unknown.
 
-Do not invent the rest of the chain.
+ATT&CK: behavior. Diamond: event elements. Kill Chain: progression.
 
-**Speaker Notes:**  
-Previous and next are the reject pair. Command and Control is not the next stage after Delivery, and there is no callback anyway. One line of activity. Not an alert queue, and not an intelligence product that lists every supported stage.
+**Speaker notes:** Use the three framework purposes as a brief synthesis. Learners should explain their stage choice, not reconstruct an unseen attack. Discuss one plausible interruption point, such as preventing delivery, without turning this introduction into a control-design lesson.
 
 ---
 
-### Slide 6 – Knowledge Check
-**Title:** Knowledge Check
+## Knowledge check
 
-1. What is the Cyber Kill Chain for?  
-2. Name the seven stages in order.  
-3. A user received a `.vbs` in email. Why is that Delivery, and why is it not Exploitation?
+1. Name the seven Cyber Kill Chain stages and explain what the model helps analysts describe.
+2. An email record confirms delivery of an attachment established as malicious. Which stage is supported, and why?
+3. Does that delivery record establish exploitation or installation? What would you say in the finding?
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Ask learners to explain the evidence or reasoning behind each answer. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for expected responses and feedback.
 
 ---
 
-### Slide 7 – Summary
-**Title:** Summary
+## Summary and next step
 
-Seven stages.  
-Place the activity you have.  
-Reject the previous or next stage you did not see.
+The Cyber Kill Chain describes intrusion progression in seven stages. Assign a stage from the observed event, explain the supporting evidence, and leave unobserved activity open for investigation.
 
-**Next:** **0.7** External tools
+Previous: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)
 
-**Speaker Notes:**  
-0.7 is purpose and when to pick a tool. Stay off VirusTotal Relations and platform depth.
+Next: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)
+
+**Speaker notes:** Revisit any uncertainty from the knowledge check, then connect the lesson to the next topic.
+
+---
+
+## References and further reading
+
+- [Lockheed Martin — Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html) — Original model and supporting resources.
+
+**Speaker notes:** These linked resources support the lesson and provide a place to check definitions and service details.

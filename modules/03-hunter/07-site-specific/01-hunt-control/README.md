@@ -1,28 +1,37 @@
-# Hunt control and lead management
+# Hunt Control and Lead Management
 
 **Path:** `modules/03-hunter/07-site-specific/01-hunt-control`  
 **Primary role:** Threat Hunter  
 **Secondary:** SOC Analyst, CTI Analyst  
-**Time:** about 15–20 minutes
+**Time:** about 20–25 minutes
+
+## Proficiency focus
+
+- Hunter: 3.7.1 B / C / C ; 3.7.1.1 3c / 4c / 4c  
+- SOC: 3.7.1 A / A / B ; 3.7.1.1 1a / 1a / 2b  
+- CTI: 3.7.1 A / A / B ; 3.7.1.1 1a / 1a / 2b
 
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.7.1 | K | Hunt control and lead management | 3.7.1 a–b | A / A / B | B / C / C | A / A / B |
-| 3.7.1.1 | T | Follow the local process for initiating and controlling a hunt | 3.7.4 task 1 | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-
-The teaching-unit ID is **3.7.1**. Outline T block **3.7.4** is not a separate module; this lesson takes task 1 only. Obtain-and-follow. Do not invent a DYA ticket, lead board, or policy. No lab.
+- K: 3.7.1 – Hunt control and lead management
+- T: 3.7.1.1 – Follow the local process for initiating and controlling a hunt
 
 ## Concepts taught
 
-- hunt initiation and control are site-specific (also: hunt control)
-- lead management is site-specific
-- follow the local process for initiating and controlling a hunt (also: obtaining the local initiate path)
+- local hunt initiation
+- scope-change authority
+- pause/stop criteria
+- out-of-scope lead management
+- local hunt governance
+- onboarding gaps
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

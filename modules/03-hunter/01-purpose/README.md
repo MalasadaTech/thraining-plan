@@ -5,26 +5,34 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.1.1 B / C / C ; 3.1.1.1 3c / 4c / 4c ; 3.1.1.2 3c / 4c / 4d  
+- SOC: 3.1.1 A / B / B ; 3.1.1.1 1a / 2b / 3c ; 3.1.1.2 1a / 2b / 3c  
+- CTI: 3.1.1 A / B / B ; 3.1.1.1 1a / 2b / 3c ; 3.1.1.2 1a / 2b / 3c
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.1.1 | K | Purpose of Threat Hunting | 3.1 a–b | A / B / B | B / C / C | A / B / B |
-| 3.1.1.1 | T | Explain the purpose of threat hunting | 3.1.1 task 1 | 1a / 2b / 3c | 3c / 4c / 4c | 1a / 2b / 3c |
-| 3.1.1.2 | T | Identify activity existing controls might miss | 3.1.1 task 2 | 1a / 2b / 3c | 3c / 4c / 4d | 1a / 2b / 3c |
-
-The teaching-unit ID is **3.1**. Hunt types are **3.2.1**. Run key is first *used* here. No lab.
+- K: 3.1.1 – Purpose of Threat Hunting
+- T: 3.1.1.1 – Explain the purpose of threat hunting in the context of the security program
+- T: 3.1.1.2 – Identify examples of activity that existing controls might miss
 
 ## Concepts taught
 
-- purpose of threat hunting (also: threat hunting in the security program)
-- missed activity (also: activity missed by existing security mechanisms)
+- purpose of threat hunting
+- missed or uncovered activity
 - detection gaps
 - visibility gaps
+- false-negative distinction
+- hunt outputs and feedback
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

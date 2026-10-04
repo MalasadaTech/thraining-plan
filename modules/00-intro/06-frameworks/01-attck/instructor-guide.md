@@ -9,98 +9,85 @@
 **Estimated Time:** 15–20 minutes  
 **Delivery Method:** Instructor-led
 
----
+## Teaching Purpose
 
-## Module Overview for Instructors
+ATT&CK gives analysts a shared vocabulary for describing adversary behavior. A useful mapping connects that vocabulary to evidence, so another analyst can understand why the label fits. This lesson introduces the matrix and shows how to support one mapping from an observed event.
 
-**Purpose of this module:**  
-Give every role one language for what the adversary was trying to do and how, and show what a labeled line with a cited field looks like.
-
-**Context (plain language):**
-
-- What this lesson is for: People on different desks will look at the same host or log. They need one name for what the adversary was trying to do and how. This lesson is that shared language, and what a labeled line with a cited field looks like.
-- How it hooks to the lesson before: 0.5 said the same evidence can sit on more than one desk, and the product is different. This lesson is a shared label for behavior, not a product.
-- How it hooks to the lesson after: 0.6.2 Diamond is four vertices and the weakest one. Kill Chain is 0.6.3.
-- Why we are doing it this way: Frameworks sit before SOC so hunt, CTI, and DE are not learning ATT&CK as a SOC-only trick. Hunt planning and CTI products stay later.
-- What we are *not* doing in this lesson: Hunt planning (3.5). CTI product mapping (2.7.1). Diamond vertices. Kill Chain stages. Alert categories (1.4). Actor profiles (2.11). DTF (2.7.4). No lab.
-- Extra step: none.
-
-Use the same names as the student guide: **tactic**, **technique**, **sub-technique**, **map**, and **cited field**. A **map** is the label: tactic + technique or sub-technique + one cited field. **Row** is the outline word for the line of activity; here it means the log or event in front of you, not a SIEM table. The official tactic name is **Command and Control**, not C2, unless you gloss it after the student-guide word.
-
-**Key Teaching Points:**
-- ATT&CK labels behavior. Tactic is why. Technique or sub-technique is how.
-- A map is tactic + ID + name + one cited field.
-- If two IDs fit, pick the primary for this line and reject the neighbor.
-- An ID with no cited field is not a map.
-
-**Common Student Challenges:**
-- Swap tactic and technique. Why: both are ATT&CK words. Example: calling Execution a technique.
-- Write Command and Control because it might beacon later. Why: they label the next stage, not this line. Example: `T1059.001` written as Command and Control with no callback field.
-- Treat an ID with no cited field as finished. Why: the ID looks official. Example: writing `T1059.001` with no command line.
-
-**Required Materials:**
-- Student Guide
-- Slide Deck
-
----
+Teach this as a shared introductory lesson using the supplied examples and discussion. Match the depth to the proficiency levels above. The focus is the mapped knowledge and task; operational procedures are developed in the later role tracks.
 
 ## Learning Objectives
 
-Same as the student guide.
+1. Explain the purpose and structure of ATT&CK.
+2. Distinguish a tactic, technique, and sub-technique.
+3. Map one observed behavior and cite the evidence supporting the mapping.
 
 **Mapped Proficiency Items:**
 - K: 0.6.1.1 – MITRE ATT&CK
 - T: 0.6.1.2 – Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence
 
----
+## Preparation
+
+Read the [student guide](student-guide.md) and use [slides.md](slides.md) to support the explanation. Review the answer key before teaching so the discussion and feedback reinforce the same concepts. This lesson uses discussion and worked examples; no lab is required.
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
-
-| Section                 | Time      | Notes |
-|-------------------------|-----------|-------|
-| Introduction (required) | 3 min     | Shared language, not a product |
-| Key Concepts            | 10 min    | Structure + one map |
-| Knowledge Check         | 4 min     | Three questions |
-| Summary                 | 2 min     | |
-| **Total**               | **~19 min** | |
-
----
+| Section | Time | Teaching purpose |
+|---|---|---|
+| Opening and purpose | 2 min | Connect this lesson to the previous topic. |
+| Explanation and worked examples | 10 min | Use the three teaching sections below. |
+| Knowledge check and feedback | 4 min | Ask for reasoning as well as an answer. |
+| Summary and transition | 2 min | Consolidate the lesson and introduce the next topic. |
+| **Total** | **18 min** | |
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts
+### 1. Reading the matrix
 
-**Talking Points:**
-- Open with the job: four desks can look at the same host, and they still need one name for the goal and the how.
-- Write tactic = why, technique = how. Sub-technique is a more specific how. Use `T1059` and `T1059.001`. Do not memorize the matrix.
-- Enterprise matrix: columns are tactics, cells are techniques and sub-techniques.
-- Walk the given: `wscript` launched encoded PowerShell. Execution / `T1059.001` PowerShell. Cite the encoded command line.
-- If they write Command and Control: there is no beacon in this line. That ID has no cited field.
-- If they start hunt coverage or Navigator: that is 3.5.
-- If they start putting IDs on a report or activity set: that is 2.7.1.
-- If they start Diamond vertices: that is 0.6.2.
-- DE sits this at awareness. Do not start them at hunt-planning depth.
+Open the Enterprise matrix and locate Execution and PowerShell. Ask learners to explain the relationship in their own words. They need to navigate and interpret the structure rather than memorize its contents.
 
----
+**Student-facing emphasis:** Tactic: the goal. Technique: how the goal is pursued. Sub-technique: a more specific behavior. Example: Execution → T1059 → T1059.001 PowerShell.
 
-## Knowledge Check – Answer Key
+### 2. Building an evidence-supported mapping
 
-1. **What is a tactic, and what is a technique?**  
-   **Answer:** A tactic is the goal (why). A technique is a named how.  
-   **Explanation:** Columns are tactics. Cells are techniques. A sub-technique is a more specific how (`T1059` / `T1059.001`).
+Walk from the recorded process fields to the behavior, then to the label. Explain why the sub-technique is more precise than T1059 here. The encoded content need not be decoded to recognize the interpreter, although further investigation may be needed to understand what it did.
 
-2. **An ATT&CK ID with no cited field is a finished map. True or false?**  
-   **Answer:** False. An ID with no cited field is not a map.  
-   **Explanation:** A finished map is tactic + technique or sub-technique + one field that actually shows it.
+**Student-facing emphasis:** Observed: wscript.exe launches powershell.exe with an encoded command. Mapping: Execution / T1059.001 — PowerShell. Support: process relationship and command-line fields.
 
-3. **Encoded PowerShell ran from a script. Name a tactic and a technique (or sub-technique) and what you would cite.**  
-   **Answer:** Execution / `T1059.001` (or `T1059`). Cite the encoded command line. Not Command and Control.  
-   **Explanation:** This line shows a scripting interpreter. It does not show a beacon.
+### 3. Keeping the conclusion within the evidence
 
----
+If a learner proposes Command and Control, ask which field demonstrates communication. If they assume all PowerShell is malicious, ask how an authorized administrator might use it. Accept alternative mappings only when the learner can support them with the supplied evidence.
 
-## Additional Instructor Resources
+**Student-facing emphasis:** Explain why the selected label fits the event. Additional labels need additional support. Behavioral mapping informs an investigation; context determines its significance.
 
-- Next: 0.6.2 Diamond Model
+## Knowledge Check — Answer Key
+
+### 1. How do a tactic, technique, and sub-technique differ?
+
+**Expected answer:** A tactic describes a goal; a technique describes a way to achieve a goal; a sub-technique describes a more specific form of that behavior.
+
+**Feedback and assessment:** Execution, T1059, and T1059.001 should occupy the correct levels.
+
+### 2. A process event shows wscript.exe launching powershell.exe with an encoded command. Give a supported mapping and identify the evidence.
+
+**Expected answer:** Execution / T1059.001 — PowerShell, supported by the process relationship and command-line fields.
+
+**Feedback and assessment:** Accept T1059 as a broader mapping, then explain why the PowerShell sub-technique is more precise. A label alone leaves the reasoning uncheckable.
+
+### 3. Does that event establish Command and Control or malicious intent? Explain.
+
+**Expected answer:** Neither is established by that event alone. Command and Control needs supporting communication evidence; malicious intent needs context beyond the interpreter being used.
+
+**Feedback and assessment:** Look for a distinction between observed behavior and an inference about purpose or intent.
+
+## Closing and Transition
+
+ATT&CK provides names for behavior. A useful mapping identifies the tactic and technique or sub-technique, cites the supporting evidence, and explains why the label fits. Keep additional conclusions tied to additional evidence.
+
+Previous: [0.5 – Where the jobs lightly overlap](../../05-where-jobs-overlap/student-guide.md)
+
+Next: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)
+
+## References and Further Reading
+
+- [MITRE ATT&CK — Enterprise matrix](https://attack.mitre.org/matrices/enterprise/) — Explore the matrix structure.
+- [MITRE ATT&CK — PowerShell (T1059.001)](https://attack.mitre.org/techniques/T1059/001/) — Read the behavior description used in the example.

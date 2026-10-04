@@ -5,24 +5,35 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.7.3 B / C / C ; 3.7.3.1 3c / 4c / 4c  
+- SOC: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b  
+- CTI: 3.7.3 A / A / B ; 3.7.3.1 1a / 1a / 2b
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.7.3 | K | Hunt outputs and hand-off | 3.7.3 a–b | A / A / B | B / C / C | A / A / B |
-| 3.7.3.1 | T | Produce required hunt outputs and perform proper hand-off | 3.7.4 task 3 | 1a / 1a / 2b | 3c / 4c / 4c | 1a / 1a / 2b |
-
-The teaching-unit ID is **3.7.3**. Lumped outline **3.7.4** is not a separate module. Obtain-and-follow. Do not invent a DYA output list or hand-off ticket. Hunt 3.x ends here. Next is DE **4.x**. No lab.
+- K: 3.7.3 – Hunt outputs and hand-off
+- T: 3.7.3.1 – Produce required hunt outputs and perform proper hand-off
 
 ## Concepts taught
 
-- expected hunt outputs are site-specific (also: hunt outputs, hunt done list, obtaining the local output list)
-- hunt hand-off to SOC, IR, or CTI is site-specific (also: hunt recipient chart, obtaining the local hand-off chart)
-- produce required hunt outputs and perform proper hand-off (also: hunt hand-off line, do not send without the chart)
+- local hunt done criteria
+- hunt findings
+- affected scope
+- detection gaps
+- visibility gaps
+- follow-on leads
+- local hand-off routing
+- output provenance
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

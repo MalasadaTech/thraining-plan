@@ -91,10 +91,10 @@ Taught in `00` before SOC. Hunt planning is **3.5**. Codes match combined.
 | 3.4.1 | Assessing CTI for hunting value | K | B | C | C | Hunter 3 should already know hunt-worthy vs awareness-only vs hand-off. |
 | 3.4.1.1 | Triage a CTI report: hunt / don’t hunt / hand off, and say why | T | 3c | 4c | 4d | Core consumer skill. 7-level applies finer judgment on weak or mixed reports. |
 | 3.4.2 | Extracting hunt leads from CTI | K | B | C | C | TTPs vs IOCs vs behaviors; what to drop; ATT&CK IDs if present. Mapping hunts is 3.5. |
-| 3.4.2.1 | Extract hunt-suitable TTPs from a CTI report | T | 3c | 4c | 4d | Direct application of 3.4.2. Overlap with CTI 2.8.2 is hunter-as-consumer. |
+| 3.4.2.1 | Extract hunt-suitable TTPs from a CTI report | T | 3c | 4c | 4d | Direct application of 3.4.2. Overlap with CTI 2.6.1 is hunter-as-consumer. |
 | 3.4.2.2 | Extract hunt-suitable artifacts (IOCs, patterns, behaviors) | T | 3c | 4c | 4d | Same as above. |
 | 3.4.2.3 | State the hunt question those leads support | T | 3c | 4c | 4d | Bridges 3.4 to methodology (3.2) and queries (3.3). |
-| 3.4.3 | STIX as hunt input | K | B | C | C | Objects a hunter uses and how a bundle seeds a hunt. Authoring STIX is CTI 2.10. |
+| 3.4.3 | STIX as hunt input | K | B | C | C | Objects a hunter uses and how a bundle seeds a hunt. Authoring STIX is CTI 2.7. |
 | 3.4.3.1 | Identify hunt-relevant objects in a report or bundle | T | 3c | 4c | 4c | Practical read of a bundle, not production. |
 | 3.4.3.2 | Turn those objects into hunt leads | T | 3c | 4c | 4d | Hunter-specific last step. |
 

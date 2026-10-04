@@ -1,114 +1,119 @@
-# Module 1.2.3 – DNS Engine  
-## Slide Deck Content
+# Module 1.2.3 – DNS Engine
 
-**Target Audience:** SOC Analyst (primary); Threat Hunter, CTI Analyst (secondary)  
-**Estimated Delivery Time:** 25–30 minutes  
-**Total Suggested Slides:** 8
+- Interpret DNS question, response, record type, and endpoints.
+- Describe a DNS observation and distinguish it from later communication.
+- Create or modify a query for specific DNS activity.
 
----
-
-### Slide 1 – Title Slide
-**Title:** Module 1.2.3 – DNS Engine  
-**Subtitle:** The name that was asked, and what answered  
-**Footer:** SOC / Hunter / CTI / DE Training Program
-
-**Speaker Notes:**  
-1.2.2 was the connection on the wire. This lesson is the DNS extract. It is not DGA, and it is not the initiating process.
+**Speaker notes:** Explain the purpose of the lesson and the understanding learners should demonstrate.
 
 ---
 
-### Slide 2 – Why this lesson exists
-**Title:** Why this lesson exists
+## Why this matters
 
-SOC analysts read Zeek **`dns`** logs to see a name lookup on the **wire**.
+DNS evidence connects a question about a name to the response observed on the network. Distinguishing the resolver from the returned address helps prevent a common error when moving from a lookup to a connection investigation.
 
-Who asked. Which name. Which type. What came back.
-
-Not the initiating process. That was **1.1.4**.  
-Not TLS.
-
-**Speaker Notes:**  
-This slide is the student intro. Daily alert work: describe the lookup. The connection was 1.2.2. Do not teach TLS or HTTP fields today.
+**Speaker notes:** Connect the topic to the evidence or decision learners encountered in the previous lesson.
 
 ---
 
-### Slide 3 – Question and answer
-**Title:** Query and answers
+## Reading a DNS transaction
 
-**`query`** — the name that was asked.  
-**`answers`** — what came back (an address, another name, or empty).
+Separate querying endpoint, resolver, requested name/type, and answer. Review the response code when interpreting missing answers.
 
-Empty means this log does not show a returned record.
-
-**Speaker Notes:**  
-Walk question and answer before types. Do not start an NXDOMAIN hunt from an empty answers list. Do not invent a DGA lecture.
+**Speaker notes:** Use a resolver address different from the returned address. Ask learners to describe what each address does.
 
 ---
 
-### Slide 4 – Record types
-**Title:** Record types
+## Reference — Reading a DNS transaction
 
-**A** — IPv4 address.  
-**AAAA** — IPv6 address.  
-**MX** — mail exchanger.  
-**CNAME** — another name, not an address.  
-**NS** — name server.  
-**TXT** — text data.
+| Field | Meaning |
+|---|---|
+| `query` | The requested name. |
+| `qtype_name` | The requested record type. |
+| `answers` | Observed answer values, which may contain addresses or names. |
+| `rcode_name` | Response code, where recorded, useful when interpreting an empty answer. |
+| `id.orig_h` | The querying endpoint visible to the sensor. |
+| `id.resp_h` | The DNS server contacted, often a recursive resolver. |
+| `uid` | Connection identifier for related records; multiple DNS transactions may share it. |
 
-**Speaker Notes:**  
-These are the types this lesson names. CNAME is the usual mix-up: it is another name, not an address. Other types can wait until they appear in a log.
-
----
-
-### Slide 5 – Who asked which DNS server
-**Title:** Who asked which DNS server
-
-**`id.orig_h`** — who asked.  
-**`id.resp_h`** — the DNS server that was asked.
-
-That server is often a resolver.  
-It is **not** the A record. The A, when present, is in **`answers`**.
-
-**Speaker Notes:**  
-This is the trap. People write the resolver IP as “what the name resolved to.” Stop them. The TCP connection to that A is a different log (1.2.2).
+**Speaker notes:** Use a resolver address different from the returned address. Ask learners to describe what each address does. Use the surrounding student-guide explanation to interpret the table and its limits.
 
 ---
 
-### Slide 6 – Describe it. Query something specific.
-**Title:** Describe it. Query something specific.
+## Working through the example
 
-One sentence: who asked, which name, which type, what answered.
+The client asks 192.0.2.53 for update.example and receives 203.0.113.88. A later connection needs separate evidence.
 
-**Given:** workstation, type `A`, answers `["203.0.113.88"]`.
-
-A query names a **specific** pattern — `query`, type, or `answers`.  
-Not every `dns` event.
-
-**Speaker Notes:**  
-Show this given before the knowledge check. One sentence: that host asked for that name and got A 203.0.113.88. Do not name a process. Do not tell the PRD plot.
+**Speaker notes:** Point out that the query type asks a question while the answer and response code describe the observed reply.
 
 ---
 
-### Slide 7 – Knowledge Check
-**Title:** Knowledge Check
+## Supplied example
 
-1. `id.resp_h` on a `dns` log is the IP the name resolved to. True or false?  
-2. Workstation queries a hostname, type `A`, answers `["203.0.113.88"]`. In one sentence, what occurred?  
-3. A SIEM query that matches every `dns` log is a good “specific DNS activity” query. True or false?
+The example records `192.0.2.10` asking resolver `192.0.2.53` for an A record for `update.example`, with `answers=["203.0.113.88"]` and `rcode_name=NOERROR`.
 
-**Speaker Notes:**  
-Answers are only in the instructor guide. Three questions for the whole lesson. Do not add a fourth.
+**Speaker notes:** Point out that the query type asks a question while the answer and response code describe the observed reply.
 
 ---
 
-### Slide 8 – Summary
-**Title:** Summary
+## Creating a focused DNS query
 
-Question, type, answer, who asked which DNS server.  
-The process is not on this log.  
-A query is specific.
+Query the name and record type. Adding AAAA broadens the question to IPv6 records for the same name.
 
-**Next:** **1.2.4** TLS engine
+**Speaker notes:** Have learners explain why adding AAAA broadens record types without broadening the requested domain.
 
-**Speaker Notes:**  
-1.2.4 is SNI and certificate on the same wire. Stay off this dns log when you get there.
+---
+
+## Reference — Creating a focused DNS query
+
+| where TimeGenerated > ago(1d)
+| where query =~ "update.example" and qtype_name == "A"
+| project TimeGenerated, uid, ['id.orig_h'], ['id.resp_h'],
+
+**Speaker notes:** Have learners explain why adding AAAA broadens record types without broadening the requested domain. Use the surrounding student-guide explanation to interpret the table and its limits.
+
+---
+
+## Worked example — Creating a focused DNS query
+
+```kusto
+ZeekDns
+| where TimeGenerated > ago(1d)
+| where query =~ "update.example" and qtype_name == "A"
+| project TimeGenerated, uid, ['id.orig_h'], ['id.resp_h'],
+          query, qtype_name, answers, rcode_name
+```
+
+**Speaker notes:** Have learners explain why adding AAAA broadens record types without broadening the requested domain. Use the student guide for the stated input, schema assumptions, and interpretation limits. The code is a teaching example for discussion, not a deployment instruction.
+
+---
+
+## Knowledge check
+
+1. Where do you find the DNS server and the returned address?
+2. Describe the example and explain whether it proves a connection to the answer.
+3. Modify the query for both IPv4 and IPv6 questions for the same name.
+
+**Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
+
+---
+
+## Summary and next step
+
+A DNS description identifies the observed client, resolver, question, type, and response. It supplies a lead for subsequent activity rather than proving that the client contacted the returned address.
+
+Previous: [1.2.2 – Conn Engine](../02-conn-engine/student-guide.md)
+
+Next: [1.2.4 – TLS Engine](../04-tls-engine/student-guide.md)
+
+[1.x module index](../../README.md)
+
+**Speaker notes:** Resolve any remaining uncertainty from the check and connect the next lesson.
+
+---
+
+## References and Further Reading
+
+- [Zeek — dns.log](https://docs.zeek.org/en/current/reference/logs/dns.html)
+
+**Speaker notes:** The linked primary sources support definitions and technical details. Check the deployed version and local schema for operational use.

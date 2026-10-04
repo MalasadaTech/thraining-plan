@@ -5,28 +5,35 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.2.2 B / C / C ; 3.2.2.1–3.2.2.3 3c / 4c / 4d  
+- SOC: 3.2.2 A / B / B ; 3.2.2.1–3.2.2.3 1a / 1a / 2b  
+- CTI: 3.2.2 A / B / B ; 3.2.2.1–3.2.2.3 1a / 2b / 3c
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading | SOC 3/5/7 | Hunter 3/5/7 | CTI 3/5/7 |
-|-----------|------|------|-----------------|-----------|--------------|-----------|
-| 3.2.2 | K | Hunt development concepts | 3.2.2 a–d | A / B / B | B / C / C | A / B / B |
-| 3.2.2.1 | T | Develop and document a hunt hypothesis | 3.2.3 task 1 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 3.2.2.2 | T | Scope and prioritize a hunt | 3.2.3 task 2 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-| 3.2.2.3 | T | Identify unique patterns suitable for hunting | 3.2.3 task 3 | 1a / 1a / 2b | 3c / 4c / 4d | 1a / 2b / 3c |
-
-The teaching-unit ID is **3.2.2**. Hunt types are **3.2.1**. Hunt tools are **3.3.1**. Named-technique hunt is **3.6.3**. Local documentation is **3.7.2**. No lab.
+- K: 3.2.2 – Hunt development concepts
+- T: 3.2.2.1 – Develop and document a hunt hypothesis
+- T: 3.2.2.2 – Scope and prioritize a hunt
+- T: 3.2.2.3 – Identify unique patterns or behaviors suitable for hunting
 
 ## Concepts taught
 
-- hunt development concepts (also: hunt card)
 - hunt hypothesis
-- scoping a hunt
-- prioritizing hunts
-- unique patterns or behaviors suitable for hunting
+- hunt scope
+- hunt priority
+- discriminating patterns
+- telemetry prerequisites
+- bounded negative results
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

@@ -5,25 +5,34 @@
 **Secondary:** SOC Analyst, CTI Analyst  
 **Time:** about 20–25 minutes
 
+## Proficiency focus
+
+- Hunter: 3.7.2 B / C / C ; 3.7.2.1 3c / 4c / 4c  
+- SOC: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b  
+- CTI: 3.7.2 A / A / B ; 3.7.2.1 1a / 1a / 2b
+
 ## Mapped proficiency items
 
-| Matrix ID | Type | Item | Outline heading |
-|-----------|------|------|-----------------|
-| 3.7.2 | K | Hunt documentation standards | 3.7.2 a–b |
-| 3.7.2.1 | T | Document a hunt according to local standards | 3.7.4 task 2 |
-
-The teaching-unit ID is **3.7.2**. Classroom card is **3.2.2**, not the site form. Obtain-and-follow. Do not invent a DYA hunt template or archive path. Initiate/control is **3.7.1**. Outputs and hand-off are **3.7.3**. No lab.
+- K: 3.7.2 – Hunt documentation standards
+- T: 3.7.2.1 – Document a hunt according to local standards
 
 ## Concepts taught
 
-- hunt documentation standards
-- required elements of hunt documentation
-- where hunts are documented
-- document a hunt according to local standards
+- local hunt documentation
+- authoritative hunt record
+- required fields
+- query/evidence retention
+- versioning
+- documentation repository
+- onboarding gaps
 
 ## Artifacts
 
-- [instructor-guide.md](instructor-guide.md)
 - [student-guide.md](student-guide.md)
+- [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
-- `assets/` — empty
+- `assets/` — unchanged
+
+## Revision status
+
+Aligned to the explanatory mentor voice used across the revised CTI track. The module preserves evidence boundaries, distinguishes visibility from detection coverage, and avoids treating course examples or local-process placeholders as facts that have not been established.

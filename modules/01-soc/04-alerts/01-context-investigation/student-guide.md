@@ -7,14 +7,14 @@
 - CTI: 1.4.1.1 A / A / B ; 1.4.1.2 1a / 1a / 2b ; 1.4.1.3 1a / 1a / 2b ; 1.4.1.4 1a / 1a / 2b ; 1.4.1.5 1a / 1a / 1a ; 1.4.1.6 1a / 1a / 1a  
 **Estimated Time:** 30 minutes
 
----
-
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Review an alert: name the context that is present and missing (including a VirusTotal lookup of a hash, IP, or domain you have), say what the configuration would fire, and name each hop upstream.
-2. Say what related endpoint logs and PCAP **add** — or fail to add — versus the alert fields.
+1. Identify present and missing alert context, including an approved lookup of an available indicator.
+2. Explain the alert configuration and trace its actual upstream detection path.
+3. Select related endpoint logs and describe what they add or fail to add.
+4. Select related PCAP for a network question and describe its contribution or availability limit.
 
 **Mapped Proficiency Items:**
 - K: 1.4.1.1 – Alert context and investigation
@@ -24,56 +24,62 @@ By the end of this module, you will be able to:
 - T: 1.4.1.5 – Collect related endpoint logs and state what they add (or fail to add)
 - T: 1.4.1.6 – Collect related PCAP and state what it adds versus the alert fields
 
----
+## Why This Matters
 
-## 1. Key Concepts
+An alert is the starting point for an investigation. Before deciding what it means, establish what evidence it contains, what logic produced it, and what related records can add. This makes the eventual finding traceable to observations rather than to the alert title alone.
 
-SOC analysts work the **alert that fired** — the object in the queue — before they label it true or false. A detection created that alert. Before you classify it, you have to say what it already shows, what it does not, what the rule would fire on, how it reached the queue, and what related host logs or a packet capture add. That is the job in this lesson: gather that context so you do not treat a gap as benign or invent a hop that is not there.
+## 1. Establishing context and detection lineage
 
-**1.3** taught how to read and propose a detection. This lesson you do **not** write a new rule. You do **not** classify TP/FP (**1.4.2**).
+For the course process alert, record the host, account, event time, alert time, rule name/version, and the matched process fields. Separate facts already present from questions still open. The example shows `wscript.exe` launching PowerShell with an encoded-command argument as `jlee`; the decoded behavior and authorization are not yet supplied.
 
-The first alert in this course is the **process create**: `wscript` → encoded PowerShell as `jlee`. That is what the **1.3.4** SIEM rule keys on.
+Read the configuration and explain what would fire: the process-created event must satisfy the image, parent, and command-line predicates, together with the rule's trigger settings. Trace the actual upstream path. A SIEM-only example is endpoint event → ingested table → SIEM rule → alert. A network example could be Suricata signature → Suricata alert ingested into the SIEM → correlation rule → SIEM alert. Use rule IDs and source references to establish which path applies.
 
-| Idea | What to do |
-|------|------------|
-| **Context** | Two lists: **present** and **missing**. Typical present fields are host, user, time, rule name, and the field the rule keys on. If you have a **hash**, **IP**, or **domain**, look it up on **VirusTotal** (**0.7**). Write what VT adds or fails to add (reputation, or “not in VT”). That is gathering context, not opening Relations or a pivot graph (**2.9**). Missing is a **gap**, not “benign.” Do not invent a command line or a VT hit. |
-| **Configuration** | Read the detection behind the alert. One sentence: **what would fire**. Use the same field language as **1.3**. |
-| **Upstream hops** | Name each hop from detection logic to the alert. Classroom pattern: Suricata rule → SIEM correlation search → SIEM alert. Some alerts are SIEM-only. Do not invent a Suricata hop. |
-| **Endpoint logs** | Pull related **1.1** host events for that host and time window. State what they **add** or **fail to add**. Opening the table is not the task. A file event for Temp `invoice.vbs` can add the dropper path. The Run key is **not** required on this first pass (hunt is **3.x**). |
-| **PCAP** | For a **network** alert: state what the capture adds versus the alert fields (URI, SNI, payload). Why you pull PCAP is **1.2.1**. Where sensors sit is **0.8**. If the alert is process-only and no capture exists, write **PCAP not applicable**. Do not invent a download path. |
+## 2. Adding relevant evidence
 
-**What good looks like:**
+| Evidence source | How to use it | What to record |
+|---|---|---|
+| Related endpoint events | Select the host and relevant time, then correlate process identity, paths, account, and operation. | What each event adds and any unresolved gap. |
+| VirusTotal lookup | Look up an available hash, IP, or domain through the approved workflow. | The exact indicator, report reference/time, relevant result, and interpretation limit. |
+| Related PCAP | Request retained traffic for a relevant flow, time range, and sensor. | What becomes visible beyond the alert, or why the capture cannot answer the question. |
 
-- **Context:** Present = host, user, rule, `powershell -enc`, parent `wscript`. Missing until you pull more = dest IP, URI, file hash. After a file event adds Temp `invoice.vbs` (or you have `203.0.113.88`), look that hash or IP up on **VirusTotal**. Write the one-line result. Do not open Relations.
-- **Config:** “PowerShell with `-enc` and parent `wscript` fires.”
-- **Hops:** SIEM rule → SIEM alert (no Suricata unless the given includes a Suricata rule).
-- **Endpoint logs:** A Sysmon 11 / `DeviceFileEvents` file event **adds** Temp `invoice.vbs`. If the tenant has no process parent, the logs **fail to add** it — say so.
-- **PCAP:** On a `:8080` GET, PCAP can **add** the URI `/update.exe` if the alert only had IP:port. On this process alert, PCAP is **not applicable** until you have a flow.
+A file event for `invoice.vbs` may add a path and initiating process; its mere proximity in time does not establish causation. A lookup with no known detections or no report does not establish safety. Keep public submission handling consistent with module 0.7.
 
----
+For a process-only alert, first determine whether a related network question and flow exist. Distinguish “not relevant to the current question,” “not collected or retained,” and “searched but no related packets found.” These are different outcomes. Encryption may leave application content unavailable even when a capture exists.
 
-## 2. Knowledge Check
+## 3. Working through a reviewable finding
 
-1. The alert context is missing a parent process. That means the activity was benign. True or false?
-2. Name the hops for a SIEM-only process alert.
-3. You have the hash of Temp `invoice.vbs` and IP `203.0.113.88`. What do you look up on VirusTotal, and what is **not** this lesson?
+For the supplied classroom process alert, a useful initial record could state:
 
----
+- **Present:** host `WS-JLEE`, account `jlee`, the creation event, Script Host parent, and encoded-command argument.
+- **Logic:** the SIEM rule selects that three-field pattern; the lineage is endpoint event → table → rule → alert.
+- **Added endpoint evidence:** a supplied file event records `invoice.vbs` at a Temp path. Its relationship to the launch should be supported by the path and process context.
+- **Lookup:** if a hash or IP becomes available, record the actual lookup result or that the lookup is still pending. No real service result is supplied by this example.
+- **PCAP:** no related flow is supplied yet, so identify the network question before requesting traffic.
+- **Still open:** decoded command behavior, authorization, and any related execution or communication.
 
-## 3. Summary
+For a separate network example, retained cleartext HTTP packets can add `/update.exe` when the alert contained only IP and port. Record that contribution and the packet/time reference. The result should show how the additional evidence changes understanding.
 
-Present versus missing. A hash, IP, or domain you have goes to **VirusTotal**. Say what the configuration would fire. Name each hop. Endpoint logs and PCAP must **add** something — or you say they failed to. You do not classify, and you do not write the rule.
+## Knowledge Check
 
-**Next:** **1.4.2** Alert classification.
+1. For the process example, name what is present and two unresolved questions.
+2. Explain the configuration and upstream path for the SIEM-only alert.
+3. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute?
+4. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
 
----
+## Summary
 
-## 4. Related modules
+An investigation record should explain the alert’s evidence, logic, and lineage, then show what related endpoint records, lookups, and packets contribute. Clear unresolved questions make the next decision easier to support.
 
-- 1.3.4 – SIEM rules (previous)
-- 1.4.2 – Alert classification
-- 1.1.2 – Process activity
-- 1.1.3 – File system activity
-- 1.2.1 – Zeek concepts (why pull PCAP)
-- 0.7 – External tools (VirusTotal)
-- 0.8 – Environment / signal flow
+## Course Connections
+
+Previous: [1.3.4 – SIEM Rules](../../03-detection/04-siem-rules/student-guide.md)
+
+Next: [1.4.2 – Alert Classification](../02-classification/student-guide.md)
+
+[1.x module index](../../README.md)
+
+## References and Further Reading
+
+- [Microsoft — Investigate and classify alerts](https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts)
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching)
+- [Zeek — http.log](https://docs.zeek.org/en/current/reference/logs/http.html)

@@ -6,73 +6,64 @@
 - Hunter: 0.4 A / B / B ; 0.4.1 1a / 2b / 2b  
 - CTI: 0.4 A / B / B ; 0.4.1 1a / 2b / 2b  
 - DE: 0.4 A / B / B ; 0.4.1 1a / 2b / 2b  
-**Estimated Time:** 20–25 minutes  
-
----
+**Estimated Time:** 20–25 minutes
 
 ## Learning Objectives
 
 By the end of this module, you will be able to:
 
-1. Name one possible path of work after an alert.
-2. Say where extra infrastructure goes, and where a hunt package can go.
-3. Given a step in the path, name the next hand-off and whose **product** it is.
+1. Describe one possible workflow after an alert is triaged.
+2. Explain how intelligence findings can support blocking, hunting, and detection work.
+3. Given a step in the workflow, identify the receiving role and the product it owns.
 
 **Mapped Proficiency Items:**
 - K: 0.4 – How work can move
 - T: 0.4.1 – Given a step in the flow, name the next hand-off and whose product it is
 
----
+## Why This Matters
 
-## 1. Key Concepts
+An investigation can create several kinds of follow-on work. Some work addresses the incident already in progress, while other work improves understanding or future detection. Following one possible workflow helps you identify who receives a request and what they are expected to produce.
 
-After an alert, work has to go to the next desk. Someone sorts the alert, then they start the hand-offs — to incident response, to leadership, to intel, and later to whoever blocks, hunts, or writes rules. That is the job in this lesson: name **one possible path** those hand-offs can take, and whose product is next. It is not the only way a shop runs. It is not how your site files the ticket.
+## 1. From an alert to response and a question
 
-**0.3** named the jobs. This lesson is how work can move between them.
+An analyst begins by triaging an alert: reviewing the available evidence, determining its significance, and deciding what handling it needs. In the course example, the finding warrants an incident-response handoff and leadership notification. The analyst also identifies a question for CTI and sends an RFI.
 
-**RFI** means Request for Information: asking intel for more work on that alert.
+These activities may proceed in parallel. Immediate response does not have to wait for every intelligence question to be answered. Which findings require escalation and who must be notified are matters for the organization's own procedures.
 
-**The path:**
+## 2. How the intelligence work branches
 
-1. An analyst gets an alert and **triages** it — sorts what it is and what to do next.
-2. They send it to **incident response** and **notify leadership**.
-3. They ask intel for more work on that alert (an **RFI**).
-4. Intel works the RFI, **enriches** it (adds context), and may find more adversary infrastructure.
-5. Extra infrastructure can go to whoever **blocks** (firewall / IA).
-6. Intel can also hand hunters a **hunt package**.
-7. That same package can go to **detection engineers** to write or tune rules (MDE, YARA, Suricata, SIGMA, and so on).
+CTI evaluates the question, adds relevant context, and develops an answer. That work may identify related infrastructure or behaviors worth examining elsewhere.
 
-This is **one possible** path. A shop may skip a step or do two at once. Do not invent a ticket name, a PIR list, or an approval chain.
+| Finding or product | Recipient and intended result |
+|---|---|
+| Infrastructure supported for blocking consideration | The firewall / IA function evaluates a blocking change under local procedures. |
+| An intelligence package with a question and searchable leads | Hunters search for relevant activity and report their findings and gaps. |
+| That same package with useful detection opportunities | DE assesses whether existing detections meet the need and whether a rule should be written or tuned. |
 
-One person may wear two hats — that is **0.5**.
+Related infrastructure is initially a candidate to evaluate. Its relationship to a known indicator supplies a lead; the evidence and operational context determine whether a blocking recommendation is justified. The same infrastructure may also be useful in a hunt, depending on the question and available telemetry.
 
-**What good looks like:** someone names a step. You name the **next hand-off** and **whose product** it is. You do not name how a site files the ticket.
+## 3. Naming the next handoff
 
-- Given: triage is done. Next: incident response and notify leadership; and/or an RFI to intel. Products: IR contains and recovers; leadership is notified; the RFI is the ask, not intel’s finished work.
-- Given: intel found extra infrastructure. Next: whoever **blocks** (firewall / IA). Product: the block. Not a hunt.
-- Given: intel has a hunt package. Next: hunters, and that same package can go to detection engineers. Products: a hunt for activity the alerts missed; rules written or tuned.
+When given a point in this workflow, describe the receiving role and the work it owns. For example, a hunt team receiving a package owns the search and the resulting findings. DE receiving that package owns the assessment of detection coverage and any resulting rule work. Depending on the environment, that work may involve Microsoft Defender for Endpoint (MDE) analytics or rule formats such as Sigma, YARA, and Suricata.
 
-Do not write the RFI. Do not write the hunt. Do not write the rule.
+An effective handoff makes the requested outcome understandable. The course introduces that responsibility before teaching the detailed formats. Your site's processes determine where the request is recorded, who accepts it, and how the result is returned.
 
----
+## Knowledge Check
 
-## 2. Knowledge Check
+1. In the escalated course example, what can the analyst do after triage while CTI works on an RFI?
+2. CTI has evidence supporting consideration of a domain block. Who receives that work, and what product does that function own?
+3. The same intelligence package goes to Hunt and DE. What result should each produce?
 
-1. After triage, what two things can the analyst do with the alert besides asking intel?
-2. Extra infrastructure goes to the hunt team. True or false?
-3. Intel found extra infrastructure. Name the next hand-off and whose product it is.
+## Summary
 
----
+A single alert can lead to response, notification, intelligence analysis, hunting, and detection work. Identify each handoff by its purpose and the product the receiving role owns. The example explains how the responsibilities connect while leaving local routing and approval procedures to the organization.
 
-## 3. Summary
+## Course Connections
 
-Alert → triage → IR and leadership → RFI to intel → enrich. Extra infrastructure can be blocked. A hunt package can go to hunters and to detection engineers. Name the next hand-off and whose product it is.
+Previous: [0.3 – Jobs in one sentence](../03-jobs-in-one-sentence/student-guide.md)
 
-**Next:** **0.5** Where the jobs overlap.
+Next: [0.5 – Where the jobs lightly overlap](../05-where-jobs-overlap/student-guide.md)
 
----
+## References and Further Reading
 
-## 4. Related modules
-
-- 0.3 – Jobs in one sentence
-- 0.5 – Where the jobs overlap
+- [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.
