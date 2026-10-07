@@ -54,13 +54,13 @@ Words such as *could*, *may*, and *might* can be useful in ordinary writing, but
 
 Suppose the analyst writes:
 
-> The update domain could be the payload host for A12.
+> The update domain could have been used for attempted payload delivery in A12.
 
 The reader still has to guess how strongly the analyst favors that explanation. Compare it with:
 
-> The update domain is **likely** the payload host for A12.
+> The update domain was **likely** used for attempted payload delivery in A12.
 
-The second sentence communicates the judgment more precisely. If the evidence is still limited, the analyst can express that separately through confidence and by explaining the gaps.
+The second sentence communicates the probability judgment more precisely while preserving the same claim about attempted delivery. The HTTP request during suspicious activity supports that interpretation; successful transfer and execution remain unresolved. Changing the likelihood term changes how probable the analyst judges the claim to be, rather than adding evidence of a completed transfer.
 
 ### Interpreting the term in context
 

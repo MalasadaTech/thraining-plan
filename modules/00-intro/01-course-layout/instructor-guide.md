@@ -62,7 +62,7 @@ Explain why the names are deferred to the next lesson: learners first need the r
 
 ### 1. What do learners complete before the four role tracks, and why are those topics shared?
 
-**Expected answer:** The introductory lessons, then frameworks, external tools, and environment / signal flow. All four roles use these concepts to interpret evidence and coordinate their work.
+**Expected answer:** The introductory lessons, then frameworks, external tools, environment / signal flow, and common initial-access paths. All four roles use these concepts to interpret evidence and coordinate their work.
 
 **Feedback and assessment:** Look for both the order and a reason the material applies across roles.
 

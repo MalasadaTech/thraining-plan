@@ -28,12 +28,14 @@
 - urlscan.io
 - Silent Push
 - external evidence limitations
+- distinction between platform-use preparation and demonstrated querying/pivoting
 
 ## Artifacts
 
 - [student-guide.md](student-guide.md)
 - [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
+- [external-tool-pivot-practical.md](external-tool-pivot-practical.md) — evaluator-led platform demonstration for `3.3.1.1`
 - `assets/` — unchanged
 
 ## Supporting references

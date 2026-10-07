@@ -141,4 +141,4 @@ Tailor detail for the audience, but preserve the judgment and uncertainty.
 - [FIRST – TLP 2.0 Definitions and Usage Guidance](https://www.first.org/tlp/docs/tlp-a4.pdf)
 - [FIRST – TLP Use Cases](https://www.first.org/tlp/use-cases)
 
-**Next:** [2.8.1 – Local Intelligence Requirements and Priorities](../../08-site-specific/01-local-priorities/student-guide.md).
+**Next:** [2.7 – Intelligence Production and Dissemination Summary](../summary.md).

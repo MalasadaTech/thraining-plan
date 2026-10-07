@@ -70,7 +70,7 @@ Do not read a TLSH value as a percentage. A distance of 30 does not mean “30% 
 
 ### Similarity is evidence for a pivot, not the conclusion
 
-Suppose `update.exe` has a different SHA256 from a newly discovered file.
+Suppose `sync-client.exe` has a different SHA256 from a newly discovered file.
 
 That tells you the files are not byte-identical.
 
@@ -103,9 +103,11 @@ Microsoft Authenticode is designed to identify the software publisher and verify
 
 Likewise, **unsigned** means the file does not contain a usable code-signing signature under the check you performed. It does not mean the file is malicious, and it does not establish attribution.
 
-### Worked example
+### Separate worked example — not A12
 
-You compare a new PE file with `update.exe`.
+The files in this exercise are **training-only samples, not A12 evidence**. Canonical A12 does not supply a recovered `update.exe` sample or similarity hashes.
+
+You compare a new PE file with `sync-client.exe`.
 
 - SHA256 differs → the files are not byte-identical.
 - imphash matches → they share the import structure represented by imphash.
@@ -115,7 +117,7 @@ You compare a new PE file with `update.exe`.
 
 A reasonable conclusion is:
 
-> The new sample is sufficiently similar to `update.exe` to justify deeper comparison. The shared imphash and strong fuzzy-hash similarity support a possible relationship, but additional behavioral or structural evidence is needed before assigning a malware-family or actor relationship.
+> The new sample is sufficiently similar to `sync-client.exe` to justify deeper comparison. The shared imphash and strong fuzzy-hash similarity support a possible relationship, but additional behavioral or structural evidence is needed before assigning a malware-family or actor relationship.
 
 That statement uses the similarity evidence without asking it to prove more than it can.
 
@@ -129,7 +131,7 @@ Keep the result with the enrichment record started in [2.5.1](../01-ioc-handling
 
 1. Two PE files have the same imphash but different SHA256 values. What does the imphash match tell you, and what does it *not* establish?
 2. ssdeep returns 72 while TLSH returns a difference of 22 for two samples. How do you interpret the direction of each score, and what should you do before calling the files related?
-3. `update.exe` is unsigned. What did you learn from that result, and what conclusions would go beyond the evidence?
+3. `sync-client.exe` is unsigned. What did you learn from that result, and what conclusions would go beyond the evidence?
 
 ## 3. Summary
 

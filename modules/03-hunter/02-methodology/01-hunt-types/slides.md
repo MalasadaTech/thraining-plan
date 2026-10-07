@@ -2,7 +2,7 @@
 ## Slide Deck Content
 
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 9
+**Total Suggested Slides:** 10
 
 ---
 
@@ -42,11 +42,20 @@ Type is the start; a question and evidence plan make it a hunt.
 
 ---
 
-### Slide 8 – Knowledge Check
+### Slide 8 – Planning is not execution
+Naming the type + writing the question = **prepared**.
+
+Execution requires running the search against telemetry and recording results/gaps.
+
+Use the Hunt Execution Practical for `3.2.1.1`–`3.2.1.4`.
+
+---
+
+### Slide 9 – Knowledge Check
 Overlap? CTI seed? A12 expansion?
 
 ---
 
-### Slide 9 – Summary
-Classify the start, then build the test.
+### Slide 10 – Summary
+Classify the start, then build and execute the test.
 

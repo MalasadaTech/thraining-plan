@@ -1,7 +1,7 @@
 # Module 2.7.3 – Creating Finished Intelligence Products  
 ## Slide Deck Content
 
-**Total Suggested Slides:** 9
+**Total Suggested Slides:** 11
 
 ### Slide 1 – Title
 **Finished Intelligence Products**  
@@ -56,7 +56,28 @@ Gaps
 
 Attribution can remain **unresolved**.
 
-### Slide 8 – Quality check
+### Slide 8 – Separate profile practical: SILVER KITE
+**Not A12**
+
+Use the supplied training evidence to profile:
+- targeting
+- behavior
+- tooling/infrastructure
+- judgments/confidence
+- attribution boundary
+- gaps
+
+### Slide 9 – What the profile must prove
+Your profile should show:
+- evidence vs judgment
+- requirement fit
+- traceable major claims
+- explicit uncertainty
+- bounded attribution
+
+Do **not** infer sponsor or nationality from the exercise.
+
+### Slide 10 – Quality check
 Does it:
 - answer the requirement?
 - separate fact/judgment?
@@ -64,7 +85,7 @@ Does it:
 - trace major claims?
 - explain why it matters?
 
-### Slide 9 – Knowledge Check
+### Slide 11 – Knowledge Check
 1. Why isn't a TIP export finished intelligence?  
 2. Four product elements?  
 3. Three-line A12 profile?

@@ -173,75 +173,59 @@ The report or request should preserve:
 - important uncertainty or gaps;
 - what the next team needs to do or answer.
 
-## 4. Distinctions Worth Keeping
+## 4. Distinctions That Keep a SOC Assessment Precise
 
-These distinctions recur throughout later tracks.
+Several SOC concepts sit close together in the workflow. Keeping the question behind each one clear prevents a correct observation from turning into an unsupported conclusion.
 
-### Observation ≠ conclusion
+### Observations and conclusions require different levels of support
 
 > `wscript.exe` launched encoded PowerShell.
 
-is an observation.
+is a direct observation from the process evidence.
 
 > The host is compromised.
 
-is a conclusion requiring additional support.
+is a broader conclusion. It may eventually be justified, but it requires additional evidence and reasoning. A strong investigation shows the path from the observation to the conclusion instead of treating them as equivalent statements.
 
-### Endpoint evidence ≠ network evidence
+### Endpoint and network telemetry answer different questions
 
-Endpoint telemetry can often identify the process.
+Endpoint telemetry can often identify the process, user, file, registry activity, and host-local context. Network telemetry can describe the connection or protocol transaction visible to the sensor.
 
-Network telemetry can often identify the protocol transaction.
+When the two views are correlated, preserve which source supplied each field. That makes the finding reviewable and prevents host-only context from being silently attributed to a network sensor, or vice versa.
 
-Do not silently transfer fields from one sensor to another.
+### A detection match establishes that the logic matched; investigation establishes what the activity means
 
-### Detection match ≠ maliciousness
+When a rule fires, the analyst knows that the event satisfied the rule's conditions. Classification requires the next layer of evidence: whether the assessed target condition was actually present.
 
-A rule match means the logic matched.
+This is why a rule match can justify investigation without automatically proving maliciousness.
 
-Investigation determines what the activity means.
+### Detection classification and activity category answer different questions
 
-### TP / FP / TN / FN ≠ activity category
+**TP / FP / TN / FN** describe the relationship between the detection outcome and the assessed target condition.
 
-**True Positive** describes detection correctness.
+A category such as **user-level access**, **root-level access**, or **scanning/reconnaissance** describes the kind of activity observed.
 
-**User-level access** describes the kind of activity.
+An investigation may need both labels because neither one replaces the other.
 
-One does not replace the other.
+### Classification and false-positive cause are separate judgments
 
-### False-positive classification ≠ false-positive cause
+Calling an alert a **False Positive** answers whether the alert represented the target condition being evaluated.
 
-> False Positive
+Explaining that benign helpdesk activity or overly broad logic caused the match answers **why** the false positive occurred. Separating those questions makes tuning recommendations more useful.
 
-answers:
+### Alert-response and reporting timelines may start from different events
 
-> Was the detection correct?
+The alert queue may have a response-time goal while an incident report or RFI has a separate submission clock. Track the trigger, due time, and current state for the specific obligation you are measuring.
 
-The cause answers:
+### Incident reports and RFIs carry different products
 
-> Why did benign activity satisfy the rule?
+An incident report records and routes the security case. An RFI asks another team a bounded question needed to advance the work.
 
-### Alert-response clock ≠ reporting clock
+They can exist beside one another because the case and the unanswered question are related but different products.
 
-The alert queue may have response-time goals.
+### A correct recipient still requires an approved delivery path
 
-The resulting incident report or RFI may have a separate timeline.
-
-Track the correct clock.
-
-### Incident report ≠ RFI
-
-An incident report records the case.
-
-An RFI asks another team a question.
-
-An RFI can exist beside an incident without becoming a second incident.
-
-### Correct recipient ≠ approved path
-
-Sending the right information to the right person through an unapproved personal channel is still a poor handoff.
-
-Audience and channel both matter.
+Knowing who needs the information is only part of a handoff. Sensitive operational information also needs to move through the approved channel so handling, accountability, and recordkeeping are preserved.
 
 ## 5. Integrated Review Exercise
 
@@ -328,4 +312,4 @@ Keep one principle with you into every later track:
 
 > **Describe what the evidence shows first. Then decide what it means.**
 
-**Next:** **2.x – Cyber Threat Intelligence**.
+**Next:** [2.0 – Cyber Threat Intelligence Orientation](../../02-cti/00-intro/student-guide.md).

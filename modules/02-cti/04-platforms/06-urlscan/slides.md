@@ -58,7 +58,7 @@ Reference: [API docs](https://urlscan.io/docs/api/)
 
 ### Slide 7 – Knowledge Check
 1. Why time-bound wording?  
-2. Common analytics + rare A12 host: treat the same?  
+2. Common analytics + rare classroom-card host: treat the same?  
 3. Three useful result fields?
 
 ### Slide 8 – Summary

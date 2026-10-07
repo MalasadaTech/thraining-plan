@@ -3,8 +3,8 @@
 **SOC, Cyber Threat Intelligence, Threat Hunting, and Detection Engineering**
 
 **MalasadaTech Training Plan – First Edition**  
-**v0.1 Review Draft · Build date: 2026-10-03**  
-Curriculum snapshot: current course files retrieved 2026-10-02.
+**v0.2 Review Draft · Build date: 2026-10-05**  
+Source snapshot date: 2026-10-05.
 
 Defensive work depends on more than recognizing a suspicious value. An analyst needs to explain what happened, decide which questions remain, and give the next person enough evidence to act. This book follows that work from shared foundations through SOC investigation, Cyber Threat Intelligence, Threat Hunting, and Detection Engineering.
 
@@ -12,11 +12,13 @@ The chapters combine technical examples with the decisions those examples suppor
 
 ## How to Use This Book
 
-Read the shared foundations first, then follow the role tracks in order. Chapter numbers match the curriculum so you can return to a particular lesson during practice. The opening and closing chapters of each track provide orientation and integration; the final course summary reconnects all four roles.
+Read the shared foundations first, then follow the role tracks in order. Chapter numbers match the curriculum so you can return to a particular lesson during practice. The opening and closing chapters of each track provide orientation and integration. Multi-lesson subunits also include short advance-organizer introductions and end-state summaries so you can preview the structure before reading closely; the final course summary reconnects all four roles.
+
+Use **Preview → Predict → Read → Confirm**: preview a subunit introduction and its end-state summary, predict how the lessons fit together, read the detail, then return to the summary to check your understanding.
 
 At a worked example, pause before the explanation. Describe the observation in your own words, identify what remains unknown, and name the next useful question. Use the knowledge checks to test that reasoning. They are learner exercises; this manuscript does not add an instructor answer key.
 
-Estimated times are retained from the course as planning guides. The CTI platform chapters use two passes: first retrieve and describe evidence, then return for interpretation during the relevant enrichment method. Their estimates cover both passes together. Use the example cards and records printed in the lessons where available; some activities also require a supplied report or an authorized environment. This book does not include a separate live lab or platform accounts.
+Estimated times are retained from the course as planning guides. The CTI platform chapters use two passes: first retrieve and describe evidence, then return for interpretation during the relevant enrichment method. Their estimates cover both passes together. Use the example cards and records printed in the lessons where available. Controlled CSV/Python assets required by the embedded hunt and detection-validation practicals are included under their owning lessons. The external-platform pivot practical still requires approved live/public platform access or authorized training accounts; this book does not provide platform accounts.
 
 Examples distinguish course facts from local operating requirements. Where a chapter asks for a local priority, approval path, sensor configuration, or response clock, obtain that information from the responsible organization. Classroom examples provide practice rather than an operating policy.
 
@@ -50,20 +52,26 @@ You will encounter the evidence progressively. The shared foundations introduce 
   - [0.3 — Jobs in one sentence](#03--jobs-in-one-sentence)
   - [0.4 — How work can move](#04--how-work-can-move)
   - [0.5 — Where the jobs lightly overlap](#05--where-the-jobs-lightly-overlap)
+  - [0.6 – Shared Analytical Frameworks: Introduction](#06--shared-analytical-frameworks-introduction)
   - [0.6.1 — MITRE ATT&CK](#061--mitre-attck)
   - [0.6.2 — Diamond Model](#062--diamond-model)
   - [0.6.3 — Cyber Kill Chain](#063--cyber-kill-chain)
+  - [0.6 – Shared Analytical Frameworks: Summary](#06--shared-analytical-frameworks-summary)
   - [0.7 — External tools](#07--external-tools)
   - [0.8 — Environment / signal flow](#08--environment--signal-flow)
-  - [0.9 — Shared Foundations Section Summary](#09--shared-foundations-section-summary)
+  - [0.9 — Common Initial Access Paths](#09--common-initial-access-paths)
+  - [0.10 — Shared Foundations Section Summary](#010--shared-foundations-section-summary)
 - [Part II — SOC Analyst](#part-ii--soc-analyst)
   - [1.0 — SOC Analyst Fundamentals: How the 1.x Block Fits Together](#10--soc-analyst-fundamentals-how-the-1x-block-fits-together)
+  - [1.1 – Endpoint Activity: Introduction](#11--endpoint-activity-introduction)
   - [1.1.1 — Endpoint activity (the map)](#111--endpoint-activity-the-map)
   - [1.1.2 — Process Activity](#112--process-activity)
   - [1.1.3 — File System Activity](#113--file-system-activity)
   - [1.1.4 — Network Activity (Endpoint)](#114--network-activity-endpoint)
   - [1.1.5 — Registry Activity](#115--registry-activity)
   - [1.1.6 — Image and Driver Load Activity](#116--image-and-driver-load-activity)
+  - [1.1 – Endpoint Activity: Summary](#11--endpoint-activity-summary)
+  - [1.2 – Zeek Network Evidence: Introduction](#12--zeek-network-evidence-introduction)
   - [1.2.1 — Zeek Concepts](#121--zeek-concepts)
   - [1.2.2 — Conn Engine](#122--conn-engine)
   - [1.2.3 — DNS Engine](#123--dns-engine)
@@ -72,21 +80,29 @@ You will encounter the evidence progressively. The shared foundations introduce 
   - [1.2.6 — SMTP Engine](#126--smtp-engine)
   - [1.2.7 — Files Engine](#127--files-engine)
   - [1.2.8 — Weird Engine](#128--weird-engine)
+  - [1.2 – Zeek Network Evidence: Summary](#12--zeek-network-evidence-summary)
+  - [1.3 – Detection Rules: Introduction](#13--detection-rules-introduction)
   - [1.3.1 — SIGMA Rules](#131--sigma-rules)
   - [1.3.2 — Suricata Rules](#132--suricata-rules)
   - [1.3.3 — YARA Rules](#133--yara-rules)
   - [1.3.4 — SIEM Rules](#134--siem-rules)
+  - [1.3 – Detection Rules: Summary](#13--detection-rules-summary)
+  - [1.4 – Alert Investigation and Assessment: Introduction](#14--alert-investigation-and-assessment-introduction)
   - [1.4.1 — Alert Context and Investigation](#141--alert-context-and-investigation)
   - [1.4.2 — Alert Classification](#142--alert-classification)
   - [1.4.3 — Common False Positive Causes](#143--common-false-positive-causes)
   - [1.4.4 — Common Alert Categorizations](#144--common-alert-categorizations)
   - [1.4.5 — SLA / Response Time Goals](#145--sla--response-time-goals)
+  - [1.4 – Alert Investigation and Assessment: Summary](#14--alert-investigation-and-assessment-summary)
+  - [1.5 – Reporting and Notification: Introduction](#15--reporting-and-notification-introduction)
   - [1.5.1 — Report Types](#151--report-types)
   - [1.5.2 — Reporting Timeline Requirements](#152--reporting-timeline-requirements)
   - [1.5.3 — Notification and Distribution](#153--notification-and-distribution)
+  - [1.5 – Reporting and Notification: Summary](#15--reporting-and-notification-summary)
   - [1.6 — SOC Analyst Section Summary](#16--soc-analyst-section-summary)
 - [Part III — Cyber Threat Intelligence](#part-iii--cyber-threat-intelligence)
   - [2.0 — Cyber Threat Intelligence: How the 2.x Block Fits Together](#20--cyber-threat-intelligence-how-the-2x-block-fits-together)
+  - [2.1 – Intelligence Foundations and Requirements: Introduction](#21--intelligence-foundations-and-requirements-introduction)
   - [2.1.1 — Difference between data, information, and intelligence](#211--difference-between-data-information-and-intelligence)
   - [2.1.2 — Intelligence lifecycle](#212--intelligence-lifecycle)
   - [2.1.3 — Intelligence Types](#213--intelligence-types)
@@ -96,19 +112,27 @@ You will encounter the evidence progressively. The shared foundations introduce 
   - [2.1.7 — Tailoring Output to the Audience](#217--tailoring-output-to-the-audience)
   - [2.1.8 — Attribution](#218--attribution)
   - [2.1.9 — Collection Sources and Methods](#219--collection-sources-and-methods)
+  - [2.1 – Intelligence Foundations and Requirements: Summary](#21--intelligence-foundations-and-requirements-summary)
+  - [2.2 – Analytical Tradecraft: Introduction](#22--analytical-tradecraft-introduction)
   - [2.2.1 — Estimative language](#221--estimative-language)
   - [2.2.2 — Structured Analytic Techniques](#222--structured-analytic-techniques)
   - [2.2.3 — Admiralty Code](#223--admiralty-code)
   - [2.2.4 — Cognitive Biases and Mitigation](#224--cognitive-biases-and-mitigation)
+  - [2.2 – Analytical Tradecraft: Summary](#22--analytical-tradecraft-summary)
+  - [2.3 – Analytical Frameworks: Introduction](#23--analytical-frameworks-introduction)
   - [2.3.1 — MITRE ATT&CK for CTI Analysis and Reporting](#231--mitre-attck-for-cti-analysis-and-reporting)
   - [2.3.2 — Diamond Model Application in CTI](#232--diamond-model-application-in-cti)
   - [2.3.3 — Cyber Kill Chain in Intelligence Analysis](#233--cyber-kill-chain-in-intelligence-analysis)
+  - [2.3 – Analytical Frameworks: Summary](#23--analytical-frameworks-summary)
+  - [2.4 – CTI Tools and Platforms: Introduction](#24--cti-tools-and-platforms-introduction)
   - [2.4.1 — Internal Threat Intelligence Platform](#241--internal-threat-intelligence-platform)
   - [2.4.2 — Selecting Platforms for CTI Work](#242--selecting-platforms-for-cti-work)
   - [2.4.3 — VirusTotal Relations and Behavior](#243--virustotal-relations-and-behavior)
   - [2.4.4 — ANY.RUN](#244--anyrun)
   - [2.4.5 — Silent Push](#245--silent-push)
   - [2.4.6 — urlscan.io](#246--urlscanio)
+  - [2.4 – CTI Tools and Platforms: Summary](#24--cti-tools-and-platforms-summary)
+  - [2.5 – Technical Enrichment and Discovery: Introduction](#25--technical-enrichment-and-discovery-introduction)
   - [2.5.1 — IOC Handling and Enrichment Concepts](#251--ioc-handling-and-enrichment-concepts)
   - [2.5.2 — Hashing and Similarity Concepts](#252--hashing-and-similarity-concepts)
   - [2.5.3 — RDAP and WHOIS Concepts](#253--rdap-and-whois-concepts)
@@ -116,33 +140,48 @@ You will encounter the evidence progressively. The shared foundations introduce 
   - [2.5.5 — Identifying Additional Adversary Infrastructure from Seed Indicators](#255--identifying-additional-adversary-infrastructure-from-seed-indicators)
   - [2.5.6 — MalasadaTech Defender's ThreatMesh Framework (DTF)](#256--malasadatech-defenders-threatmesh-framework-dtf)
   - [2.5.7 — Correlation, Link Analysis, and Campaign Tracking](#257--correlation-link-analysis-and-campaign-tracking)
+  - [2.5 – Technical Enrichment and Discovery: Summary](#25--technical-enrichment-and-discovery-summary)
+  - [2.6 – Threat Assessment and Organizational Significance: Introduction](#26--threat-assessment-and-organizational-significance-introduction)
   - [2.6.1 — Extracting Applicable TTPs from Intelligence Reports](#261--extracting-applicable-ttps-from-intelligence-reports)
   - [2.6.2 — Threat Relevance and Organizational Impact](#262--threat-relevance-and-organizational-impact)
+  - [2.6 – Threat Assessment and Organizational Significance: Summary](#26--threat-assessment-and-organizational-significance-summary)
+  - [2.7 – Intelligence Production and Dissemination: Introduction](#27--intelligence-production-and-dissemination-introduction)
   - [2.7.1 — Core STIX Objects](#271--core-stix-objects)
   - [2.7.2 — How STIX Objects Are Used in Intelligence Production](#272--how-stix-objects-are-used-in-intelligence-production)
   - [2.7.3 — Creating Finished Intelligence Products](#273--creating-finished-intelligence-products)
   - [2.7.4 — RFI Responses and Closure](#274--rfi-responses-and-closure)
   - [2.7.5 — Disseminating Intelligence to the Correct Audiences](#275--disseminating-intelligence-to-the-correct-audiences)
+  - [2.7 – Intelligence Production and Dissemination: Summary](#27--intelligence-production-and-dissemination-summary)
+  - [2.8 – Local Application: Introduction](#28--local-application-introduction)
   - [2.8.1 — Local Intelligence Requirements and Priorities](#281--local-intelligence-requirements-and-priorities)
   - [2.8.2 — Local Production and Approval Processes](#282--local-production-and-approval-processes)
   - [2.8.3 — Local Dissemination Channels and Customers](#283--local-dissemination-channels-and-customers)
+  - [2.8 – Local Application: Summary](#28--local-application-summary)
   - [2.9 — Cyber Threat Intelligence Section Summary](#29--cyber-threat-intelligence-section-summary)
 - [Part IV — Threat Hunting](#part-iv--threat-hunting)
   - [3.0 — Threat Hunting: How the 3.x Block Fits Together](#30--threat-hunting-how-the-3x-block-fits-together)
   - [3.1 — Purpose of Threat Hunting](#31--purpose-of-threat-hunting)
+  - [3.2 – Hunt Methodology: Introduction](#32--hunt-methodology-introduction)
   - [3.2.1 — Hunt Types](#321--hunt-types)
   - [3.2.2 — Hunt Development Concepts](#322--hunt-development-concepts)
+  - [3.2 – Hunt Methodology: Summary](#32--hunt-methodology-summary)
   - [3.3.1 — Tool Capabilities for Hunting](#331--tool-capabilities-for-hunting)
+  - [3.4 – CTI as Hunt Input: Introduction](#34--cti-as-hunt-input-introduction)
   - [3.4.1 — Assessing CTI for Hunting Value](#341--assessing-cti-for-hunting-value)
   - [3.4.2 — Extracting Hunt Leads from CTI](#342--extracting-hunt-leads-from-cti)
   - [3.4.3 — STIX as Hunt Input](#343--stix-as-hunt-input)
+  - [3.4 – CTI as Hunt Input: Summary](#34--cti-as-hunt-input-summary)
   - [3.5.1 — Using MITRE ATT&CK for Hunt Planning](#351--using-mitre-attck-for-hunt-planning)
+  - [3.6 – Attacker Techniques for Hunting: Introduction](#36--attacker-techniques-for-hunting-introduction)
   - [3.6.1 — Persistence Techniques](#361--persistence-techniques)
   - [3.6.2 — Privilege Escalation Techniques](#362--privilege-escalation-techniques)
   - [3.6.3 — Hunt for a Specific Persistence or Privilege-Escalation Technique](#363--hunt-for-a-specific-persistence-or-privilege-escalation-technique)
+  - [3.6 – Attacker Techniques for Hunting: Summary](#36--attacker-techniques-for-hunting-summary)
+  - [3.7 – Local Hunt Control and Outputs: Introduction](#37--local-hunt-control-and-outputs-introduction)
   - [3.7.1 — Hunt Control and Lead Management](#371--hunt-control-and-lead-management)
   - [3.7.2 — Hunt Documentation Standards](#372--hunt-documentation-standards)
   - [3.7.3 — Hunt Outputs and Hand-off](#373--hunt-outputs-and-hand-off)
+  - [3.7 – Local Hunt Control and Outputs: Summary](#37--local-hunt-control-and-outputs-summary)
   - [3.8 — Threat Hunting Section Summary](#38--threat-hunting-section-summary)
 - [Part V — Detection Engineering](#part-v--detection-engineering)
   - [4.0 — Detection Engineering: How the 4.x Block Fits Together](#40--detection-engineering-how-the-4x-block-fits-together)
@@ -185,7 +224,7 @@ By the end of this module, you will be able to:
 
 #### How the course progresses
 
-The introductory lessons explain the setting, the roles, and how their work connects. They are followed by three shared topics: frameworks, external tools, and the organization's environment. These topics support every role, so they are taught before the SOC material.
+The introductory lessons explain the setting, the roles, and how their work connects. They are followed by four shared topics: frameworks, external tools, the organization's environment, and common initial-access paths. These topics support every role, so they are taught before the SOC material.
 
 The four role tracks then follow this order:
 
@@ -250,9 +289,9 @@ A SOC can operate with staff in one location, across multiple locations, or thro
 
 #### The setting used in this course
 
-**Dixon, Yamada, & Associates (DYA)** is the fictional law firm used in the lessons. **Pink River Dolphin (PRD)** is the fictional adversary name. These names let later examples refer to a consistent setting without introducing a new organization each time.
+**Dixon, Yamada, & Associates (DYA)** is the fictional law firm used in the lessons. **Pink River Dolphin (PRD)** is the fictional vendor tracking label used in the scenario. These names let later examples refer to a consistent setting without introducing a new organization each time.
 
-The scenario supplies facts for teaching. Your employer's procedures, approval paths, and system details must come from your employer. When a lesson presents evidence, use the evidence supplied at that point; knowing the fictional adversary's name does not establish who caused a particular event.
+The scenario supplies facts for teaching. Your employer's procedures, approval paths, and system details must come from your employer. When a lesson presents evidence, use the evidence supplied at that point; seeing a vendor tracking label does not establish who caused a particular event.
 
 #### Knowledge Check
 
@@ -429,11 +468,48 @@ Collaboration works best when shared evidence is paired with clear responsibilit
 
 - [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.
 
+### 0.6 – Shared Analytical Frameworks: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Defenders need shared ways to describe behavior, relationships, and intrusion progression. These three frameworks provide common structures that will reappear later in the SOC, CTI, threat-hunting, and Detection Engineering tracks.
+
+#### Connect to What You Already Know
+
+Earlier shared-foundation lessons introduced the defensive roles and how work moves among them. This subunit gives those roles common ways to organize and communicate what they observe.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **0.6.1 – MITRE ATT&CK** | Recognize tactics and techniques as a shared vocabulary for adversary behavior. |
+| **0.6.2 – Diamond Model** | Recognize Adversary, Capability, Infrastructure, and Victim as connected features of an intrusion event. |
+| **0.6.3 – Cyber Kill Chain** | Recognize the seven stages as a way to discuss intrusion progression. |
+
+#### What to Watch For
+
+- Focus on the question each framework helps organize rather than trying to choose one framework for every problem.
+- Keep the framework tied to the evidence; labels and boxes do not create facts that are not present.
+- Treat incomplete information as normal. A useful model can remain partially unresolved.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- explain the basic purpose of ATT&CK, the Diamond Model, and the Cyber Kill Chain;
+- describe the different question each framework helps organize;
+- recognize that the same evidence can be viewed through more than one framework without becoming different evidence;
+- preserve uncertainty instead of forcing a complete-looking model.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [0.6 Summary](#06--shared-analytical-frameworks-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 0.6.1 — MITRE ATT&CK
-
-**0.6 — Frameworks**
-
-With the roles and handoffs established, the next three chapters introduce complementary ways to organize behavior, relationships, and attack progression. Keep the question each framework answers in view.
 
 **Estimated Time:** 15–20 minutes
 
@@ -447,7 +523,7 @@ By the end of this module, you will be able to:
 
 1. Explain the purpose and structure of ATT&CK.
 2. Distinguish a tactic, technique, and sub-technique.
-3. Map one observed behavior and cite the evidence supporting the mapping.
+3. Map one observed behavior, cite the supporting evidence, and choose the better-supported mapping when two nearby ATT&CK labels appear plausible.
 
 #### Reading the matrix
 
@@ -469,6 +545,19 @@ A short mapping could read: “Execution / T1059.001 — PowerShell; the process
 
 The broader T1059 label describes the interpreter family. When the evidence identifies PowerShell, the sub-technique gives a more precise description.
 
+#### Choosing between plausible mappings
+
+Sometimes two ATT&CK labels can both seem reasonable at first glance. The useful question is not simply whether a label can be made to fit; it is which mapping best describes the observed behavior at the level of specificity the evidence supports.
+
+Suppose a registry event shows `reg.exe` creating value `Updater` under `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` and pointing it to `%TEMP%\update.exe`. Two labels may come to mind:
+
+- **T1112 – Modify Registry** describes registry modification broadly.
+- **T1547.001 – Registry Run Keys / Startup Folder** specifically describes use of a Run key for boot or logon autostart execution.
+
+If you must choose the primary mapping for this event, **T1547.001** is better supported because the observed registry location is itself a Run key and the event records a value being configured there. T1112 describes the generic mechanism, but it is less specific to what this event shows.
+
+If the event only showed an unspecified registry value being changed, without evidence that the key was a Run/Startup persistence location, **T1112** would be the safer mapping. The evidence determines how specific the mapping can be.
+
 #### Keeping the conclusion within the evidence
 
 This event alone does not establish Command and Control: it contains no evidence of communication with an external controller. That behavior might appear in another event and support an additional mapping. More than one mapping can be appropriate when each has evidence.
@@ -478,17 +567,19 @@ An ATT&CK label also does not establish that an event is malicious. Administrato
 #### Knowledge Check
 
 1. How do a tactic, technique, and sub-technique differ?
-2. A process event shows wscript.exe launching powershell.exe with an encoded command. Give a supported mapping and identify the evidence.
-3. Does that event establish Command and Control or malicious intent? Explain.
+2. A process event shows `wscript.exe` launching `powershell.exe` with an encoded command. Give a supported mapping, identify the evidence, and explain whether the same event establishes Command and Control or malicious intent.
+3. A registry event shows `reg.exe` creating a value under `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`. Between T1112 and T1547.001, which should be the primary mapping, and why? When would T1112 be the safer choice?
 
 #### Summary
 
-ATT&CK provides names for behavior. A useful mapping identifies the tactic and technique or sub-technique, cites the supporting evidence, and explains why the label fits. Keep additional conclusions tied to additional evidence.
+ATT&CK provides names for behavior. A useful mapping identifies the tactic and technique or sub-technique, cites the supporting evidence, and explains why the label fits. When two labels look plausible, choose the one whose specificity is best supported by the observed behavior, and keep additional conclusions tied to additional evidence.
 
 #### References and Further Reading
 
 - [MITRE ATT&CK — Enterprise matrix](https://attack.mitre.org/matrices/enterprise/) — Explore the matrix structure.
 - [MITRE ATT&CK — PowerShell (T1059.001)](https://attack.mitre.org/techniques/T1059/001/) — Read the behavior description used in the example.
+- [MITRE ATT&CK — Modify Registry (T1112)](https://attack.mitre.org/techniques/T1112/) — Compare the broader registry-modification behavior.
+- [MITRE ATT&CK — Registry Run Keys / Startup Folder (T1547.001)](https://attack.mitre.org/techniques/T1547/001/) — Compare the more specific Run-key persistence behavior.
 
 ### 0.6.2 — Diamond Model
 
@@ -582,9 +673,11 @@ The sequence is a model for reasoning about an intrusion. Real activity can repe
 
 #### Placing an observed event
 
-Suppose an email record shows that a message containing a `.vbs` attachment was delivered to a mailbox. For this example, separate analysis has established that the attachment is malicious. The email record supports **Delivery** because it shows the malicious material reaching the target.
+> **Scenario status: Separate classroom example — not A12.**
 
-The record does not show how the attachment was prepared, whether anyone opened it, or whether it established a foothold. Those are questions for other evidence. The `.vbs` extension alone would not establish maliciousness; the example's stated analysis supplies that context.
+Suppose an email record shows that a message containing `shipping-notice.js` was delivered to a mailbox. For this example, separate analysis has established that the attachment is malicious. The email record supports **Delivery** because it shows the malicious material reaching the target.
+
+The record does not show how the attachment was prepared, whether anyone opened it, or whether it established a foothold. Those are questions for other evidence. The `.js` extension alone would not establish maliciousness; the example's stated analysis supplies that context.
 
 #### Explaining a stage assignment
 
@@ -605,6 +698,45 @@ The Cyber Kill Chain describes intrusion progression in seven stages. Assign a s
 #### References and Further Reading
 
 - [Lockheed Martin — Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html) — Original model and supporting resources.
+
+### 0.6 – Shared Analytical Frameworks: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Behavior → relationships → progression**. ATT&CK emphasizes behavior, the Diamond Model emphasizes relationships, and the Cyber Kill Chain emphasizes progression.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- explain the basic purpose of ATT&CK, the Diamond Model, and the Cyber Kill Chain;
+- describe the different question each framework helps organize;
+- recognize that the same evidence can be viewed through more than one framework without becoming different evidence;
+- preserve uncertainty instead of forcing a complete-looking model.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **0.6.1 – MITRE ATT&CK** | Recognize tactics and techniques as a shared vocabulary for adversary behavior. |
+| **0.6.2 – Diamond Model** | Recognize Adversary, Capability, Infrastructure, and Victim as connected features of an intrusion event. |
+| **0.6.3 – Cyber Kill Chain** | Recognize the seven stages as a way to discuss intrusion progression. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Which framework would you reach for first if your question is primarily about adversary behavior?
+2. How can the Diamond Model remain useful when one of its core features is unknown?
+3. Why can the same observation appear in more than one framework without becoming independent evidence?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **0.7 – External Tools**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
 
 ### 0.7 — External tools
 
@@ -723,7 +855,122 @@ Environment orientation helps you connect an event to expected paths, organizati
 
 - [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center) — Further reading on organizing SOC responsibilities and understanding the environment. The course workflow is an instructional example, not a mandated organizational design.
 
-### 0.9 — Shared Foundations Section Summary
+### 0.9 — Common Initial Access Paths
+
+**Estimated Time:** 25–35 minutes
+
+#### Why This Matters
+
+Module 0.8 gave you the terrain: email paths, Internet-facing systems, remote access, third-party trust, network routes, and the places evidence may be collected. Initial access asks a different question: **how might an adversary first gain, or try to gain, a foothold through that terrain?**
+
+The useful skill is separating an **entry-path hypothesis** from evidence that the path actually succeeded; memorizing attack names is secondary to that reasoning. A phishing message can be delivered without being opened. A vulnerable web server can receive exploit traffic without being compromised. A successful VPN login proves that an account was used, but it does not by itself prove the user was an adversary.
+
+As you read, predict what evidence would move each example from *possible path* to *supported initial access*. The course principle still applies: **Describe what the evidence shows first. Then decide what it means.**
+
+#### Learning Objectives
+
+By the end of this module, you will be able to:
+
+1. Recognize common initial-access paths and connect them to the environment areas introduced in 0.8.
+2. Distinguish exposure or delivery from an access attempt, successful access, and later execution.
+3. Given a short scenario, identify the most defensible initial-access path—or leave it unresolved—and name the next evidence that would test the hypothesis.
+
+#### Initial access is an objective, not a verdict
+
+MITRE ATT&CK uses **Initial Access** for techniques adversaries use to gain their first foothold in an environment. The tactic includes paths such as phishing, drive-by compromise, exploitation of public-facing applications, valid accounts, external remote services, trusted relationships, and supply-chain compromise.
+
+That vocabulary helps describe *how access could occur*. It does not remove the need to prove what happened in the case in front of you. The same observation can sit at different points in the evidence progression:
+
+**Exposure or delivery → interaction / access attempt → successful access → later execution or follow-on behavior**
+
+For example, a malicious attachment in a mailbox establishes delivery. A process event showing the attachment launching code establishes something later in the chain. The first observation should not be rewritten as the second merely because the analyst expects one to lead to the other.
+
+ATT&CK and the Cyber Kill Chain may both help describe the same incident from different angles. ATT&CK Initial Access names adversary entry techniques. The Kill Chain asks about progression such as Delivery and Exploitation. Use the framework that answers the question you are asking and keep the underlying observations visible.
+
+#### Common entry paths
+
+| Entry-path family | What it can look like | Evidence that may support it | Important boundary |
+|---|---|---|---|
+| **Phishing / malspam** | Attachment, link, or message delivered through email or another service | Message headers, gateway records, attachment/link metadata, click/open records, endpoint process/file evidence | Delivery does not prove the user opened it, code ran, or access succeeded. |
+| **Public-facing exploitation** | Exploit attempt against an Internet-facing application, API, appliance, or service | WAF/app/service logs, exploit request, error/response patterns, vulnerable version context, resulting process/session/file changes | A CVE or vulnerable version establishes exposure; an exploit request establishes an attempt; neither alone proves compromise. |
+| **Drive-by / watering hole / malicious web path** | User visits adversary-controlled or compromised web content; malvertising or search/SEO poisoning may steer the user there | Browser/proxy/DNS/HTTP records, redirect chain, downloaded content, exploit response, endpoint browser-child processes or files | A visit or redirect does not prove exploitation. SEO poisoning or malvertising often explains how the user was steered; map the actual access behavior supported by evidence. |
+| **Valid account / external remote service** | VPN, webmail, cloud, remote desktop, Citrix, SSH, or another externally reachable service is used with an account | Authentication logs, MFA events, device/source context, session creation, remote-service records, authorization/context from the account owner | A successful login proves account use. It does not by itself establish that the account was stolen or the session was malicious. |
+| **Trusted relationship / supply chain** | Third-party access, trusted identity, dependency, software update, or delivery mechanism is abused | Third-party/session records, software/update provenance, build/dependency evidence, package history, affected-version context | The existence of a trust path or dependency is exposure context. Evidence must connect that path to the actual intrusion. |
+
+These families are a practical map rather than an exhaustive catalog. Real incidents can combine them. A phishing link can send a user to a malicious website; a compromised vendor account can use an external remote service; a watering-hole page can exploit a browser vulnerability. When paths overlap, describe each observed step rather than forcing the incident into one label too early.
+
+#### Match the question to the evidence source
+
+Module 0.8 introduced where activity may travel and where evidence may exist. Initial-access reasoning turns that orientation into a collection question.
+
+| Hypothesis | Useful evidence sources |
+|---|---|
+| Phishing or malspam delivered the first artifact | Mail/security gateway, message trace, mailbox metadata, URL/attachment handling, endpoint file/process evidence |
+| Internet-facing exploitation provided access | Public-facing application/service logs, WAF/reverse proxy, authentication/session records, process/file activity on the server, vulnerability/patch context |
+| A web path led to client compromise | Proxy/DNS/HTTP, browser history where authorized, redirect/download records, endpoint process/file activity |
+| A valid account or remote service was used | Identity provider, VPN/remote service, MFA, device/source context, account-owner validation, resulting session activity |
+| A trusted third party or supply chain was involved | Third-party identity/session records, software/update/dependency provenance, vendor reporting, local installation/execution evidence |
+
+The next source should answer the uncertainty you actually have. If you already know a message was delivered, another copy of the mail header may add little. The next useful question may be whether the user interacted with the message or whether an endpoint process followed it.
+
+#### Work from evidence strength
+
+A useful initial-access statement has four parts:
+
+1. **Observation:** what the source actually recorded.
+2. **Reasoning:** why that observation supports one path more than another.
+3. **Bounded conclusion:** the strongest claim the evidence supports now.
+4. **Next test:** the evidence that would strengthen, reject, or replace the hypothesis.
+
+> **Scenario status: Separate classroom example — not A12.**
+
+Example:
+
+> The mail gateway recorded delivery of a message containing `shipping-notice.js` to the user. This supports phishing or malspam as a possible delivery path. The record does not establish that the attachment was opened or executed. Check endpoint file/process evidence and user-interaction telemetry for the message time before concluding that phishing produced host activity.
+
+Another example:
+
+> The VPN recorded a successful login for a valid employee account from an unfamiliar source. This establishes that the account authenticated through the remote service. Whether the session represents adversary access remains unresolved until authorization, MFA/device context, and resulting session activity are checked.
+
+The bounded conclusion is useful because it tells the next analyst both what is known and what work remains.
+
+#### A12: keep the entry path unresolved
+
+At this point in the course, A12 is used to establish one shared-foundation fact: **suspicious activity will later be investigated on WS-JLEE, but the entry path is not known**.
+
+Detailed A12 process, network, and registry observations are intentionally introduced later in the SOC track. Nothing available in the shared-foundation view establishes phishing, a malicious web path, public-facing exploitation, valid-account or remote-service abuse, or a trusted-third-party/supply-chain path.
+
+The canonical case supplies no mail record tying the activity to phishing, no browser chain proving a drive-by path, no public-facing exploitation record, no authentication record establishing account-based entry, and no third-party or supply-chain evidence connecting those paths to A12.
+
+So the defensible initial-access conclusion is:
+
+> **A12 initial access remains unresolved.**
+
+Leaving the path unresolved is the analytical answer supported by the current evidence. If reconstructing the entry path became important, the analyst would choose the next source based on the hypotheses being tested—for example mail/message records, browser/proxy history, identity/remote-access logs, or other case-relevant evidence.
+
+#### Knowledge Check
+
+1. A mail gateway shows a malicious attachment was delivered, but you have no endpoint evidence yet. What initial-access conclusion can you support, and what remains unproven?
+2. An Internet-facing application is vulnerable to a CVE and receives a request matching a published exploit pattern. What additional evidence would you want before concluding the exploit provided access?
+3. For A12, no canonical mail, browser, public-facing exploit, authentication, or third-party record establishes how access began. What is the correct conclusion, and what evidence would you seek next?
+
+#### By This Point, You Should Be Able To…
+
+You should now be able to recognize the major initial-access families, connect them to likely evidence sources, and place an observation at the correct point in the evidence progression. Most importantly, you should be comfortable leaving the entry path unresolved when the available evidence does not establish it, while still naming the next evidence that would make the hypothesis testable.
+
+#### References and Further Reading
+
+- [MITRE ATT&CK — Initial Access (TA0001)](https://attack.mitre.org/tactics/TA0001/)
+- [CISA — #StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide) — Includes common initial-access vectors and advanced social-engineering examples such as SEO/search poisoning.
+- [MITRE ATT&CK — Phishing (T1566)](https://attack.mitre.org/techniques/T1566/)
+- [MITRE ATT&CK — Drive-by Compromise (T1189)](https://attack.mitre.org/techniques/T1189/)
+- [MITRE ATT&CK — Exploit Public-Facing Application (T1190)](https://attack.mitre.org/techniques/T1190/)
+- [MITRE ATT&CK — Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1078/)
+- [MITRE ATT&CK — External Remote Services (T1133)](https://attack.mitre.org/techniques/T1133/)
+- [MITRE ATT&CK — Trusted Relationship (T1199)](https://attack.mitre.org/techniques/T1199/)
+- [MITRE ATT&CK — Supply Chain Compromise (T1195)](https://attack.mitre.org/techniques/T1195/)
+
+### 0.10 — Shared Foundations Section Summary
 
 **Estimated Time:** 15–20 minutes  
 
@@ -740,13 +987,14 @@ You learned:
 - where responsibilities overlap;
 - how ATT&CK, the Diamond Model, and the Cyber Kill Chain help organize activity;
 - what external research tools can and cannot tell you;
-- how the local environment and signal flow affect what evidence is available.
+- how the local environment and signal flow affect what evidence is available;
+- how common initial-access paths differ and how to keep delivery, access attempts, successful access, and later execution separate.
 
 This summary reconnects those topics before you begin 1.x.
 
 A simple way to remember the 0.x block is:
 
-**Course map → Roles → Handoffs → Frameworks → Tools → Environment**
+**Course map → Roles → Handoffs → Frameworks → Tools → Environment → Initial Access**
 
 These foundations support every later track.
 
@@ -779,6 +1027,7 @@ Later tracks will add depth.
 | **0.6 – Frameworks** | Use ATT&CK, the Diamond Model, and the Cyber Kill Chain as different ways to organize what you know. |
 | **0.7 – External Tools** | Understand the broad capabilities and limits of public/external research platforms. |
 | **0.8 – Environment / Signal Flow** | Relate hosts, users, network paths, critical assets, access paths, and sensors to the evidence you can actually observe. |
+| **0.9 – Common Initial Access Paths** | Identify the most defensible entry-path hypothesis from evidence, preserve uncertainty, and name what would test it. |
 
 #### One A12 Story Across the Shared Foundations
 
@@ -786,13 +1035,13 @@ The A12 scenario can show why the 0.x material matters before any role-specific 
 
 Suppose the SOC receives an alert involving `WS-JLEE`.
 
-Available evidence includes:
-- encoded PowerShell;
-- external communication;
-- a request for `/update.exe`;
-- a persistence-related registry change.
+At this point in the course, the shared foundations intentionally keep the case spoiler-light:
 
-At this point, several defensive roles may become involved.
+- suspicious activity involving `WS-JLEE` will enter the SOC track;
+- A12's initial-access mechanism remains unresolved;
+- the detailed process, network, and registry observations are introduced later in 1.x when learners are expected to interpret them.
+
+Several defensive roles may eventually become involved as new evidence and questions emerge.
 
 ##### SOC
 
@@ -840,7 +1089,9 @@ A handoff should happen because the next question belongs to another function—
 
 For example:
 
-> SOC confirms suspicious activity and asks whether the external domain is known.
+> **Scenario status: Separate classroom example — not A12.**
+
+> SOC investigates suspicious activity and asks whether external infrastructure is known.
 
 That becomes an intelligence question.
 
@@ -856,7 +1107,7 @@ That can become Detection Engineering work.
 
 Future activity may generate a SOC alert.
 
-The workflow can become a loop.
+This generic workflow shows how the work can become a loop without asserting that those downstream outcomes occurred in A12.
 
 The course teaches the roles separately so you can understand their responsibilities, but real defensive work often moves back and forth.
 
@@ -918,7 +1169,7 @@ Ask:
 
 > Which stage does the available evidence support?
 
-Do not force every stage to be present.
+Leave stages unfilled when the evidence does not support them.
 
 ##### One event can support more than one framework view
 
@@ -945,7 +1196,7 @@ Examples:
 
 This means the behavior was observed in that sandbox execution.
 
-It does not automatically mean every copy behaves the same way or that the behavior occurred locally.
+Interpret it as evidence from that sandbox execution; separate confirmation is needed before applying the behavior to every copy or to the local environment.
 
 > Passive DNS shows a historical domain-to-IP relationship.
 
@@ -959,76 +1210,67 @@ That is a source claim to evaluate, not a substitute for analysis.
 
 Later CTI and hunt lessons will develop these distinctions in more depth.
 
-#### Environment Path ≠ Visibility
+#### How Network Paths, Collection Points, and Visibility Relate
 
-Module 0.8 introduced the environment because evidence depends on where sensors and systems actually sit.
+Module 0.8 introduced the environment because evidence depends on both **where activity travels** and **where the organization can observe it**. Those are related questions, but they are not the same question.
 
-Keep these concepts separate:
+**Traffic path** describes where activity moves through the environment.
 
-**Traffic path**
-> Where activity travels.
+**Collection point** describes where a sensor or log source has an opportunity to observe part of that activity.
 
-**Collection point**
-> Where a sensor or log source can observe part of that activity.
+**Visibility** describes what evidence is actually collected, retained, parsed, and available to the analyst.
 
-**Visibility**
-> What evidence is actually collected, retained, parsed, and available to analysts.
+A connection may cross a network segment without a sensor recording the detail you need. A sensor may be present but lack the relevant field, and an important host may sit outside a particular telemetry population. When an investigation reaches an evidence gap, trace these three layers before deciding what the absence means.
 
-A connection may pass through a network segment without a sensor recording the detail you need.
+This relationship becomes increasingly important in SOC investigation, threat hunting, and Detection Engineering.
 
-A sensor may exist but not capture the relevant field.
+#### Concepts That Stay Distinct as the Course Progresses
 
-A host may be important but outside a particular telemetry population.
+The shared foundations introduced several ideas that will appear repeatedly in later tracks. Keeping their purposes clear will make the more technical material easier to organize.
 
-This distinction becomes essential in SOC investigation, hunting, and Detection Engineering.
+##### A defensive role is defined by its purpose and product
 
-#### Distinctions Worth Keeping
+A SOC may rely heavily on a SIEM, CTI may rely on a TIP, hunting may use a query language, and Detection Engineering may author Sigma rules. Those tools support the work; they do not define the role.
 
-##### Role ≠ tool
+When you are unsure which role's work you are doing, ask what question you are answering and what product or decision the work is meant to support.
 
-A SOC is not a SIEM.
+##### Shared evidence can support different responsibilities
 
-CTI is not a TIP.
+Two roles may inspect the same process event, domain, or network record while answering different questions. Shared access to the evidence does not make the products interchangeable.
 
-Hunting is not a query language.
+The useful distinction is ownership of the **question, judgment, and downstream action**.
 
-Detection Engineering is not Sigma.
+##### A handoff changes who is best positioned to answer the next question
 
-Tools support the function.
+Passing a bounded question to another function does not mean the original team stops caring about the case. It means the work has reached a question that another role is better equipped to answer.
 
-##### Shared evidence ≠ shared responsibility
+A good handoff preserves the evidence, the reasoning already completed, the uncertainty, and the decision the receiving team needs to make.
 
-Two roles can inspect the same log without owning the same decision or product.
+##### Frameworks organize evidence; they do not supply missing facts
 
-##### Handoff ≠ abandonment
+ATT&CK, the Diamond Model, and the Cyber Kill Chain give analysts useful structures for behavior, relationships, and progression. Their labels become meaningful only when the underlying evidence supports them.
 
-Passing a question to the correct function does not mean the original team stops caring about the case.
+An incomplete framework view is acceptable when the evidence is incomplete.
 
-It means the question has moved to the role best positioned to answer it.
+##### External research creates leads and context that still need local confirmation
 
-##### Framework ≠ evidence
+A sandbox result, passive-DNS relationship, reputation score, or vendor assessment can sharpen an investigation. It describes what that source observed or assessed.
 
-ATT&CK, Diamond, and Kill Chain organize evidence.
+Whether the same activity occurred in the organization's environment still depends on local evidence.
 
-They do not create evidence that is not present.
+##### Network topology tells you where traffic could be observed; telemetry tells you what was actually visible
 
-##### External result ≠ local occurrence
+Knowing that traffic traversed a device or segment does not guarantee that the required evidence was collected there. Visibility depends on sensor placement, configuration, retention, parsing, and population coverage.
 
-Research platforms can generate leads.
-
-Internal occurrence still requires internal evidence.
-
-##### Network path ≠ sensor visibility
-
-Knowing where traffic travels is not the same as knowing what your tools recorded.
+This is why later lessons treat a missing observation as an evidence question rather than immediately treating it as proof that the activity did not occur.
 
 #### Integrated Review Exercise
 
-Use this A12 starting card:
+Use this spoiler-light A12 starting card:
 
 > **Host:** `WS-JLEE`  
-> **Observed:** encoded PowerShell, external communication, `/update.exe` request, suspicious persistence-related registry activity  
-> **Known:** the initial alert does not answer every downstream question
+> **Known:** suspicious activity will be investigated in 1.x; the initial-access mechanism is unresolved  
+> **Deferred:** detailed process, network, and registry observations are introduced later in the SOC track
 
 For each item below, state the most appropriate role or concept.
 
@@ -1036,13 +1278,13 @@ For each item below, state the most appropriate role or concept.
 Who owns the first operational investigation?
 
 ##### External infrastructure question
-Which function should assess what is known about the domain/IP and related threat context?
+If later evidence introduces an external domain or IP that needs threat context, which function should assess it?
 
 ##### Enterprise-wide search
-Which function should search for similar activity elsewhere?
+If later evidence produces a supported behavior or infrastructure lead, which function should search for related activity elsewhere?
 
 ##### Durable analytic coverage
-Which function should evaluate whether the behavior becomes maintained detection?
+If later evidence identifies reusable behavior that may need maintained coverage, which function should evaluate it?
 
 ##### Behavior framework
 Which framework is best suited to naming the adversary behavior?
@@ -1055,6 +1297,9 @@ Which framework helps reason about stages of an intrusion?
 
 ##### External platform result
 What should you call it before internal evidence confirms local occurrence?
+
+##### Initial-access path
+The A12 evidence begins with suspicious host activity, but the course supplies no mail, browser, public-facing exploit, authentication, or third-party record proving how access began. What is the correct initial-access conclusion, and what evidence would you seek next?
 
 ##### Missing sensor coverage
 Why can the existence of a network path not prove you had visibility into the activity?
@@ -1074,6 +1319,7 @@ Before beginning 1.x, you should be comfortable saying:
 - [ ] I can preserve uncertainty when a framework element is unsupported.
 - [ ] I treat external-tool results as evidence or leads that require interpretation.
 - [ ] I can distinguish network/data flow from actual sensor visibility.
+- [ ] I can identify a defensible initial-access hypothesis from evidence and leave the path unresolved when the evidence does not establish it.
 - [ ] I understand that later lessons will deepen these concepts rather than replace them.
 
 If one of these is weak, revisit the corresponding 0.x module.
@@ -1104,7 +1350,7 @@ The shared role, framework, tool, and environment concepts from 0.x remain in th
 
 The 0.x block created the common language used by every later role:
 
-**Course map → Roles → Handoffs → Frameworks → Tools → Environment**
+**Course map → Roles → Handoffs → Frameworks → Tools → Environment → Initial Access**
 
 The most important idea to carry forward is:
 
@@ -1164,8 +1410,10 @@ The most important habit in this block is to separate **what the sensor recorded
 
 For example:
 
-- Endpoint telemetry may show `wscript.exe` launching PowerShell with an encoded command.
-- Zeek may show the same workstation making an HTTP request for `/update.exe`.
+> **Scenario status: Separate classroom example — not A12.**
+
+- Endpoint telemetry may show a script interpreter launching PowerShell.
+- Network telemetry may show the same workstation making an HTTP request.
 - A detection may alert on one of those patterns.
 
 Those observations can support an investigation, but each source tells you something different.
@@ -1182,18 +1430,18 @@ That evidence discipline will repeat throughout the course.
 
 #### One Activity, Several Views
 
-The classroom A12 scenario is intentionally reused across the 1.x block.
+The classroom A12 scenario is intentionally reused across the 1.x block, but its detailed evidence is revealed progressively.
 
-Imagine this simplified sequence:
+At this orientation point, keep only the case frame:
 
-1. `wscript.exe` launches encoded PowerShell on `WS-JLEE`.
-2. The workstation communicates with external infrastructure.
-3. A request for `/update.exe` appears in network telemetry.
-4. One or more detections fire.
-5. The SOC investigates the alert.
-6. The result is classified, documented, and routed.
+1. Suspicious activity involving `WS-JLEE` enters the SOC track.
+2. 1.1 will introduce the relevant host observations.
+3. 1.2 will add network observations.
+4. 1.3 will show how detection logic describes what it is designed to match.
+5. 1.4 will investigate and assess the resulting alert context.
+6. 1.5 will turn the supported result into a usable report or handoff.
 
-Different lessons will revisit that activity from different viewpoints.
+Do not fill in later A12 process, network, or registry facts before the lesson that introduces them. Different lessons will revisit the same case from different viewpoints as the evidence becomes available.
 
 ##### In 1.1
 
@@ -1332,11 +1580,51 @@ The recurring discipline is simple:
 
 > **Describe what the evidence shows first. Then decide what it means.**
 
+### 1.1 – Endpoint Activity: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Endpoint telemetry records what programs, files, network connections, registry changes, and loaded components did on a host. SOC analysts need to recognize which evidence type can answer a question and how to combine several event types into a defensible picture of host activity.
+
+#### Connect to What You Already Know
+
+The SOC orientation introduced the evidence-to-handoff workflow. This subunit begins the evidence side of that workflow by showing what endpoint records can reveal and where each record type has limits.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **1.1.1 – Endpoint Activity** | Build the map of endpoint evidence types and the questions they can answer. |
+| **1.1.2 – Process Activity** | Interpret process creation, parent-child relationships, command lines, users, and execution context. |
+| **1.1.3 – File System Activity** | Interpret file creation, modification, deletion, paths, and hashes. |
+| **1.1.4 – Network Activity (Endpoint)** | Connect outbound or inbound network activity to the host and, where available, the initiating process. |
+| **1.1.5 – Registry Activity** | Interpret registry changes as host configuration and persistence evidence when the relevant keys and values are present. |
+| **1.1.6 – Image and Driver Load Activity** | Interpret loaded modules and drivers as additional execution and trust context. |
+
+#### What to Watch For
+
+- Match the question to the endpoint evidence type most likely to answer it.
+- Preserve what a field actually says; an event can show that something happened without proving intent or maliciousness.
+- Combine events by host, user, process, time, and other shared context rather than treating each record as a complete incident by itself.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- identify the major endpoint evidence types and the questions each can answer;
+- read common process, file, network, registry, image, and driver-load fields in context;
+- connect related endpoint events without overstating what any one event proves;
+- recognize when missing telemetry limits the conclusion.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [1.1 Summary](#11--endpoint-activity-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 1.1.1 — Endpoint activity (the map)
-
-**1.1 — Endpoint Evidence**
-
-Start with the events a host records. The individual event types become more useful when you can connect them without claiming more than their fields show.
 
 **Estimated Time:** 15–20 minutes
 
@@ -1493,9 +1781,9 @@ MDE `DeviceFileEvents` includes file operations such as creation, modification, 
 
 #### Working through the example
 
-A Sysmon 11 event on `WS-JLEE` records `Image=wscript.exe` and `TargetFilename=C:\Users\jlee\AppData\Local\Temp\update.exe`, with no hash field. Describe it as: “Sysmon recorded Script Host creating or overwriting `update.exe` at the Temp path; this event supplies no file hash.”
+For this separate field-reading example, a supplied Sysmon 11 event uses the familiar classroom host `WS-JLEE`. It records `Image=wscript.exe` and `TargetFilename=C:\Users\jlee\AppData\Local\Temp\update.exe`, with no hash field. Describe it as: “Sysmon recorded Script Host creating or overwriting `update.exe` at the Temp path; this event supplies no file hash.”
 
-The event does not establish that `update.exe` ran. To investigate execution, look for a related process event using the host, time, path, and any available identity evidence. Treat that as an additional observation rather than adding it to the file event's meaning.
+This practice record is not evidence that A12's HTTP request successfully transferred the file. The event does not establish that `update.exe` ran. To investigate execution, look for a related process event using the host, time, path, and any available identity evidence. Treat that as an additional observation rather than adding it to the file event's meaning.
 
 #### Creating a focused file query
 
@@ -1560,9 +1848,11 @@ Sysmon 3 concerns network connections; Sysmon 22 concerns DNS queries. MDE uses 
 
 #### Working through the example
 
-A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=203.0.113.88`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
+**Separate classroom record — not A12.** The values below are training-only and should not be merged into the recurring case.
 
-A supported description is: “The endpoint recorded a successful TCP connection associated with PowerShell to the remote endpoint `203.0.113.88:443`; no remote URL or FQDN is recorded.” The port alone does not establish HTTPS or Command and Control. The abbreviated command does not establish hidden-window execution. Use source-specific direction evidence before adding “outbound” to the finding.
+A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=198.51.100.44`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
+
+A supported description is: “The endpoint recorded a successful TCP connection associated with PowerShell to the remote endpoint `198.51.100.44:443`; no remote URL or FQDN is recorded.” The port alone does not establish HTTPS or Command and Control. The abbreviated command does not establish hidden-window execution. Use source-specific direction evidence before adding “outbound” to the finding.
 
 #### Creating a focused network query
 
@@ -1573,7 +1863,7 @@ DeviceNetworkEvents
 | where Timestamp > ago(1d)
 | where ActionType == "ConnectionSuccess"
 | where InitiatingProcessFileName =~ "powershell.exe"
-| where RemoteIP == "203.0.113.88" and RemotePort == 443
+| where RemoteIP == "198.51.100.44" and RemotePort == 443
 | project Timestamp, DeviceName, Protocol, LocalIP, LocalPort,
           RemoteIP, RemotePort, RemoteUrl, InitiatingProcessCommandLine
 ```
@@ -1743,11 +2033,95 @@ Image and driver events describe different kinds of loads. Identify the loaded o
 - [Microsoft — DeviceImageLoadEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceimageloadevents-table)
 - [Microsoft — KQL string operators](https://learn.microsoft.com/en-us/kusto/query/datatypes-string-operators)
 
+### 1.1 – Endpoint Activity: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Host question → relevant event type → field interpretation → cross-event context → bounded conclusion**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- identify the major endpoint evidence types and the questions each can answer;
+- read common process, file, network, registry, image, and driver-load fields in context;
+- connect related endpoint events without overstating what any one event proves;
+- recognize when missing telemetry limits the conclusion.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **1.1.1 – Endpoint Activity** | Build the map of endpoint evidence types and the questions they can answer. |
+| **1.1.2 – Process Activity** | Interpret process creation, parent-child relationships, command lines, users, and execution context. |
+| **1.1.3 – File System Activity** | Interpret file creation, modification, deletion, paths, and hashes. |
+| **1.1.4 – Network Activity (Endpoint)** | Connect outbound or inbound network activity to the host and, where available, the initiating process. |
+| **1.1.5 – Registry Activity** | Interpret registry changes as host configuration and persistence evidence when the relevant keys and values are present. |
+| **1.1.6 – Image and Driver Load Activity** | Interpret loaded modules and drivers as additional execution and trust context. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. If you need to know which process opened a network connection, which endpoint evidence is most useful?
+2. Why is a file hash useful context without automatically proving that the file is malicious?
+3. What shared context can help you determine whether process, file, and registry events belong to the same activity?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **1.2 – Zeek Network Evidence: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 1.2 – Zeek Network Evidence: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Zeek turns observed network traffic into protocol-aware logs. The analyst skill is learning which log answers which question, how related records connect, and what the sensor can and cannot tell you about activity it observed.
+
+#### Connect to What You Already Know
+
+Endpoint evidence showed what a host recorded locally. Zeek adds a network-sensor view, which can confirm, complement, or fail to observe parts of the same activity depending on where the sensor sits and what protocols are visible.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **1.2.1 – Zeek Concepts** | Understand Zeek records, timestamps, UIDs, sensors, and evidence boundaries. |
+| **1.2.2 – Conn Engine** | Use connection summaries to establish who talked to whom, when, and how much. |
+| **1.2.3 – DNS Engine** | Use DNS records to understand name-resolution activity and answers. |
+| **1.2.4 – TLS Engine** | Use TLS metadata to interpret encrypted-session context without assuming visibility into encrypted content. |
+| **1.2.5 – HTTP Engine** | Use HTTP records to inspect requests and responses when HTTP is visible. |
+| **1.2.6 – SMTP Engine** | Use SMTP records to understand mail-flow activity visible to the sensor. |
+| **1.2.7 – Files Engine** | Use file-analysis records to connect transferred files with network activity when extraction or hashing is available. |
+| **1.2.8 – Weird Engine** | Use protocol anomalies as investigative context rather than automatic proof of malicious activity. |
+
+#### What to Watch For
+
+- Start with the network question, then choose the log that contains the relevant protocol evidence.
+- Use shared identifiers such as Zeek UIDs and timing to connect records across logs.
+- Keep sensor placement, encryption, logging configuration, and protocol visibility in mind before interpreting a missing field or missing record.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- select the Zeek log that best answers a network-investigation question;
+- interpret the core evidence each major Zeek log provides;
+- connect related network records using shared context;
+- explain how sensor visibility and protocol limits affect what Zeek can establish.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [1.2 Summary](#12--zeek-network-evidence-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 1.2.1 — Zeek Concepts
-
-**1.2 — Network Evidence**
-
-Endpoint evidence names activity from the host’s perspective. Network evidence adds what a sensor observed on the wire; compare those perspectives and retain the limits of each.
 
 **Estimated Time:** 15–20 minutes
 
@@ -2023,9 +2397,11 @@ Host and URI help reconstruct the requested resource, but a complete URL also ne
 
 #### Working through the example
 
-The supplied record shows `GET /update.exe` from `192.0.2.10` to `203.0.113.88:8080`, `status_code=200`, and no recorded Host or User-Agent.
+**Separate classroom HTTP record — not A12.** These values exist only to teach field interpretation and query scope.
 
-A supported description is: “The client requested `/update.exe` with GET from the supplied destination on port 8080 and received HTTP status 200; Host and User-Agent are unavailable in this record.” The path name does not establish the returned bytes. File-analysis records or retained content may help determine what was transferred, while endpoint evidence can address whether a file was saved or executed.
+The supplied record shows `GET /package.bin` from `192.0.2.10` to `198.51.100.60:8080`, `status_code=200`, and no recorded Host or User-Agent.
+
+A supported description is: “The client requested `/package.bin` with GET from the supplied destination on port 8080 and received HTTP status 200; Host and User-Agent are unavailable in this record.” The path name does not establish the returned bytes. File-analysis records or retained content may help determine what was transferred, while endpoint evidence can address whether a file was saved or executed.
 
 #### Creating a focused HTTP query
 
@@ -2034,19 +2410,19 @@ This KQL teaching example assumes an ingested table named `ZeekHttp`, a datetime
 ```kusto
 ZeekHttp
 | where TimeGenerated > ago(1d)
-| where method == "GET" and uri == "/update.exe"
-| where ['id.resp_h'] == "203.0.113.88" and ['id.resp_p'] == 8080
+| where method == "GET" and uri == "/package.bin"
+| where ['id.resp_h'] == "198.51.100.60" and ['id.resp_p'] == 8080
 | project TimeGenerated, uid, ['id.orig_h'], host, uri,
           user_agent, status_code
 ```
 
-The equality test matches exactly `/update.exe`; it will not include a URI with an added query string. A substring or carefully scoped path expression changes that behavior. Choose the comparison that answers the stated question and explain the extra results it permits.
+The equality test matches exactly `/package.bin`; it will not include a URI with an added query string. A substring or carefully scoped path expression changes that behavior. Choose the comparison that answers the stated question and explain the extra results it permits.
 
 #### Knowledge Check
 
 1. How do the Host header, destination IP, and URI differ?
-2. What does the example establish, and does it prove update.exe ran?
-3. Would uri == "/update.exe" match /update.exe?id=1? How could you broaden it?
+2. What does the example establish, and does it prove package.bin ran?
+3. Would uri == "/package.bin" match /package.bin?id=1? How could you broaden it?
 
 #### Summary
 
@@ -2151,7 +2527,9 @@ A `files.log` record does not guarantee that Zeek saved a file to disk or captur
 
 #### Working through the example
 
-Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `203.0.113.88`, and `is_orig=false`. A related HTTP record associates it with `/update.exe`.
+**Separate classroom file-analysis record — not A12.** It intentionally pairs with the separate HTTP training record from 1.2.5.
+
+Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `198.51.100.60`, and `is_orig=false`. A related HTTP record associates it with `/package.bin`.
 
 The supported account is that Zeek observed executable-type content supplied by the responder to the originator in that HTTP context. Use `CTrain1` for the connection and `FTrain1` for file references such as an HTTP `resp_fuids` entry. In a legacy record, `tx_hosts` and `rx_hosts` supply direction and `conn_uids` supplies the connection pivot. State separately whether a hash, complete bytes, or an extracted object is available.
 
@@ -2163,7 +2541,7 @@ This KQL teaching example assumes an ingested table named `ZeekFiles`, a datetim
 ZeekFiles
 | where TimeGenerated > ago(1d)
 | where mime_type == "application/x-dosexec"
-| where ['id.resp_h'] == "203.0.113.88" and is_orig == false
+| where ['id.resp_h'] == "198.51.100.60" and is_orig == false
 | project TimeGenerated, fuid, uid, ['id.orig_h'], ['id.resp_h'],
           mime_type, is_orig
 ```
@@ -2247,11 +2625,93 @@ A weird record supplies a named condition and any available connection context. 
 
 - [Zeek — weird.log and notice.log](https://docs.zeek.org/en/current/reference/logs/weird-and-notice.html)
 
+### 1.2 – Zeek Network Evidence: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Network question → protocol/log selection → related records → visibility check → network conclusion**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- select the Zeek log that best answers a network-investigation question;
+- interpret the core evidence each major Zeek log provides;
+- connect related network records using shared context;
+- explain how sensor visibility and protocol limits affect what Zeek can establish.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **1.2.1 – Zeek Concepts** | Understand Zeek records, timestamps, UIDs, sensors, and evidence boundaries. |
+| **1.2.2 – Conn Engine** | Use connection summaries to establish who talked to whom, when, and how much. |
+| **1.2.3 – DNS Engine** | Use DNS records to understand name-resolution activity and answers. |
+| **1.2.4 – TLS Engine** | Use TLS metadata to interpret encrypted-session context without assuming visibility into encrypted content. |
+| **1.2.5 – HTTP Engine** | Use HTTP records to inspect requests and responses when HTTP is visible. |
+| **1.2.6 – SMTP Engine** | Use SMTP records to understand mail-flow activity visible to the sensor. |
+| **1.2.7 – Files Engine** | Use file-analysis records to connect transferred files with network activity when extraction or hashing is available. |
+| **1.2.8 – Weird Engine** | Use protocol anomalies as investigative context rather than automatic proof of malicious activity. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Which Zeek log would you start with to establish the basic endpoints and duration of a connection?
+2. Why can a TLS log describe an encrypted session without revealing the application content inside it?
+3. What does a shared UID allow you to do during an investigation?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **1.3 – Detection Rules: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 1.3 – Detection Rules: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+SOC analysts encounter detection logic written for different evidence layers. Understanding the rule language helps you explain why an alert fired, recognize what data the rule depends on, and make bounded changes without confusing a match with a completed investigation.
+
+#### Connect to What You Already Know
+
+The endpoint and Zeek subunits established the evidence that detections can evaluate. This subunit shows how several common rule types express conditions over that evidence.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **1.3.1 – SIGMA Rules** | Read and modify portable detection logic that describes log-event conditions. |
+| **1.3.2 – Suricata Rules** | Read and modify network-signature logic over packet or protocol evidence. |
+| **1.3.3 – YARA Rules** | Read and modify pattern-matching logic for files, memory, or other scanned content. |
+| **1.3.4 – SIEM Rules** | Read and modify analytic logic in the local query/detection environment. |
+
+#### What to Watch For
+
+- Identify the evidence layer before interpreting the rule.
+- Separate rule conditions from the investigative conclusion that follows a match.
+- When modifying a rule, understand which condition changes and what new activity the change would include or exclude.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- explain what evidence each rule family is designed to evaluate;
+- read the main parts of SIGMA, Suricata, YARA, and SIEM detection logic;
+- describe why a rule matched without equating the match with maliciousness;
+- make or assess a simple rule change while preserving its intended detection purpose.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [1.3 Summary](#13--detection-rules-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 1.3.1 — SIGMA Rules
-
-**1.3 — Detection Logic**
-
-You can now read the evidence that detections consume. Next, examine how a rule selects activity and what its match does—and does not—establish.
 
 **Estimated Time:** 25–30 minutes
 
@@ -2517,11 +2977,90 @@ A SIEM detection proposal connects clear logic to a source, schedule, trigger, a
 - [Microsoft — Custom detection rules](https://learn.microsoft.com/en-us/defender-xdr/custom-detection-rules)
 - [Sigma — Rule basics](https://sigmahq.io/docs/basics/rules.html)
 
+### 1.3 – Detection Rules: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Evidence source → rule conditions → match → investigation → tuning or change when justified**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- explain what evidence each rule family is designed to evaluate;
+- read the main parts of SIGMA, Suricata, YARA, and SIEM detection logic;
+- describe why a rule matched without equating the match with maliciousness;
+- make or assess a simple rule change while preserving its intended detection purpose.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **1.3.1 – SIGMA Rules** | Read and modify portable detection logic that describes log-event conditions. |
+| **1.3.2 – Suricata Rules** | Read and modify network-signature logic over packet or protocol evidence. |
+| **1.3.3 – YARA Rules** | Read and modify pattern-matching logic for files, memory, or other scanned content. |
+| **1.3.4 – SIEM Rules** | Read and modify analytic logic in the local query/detection environment. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Why does knowing the evidence layer matter before you interpret a detection rule?
+2. What is the difference between explaining why a rule matched and deciding what the matched activity means?
+3. When you change one condition in a rule, what should you consider about the activity the rule will now include or exclude?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **1.4 – Alert Investigation and Assessment: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 1.4 – Alert Investigation and Assessment: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+An alert is a starting point for investigation, not the finished judgment. SOC analysts need to gather context, determine what the evidence establishes, classify the result, understand common causes of benign matches, place the work in the right operational category, and meet response-time expectations.
+
+#### Connect to What You Already Know
+
+Detection lessons showed how analytic logic produces matches. This subunit begins with that fired object and develops the investigation and decision-making that turn a match into an operational SOC result.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **1.4.1 – Alert Context and Investigation** | Gather the host, user, process, file, network, and other context needed to understand the alert. |
+| **1.4.2 – Alert Classification** | Classify the investigated alert using evidence and the detection expectation. |
+| **1.4.3 – Common False Positive Causes** | Recognize why legitimate activity can satisfy detection conditions. |
+| **1.4.4 – Common Alert Categorizations** | Place investigated activity into the operational categories used for routing and reporting. |
+| **1.4.5 – SLA / Response Time Goals** | Apply the relevant response-time goal and understand which event starts the clock. |
+
+#### What to Watch For
+
+- Distinguish what the alert says from what investigation adds.
+- Tie classification to the relevant detection expectation and checked evidence, not to intuition alone.
+- Keep categorization, priority, and timing connected to the actual operational requirement.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- identify the context needed to investigate an alert;
+- classify an alert using the available evidence and the expected detection outcome;
+- explain common reasons legitimate activity may match a detection;
+- apply the appropriate category and response-time expectation without confusing separate clocks.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [1.4 Summary](#14--alert-investigation-and-assessment-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 1.4.1 — Alert Context and Investigation
-
-**1.4 — Alert Investigation**
-
-A rule match starts the investigation. Use the available records to evaluate the activity, assign a defensible classification, and identify what still needs attention.
 
 **Estimated Time:** 30 minutes
 
@@ -2571,10 +3110,9 @@ For a separate network example, retained cleartext HTTP packets can add `/update
 
 #### Knowledge Check
 
-1. For the process example, name what is present and two unresolved questions.
-2. Explain the configuration and upstream path for the SIEM-only alert.
-3. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute?
-4. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
+1. For the process example, identify what context is present and missing, then explain the SIEM rule configuration and upstream event-to-alert path.
+2. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute, and what would each still leave unresolved?
+3. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
 
 #### Summary
 
@@ -2731,7 +3269,7 @@ Activities may be mixed or incompletely observed. Choose the category supported 
 
 #### Comparing similar cases
 
-The course PowerShell example runs under `jlee` with a recorded Medium integrity, non-elevated context. That supports user-level activity for this event. It does not prove that the account lacks every administrative membership or that no privileged activity occurred elsewhere.
+A separate classroom PowerShell example (not A12) runs under `labuser` with a recorded Medium integrity, non-elevated context. That supports user-level activity for this event. It does not prove that the account lacks every administrative membership or that no privileged activity occurred elsewhere.
 
 If another supplied event establishes SYSTEM execution, privileged activity is supported for that event. A process name or “service” label alone is insufficient to make that change.
 
@@ -2746,7 +3284,7 @@ This comparison is a reasoning check. It does not require all possible categorie
 #### Knowledge Check
 
 1. Name the four syllabus categories and explain how Other is used.
-2. Categorize the supplied non-elevated jlee event and explain why root-level is unsupported.
+2. Categorize the supplied non-elevated labuser event and explain why root-level is unsupported.
 3. How would you distinguish a port sweep from a failed login, and why is HTTP 401 alone insufficient?
 
 #### Summary
@@ -2815,11 +3353,89 @@ Identify the applicable clock, calculate its due time, and record the action act
 
 - [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
 
+### 1.4 – Alert Investigation and Assessment: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Alert → context → evidence assessment → classification/category → response timing and handoff**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- identify the context needed to investigate an alert;
+- classify an alert using the available evidence and the expected detection outcome;
+- explain common reasons legitimate activity may match a detection;
+- apply the appropriate category and response-time expectation without confusing separate clocks.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **1.4.1 – Alert Context and Investigation** | Gather the host, user, process, file, network, and other context needed to understand the alert. |
+| **1.4.2 – Alert Classification** | Classify the investigated alert using evidence and the detection expectation. |
+| **1.4.3 – Common False Positive Causes** | Recognize why legitimate activity can satisfy detection conditions. |
+| **1.4.4 – Common Alert Categorizations** | Place investigated activity into the operational categories used for routing and reporting. |
+| **1.4.5 – SLA / Response Time Goals** | Apply the relevant response-time goal and understand which event starts the clock. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. What additional context would you seek before deciding what a process alert means?
+2. Why is a disliked or noisy alert not automatically a false positive?
+3. What must you identify before calculating whether an SLA or response-time goal was met?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **1.5 – Reporting and Notification: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 1.5 – Reporting and Notification: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+SOC work becomes useful to the rest of the organization when the right product reaches the right audience on time. Reporting is therefore part of the investigation workflow, not an afterthought.
+
+#### Connect to What You Already Know
+
+The alert subunit ended with an assessed result, operational category, and response-time expectations. This subunit focuses on how that result becomes a report, notification, request, or handoff.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **1.5.1 – Report Types** | Choose the product type that matches the purpose of the communication. |
+| **1.5.2 – Reporting Timeline Requirements** | Apply the timing requirement associated with the product or event. |
+| **1.5.3 – Notification and Distribution** | Route the product to the correct recipients through the approved channel. |
+
+#### What to Watch For
+
+- Choose the product from the question and audience, not from habit.
+- Keep the reporting clock tied to the event that actually starts it.
+- Treat recipient, awareness, and channel choices as part of the product design.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- select an appropriate SOC report or request type for the communication need;
+- identify the timing requirement and its correct start point;
+- route the product to the appropriate recipients through the approved channel;
+- separate the contents needed by different audiences instead of sending one undifferentiated report to everyone.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [1.5 Summary](#15--reporting-and-notification-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 1.5.1 — Report Types
-
-**1.5 — Reporting and Handoff**
-
-An investigation becomes useful to others through its product. Choose the report, timing, and route that fit the decision and recipient.
 
 **Estimated Time:** 20–25 minutes
 
@@ -2984,6 +3600,45 @@ Use the notification chart to route the product, provide appropriate leadership 
 
 - [NIST SP 800-61 Rev. 3 — Incident response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
 - [MITRE — 11 Strategies of a World-Class Cybersecurity Operations Center](https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center)
+
+### 1.5 – Reporting and Notification: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Assessed result → product type → timing → recipients/channel → handoff**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- select an appropriate SOC report or request type for the communication need;
+- identify the timing requirement and its correct start point;
+- route the product to the appropriate recipients through the approved channel;
+- separate the contents needed by different audiences instead of sending one undifferentiated report to everyone.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **1.5.1 – Report Types** | Choose the product type that matches the purpose of the communication. |
+| **1.5.2 – Reporting Timeline Requirements** | Apply the timing requirement associated with the product or event. |
+| **1.5.3 – Notification and Distribution** | Route the product to the correct recipients through the approved channel. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. How does an incident report differ in purpose from an RFI?
+2. Why is the start event for a reporting clock as important as the allowed duration?
+3. What should determine whether leadership, IR, CTI, or another team receives a product?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **1.6 – SOC Analyst Section Summary**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
 
 ### 1.6 — SOC Analyst Section Summary
 
@@ -3158,75 +3813,59 @@ The report or request should preserve:
 - important uncertainty or gaps;
 - what the next team needs to do or answer.
 
-#### Distinctions Worth Keeping
+#### Distinctions That Keep a SOC Assessment Precise
 
-These distinctions recur throughout later tracks.
+Several SOC concepts sit close together in the workflow. Keeping the question behind each one clear prevents a correct observation from turning into an unsupported conclusion.
 
-##### Observation ≠ conclusion
+##### Observations and conclusions require different levels of support
 
 > `wscript.exe` launched encoded PowerShell.
 
-is an observation.
+is a direct observation from the process evidence.
 
 > The host is compromised.
 
-is a conclusion requiring additional support.
+is a broader conclusion. It may eventually be justified, but it requires additional evidence and reasoning. A strong investigation shows the path from the observation to the conclusion instead of treating them as equivalent statements.
 
-##### Endpoint evidence ≠ network evidence
+##### Endpoint and network telemetry answer different questions
 
-Endpoint telemetry can often identify the process.
+Endpoint telemetry can often identify the process, user, file, registry activity, and host-local context. Network telemetry can describe the connection or protocol transaction visible to the sensor.
 
-Network telemetry can often identify the protocol transaction.
+When the two views are correlated, preserve which source supplied each field. That makes the finding reviewable and prevents host-only context from being silently attributed to a network sensor, or vice versa.
 
-Do not silently transfer fields from one sensor to another.
+##### A detection match establishes that the logic matched; investigation establishes what the activity means
 
-##### Detection match ≠ maliciousness
+When a rule fires, the analyst knows that the event satisfied the rule's conditions. Classification requires the next layer of evidence: whether the assessed target condition was actually present.
 
-A rule match means the logic matched.
+This is why a rule match can justify investigation without automatically proving maliciousness.
 
-Investigation determines what the activity means.
+##### Detection classification and activity category answer different questions
 
-##### TP / FP / TN / FN ≠ activity category
+**TP / FP / TN / FN** describe the relationship between the detection outcome and the assessed target condition.
 
-**True Positive** describes detection correctness.
+A category such as **user-level access**, **root-level access**, or **scanning/reconnaissance** describes the kind of activity observed.
 
-**User-level access** describes the kind of activity.
+An investigation may need both labels because neither one replaces the other.
 
-One does not replace the other.
+##### Classification and false-positive cause are separate judgments
 
-##### False-positive classification ≠ false-positive cause
+Calling an alert a **False Positive** answers whether the alert represented the target condition being evaluated.
 
-> False Positive
+Explaining that benign helpdesk activity or overly broad logic caused the match answers **why** the false positive occurred. Separating those questions makes tuning recommendations more useful.
 
-answers:
+##### Alert-response and reporting timelines may start from different events
 
-> Was the detection correct?
+The alert queue may have a response-time goal while an incident report or RFI has a separate submission clock. Track the trigger, due time, and current state for the specific obligation you are measuring.
 
-The cause answers:
+##### Incident reports and RFIs carry different products
 
-> Why did benign activity satisfy the rule?
+An incident report records and routes the security case. An RFI asks another team a bounded question needed to advance the work.
 
-##### Alert-response clock ≠ reporting clock
+They can exist beside one another because the case and the unanswered question are related but different products.
 
-The alert queue may have response-time goals.
+##### A correct recipient still requires an approved delivery path
 
-The resulting incident report or RFI may have a separate timeline.
-
-Track the correct clock.
-
-##### Incident report ≠ RFI
-
-An incident report records the case.
-
-An RFI asks another team a question.
-
-An RFI can exist beside an incident without becoming a second incident.
-
-##### Correct recipient ≠ approved path
-
-Sending the right information to the right person through an unapproved personal channel is still a poor handoff.
-
-Audience and channel both matter.
+Knowing who needs the information is only part of a handoff. Sensitive operational information also needs to move through the approved channel so handling, accountability, and recordkeeping are preserved.
 
 #### Integrated Review Exercise
 
@@ -3603,11 +4242,54 @@ The recurring discipline is:
 
 > **Preserve the evidence, make the judgment explicit, and answer the requirement—not the tool.**
 
+### 2.1 – Intelligence Foundations and Requirements: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+CTI work begins with a question that matters to a decision maker and ends with a supported answer. This subunit establishes the concepts that keep collection, analysis, and production connected to that requirement.
+
+#### Connect to What You Already Know
+
+The CTI orientation introduced the intelligence workflow. This subunit provides the vocabulary and requirement discipline needed before deeper tradecraft, framework use, platforms, and enrichment.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **2.1.1 – Data, Information, and Intelligence** | Distinguish observations and organized facts from the judged answer that addresses a requirement. |
+| **2.1.2 – Intelligence Lifecycle** | Understand intelligence as a cycle of direction, collection, processing, analysis, dissemination, and feedback. |
+| **2.1.3 – Intelligence Types** | Recognize common intelligence types and how they serve different decisions and audiences. |
+| **2.1.4 – Intelligence Requirements** | Translate an information need into a bounded intelligence requirement. |
+| **2.1.5 – RFI Intake and Prioritization** | Receive, clarify, prioritize, and route a request for intelligence. |
+| **2.1.6 – Ensuring Intelligence Is Actionable** | Connect the answer to a decision, action, or next step the customer can use. |
+| **2.1.7 – Tailoring Output to the Audience** | Match detail, language, and format to the audience and decision need. |
+| **2.1.8 – Attribution** | Keep actor or cluster judgments proportional to the available sourcing and evidence. |
+| **2.1.9 – Collection Sources and Methods** | Select and describe sources based on what the requirement needs and what each source can provide. |
+
+#### What to Watch For
+
+- Keep the intelligence requirement visible as the reason for collection and analysis.
+- Distinguish collected material from the judgment that answers the customer question.
+- Make audience, actionability, sourcing, and attribution strength part of the answer rather than afterthoughts.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- distinguish data, information, and intelligence in a real workflow;
+- explain how requirements drive the intelligence lifecycle and collection choices;
+- receive and bound an RFI around the decision it needs to support;
+- tailor a supported answer to the correct audience while preserving uncertainty and sourcing.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [2.1 Summary](#21--intelligence-foundations-and-requirements-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 2.1.1 — Difference between data, information, and intelligence
-
-**2.1 — Intelligence Foundations and Requirements**
-
-Start by distinguishing recorded values, contextual information, and assessed intelligence. That distinction supports the requirements and RFI intake work that follows.
 
 **Estimated Time:** 20–25 minutes
 
@@ -3678,7 +4360,7 @@ Data provides the recorded observations from which you begin. Adding context dev
 
 #### Related Reading
 
-- [1.5 — Reporting](#151--report-types)
+- [1.5 — Reporting](#15--reporting-and-notification-introduction)
 - [2.1.2 — Intelligence lifecycle](#212--intelligence-lifecycle)
 - [2.1.4 — Intelligence requirements](#214--intelligence-requirements)
 - [2.2.1 — Estimative language](#221--estimative-language)
@@ -4248,7 +4930,7 @@ The goal is not to make every reader see the same words. The goal is to make eve
 - [2.1.6 — Ensuring intelligence is actionable](#216--ensuring-intelligence-is-actionable)
 - [2.1.8 — Attribution](#218--attribution)
 - [2.7.5 — Dissemination channels](#275--disseminating-intelligence-to-the-correct-audiences)
-- [1.5 — SOC reporting and routing](#151--report-types)
+- [1.5 — SOC reporting and routing](#15--reporting-and-notification-introduction)
 
 ### 2.1.8 — Attribution
 
@@ -4464,11 +5146,94 @@ A good collection plan explains **what evidence is needed and why**, not merely 
 - [2.8.2.1 — Local collection requests](#282--local-production-and-approval-processes)
 - 0.7 / 2.4 / 2.4 – Tool survey, TIP, and platform depth
 
+### 2.1 – Intelligence Foundations and Requirements: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Requirement → collection → evaluation/analysis → answer → dissemination → feedback**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- distinguish data, information, and intelligence in a real workflow;
+- explain how requirements drive the intelligence lifecycle and collection choices;
+- receive and bound an RFI around the decision it needs to support;
+- tailor a supported answer to the correct audience while preserving uncertainty and sourcing.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **2.1.1 – Data, Information, and Intelligence** | Distinguish observations and organized facts from the judged answer that addresses a requirement. |
+| **2.1.2 – Intelligence Lifecycle** | Understand intelligence as a cycle of direction, collection, processing, analysis, dissemination, and feedback. |
+| **2.1.3 – Intelligence Types** | Recognize common intelligence types and how they serve different decisions and audiences. |
+| **2.1.4 – Intelligence Requirements** | Translate an information need into a bounded intelligence requirement. |
+| **2.1.5 – RFI Intake and Prioritization** | Receive, clarify, prioritize, and route a request for intelligence. |
+| **2.1.6 – Ensuring Intelligence Is Actionable** | Connect the answer to a decision, action, or next step the customer can use. |
+| **2.1.7 – Tailoring Output to the Audience** | Match detail, language, and format to the audience and decision need. |
+| **2.1.8 – Attribution** | Keep actor or cluster judgments proportional to the available sourcing and evidence. |
+| **2.1.9 – Collection Sources and Methods** | Select and describe sources based on what the requirement needs and what each source can provide. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. What makes an intelligence requirement more useful than a broad topic request?
+2. Why is collected reporting not automatically a finished intelligence answer?
+3. How can the same underlying analysis be tailored differently for two audiences without changing the evidence?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **2.2 – Analytical Tradecraft: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 2.2 – Analytical Tradecraft: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Analytical tradecraft helps an intelligence analyst make judgments that are transparent, reviewable, and appropriately uncertain. The goal is not to remove uncertainty; it is to reason through it in a disciplined way.
+
+#### Connect to What You Already Know
+
+The foundations subunit established the requirement, collection, and audience. This subunit focuses on how the analyst evaluates sources, structures reasoning, communicates probability, and reduces avoidable bias while answering that requirement.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **2.2.1 – Estimative Language** | Express probability and uncertainty with consistent estimative terms. |
+| **2.2.2 – Structured Analytic Techniques** | Use structured methods to expose assumptions, alternatives, and evidence relationships. |
+| **2.2.3 – Admiralty Code** | Evaluate source reliability separately from information credibility. |
+| **2.2.4 – Cognitive Biases and Mitigation** | Recognize common analytical biases and apply practical mitigation techniques. |
+
+#### What to Watch For
+
+- Separate source reliability from the credibility of a specific piece of information.
+- Use estimative language for the judgment, while keeping confidence and sourcing visible as separate ideas.
+- Choose structured techniques and bias mitigations because they improve a real analytical decision, not because the method itself is the product.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- use consistent estimative language to communicate probabilistic judgments;
+- evaluate source reliability and information credibility as separate dimensions;
+- apply structured techniques to test assumptions or alternatives;
+- recognize common cognitive biases and choose a mitigation that improves the analysis.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [2.2 Summary](#22--analytical-tradecraft-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 2.2.1 — Estimative language
-
-**2.2 — Analytical Tradecraft**
-
-A clear requirement gives analysis a direction. Tradecraft helps you evaluate the evidence, consider alternatives, and express judgments with appropriate uncertainty.
 
 **Estimated Time:** 20–25 minutes
 
@@ -4515,13 +5280,13 @@ Words such as *could*, *may*, and *might* can be useful in ordinary writing, but
 
 Suppose the analyst writes:
 
-> The update domain could be the payload host for A12.
+> The update domain could have been used for attempted payload delivery in A12.
 
 The reader still has to guess how strongly the analyst favors that explanation. Compare it with:
 
-> The update domain is **likely** the payload host for A12.
+> The update domain was **likely** used for attempted payload delivery in A12.
 
-The second sentence communicates the judgment more precisely. If the evidence is still limited, the analyst can express that separately through confidence and by explaining the gaps.
+The second sentence communicates the probability judgment more precisely while preserving the same claim about attempted delivery. The HTTP request during suspicious activity supports that interpretation; successful transfer and execution remain unresolved. Changing the likelihood term changes how probable the analyst judges the claim to be, rather than adding evidence of a completed transfer.
 
 ##### Interpreting the term in context
 
@@ -4781,11 +5546,131 @@ Confirmation bias favors evidence that fits the current explanation. Anchoring g
 - [2.1.8 — Attribution](#218--attribution)
 - [2.4.1 — Internal threat intelligence platform](#241--internal-threat-intelligence-platform)
 
+### 2.2 – Analytical Tradecraft: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Evaluate sources → structure reasoning → test alternatives → express the judgment and uncertainty clearly**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- use consistent estimative language to communicate probabilistic judgments;
+- evaluate source reliability and information credibility as separate dimensions;
+- apply structured techniques to test assumptions or alternatives;
+- recognize common cognitive biases and choose a mitigation that improves the analysis.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **2.2.1 – Estimative Language** | Express probability and uncertainty with consistent estimative terms. |
+| **2.2.2 – Structured Analytic Techniques** | Use structured methods to expose assumptions, alternatives, and evidence relationships. |
+| **2.2.3 – Admiralty Code** | Evaluate source reliability separately from information credibility. |
+| **2.2.4 – Cognitive Biases and Mitigation** | Recognize common analytical biases and apply practical mitigation techniques. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Why should source reliability and information credibility be evaluated separately?
+2. When is a structured analytic technique useful instead of simply adding process?
+3. What is the difference between expressing probability and describing how much confidence you have in the judgment?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **2.3 – Analytical Frameworks: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 2.3 – Analytical Frameworks: Introduction
+
+**Estimated Time:** 5–10 minutes  
+
+#### Why This Subunit Matters
+
+Analytical frameworks help you organize evidence so that another analyst can understand **what happened, how the pieces relate, and where the activity fits in a larger intrusion**. They are most useful when they make reasoning easier to inspect—not when they replace the evidence or make a conclusion sound stronger than the source material supports.
+
+In the previous subunit, Analytical Tradecraft, you focused on how to evaluate information, express uncertainty, structure analysis, and reduce bias. This subunit builds on that discipline by giving you three different ways to organize the evidence you have already evaluated.
+
+The important question is not, “Which framework is best?” It is:
+
+> **Which framework helps answer the analytical question in front of me?**
+
+#### What You Will Learn
+
+The three frameworks in this subunit look at different aspects of the same activity.
+
+| Lesson | Main question | What the framework contributes |
+|---|---|---|
+| **2.3.1 – MITRE ATT&CK for CTI** | What behavior does the evidence demonstrate? | A shared vocabulary for mapping observed or reported behavior to supported tactics, techniques, and sub-techniques. |
+| **2.3.2 – Diamond Model** | What entities and relationships make up this intrusion event? | A way to organize Adversary, Capability, Infrastructure, and Victim while keeping uncertain vertices visible. |
+| **2.3.3 – Cyber Kill Chain** | Where does the supported activity fit in attack progression? | A way to describe progression while leaving unsupported stages unresolved. |
+
+You may use more than one framework on the same evidence because each one answers a different question.
+
+#### Connect to What You Already Know
+
+From **2.2 Analytical Tradecraft**, you already have several habits that matter here:
+
+- evaluate the quality and credibility of the information before relying on it;
+- separate what the evidence directly supports from what you infer;
+- use estimative language when a judgment is probabilistic;
+- make uncertainty visible rather than hiding it;
+- watch for analytical shortcuts and cognitive bias.
+
+Those habits continue to apply when a framework gives you convenient labels or boxes. A framework can organize a judgment, but it does not create evidence that was not present before.
+
+#### What to Watch For
+
+As you work through the three lessons, pay particular attention to these ideas.
+
+##### The analytical question should drive the framework
+
+ATT&CK, the Diamond Model, and the Cyber Kill Chain are not interchangeable. Each highlights a different dimension of the activity. Start with the question you need to answer, then select the framework that helps organize that question.
+
+##### A framework label does not strengthen weak evidence
+
+A technique ID, Diamond vertex, or Kill Chain stage can make an analysis look precise. The precision is useful only when the underlying evidence supports it.
+
+##### Unknown or unresolved is a valid analytical result
+
+You do not need to fill every Diamond vertex, assign every Kill Chain stage, or map every plausible ATT&CK technique. An unresolved field can tell the reader exactly where the evidence becomes thin.
+
+##### The same evidence can support different views without becoming different evidence
+
+For example, a PowerShell process can be:
+
+- mapped to an ATT&CK behavior;
+- described as part of the Capability vertex in a Diamond;
+- considered in the context of attack progression for the Kill Chain.
+
+Those are different analytical views of the same underlying observation.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- select a framework based on the analytical question you are trying to answer;
+- map observed or reported behavior to ATT&CK while preserving the supporting evidence;
+- populate a Diamond Model event without filling uncertain vertices with guesses;
+- assign Cyber Kill Chain stages only when the surrounding evidence supports the stage;
+- explain how the three frameworks complement one another without treating any of them as proof by themselves.
+
+#### How to Preview This Subunit
+
+Before reading the individual lessons closely:
+
+1. read this introduction;
+2. read the **2.3 Analytical Frameworks Summary**;
+3. skim the headings, tables, examples, and emphasized terms in the three lessons.
+
+Try to predict which framework you would use for each kind of analytical question. Then return to the summary after the detailed reading and check whether your answers have become more precise.
+
 ### 2.3.1 — MITRE ATT&CK for CTI Analysis and Reporting
-
-**2.3 — Analytical Frameworks**
-
-Use the reasoning habits from the previous unit to organize behavior and relationships. The frameworks provide structure while the evidence determines which claims belong in it.
 
 **Estimated Time:** 20–25 minutes
 
@@ -4925,7 +5810,7 @@ The Diamond Model treats an intrusion **event** as relationships among four core
 
 The original paper describes these features as the core of an intrusion event and uses the edges between them to support analysis, correlation, and discovery.
 
-Reference: [The Diamond Model of Intrusion Analysis](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf)
+Reference: [The Diamond Model of Intrusion Analysis](https://www.threatintel.academy/diamond/)
 
 ##### The four vertices
 
@@ -4943,7 +5828,7 @@ A Diamond does not become invalid because one vertex is unknown. Incomplete know
 For the A12 activity set:
 
 - `wscript.exe` launches encoded PowerShell;
-- `update.exe` is associated with the activity;
+- A12 includes a request for `/update.exe`; that path is a **candidate payload name**, not an established transferred or executed sample;
 - the update domain and `203.0.113.88` appear in the infrastructure;
 - `WS-JLEE` / `jlee` are the affected victim assets.
 
@@ -4952,7 +5837,7 @@ A defensible Diamond is:
 | Vertex | A12 fill |
 |---|---|
 | **Adversary** | Unknown / unresolved activity cluster |
-| **Capability** | Encoded PowerShell; `update.exe` |
+| **Capability** | Encoded PowerShell; requested `/update.exe` as a candidate payload name |
 | **Infrastructure** | Update domain; `203.0.113.88` |
 | **Victim** | `WS-JLEE`; `jlee`; DYA |
 
@@ -5011,7 +5896,7 @@ Use evidence to populate each vertex. Leave a vertex unresolved when the evidenc
 
 #### References and Further Reading
 
-- [The Diamond Model of Intrusion Analysis](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf)
+- [The Diamond Model of Intrusion Analysis](https://www.threatintel.academy/diamond/)
 
 ### 2.3.3 — Cyber Kill Chain in Intelligence Analysis
 
@@ -5052,7 +5937,7 @@ The value of the framework in CTI is to describe **progression that the evidence
 | **Command and Control** | Establishing or using a channel that allows adversary control/communication. |
 | **Actions on Objectives** | Performing the intended mission effect, such as collection, theft, disruption, or destruction. |
 
-##### Do not force a stage from an ambiguous event
+##### Use Surrounding Context to Assign the Stage
 
 A process event such as:
 
@@ -5071,9 +5956,9 @@ Examples:
 
 The framework is describing the role of the activity in the intrusion, not simply the name of the process.
 
-##### A download is not automatically Installation
+##### A Download Supports Delivery More Directly Than Installation
 
-Suppose A12 shows a successful download of `/update.exe`.
+For a separate progression exercise, suppose a record shows a successful download of `/update.exe`. This adds a hypothetical transfer condition for practice; successful transfer remains unresolved in the canonical A12 case.
 
 That can support **Delivery** of a follow-on payload into the victim environment.
 
@@ -5097,7 +5982,7 @@ The Kill Chain should help answer:
 
 ##### Worked progression example
 
-Suppose reporting contains:
+For a separate hypothetical progression example, suppose reporting contains:
 
 - phishing email with `invoice.vbs` → **Delivery**
 - user launches the script and malicious code executes → **Exploitation**
@@ -5125,11 +6010,142 @@ Unobserved stages are useful gaps, not blanks that need to be filled.
 - [Lockheed Martin – Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
 - [Cyber Kill Chain overview PDF](https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/Gaining_the_Advantage_Cyber_Kill_Chain.pdf)
 
+### 2.3 – Analytical Frameworks: Summary
+
+**Estimated Time:** 5–10 minutes  
+
+#### What This Subunit Built
+
+The three frameworks in this subunit give you complementary ways to organize adversary activity. **ATT&CK classifies supported behavior. The Diamond Model organizes entities and relationships. The Cyber Kill Chain organizes supported progression.**
+
+The skill is not simply remembering the names of the frameworks. It is recognizing which analytical question each one helps answer, then keeping the framework tied to the evidence that justified the mapping.
+
+#### By This Point, You Should Be Able To
+
+- explain the different analytical purpose of ATT&CK, the Diamond Model, and the Cyber Kill Chain;
+- choose a framework based on the question you need to answer;
+- map behavior to the most specific ATT&CK technique or sub-technique the evidence supports;
+- populate Adversary, Capability, Infrastructure, and Victim from available evidence while leaving unresolved vertices unresolved;
+- use the Cyber Kill Chain to describe supported attack progression without filling missing stages by assumption;
+- preserve the evidence and uncertainty behind every framework mapping.
+
+#### How the Pieces Fit Together
+
+| Analytical question | Framework | Useful output | Evidence boundary to preserve |
+|---|---|---|---|
+| **What behavior does the evidence demonstrate?** | MITRE ATT&CK | Supported tactic / technique / sub-technique tied to the observation | A plausible technique is not a supported technique until the behavior in its definition is demonstrated. |
+| **What entities and relationships make up the event?** | Diamond Model | Adversary, Capability, Infrastructure, Victim, and the relationships among them | An unknown vertex can remain unknown; a vendor label or candidate relationship does not automatically establish identity. |
+| **Where does this activity fit in intrusion progression?** | Cyber Kill Chain | Supported stage or stages of the intrusion | A process, download, or network event needs surrounding context before it proves a particular stage. |
+
+One piece of evidence may appear in all three views, but the framework does not change what the evidence itself says.
+
+#### Integrated A12 Example
+
+Consider several facts already used in the A12 training scenario:
+
+- `wscript.exe` launches encoded PowerShell on **WS-JLEE**;
+- the update domain and `203.0.113.88` are associated with the activity;
+- the affected victim includes **WS-JLEE** / `jlee`;
+- the adversary identity remains unresolved.
+
+Each framework organizes those facts differently.
+
+##### ATT&CK
+
+The observed PowerShell behavior supports **T1059.001 – PowerShell** because the process evidence directly shows PowerShell execution.
+
+The mapping remains tied to the process observation. It does not, by itself, prove what the PowerShell process did afterward.
+
+##### Diamond Model
+
+The same activity can populate parts of the Diamond:
+
+- **Victim:** `WS-JLEE` / `jlee` / DYA
+- **Capability:** encoded PowerShell and other supported tooling or behavior
+- **Infrastructure:** the supported update-domain infrastructure
+- **Adversary:** unresolved at the level currently supported by the evidence
+
+The incomplete Adversary vertex is useful because it shows where the analysis has less support.
+
+##### Cyber Kill Chain
+
+The process chain alone does not tell you exactly which Kill Chain stage the activity represents. Stage assignment depends on the role the behavior played in the surrounding intrusion.
+
+This is why the Kill Chain lesson asks you to use context rather than translating a process name directly into a stage.
+
+#### A Practical Selection Rule
+
+When you are deciding which framework to use, start with the question:
+
+- **Behavior?** Start with ATT&CK.
+- **Entities and relationships?** Start with the Diamond Model.
+- **Progression?** Start with the Cyber Kill Chain.
+
+You may use more than one when the intelligence problem needs more than one view.
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. If two analysts map the same PowerShell event differently, can I explain which ATT&CK definition the evidence actually supports?
+2. If the infrastructure and victim are well established but the actor is not, can I leave the Diamond adversary vertex unresolved and explain why?
+3. If I observe a file download but do not know whether the payload executed or persisted, can I explain why I should not automatically call the activity Installation?
+4. Can I explain why using three frameworks on one activity does not create three independent pieces of evidence?
+
+If you can answer those questions clearly, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next subunit, **2.4 CTI Tools and Platforms**, shifts from organizing evidence to retrieving and examining it in the systems analysts use for CTI work.
+
+The framework lessons give you analytical questions to ask. The platform lessons help you obtain and inspect information that may answer those questions. The same evidence-first rule still applies: **the platform returns information; the analyst decides what that information supports.**
+
+### 2.4 – CTI Tools and Platforms: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+CTI platforms help analysts retrieve reports, relationships, infrastructure context, and sandbox observations. The analyst still has to choose the source that fits the question, preserve provenance, and understand what the platform result does and does not establish.
+
+#### Connect to What You Already Know
+
+The framework subunit focused on organizing evidence. This subunit shifts to the systems used to retrieve and inspect information that may become evidence for later enrichment and analysis.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **2.4.1 – Internal Threat Intelligence Platform** | Use the organization’s internal TIP as a starting point for available intelligence, relationships, and local context. |
+| **2.4.2 – Selecting Platforms for CTI Work** | Choose a platform based on the analytical question and artifact type. |
+| **2.4.3 – VirusTotal Relations and Behavior** | Retrieve file, URL, domain, IP, relation, and behavior context while preserving what each result represents. |
+| **2.4.4 – ANY.RUN** | Use existing sandbox reports or authorized analysis to inspect observed file and network behavior. |
+| **2.4.5 – Silent Push** | Use DNS and infrastructure context to support later infrastructure analysis. |
+| **2.4.6 – urlscan.io** | Use web-scan results to inspect page, request, hosting, and related web infrastructure context. |
+
+#### What to Watch For
+
+- Let the question and artifact type drive platform selection.
+- Distinguish an existing report lookup from submitting a new sample, URL, or artifact for analysis.
+- Preserve source, timestamp, and result context so later analytical claims remain reviewable.
+- Treat platform relationships as leads or evidence inputs whose analytical meaning is established later.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- choose among the available platforms based on the intelligence question and artifact;
+- retrieve and interpret the main kinds of results each platform provides;
+- distinguish lookup, enrichment, and new submission workflows;
+- preserve platform evidence and limitations for the later enrichment and assessment steps.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [2.4 Summary](#24--cti-tools-and-platforms-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 2.4.1 — Internal Threat Intelligence Platform
-
-**2.4 — CTI Tools and Platforms**
-
-Before deeper enrichment, become familiar with where evidence can be retrieved and how its provenance is recorded. The platform guides use two passes: orientation here, then detailed interpretation alongside the relevant method in 2.5.
 
 **Estimated Time:** 20–25 minutes
 
@@ -5229,8 +6245,8 @@ A TIP hit adds context; it does not automatically prove the current assessment. 
 - [2.2.4 — Cognitive biases and mitigation](#224--cognitive-biases-and-mitigation)
 - [2.5.2 — File similarity and hashing techniques](#252--hashing-and-similarity-concepts)
 - [0.7 — External tool survey](#07--external-tools)
-- [2.4 — CTI Tools and Platforms](#241--internal-threat-intelligence-platform)
-- [2.7 — STIX / structured intelligence authoring](#271--core-stix-objects)
+- [2.4 — CTI Tools and Platforms](#24--cti-tools-and-platforms-introduction)
+- [2.7 — STIX / structured intelligence authoring](#27--intelligence-production-and-dissemination-introduction)
 
 ### 2.4.2 — Selecting Platforms for CTI Work
 
@@ -5253,6 +6269,15 @@ Start with the requirement from 2.1 and an existing case value. Check what the i
 | What does a known sample relate to, and what behavior was observed? | VirusTotal; ANY.RUN for available sandbox reports | Exact object/report, relationships or events, report time, and limitations. |
 | What infrastructure associations were observed over time? | Silent Push; registration sources for registration questions | Record type, returned relationship, observation window, and source. |
 | What did a recorded browser visit load or contact? | urlscan.io | Scan context, redirects, requests, destinations, and relevant time. |
+
+##### Official platform references
+
+Use these pages to confirm platform capabilities and terminology. Local handling rules still determine whether a case value may be submitted to an external service.
+
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching)
+- [ANY.RUN — Threat Intelligence Lookup](https://any.run/threat-intelligence-lookup/)
+- [Silent Push — DNS Data](https://help.silentpush.com/docs/dns-data)
+- [urlscan.io — Quickstart](https://docs.urlscan.io/guides/quickstart)
 
 A tool result answers a narrower question than “Is everything related malicious?” A sandbox record describes the observed execution; a recorded browser visit describes that visit; a missing result reflects the queried source's coverage.
 
@@ -5321,11 +6346,11 @@ VirusTotal's API documentation describes relationships as links or dependencies 
 
 A useful analyst statement is:
 
-> VirusTotal relates the seed file to `203.0.113.88`; investigate whether that relationship is relevant to A12.
+> VirusTotal relates the seed file to `198.51.100.77`; investigate whether that relationship is relevant to A12.
 
 That is stronger than:
 
-> `203.0.113.88` is adversary infrastructure because VirusTotal shows it.
+> `198.51.100.77` is adversary infrastructure because VirusTotal shows it.
 
 The second statement skips the required contextual evaluation.
 
@@ -5346,13 +6371,13 @@ A behavior report describes what that sandbox observed under its particular envi
 
 So:
 
-> Sandbox report observed `update.exe` contacting `203.0.113.88:8080`.
+> Sandbox report observed `sync-client.exe` contacting `198.51.100.77:8080`.
 
 is evidence.
 
 It is not the same as:
 
-> Every execution of `update.exe` will contact that address.
+> Every execution of `sync-client.exe` will contact that address.
 
 ##### Different sandboxes can produce different observations
 
@@ -5366,26 +6391,28 @@ A behavior absent from one sandbox report may be:
 
 “Not observed” is narrower than “does not occur.”
 
-##### Classroom card
+##### Separate classroom card — not A12
 
-Seed: SHA256 for `update.exe`
+This training-only card is **not canonical A12**. A12 does not provide a recovered `update.exe` sample, a SHA256, or VirusTotal behavior. The supplied values below exist only to practice Relations/Behavior interpretation.
+
+Seed: SHA256 for `sync-client.exe`
 
 The classroom card shows:
 
 **Relations**
-- contacted IP: `203.0.113.88`
+- contacted IP: `198.51.100.77`
 
 **Behavior**
-- process: `update.exe` started;
+- process: `sync-client.exe` started;
 - file: write under a Temp path;
-- network: connection to `203.0.113.88:8080`;
+- network: connection to `198.51.100.77:8080`;
 - no registry Run-key event shown.
 
 Defensible outputs:
 
-> **Relationship candidate:** VirusTotal links the file to `203.0.113.88`.
+> **Relationship candidate:** VirusTotal links the file to `198.51.100.77`.
 
-> **Sandbox observation:** the behavior report recorded a connection to `203.0.113.88:8080`.
+> **Sandbox observation:** the behavior report recorded a connection to `198.51.100.77:8080`.
 
 > **Registry:** no Run-key event is shown on this card.
 
@@ -5404,7 +6431,7 @@ This lesson focuses on:
 
 1. VirusTotal relates a file to an IP. What does that establish, and what still needs analysis?
 2. A Behavior report does not show a registry persistence event. Can you conclude the file never uses registry persistence? Why or why not?
-3. From the A12 classroom card, write one valid Relations finding and one valid Behavior finding.
+3. From the separate classroom card, write one valid Relations finding and one valid Behavior finding.
 
 #### Summary
 
@@ -5455,8 +6482,8 @@ References:
 The safest starting point is a seed already connected to your investigation.
 
 Examples:
-- SHA256 of `update.exe`;
-- `203.0.113.88`;
+- SHA256 of `sync-client.exe`;
+- `198.51.100.77`;
 - update domain;
 - a specific process command line from reporting.
 
@@ -5513,7 +6540,7 @@ Example:
 
 or:
 
-> ANY.RUN session observed a request to `/update.exe` on the update domain.
+> ANY.RUN session observed a request to `/client.bin` on `sync-gateway.example`.
 
 Those can inform:
 - TTP analysis;
@@ -5523,20 +6550,22 @@ Those can inform:
 
 A generic verdict such as “malicious” contains less operational detail.
 
-##### Classroom card
+##### Separate classroom card — not A12
 
-Search seed: SHA256 for `update.exe`
+This training-only sandbox card is **not canonical A12**. A12 does not provide a recovered `update.exe` hash or a sandbox execution. Use this card only to practice session-evidence interpretation.
+
+Search seed: SHA256 for `sync-client.exe`
 
 Suppose the card shows:
-- process: `update.exe`;
+- process: `sync-client.exe`;
 - child process: `powershell.exe`;
-- contacted IP: `203.0.113.88`;
+- contacted IP: `198.51.100.77`;
 - dropped file: `stage.dat`;
 - no check-in POST shown.
 
 Valid output:
 
-> ANY.RUN session observed `update.exe` spawning PowerShell and contacting `203.0.113.88`.
+> ANY.RUN session observed `sync-client.exe` spawning PowerShell and contacting `198.51.100.77`.
 
 If a check-in POST is absent from the card:
 
@@ -5777,15 +6806,17 @@ If live submission is ever used operationally, **scan visibility matters**. urls
 
 Reference: [urlscan.io API Documentation – Submission and visibility](https://urlscan.io/docs/api/)
 
-##### A12 Case Study: Classroom Example
+##### Separate classroom example — not A12
+
+This static result is **training-only**. Its redirect/page/contact details are not facts of A12.
 
 Suppose the result card shows:
 
-- tasked URL: update-domain URL;
+- tasked URL: `https://sync-gateway.example/start`;
 - final URL: `/download`;
 - title: `Software Update`;
-- requested host: `cdn-test.net`;
-- primary IP: `203.0.113.88`;
+- requested host: `cdn-lab.example`;
+- primary IP: `198.51.100.77`;
 - redirect occurred;
 - screenshot stored.
 
@@ -5793,7 +6824,7 @@ Valid observations:
 
 > The scan redirected from the submitted URL to `/download`.
 
-> The scan contacted `cdn-test.net` and `203.0.113.88`.
+> The scan contacted `cdn-lab.example` and `198.51.100.77`.
 
 > The rendered page title was `Software Update`.
 
@@ -5802,7 +6833,7 @@ These facts become candidates for enrichment. They do not by themselves prove th
 #### Knowledge Check
 
 1. Why should one urlscan result be described as an observation rather than permanent truth about a URL?
-2. A page requests a common analytics domain and a rare domain also seen in A12. Should both automatically become adversary infrastructure? Why or why not?
+2. A page requests a common analytics domain and a rare host from the supplied classroom card. Should both automatically become adversary infrastructure? Why or why not?
 3. Name three useful fields or evidence types you can extract from a urlscan result.
 
 #### Summary
@@ -5817,11 +6848,99 @@ Use page metadata, redirects, requested domains/IPs/URLs, responses, certificate
 - [urlscan.io Result API Reference](https://urlscan.io/docs/result/)
 - [urlscan.io Quickstart](https://docs.urlscan.io/guides/quickstart)
 
+### 2.4 – CTI Tools and Platforms: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Question → platform choice → retrieval/submission decision → result capture → evidence boundary → later analysis**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- choose among the available platforms based on the intelligence question and artifact;
+- retrieve and interpret the main kinds of results each platform provides;
+- distinguish lookup, enrichment, and new submission workflows;
+- preserve platform evidence and limitations for the later enrichment and assessment steps.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **2.4.1 – Internal Threat Intelligence Platform** | Use the organization’s internal TIP as a starting point for available intelligence, relationships, and local context. |
+| **2.4.2 – Selecting Platforms for CTI Work** | Choose a platform based on the analytical question and artifact type. |
+| **2.4.3 – VirusTotal Relations and Behavior** | Retrieve file, URL, domain, IP, relation, and behavior context while preserving what each result represents. |
+| **2.4.4 – ANY.RUN** | Use existing sandbox reports or authorized analysis to inspect observed file and network behavior. |
+| **2.4.5 – Silent Push** | Use DNS and infrastructure context to support later infrastructure analysis. |
+| **2.4.6 – urlscan.io** | Use web-scan results to inspect page, request, hosting, and related web infrastructure context. |
+
+#### Teaching / Workflow Note
+
+The individual platform lessons use a two-pass model: first learn retrieval and evidence boundaries here; apply the platforms again during the relevant 2.5 enrichment methods.
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Why is platform selection better driven by the question than by whichever tool an analyst knows best?
+2. What is the difference between looking up an existing sandbox report and detonating a new sample?
+3. Why should a platform relation be preserved with provenance before it is promoted into an analytical relationship?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **2.5 – Technical Enrichment and Discovery: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 2.5 – Technical Enrichment and Discovery: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Technical enrichment turns a seed indicator or artifact into additional context and candidate relationships. The challenge is to discover useful connections without treating every shared property as proof that two objects belong to the same adversary activity.
+
+#### Connect to What You Already Know
+
+The platform subunit showed where analysts retrieve technical context. This subunit focuses on the analytical methods that use those results: indicator handling, file similarity, registration, DNS, infrastructure pivoting, DTF, and correlation.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **2.5.1 – IOC Handling and Enrichment Concepts** | Track indicators, provenance, confidence, scope, and lifecycle decisions during enrichment. |
+| **2.5.2 – Hashing and Similarity Concepts** | Use exact hashes and similarity relationships to connect or differentiate files without overstating equivalence. |
+| **2.5.3 – RDAP and WHOIS Concepts** | Use registration and allocation data as infrastructure context with appropriate ownership limits. |
+| **2.5.4 – Advanced DNS Concepts** | Use DNS records and historical patterns to understand infrastructure relationships and changes. |
+| **2.5.5 – Identifying Additional Adversary Infrastructure from Seed Indicators** | Pivot from a seed through distinctive shared characteristics and evaluate candidate infrastructure. |
+| **2.5.6 – MalasadaTech Defender's ThreatMesh Framework (DTF)** | Organize justified infrastructure pivots without mixing them with unrelated file or behavior relationships. |
+| **2.5.7 – Correlation, Link Analysis, and Campaign Tracking** | Correlate multiple supported relationships while keeping candidate links, activity sets, campaigns, and attribution distinct. |
+
+#### What to Watch For
+
+- Track the seed, pivot, shared characteristic, provenance, and reason the relationship may be meaningful.
+- Distinguish exact matches, similarity, co-hosting, shared registration, shared DNS, and other relationship types.
+- Treat a candidate pivot as a question to corroborate, not as automatic proof of common control.
+- Keep file/behavior pivots separate from infrastructure-only DTF relationships when their evidentiary logic differs.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- manage indicators and enrichment results with provenance and lifecycle context;
+- use file, registration, DNS, and infrastructure evidence to generate defensible pivots;
+- distinguish candidate relationships from corroborated relationships and broader campaign judgments;
+- apply DTF to justified infrastructure relationships while keeping other pivot types separate.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [2.5 Summary](#25--technical-enrichment-and-discovery-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 2.5.1 — IOC Handling and Enrichment Concepts
-
-**2.5 — Technical Enrichment and Discovery**
-
-Return to the platform evidence with a specific analytical method. Preserve the seed, time, and relationship behind each candidate so later correlation can test the connection.
 
 **Estimated Time:** 15–20 minutes
 
@@ -5986,7 +7105,7 @@ Do not read a TLSH value as a percentage. A distance of 30 does not mean “30% 
 
 ##### Similarity is evidence for a pivot, not the conclusion
 
-Suppose `update.exe` has a different SHA256 from a newly discovered file.
+Suppose `sync-client.exe` has a different SHA256 from a newly discovered file.
 
 That tells you the files are not byte-identical.
 
@@ -6019,9 +7138,11 @@ Microsoft Authenticode is designed to identify the software publisher and verify
 
 Likewise, **unsigned** means the file does not contain a usable code-signing signature under the check you performed. It does not mean the file is malicious, and it does not establish attribution.
 
-##### Example
+##### Separate worked example — not A12
 
-You compare a new PE file with `update.exe`.
+The files in this exercise are **training-only samples, not A12 evidence**. Canonical A12 does not supply a recovered `update.exe` sample or similarity hashes.
+
+You compare a new PE file with `sync-client.exe`.
 
 - SHA256 differs → the files are not byte-identical.
 - imphash matches → they share the import structure represented by imphash.
@@ -6031,7 +7152,7 @@ You compare a new PE file with `update.exe`.
 
 A reasonable conclusion is:
 
-> The new sample is sufficiently similar to `update.exe` to justify deeper comparison. The shared imphash and strong fuzzy-hash similarity support a possible relationship, but additional behavioral or structural evidence is needed before assigning a malware-family or actor relationship.
+> The new sample is sufficiently similar to `sync-client.exe` to justify deeper comparison. The shared imphash and strong fuzzy-hash similarity support a possible relationship, but additional behavioral or structural evidence is needed before assigning a malware-family or actor relationship.
 
 That statement uses the similarity evidence without asking it to prove more than it can.
 
@@ -6045,7 +7166,7 @@ Keep the result with the enrichment record started in [2.5.1](#251--ioc-handling
 
 1. Two PE files have the same imphash but different SHA256 values. What does the imphash match tell you, and what does it *not* establish?
 2. ssdeep returns 72 while TLSH returns a difference of 22 for two samples. How do you interpret the direction of each score, and what should you do before calling the files related?
-3. `update.exe` is unsigned. What did you learn from that result, and what conclusions would go beyond the evidence?
+3. `sync-client.exe` is unsigned. What did you learn from that result, and what conclusions would go beyond the evidence?
 
 #### Summary
 
@@ -6060,7 +7181,7 @@ Code-signing information identifies the signing certificate and publisher claim 
 - [2.4.1 — Internal TIP](#241--internal-threat-intelligence-platform)
 - [2.5.3 — RDAP / WHOIS](#253--rdap-and-whois-concepts)
 - [1.2.7 — MD5 / SHA identity hashing](#127--files-engine)
-- [2.4 — CTI Tools and Platforms](#241--internal-threat-intelligence-platform)
+- [2.4 — CTI Tools and Platforms](#24--cti-tools-and-platforms-introduction)
 - [2.1.8 — Attribution](#218--attribution)
 
 #### References and Further Reading
@@ -6326,7 +7447,7 @@ If the nameservers belong to a huge managed-DNS provider and the IP is shared ho
 
 DNS pivots are most reliable when **multiple independent, distinctive features converge**.
 
-##### Do not promote one address to an entire network
+##### Keep Infrastructure Claims at the Scope the DNS Evidence Supports
 
 If two domains resolve to `203.0.113.88`, that supports a relationship involving that address at the observed time.
 
@@ -6691,11 +7812,90 @@ Promote relationships only as far as the evidence supports. Keep candidate links
 
 - [OASIS STIX 2.1](https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html)
 
+### 2.5 – Technical Enrichment and Discovery: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Seed → enrich → pivot → test distinctiveness/context → corroborate → relationship → broader correlation when supported**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- manage indicators and enrichment results with provenance and lifecycle context;
+- use file, registration, DNS, and infrastructure evidence to generate defensible pivots;
+- distinguish candidate relationships from corroborated relationships and broader campaign judgments;
+- apply DTF to justified infrastructure relationships while keeping other pivot types separate.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **2.5.1 – IOC Handling and Enrichment Concepts** | Track indicators, provenance, confidence, scope, and lifecycle decisions during enrichment. |
+| **2.5.2 – Hashing and Similarity Concepts** | Use exact hashes and similarity relationships to connect or differentiate files without overstating equivalence. |
+| **2.5.3 – RDAP and WHOIS Concepts** | Use registration and allocation data as infrastructure context with appropriate ownership limits. |
+| **2.5.4 – Advanced DNS Concepts** | Use DNS records and historical patterns to understand infrastructure relationships and changes. |
+| **2.5.5 – Identifying Additional Adversary Infrastructure from Seed Indicators** | Pivot from a seed through distinctive shared characteristics and evaluate candidate infrastructure. |
+| **2.5.6 – MalasadaTech Defender's ThreatMesh Framework (DTF)** | Organize justified infrastructure pivots without mixing them with unrelated file or behavior relationships. |
+| **2.5.7 – Correlation, Link Analysis, and Campaign Tracking** | Correlate multiple supported relationships while keeping candidate links, activity sets, campaigns, and attribution distinct. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. What information should travel with a pivot so another analyst can review why it was made?
+2. Why can two domains sharing an IP be a useful lead without proving common control?
+3. What additional evidence would you want before promoting several candidate links into a broader activity-set or campaign assessment?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **2.6 – Threat Assessment and Organizational Significance: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 2.6 – Threat Assessment and Organizational Significance: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+External intelligence becomes operationally useful when the analyst explains what applies to the organization and why it matters. This requires separating what an adversary is reported to do from whether the organization is exposed, visible, relevant, or likely to experience meaningful impact.
+
+#### Connect to What You Already Know
+
+Technical enrichment established evidence and relationships. This subunit turns that material toward the organization by extracting applicable behavior and evaluating its significance.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **2.6.1 – Extracting Applicable TTPs from Intelligence Reports** | Identify reported behaviors that plausibly apply to the organization and preserve the source evidence for each TTP. |
+| **2.6.2 – Threat Relevance and Organizational Impact** | Assess why the threat matters to the organization, including exposure, relevance, potential impact, and important visibility limits. |
+
+#### What to Watch For
+
+- Keep **applicability**, **visibility**, **relevance**, and **impact** as separate analytical questions.
+- Tie applicable TTPs to actual reporting rather than to a framework label alone.
+- Explain organizational significance in terms of assets, exposure, mission, decisions, and consequences that the available evidence supports.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- extract TTPs from reporting and explain why they may apply to the organization;
+- separate applicability from whether the organization can observe the behavior;
+- assess relevance and potential impact without turning possibility into certainty;
+- state the organizational significance in a form that supports a decision or next action.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [2.6 Summary](#26--threat-assessment-and-organizational-significance-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 2.6.1 — Extracting Applicable TTPs from Intelligence Reports
-
-**2.6 — Threat Assessment and Organizational Significance**
-
-Candidate relationships now need an assessment of what matters in this environment. Keep applicability, visibility, relevance, and impact distinct as you develop that assessment.
 
 **Estimated Time:** 20–25 minutes
 
@@ -6793,7 +7993,7 @@ This keeps three decisions separate:
 2. Can it occur here?
 3. Can we currently observe it?
 
-##### Do not copy the vendor ATT&CK appendix blindly
+##### Validate Vendor ATT&CK Mappings Against the Reported Behavior
 
 A vendor's technique list can be useful, but the local extract should remain tied to the report's actual procedures.
 
@@ -6942,11 +8142,88 @@ Impact answers **what plausible consequence follows if it is true here?**
 
 Keep those judgments tied to mission, assets, technology, exposure, and observed evidence. Preserve uncertainty rather than turning a relevant finding into a larger crisis than the evidence supports.
 
+### 2.6 – Threat Assessment and Organizational Significance: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Reported behavior → applicability → visibility/exposure → relevance → potential impact → decision support**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- extract TTPs from reporting and explain why they may apply to the organization;
+- separate applicability from whether the organization can observe the behavior;
+- assess relevance and potential impact without turning possibility into certainty;
+- state the organizational significance in a form that supports a decision or next action.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **2.6.1 – Extracting Applicable TTPs from Intelligence Reports** | Identify reported behaviors that plausibly apply to the organization and preserve the source evidence for each TTP. |
+| **2.6.2 – Threat Relevance and Organizational Impact** | Assess why the threat matters to the organization, including exposure, relevance, potential impact, and important visibility limits. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Why can a TTP be applicable even when current telemetry cannot observe it?
+2. What is the difference between a threat being relevant and a specific impact being certain to occur?
+3. What organizational context makes a technical TTP assessment more useful to a decision maker?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **2.7 – Intelligence Production and Dissemination: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 2.7 – Intelligence Production and Dissemination: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Analysis becomes an intelligence product when the supported judgment is represented clearly, answers the requirement, and reaches the audience that can use it. Structured formats such as STIX can help represent objects and relationships, but they do not replace the analytical judgment.
+
+#### Connect to What You Already Know
+
+The earlier CTI subunits established requirements, tradecraft, evidence, enrichment, and organizational significance. This subunit turns that work into structured and finished products, closes RFIs, and delivers the result.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **2.7.1 – Core STIX Objects** | Recognize the main STIX objects used to represent indicators, malware, infrastructure, relationships, and other intelligence concepts. |
+| **2.7.2 – STIX in Intelligence Production** | Use STIX objects and relationships to represent supported intelligence without treating the schema as proof. |
+| **2.7.3 – Creating Finished Intelligence Products** | Build a product around the requirement, evidence, judgment, uncertainty, and customer decision. |
+| **2.7.4 – RFI Responses and Closure** | Answer the bounded RFI, document gaps or caveats, and close the request appropriately. |
+| **2.7.5 – Disseminating Intelligence to the Correct Audiences** | Deliver the product to the audiences and channels appropriate to the decision and sensitivity. |
+
+#### What to Watch For
+
+- Keep **representation** separate from **judgment**: STIX describes supported objects and relationships; the analyst still explains what they mean.
+- Use the original requirement as the test for whether the product is complete enough to answer the question.
+- Tailor detail and dissemination to the audience while preserving the same underlying evidence and caveats.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- represent core intelligence objects and relationships using STIX concepts;
+- create a finished product that connects evidence, judgment, uncertainty, and the customer requirement;
+- respond to and close an RFI with a bounded answer and documented gaps;
+- disseminate the product to the correct audiences through appropriate channels.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [2.7 Summary](#27--intelligence-production-and-dissemination-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 2.7.1 — Core STIX Objects
-
-**2.7 — Intelligence Production and Dissemination**
-
-An assessment needs a usable form and an intended recipient. This unit carries the reasoning into structured objects, finished products, RFI closure, and dissemination.
 
 **Estimated Time:** 20–25 minutes
 
@@ -7229,15 +8506,13 @@ A TAXII client can:
 - GET objects from a Collection;
 - POST objects to a writable Collection.
 
-##### TAXII Envelope ≠ STIX Bundle
+##### TAXII Envelopes and STIX Bundles Serve Different Purposes
 
-This is an important technical distinction.
+TAXII and STIX define different layers of the exchange, so their container concepts should remain distinct.
 
-TAXII 2.1 uses a **TAXII Envelope** as the wrapper when STIX objects are exchanged through Collection endpoints.
+TAXII 2.1 uses a **TAXII Envelope** as the transport wrapper when STIX objects are exchanged through Collection endpoints. A **STIX Bundle** is a separate STIX container that can group STIX objects independently of TAXII.
 
-A STIX Bundle is a separate STIX container.
-
-You can use STIX Bundles outside TAXII, and TAXII does not require every exchange to be represented as a STIX Bundle.
+This means a STIX Bundle can be used outside TAXII, while a TAXII exchange does not require every set of objects to be represented as a STIX Bundle.
 
 A useful mental model is:
 
@@ -7249,11 +8524,11 @@ A useful mental model is:
 
 ##### Classroom TAXII exercise
 
-The classroom collection name `harbor-cti` is fictional.
+The classroom collection name `dya-cti` is fictional.
 
 The skill is to explain:
 
-> A TAXII client with read access could retrieve STIX objects from the `harbor-cti` Collection.
+> A TAXII client with read access could retrieve STIX objects from the `dya-cti` Collection.
 
 and, if write permission existed:
 
@@ -7402,6 +8677,37 @@ A useful review asks:
 - Is attribution no stronger than the evidence?
 
 A polished document that fails those questions is still analytically weak.
+
+#### Demonstration Exercise — Non-A12 Threat Actor Profile
+
+This exercise is **not part of A12**. It uses a separate training-only evidence set so you can practice the approved threat-actor-profile task without inventing attribution for the recurring case.
+
+##### Training evidence set: SILVER KITE
+
+You are supporting a fictional regional manufacturer. Four independent reports over six months describe the same tracked actor, **SILVER KITE**, with the following corroborated characteristics:
+
+- repeatedly targets aerospace and advanced-manufacturing organizations in the United States and Japan;
+- obtains initial access through spearphishing attachments and exploitation of externally exposed VPN appliances;
+- uses PowerShell for discovery and staging, then deploys a custom backdoor consistently identified in the supplied reporting as **KiteDoor**;
+- creates scheduled tasks for persistence and commonly archives collected engineering documents before exfiltration;
+- uses short-lived VPS infrastructure registered through multiple providers;
+- has targeted organizations for technical drawings, proprietary manufacturing data, and program documentation;
+- two high-confidence sources attribute the activity to the same named actor, while **no supplied evidence supports a government sponsor, nationality, or legal identity**.
+
+##### Required output
+
+Produce a concise threat actor profile that includes:
+
+1. **Tracking identity and scope** — what SILVER KITE represents and the reporting period.
+2. **Targeting** — sectors/regions and the information apparently sought.
+3. **Observed behavior** — the major access, execution, persistence, collection, and exfiltration behaviors supported by the evidence.
+4. **Infrastructure/tooling** — what is known and what remains too weak to claim.
+5. **Key judgments and confidence** — at least one analytic judgment with its evidence basis.
+6. **Attribution boundary and gaps** — explicitly state what the supplied evidence does **not** establish.
+
+Then evaluate your draft against the finished-product standards taught above: requirement fit, evidence-versus-judgment separation, uncertainty, traceability, relevance, and bounded attribution.
+
+**Demonstration note:** producing the profile demonstrates task `2.7.3.2`. When you draft it as a finished product and evaluate it against the standards above, the same event can also produce evidence for `2.7.3.1`. The evaluator records each task separately under the qualification/sign-off standard; lesson completion alone is not automatic sign-off.
 
 #### Knowledge Check
 
@@ -7623,11 +8929,93 @@ Tailor detail for the audience, but preserve the judgment and uncertainty.
 - [FIRST – TLP 2.0 Definitions and Usage Guidance](https://www.first.org/tlp/docs/tlp-a4.pdf)
 - [FIRST – TLP Use Cases](https://www.first.org/tlp/use-cases)
 
+### 2.7 – Intelligence Production and Dissemination: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Supported evidence/judgment → structured representation where useful → finished answer → RFI closure → dissemination**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- represent core intelligence objects and relationships using STIX concepts;
+- create a finished product that connects evidence, judgment, uncertainty, and the customer requirement;
+- respond to and close an RFI with a bounded answer and documented gaps;
+- disseminate the product to the correct audiences through appropriate channels.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **2.7.1 – Core STIX Objects** | Recognize the main STIX objects used to represent indicators, malware, infrastructure, relationships, and other intelligence concepts. |
+| **2.7.2 – STIX in Intelligence Production** | Use STIX objects and relationships to represent supported intelligence without treating the schema as proof. |
+| **2.7.3 – Creating Finished Intelligence Products** | Build a product around the requirement, evidence, judgment, uncertainty, and customer decision. |
+| **2.7.4 – RFI Responses and Closure** | Answer the bounded RFI, document gaps or caveats, and close the request appropriately. |
+| **2.7.5 – Disseminating Intelligence to the Correct Audiences** | Deliver the product to the audiences and channels appropriate to the decision and sensitivity. |
+
+#### Teaching / Workflow Note
+
+STIX remains a two-lesson sequence inside this subunit before the course moves into finished products, RFI closure, and dissemination.
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Why does encoding a relationship in STIX not prove that the relationship is analytically correct?
+2. What should determine whether an RFI response is complete enough to close?
+3. How can you tailor a product for different audiences without changing the underlying judgment?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **2.8 – Local Application: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 2.8 – Local Application: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Good CTI tradecraft still has to operate inside a real organization. Local priorities, approval processes, repositories, customer lists, and dissemination channels determine how the generic workflow is actually executed.
+
+#### Connect to What You Already Know
+
+The preceding CTI subunits developed the full analytical workflow. This final subunit asks the learner to map that workflow to the documents, authorities, and channels used in the local environment.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **2.8.1 – Local Intelligence Requirements and Priorities** | Identify the organization’s actual intelligence priorities and the documents or authorities that define them. |
+| **2.8.2 – Local Production and Approval Processes** | Identify where products are created, reviewed, approved, stored, and versioned locally. |
+| **2.8.3 – Local Dissemination Channels and Customers** | Identify local customers, channels, handling expectations, and feedback paths. |
+
+#### What to Watch For
+
+- Use actual local documents and procedures where available rather than inventing a generic policy.
+- Distinguish course examples from authoritative local requirements.
+- Map each generic CTI step to the real owner, system, approval point, and customer used by the organization.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- locate or identify the organization’s intelligence requirements and priorities;
+- describe the local production, review, approval, and storage path;
+- identify the correct local customers and dissemination channels;
+- recognize which parts of the CTI workflow are universal tradecraft and which are site-specific implementation.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [2.8 Summary](#28--local-application-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 2.8.1 — Local Intelligence Requirements and Priorities
-
-**2.8 — Local Application**
-
-Apply the analytical workflow through the organization’s actual priorities, approval process, and channels. The exercises ask you to obtain local answers where the course cannot supply them.
 
 **Estimated Time:** 15–20 minutes
 
@@ -8005,11 +9393,54 @@ Learn the customer, channel, and handling path for the products you produce.
 
 When the map is missing, record that onboarding gap explicitly instead of substituting a convenient recipient or personal channel.
 
-This completes the **2.x CTI block**.
+This completes the **2.8 Local Application subunit**.
 
 #### Reference Model
 
 This module intentionally relies on the organization's **local customer, dissemination, handling, and partner-sharing guidance** as the source of truth.
+
+### 2.8 – Local Application: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Generic CTI tradecraft → local priorities → local production/approval → local dissemination → feedback**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- locate or identify the organization’s intelligence requirements and priorities;
+- describe the local production, review, approval, and storage path;
+- identify the correct local customers and dissemination channels;
+- recognize which parts of the CTI workflow are universal tradecraft and which are site-specific implementation.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **2.8.1 – Local Intelligence Requirements and Priorities** | Identify the organization’s actual intelligence priorities and the documents or authorities that define them. |
+| **2.8.2 – Local Production and Approval Processes** | Identify where products are created, reviewed, approved, stored, and versioned locally. |
+| **2.8.3 – Local Dissemination Channels and Customers** | Identify local customers, channels, handling expectations, and feedback paths. |
+
+#### Teaching / Workflow Note
+
+Use actual local documents and procedures for the site-specific walkthrough; course examples are not authoritative local policy.
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Which local document tells you what intelligence questions or priorities matter most?
+2. Where does your organization require a product to be reviewed or approved before dissemination?
+3. Why should a training example never be treated as proof of a local ticket, channel, or approval requirement?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **2.9 – Cyber Threat Intelligence Section Summary**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
 
 ### 2.9 — Cyber Threat Intelligence Section Summary
 
@@ -8191,7 +9622,7 @@ This converts technical findings into organizational intelligence.
 
 A strong RFI response might say:
 
-> Available evidence supports the update domain's association with the A12 activity set and is consistent with attempted payload delivery. Current evidence does not establish successful execution of `update.exe`.
+> Available evidence supports the assessment that the update domain was used for attempted payload delivery in A12. `WS-JLEE` requested `/update.exe` from that destination during the suspicious activity, but current evidence does not establish successful transfer or execution of the file.
 
 The answer:
 - addresses the question;
@@ -8208,90 +9639,95 @@ Then record:
 - follow-up agreed;
 - new requirement if needed.
 
-#### Distinctions Worth Keeping
+#### Concepts to Keep Separate During CTI Analysis
 
-##### Data ≠ information ≠ intelligence
+The CTI workflow contains several closely related concepts. The distinctions below matter because each one changes what the analyst is justified in claiming or doing next.
 
-Raw observations become information when context is added.
+##### Data, information, and intelligence build on one another
 
-Intelligence requires analysis against a question or requirement.
+**Data** are recorded observations or values. **Information** adds context that explains how those observations relate. **Intelligence** adds an assessed answer to a relevant question or requirement.
 
-##### Requirement ≠ collection activity
+The transition is not created by renaming the artifact. It comes from adding context, analysis, and decision relevance.
 
-The requirement is the question.
+##### The requirement directs collection
 
-Collection is how you gather evidence to answer it.
+The requirement defines the question and the decision the work is meant to support. Collection obtains the evidence needed to answer it.
 
-##### Source reliability ≠ information credibility
+Starting with the requirement helps the analyst choose sources deliberately instead of allowing an interesting tool result to redefine the task.
 
-A generally reliable source can still report a weak claim.
+##### Source reliability and information credibility are separate judgments
 
-An unfamiliar source can still provide technically verifiable information.
+A source with a strong historical record can still provide a weak or poorly supported claim. An unfamiliar source can still provide information that is technically verifiable.
 
-Evaluate both.
+Evaluate the source and the specific information independently, then explain how those judgments affect the assessment.
 
-##### Platform result ≠ intelligence judgment
+##### Platform output becomes intelligence through analysis
 
-A sandbox event, passive-DNS record, detection count, or web scan is evidence.
+A sandbox event, passive-DNS record, detection count, TIP relationship, or web scan is evidence with provenance. Its significance depends on the question, surrounding evidence, and interpretation.
 
-The analyst decides what that evidence supports.
+The analyst's job is to explain what the platform result supports and where its limitations begin.
 
-##### Observable ≠ IOC
+##### An observable becomes an operational IOC through context and purpose
 
-A technical value is an observable.
+A hash, IP, domain, URL, or filename is first a technical observable. Promoting it into an IOC requires enough suspicious or malicious context, provenance, specificity, validity, and operational purpose to justify using it defensively.
 
-Its promotion into an operational IOC depends on context, provenance, specificity, validity, and purpose.
+This is also why lifecycle decisions such as retain, enrich, review/expire, and reject are evidence-dependent.
 
-##### Candidate pivot ≠ supported relationship
+##### A pivot candidate needs corroboration before it becomes a supported relationship
 
-A shared field can justify another check.
+A shared nameserver, address, certificate field, or page characteristic can justify another lookup. The initial overlap is a reason to investigate, not proof of common control or malicious purpose.
 
-It does not automatically establish common control or common malicious purpose.
+Use distinctiveness, time relevance, hosting context, and independent evidence to decide whether the relationship strengthens.
 
-##### Candidate relationship ≠ campaign ≠ attribution
+##### Candidate relationships, campaign assessments, and attribution require progressively stronger evidence
 
-These are progressively stronger claims.
+A candidate link can be recorded early. A campaign or activity-set assessment requires a coherent pattern of related activity. Attribution adds the still stronger judgment about who is responsible.
 
-Promote only as far as the evidence supports.
+Keeping those levels separate allows the analysis to mature without promoting a tentative relationship beyond the evidence.
 
-##### File/behavioral relationship ≠ DTF infrastructure relationship
+##### DTF is used for infrastructure relationships
 
-DTF remains infrastructure-focused.
+The Defender's ThreatMesh Framework organizes justified infrastructure pivots. File similarity and behavioral relationships remain useful evidence, but they should be recorded alongside the infrastructure analysis rather than forced into an infrastructure-only model.
 
-File similarity and behavioral pivots should be retained alongside infrastructure analysis without being forced into DTF.
+##### Applicability, visibility, relevance, and impact answer different organizational questions
 
-##### Applicability ≠ visibility ≠ relevance ≠ impact
+**Applicability** asks whether the behavior can occur in the environment.
 
-These answer different questions and can produce different outcomes.
+**Visibility** asks whether current telemetry can observe it.
 
-##### STIX representation ≠ proof
+**Relevance** asks whether the finding materially intersects the organization's mission, assets, technology, or exposure.
 
-STIX structures information.
+**Impact** asks what plausible organizational consequence follows if the finding is true here.
 
-The object or relationship still needs evidence and appropriate confidence.
+Because these questions are different, they can legitimately produce different answers.
 
-##### Enrichment ≠ finished intelligence
+##### STIX represents intelligence; the representation does not establish the claim
 
-A large collection of lookups is not the product.
+STIX provides a structured way to describe objects and relationships. The represented assertion still needs evidence, provenance, and appropriate confidence.
 
-The supported answer is the product.
+A well-formed STIX relationship is useful for exchange and reuse, but formatting cannot substitute for analysis.
 
-##### RFI intake ≠ RFI response
+##### Enrichment supports the finished answer
 
-2.1.5 captures and prioritizes the question.
+A large set of lookups, pivots, and graphs may be valuable working material. The finished intelligence product selects the evidence that answers the requirement and explains its significance.
 
-2.7.4 returns to that question and records closure or follow-up.
+The goal is not to show every action the analyst performed; it is to deliver a supported answer.
+
+##### RFI intake and RFI response are different stages of the same requirement
+
+Module 2.1.5 captures, clarifies, prioritizes, and assigns the question. Module 2.7.4 returns to that requirement with the supported answer, uncertainty, and closure or agreed follow-up.
+
+Keeping both stages visible makes it possible to judge whether the analysis actually answered what the requester needed.
 
 #### Integrated Review Exercise
 
-Use this A12 CTI card:
+Use this **hypothetical CTI practice card built from the A12 case**. The supplied enrichment and visibility details are exercise conditions rather than additional canonical A12 facts:
 
-> **Requirement:** Determine what is known about the update domain and whether evidence supports payload delivery.  
-> **Internal TIP:** no prior hash match  
-> **Sandbox:** encoded PowerShell and attempted retrieval behavior observed  
-> **DNS/RDAP:** update domain and `login-prd.net` share an uncommon nameserver; IP overlap exists during part of the relevant window  
+> **Requirement:** Determine what role the update domain played and whether available evidence establishes successful payload delivery.  
+> **Case evidence:** encoded PowerShell on `WS-JLEE`; HTTP request for `/update.exe` to the update domain  
+> **Enrichment:** `login-prd.net` shares an uncommon nameserver pair and an overlapping observed IP with the update domain  
 > **Environment:** Windows workstations are present; process visibility is partial on one endpoint population  
-> **Evidence gap:** successful execution of `update.exe` is not established
+> **Evidence gap:** successful transfer or execution of `update.exe` is not established
 
 Write a short intelligence answer using:
 
@@ -8560,9 +9996,11 @@ The actual team names and workflows are local and are taught in 3.7.
 
 The important idea is that the hunt does not have to solve every downstream problem itself.
 
-#### The A12 Hunt Loop
+#### Hypothetical A12-Based Hunt Loop
 
-One A12 hunt can show the entire 3.x sequence.
+Canonical A12 reaches a hunt package, but the case does **not** specify the completed hunt result, additional affected-host count, visibility-gap count, or detection-coverage outcome.
+
+The sequence below is a **hypothetical practice extension based on A12 behavior**. Its result counts are exercise conditions used to show the full 3.x workflow; they are **not canonical A12 facts**.
 
 ##### Question
 
@@ -8588,7 +10026,7 @@ Separate:
 
 ##### Finding
 
-Example result:
+Hypothetical practice result:
 
 - 2 additional hosts with the exact persistence pattern;
 - 7 hosts lack the registry telemetry needed to test the hypothesis;
@@ -8601,7 +10039,7 @@ Example result:
 - telemetry gap → platform/telemetry owner;
 - new infrastructure lead → CTI.
 
-That is a complete hunt story.
+That is a complete **practice** hunt story. Do not carry the invented host counts or coverage result back into canonical A12.
 
 #### What You Need to Remember Before 3.1
 
@@ -8711,11 +10149,47 @@ Its value is not limited to finding compromise. Hunts also expose coverage and v
 
 Call something a **false negative** only when a control was expected to detect it and failed.
 
+### 3.2 – Hunt Methodology: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Threat hunting becomes repeatable when the hunter can choose an appropriate hunt type and turn a question into a bounded plan with a hypothesis, scope, evidence sources, and stopping conditions.
+
+#### Connect to What You Already Know
+
+The hunt-purpose lesson established why hunting exists and how it differs from routine alert response. This subunit focuses on how to design the search before opening tools.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **3.2.1 – Hunt Types** | Choose a hunt type based on the starting evidence, question, and objective. |
+| **3.2.2 – Hunt Development** | Turn the objective into a hypothesis, look-fors, scope, telemetry plan, and documented execution approach. |
+
+#### What to Watch For
+
+- Choose the hunt type from the evidence and question rather than from a preferred tool.
+- Keep the hypothesis testable and the scope bounded enough to produce an interpretable result.
+- Identify the telemetry needed before execution so a missing result can be interpreted correctly.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- distinguish the major hunt types and select one for a realistic starting condition;
+- write or assess a testable hunt hypothesis;
+- define scope, look-fors, and telemetry needed to evaluate the hypothesis;
+- recognize when a hunt design is too broad or underspecified to produce a useful finding.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [3.2 Summary](#32--hunt-methodology-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 3.2.1 — Hunt Types
-
-**3.2 — Hunt Methodology**
-
-With the purpose of hunting established, choose how the hunt begins and develop a testable plan. Scope and expected evidence make the search reviewable.
 
 **Estimated Time:** 20–25 minutes
 
@@ -8758,16 +10232,13 @@ Examples:
 **Anomaly-based**
 > Several hosts made rare `:8080` requests for `/update.exe`. Is the pattern associated with the A12 activity set or a benign application?
 
-##### “Execute” at this stage
+##### Preparation is not execution
 
-In this lesson, executing the type means you can state:
+This lesson prepares you to recognize the initiating signal, classify the primary hunt type, and form the first testable question. Those are required planning skills, but they do **not** by themselves satisfy a task whose approved verb is **execute**.
 
-- what initiated the hunt;
-- the primary type;
-- the first testable question;
-- what kind of evidence you would search.
+For `3.2.1.1`–`3.2.1.4`, execution means you actually run the hunt against supplied or approved telemetry and record the scope, query/search, results, gaps, and bounded finding.
 
-The detailed hunt card comes next in 3.2.2.
+Use the [Hunt Execution Practical](#hunt-execution-practical--controlled-telemetry) to demonstrate the four execution tasks. The detailed hunt-development model is taught next in 3.2.2.
 
 #### Knowledge Check
 
@@ -8780,6 +10251,103 @@ The detailed hunt card comes next in 3.2.2.
 The four course hunt types describe the **primary reason the hunt starts**.
 
 They are useful labels, not rigid boxes. Regardless of type, the hunt should become a bounded, testable search.
+
+#### Hunt Execution Practical — Controlled Telemetry
+
+**Purpose:** demonstrate the operational verbs in `3.2.1.1`–`3.2.1.4` and `3.6.3` with one reusable dataset. This is a **separate training scenario**, not canonical A12.
+
+##### Inputs
+
+Use [hunt-execution-practical.csv](#lab-asset--hunt-execution-practicalcsv). The dataset represents a fictional organization, **Blue Heron Manufacturing (BHM)**.
+
+Run the searches with a tool that actually filters or queries the supplied data: a spreadsheet filter, command-line tool, Python, a notebook, or an approved training SIEM. **Do not satisfy the practical by only reading the table and describing what you would search.**
+
+For every execution, preserve:
+
+1. initiating signal / hunt type;
+2. scope and time window;
+3. exact query or filter used;
+4. returned rows / hosts;
+5. telemetry or interpretation gaps;
+6. bounded finding and next action.
+
+##### Practical A — Intel-driven hunt (`3.2.1.1`)
+
+**Seed intelligence:** CTI reports that suspicious activity may use domain `cdn-sync.example` and Run value name `Updater`.
+
+Execute a local search for both observables, identify matching hosts, then decide whether a broader behavior search is justified. Record which results are exact matches and which are only related candidates.
+
+##### Practical B — Hypothesis-driven hunt (`3.2.1.2`)
+
+**Hypothesis:** If unauthorized persistence is using user-writable temporary directories, recent Run-key modifications should reference executables under a user's `AppData\Local\Temp` path more often on affected hosts than on ordinary workstations.
+
+Execute a search for the condition. Review all returned rows rather than assuming every Temp-path Run key is malicious. Use signature/context fields to separate suspicious results from the benign near-neighbor.
+
+##### Practical C — Reactive hunt (`3.2.1.3`)
+
+**Incident seed:** `BHM-WKS-07` is the known affected host.
+
+Execute an estate search for exact and related artifacts from that host. Identify any additional hosts that merit incident scoping and state which evidence created the relationship. Do not claim compromise where the evidence only creates a candidate lead.
+
+##### Practical D — Anomaly-based hunt (`3.2.1.4`)
+
+**Anomaly seed:** outbound HTTP traffic on destination port `8080` is rare in the workstation population.
+
+Execute a search for port `8080`, group or compare the results by destination/process/path, and determine which results can be explained as approved activity versus which remain suspicious. A rare event is a lead, not a verdict.
+
+##### Practical E — Technique-focused hunt (`3.6.3`)
+
+Execute **two** searches for ATT&CK `T1547.001` behavior:
+
+1. **Exact-observed layer:** Run value `Updater` or exact Temp updater paths.
+2. **Behavior-broadened layer:** Run-key values that launch executables from user-writable temporary locations.
+
+Compare the returned hosts. Explain what the exact layer misses, what the broadened layer adds, and why the broadened result set requires contextual review.
+
+##### Evaluator evidence
+
+The evaluator should observe the learner actually execute the filters/queries and retain the query text or filter criteria. A satisfactory result includes:
+
+- correct scope and use of the initiating signal;
+- reproducible query/filter logic;
+- accurate identification of returned hosts/events;
+- explicit handling of benign near-neighbors and visibility limits;
+- findings bounded to the supplied evidence;
+- a defensible next action.
+
+At higher proficiency, expect efficient query refinement, explanation of false-positive/false-negative risk, and adaptation when the first search is too narrow or too broad. Qualification/sign-off remains a separate evaluator action under the course standard.
+
+##### Lab Asset — hunt-execution-practical.csv
+
+Embedded from `/thraining-plan/labs/hunt-execution-practical.csv` for this controlled practical.
+
+```csv
+timestamp,host,event_source,event_type,user,process,command_line,registry_path,registry_value_name,registry_value_data,file_path,dst_domain,dst_ip,dst_port,url_path,signature_status,note
+2026-09-14T08:12:03Z,BHM-WKS-07,endpoint,process,mkim,wscript.exe,wscript.exe invoice.vbs,,,,,,,,,signed,reactive seed host
+2026-09-14T08:12:08Z,BHM-WKS-07,endpoint,process,mkim,powershell.exe,powershell.exe -NoP -EncodedCommand JAB3AGM...,,,,,,,,,signed,encoded PowerShell child
+2026-09-14T08:13:20Z,BHM-WKS-07,registry,registry_set,mkim,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Updater,C:\Users\mkim\AppData\Local\Temp\updater.exe,,,,,,,run key to user-writable temp
+2026-09-14T08:14:01Z,BHM-WKS-07,network,http,mkim,powershell.exe,,,,,,,cdn-sync.example,198.51.100.44,8080,/update.exe,,rare external 8080
+2026-09-14T08:15:10Z,BHM-WKS-07,file,file_create,mkim,powershell.exe,,,,,C:\Users\mkim\AppData\Local\Temp\updater.exe,,,,,unsigned,temp executable created
+2026-09-14T09:41:02Z,BHM-WKS-12,registry,registry_set,ajones,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Updater,C:\Users\ajones\AppData\Local\Temp\updater.exe,,,,,,,exact Updater pattern
+2026-09-14T09:42:16Z,BHM-WKS-12,network,http,ajones,updater.exe,,,,,,,cdn-sync.example,198.51.100.44,8080,/update.exe,unsigned,same infrastructure/path
+2026-09-14T09:42:50Z,BHM-WKS-12,file,file_create,ajones,updater.exe,,,,,C:\Users\ajones\AppData\Local\Temp\updater.exe,,,,,unsigned,related file
+2026-09-15T11:05:44Z,BHM-WKS-19,registry,registry_set,rpatel,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,OneDriveUpdate,C:\Users\rpatel\AppData\Local\Temp\syncsvc.exe,,,,,,,variant temp Run key
+2026-09-15T11:06:31Z,BHM-WKS-19,network,http,rpatel,syncsvc.exe,,,,,,,updates-cdn.example,203.0.113.74,8080,/pkg.bin,unsigned,variant infrastructure
+2026-09-15T11:07:09Z,BHM-WKS-19,file,file_create,rpatel,syncsvc.exe,,,,,C:\Users\rpatel\AppData\Local\Temp\syncsvc.exe,,,,,unsigned,variant temp executable
+2026-09-14T07:01:11Z,BHM-WKS-03,registry,registry_set,lchen,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,OneDrive,C:\Program Files\Microsoft OneDrive\OneDrive.exe /background,,,,,,,Microsoft,common benign Run key
+2026-09-14T07:02:03Z,BHM-WKS-04,registry,registry_set,sgarcia,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Teams,C:\Program Files\Microsoft\Teams\current\Teams.exe --processStart Teams.exe,,,,,,,Microsoft,common benign Run key
+2026-09-15T12:30:00Z,BHM-WKS-22,network,http,svc_backup,backupagent.exe,,,,,,,backup-gw.internal,10.20.30.40,8080,/health,signed,approved internal backup service
+2026-09-15T12:31:00Z,BHM-WKS-23,network,http,svc_backup,backupagent.exe,,,,,,,backup-gw.internal,10.20.30.40,8080,/health,signed,same approved service
+2026-09-15T15:10:21Z,BHM-WKS-31,network,http,dnguyen,java.exe,,,,,,,telemetry.vendor.example,192.0.2.80,8080,/metrics,signed,approved vendor telemetry
+2026-09-16T08:55:18Z,BHM-WKS-44,registry,registry_set,hlee,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,AcmeUpdater,C:\Users\hlee\AppData\Local\Temp\AcmeSetup\acme-update.exe,,,,,,,Acme Software LLC,near-neighbor temp Run key; signed vendor
+2026-09-16T08:55:32Z,BHM-WKS-44,file,file_create,hlee,acme-update.exe,,,,,C:\Users\hlee\AppData\Local\Temp\AcmeSetup\acme-update.exe,,,,,Acme Software LLC,benign signed updater
+2026-09-16T08:56:01Z,BHM-WKS-44,network,https,hlee,acme-update.exe,,,,,,,updates.acme.example,192.0.2.55,443,/v3/check,Acme Software LLC,benign updater traffic
+2026-09-16T10:02:19Z,BHM-WKS-52,endpoint,process,kwhite,powershell.exe,powershell.exe Get-Service | Where-Object {$_.Status -eq 'Running'},,,,,,,,,signed,administrative PowerShell
+2026-09-16T10:04:29Z,BHM-WKS-53,registry,registry_set,jcooper,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,PrinterHelper,C:\Program Files\PrinterCo\helper.exe,,,,,,,PrinterCo,benign Run key
+2026-09-17T03:14:05Z,BHM-SRV-02,network,http,svc_app,appsvc.exe,,,,,,,api.partner.example,192.0.2.140,8080,/api/status,signed,server app expected 8080
+2026-09-17T05:20:50Z,BHM-WKS-58,registry,registry_set,mross,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,UpdaterService,C:\Users\mross\AppData\Roaming\Updater\svc.exe,,,,,,,unsigned,rare Run key but not Temp
+2026-09-17T05:21:30Z,BHM-WKS-58,network,https,mross,svc.exe,,,,,,,cloud-storage.example,203.0.113.120,443,/sync,unsigned,needs review; no exact CTI match
+```
 
 ### 3.2.2 — Hunt Development Concepts
 
@@ -8872,6 +10440,44 @@ Develop the hunt before running the search.
 
 A useful hunt has a testable hypothesis, bounded scope, defensible priority, and a distinctive pattern grounded in telemetry you actually have.
 
+### 3.2 – Hunt Methodology: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Question → hunt type → hypothesis → scope/look-fors → telemetry → execute/refine**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- distinguish the major hunt types and select one for a realistic starting condition;
+- write or assess a testable hunt hypothesis;
+- define scope, look-fors, and telemetry needed to evaluate the hypothesis;
+- recognize when a hunt design is too broad or underspecified to produce a useful finding.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **3.2.1 – Hunt Types** | Choose a hunt type based on the starting evidence, question, and objective. |
+| **3.2.2 – Hunt Development** | Turn the objective into a hypothesis, look-fors, scope, telemetry plan, and documented execution approach. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. What should determine whether a hunt is hypothesis-driven, intel-driven, retrospective, or anomaly-focused?
+2. What makes a hunt hypothesis testable rather than merely interesting?
+3. Why should telemetry availability be checked before interpreting a negative hunt result?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **3.3 – Online Tools for Threat Hunting**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
 ### 3.3.1 — Tool Capabilities for Hunting
 
 **Estimated Time:** 20–25 minutes
@@ -8944,6 +10550,12 @@ or:
 
 Then ask whether internal telemetry contains the same or related activity.
 
+##### Platform use must be demonstrated separately
+
+This lesson teaches what the four platforms can contribute and how to turn their results into internal hunt leads. That preparation does **not** by itself satisfy `3.3.1.1`, whose approved verb is **perform**.
+
+Use the [External Tool Pivot Practical](#external-tool-pivot-practical--virustotal-anyrun-urlscanio-and-silent-push) to demonstrate actual searching and pivoting in VirusTotal, ANY.RUN, urlscan.io, and Silent Push. The practical requires preserved provenance and a local test derived from each platform result.
+
 #### Knowledge Check
 
 1. Why is a VirusTotal relationship useful but not proof of internal activity?
@@ -8956,11 +10568,108 @@ External tools generate context and candidates. Hunting converts them into preci
 
 Carry forward the artifact **and** its context, then search the local telemetry that can actually answer the question.
 
+#### External Tool Pivot Practical — VirusTotal, ANY.RUN, urlscan.io, and Silent Push
+
+**Purpose:** demonstrate task `3.3.1.1` by actually querying and pivoting in the four named external platforms. Planning a query or interpreting a screenshot does not by itself demonstrate this task.
+
+##### Delivery model
+
+This is an evaluator-led practical. The evaluator supplies one approved seed per platform at delivery time so the exercise does not depend on stale public results. The seed may be a hash, domain, IP, URL, or other object appropriate to the platform and the learner's access level.
+
+Use an approved training account, free/public access where permitted, or another authorized account. Do not submit sensitive organizational artifacts to public services merely to complete the exercise.
+
+For every platform, preserve:
+
+1. seed value and timestamp;
+2. query/search used;
+3. at least one pivot performed;
+4. result object or report identifier/URL when policy permits;
+5. one hunt-relevant lead extracted from the result;
+6. provenance wording that identifies the external source;
+7. the internal telemetry/data source and field relationship you would use to test the lead locally.
+
+##### Station A — VirusTotal
+
+Use the supplied seed to perform a search, inspect relevant relationships and/or behavior, pivot to a related object, and extract one lead that could be tested internally.
+
+A valid result shows more than the seed lookup: the learner must use a relationship, behavior, or other supported pivot and explain why the resulting object is a candidate rather than proof of internal occurrence.
+
+##### Station B — ANY.RUN
+
+Use the supplied seed in the available search/TI workflow, review the returned submission or TI context, pivot through at least one behavior or related observable, and extract a hunt lead. Preserve the relevant submission/report identifier when allowed.
+
+##### Station C — urlscan.io
+
+Retrieve or search for the supplied URL/domain result, inspect request/redirect/infrastructure artifacts, pivot to one related object or result, and identify a lead that can be represented as local HTTP/DNS/TLS fields.
+
+##### Station D — Silent Push
+
+Use the supplied seed to inspect passive-DNS or related infrastructure context, perform at least one infrastructure pivot, and record the time/hosting-density context needed before using the result as a hunt lead.
+
+##### Required final output
+
+Create a four-row evidence table with one row per platform:
+
+| Platform | Seed | Query/pivot | Extracted lead | Provenance statement | Internal test |
+|---|---|---|---|---|---|
+
+The internal test should name the local source, fields/relationship, and time/population. It does not have to prove the activity occurred; the purpose is to convert an external candidate into a precise local test.
+
+##### Evaluator criteria
+
+A satisfactory demonstration requires the learner to actually use all four platforms and preserve enough evidence to reproduce the reasoning. The evaluator should confirm:
+
+- the learner performed a real search/query and at least one pivot in each platform;
+- the pivot selected is supported by what the platform actually shows;
+- the learner does not turn an external relationship/verdict into proof of local activity;
+- the extracted lead is internally queryable;
+- provenance, time, and infrastructure-sharing context are preserved where relevant;
+- the local test is precise enough to hand to a hunter/SIEM user.
+
+At higher proficiency, expect better pivot selection, faster recognition of weak/common-infrastructure relationships, and adaptation when the first pivot is unproductive. Qualification/sign-off remains a separate evaluator action under the course standard.
+
+### 3.4 – CTI as Hunt Input: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+CTI can give hunters behaviors, observables, infrastructure, and relationships worth searching for, but not every intelligence statement is a usable hunt lead. The hunter has to assess the intelligence, extract testable elements, and preserve the difference between what the source claims and what local telemetry can verify.
+
+#### Connect to What You Already Know
+
+The methodology and tools lessons established how hunts are designed and executed. This subunit focuses on turning external or internal intelligence into bounded local search inputs.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **3.4.1 – Assessing CTI for Hunting** | Decide whether intelligence is relevant, specific, timely, and observable enough to support a hunt. |
+| **3.4.2 – Extracting Hunt Leads** | Extract behaviors, artifacts, observables, and relationships that can become testable hunt leads. |
+| **3.4.3 – STIX as Hunt Input** | Read STIX objects and relationships as structured inputs while returning to the underlying evidence and observables for the actual hunt. |
+
+#### What to Watch For
+
+- Separate the intelligence judgment from the local search condition you can actually test.
+- Prefer behavior and observable detail that maps to available telemetry over actor-name awareness alone.
+- Use STIX as a representation of intelligence, not as a substitute for understanding the underlying objects and relationships.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- assess whether a CTI product is suitable for a hunt;
+- extract concrete hunt leads from intelligence without copying unsupported claims into the hypothesis;
+- translate structured STIX content into useful local hunt inputs;
+- state what local telemetry can confirm, refute, or leave unresolved.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [3.4 Summary](#34--cti-as-hunt-input-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 3.4.1 — Assessing CTI for Hunting Value
-
-**3.4 — CTI as a Hunt Input**
-
-External research provides possible leads. Evaluate whether a lead is worth hunting, translate it into observable behavior, and retain the evidence behind any structured intelligence input.
 
 **Estimated Time:** 20–25 minutes
 
@@ -9188,6 +10897,45 @@ Indicator patterns and observed cyber-observables often provide direct query mat
 
 - [OASIS STIX 2.1](https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html)
 
+### 3.4 – CTI as Hunt Input: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**CTI product → suitability check → extract leads → map to telemetry → hunt hypothesis/search**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- assess whether a CTI product is suitable for a hunt;
+- extract concrete hunt leads from intelligence without copying unsupported claims into the hypothesis;
+- translate structured STIX content into useful local hunt inputs;
+- state what local telemetry can confirm, refute, or leave unresolved.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **3.4.1 – Assessing CTI for Hunting** | Decide whether intelligence is relevant, specific, timely, and observable enough to support a hunt. |
+| **3.4.2 – Extracting Hunt Leads** | Extract behaviors, artifacts, observables, and relationships that can become testable hunt leads. |
+| **3.4.3 – STIX as Hunt Input** | Read STIX objects and relationships as structured inputs while returning to the underlying evidence and observables for the actual hunt. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. What makes an intelligence report hunt-worthy instead of merely useful for awareness?
+2. How does a behavioral lead differ from repeating an actor label in a query?
+3. Why should a hunter inspect the objects and evidence behind a STIX relationship before using it as a search condition?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **3.5 – Framework Application in Hunting**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
 ### 3.5.1 — Using MITRE ATT&CK for Hunt Planning
 
 **Estimated Time:** 20–25 minutes
@@ -9277,11 +11025,48 @@ ATT&CK informs priority; it does not replace operational judgment.
 - [MITRE ATT&CK](https://attack.mitre.org/)
 - [T1547.001 – Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)
 
+### 3.6 – Attacker Techniques for Hunting: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+Technique knowledge helps hunters turn broad adversary behaviors into concrete, observable search ideas. The useful level is specific enough to map to telemetry and distinguish suspicious patterns from the large amount of legitimate activity that may use the same mechanism.
+
+#### Connect to What You Already Know
+
+The framework-application lesson showed how ATT&CK and other models can structure a hunt. This subunit applies that thinking to technique families that frequently produce huntable host evidence.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **3.6.1 – Persistence** | Recognize persistence mechanisms and narrow them into observable patterns suitable for hunting. |
+| **3.6.2 – Privilege Escalation** | Recognize privilege-escalation behaviors and the host context needed to search for them meaningfully. |
+| **3.6.3 – Hunt-Specific Technique Development** | Turn a named technique into a unique pattern, bounded scope, and evidence-backed hunt line. |
+
+#### What to Watch For
+
+- Move from a broad tactic or technique name to a concrete observable pattern.
+- Use environment and baseline context to distinguish common administrative behavior from a hunt-worthy pattern.
+- Keep the hunt scope narrow enough that the result answers a question rather than producing an unbounded list of matches.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- identify concrete persistence and privilege-escalation behaviors that can produce hunt leads;
+- translate a technique into a specific observable pattern and telemetry requirement;
+- bound the search by scope, time, assets, users, or other relevant context;
+- explain why hunting an entire tactic is usually less useful than testing a specific behavioral hypothesis.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [3.6 Summary](#36--attacker-techniques-for-hunting-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 3.6.1 — Persistence Techniques
-
-**3.6 — Attacker Techniques**
-
-Framework labels help organize the plan. Technique-focused hunting now requires the procedure, telemetry, and scope that make the search selective.
 
 **Estimated Time:** 20–25 minutes
 
@@ -9541,7 +11326,9 @@ A concise hunt line can be:
 
 > **T1547.001 / Persistence** — Windows user workstations, previous 14 days, registry + file telemetry; search exact `Updater → %TEMP%\update.exe` first, then broaden to rare Run values launching from user-writable Temp paths.
 
-That is specific enough to execute and broad enough to explain the behavior family.
+That hunt line is specific enough to **prepare an executable search**, but writing the line is not the same as executing the mapped task.
+
+To demonstrate `3.6.3`, run both the exact-observed and behavior-broadened layers in [Practical E of the Hunt Execution Practical](#hunt-execution-practical--controlled-telemetry). Record the query/filter, returned hosts, benign near-neighbor, gaps, and bounded finding.
 
 #### Knowledge Check
 
@@ -9559,11 +11346,87 @@ Start exact when intelligence gives you exact evidence; broaden deliberately whe
 
 - [T1547.001 – Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)
 
+### 3.6 – Attacker Techniques for Hunting: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Technique → concrete behavior → observable pattern → telemetry → bounded hunt line**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- identify concrete persistence and privilege-escalation behaviors that can produce hunt leads;
+- translate a technique into a specific observable pattern and telemetry requirement;
+- bound the search by scope, time, assets, users, or other relevant context;
+- explain why hunting an entire tactic is usually less useful than testing a specific behavioral hypothesis.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **3.6.1 – Persistence** | Recognize persistence mechanisms and narrow them into observable patterns suitable for hunting. |
+| **3.6.2 – Privilege Escalation** | Recognize privilege-escalation behaviors and the host context needed to search for them meaningfully. |
+| **3.6.3 – Hunt-Specific Technique Development** | Turn a named technique into a unique pattern, bounded scope, and evidence-backed hunt line. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. What information turns “hunt persistence” into a testable search idea?
+2. Why can an administrative mechanism be useful to hunt without being inherently malicious?
+3. What scope information helps keep a technique-based hunt interpretable?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **3.7 – Local Hunt Control and Outputs: Introduction**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
+
+### 3.7 – Local Hunt Control and Outputs: Introduction
+
+**Estimated Time:** 5–10 minutes
+
+#### Why This Subunit Matters
+
+A technically sound hunt still has to fit the organization’s control process. Hunters need to know how work is authorized or queued, where the investigation is documented, and how findings, gaps, and handoffs are delivered to the teams that act on them.
+
+#### Connect to What You Already Know
+
+The preceding hunt lessons established purpose, methodology, tools, CTI inputs, framework use, and technique development. This final subunit maps that generic hunt workflow to the local operating environment.
+
+#### What You Will Learn
+
+| Lesson | What it contributes |
+|---|---|
+| **3.7.1 – Hunt Control** | Identify how hunts are initiated, authorized, prioritized, tracked, and closed locally. |
+| **3.7.2 – Hunt Documentation** | Document the question, scope, evidence, queries, results, gaps, and decisions so the work can be reviewed or continued. |
+| **3.7.3 – Hunt Outputs** | Package findings, detection gaps, intelligence feedback, IR handoffs, and other outputs for the correct downstream owner. |
+
+#### What to Watch For
+
+- Use the organization’s actual control path rather than inventing a generic ticket or approval chain.
+- Document enough evidence and reasoning that another hunter can reproduce or continue the work.
+- Separate the hunt finding from the downstream action: IR, CTI, Detection Engineering, and other owners may each receive a different product from the same hunt.
+
+#### Expected End State
+
+By the end of this subunit, you should be able to:
+
+- identify the local process used to initiate, authorize, track, and close hunts;
+- document a hunt so its scope, evidence, queries, and conclusions are reviewable;
+- route findings and gaps to the correct downstream owner;
+- distinguish universal hunt tradecraft from site-specific control and documentation requirements.
+
+#### How to Preview This Subunit
+
+Read this introduction, then skim the [3.7 Summary](#37--local-hunt-control-and-outputs-summary). After that, scan the lesson headings, tables, emphasized terms, and callouts before reading the lessons closely.
+
+Use the preview to predict how the lessons fit together. Return to the summary after the detailed reading and compare the expected end state with what you can now explain or do.
+
 ### 3.7.1 — Hunt Control and Lead Management
-
-**3.7 — Local Hunt Practice**
-
-A technically useful search still needs ownership, documentation, and a recipient. Follow the local process so findings and limitations survive the handoff.
 
 **Estimated Time:** 15–20 minutes
 
@@ -9784,9 +11647,11 @@ A hunt package should make clear:
 - whether additional hosts were found;
 - whether a negative result is limited by visibility.
 
-##### A12 Case Study: Worked Example
+##### Hypothetical A12-based output example
 
-A finished A12 hunt might report:
+Canonical A12 does **not** specify the completed hunt result. The following is a **practice-only extension based on A12 behavior**; the host counts, visibility gap, detection gap, and follow-on lead are exercise conditions rather than canonical A12 facts.
+
+A finished practice hunt might report:
 
 - 2 additional hosts with the exact `Updater → %TEMP%\update.exe` persistence pattern;
 - 18 hosts searched with complete registry visibility;
@@ -9794,7 +11659,7 @@ A finished A12 hunt might report:
 - no existing analytic covering the exact pattern;
 - a follow-on lead involving a different Run-value name pointing to a user-writable path.
 
-The **facts** remain the same regardless of which local team receives each part. The local hand-off map determines who owns response, detection improvement, visibility remediation, and follow-on intelligence.
+The **practice results** remain the same regardless of which local team receives each part. The local hand-off map determines who owns response, detection improvement, visibility remediation, and follow-on intelligence.
 
 ##### Missing local list/map
 
@@ -9816,13 +11681,50 @@ A finished hunt communicates findings, scope, evidence, gaps, and follow-on work
 
 Then route each outcome through the organization's authorized hand-off map.
 
-This completes the **3.x threat-hunting block**.
-
-**Next track:** **4.x – Detection Engineering**.
+This completes the **3.7 local hunt operations subunit**.
 
 #### Reference Model
 
 This module intentionally relies on the organization's local hunt-output and hand-off standard.
+
+### 3.7 – Local Hunt Control and Outputs: Summary
+
+**Estimated Time:** 5–10 minutes
+
+#### What This Subunit Built
+
+**Hunt question → local control → documented execution → finding/gap → handoff and closure**.
+
+The purpose of this summary is to help you check whether the individual lessons have combined into a usable mental model rather than a list of separate facts.
+
+#### By This Point, You Should Be Able To
+
+- identify the local process used to initiate, authorize, track, and close hunts;
+- document a hunt so its scope, evidence, queries, and conclusions are reviewable;
+- route findings and gaps to the correct downstream owner;
+- distinguish universal hunt tradecraft from site-specific control and documentation requirements.
+
+#### How the Pieces Fit Together
+
+| Lesson | Role in the larger model |
+|---|---|
+| **3.7.1 – Hunt Control** | Identify how hunts are initiated, authorized, prioritized, tracked, and closed locally. |
+| **3.7.2 – Hunt Documentation** | Document the question, scope, evidence, queries, results, gaps, and decisions so the work can be reviewed or continued. |
+| **3.7.3 – Hunt Outputs** | Package findings, detection gaps, intelligence feedback, IR handoffs, and other outputs for the correct downstream owner. |
+
+#### Check Your Understanding
+
+Ask yourself:
+
+1. Where does your organization record who authorized or prioritized a hunt?
+2. What information must be documented so another hunter can reproduce the work?
+3. How can one hunt produce separate outputs for IR, CTI, and Detection Engineering?
+
+If you can answer those questions clearly and explain the reasoning behind your answers, you have the mental model this subunit is intended to build.
+
+#### Where This Leads Next
+
+The next learning unit is **3.8 – Threat Hunting Section Summary**. Carry the model from this subunit forward rather than treating the boundary as a reset; later lessons will reuse the evidence, terminology, and decisions introduced here.
 
 ### 3.8 — Threat Hunting Section Summary
 
@@ -9978,7 +11880,7 @@ The goal is to reduce the candidate set without filtering away the behavior you 
 
 ##### Step 8 – Findings
 
-Example result:
+The canonical A12 story does not specify the hunt outcome. For practice, suppose a hunt produced the following result:
 
 - 2 additional hosts show the exact `Updater → %TEMP%\update.exe` pattern;
 - 3 other hosts show related Run-key behavior needing review;
@@ -10004,86 +11906,73 @@ Possible routing:
 
 The actual local team names and queues come from the site's hunt-governance process.
 
-#### Distinctions Worth Keeping
+#### Distinctions That Keep a Hunt Reviewable
 
-These distinctions are easy to blur and matter in later work.
+Hunting combines intelligence, hypotheses, telemetry, and search logic. The concepts below stay useful when each one is tied to the question it is meant to answer.
 
-##### Hunt type ≠ complete hunt design
+##### Hunt type describes the starting signal, not the whole design
 
-**Reactive**, **intel-driven**, **hypothesis-driven**, and **anomaly-based** describe how the hunt primarily began.
+**Reactive**, **intel-driven**, **hypothesis-driven**, and **anomaly-based** describe how a hunt primarily begins.
 
-Every hunt still needs:
-- a testable question;
-- scope;
-- telemetry;
-- search logic;
-- findings.
+Regardless of the starting signal, a reviewable hunt still needs a testable question, bounded scope, required telemetry, search logic, and a documented result.
 
-##### Topic ≠ hypothesis
+##### A topic becomes a hypothesis when it predicts evidence
 
 > Hunt persistence
 
-is a topic.
+names an area of interest.
 
 > If A12-style persistence exists elsewhere, we expect to observe Run values pointing into user-writable paths
 
-is testable.
+creates an expectation that can be tested. The second form tells the hunter what evidence would support or weaken the idea.
 
-##### CTI lead ≠ local evidence
+##### CTI creates a lead; local telemetry establishes local occurrence
 
-A sandbox observation, passive-DNS result, indicator, or STIX object can justify an internal search.
+A sandbox observation, passive-DNS result, indicator, or STIX object can give the hunter a reason to search. It does not establish that the activity occurred inside the organization.
 
-It does not establish that the activity occurred in your environment.
+The hunt connects the external lead to local evidence within a defined population and time window.
 
-##### Indicator ≠ behavior
+##### Indicators and behaviors support different kinds of searching
 
-An exact hash, domain, or IP can be useful.
+An exact hash, domain, or IP can provide a precise match. A behavior or procedure can survive infrastructure or file changes and support a broader search.
 
-A behavior or procedure may survive longer and support broader searching.
+Good hunts often use both: exact artifacts for precision and behavior for durability.
 
-Good hunts often use both.
+##### ATT&CK names the technique; the hunt needs the observable procedure
 
-##### ATT&CK technique ≠ observed procedure
+ATT&CK gives the team a shared behavior category. The hunt still needs the specific procedure, fields, and telemetry pattern that can be tested locally.
 
-ATT&CK names a behavior category.
+Technique mapping helps organize the question; the procedure makes it searchable.
 
-The hunt still needs the specific local procedure and telemetry pattern that can be searched.
+##### Detection gaps and visibility gaps require different fixes
 
-##### Detection gap ≠ visibility gap
+A **detection gap** exists when the required telemetry is available but current analytics do not adequately cover the behavior.
 
-**Detection gap:** the required telemetry exists, but current analytics do not adequately cover the behavior.
+A **visibility gap** exists when the telemetry needed to test or detect the behavior is absent or insufficient.
 
-**Visibility gap:** the required telemetry is missing or insufficient.
+The first points toward analytic coverage. The second points toward collection, ingestion, parsing, or population coverage.
 
-These require different fixes.
+##### Unalerted activity becomes a false negative only when an expected detector failed
 
-##### Unalerted activity ≠ automatic false negative
+The absence of an alert can reveal a coverage question, but a confirmed false negative requires an established expectation that a control should have detected the target condition and evidence that the required telemetry reached that control.
 
-A false negative requires a control that was expected to detect the event and failed.
+This prevents the hunt from labeling every previously unalerted finding as a detection failure.
 
-If no analytic was designed to detect the behavior, the absence of an alert is a coverage gap—not automatically a failed detection.
+##### A privileged outcome does not identify the privilege-escalation method by itself
 
-##### Elevated outcome ≠ privilege-escalation method
+Observing a process running as SYSTEM can establish a high-privilege state when the context supports that comparison. Identifying token theft, UAC bypass, or another specific escalation method requires evidence of how that state was reached.
 
-Seeing a process run as SYSTEM can establish a high-privilege outcome when the prior context supports that comparison.
+##### A negative hunt result is bounded by what was actually tested
 
-It does not automatically prove token theft, UAC bypass, or another specific escalation technique.
-
-Technique attribution requires evidence of the method.
-
-##### “Not found” ≠ “does not exist”
-
-A valid negative result is bounded:
+A defensible result says:
 
 > **Not found within the tested population, time window, and available telemetry.**
 
-That is different from:
-
-> The enterprise is clean.
+That statement preserves the scope of the search. It does not imply that the activity cannot exist elsewhere in the enterprise or outside the observable period.
 
 #### Integrated Review Exercise
 
-Use this hunt card:
+Use this **hypothetical practice card based on A12 behavior**. These results extend the case for the exercise and are not canonical A12 outcomes:
 
 > **Seed:** A12 incident  
 > **Known behavior:** Run-key persistence pointing to `%TEMP%\update.exe`  
@@ -10377,13 +12266,15 @@ For example:
 
 The exact team names and approval paths are local and are taught in 4.8.
 
-#### The A12 Detection Lifecycle
+#### Hypothetical A12-Based Detection Lifecycle
 
-One A12 example can show the entire 4.x block.
+Canonical A12 reaches a **Detection Engineering coverage review**. It does **not** specify whether DE builds or changes an analytic, validates it, deploys it, monitors it, or later retires it.
+
+The sequence below is a **hypothetical practice extension based on A12 behavior** so you can see the complete 4.x lifecycle without turning those downstream steps into A12 facts.
 
 ##### Need
 
-Threat hunting identifies recurring encoded PowerShell and a persistence pattern.
+For this practice extension, assume hunting reports recurring encoded PowerShell and a persistence pattern. That assumed hunt result is an exercise condition, not a canonical A12 outcome.
 
 ##### Coverage Decision
 
@@ -10417,7 +12308,7 @@ Tune narrow benign conditions, update logic when behavior changes, or replace th
 
 Remove or supersede the analytic when it no longer provides enough value.
 
-That is a complete detection-engineering story.
+That is a complete **practice** detection-engineering story. The canonical A12 case still stops at coverage review.
 
 #### What You Need to Remember Before 4.1
 
@@ -10624,10 +12515,14 @@ For example, Sigma supports fields such as IDs, status, description, references,
 
 Your shop may require some, all, or different fields.
 
-Use the **actual local list** from 4.8 and mark:
+At this point in the course, learn the method but do **not** pretend you already have the authoritative local list. Module 4.8 teaches you how to locate and verify that source.
+
+After 4.8, return to [Part B of the Detection Validation Practical](#detection-validation-practical--draft-analytic-test) with the **verified local list** and mark:
 - met;
 - missing;
-- not applicable, if the local process permits it.
+- not applicable, if the real local process permits it.
+
+Until that local source is available, `4.2.2` is taught/prepared but not qualification-complete.
 
 ##### Close the loop
 
@@ -10645,6 +12540,12 @@ Example:
 > **Changed:** We kept the encoded-PowerShell behavior but removed the host-specific IOC so the analytic can detect similar execution across workstations. Positive and benign-control tests passed. Deployment follows the local change path.
 
 That feedback is more useful than simply writing “done.”
+
+##### Demonstrate validation by running the draft
+
+The three-test model above is preparation. Task `4.2.1` requires you to **test** a draft/change, so you must execute the analytic against controlled or approved evidence and evaluate the result.
+
+Use the [Detection Validation Practical](#detection-validation-practical--draft-analytic-test). It supplies target behavior, benign near-neighbor behavior, and a deliberate data-path problem. Run the draft, preserve the output, and make a justified **PASS / CHANGE / FAIL-HOLD** decision.
 
 #### Knowledge Check
 
@@ -10666,6 +12567,127 @@ Close the loop so the nominator knows whether the original defensive need was sh
 - [Sigma Logsources](https://sigmahq.io/docs/basics/log-sources.html)
 - [Sigma Filters](https://sigmahq.io/docs/meta/)
 - [Center for Threat-Informed Defense – Continuous Emulation as Detection Validation](https://ctid.mitre.org/blog/2025/08/04/lessons-from-sharepoint-vulnerability-cve-2025-53770/)
+
+#### Detection Validation Practical — Draft Analytic Test
+
+**Purpose:** demonstrate `4.2.1` with an actual controlled test, then provide the handoff point for `4.2.2` after local onboarding in 4.8. This is a separate training scenario, not canonical A12.
+
+##### Inputs
+
+- [de-validation-practical.csv](#lab-asset--de-validation-practicalcsv)
+- [de-validation-runner.py](#lab-asset--de-validation-runnerpy)
+
+The draft analytic claims to detect suspicious encoded PowerShell launched by `wscript.exe`. The supplied runner implements **draft v1**. It is intentionally imperfect so the learner has evidence to evaluate rather than a guaranteed pass.
+
+Run from the repository root or equivalent working directory, for example:
+
+```bash
+python labs/de-validation-runner.py labs/de-validation-practical.csv
+```
+
+Use an approved equivalent query environment if Python is not available. The requirement is to actually execute the draft logic against the controlled evidence, not merely inspect the rows.
+
+##### Part A — Test the draft (`4.2.1`)
+
+1. **Positive/intended behavior:** identify which supplied events are expected to match the behavioral claim.
+2. **Benign near-neighbor:** verify that the approved deployment and non-encoded PowerShell cases do not match.
+3. **Data path:** identify any event where required fields are missing or incomplete.
+4. Run the draft and preserve the output.
+5. Compare actual results with the expected classes.
+6. Make one decision: **PASS**, **CHANGE**, or **FAIL / HOLD**. Justify it from the evidence.
+
+A strong answer notices that a syntactically valid draft can still need change because a supported encoded-command variant is missed and because one sensor does not populate a required parent field.
+
+###### Required validation record
+
+Record:
+
+- draft/version tested;
+- exact command/query run;
+- intended positive results;
+- benign-control results;
+- false positives / false negatives;
+- data-path gaps;
+- decision;
+- specific change or scoping action, if needed.
+
+##### Part B — Local requirement check (`4.2.2`)
+
+Do **not** complete this part from fictional DYA/BHM policy. After 4.8, obtain the **verified local shop requirement list** or an authorized local simulation. Then mark each applicable requirement as met, missing, or not applicable if local policy allows that state.
+
+Attach that checklist to the same validation record. If the real local list is unavailable, record an onboarding/qualification gap rather than inventing requirements.
+
+##### Part C — Close the loop (`4.2.3`)
+
+Write a short note to the nominator that states:
+
+- disposition: shipped / changed / sent back / held / superseded, as appropriate;
+- what changed from the original need;
+- validation result and important limitation;
+- next owner/action.
+
+##### Evaluator criteria
+
+For `4.2.1`, the evaluator should observe the learner actually execute the test and interpret the results. A satisfactory demonstration includes target, benign near-neighbor, and data-path evidence plus a justified pass/change/fail decision.
+
+For `4.2.2`, qualification requires the verified **real local** requirements artifact or an authorized local simulation after 4.8. The training dataset cannot substitute for local policy.
+
+At higher proficiency, expect the learner to isolate why a case was missed, propose a bounded rule/data-path correction, rerun where practical, and explain residual coverage limitations. Qualification/sign-off remains a separate evaluator action under the course standard.
+
+##### Lab Asset — de-validation-practical.csv
+
+Embedded from `/thraining-plan/labs/de-validation-practical.csv` for this controlled practical.
+
+```csv
+event_id,host,sensor,process,parent_process,command_line,telemetry_complete,expected_class,note
+DV-001,BHM-WKS-07,EDR-A,powershell.exe,wscript.exe,powershell.exe -NoProfile -EncodedCommand JAB3AGM...,true,target_should_match,intended suspicious behavior with complete telemetry
+DV-002,BHM-WKS-12,EDR-A,powershell.exe,ccmexec.exe,powershell.exe -NoProfile -EncodedCommand SQBUACA...,true,benign_should_not_match,approved software deployment near-neighbor
+DV-003,BHM-WKS-15,EDR-A,powershell.exe,wscript.exe,powershell.exe Get-Process,true,benign_should_not_match,same parent/child but no encoded command
+DV-004,BHM-WKS-21,EDR-B,powershell.exe,,powershell.exe -NoProfile -EncodedCommand JABjAGw...,false,target_data_gap,target-like behavior but parent_process missing on EDR-B
+DV-005,BHM-WKS-25,EDR-A,cmd.exe,explorer.exe,cmd.exe /c whoami,true,irrelevant_should_not_match,unrelated command shell
+DV-006,BHM-WKS-29,EDR-A,powershell.exe,wscript.exe,powershell.exe -NoP -enc JABlAG4...,true,target_should_match,encoded PowerShell using short -enc switch
+```
+
+##### Lab Asset — de-validation-runner.py
+
+Embedded from `/thraining-plan/labs/de-validation-runner.py` for this controlled practical.
+
+```python
+#!/usr/bin/env python3
+"""Controlled detection-validation runner for training only."""
+import csv, sys
+
+path = sys.argv[1] if len(sys.argv) > 1 else "de-validation-practical.csv"
+
+def draft_detection(row):
+    # Draft v1 intentionally recognizes only the long -EncodedCommand form.
+    return (
+        row["process"].lower() == "powershell.exe"
+        and row["parent_process"].lower() == "wscript.exe"
+        and "-encodedcommand" in row["command_line"].lower()
+    )
+
+rows = list(csv.DictReader(open(path, newline="")))
+print("event_id expected actual telemetry result")
+false_negatives = []
+false_positives = []
+data_gaps = []
+for row in rows:
+    actual = draft_detection(row)
+    expected_target = row["expected_class"].startswith("target")
+    if row["telemetry_complete"].lower() != "true":
+        data_gaps.append(row["event_id"])
+    if expected_target and not actual and row["telemetry_complete"].lower() == "true":
+        false_negatives.append(row["event_id"])
+    if (not expected_target) and actual:
+        false_positives.append(row["event_id"])
+    print(row["event_id"], row["expected_class"], "MATCH" if actual else "NO_MATCH", row["telemetry_complete"])
+
+print("\nSummary")
+print("false_negatives:", ", ".join(false_negatives) or "none")
+print("false_positives:", ", ".join(false_positives) or "none")
+print("data_path_gaps:", ", ".join(data_gaps) or "none")
+```
 
 ### 4.3 — Nominations from SOC, Hunt, and CTI
 
@@ -10933,7 +12955,7 @@ Ask:
 
 For A12, `203.0.113.88` may be useful as evidence or short-term context. A behavioral analytic around suspicious encoded PowerShell or unusual user-level autorun creation may survive infrastructure rotation better.
 
-##### Do not turn the whole infrastructure set into a detection or block list
+##### Route Infrastructure Findings According to the Defensive Need
 
 A package may contain candidate related infrastructure.
 
@@ -11244,6 +13266,19 @@ Capture:
 
 A copied checklist with no owner or version may be useful background but is not enough to confidently describe current policy.
 
+##### Complete the deferred 4.2.2 local-requirements demonstration
+
+Module 4.2 taught the method for checking a detection against shop requirements, but it deliberately did not invent a local checklist. Now that you have located and verified the real requirements source, return to [Part B of the Detection Validation Practical](#detection-validation-practical--draft-analytic-test).
+
+Using the same validation record from 4.2:
+
+1. identify the authoritative local requirements source, owner, and version/effective date;
+2. mark each applicable requirement **met**, **missing**, or the locally authorized equivalent;
+3. cite the evidence for each status;
+4. record any requirement you cannot evaluate because a local artifact, authority, or data source is still unavailable.
+
+This is the practical demonstration for task `4.2.2`. If the verified local list is unavailable, record an onboarding/qualification gap rather than substituting Sigma fields or fictional DYA policy.
+
 ##### Part 2: the local lifecycle path
 
 Map how a detection becomes official:
@@ -11333,7 +13368,7 @@ Find the current requirements list, its owner and version, and the real review/d
 
 Follow verified local process. When a piece is missing, identify that specific onboarding gap so the organization can close it.
 
-This completes the **4.x Detection Engineering track**.
+This completes the **4.8 site-specific Detection Engineering module**.
 
 #### References and Further Reading
 
@@ -11512,79 +13547,71 @@ Later, DE may decide to:
 
 Retirement should be an engineering decision, not simply a reaction to age.
 
-#### Distinctions Worth Keeping
+#### Distinctions That Keep Detection Engineering Focused on Coverage
 
-##### Nomination ≠ finished detection
+Detection Engineering receives requests from many parts of the defensive workflow. The following distinctions help the engineer identify the actual problem before deciding to change a rule.
 
-SOC, hunt, and CTI can identify a need.
+##### A nomination identifies a defensive need; DE turns it into a coverage decision
 
-DE owns the engineering decision and lifecycle.
+SOC, Hunt, and CTI can identify behavior that deserves review and provide an evidence pointer. They do not need to deliver a finished production detection.
 
-##### Rule syntax ≠ production readiness
+DE evaluates the need, checks existing coverage and data, and determines whether engineering work is warranted.
 
-A query that parses successfully is not automatically:
-- analytically sound;
-- adequately tested;
-- supported by production telemetry;
-- deployable;
-- maintainable.
+##### Valid syntax is only one requirement for production readiness
 
-##### New need ≠ new rule
+A query that parses correctly may still be analytically weak, poorly tested, unsupported by production telemetry, operationally noisy, or difficult to maintain.
 
-Always check existing coverage first.
+Production readiness comes from the combination of sound logic, usable data, validation, deployment controls, and ongoing ownership.
 
-Reuse or modify when that produces better coverage with less duplication.
+##### A new defensive need does not always require a new rule
 
-##### Tune request ≠ new nomination
+Before creating coverage, check whether an existing analytic already addresses the behavior or can be safely extended.
 
-A tune request concerns a **live analytic**.
+Reuse or modification can provide better coverage with less duplication and a smaller maintenance burden.
 
-A nomination introduces a new or newly identified defensive need.
+##### Tune requests and new nominations enter the lifecycle at different points
 
-##### Exception ≠ successful tune
+A **tune request** concerns a live analytic whose behavior needs adjustment.
 
-An exception is successful only if it reduces the intended benign condition **and still preserves the target detection behavior**.
+A **nomination** introduces a new or newly recognized defensive need that DE must evaluate.
 
-##### Detection gap ≠ data gap
+Both require evidence, but the engineering question is different.
 
-If required telemetry exists but no analytic covers the behavior, that is a detection/coverage gap.
+##### An exception succeeds only when it fixes the benign condition without losing the target behavior
 
-If the required telemetry is absent or unusable, that is a visibility/data-path problem.
+Removing a noisy benign case is not enough. Re-run the positive test after the exception and confirm that the intended malicious or unauthorized behavior is still detected.
 
-##### Silent analytic ≠ no activity
+This makes tuning a validation problem rather than simply a reduction in alert volume.
 
-No alert may reflect:
-- no target behavior;
-- logic failure;
-- collection failure;
-- ingestion failure;
-- parsing change;
-- population gap;
-- late data.
+##### Detection gaps and data gaps require different engineering responses
 
-Silence must be explained before it is trusted.
+If the required telemetry exists but current analytics do not adequately cover the behavior, the problem is detection/coverage.
 
-##### Detection ≠ enforcement
+If the required telemetry is missing, malformed, delayed, or absent from part of the target population, the problem is visibility or the data path.
 
-Detection answers:
+Trace the data before changing analytic logic.
 
-> Should this behavior produce defensive visibility or an alert?
+##### A silent analytic has several possible explanations
 
-Blocking, containment, or prevention follows the organization's control-ownership model.
+No alert may mean the target behavior did not occur. It can also reflect logic failure, collection or ingestion failure, parsing changes, population gaps, or late data.
 
-##### Deployment ≠ completion
+A trustworthy conclusion about silence comes from checking the path from source event through analytic evaluation.
 
-Production detections require:
-- ownership;
-- monitoring;
-- maintenance;
-- tuning;
-- revalidation;
-- eventual replacement or retirement.
+##### Detection and enforcement are different defensive controls
+
+Detection asks whether the organization should create durable visibility or alerting for a behavior.
+
+Blocking, containment, prevention, and other enforcement actions belong to the control owners defined by the organization. The same evidence may inform both decisions without making them the same function.
+
+##### Deployment begins production ownership
+
+Once an analytic reaches production, DE still owns monitoring, maintenance, tuning, revalidation, and eventual replacement or retirement.
+
+The lifecycle continues because telemetry, environments, adversary behavior, and operational needs change.
 
 #### Integrated Review Exercise
 
-Use this A12 detection card:
+Use this **hypothetical Detection Engineering practice card based on A12 behavior**. The deployment result below is an exercise condition, not a canonical A12 outcome:
 
 > **Need:** durable detection for A12-style encoded PowerShell  
 > **Existing coverage:** partial; current analytic misses some variants  
@@ -11878,7 +13905,7 @@ The final response returns to the original question.
 
 For example:
 
-> Available evidence supports the update domain's association with the A12 activity set and is consistent with attempted payload delivery. Current evidence does not establish successful execution of `update.exe`.
+> We assess that the update domain was likely used for attempted payload delivery in A12. WS-JLEE requested `/update.exe` from that destination during suspicious activity, but current evidence does not establish successful transfer or execution of the file.
 
 The response separates:
 
@@ -12288,216 +14315,182 @@ What connects them is disciplined use of evidence, appropriately bounded judgmen
 
 ## Appendix A — The Complete A12 Case Study
 
-The following narrative preserves the established A12 story, including its nine original stages and closing handoffs. Read it after the main course to see how the same case moves between desks.
+Read this complete case after the main course to see how the same evidence moves between SOC, CTI, Threat Hunting, and Detection Engineering. The canonical narrative is reproduced here, with book navigation adapted from its source links.
 
-> **Review note:** Some judgments in this established narrative are stronger than the evidence boundaries taught in the revised chapters. Those differences remain visible for review and are documented in [the QA report](qa-report.md#a12-consistency-review). The narrative has not been rewritten to resolve them.
+### A12 — Following the Evidence Across Four Defensive Roles
 
-### A12 — the same incident from four desks
+Dixon, Yamada, & Associates (**DYA**) is the fictional law firm used throughout this course. In Building C, the workstation **WS-JLEE** (`10.10.8.40`) is associated with `jlee` / `BUILDINGC\jlee`. The investigation involving that workstation is **A12**. A vendor report uses the tracking label **Pink River Dolphin (PRD)**; that name tells us how the vendor describes activity, while the identity of the actor responsible for this case remains unresolved.
 
-Dixon, Yamada, & Associates is a law firm. This course uses it as the firm in the scenario, not as live policy. The adversary name on the vendor PDF is **Pink River Dolphin** (**PRD**). That label is a name on a page, not proof of who they are.
+You have already encountered parts of A12 in the lessons. This retelling brings them together so you can follow how an observation becomes an investigation, an intelligence question, a hunt lead, and a detection-coverage review. As you read, watch what each role receives, how it reasons from that evidence, and what the next person needs to continue. The case becomes more useful through these handoffs even when some questions remain unanswered.
 
-Building C has a user workstation **WS-JLEE** (`10.10.8.40`). The account is `jlee` / `BUILDINGC\jlee`. The incident on that host is **A12**.
+Before reading closely, skim the nine stages and the closing product table. Try to predict where the evidence supports an observation, where an analyst must make an assessment, and where another source would be needed. Return to the table afterward and check whether you can explain why each product has a different purpose.
 
-The **alert** is not the whole incident. The **notification** is not the whole investigation. CTI and hunt add facts the SOC product did not owe. Same evidence can sit on more than one desk. The *product* is different.
+One question stays open from the beginning: **how access first occurred**. The case later shows `invoice.vbs` in a Temp path and the process activity that followed, but those observations do not identify the entry mechanism. A phishing message, malicious web path, public-facing exploit, valid-account session, or trusted-third-party path would require its own supporting evidence. Treat those as hypotheses unless the case supplies that evidence.
 
-This story is the syllabus again, as that one case.
+#### 1. Start with the process event behind the alert
 
----
+The first record in the SOC queue is a SIEM alert for `wscript.exe` launching `powershell.exe -enc ...` on **WS-JLEE** as `jlee`. The rule has matched a process pattern involving an encoded-command argument. An analyst can verify that pattern from the recorded fields and explain why the rule selected the event.
 
-#### 1. The alert in the queue
+Understanding the match is the beginning of the investigation. The encoded argument alone leaves the command's behavior and authorization unresolved. Several other useful details, including a related destination, URI, and file hash, are absent from the initial alert. Their absence tells the analyst what additional evidence to seek before drawing a broader conclusion about the activity.
 
-A SOC analyst gets an alert.
+The analyst records the host, account, time, rule identity, parent process, and child command line, then traces how the alert was produced. In this example, endpoint telemetry reaches an ingested table, the SIEM rule evaluates the event, and the SIEM creates the alert. Tracing that path makes it possible to connect the alert to the actual logic and data that produced it. A Suricata stage would belong in a different detection path only if the source records showed one.
 
-The detection that fired is the SIEM rule they already know how to read ([1.3](#131--sigma-rules)). It keys on a **process** create: parent `wscript`, child PowerShell with `-enc`, user `jlee`, host **WS-JLEE**. That is the first object in the queue. That is **A12**.
+The next collection step follows the question. At this stage the analyst needs related host records. Packet capture may become useful once a network flow and a question about that flow have been identified.
 
-The job in this beat is to investigate the fired object ([1.4.1](#141--alert-context-and-investigation)), not to write a new rule.
+#### 2. Add context while keeping the classification open
 
-Present on the alert: host, user, time, rule name, parent, the encoded command line. Missing until they pull more: destination IP, URI (the path on the server), file hash. Missing is a gap, not “benign.” The command line on the alert is the command line they have.
+The analyst collects related endpoint records for **WS-JLEE** and the case time window. The broader case includes `wscript.exe` running `invoice.vbs` from a Temp path and launching encoded PowerShell. A file event supplies the `invoice.vbs` artifact and a hash. Endpoint network telemetry associates the PowerShell process with an outbound connection to `203.0.113.88:8080`.
 
-**Configuration:** PowerShell with `-enc` and parent `wscript` would fire.
+Zeek adds the protocol view: an HTTP `GET` request with Host `prd-updates.net` and URI `/update.exe`. Correlating the host, time, and connection context allows the analyst to read these records together while retaining what each source actually observes.
 
-**Upstream hops:** SIEM rule → SIEM alert. This is a SIEM-only process alert. There is no Suricata hop unless the given includes a Suricata rule.
+| Source | What it contributes | Question still open |
+|---|---|---|
+| Process evidence | The Script Host–PowerShell chain and recorded command-line context | What was authorized, and what did the encoded command do? |
+| File evidence | Temp `invoice.vbs` and its recorded hash | What does further analysis establish about the file? |
+| Endpoint network evidence | A process-associated connection to `203.0.113.88:8080` | What was exchanged over that connection? |
+| Zeek HTTP evidence | A request to `prd-updates.net` for `/update.exe` | Did a response transfer the file, and did the file execute? |
 
-This alert is process-only. A packet capture (**PCAP**) is **not applicable** until they have a flow.
+Retained packets, if available, could help answer a specific traffic question. The analyst would record which flow and time were examined and what the packets added. The case does not supply a packet-capture result that confirms transfer, so the request remains the established network observation.
 
-Registry activity is not required to close this first pass. Hunt will use it later (**[3.x](#part-iv--threat-hunting)**).
+The file hash also provides a possible enrichment starting point. An approved VirusTotal lookup would preserve the exact queried value, report reference, time, and result. For this case, the record is **lookup result not supplied**. There is no supplied service verdict to interpret as either malicious or benign, and no live lookup was performed for this publication.
 
----
+A hash could also locate an existing ANY.RUN report. That retrieval can be useful without possessing a sample for a new detonation. Submitting a file for a new run is a separate workflow with its own input and handling requirements. The analyst chooses between those actions by asking which result could resolve the current uncertainty.
 
-#### 2. Triage
+The combined evidence gives the analyst a reason to investigate and escalate, while the **malicious/unauthorized target-condition assessment remains unresolved**. A true-positive label would require evidence of that condition in addition to the rule match. Preserving the unresolved classification lets another analyst see both the suspicious pattern and the work still needed to assess it.
 
-They put a label on what they have, and they cite it ([1.4.2](#142--alert-classification)).
+There is also no supplied alert specifically for the `/update.exe` request. This raises a **coverage question**. Establishing a false negative would require the assessed target condition, an expectation that a detector should cover it, evidence that the necessary telemetry reached that detector, and a checked alert outcome for the relevant scope and time. Those conditions have not been established here, so the case carries the question forward for review.
 
-**True positive (TP).** The rule said this process chain was bad. The activity is the activity the rule is for: `wscript` launched encoded PowerShell on **WS-JLEE**. Cite: parent + `-enc`. “Malicious” without a field is a slogan, not evidence.
+#### 3. Give incident response and leadership the products they need
 
-They pull related host logs for that host and window ([1.4.1](#141--alert-context-and-investigation) / [1.1](#111--endpoint-activity-the-map)). Those logs are events: a program ran, a file changed, this host talked.
+SOC opens the incident record and routes the affected host to **Sam** in Incident Response. The handoff includes the observed process chain, related file and network records, and the questions that remain open. Sam can work from those observations while further analysis continues.
 
-| Kind | What this beat pulled |
-|------|------------------------|
-| **Process** | The create that fired: `wscript` → `powershell -enc` |
-| **File** | A file event **adds** Temp `invoice.vbs` and its hash |
-| **Host-network** | Encoded PowerShell connected outbound to `203.0.113.88:8080`. The process is named. URI may be empty. |
+The leadership update has a narrower purpose. It can explain that **WS-JLEE**, associated with `jlee`, generated a suspicious Script Host–PowerShell alert and that investigation identified Temp `invoice.vbs`. Detailed hashes, registry paths, and subsequent enrichment belong in the technical record where the receiving analysts can use them. Selecting detail by audience makes the update easier to act on without weakening the evidence retained in the case.
 
-Registry is a fifth kind. It is not required to close this pass. Image and driver load are not this incident.
+The course uses classroom response clocks and approved-ticket examples to teach timely routing. Actual deadlines, recipients, and approval paths come from the learner's organization. A12 demonstrates why those routes matter without assigning DYA a complete operating policy.
 
-If the tenant has no parent process, they write that the logs **fail to add** it.
+Escalation and analytical certainty answer different questions. The observed activity can warrant response while the team continues to establish authorization, delivery, and scope. Recording that uncertainty in the handoff helps Sam understand the basis for the referral.
 
-The file event has a hash. They look that hash up on VirusTotal ([1.4.1](#141--alert-context-and-investigation) / [0.7](#07--external-tools)) during this first pass. The one-line result: the hash is **not in VT**. Relations is a later CTI skill ([2.4](#241--internal-threat-intelligence-platform)), not this first pass. AnyRun is the wrong first tool: they have a hash, not a sample to detonate.
+#### 4. Turn the network question into a bounded RFI
 
-Once they have a flow, they can read the talk two ways. A **host-network** event names the initiating process: encoded PowerShell connected to `203.0.113.88` on port **8080**. A Zeek HTTP log names the protocol: method `GET`, Host `prd-updates.net`, URI `/update.exe`. Zeek does not name the process that opened the socket. If a capture exists for that flow, PCAP can **add** the URI when the alert only had IP:port.
+SOC now has enough context to ask CTI a focused question:
 
-Nothing in the queue fired on that download. That is a **false negative (FN)**. A false negative is a miss: activity that should have been detected and was not. It is not a fired alert they dislike.
+> **Was the update domain the host that successfully delivered the payload in A12?**
 
-The product of this beat is a TP process alert, a file path, a VT line on the hash, and a named miss on the download. Scan / root / user is a later category ([1.4.4](#144--common-alert-categorizations)). Attribution is not a SOC triage field.
+**Jordan** owns this Request for Information, or **RFI**. The existing incident supplies the scope: WS-JLEE, the update domain, `/update.exe`, and the relevant case window. The question asks CTI to distinguish an attempted retrieval from a successful delivery.
 
----
+At intake, Jordan can explain why the question matters and identify the missing evidence. The HTTP request supports an attempted retrieval, while confirmation of delivery would require response, transfer, or resulting host-artifact evidence. The requester and Jordan clarify the needed-by time and any handling restrictions through the actual request process.
 
-#### 3. IR and leadership
+Because the question supports an active incident, the classroom example gives it priority over routine background reading, subject to the organization's priorities. That reasoning establishes a useful next action without inventing a universal queue rule. If analysis later raises a separate question about infrastructure control or actor identity, it can be recorded as a follow-on requirement with its own scope.
 
-SOC opens the incident product and routes it ([1.5](#151--report-types)).
+#### 5. Answer the RFI with a judgment the evidence can support
 
-**Type:** incident report — the case record for IR. The adjacent type is a **Request for Information (RFI)**. This product is the case, not the question ([1.5.1](#151--report-types)).
+Jordan evaluates the request alongside the suspicious host activity. Requesting an executable-looking resource from the associated destination during that activity supports an assessment of the domain's likely delivery role. Successful transfer and execution remain separate questions because the supplied records do not show those outcomes.
 
-**Route** (classroom chart — not a live shop matrix): recipients are the SOC queue and **IR**. Leadership awareness is **yes** — the duty SOC lead. Approved channel is the **ticket**. Personal chat to the IR analyst only is the wrong path ([1.5.3](#153--notification-and-distribution)).
+A useful response is:
 
-**Sam** has the host.
+> We assess that the update domain was **likely used for attempted payload delivery** in A12. WS-JLEE requested `/update.exe` from that destination during the suspicious activity, but current evidence does not establish successful transfer or execution of the file.
 
-The leadership product is one sentence: **WS-JLEE** / `jlee`, `wscript` → encoded PowerShell, Temp `invoice.vbs`. The file hash and the Run key are not leadership fields.
+The answer gives the requester an assessment now and identifies what additional evidence would be needed to answer the successful-delivery question fully. “Likely” expresses the probability of the assessed role. Any confidence statement should separately explain the strength and limitations of the sources supporting that judgment.
 
-Classroom clocks ([1.5.2](#152--reporting-timeline-requirements)), not live DYA policy: the **submit — incident** clock is 30 minutes from the decision that an incident report is required. That is not the alert 15 / 45 clocks ([1.4.5](#145--sla--response-time-goals)).
+Frameworks help Jordan make the reasoning easier to inspect. ATT&CK provides a behavioral description for the observed PowerShell execution through **T1059.001 – PowerShell**. The mapping describes the observed behavior; the authorization assessment still depends on the investigation. Mapping **T1105 – Ingress Tool Transfer** would require evidence of transfer beyond the request currently available.
 
----
+The Diamond Model organizes the entities and relationships:
 
-#### 4. The question for intel
+| Vertex | Supported A12 content |
+|---|---|
+| **Victim** | WS-JLEE, `jlee`, and DYA |
+| **Capability** | Encoded PowerShell; `/update.exe` as the requested candidate payload name |
+| **Infrastructure** | `prd-updates.net` and `203.0.113.88` |
+| **Adversary** | Unresolved; PRD remains a vendor tracking label rather than an independently established actor identity |
 
-SOC still needs a fact they do not have: is the update domain / `203.0.113.88` the payload host — the host that served the file?
+The unfilled adversary identity helps the reader see where attribution would require further evidence. The Cyber Kill Chain offers another view, focused on progression, but assigning a stage still requires evidence of the role the activity played. A process launch or request cannot establish every later stage simply because the names suggest an attack sequence.
 
-That ask is an **RFI**. It sits beside the incident. It is not a second case ([1.5.1](#151--report-types)). Recipients are **CTI**. Leadership awareness is **no**, unless the shop chart says otherwise. Channel is the ticket or the approved RFI form. Texting a CTI friend is the wrong path ([1.5.3](#153--notification-and-distribution)).
+Jordan returns the bounded answer with its evidence and remaining collection need. That closes the communication loop for the answer available now while allowing any agreed follow-up to remain visible.
 
-**Jordan** owns the RFI.
+#### 6. Use infrastructure overlap to generate a testable candidate
 
-Classroom clock: **submit — RFI** is 60 minutes from when the question arises ([1.5.2](#152--reporting-timeline-requirements)).
+CTI can also enrich the destination already associated with A12. Registration and DNS information identify the nameserver pair `ns1.cdn-test.net` and `ns2.cdn-test.net`. The supplied SOA RNAME is `hostmaster.cdn-test.net`, which provides zone-contact context. These fields help the analyst choose further lookups; their presence alone does not identify the responsible actor.
 
-The body is that one question. CTI will answer it. They will not rewrite the leadership notify.
+A second name, **`login-prd.net`**, shares the uncommon nameserver pair and the observed A address `203.0.113.88` during the relevant period. The overlap is specific enough to investigate as **candidate related infrastructure**. Its value comes from the shared features, their timing, and the question they make testable.
 
----
+A concise record is:
 
-#### 5. CTI answers
+| Seed | Shared characteristics | Candidate | Next analytical step |
+|---|---|---|---|
+| `prd-updates.net` | Uncommon NS pair and the same observed A address during the relevant period | `login-prd.net` | Compare registration and DNS history, hosting context, and independent evidence that could strengthen or weaken the relationship |
 
-Jordan receives, evaluates, prioritizes, and answers (intake: [2.1.5](#215--rfi-intake-and-prioritization); response: [2.7.4](#274--rfi-responses-and-closure)).
+Several objects can share a provider or service without sharing an operator. The next lookup therefore tests that alternative alongside the possible operational connection. Common control would require corroboration; an activity-set or campaign assessment would additionally need evidence of related activity. Actor attribution is a further judgment with its own evidentiary burden.
 
-**Evaluate:** The question is bounded. They have the Zeek **A** record — the name-to-IP the network sensor logged — and the host file. They can answer.
+The address also sits inside **Example Cloud's `203.0.113.0/24`**. The allocation tells the analyst about the hosting range, but one case address gives too little specificity to treat all neighboring addresses as A12 infrastructure. The range is **rejected as too broad for promotion**. Expiration would describe a different lifecycle situation in which a previously valid indicator had lost its usefulness.
 
-**Prioritize:** An incident is open, and IR already has the host. Work now. This does not sit behind standing work such as a blog read.
+The result of this enrichment is a documented candidate and a next question. The record retains both the observed overlap and the limits of the relationship claim so later analysis can revise it without losing its history.
 
-The objects on the desk sit on three layers ([2.1.1](#211--difference-between-data-information-and-intelligence)). `203.0.113.88` is **data**. The Zeek A record plus the file on **WS-JLEE** is **information**. The RFI answer is **intelligence**: a judged answer to the question.
+#### 7. Let the protective-control owner evaluate the candidate
 
-**Respond:** **Likely** yes — the update domain / `203.0.113.88` is the payload host for A12. Treat it as such.
+The candidate may be relevant to a protective-control decision because the organization is investigating activity involving related infrastructure. CTI packages the object, shared characteristics, relevant observation period, and uncertainty for the function responsible for those controls. Depending on the organization, that may be a firewall team or an Information Assurance function.
 
-**Likely** is estimative language ([2.2.1](#221--estimative-language)): more probable than not. It is not the confidence scale from [2.1.8](#218--attribution). Medium confidence names how good the sourcing is (Zeek A and the host file). It is not a country.
+The receiving owner applies local thresholds and considers the consequences of blocking, monitoring, or taking no action. CTI's contribution is the assessment and its basis; the control owner's contribution is the authorized operational decision. Keeping both visible prevents the candidate from quietly becoming a confirmed malicious destination as it moves through a ticket.
 
-Diamond ([0.6.2](#062--diamond-model) / [2.3.2](#232--diamond-model-application-in-cti)), filled only from evidence this beat has:
+The canonical case leaves the final control action unspecified. Sam continues to own the host response, and Jordan's intelligence record remains available to support the decision. The same evidence can later inform detection work without turning a control request into a completed detection change.
 
-| Vertex | Fill |
-|--------|------|
-| **Victim** | **WS-JLEE** / `jlee` / DYA |
-| **Capability** | Encoded PowerShell; `update.exe` |
-| **Infrastructure** | Update domain / `203.0.113.88` |
-| **Adversary** | Unknown cluster — **not** “PRD APT” |
+#### 8. Build a hunt around the observed registry configuration
 
-Weakest is **Adversary**. That gap constrains the write-up. The weakest vertex is the next question, not a guess. Beacon POST is not this activity set.
+Threat Hunting uses the case to ask whether related behavior or artifacts appear elsewhere in the environment. At this stage, the course brings forward registry evidence that was not required to explain the initial process alert: PowerShell set the current-user Run value **`Updater`** to **`%TEMP%\update.exe`**.
 
-The answer is not a second incident. Local queue policy is obtain-and-follow ([2.8](#281--local-intelligence-requirements-and-priorities)). A **Priority Intelligence Requirement (PIR)** list is a shop document; they obtain it.
+That observation establishes a configured persistence mechanism. The target file's existence, its successful launch, and persistence taking effect remain unresolved. This distinction gives the hunter a concrete search lead while keeping the result of that configuration open.
 
----
+A bounded hypothesis could be:
 
-#### 6. One hop
+> If related A12 persistence configurations exist on other user workstations, we expect to find the `Updater` Run value pointing to `%TEMP%\update.exe`, or related case artifacts, within the selected time window.
 
-While answering, CTI enriches the seed they already have: the update domain / `203.0.113.88`.
+The hunter begins with the observed value and target path, then may broaden deliberately to relevant variants. Registry and file telemetry determine what the search can test. `invoice.vbs` and the domain/address/request pattern provide additional case leads, with matches evaluated in their own context. A filename or registry-value hit is a candidate for investigation before it becomes a finding of another affected host.
 
-**Registration (2.5.3).** They look up registration on the domain (RDAP first; WHOIS if RDAP has no record). The nameservers on the record are `ns1.cdn-test.net` and `ns2.cdn-test.net`. Distinctive nameservers are enrichment, not a country. The IP sits in `203.0.113.0/24`. The org on that block is **Example Cloud** — who holds the address, not the actor.
+ATT&CK's **T1547.001 – Registry Run Keys / Startup Folder** helps describe the technique associated with the configuration. The practical hunt still needs a defined population, time window, evidence sources, and reviewable results. Those details make it possible for another hunter to repeat the work and understand the limits of a negative result.
 
-**Authoritative DNS (2.5.4).** The SOA (Start of Authority) RNAME is `hostmaster.cdn-test.net`: the mailbox that runs the zone is `hostmaster` at `cdn-test.net`. That is an operator mailbox, not a country. The sibling name **`login-prd.net`** publishes the same nameserver pair and the same A record (`203.0.113.88`). Same control and same address. The whole Example Cloud prefix is not theirs.
+The package records the question, scope, look-fors, telemetry, findings if established, and visibility or coverage questions. Any new evidence of affected hosts would go to the incident-response process. A12 leaves the hunt's host count and search results unspecified, so the handoff preserves the question and available evidence without implying that an outbreak has been found.
 
-**Hop sentence (2.5.5).** Seed | shared characteristic | candidate | why not coincidence:
+#### 9. Give Detection Engineering a need and an evidence pointer
 
-`prd-updates.net` / `203.0.113.88` | distinctive nameserver pair `ns1.cdn-test.net` + `ns2.cdn-test.net` | candidate **`login-prd.net`** | same nameservers, same A, not a public resolver.
+The case and hunt package provide **a need and an evidence pointer** for Detection Engineering: assess whether current coverage adequately addresses the relevant behavior, using the documented process, registry, and network observations. A completed production rule is not required from the nominator; DE first evaluates the coverage question.
 
-They reject the whole `203.0.113.0/24`. Shared hosting is not a hop.
+The engineer checks whether an existing analytic can be reused, whether the necessary telemetry reaches the detection system, and whether the requested behavior falls within the intended coverage. This review can distinguish a gap in analytic logic from a collection or visibility problem. It can also show that the current coverage is already adequate.
 
-**IOC handling (2.5.1).** Keep the cited current objects: the update domain, `203.0.113.88`, `login-prd.net`, and the hash of Temp `invoice.vbs`. Expire the whole `203.0.113.0/24` as shared-infrastructure noise. Link the sibling to the seed because they share nameservers and the same A — one activity set. “PRD APT” on the PDF is not a link.
+| Possible review result | Reasoning that would support it |
+|---|---|
+| **Reuse or no new rule** | Existing coverage already addresses the need adequately. |
+| **Change** | An existing analytic needs a supported improvement. |
+| **Add** | The behavior warrants detection and available telemetry can support coverage that is currently missing. |
+| **Data or visibility gap** | The needed evidence is absent, incomplete, or not reaching the detection system. |
+| **Route to another owner** | The requested outcome concerns blocking, containment, or another function. |
 
-**So what here (2.6.2).** DYA is a law firm that runs Windows workstations. Encoded PowerShell and the update-domain fetch already happened on **WS-JLEE**, so the finding applies here. The sibling shares that payload host’s control; if it is live, other workstations could use it. That is relevance and impact, not a PIR and not a country.
+The unalerted request remains a question within that review, rather than a pre-established false negative. If the review later establishes the required target condition, coverage expectation, telemetry, and failed alert outcome, the classification can be updated with that basis.
 
-`login-prd.net` is extra infrastructure. It is not a SOC notify field. It is not a hunt of every name in the zone.
+The case ends with the package available for this coverage review. It supplies no completed review outcome, deployed analytic, validation result, eradication, or final incident resolution. Keeping that endpoint explicit allows the later engineering lessons to explore possible follow-through without presenting their practice conditions as events that happened in A12.
 
----
+#### What you should be able to explain afterward
 
-#### 7. Block, not a detection
+The same observations support several products because the roles need to answer different questions. Each handoff should preserve the evidence and reasoning while making the next decision clear.
 
-The extra name goes to whoever **blocks** — firewall or **IA** (Information Assurance) ([0.3](#03--jobs-in-one-sentence)). That block is the change that follows from the relevance line: keep other workstations from using the sibling. It is not a new course, and it is not a Detection Engineering deploy. DE will **reject** a package that is only a list of IPs to put on the firewall ([4.5.2](#45--hunt-and-intel-packages)).
+| Role | Question carried forward | Product at this point in A12 |
+|---|---|---|
+| **SOC** | What happened, what remains uncertain, and who needs the case? | Investigation record, incident route, concise leadership update, and RFI |
+| **CTI** | What role did the destination likely play, and what relationship is worth testing? | Attempted-delivery assessment, explicit transfer/execution gap, and candidate infrastructure record |
+| **Threat Hunting** | Where else could the supported behavior or artifacts appear within a bounded scope? | Search hypothesis and package retaining its evidence, scope, and unresolved results |
+| **Detection Engineering** | Is a coverage change justified, and can the available data support it? | Need and evidence pointer for coverage/visibility review; outcome still open |
+| **Incident Response** | What host-response work is required? | Continued ownership of the affected host by Sam |
+| **Protective-control owner** | Does the candidate justify an action under local policy? | Evidence for a control review; action still open |
 
-SOC still owns the incident. IR still has the host. CTI still owns the answer and the hop.
+By this point, you should be able to trace the observations through those products, explain why the RFI answer stops at attempted delivery, and distinguish a useful hunt or infrastructure lead from a confirmed finding. You should also be able to name the additional evidence needed for a TP, an FN, successful transfer, or a stronger infrastructure relationship.
 
----
+The course principle applies throughout: **Describe what the evidence shows first. Then decide what it means.** A clear account of what remains uncertain gives the next analyst a reliable place to continue.
 
-#### 8. The hunt package
+#### Related course reading
 
-Hunting exists to find what the alerts **missed**, and to name **gaps** the detections cannot see ([3.1](#31--purpose-of-threat-hunting)). The hunt product is a package, not a rewrite of the SOC ticket.
-
-The first alert did not require the registry Run key. Hunt uses it.
-
-**Gate (3.4.1):** the CTI leftovers are hunt-worthy. There is a question, telemetry that could answer it, and a bound scope. “APT exists” is awareness-only. Sam already has **WS-JLEE**; that host is a hand-off to IR. Hunt is *who else*.
-
-**Type (3.2.1):** **hypothesis-driven**. If more A12 persistors exist, we should see Run **`Updater`**. The leftovers came from CTI; the start of *this* search is the if/then, not a rewritten ticket. Execute is type plus look-for, not a SIEM query and not a [3.2.2](#322--hunt-development-concepts) card.
-
-**Leads (3.4.2):** keep current-user (**HKCU**) Run **`Updater`** → `%TEMP%\update.exe`. Keep `GET /update.exe` `:8080`. Keep more `invoice.vbs`. Drop “they use persistence.” Drop the `/24`.
-
-**Question:** if more A12 persistors exist, we see Run **`Updater`**, `update.exe`, or another `invoice.vbs`.
-
-**Hunt line (3.6.3):** named technique = HKCU Run **`Updater`** → `%TEMP%\update.exe`. Class = persistence. Unique pattern = the value name **`Updater`**, not any Run key. Scope = user workstations, a bounded window, registry + file. Why not the whole tactic: this value, not every autorun.
-
-ATT&CK can map *this* hunt to TA0003 / T1547.001 and name the detection gap ([3.5.1](#351--using-mitre-attck-for-hunt-planning)). It does not replace the question.
-
-How the shop **starts** a hunt, where the write-up lives, and who receives the package is local ([3.7](#371--hunt-control-and-lead-management)). A new hunter obtains that path. If no one has shown it, they write **not yet**.
-
-The product is a **package**: more hosts, the gap, something DE can take. Same package. Different desks.
-
----
-
-#### 9. DE reviews the package
-
-Detection Engineering does not own the block list. They own the set of detections ([4.1](#41--what-detection-engineering-owns)).
-
-SOC, hunt, or CTI may **nominate** ([4.3](#43--nominations-from-soc-hunt-and-cti)). The nomination needs a **need** and a **pointer**. A drafted rule only if they have one. The local form is [4.8](#48--site-specific-detection-engineering-knowledge) — obtain it.
-
-The hunt package is the pointer. The need is the FN download and the persistence the first alert missed. Need and pointer are present, so DE **accepts** the nomination for work. The nominator does not owe a drafted rule. DE will finish it. Send-back would be a missing need or pointer. Reject would be a block, an investigation, or “write me SIGMA” as [1.3](#131--sigma-rules).
-
-Then DE reviews the package like any other nomination ([4.5](#45--hunt-and-intel-packages)):
-
-- **Add** — a detection this package supports, if the shop does not already cover `Updater` / the `:8080` URI.
-- **Change** — only if a live rule should change.
-- **No new rule** — valid, if they already cover it.
-- **Reject** — if someone handed them IPs “for the firewall.” That is beat 7, not this desk.
-
-They do not write the detection text (SIGMA or SIEM) in this beat ([1.3](#131--sigma-rules)). Who finishes what stays on the card.
-
----
-
-#### Close
-
-Four products. One chain.
-
-The same `GET /update.exe` `:8080` is a SOC false negative, the CTI RFI seed, a hunt lead, and a DE gap. The evidence is the same. The products are not. A smaller shop may have one person write two of them ([0.5](#05--where-the-jobs-lightly-overlap)).
-
-| Desk | Product |
-|------|---------|
-| SOC | TP process alert on **A12**; VT line: `invoice.vbs` hash not in VT; incident to **Sam**; leadership one-liner; RFI to **Jordan** |
-| CTI | Answer: likely the payload host. Hop: `login-prd.net`. Extra name to block. |
-| Hunt | Package: **`Updater`** / `update.exe` / more `invoice.vbs`. Not a rewritten ticket. |
-| DE | Accept for work ([4.3](#43--nominations-from-soc-hunt-and-cti)). Then add or not ([4.5](#45--hunt-and-intel-packages)). Not a block list. |
-
-Firewall / IA took the extra name. IR still has the host.
+- [Alert context and investigation — 1.4.1](#141--alert-context-and-investigation) and [classification — 1.4.2](#142--alert-classification).
+- [RFI intake — 2.1.5](#215--rfi-intake-and-prioritization) and [response and closure — 2.7.4](#274--rfi-responses-and-closure).
+- [Analytical frameworks — 2.3](#23--analytical-frameworks-introduction), [ANY.RUN — 2.4.4](#244--anyrun), and [IOC handling — 2.5.1](#251--ioc-handling-and-enrichment-concepts).
+- [Infrastructure pivots — 2.5.5](#255--identifying-additional-adversary-infrastructure-from-seed-indicators) and [correlation — 2.5.7](#257--correlation-link-analysis-and-campaign-tracking).
+- [Technique-focused hunting — 3.6.3](#363--hunt-for-a-specific-persistence-or-privilege-escalation-technique) and [DE package review — 4.5](#45--hunt-and-intel-packages).
 
 ## Appendix B — Proficiency Mapping
 
@@ -12554,6 +14547,24 @@ Examples:
 - `4d` = Highly proficient + advanced theory
 - `B`  = Subject knowledge at the Principles level
 - `3c / B` = Both a task code and a subject knowledge code apply
+
+---
+
+### Instruction, Demonstration, and Qualification
+
+The proficiency codes above describe the **required end-state performance**, not merely lesson completion.
+
+Use the three-state model in [Qualification Demonstration and Sign-Off Standard](qualification-demonstration-signoff-standard.md):
+
+> **Taught / Prepared → Demonstrated → Qualified / Signed Off**
+
+- A lesson or knowledge check can prepare a learner for a task without proving the mapped task-performance level.
+- A **Task (`T`)** row requires observable performance before qualification sign-off.
+- The smallest honest demonstration should prove the verb in the requirement; not every task needs a full lab.
+- Local/site-specific tasks require the real approved local process or an authorized local simulation.
+- The working crosswalk for all current task rows is [qualification-evidence-map.md](qualification-evidence-map.md).
+
+Do not reinterpret a matrix verb such as **execute**, **perform**, **test**, **produce**, **disseminate**, or **follow** as a weaker planning/discussion exercise merely because the lesson is concept-first.
 
 ---
 
@@ -12702,9 +14713,23 @@ Examples:
 - K: 0.8 – Environment / signal flow
 - T: 0.8.1 – Identify which kind of fact applies and why it is not the adjacent kind
 
-#### Mapping — 0.9 — Shared Foundations Section Summary
+#### Mapping — 0.9 — Common Initial Access Paths
 
-[Return to chapter](#09--shared-foundations-section-summary)
+[Return to chapter](#09--common-initial-access-paths)
+
+**Target Audience:** SOC Analyst, Threat Hunter, CTI Analyst, Detection Engineer (shared foundations)  
+**Proficiency Focus:**  
+- SOC: 0.9 A / B / C ; 0.9.1 2b / 3c / 4c  
+- Hunter: 0.9 A / B / C ; 0.9.1 2b / 3c / 4c  
+- CTI: 0.9 A / B / C ; 0.9.1 2b / 3c / 4c  
+- DE: 0.9 A / B / B ; 0.9.1 1a / 2b / 3c  
+**Mapped Proficiency Items:**
+- K: 0.9 – Common initial access paths
+- T: 0.9.1 – Identify the most defensible initial-access path from supplied evidence, preserve uncertainty, and name the next evidence needed
+
+#### Mapping — 0.10 — Shared Foundations Section Summary
+
+[Return to chapter](#010--shared-foundations-section-summary)
 
 **Target Audience:** SOC Analyst, CTI Analyst, Threat Hunter, Detection Engineer  
 **Module Type:** Section summary — no proficiency mapping
@@ -14158,15 +16183,24 @@ The following list preserves the course’s linked sources, with one entry per e
 ### any.run
 
 - [ANY.RUN — Features](https://any.run/features/) — used in [0.7](#07--external-tools).
-- [ANY.RUN Threat Intelligence Lookup](https://any.run/threat-intelligence-lookup/) — used in [2.4.4](#244--anyrun).
+- [ANY.RUN — Threat Intelligence Lookup](https://any.run/threat-intelligence-lookup/) — used in [2.4.2](#242--selecting-platforms-for-cti-work), [2.4.4](#244--anyrun).
 
 ### attack.mitre.org
 
 - [Enterprise ATT&CK matrix](https://attack.mitre.org/matrices/enterprise/) — used in [0.6.1](#061--mitre-attck), [2.6.1](#261--extracting-applicable-ttps-from-intelligence-reports).
 - [MITRE ATT&CK — PowerShell (T1059.001)](https://attack.mitre.org/techniques/T1059/001/) — used in [0.6.1](#061--mitre-attck), [2.3.1](#231--mitre-attck-for-cti-analysis-and-reporting), [2.6.1](#261--extracting-applicable-ttps-from-intelligence-reports).
+- [MITRE ATT&CK — Modify Registry (T1112)](https://attack.mitre.org/techniques/T1112/) — used in [0.6.1](#061--mitre-attck).
+- [MITRE ATT&CK — Registry Run Keys / Startup Folder (T1547.001)](https://attack.mitre.org/techniques/T1547/001/) — used in [0.6.1](#061--mitre-attck), [3.5.1](#351--using-mitre-attck-for-hunt-planning), [3.6.1](#361--persistence-techniques), [3.6.3](#363--hunt-for-a-specific-persistence-or-privilege-escalation-technique).
+- [MITRE ATT&CK — Initial Access (TA0001)](https://attack.mitre.org/tactics/TA0001/) — used in [0.9](#09--common-initial-access-paths).
+- [MITRE ATT&CK — Phishing (T1566)](https://attack.mitre.org/techniques/T1566/) — used in [0.9](#09--common-initial-access-paths).
+- [MITRE ATT&CK — Drive-by Compromise (T1189)](https://attack.mitre.org/techniques/T1189/) — used in [0.9](#09--common-initial-access-paths).
+- [MITRE ATT&CK — Exploit Public-Facing Application (T1190)](https://attack.mitre.org/techniques/T1190/) — used in [0.9](#09--common-initial-access-paths).
+- [MITRE ATT&CK — Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1078/) — used in [0.9](#09--common-initial-access-paths).
+- [MITRE ATT&CK — External Remote Services (T1133)](https://attack.mitre.org/techniques/T1133/) — used in [0.9](#09--common-initial-access-paths).
+- [MITRE ATT&CK — Trusted Relationship (T1199)](https://attack.mitre.org/techniques/T1199/) — used in [0.9](#09--common-initial-access-paths).
+- [MITRE ATT&CK — Supply Chain Compromise (T1195)](https://attack.mitre.org/techniques/T1195/) — used in [0.9](#09--common-initial-access-paths).
 - [MITRE ATT&CK Enterprise knowledge base](https://attack.mitre.org/) — used in [2.3.1](#231--mitre-attck-for-cti-analysis-and-reporting), [2.6.1](#261--extracting-applicable-ttps-from-intelligence-reports), [3.5.1](#351--using-mitre-attck-for-hunt-planning).
 - [MITRE ATT&CK – T1105 Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105/) — used in [2.3.1](#231--mitre-attck-for-cti-analysis-and-reporting).
-- [T1547.001 – Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/) — used in [3.5.1](#351--using-mitre-attck-for-hunt-planning), [3.6.1](#361--persistence-techniques), [3.6.3](#363--hunt-for-a-specific-persistence-or-privilege-escalation-technique).
 - [T1053.005 – Scheduled Task](https://attack.mitre.org/techniques/T1053/005/) — used in [3.6.1](#361--persistence-techniques).
 - [T1543.003 – Windows Service](https://attack.mitre.org/techniques/T1543/003/) — used in [3.6.1](#361--persistence-techniques), [3.6.2](#362--privilege-escalation-techniques).
 - [T1548.002 – Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002/) — used in [3.6.2](#362--privilege-escalation-techniques).
@@ -14174,6 +16208,10 @@ The following list preserves the course’s linked sources, with one entry per e
 - [T1068 – Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068/) — used in [3.6.2](#362--privilege-escalation-techniques).
 - [MITRE ATT&CK – Analytics](https://attack.mitre.org/analytics/) — used in [4.7](#47--sensor-and-data-availability-for-detection).
 - [MITRE ATT&CK – Data Sources deprecation notice](https://attack.mitre.org/datasources/) — used in [4.7](#47--sensor-and-data-availability-for-detection).
+
+### cisa.gov
+
+- [CISA — #StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide) — used in [0.9](#09--common-initial-access-paths).
 
 ### cloud.google.com
 
@@ -14205,11 +16243,11 @@ The following list preserves the course’s linked sources, with one entry per e
 
 ### docs.urlscan.io
 
-- [urlscan.io Quickstart](https://docs.urlscan.io/guides/quickstart) — used in [2.4.6](#246--urlscanio).
+- [urlscan.io — Quickstart](https://docs.urlscan.io/guides/quickstart) — used in [2.4.2](#242--selecting-platforms-for-cti-work), [2.4.6](#246--urlscanio).
 
 ### docs.virustotal.com
 
-- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching) — used in [0.7](#07--external-tools), [1.4.1](#141--alert-context-and-investigation).
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching) — used in [0.7](#07--external-tools), [1.4.1](#141--alert-context-and-investigation), [2.4.2](#242--selecting-platforms-for-cti-work).
 - [VirusTotal — Private scanning](https://docs.virustotal.com/docs/private-scanning) — used in [0.7](#07--external-tools).
 - [VirusTotal – Relationships](https://docs.virustotal.com/reference/relationships) — used in [2.4.3](#243--virustotal-relations-and-behavior), [3.3.1](#331--tool-capabilities-for-hunting).
 - [VirusTotal – File Behaviours](https://docs.virustotal.com/reference/file-object-behaviours) — used in [2.4.3](#243--virustotal-relations-and-behavior), [3.3.1](#331--tool-capabilities-for-hunting).
@@ -14241,7 +16279,7 @@ The following list preserves the course’s linked sources, with one entry per e
 ### help.silentpush.com
 
 - [Silent Push — Passive DNS lookups](https://help.silentpush.com/docs/perform-passive-dns-scans-and-record-specific-lookups) — used in [0.7](#07--external-tools).
-- [Silent Push – DNS Data](https://help.silentpush.com/docs/dns-data) — used in [2.4.5](#245--silent-push), [3.3.1](#331--tool-capabilities-for-hunting).
+- [Silent Push — DNS Data](https://help.silentpush.com/docs/dns-data) — used in [2.4.2](#242--selecting-platforms-for-cti-work), [2.4.5](#245--silent-push), [3.3.1](#331--tool-capabilities-for-hunting).
 - [Silent Push – Passive DNS and Record-Specific Lookups](https://help.silentpush.com/v1/docs/perform-passive-dns-scans-and-record-specific-lookups) — used in [2.4.5](#245--silent-push).
 
 ### icann.org
@@ -14297,9 +16335,9 @@ The following list preserves the course’s linked sources, with one entry per e
 
 - [ssdeep project documentation](https://ssdeep-project.github.io/ssdeep/usage.html) — used in [2.5.2](#252--hashing-and-similarity-concepts).
 
-### threatconnect.com
+### threatintel.academy
 
-- [The Diamond Model of Intrusion Analysis](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf) — used in [2.3.2](#232--diamond-model-application-in-cti).
+- [The Diamond Model of Intrusion Analysis](https://www.threatintel.academy/diamond/) — used in [2.3.2](#232--diamond-model-application-in-cti).
 
 ### urlscan.io
 

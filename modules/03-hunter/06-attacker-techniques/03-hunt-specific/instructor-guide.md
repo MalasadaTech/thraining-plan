@@ -10,7 +10,7 @@
 
 ## Module Purpose
 
-Use this lesson to teach the reasoning skill in the student guide, not merely the vocabulary. Keep the A12 examples evidence-bound and connect findings to the next module rather than turning each lesson into a complete hunt exercise.
+Use this lesson to teach the reasoning needed to turn a technique into an executable hunt. Keep the A12 examples evidence-bound, but do not treat the written hunt line as completion of the mapped **hunt** task. Practical E in the shared [Hunt Execution Practical](../../02-methodology/01-hunt-types/hunt-execution-practical.md) provides the controlled execution event.
 
 ## Learning Objectives and Mapping
 
@@ -42,6 +42,10 @@ When a learner overstates the evidence, ask:
 3. **What additional evidence would be required for the stronger claim?**
 
 For hunt modules, also ask whether the required telemetry exists and whether the search is bounded enough for a negative result to mean anything.
+
+## Qualification / Demonstration Boundary
+
+For `3.6.3`, the evaluator should observe the learner execute Practical E: exact-observed search, broadened behavior search, comparison of results, and a bounded finding. Planning the hunt line is preparation only.
 
 ## Knowledge Check – Answer Key
 

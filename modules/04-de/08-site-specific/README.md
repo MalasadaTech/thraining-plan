@@ -16,6 +16,7 @@
 
 - authoritative local requirements list
 - owner/version/effective date
+- completion of the deferred `4.2.2` local-requirements demonstration using the verified local list
 - review vs approval vs deployment
 - staging/testing
 - post-deploy monitoring

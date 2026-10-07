@@ -61,10 +61,9 @@ For a separate network example, retained cleartext HTTP packets can add `/update
 
 ## Knowledge Check
 
-1. For the process example, name what is present and two unresolved questions.
-2. Explain the configuration and upstream path for the SIEM-only alert.
-3. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute?
-4. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
+1. For the process example, identify what context is present and missing, then explain the SIEM rule configuration and upstream event-to-alert path.
+2. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute, and what would each still leave unresolved?
+3. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
 
 ## Summary
 
@@ -72,7 +71,7 @@ An investigation record should explain the alert’s evidence, logic, and lineag
 
 ## Course Connections
 
-Previous: [1.3.4 – SIEM Rules](../../03-detection/04-siem-rules/student-guide.md)
+Previous: [1.4 – Alert Investigation and Assessment Preview](../intro.md)
 
 Next: [1.4.2 – Alert Classification](../02-classification/student-guide.md)
 

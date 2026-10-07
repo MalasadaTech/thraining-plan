@@ -94,7 +94,7 @@ Use context to choose the relevant tactic when a technique spans more than one. 
 
 ATT&CK informs priority; it does not replace operational judgment.
 
-**Next:** **3.6.1 – Persistence Techniques**.
+**Next:** [3.6 – Attacker Techniques for Hunting Preview](../06-attacker-techniques/intro.md).
 
 ## Supporting References
 

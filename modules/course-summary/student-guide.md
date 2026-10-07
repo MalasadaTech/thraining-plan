@@ -193,7 +193,7 @@ The final response returns to the original question.
 
 For example:
 
-> Available evidence supports the update domain's association with the A12 activity set and is consistent with attempted payload delivery. Current evidence does not establish successful execution of `update.exe`.
+> We assess that the update domain was likely used for attempted payload delivery in A12. WS-JLEE requested `/update.exe` from that destination during suspicious activity, but current evidence does not establish successful transfer or execution of the file.
 
 The response separates:
 

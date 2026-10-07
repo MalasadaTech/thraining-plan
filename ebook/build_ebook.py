@@ -9,7 +9,7 @@ import collections
 import hashlib
 import json
 import re
-import unicodedata
+from datetime import date
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -32,28 +32,6 @@ PART_INTROS = [
     'Investigation and hunting can reveal a need for better coverage. Detection Engineering evaluates that need and maintains the resulting capability through **Need → Coverage Decision → Build/Change → Validate → Deploy → Monitor → Improve/Retire**. The decision may be to change existing coverage, add coverage, or explain why no new rule is justified.',
     'Bring the role-specific work back together. The final chapter traces how an observation becomes an assessment, a search, and a coverage decision—and how those decisions shape the next observation.',
 ]
-# Bridges are written for the book. Source lesson explanations remain intact.
-BRIDGES = {
-    '0.6.1': ('0.6 — Frameworks', 'With the roles and handoffs established, the next three chapters introduce complementary ways to organize behavior, relationships, and attack progression. Keep the question each framework answers in view.'),
-    '1.1.1': ('1.1 — Endpoint Evidence', 'Start with the events a host records. The individual event types become more useful when you can connect them without claiming more than their fields show.'),
-    '1.2.1': ('1.2 — Network Evidence', 'Endpoint evidence names activity from the host’s perspective. Network evidence adds what a sensor observed on the wire; compare those perspectives and retain the limits of each.'),
-    '1.3.1': ('1.3 — Detection Logic', 'You can now read the evidence that detections consume. Next, examine how a rule selects activity and what its match does—and does not—establish.'),
-    '1.4.1': ('1.4 — Alert Investigation', 'A rule match starts the investigation. Use the available records to evaluate the activity, assign a defensible classification, and identify what still needs attention.'),
-    '1.5.1': ('1.5 — Reporting and Handoff', 'An investigation becomes useful to others through its product. Choose the report, timing, and route that fit the decision and recipient.'),
-    '2.1.1': ('2.1 — Intelligence Foundations and Requirements', 'Start by distinguishing recorded values, contextual information, and assessed intelligence. That distinction supports the requirements and RFI intake work that follows.'),
-    '2.2.1': ('2.2 — Analytical Tradecraft', 'A clear requirement gives analysis a direction. Tradecraft helps you evaluate the evidence, consider alternatives, and express judgments with appropriate uncertainty.'),
-    '2.3.1': ('2.3 — Analytical Frameworks', 'Use the reasoning habits from the previous unit to organize behavior and relationships. The frameworks provide structure while the evidence determines which claims belong in it.'),
-    '2.4.1': ('2.4 — CTI Tools and Platforms', 'Before deeper enrichment, become familiar with where evidence can be retrieved and how its provenance is recorded. The platform guides use two passes: orientation here, then detailed interpretation alongside the relevant method in 2.5.'),
-    '2.5.1': ('2.5 — Technical Enrichment and Discovery', 'Return to the platform evidence with a specific analytical method. Preserve the seed, time, and relationship behind each candidate so later correlation can test the connection.'),
-    '2.6.1': ('2.6 — Threat Assessment and Organizational Significance', 'Candidate relationships now need an assessment of what matters in this environment. Keep applicability, visibility, relevance, and impact distinct as you develop that assessment.'),
-    '2.7.1': ('2.7 — Intelligence Production and Dissemination', 'An assessment needs a usable form and an intended recipient. This unit carries the reasoning into structured objects, finished products, RFI closure, and dissemination.'),
-    '2.8.1': ('2.8 — Local Application', 'Apply the analytical workflow through the organization’s actual priorities, approval process, and channels. The exercises ask you to obtain local answers where the course cannot supply them.'),
-    '3.2.1': ('3.2 — Hunt Methodology', 'With the purpose of hunting established, choose how the hunt begins and develop a testable plan. Scope and expected evidence make the search reviewable.'),
-    '3.4.1': ('3.4 — CTI as a Hunt Input', 'External research provides possible leads. Evaluate whether a lead is worth hunting, translate it into observable behavior, and retain the evidence behind any structured intelligence input.'),
-    '3.6.1': ('3.6 — Attacker Techniques', 'Framework labels help organize the plan. Technique-focused hunting now requires the procedure, telemetry, and scope that make the search selective.'),
-    '3.7.1': ('3.7 — Local Hunt Practice', 'A technically useful search still needs ownership, documentation, and a recipient. Follow the local process so findings and limitations survive the handoff.'),
-}
-
 GLOSSARY = [
     ('Activity set', 'A grouping of activity supported by assessed connections. Shared infrastructure can suggest a candidate relationship before it supports this grouping.', '2.5.7'),
     ('Admiralty Code', 'A notation that evaluates source reliability separately from the credibility of the information it provides.', '2.2.3'),
@@ -217,9 +195,11 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-root',type=Path,required=True)
     parser.add_argument('--inventory',type=Path)
-    parser.add_argument('--date',default='2026-10-03')
+    parser.add_argument('--date',default=date.today().isoformat())
+    parser.add_argument('--snapshot-date', help='Date the canonical sources were retrieved; separate from build date')
     args=parser.parse_args()
     root=args.source_root.resolve()
+    snapshot_label=args.snapshot_date or "not recorded"
     metadata={}
     if args.inventory:
         metadata={i['path']:i for i in json.loads(args.inventory.read_text())['items']}
@@ -232,17 +212,87 @@ def main():
         book_title=(number+' — '+title) if m else title
         chapters.append(dict(number=number,title=title,book_title=book_title,part=part,path=p,source='/thraining-plan/'+str(p.relative_to(root)),raw=raw,anchor=slug(book_title)))
     chapters.sort(key=lambda c:chapter_sort(c['number']))
-    assert len(chapters)==107, f'Expected 107 chapters, found {len(chapters)}; review manifest before changing expectation.'
+    assert len(chapters)==108, f'Expected 108 lesson chapters, found {len(chapters)}; review manifest before changing expectation.'
     ids=[c['number'] for c in chapters]
     assert len(set(ids))==len(ids),'Duplicate chapter numbers'
-    assert [sum(c['part']==i for c in chapters) for i in range(6)]==[11,28,41,16,10,1]
-    byid={c['number']:c for c in chapters}; bypath={c['path']:c for c in chapters}
+    assert [sum(c['part']==i for c in chapters) for i in range(6)]==[12,28,41,16,10,1]
     part_titles=[f'Part {roman} — {name}' for roman,name,_ in PARTS]
+
+    # Subunit advance-organizer / end-state wrappers are learner-facing synthesis,
+    # but they do not add proficiency-mapped lesson IDs.
+    wrappers=[]
+    for kind in ('intro','summary'):
+        for wp in root.glob(f'modules/*/*/{kind}.md'):
+            raw=wp.read_text(); first=raw.splitlines()[0]
+            m=re.match(r'# (\d+\.\d+)\s+[–—-]\s+(.+)',first)
+            if not m: raise ValueError(f'Cannot parse wrapper heading: {wp}: {first}')
+            unit,title=m.groups()
+            part=next(i for i,(_,_,folder) in enumerate(PARTS) if wp.relative_to(root).parts[1]==folder)
+            display=first.removeprefix('# ')
+            wrappers.append(dict(unit=unit,kind=kind,title=title,display=display,part=part,path=wp,
+                                 source='/thraining-plan/'+str(wp.relative_to(root)),raw=raw,anchor=slug(display)))
+    wrappers.sort(key=lambda w:(w['part'],tuple(map(int,w['unit'].split('.'))),0 if w['kind']=='intro' else 1))
+    assert len(wrappers)==36, f'Expected 36 subunit wrappers (18 intro + 18 summary), found {len(wrappers)}.'
+    assert sum(w['kind']=='intro' for w in wrappers)==18 and sum(w['kind']=='summary' for w in wrappers)==18
+    wrapper_by_unit={(w['part'],w['unit'],w['kind']):w for w in wrappers}
+    assert len(wrapper_by_unit)==len(wrappers), 'Duplicate wrapper unit/kind'
+    # A grouping with multiple direct child lessons needs one wrapper pair.
+    grouped=collections.defaultdict(list)
+    role_roots={root/'modules'/folder for _,_,folder in PARTS}
+    for c in chapters:
+        parent=c['path'].parent.parent
+        if parent not in role_roots and parent!=root/'modules':grouped[parent].append(c)
+    meaningful={folder:members for folder,members in grouped.items() if len(members)>1}
+    assert {w['path'].parent for w in wrappers}==set(meaningful), 'Missing or unexpected wrapper grouping'
+    for folder,members in meaningful.items():
+        pair=[w for w in wrappers if w['path'].parent==folder]
+        assert {w['kind'] for w in pair}=={'intro','summary'} and len(pair)==2, str(folder)
+        assert len({w['unit'] for w in pair})==1, str(folder)
+        assert all(c['number'].startswith(pair[0]['unit']+'.') for c in members), str(folder)
+        assert all('no new proficiency mapping' in w['raw'] for w in pair), str(folder)
+
+
+    byid={c['number']:c for c in chapters}
+
+    # Learner practicals remain supporting content under their owning numbered lessons.
+    # They do not create new proficiency-mapped chapter IDs, but the single-file ebook
+    # embeds them and their small controlled lab assets so learner links remain usable.
+    practical_specs=[
+        ('3.2.1','modules/03-hunter/02-methodology/01-hunt-types/hunt-execution-practical.md',
+         ['labs/hunt-execution-practical.csv']),
+        ('3.3.1','modules/03-hunter/03-online-tools/external-tool-pivot-practical.md',[]),
+        ('4.2','modules/04-de/02-sound-and-shop-requirements/detection-validation-practical.md',
+         ['labs/de-validation-practical.csv','labs/de-validation-runner.py']),
+    ]
+    practicals=[]; embedded_assets=[]
+    for parent_number,rel_path,asset_paths in practical_specs:
+        pp=root/rel_path
+        raw=pp.read_text(); first=raw.splitlines()[0]
+        if not first.startswith('# '): raise ValueError(f'Cannot parse practical heading: {pp}: {first}')
+        title=first[2:].strip(); parent=byid[parent_number]
+        pobj=dict(parent_number=parent_number,title=title,part=parent['part'],path=pp,
+                  source='/thraining-plan/'+str(pp.relative_to(root)),raw=raw,
+                  anchor=slug(title),assets=[])
+        for asset_rel in asset_paths:
+            ap=root/asset_rel
+            label='Lab Asset — '+ap.name
+            aobj=dict(path=ap,source='/thraining-plan/'+str(ap.relative_to(root)),
+                      label=label,anchor=slug(label),
+                      raw=ap.read_text())
+            pobj['assets'].append(aobj); embedded_assets.append(aobj)
+        practicals.append(pobj)
+
+    bypath={c['path']:c for c in chapters}
+    bypath.update({w['path']:w for w in wrappers})
+    bypath.update({x['path']:x for x in practicals})
+    asset_by_path={x['path']:x for x in embedded_assets}
     aa='Appendix A — The Complete A12 Case Study';ab='Appendix B — Proficiency Mapping'
     audit=[]; link_edits=[]; unresolved=[]
     def ref(n,label=None):
         c=byid.get(n)
         if c is None:
+            wrapper=next((w for w in wrappers if w['unit']==n and w['kind']=='intro'),None)
+            if wrapper:return f'[{label or n}](#{wrapper["anchor"]})'
             candidates=[c for c in chapters if c['number'].startswith(n+'.')]
             if candidates:c=candidates[0]
         if c is None:
@@ -259,11 +309,13 @@ def main():
             if url.startswith(('http://','https://','mailto:','#')):return m[0]
             target=(p.parent/unquote(url.split('#')[0])).resolve()
             if target in bypath:new='#'+bypath[target]['anchor']
+            elif target in asset_by_path:new='#'+asset_by_path[target]['anchor']
             elif target.name=='README.md':
                 candidates=[c for c in chapters if c['path'].is_relative_to(target.parent)]
                 if not candidates:raise ValueError(f'No chapter for {url} in {p}')
                 part=next((i for i,(_,_,f) in enumerate(PARTS) if target.parent==root/'modules'/f),None)
-                new='#'+(slug(part_titles[part]) if part is not None else candidates[0]['anchor'])
+                wrapper=next((w for w in wrappers if w['path'].parent==target.parent and w['kind']=='intro'),None)
+                new='#'+(slug(part_titles[part]) if part is not None else wrapper['anchor'] if wrapper else candidates[0]['anchor'])
             else:
                 unresolved.append((str(p),url));return m[0]
             link_edits.append(dict(source=str(p.relative_to(root)),old=url,new=new))
@@ -344,17 +396,97 @@ def main():
         assert code_blocks(c['raw'])==code_blocks(body),f'Code changed: {c["number"]}'
         assert collections.Counter(u for _,u in external_links(c['raw']))==collections.Counter(u for _,u in external_links(body)),f'External link occurrence changed: {c["number"]}'
         start=f'### {c["book_title"]}\n\n'
-        if c['number'] in BRIDGES:
-            unit,bridge=BRIDGES[c['number']];start+=f'**{unit}**\n\n{bridge}\n\n'
         return start+body+'\n'
     chapter_text={c['number']:process(c) for c in chapters}
+
+    def process_practical(pobj):
+        lines=pobj['raw'].splitlines()[1:]; output=[]; inside=False
+        for line in lines:
+            if FENCE.match(line): inside=not inside; output.append(line); continue
+            if inside: output.append(line); continue
+            h=re.match(r'^(#+) (.*)',line)
+            if h:
+                # Practical heading is H4 under the owning H3 chapter; source H2/H3
+                # sections become H5/H6 so the numbered course hierarchy stays intact.
+                line='#'*min(6,len(h[1])+3)+' '+h[2]
+            output.append(line)
+        body=convert_links('\n'.join(output),pobj['path'])
+        body=re.sub(r'\n{3,}','\n\n',body).strip()
+        rendered=f'#### {pobj["title"]}\n\n{body}\n'
+        for asset in pobj['assets']:
+            lang='csv' if asset['path'].suffix.lower()=='.csv' else 'python' if asset['path'].suffix.lower()=='.py' else 'text'
+            rendered+=f'\n##### {asset["label"]}\n\nEmbedded from `{asset["source"]}` for this controlled practical.\n\n```{lang}\n{asset["raw"].rstrip()}\n```\n'
+        pobj['body']=body
+        assert all(block in rendered for block in code_blocks(pobj['raw'])), f'Practical code changed: {pobj["source"]}'
+        assert collections.Counter(u for _,u in external_links(pobj['raw']))==collections.Counter(u for _,u in external_links(rendered)), f'Practical external link changed: {pobj["source"]}'
+        return rendered
+
+    practical_text={pobj['parent_number']:process_practical(pobj) for pobj in practicals}
+    for parent_number,text in practical_text.items():
+        chapter_text[parent_number]=chapter_text[parent_number].rstrip()+'\n\n'+text
+
+    def process_wrapper(w):
+        lines=w['raw'].splitlines(keepends=True)[1:]
+        keep=[]; inside=False
+        for line in lines:
+            if re.match(r'^\*\*Module Type:',line):
+                audit.append(dict(chapter=f"{w['unit']} {w['kind']}",kind='wrapper metadata removed',text=line))
+                continue
+            if re.match(r'^(?:\*\*)?(?:Previous|Next):',line):
+                audit.append(dict(chapter=f"{w['unit']} {w['kind']}",kind='standalone navigation removed',text=line))
+                continue
+            keep.append(line)
+        body=''.join(keep)
+        output=[]
+        for line in body.splitlines():
+            if FENCE.match(line): inside=not inside; output.append(line); continue
+            if inside: output.append(line); continue
+            h=re.match(r'^(#+) (.*)',line)
+            if h:
+                level=len(h[1]); line='#'*min(6,max(2,level)+2)+' '+h[2]
+            output.append(line)
+        body=convert_links('\n'.join(output),w['path'])
+        body=re.sub(r'\n{3,}','\n\n',body).strip()
+        w['body']=body
+        assert code_blocks(w['raw'])==code_blocks(body),f'Wrapper code changed: {w["source"]}'
+        assert collections.Counter(u for _,u in external_links(w['raw']))==collections.Counter(u for _,u in external_links(body)),f'Wrapper external link changed: {w["source"]}'
+        return f'### {w["display"]}\n\n{body}\n'
+    wrapper_text={(w['part'],w['unit'],w['kind']):process_wrapper(w) for w in wrappers}
+
+    def unit_of(number):
+        if number=='conclusion': return None
+        parts=number.split('.')
+        return '.'.join(parts[:2]) if len(parts)>=2 else number
+
+    part_sequence={}
+    for i in range(6):
+        seq=[]; intro_emitted=set(); part_ch=[c for c in chapters if c['part']==i]
+        for idx,c in enumerate(part_ch):
+            unit=unit_of(c['number']); key=(i,unit)
+            if (i,unit,'intro') in wrapper_by_unit and key not in intro_emitted:
+                seq.append(('wrapper',wrapper_by_unit[(i,unit,'intro')]))
+                intro_emitted.add(key)
+            seq.append(('chapter',c))
+            next_unit=unit_of(part_ch[idx+1]['number']) if idx+1<len(part_ch) else None
+            if (i,unit,'summary') in wrapper_by_unit and next_unit!=unit:
+                seq.append(('wrapper',wrapper_by_unit[(i,unit,'summary')]))
+        part_sequence[i]=seq
+    reading_order=[(kind,obj) for i in range(6) for kind,obj in part_sequence[i]]
+    assert len(reading_order)==len(chapters)+len(wrappers)
+    assert len({obj['source'] for _,obj in reading_order})==len(reading_order)
+    for folder,members in meaningful.items():
+        start=next(i for i,(kind,obj) in enumerate(reading_order) if kind=='wrapper' and obj['path'].parent==folder and obj['kind']=='intro')
+        end=next(i for i,(kind,obj) in enumerate(reading_order) if kind=='wrapper' and obj['path'].parent==folder and obj['kind']=='summary')
+        actual=[obj['source'] for kind,obj in reading_order[start+1:end] if kind=='chapter']
+        assert actual==[c['source'] for c in members], f'Incorrect wrapper order: {folder}'
+        assert end-start-1==len(members), f'Unexpected content within {folder}'
     front=f'''# Defensive Cyber Operations
 
 **SOC, Cyber Threat Intelligence, Threat Hunting, and Detection Engineering**
 
 **MalasadaTech Training Plan – First Edition**  
-**v0.1 Review Draft · Build date: {args.date}**  
-Curriculum snapshot: current course files retrieved 2026-10-02.
+**v0.2 Review Draft · Build date: {args.date}**  
+Source snapshot date: {snapshot_label}.
 
 Defensive work depends on more than recognizing a suspicious value. An analyst needs to explain what happened, decide which questions remain, and give the next person enough evidence to act. This book follows that work from shared foundations through SOC investigation, Cyber Threat Intelligence, Threat Hunting, and Detection Engineering.
 
@@ -362,11 +494,13 @@ The chapters combine technical examples with the decisions those examples suppor
 
 ## How to Use This Book
 
-Read the shared foundations first, then follow the role tracks in order. Chapter numbers match the curriculum so you can return to a particular lesson during practice. The opening and closing chapters of each track provide orientation and integration; the final course summary reconnects all four roles.
+Read the shared foundations first, then follow the role tracks in order. Chapter numbers match the curriculum so you can return to a particular lesson during practice. The opening and closing chapters of each track provide orientation and integration. Multi-lesson subunits also include short advance-organizer introductions and end-state summaries so you can preview the structure before reading closely; the final course summary reconnects all four roles.
+
+Use **Preview → Predict → Read → Confirm**: preview a subunit introduction and its end-state summary, predict how the lessons fit together, read the detail, then return to the summary to check your understanding.
 
 At a worked example, pause before the explanation. Describe the observation in your own words, identify what remains unknown, and name the next useful question. Use the knowledge checks to test that reasoning. They are learner exercises; this manuscript does not add an instructor answer key.
 
-Estimated times are retained from the course as planning guides. The CTI platform chapters use two passes: first retrieve and describe evidence, then return for interpretation during the relevant enrichment method. Their estimates cover both passes together. Use the example cards and records printed in the lessons where available; some activities also require a supplied report or an authorized environment. This book does not include a separate live lab or platform accounts.
+Estimated times are retained from the course as planning guides. The CTI platform chapters use two passes: first retrieve and describe evidence, then return for interpretation during the relevant enrichment method. Their estimates cover both passes together. Use the example cards and records printed in the lessons where available. Controlled CSV/Python assets required by the embedded hunt and detection-validation practicals are included under their owning lessons. The external-platform pivot practical still requires approved live/public platform access or authorized training accounts; this book does not provide platform accounts.
 
 Examples distinguish course facts from local operating requirements. Where a chapter asks for a local priority, approval path, sensor configuration, or response clock, obtain that information from the responsible organization. Classroom examples provide practice rather than an operating policy.
 
@@ -397,42 +531,27 @@ You will encounter the evidence progressively. The shared foundations introduce 
     toc=[]
     for i,title in enumerate(part_titles):
         toc.append(f'- [{title}](#{slug(title)})')
-        for c in chapters:
-            if c['part']==i:toc.append(f'  - [{c["book_title"]}](#{c["anchor"]})')
+        for typ,obj in part_sequence[i]:
+            label=obj['display'] if typ=='wrapper' else obj['book_title']
+            toc.append(f'  - [{label}](#{obj["anchor"]})')
     for title in [aa,ab,'Glossary','Acronyms and Technical Abbreviations','Consolidated References and Further Reading']:
         toc.append(f'- [{title}](#{slug(title)})')
     book=front+'\n'+'\n'.join(toc)+'\n\n'
     for i,title in enumerate(part_titles):
         book+=f'## {title}\n\n{PART_INTROS[i]}\n\n'
         if i in (1,2,3,4):book+=f'> **A12 Case Study:** Follow the evidence available at this stage of the case. The uninterrupted narrative appears in [Appendix A](#{slug(aa)}).\n\n'
-        book+='\n'.join(chapter_text[c['number']] for c in chapters if c['part']==i)+'\n'
+        pieces=[]
+        for typ,obj in part_sequence[i]:
+            pieces.append(wrapper_text[(obj['part'],obj['unit'],obj['kind'])] if typ=='wrapper' else chapter_text[obj['number']])
+        book+='\n'.join(pieces)+'\n'
     story_path=root/'docs/companion-story/story.md';story=story_path.read_text()
-    maint='Nothing in this file is a second plot. If a later lesson needs a new fact, add it to the [story bible](../story-bible.md) first.'
-    assert maint in story
-    narrative=story.replace(maint,'')
-    audit.append(dict(chapter='Appendix A',kind='maintainer-only closing instruction removed',text=maint))
-    story_reference_edits={
-        'Jordan receives, evaluates, prioritizes, and answers (**2.7.4**).':
-        'Jordan receives, evaluates, prioritizes, and answers (intake: **2.1.5**; response: **2.7.4**).',
-        '(**0.3 f**)':'(**0.3**)',
-    }
-    for old,new in story_reference_edits.items():
-        assert old in narrative
-        audit.append(dict(chapter='Appendix A',kind='structural cross-reference corrected',text=old,replacement=new))
-        narrative=narrative.replace(old,new)
-    narrative=re.sub(r'^# ', '### ',narrative,flags=re.M)
-    narrative=re.sub(r'^## ', '#### ',narrative,flags=re.M)
-    # Repair nested bold markers without changing labels, numbers, or facts.
-    narrative=re.sub(r'\*\*([^*\n]+)\(\*\*([\d.]+)\*\*\)([.:]?)\*\*',r'**\1(\2)\3**',narrative)
-    narrative=re.sub(r'\*\*(\d+(?:\.\d+)+(?:\.x)?)\*\*',lambda m:ref(m[1]),narrative)
-    # The remaining group labels and task numbers route to their owning chapter.
-    narrative=re.sub(r'(?<![\d/#])\b([0-4]\.x)\b',lambda m:ref(m[1]),narrative)
+    narrative=convert_links(story,story_path)
+    # Shift the standalone story's heading hierarchy beneath Appendix A.
+    narrative=re.sub(r'^(#{1,6}) ',lambda m:'#'*min(6,len(m[1])+2)+' ',narrative,flags=re.M)
     narrative=re.sub(r'\n{3,}','\n\n',narrative).strip()
     book+=f'''## {aa}
 
-The following narrative preserves the established A12 story, including its nine original stages and closing handoffs. Read it after the main course to see how the same case moves between desks.
-
-> **Review note:** Some judgments in this established narrative are stronger than the evidence boundaries taught in the revised chapters. Those differences remain visible for review and are documented in [the QA report](qa-report.md#a12-consistency-review). The narrative has not been rewritten to resolve them.
+Read this complete case after the main course to see how the same evidence moves between SOC, CTI, Threat Hunting, and Detection Engineering. The canonical narrative is reproduced here, with book navigation adapted from its source links.
 
 {narrative}
 
@@ -461,20 +580,25 @@ These are the course’s existing proficiency requirements. Role ratings, task i
     book+=f'| CFETP | Career Field Education and Training Plan; the proficiency legend uses this style | [Appendix B](#{slug(ab)}) |\n| USAF | United States Air Force; named in the source proficiency-code legend | [Appendix B](#{slug(ab)}) |\n'
     book+='\n**Other technical notation.** DNS record labels (`A`, `AAAA`, `CNAME`, `MX`, `TXT`, `SRV`, `RNAME`, and `SERIAL`) are covered in '+ref('2.5.4')+'. File identifiers and similarity names (`MD5`, `SHA1`, `SHA256`, `ssdeep`, and `TLSH`) are covered in '+ref('2.5.2')+'. `JA3` is discussed with TLS evidence in '+ref('1.2.4')+'. Zeek `uid` and file identifiers are explained in '+ref('1.2.1')+' and '+ref('1.2.7')+'. Sigma and YARA are rule-language names; see '+ref('1.3.1')+' and '+ref('1.3.3')+'.\n\n'
     refs=collections.OrderedDict()
-    for c in chapters:
-        for label,url in external_links(c['raw']):
-            entry=refs.setdefault(url,dict(label=label,chapters=[]))
-            if c['number'] not in entry['chapters']:entry['chapters'].append(c['number'])
+    reference_sources=[(c['raw'],c['number'],c['anchor']) for c in chapters]
+    reference_sources += [(w['raw'],w['display'],w['anchor']) for w in wrappers]
+    reference_sources += [(pobj['raw'],pobj['title'],pobj['anchor']) for pobj in practicals]
+    reference_sources.append((story,'Appendix A',slug(aa)))
+    for raw,label_used,anchor_used in reference_sources:
+        for label,url in external_links(raw):
+            entry=refs.setdefault(url,dict(label=label,uses=[]))
+            use=(label_used,anchor_used)
+            if use not in entry['uses']:entry['uses'].append(use)
     book+='## Consolidated References and Further Reading\n\nThe following list preserves the course’s linked sources, with one entry per exact URL and links back to the chapters that use it. Chapter-level references remain beside their explanations. URLs are reproduced from the curriculum; their live availability and current platform interfaces have not been independently revalidated for this Markdown edition.\n\n'
     groups=collections.defaultdict(list)
     for url,entry in refs.items():groups[urlsplit(url).netloc.lower().removeprefix('www.')].append((url,entry))
     for domain,entries in sorted(groups.items()):
         book+=f'### {domain}\n\n'
         for url,entry in entries:
-            book+=f'- [{entry["label"]}]({url}) — used in '+', '.join(ref(n) for n in entry['chapters'])+'.\n'
+            book+=f'- [{entry["label"]}]({url}) — used in '+', '.join(f'[{label}](#{anchor})' for label,anchor in entry['uses'])+'.\n'
         book+='\n'
     book=re.sub(r'\n{3,}','\n\n',book).rstrip()+'\n'
-    (OUT/'ebook-manuscript.md').write_text(book)
+    # Validate the full assembly before replacing generated deliverables.
 
     # Independent structural checks and provenance, not a claim of external fact validation.
     clean=strip_code(book); headings=re.findall(r'^(#{1,6}) (.*)$',clean,re.M)
@@ -487,7 +611,24 @@ These are the course’s existing proficiency requirements. Role ratings, task i
     assert not unresolved,unresolved
     assert sum(level=='#' for level,_ in headings)==1
     assert all(sum(title==c['book_title'] for _,title in headings)==1 for c in chapters)
-    assert all(c['raw']==c['path'].read_text() for c in chapters),'Canonical input changed'
+    assert all(sum(title==w['display'] for _,title in headings)==1 for w in wrappers)
+    assert all(c['raw']==c['path'].read_text() for c in chapters),'Canonical lesson input changed'
+    assert all(w['raw']==w['path'].read_text() for w in wrappers),'Canonical wrapper input changed'
+    assert all(pobj['raw']==pobj['path'].read_text() for pobj in practicals),'Canonical practical input changed'
+    assert all(asset['raw']==asset['path'].read_text() for asset in embedded_assets),'Embedded lab asset input changed'
+    assert story==story_path.read_text(), 'Canonical story input changed'
+    assert code_blocks(story)==code_blocks(narrative), 'Story code changed'
+    assert collections.Counter(external_links(story))==collections.Counter(external_links(narrative)), 'Story reference changed'
+    table_errors=[]; table=[]
+    for index,line in enumerate(clean.splitlines()+[''],1):
+        if line.startswith('|'):table.append((index,line))
+        elif table:
+            widths={len(re.findall(r'(?<!\\)\|',row)) for _,row in table}
+            if len(widths)>1:table_errors.append(table[0][0])
+            table=[]
+    assert not table_errors, f'Inconsistent table columns at lines {table_errors}'
+    assert not re.search(r'\]\((?!https?://)[^)]*(?:student-guide|intro|summary|instructor-guide|slides|README)\.md',clean), 'Unconverted source navigation'
+
     code_blocks(book)
     # Check that every source content line survives, or is in an explicit edit log.
     # Formatting/link changes are normalized. Report unmatched lines for human review.
@@ -500,39 +641,73 @@ These are the course’s existing proficiency requirements. Role ratings, task i
             if plain(l) not in content and l not in intentional:
                 losses.append({'chapter':c['number'],'line':l})
     story_survival=plain(narrative)
-    story_check=story
-    for old,new in story_reference_edits.items():story_check=story_check.replace(old,new)
-    story_losses=[l for l in story_check.splitlines()[1:] if l.strip() and not l.startswith('#') and l!=maint and plain(l) not in story_survival]
+    story_losses=[l for l in story.splitlines()[1:] if l.strip() and not l.startswith('#') and plain(l) not in story_survival]
     assert not losses,losses
     assert not story_losses,story_losses
+    practical_losses=[]
+    for pobj in practicals:
+        content=plain(practical_text[pobj['parent_number']])
+        for l in pobj['raw'].splitlines()[1:]:
+            if not l.strip() or l.startswith('#') or re.fullmatch(r'[-* _]+',l): continue
+            if plain(l) not in content:
+                practical_losses.append({'practical':pobj['source'],'line':l})
+    assert not practical_losses,practical_losses
+    wrapper_losses=[]
+    for w in wrappers:
+        content=plain(wrapper_text[(w['part'],w['unit'],w['kind'])])
+        intentional='\n'.join(a['text'] for a in audit if a['chapter']==f"{w['unit']} {w['kind']}")
+        for l in w['raw'].splitlines()[1:]:
+            if not l.strip() or l.startswith('#') or re.fullmatch(r'[-* _]+',l): continue
+            if plain(l) not in content and l not in intentional:
+                wrapper_losses.append({'wrapper':w['source'],'line':l})
+    assert not wrapper_losses,wrapper_losses
     unmapped=[c['number'] for c in chapters if 'no proficiency mapping' in c['raw']]
     assert len(unmapped)==10,unmapped
-    expected_unmapped={'0.9','1.0','1.6','2.0','2.9','3.0','3.8','4.0','4.9','conclusion'}
+    expected_unmapped={'0.10','1.0','1.6','2.0','2.9','3.0','3.8','4.0','4.9','conclusion'}
     assert set(unmapped)==expected_unmapped
     assert all('Proficiency Focus' in c['mapping'] and 'Mapped Proficiency Item' in c['mapping'] for c in chapters if c['number'] not in expected_unmapped)
+    review_path=OUT/'editorial-review.json'
+    review=json.loads(review_path.read_text()) if review_path.exists() else {}
+    tracked={str(obj['path'].relative_to(root)) for _,obj in reading_order}
+    tracked.update(str(pobj['path'].relative_to(root)) for pobj in practicals)
+    tracked.update(str(asset['path'].relative_to(root)) for asset in embedded_assets)
+    tracked.update(['docs/story-bible.md','docs/skim-first-authoring-standard.md','docs/proficiency-legend.md'])
+    tracked.update(str(path.relative_to(root)) for path in (root/'docs/companion-story').glob('*.md'))
+    reviewed=review.get('source_sha256',{})
+    review_changed=sorted(path for path in tracked if not (root/path).is_file() or reviewed.get(path)!=hashlib.sha256((root/path).read_bytes()).hexdigest())
+    for path,digest in reviewed.items():
+        if path not in tracked and (not (root/path).is_file() or hashlib.sha256((root/path).read_bytes()).hexdigest()!=digest):review_changed.append(path)
+    review_current=bool(review.get('review_date')) and not review_changed
+    review_status='Current for these source hashes' if review_current else 'Needs a new editorial review; structural success alone does not resolve A12 or voice questions'
+    (OUT/'ebook-manuscript.md').write_text(book)
+
     a12_pattern=re.compile(r'\bA12\b|WS-JLEE|\bjlee\b|prd-updates|login-prd|nightowl|invoice\.vbs|\bUpdater\b|203\.0\.113\.88|Pink River Dolphin|Dixon, Yamada',re.I)
     manifest=f'''# Ebook Source Manifest
 
-Build date: {args.date}. Source snapshot retrieved: 2026-10-02. The live `/thraining-plan/` files supplied the source; earlier exports and the GitHub mirror were not used. This is a derived publication, not a replacement curriculum.
+Build date: {args.date}. Source snapshot date: {snapshot_label}. The live `/thraining-plan/` files supplied the source; earlier exports and the GitHub mirror were not used. This is a derived publication, not a replacement curriculum.
 
 ## Inventory
 
-107 student-facing chapters, in numeric teaching order: Part I 11; Part II 28; Part III 41; Part IV 16; Part V 10; Part VI 1. Unit headings are not additional chapters. All ten explicitly unmapped introductions/summaries remain unmapped. Chapter identifiers and subordinate proficiency task identifiers are distinct.
+108 proficiency-course lesson/conclusion chapters remain in numeric teaching order: Part I 12; Part II 28; Part III 41; Part IV 16; Part V 10; Part VI 1. In addition, 36 learner-facing subunit wrappers (18 introductions and 18 summaries) are inserted around meaningful multi-lesson groupings. Three learner practicals are embedded under their owning lessons, along with three small controlled lab assets. The wrappers and embedded practical sections add no new numbered proficiency chapters. All ten explicitly unmapped track/course introductions and summaries remain unmapped.
 
 ## Canonical A12 Source
 
 - Complete narrative: `/thraining-plan/docs/companion-story/story.md`.
-- Source selection: `/thraining-plan/docs/companion-story/README.md` identifies `story.md` as the finished retelling and the story bible as the governing fact ledger.
-- Fact ledger used for consistency review: `/thraining-plan/docs/story-bible.md`.
-- Appendix A preserves all narrative stages and the close. Only the final maintainer instruction about adding future facts to the bible is omitted; malformed nested bold is repaired and cross-references are adapted.
-- Established uncertainties remain unresolved. No new host count, rule deployment, eradication result, or final attribution has been added.
-- See [qa-report.md](qa-report.md#a12-consistency-review) for narrative/lesson discrepancies.
+- Governing fact ledger: `/thraining-plan/docs/story-bible.md`.
+- Appendix A uses the reconciled learner-facing story directly, with heading levels adapted for the book.
+- Evidence decisions and the editorial review scope are recorded in [the canonical reconciliation review](../docs/a12-reconciliation-review.md). Review status for this source snapshot: **{review_status}**.
+- No new host count, deployed rule, eradication result, or final attribution is invented.
 
 ## Chapter Sources in Teaching Order
 
 References listed for each chapter are preserved in place and consolidated in the manuscript. “None linked” means no external Markdown hyperlink in that student guide, not that the subject lacks supporting literature. No student-guide image assets were referenced. Fenced technical examples stay inline. Case-marker detection also captures shared technical values in separate examples: an IP or filename overlap alone is not an assertion that the example is an A12 event.
 
 '''
+    manifest+='## Complete Learner Reading Order\n\n| Position | Kind | Learner content | Source |\n|---:|---|---|---|\n'
+    for index,(kind,obj) in enumerate(reading_order,1):
+        label=obj['display'] if kind=='wrapper' else obj['book_title']
+        manifest+=f'| {index} | {obj["kind"] if kind=="wrapper" else "lesson"} | [{label}](ebook-manuscript.md#{obj["anchor"]}) | `{obj["source"]}` |\n'
+    manifest+='\n'
     records=[]
     for i,title in enumerate(part_titles):
         manifest+=f'### {title}\n\n'
@@ -555,16 +730,136 @@ References listed for each chapter are preserved in place and consolidated in th
             manifest+='- Formatting/assembly notes: '+('; '.join(notes) if notes else 'standard student-guide structure; ratings moved to Appendix B')+'.\n- References: '+('; '.join(f'[{label}]({url})' for label,url in dict.fromkeys(ext)) if ext else 'none linked')+'.\n\n'
             meta=metadata.get(c['source'],{})
             records.append(dict(order=len(records)+1,part=PARTS[i][0],number=c['number'],title=c['title'],source_path=c['source'],library_file_id=meta.get('library_file_id'),version_id=meta.get('version_id'),modified_at=meta.get('modified_at'),sha256=hashlib.sha256(c['path'].read_bytes()).hexdigest(),anchor=c['anchor'],assets=[],references=[dict(label=l,url=u) for l,u in dict.fromkeys(ext)],a12_terms=terms,a12_sections=a12_sections,notes=notes))
-    manifest+='## Supporting Sources and Exclusions\n\nThe proficiency legend comes from `/thraining-plan/docs/proficiency-legend.md`. Module README files were consulted for structure, not inserted as learner chapters. Instructor guides, slides, repository maintenance instructions, old exports, and companion-story planning notes were excluded from the learner body. The front matter, Part introductions, short unit bridges, glossary, and acronym list are editorial additions grounded in the student guides. An optional concept index was omitted because the detailed contents, glossary links, and chapter-linked bibliography provide reliable navigation without speculative index entries.\n'
+    manifest+='## Subunit Wrapper Sources\n\nThese learner-facing advance organizers and summaries are inserted around meaningful multi-lesson subunits and add no proficiency requirements.\n\n'
+    for w in wrappers:
+        meta=metadata.get(w['source'],{})
+        manifest+=f'- `{w["source"]}` — [{w["display"]}](ebook-manuscript.md#{w["anchor"]})\n'
+    manifest+='\n## Embedded Learner Practicals and Lab Assets\n\nThe practicals below are embedded under their owning lessons so the single-file learner manuscript preserves the qualification workflow without creating new numbered chapters. Controlled CSV/Python assets are embedded as fenced blocks.\n\n'
+    for pobj in practicals:
+        manifest+=f'- `{pobj["source"]}` — [{pobj["title"]}](ebook-manuscript.md#{pobj["anchor"]}); owning lesson `{pobj["parent_number"]}`.\n'
+        for asset in pobj['assets']:
+            manifest+=f'  - `{asset["source"]}` — [{asset["label"]}](ebook-manuscript.md#{asset["anchor"]}).\n'
+    manifest+='\n## Supporting Sources and Exclusions\n\nThe proficiency legend comes from `/thraining-plan/docs/proficiency-legend.md`. Module README files were consulted for structure, not inserted as learner chapters. Instructor guides, slides, repository maintenance instructions, old exports, and companion-story planning notes were excluded from the learner body. The front matter, Part introductions, glossary, and acronym list are editorial additions grounded in the curriculum. Subunit introductions and summaries are canonical learner-facing sources and are included in the manuscript. Learner practicals and their controlled lab assets are embedded under their owning lessons. An optional concept index was omitted because the detailed contents, glossary links, and chapter-linked bibliography provide reliable navigation without speculative index entries.\n'
     (OUT/'manifest.md').write_text(manifest)
-    provenance={'build_date':args.date,'source_snapshot_date':'2026-10-02','chapters':records,'supporting_sources':[]}
-    for path in [story_path,root/'docs/story-bible.md',root/'docs/companion-story/README.md',legend_path]:
+    provenance={'build_date':args.date,'source_snapshot_date':args.snapshot_date,'chapters':records,'wrappers':[],'practicals':[],'embedded_lab_assets':[],'supporting_sources':[],'reading_order':[obj['source'] for _,obj in reading_order], 'editorial_review_current':review_current, 'metadata_note':'Library identifiers, versions, and timestamps describe retrieval. SHA-256 values identify the exact build inputs, including canonical edits made during this pass; saved bytes are verified after writeback.'}
+    for w in wrappers:
+        meta=metadata.get(w['source'],{})
+        provenance['wrappers'].append(dict(part=PARTS[w['part']][0],unit=w['unit'],kind=w['kind'],title=w['display'],source_path=w['source'],library_file_id=meta.get('library_file_id'),version_id=meta.get('version_id'),modified_at=meta.get('modified_at'),sha256=hashlib.sha256(w['path'].read_bytes()).hexdigest(),anchor=w['anchor']))
+    for pobj in practicals:
+        meta=metadata.get(pobj['source'],{})
+        provenance['practicals'].append(dict(parent_number=pobj['parent_number'],title=pobj['title'],source_path=pobj['source'],library_file_id=meta.get('library_file_id'),version_id=meta.get('version_id'),modified_at=meta.get('modified_at'),sha256=hashlib.sha256(pobj['path'].read_bytes()).hexdigest(),anchor=pobj['anchor'],assets=[a['source'] for a in pobj['assets']]))
+    for asset in embedded_assets:
+        meta=metadata.get(asset['source'],{})
+        provenance['embedded_lab_assets'].append(dict(source_path=asset['source'],library_file_id=meta.get('library_file_id'),version_id=meta.get('version_id'),modified_at=meta.get('modified_at'),sha256=hashlib.sha256(asset['path'].read_bytes()).hexdigest(),anchor=asset['anchor']))
+    for path in sorted(set((root/'docs/companion-story').glob('*.md')) | {root/'docs/story-bible.md',root/'docs/skim-first-authoring-standard.md',root/'docs/a12-reconciliation-review.md',legend_path}):
         library_path='/thraining-plan/'+str(path.relative_to(root));meta=metadata.get(library_path,{})
         provenance['supporting_sources'].append(dict(source_path=library_path,library_file_id=meta.get('library_file_id'),version_id=meta.get('version_id'),modified_at=meta.get('modified_at'),sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
     (OUT/'source-provenance.json').write_text(json.dumps(provenance,indent=2,ensure_ascii=False)+'\n')
-    (OUT/'editorial-audit.json').write_text(json.dumps({'edits':audit,'relative_links_converted':link_edits,'source_line_coverage_exceptions':losses,'story_line_coverage_exceptions':story_losses},indent=2,ensure_ascii=False)+'\n')
-    stats=dict(chapters=len(chapters),words=len(book.split()),external_occurrences=sum(len(external_links(c['raw'])) for c in chapters),unique_external_urls=len(refs),internal_links=sum(u.startswith('#') for _,u in LINK.findall(clean)),code_blocks=sum(len(code_blocks(c['raw'])) for c in chapters),unmapped=unmapped,nav_removed=sum(a['kind']=='standalone navigation removed' for a in audit),relative_links_converted=len(link_edits),a12_chapters=sum(bool(r['a12_terms']) for r in records),broken_internal_links=broken)
+    (OUT/'editorial-audit.json').write_text(json.dumps({'edits':audit,'relative_links_converted':link_edits,'source_line_coverage_exceptions':losses,'wrapper_line_coverage_exceptions':wrapper_losses,'story_line_coverage_exceptions':story_losses},indent=2,ensure_ascii=False)+'\n')
+    stats=dict(chapters=len(chapters),subunit_wrappers=len(wrappers),learner_practicals=len(practicals),embedded_lab_assets=len(embedded_assets),words=len(book.split()),external_occurrences=sum(len(external_links(c['raw'])) for c in chapters)+sum(len(external_links(w['raw'])) for w in wrappers)+sum(len(external_links(pobj['raw'])) for pobj in practicals),unique_external_urls=len(refs),internal_links=sum(u.startswith('#') for _,u in LINK.findall(clean)),code_blocks=sum(len(code_blocks(c['raw'])) for c in chapters)+sum(len(code_blocks(w['raw'])) for w in wrappers)+sum(len(code_blocks(pobj['raw'])) for pobj in practicals)+len(embedded_assets),unmapped=unmapped,nav_removed=sum(a['kind']=='standalone navigation removed' for a in audit),relative_links_converted=len(link_edits),a12_chapters=sum(bool(r['a12_terms']) for r in records),broken_internal_links=broken,wrapper_pairs=len(meaningful),reading_order_entries=len(reading_order),table_errors=table_errors,editorial_review_current=review_current,editorial_review_changed_sources=review_changed)
     (OUT/'build-results.json').write_text(json.dumps(stats,indent=2)+'\n')
+
+    ebook_readme=f'''# Ebook manuscript build
+
+This folder contains the derived learner publication for the training plan. The canonical curriculum remains under `modules/`, and the canonical A12 case sources remain under `docs/`.
+
+## Primary learner artifact
+
+- [ebook-manuscript.md](ebook-manuscript.md) — complete reviewable learner manuscript in teaching order
+- [manifest.md](manifest.md) — lesson, wrapper, source, reference, and A12-use inventory
+- [qa-report.md](qa-report.md) — structural/content QA for the current build
+- [source-provenance.json](source-provenance.json) — source hashes and available Library metadata
+- [editorial-audit.json](editorial-audit.json) — editorial/link transformations performed by the builder
+- [build-results.json](build-results.json) — machine-readable build counts
+
+## Build model
+
+The manuscript contains **{len(chapters)} existing lesson/conclusion chapters** plus **{len(wrappers)} skim-first subunit wrappers** ({sum(w['kind']=='intro' for w in wrappers)} introductions and {sum(w['kind']=='summary' for w in wrappers)} summaries). It also embeds **{len(practicals)} learner practicals** and **{len(embedded_assets)} controlled lab assets** under their owning lessons. These additions do not create new numbered proficiency chapters.
+
+The complete reconciled A12 story is inserted as **Appendix A** from `docs/companion-story/story.md`. Detailed proficiency mappings move to **Appendix B** so they remain available without interrupting normal reading.
+
+## Rebuild
+
+From this directory:
+
+```bash
+python build_ebook.py --source-root .. --date YYYY-MM-DD --snapshot-date YYYY-MM-DD
+```
+
+An optional inventory JSON can be supplied with `--inventory` when Library identifiers and modified/version metadata should be embedded in `source-provenance.json`. `--snapshot-date` records retrieval separately from the build date. The builder verifies each meaningful grouping has exactly one intro/summary pair and that its lessons fall between them in order. It preserves the canonical story, adapting only headings and links. External references from lessons, wrappers, and the story are consolidated.
+
+[editorial-review.json](editorial-review.json) records the source hashes covered by the [canonical reconciliation review](../docs/a12-reconciliation-review.md). Changed or newly included sources mark editorial QA as needing review instead of repeating an old all-resolved claim. The builder never updates that review record automatically; refresh it only after an actual content/voice/skim review. Structural QA and editorial QA are reported separately.
+
+## Gemini / NotebookLM use
+
+The ebook manuscript is now the intended single learner upload for NotebookLM/Gemini notebook workflows. The older `exports/gemini-notebook/` split-export tree is deprecated and does not need to be rebuilt when the curriculum changes.
+
+## Publishing status
+
+This is still a Markdown review manuscript. DOCX/PDF/EPUB publication should be generated only after the content, structure, and editorial treatment are approved.
+'''
+    (OUT/'README.md').write_text(ebook_readme)
+
+    if review_current:
+        review_summary='The reviewed source snapshot resolves the seven prior A12 issues:\n\n'+'\n'.join(f'- **{item["id"]}:** {item["decision"]}' for item in review.get('decisions',[]))
+        review_summary+='\n\n'+review.get('voice_summary','')
+    else:
+        review_summary='A12/voice conclusions require review before publication. Changed or unreviewed sources: '+(', '.join(review_changed) or 'review record unavailable')+'.'
+    qa=f'''# Ebook QA Report
+
+**Build date:** {args.date}  
+**Status:** Markdown review build completed successfully.
+
+## Structural validation
+
+- Existing lesson/conclusion chapters: **{len(chapters)}**
+- Skim-first subunit wrappers: **{len(wrappers)}** ({sum(w['kind']=='intro' for w in wrappers)} introductions + {sum(w['kind']=='summary' for w in wrappers)} summaries)
+- Embedded learner practicals: **{len(practicals)}**
+- Embedded controlled lab assets: **{len(embedded_assets)}**
+- Parts: **6**
+- Explicitly unmapped track/course bookends preserved: **{len(unmapped)}**
+- Broken internal Markdown links: **{len(broken)}**
+- Fenced code blocks preserved: **{stats['code_blocks']}**
+- Relative source links converted to book anchors: **{len(link_edits)}**
+- Source lesson line-coverage exceptions: **{len(losses)}**
+- Wrapper line-coverage exceptions: **{len(wrapper_losses)}**
+- A12 story line-coverage exceptions: **{len(story_losses)}**
+
+The builder also verifies unique lesson identifiers, one occurrence of every lesson and wrapper heading, unchanged canonical source inputs during the build, code-block preservation, external-link occurrence preservation, and valid internal anchors.
+
+## Skim-first structure
+
+All **18 meaningful multi-lesson subunits** now appear in the manuscript with a learner-facing introduction and summary. These wrappers implement the course's **Preview → Predict → Read → Confirm** model and are placed around the existing lessons rather than treated as new proficiency chapters.
+
+Detection Engineering has no additional lower-level multi-lesson grouping requiring another wrapper; its existing 4.0 introduction and 4.9 summary remain the appropriate framing layer.
+
+## A12 and editorial review
+
+**Review status:** {review_status}.
+
+{review_summary}
+
+The detailed decisions, live lesson references, voice scope, and 18-subunit skim results are in [the canonical reconciliation review](../docs/a12-reconciliation-review.md). The builder checks that this editorial review covers the current source hashes; it does not infer semantic correctness from a successful compile.
+
+## Editorial / content checks
+
+- Current reorganized CTI structure (2.1–2.8) is retained.
+- All {len(meaningful)} wrapper pairs enclose exactly their intended lessons; the complete reading order is in the manifest.
+- The complete canonical story becomes Appendix A through heading/link adaptation, with no phrase-based story rewrite or removal.
+- Detailed proficiency mappings remain in Appendix B; wrappers and embedded practical sections add no new numbered requirements.
+- The three approved learner practicals are embedded under their owning lessons; their small controlled CSV/Python assets are embedded as fenced blocks so the single-file learner artifact remains usable.
+- External-link occurrences from lessons, wrappers, practicals, and the story are preserved; all are eligible for the consolidated bibliography.
+- Table column checks pass. All generated internal anchors resolve.
+- Instructor guides, answer keys, slides, and planning files are excluded from the learner body.
+- Gemini split exports are outside the build. Canonical sources feed the ebook, which is the single learner upload.
+- Live external website availability and platform-interface currency were not independently revalidated.
+
+## Remaining publication work
+
+This build is ready for content review with the editorial status above. Final publishing work—DOCX/PDF/EPUB styling, pagination, visual QA, and any refreshed live-platform reference checks—remains a later phase.
+'''
+    (OUT/'qa-report.md').write_text(qa)
+
     print(json.dumps(stats,indent=2))
 
 if __name__=='__main__':main()

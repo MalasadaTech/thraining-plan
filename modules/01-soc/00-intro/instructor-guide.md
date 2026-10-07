@@ -61,22 +61,24 @@ Use questions:
 
 Those questions explain the curriculum sequence better than a product list.
 
-### Use A12 as the connective tissue
+### Use A12 as spoiler-light connective tissue
 
-Keep the example simple:
+At 1.0, do not preview the detailed A12 process, network, or registry observations that are intentionally introduced later.
 
-1. `wscript.exe` launches encoded PowerShell.
-2. The workstation communicates externally.
-3. Network telemetry shows a request for `/update.exe`.
-4. A detection fires.
-5. The analyst investigates.
-6. The result is routed.
+Keep the example at the level of the course map:
 
-Then show how each unit sees a different slice.
+1. Suspicious activity involving `WS-JLEE` enters the SOC track.
+2. 1.1 introduces host evidence.
+3. 1.2 adds network evidence.
+4. 1.3 explains detection logic.
+5. 1.4 investigates and assesses the alert context.
+6. 1.5 communicates the supported result.
+
+Then show how each unit sees a different slice as new evidence becomes available.
 
 The teaching point is:
 
-> The event does not change; the analytic question changes.
+> The case does not change; the evidence is revealed progressively and the analytic question changes.
 
 ### Reinforce evidence boundaries
 

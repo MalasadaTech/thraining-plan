@@ -1,6 +1,6 @@
 {
-  "build_date": "2026-10-03",
-  "source_snapshot_date": "2026-10-02",
+  "build_date": "2026-10-05",
+  "source_snapshot_date": "2026-10-05",
   "chapters": [
     {
       "order": 1,
@@ -8,10 +8,10 @@
       "number": "0.1",
       "title": "How this course is laid out",
       "source_path": "/thraining-plan/modules/00-intro/01-course-layout/student-guide.md",
-      "library_file_id": "libfile_e32afce0a6bc81919f76919665995af7",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:03.501409Z",
-      "sha256": "33f38afc2428382b37c7bd0f5aff0865c407111d69dba725f318050affb5dfb6",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "bdb8ebc18313e6df580be0ebbfd5ffc22f5eca9e366f935e9ac6606af6f3ceb9",
       "anchor": "01--how-this-course-is-laid-out",
       "assets": [],
       "references": [],
@@ -25,10 +25,10 @@
       "number": "0.2",
       "title": "What a SOC is",
       "source_path": "/thraining-plan/modules/00-intro/02-what-a-soc-is/student-guide.md",
-      "library_file_id": "libfile_2e8cf5c0e8188191b39370bc5c568dda",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:03.444498Z",
-      "sha256": "eb92add82009cc80e0d13fa2451606be9eb41aabad1905d16276cbce45d35613",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "349af9b6d4fc5866b7b31513fc7a0c2fad2e5a40f1c496e670a4edd52fd06351",
       "anchor": "02--what-a-soc-is",
       "assets": [],
       "references": [
@@ -52,9 +52,9 @@
       "number": "0.3",
       "title": "Jobs in one sentence",
       "source_path": "/thraining-plan/modules/00-intro/03-jobs-in-one-sentence/student-guide.md",
-      "library_file_id": "libfile_4c1961736bac81918777b878cf0c21a4",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:03.573472Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "ab04bd4543d07f43c5a672087278be127d2c58e6124ca4f46572b38d4d1c4bb6",
       "anchor": "03--jobs-in-one-sentence",
       "assets": [],
@@ -74,9 +74,9 @@
       "number": "0.4",
       "title": "How work can move",
       "source_path": "/thraining-plan/modules/00-intro/04-how-work-moves/student-guide.md",
-      "library_file_id": "libfile_9b1af1efb560819190fde9fc138f7c68",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:04.069502Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "98abb259bc8a9f0353aa8b9b248604741534c5e3821bbce8a8a41ae851dcebb3",
       "anchor": "04--how-work-can-move",
       "assets": [],
@@ -96,9 +96,9 @@
       "number": "0.5",
       "title": "Where the jobs lightly overlap",
       "source_path": "/thraining-plan/modules/00-intro/05-where-jobs-overlap/student-guide.md",
-      "library_file_id": "libfile_5d1f1160d37481919ae8aef8660298d9",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:03.552845Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "6cd92b8e0230370d39b2886dafa7d1d728036147451155eef6d636abd18e39df",
       "anchor": "05--where-the-jobs-lightly-overlap",
       "assets": [],
@@ -118,10 +118,10 @@
       "number": "0.6.1",
       "title": "MITRE ATT&CK",
       "source_path": "/thraining-plan/modules/00-intro/06-frameworks/01-attck/student-guide.md",
-      "library_file_id": "libfile_001714f747988191a3bd33f414c95749",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:10.877598Z",
-      "sha256": "6c293ce2e98ddfcee473d98a96b5f7ffc5e0e98793c50fbe5e0ab9a390ac276a",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "eeec2a8d4d5d51374edff409926cb4c86762bb236bf39e27e809443c1cc5919f",
       "anchor": "061--mitre-attck",
       "assets": [],
       "references": [
@@ -136,10 +136,22 @@
         {
           "label": "MITRE ATT&CK — PowerShell (T1059.001)",
           "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "label": "MITRE ATT&CK — Modify Registry (T1112)",
+          "url": "https://attack.mitre.org/techniques/T1112/"
+        },
+        {
+          "label": "MITRE ATT&CK — Registry Run Keys / Startup Folder (T1547.001)",
+          "url": "https://attack.mitre.org/techniques/T1547/001/"
         }
       ],
-      "a12_terms": [],
-      "a12_sections": [],
+      "a12_terms": [
+        "Updater"
+      ],
+      "a12_sections": [
+        "3. Choosing between plausible mappings"
+      ],
       "notes": []
     },
     {
@@ -148,9 +160,9 @@
       "number": "0.6.2",
       "title": "Diamond Model",
       "source_path": "/thraining-plan/modules/00-intro/06-frameworks/02-diamond-model/student-guide.md",
-      "library_file_id": "libfile_feccb31308148191be78e4cab1d2c747",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:10.822489Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "8d1724bffbab62d8232ce84d55ad81df84ada21857c325731bb0d465ec02585d",
       "anchor": "062--diamond-model",
       "assets": [],
@@ -170,10 +182,10 @@
       "number": "0.6.3",
       "title": "Cyber Kill Chain",
       "source_path": "/thraining-plan/modules/00-intro/06-frameworks/03-cyber-kill-chain/student-guide.md",
-      "library_file_id": "libfile_e391f0d8ca948191bba20fcb80be49a6",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:10.745641Z",
-      "sha256": "2e92ff17ec6736a242036e8c36f00f0342cfd921d7407ad7d1c4b67cbc03cfa1",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "90a2b0a1aa439fc9c55711ac7ab8a1c140068ecf54da323f6362896472884afc",
       "anchor": "063--cyber-kill-chain",
       "assets": [],
       "references": [
@@ -182,8 +194,12 @@
           "url": "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html"
         }
       ],
-      "a12_terms": [],
-      "a12_sections": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "2. Placing an observed event"
+      ],
       "notes": []
     },
     {
@@ -192,9 +208,9 @@
       "number": "0.7",
       "title": "External tools",
       "source_path": "/thraining-plan/modules/00-intro/07-tool-survey/01-external-tools/student-guide.md",
-      "library_file_id": "libfile_5673b8b92d848191a480494efd4311bf",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:10.799049Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "8d448794a14ebb4ce65b4d27cd6aa982ab1c16217d823d73c6f17dab390a20d7",
       "anchor": "07--external-tools",
       "assets": [],
@@ -230,10 +246,10 @@
       "number": "0.8",
       "title": "Environment / signal flow",
       "source_path": "/thraining-plan/modules/00-intro/08-environment/01-orientation/student-guide.md",
-      "library_file_id": "libfile_f6c9e2c547908191a3eef9f33520c1a0",
-      "version_id": "1",
-      "modified_at": "2026-10-02T06:32:10.788653Z",
-      "sha256": "e4fdeea34972d2eb1f12efdfff121cadcecd19663ca57b509971ce957202e44e",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "37da97bf0ac5a74210ef5ec261437035cc9fe4f51c678c68efc71e42b5bed85c",
       "anchor": "08--environment--signal-flow",
       "assets": [],
       "references": [
@@ -250,13 +266,74 @@
       "order": 11,
       "part": "I",
       "number": "0.9",
-      "title": "Shared Foundations Section Summary",
-      "source_path": "/thraining-plan/modules/00-intro/09-summary/student-guide.md",
-      "library_file_id": "libfile_ba57752f7f8081919c1b19e9bbc0b453",
+      "title": "Common Initial Access Paths",
+      "source_path": "/thraining-plan/modules/00-intro/09-initial-access/student-guide.md",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T17:34:27.624712Z",
-      "sha256": "6b3789352e761ea7b8f463a52a86c30fbdd26f463c019989679ad068da907be0",
-      "anchor": "09--shared-foundations-section-summary",
+      "modified_at": null,
+      "sha256": "01796b9ee1b04929d791938374469758f246019465ac86a8b04a06c4d86a94d6",
+      "anchor": "09--common-initial-access-paths",
+      "assets": [],
+      "references": [
+        {
+          "label": "MITRE ATT&CK — Initial Access (TA0001)",
+          "url": "https://attack.mitre.org/tactics/TA0001/"
+        },
+        {
+          "label": "CISA — #StopRansomware Guide",
+          "url": "https://www.cisa.gov/stopransomware/ransomware-guide"
+        },
+        {
+          "label": "MITRE ATT&CK — Phishing (T1566)",
+          "url": "https://attack.mitre.org/techniques/T1566/"
+        },
+        {
+          "label": "MITRE ATT&CK — Drive-by Compromise (T1189)",
+          "url": "https://attack.mitre.org/techniques/T1189/"
+        },
+        {
+          "label": "MITRE ATT&CK — Exploit Public-Facing Application (T1190)",
+          "url": "https://attack.mitre.org/techniques/T1190/"
+        },
+        {
+          "label": "MITRE ATT&CK — Valid Accounts (T1078)",
+          "url": "https://attack.mitre.org/techniques/T1078/"
+        },
+        {
+          "label": "MITRE ATT&CK — External Remote Services (T1133)",
+          "url": "https://attack.mitre.org/techniques/T1133/"
+        },
+        {
+          "label": "MITRE ATT&CK — Trusted Relationship (T1199)",
+          "url": "https://attack.mitre.org/techniques/T1199/"
+        },
+        {
+          "label": "MITRE ATT&CK — Supply Chain Compromise (T1195)",
+          "url": "https://attack.mitre.org/techniques/T1195/"
+        }
+      ],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "4. Work from evidence strength",
+        "5. A12: keep the entry path unresolved",
+        "Knowledge Check"
+      ],
+      "notes": []
+    },
+    {
+      "order": 12,
+      "part": "I",
+      "number": "0.10",
+      "title": "Shared Foundations Section Summary",
+      "source_path": "/thraining-plan/modules/00-intro/10-summary/student-guide.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "d8909c593a5eb31a79f41992d951f5f7bd0d1f1fbb5ad7fdf9b00183e2e3ada8",
+      "anchor": "010--shared-foundations-section-summary",
       "assets": [],
       "references": [],
       "a12_terms": [
@@ -266,31 +343,9 @@
       "a12_sections": [
         "3. One A12 Story Across the Shared Foundations",
         "Detection Engineering",
-        "10. Integrated Review Exercise"
-      ],
-      "notes": [
-        "no proficiency mapping"
-      ]
-    },
-    {
-      "order": 12,
-      "part": "II",
-      "number": "1.0",
-      "title": "SOC Analyst Fundamentals: How the 1.x Block Fits Together",
-      "source_path": "/thraining-plan/modules/01-soc/00-intro/student-guide.md",
-      "library_file_id": "libfile_8f88a96937008191865a0079bee56179",
-      "version_id": null,
-      "modified_at": "2026-10-02T16:03:39.257406Z",
-      "sha256": "bf0823819c31e95b6fdf51ac360f8ec494fe98b275abf127b504cd5fd32197da",
-      "anchor": "10--soc-analyst-fundamentals-how-the-1x-block-fits-together",
-      "assets": [],
-      "references": [],
-      "a12_terms": [
-        "A12",
-        "WS-JLEE"
-      ],
-      "a12_sections": [
-        "4. One Activity, Several Views"
+        "4. Follow the Question When Work Moves",
+        "10. Integrated Review Exercise",
+        "Initial-access path"
       ],
       "notes": [
         "no proficiency mapping"
@@ -299,13 +354,38 @@
     {
       "order": 13,
       "part": "II",
+      "number": "1.0",
+      "title": "SOC Analyst Fundamentals: How the 1.x Block Fits Together",
+      "source_path": "/thraining-plan/modules/01-soc/00-intro/student-guide.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "a037923238ffeff3906c75e3b7b2e56219210a820d8d760af65f455e45a68461",
+      "anchor": "10--soc-analyst-fundamentals-how-the-1x-block-fits-together",
+      "assets": [],
+      "references": [],
+      "a12_terms": [
+        "A12",
+        "WS-JLEE"
+      ],
+      "a12_sections": [
+        "3. Start With the Evidence",
+        "4. One Activity, Several Views"
+      ],
+      "notes": [
+        "no proficiency mapping"
+      ]
+    },
+    {
+      "order": 14,
+      "part": "II",
       "number": "1.1.1",
       "title": "Endpoint activity (the map)",
       "source_path": "/thraining-plan/modules/01-soc/01-endpoint/01-endpoint-activity/student-guide.md",
-      "library_file_id": "libfile_1d569c6ded2081919d1039478ab18c23",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:30.452147Z",
-      "sha256": "b27e5c92a084c479e0df7313cdf5f2bd1ed47438f4a1ef7d372dbffbf358945e",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "d960fdadd15d652f06d294cc9d3baeeccbb329779ba1f34f15a52f5178d26192",
       "anchor": "111--endpoint-activity-the-map",
       "assets": [],
       "references": [
@@ -323,14 +403,14 @@
       "notes": []
     },
     {
-      "order": 14,
+      "order": 15,
       "part": "II",
       "number": "1.1.2",
       "title": "Process Activity",
       "source_path": "/thraining-plan/modules/01-soc/01-endpoint/02-process-activity/student-guide.md",
-      "library_file_id": "libfile_d4b94d40b81081918e3b83cebbb1fea4",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:30.737838Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "a5d25b85c4ab9675ab0d5db5c680355bb4e5e0a95de983042661a469238cd9a3",
       "anchor": "112--process-activity",
       "assets": [],
@@ -359,15 +439,15 @@
       ]
     },
     {
-      "order": 15,
+      "order": 16,
       "part": "II",
       "number": "1.1.3",
       "title": "File System Activity",
       "source_path": "/thraining-plan/modules/01-soc/01-endpoint/03-file-system-activity/student-guide.md",
-      "library_file_id": "libfile_068c45fdb8c48191b271ac9006efa5a5",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:30.723325Z",
-      "sha256": "f4cbee3b8df519491c72c43d120a252f41e3bfada8e0237d5673b54326e4a3bc",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "0500132c1021dd72d12054035f50e7cdec74672605b799893e0fce6fe37c4189",
       "anchor": "113--file-system-activity",
       "assets": [],
       "references": [
@@ -385,6 +465,7 @@
         }
       ],
       "a12_terms": [
+        "A12",
         "jlee",
         "WS-JLEE"
       ],
@@ -396,15 +477,15 @@
       ]
     },
     {
-      "order": 16,
+      "order": 17,
       "part": "II",
       "number": "1.1.4",
       "title": "Network Activity (Endpoint)",
       "source_path": "/thraining-plan/modules/01-soc/01-endpoint/04-network-activity/student-guide.md",
-      "library_file_id": "libfile_02b512848b648191be7c565dba446a82",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:30.604879Z",
-      "sha256": "e98969156ab9033608f27cc630ed634e2154a84aace14f992e9724408f146c03",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "9e0d9a30d086216689414a969998ebe7512a58aacea00d397afbbfeea1bb2b6d",
       "anchor": "114--network-activity-endpoint",
       "assets": [],
       "references": [
@@ -422,25 +503,24 @@
         }
       ],
       "a12_terms": [
-        "203.0.113.88"
+        "A12"
       ],
       "a12_sections": [
-        "2. Working through the example",
-        "3. Creating a focused network query"
+        "2. Working through the example"
       ],
       "notes": [
         "1 fenced code block(s), preserved exactly"
       ]
     },
     {
-      "order": 17,
+      "order": 18,
       "part": "II",
       "number": "1.1.5",
       "title": "Registry Activity",
       "source_path": "/thraining-plan/modules/01-soc/01-endpoint/05-registry-activity/student-guide.md",
-      "library_file_id": "libfile_f12072328e1881919ed2469910114ec2",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:30.428027Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "74dd59dd32e807b8c63e50c4b9c678037079c5beef6f5a6df79153df1ce51918",
       "anchor": "115--registry-activity",
       "assets": [],
@@ -472,15 +552,15 @@
       ]
     },
     {
-      "order": 18,
+      "order": 19,
       "part": "II",
       "number": "1.1.6",
       "title": "Image and Driver Load Activity",
       "source_path": "/thraining-plan/modules/01-soc/01-endpoint/06-image-driver-load/student-guide.md",
-      "library_file_id": "libfile_75fed03019e88191be074868f9e9b500",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:39.423867Z",
-      "sha256": "f14162372c3104b55ede143d6e0b6e75a952246d0ce9da2231610680327c9eac",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "46de191e190e4b8765de5a58cd0ef8a195b4d769b623b9bc9c4b29100f1c9a3d",
       "anchor": "116--image-and-driver-load-activity",
       "assets": [],
       "references": [
@@ -508,15 +588,15 @@
       ]
     },
     {
-      "order": 19,
+      "order": 20,
       "part": "II",
       "number": "1.2.1",
       "title": "Zeek Concepts",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/01-concepts/student-guide.md",
-      "library_file_id": "libfile_b1e02722a4948191bfa04492421f2cc3",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:39.413414Z",
-      "sha256": "7a709fef0050e057b92f44672b0a40617810bb6f0ba9cbbf47c2f7bf9dceb6ed",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "708e5bee82505dae504753226573024718ee5e2e38de70ccce25404fb292649f",
       "anchor": "121--zeek-concepts",
       "assets": [],
       "references": [
@@ -534,14 +614,14 @@
       "notes": []
     },
     {
-      "order": 20,
+      "order": 21,
       "part": "II",
       "number": "1.2.2",
       "title": "Conn Engine",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/02-conn-engine/student-guide.md",
-      "library_file_id": "libfile_2d7200aa91408191aa7116460689431a",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:39.471961Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "ddb1ee39b6dab52013359a3c414a3154ba053f8d326f0cbf899142beaf001f7a",
       "anchor": "122--conn-engine",
       "assets": [],
@@ -563,14 +643,14 @@
       ]
     },
     {
-      "order": 21,
+      "order": 22,
       "part": "II",
       "number": "1.2.3",
       "title": "DNS Engine",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/03-dns-engine/student-guide.md",
-      "library_file_id": "libfile_e7cfaa71d3dc8191bce7f4dbc046d450",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:40.876571Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "615ea0ff60f1a5f31d6caf54c59970cb8ece876ddb3c8cb4103bf8903011eb9f",
       "anchor": "123--dns-engine",
       "assets": [],
@@ -591,14 +671,14 @@
       ]
     },
     {
-      "order": 22,
+      "order": 23,
       "part": "II",
       "number": "1.2.4",
       "title": "TLS Engine",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/04-tls-engine/student-guide.md",
-      "library_file_id": "libfile_b44803450ee08191ab4878bb051fbb5f",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:39.406069Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "286587acf4a7f7c3813931ed5ff481e8090d6c09fe055766b54143bdf61c192d",
       "anchor": "124--tls-engine",
       "assets": [],
@@ -624,15 +704,15 @@
       ]
     },
     {
-      "order": 23,
+      "order": 24,
       "part": "II",
       "number": "1.2.5",
       "title": "HTTP Engine",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/05-http-engine/student-guide.md",
-      "library_file_id": "libfile_71c192f313a48191bdfd26f7189fa752",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:46.126901Z",
-      "sha256": "f819b7c3552eb7199efbde6e3b0ed1a204e0d6a589dc06103dad177109c80590",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "86dbe27156059f899569d6fe4273e985ff02db26710050cf52c9b67affd1f370",
       "anchor": "125--http-engine",
       "assets": [],
       "references": [
@@ -646,25 +726,24 @@
         }
       ],
       "a12_terms": [
-        "203.0.113.88"
+        "A12"
       ],
       "a12_sections": [
-        "2. Working through the example",
-        "3. Creating a focused HTTP query"
+        "2. Working through the example"
       ],
       "notes": [
         "1 fenced code block(s), preserved exactly"
       ]
     },
     {
-      "order": 24,
+      "order": 25,
       "part": "II",
       "number": "1.2.6",
       "title": "SMTP Engine",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/06-smtp-engine/student-guide.md",
-      "library_file_id": "libfile_4564b94069b4819191a8fad3cd5528e5",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:46.122858Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "b0f3b43fdb1b9e7210b692643887546e9620f4210cc77ee46fc511fe83d6b9b3",
       "anchor": "126--smtp-engine",
       "assets": [],
@@ -685,15 +764,15 @@
       ]
     },
     {
-      "order": 25,
+      "order": 26,
       "part": "II",
       "number": "1.2.7",
       "title": "Files Engine",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/07-files-engine/student-guide.md",
-      "library_file_id": "libfile_20bdd779160881918fd3488dbb44aeca",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:46.202376Z",
-      "sha256": "17c000644a57b0923c3604c9857b79e0675f93c65dfbbc6bdd5584388c06277f",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "06399b175a6873e44cdcb4807e28c284883127b121ec0d54da6976020520b577",
       "anchor": "127--files-engine",
       "assets": [],
       "references": [
@@ -703,26 +782,25 @@
         }
       ],
       "a12_terms": [
-        "203.0.113.88"
+        "A12"
       ],
       "a12_sections": [
-        "2. Working through the example",
-        "3. Creating a focused file-analysis query"
+        "2. Working through the example"
       ],
       "notes": [
         "1 fenced code block(s), preserved exactly"
       ]
     },
     {
-      "order": 26,
+      "order": 27,
       "part": "II",
       "number": "1.2.8",
       "title": "Weird Engine",
       "source_path": "/thraining-plan/modules/01-soc/02-zeek/08-weird-engine/student-guide.md",
-      "library_file_id": "libfile_2606156e3a2c8191b6af715e7e847dc8",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:46.151899Z",
-      "sha256": "a3c33e1fb6c8eb984ed6e863d0e008dc13a855652dcc69b82a273bf0685b9770",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "908d03e954671d7b8721cde69bf22fe369cfd776030124d757a549c4df72171d",
       "anchor": "128--weird-engine",
       "assets": [],
       "references": [
@@ -743,15 +821,15 @@
       ]
     },
     {
-      "order": 27,
+      "order": 28,
       "part": "II",
       "number": "1.3.1",
       "title": "SIGMA Rules",
       "source_path": "/thraining-plan/modules/01-soc/03-detection/01-sigma-rules/student-guide.md",
-      "library_file_id": "libfile_bbf6fd04e0388191a3c75b84291723b9",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:46.210905Z",
-      "sha256": "c2b1d653bf67d0df8aee37357096dc4d0707b510139ef7d78540c6e475a24a72",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "b914f2d187e8ed7ef29e34fbcffffe9e484bb5c8c8704e5398659a22680effed",
       "anchor": "131--sigma-rules",
       "assets": [],
       "references": [
@@ -771,14 +849,14 @@
       ]
     },
     {
-      "order": 28,
+      "order": 29,
       "part": "II",
       "number": "1.3.2",
       "title": "Suricata Rules",
       "source_path": "/thraining-plan/modules/01-soc/03-detection/02-suricata-rules/student-guide.md",
-      "library_file_id": "libfile_86755bc5bda081919f35848c567ffd88",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:55.059525Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "d843b4e45cde2b1d0d724cef9909468149d0bb4864fed9ddda2457704e1c8b17",
       "anchor": "132--suricata-rules",
       "assets": [],
@@ -799,14 +877,14 @@
       ]
     },
     {
-      "order": 29,
+      "order": 30,
       "part": "II",
       "number": "1.3.3",
       "title": "YARA Rules",
       "source_path": "/thraining-plan/modules/01-soc/03-detection/03-yara-rules/student-guide.md",
-      "library_file_id": "libfile_f49e2e917224819193af73b4e76dc798",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:56.403835Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "44424659284298856758318e76eb333685d8e0aee6a7776bc7f8915defc84846",
       "anchor": "133--yara-rules",
       "assets": [],
@@ -827,15 +905,15 @@
       ]
     },
     {
-      "order": 30,
+      "order": 31,
       "part": "II",
       "number": "1.3.4",
       "title": "SIEM Rules",
       "source_path": "/thraining-plan/modules/01-soc/03-detection/04-siem-rules/student-guide.md",
-      "library_file_id": "libfile_2802c5d7ec2081918ff727c5cbf660b6",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:55.009434Z",
-      "sha256": "6813faf5e8cd4dc141880e87ffe7fcf15817b015f675385a2a9c3dafa420556b",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "4b21abcbf2768ebd4c333838fedaa4b99236465c17ecdfcfb43b75f0876e40ef",
       "anchor": "134--siem-rules",
       "assets": [],
       "references": [
@@ -859,15 +937,15 @@
       ]
     },
     {
-      "order": 31,
+      "order": 32,
       "part": "II",
       "number": "1.4.1",
       "title": "Alert Context and Investigation",
       "source_path": "/thraining-plan/modules/01-soc/04-alerts/01-context-investigation/student-guide.md",
-      "library_file_id": "libfile_a11307f926fc8191848ed1c04fe6ac8f",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:56.221708Z",
-      "sha256": "e0e16605015485fe009b8521f12c0146757a2b1285dae2731894f9aac120c1de",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "1033cf6648b10c4210de2e3c2f43194fcc5afa0e2a2fe4e68a778f8cc8d29bb9",
       "anchor": "141--alert-context-and-investigation",
       "assets": [],
       "references": [
@@ -897,14 +975,14 @@
       "notes": []
     },
     {
-      "order": 32,
+      "order": 33,
       "part": "II",
       "number": "1.4.2",
       "title": "Alert Classification",
       "source_path": "/thraining-plan/modules/01-soc/04-alerts/02-classification/student-guide.md",
-      "library_file_id": "libfile_d5a491d850008191922afaf89ffbb848",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:26:56.262265Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "4a9ba6090c3549accf06db8a88d519c52fa7eccd84cfb32a71fa7b32a3584db4",
       "anchor": "142--alert-classification",
       "assets": [],
@@ -923,14 +1001,14 @@
       "notes": []
     },
     {
-      "order": 33,
+      "order": 34,
       "part": "II",
       "number": "1.4.3",
       "title": "Common False Positive Causes",
       "source_path": "/thraining-plan/modules/01-soc/04-alerts/03-false-positive-causes/student-guide.md",
-      "library_file_id": "libfile_688a1d4a591c819192e05827e09f6ebd",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:27:04.001603Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "08211c0392ac16f11c18d009244ad9778342cb874547817010d4363bbe9e786c",
       "anchor": "143--common-false-positive-causes",
       "assets": [],
@@ -949,15 +1027,15 @@
       "notes": []
     },
     {
-      "order": 34,
+      "order": 35,
       "part": "II",
       "number": "1.4.4",
       "title": "Common Alert Categorizations",
       "source_path": "/thraining-plan/modules/01-soc/04-alerts/04-categorizations/student-guide.md",
-      "library_file_id": "libfile_057ca58c73d88191ae41e7eff669c4fe",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:27:03.956333Z",
-      "sha256": "251357d69aff8fb4312137147ad09f2aa0ad2edb78bf09d3a7c07b2703b9d714",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "798bb5a561ecfcf7e23c8f2330c38a6ad36364d105e0e0acd11dbfe3c9d83b9a",
       "anchor": "144--common-alert-categorizations",
       "assets": [],
       "references": [
@@ -967,24 +1045,23 @@
         }
       ],
       "a12_terms": [
-        "jlee"
+        "A12"
       ],
       "a12_sections": [
-        "2. Comparing similar cases",
-        "Knowledge Check"
+        "2. Comparing similar cases"
       ],
       "notes": []
     },
     {
-      "order": 35,
+      "order": 36,
       "part": "II",
       "number": "1.4.5",
       "title": "SLA / Response Time Goals",
       "source_path": "/thraining-plan/modules/01-soc/04-alerts/05-sla-response-times/student-guide.md",
-      "library_file_id": "libfile_1566a443b1208191baa96c236c40af02",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:27:04.721645Z",
-      "sha256": "148a2019c2d210fe8fb40c5c4f209503b97ccd56570791b4200b3dba3adfcde2",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "7f4830a409c988c2179bad0be70c8cd9b30fde78a43921d0e994e9ea4c7532a6",
       "anchor": "145--sla--response-time-goals",
       "assets": [],
       "references": [
@@ -998,15 +1075,15 @@
       "notes": []
     },
     {
-      "order": 36,
+      "order": 37,
       "part": "II",
       "number": "1.5.1",
       "title": "Report Types",
       "source_path": "/thraining-plan/modules/01-soc/05-reporting/01-report-types/student-guide.md",
-      "library_file_id": "libfile_b0f7dbd166488191ad6f94cc81d8cf55",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:27:04.231528Z",
-      "sha256": "8dfe9f0efbe42978eac3c5e33beafd49c60d85dc2be1d9d7973e3223364197d3",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "2d39418617bd9fa71434534f3ef9c721200efa6466dcefa63f6ca1ebd36208ed",
       "anchor": "151--report-types",
       "assets": [],
       "references": [
@@ -1031,14 +1108,14 @@
       "notes": []
     },
     {
-      "order": 37,
+      "order": 38,
       "part": "II",
       "number": "1.5.2",
       "title": "Reporting Timeline Requirements",
       "source_path": "/thraining-plan/modules/01-soc/05-reporting/02-reporting-timelines/student-guide.md",
-      "library_file_id": "libfile_6985633ac82c8191879d049e8379d469",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:27:04.031864Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "03973ed22011cf3fb822b6272b6579ca134bcf5da586450b9cd950929c6f16ca",
       "anchor": "152--reporting-timeline-requirements",
       "assets": [],
@@ -1053,15 +1130,15 @@
       "notes": []
     },
     {
-      "order": 38,
+      "order": 39,
       "part": "II",
       "number": "1.5.3",
       "title": "Notification and Distribution",
       "source_path": "/thraining-plan/modules/01-soc/05-reporting/03-notification-distribution/student-guide.md",
-      "library_file_id": "libfile_a27a2a27f2608191aca1618faf15c84f",
-      "version_id": "1",
-      "modified_at": "2026-10-02T14:27:11.031761Z",
-      "sha256": "c3030cfe0705e336c1255e934e0be365c244502edb75078139f906eb00022573",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "cd6baf41bbb7db210229d2ee5d6da554e421337e78925256829c6a7ad8d3843c",
       "anchor": "153--notification-and-distribution",
       "assets": [],
       "references": [
@@ -1085,15 +1162,15 @@
       "notes": []
     },
     {
-      "order": 39,
+      "order": 40,
       "part": "II",
       "number": "1.6",
       "title": "SOC Analyst Section Summary",
       "source_path": "/thraining-plan/modules/01-soc/06-summary/student-guide.md",
-      "library_file_id": "libfile_8f44e496e0cc8191911ddcd6faf3128e",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T17:11:27.457960Z",
-      "sha256": "63be25b43f851d672a88f14be5712a19a1738c96f83ca37815e046fd022bea2e",
+      "modified_at": null,
+      "sha256": "362284fbd248a3056aaf1012916b3eef4de9cf78bce86217a066f5ace2f90a91",
       "anchor": "16--soc-analyst-section-summary",
       "assets": [],
       "references": [],
@@ -1113,15 +1190,15 @@
       ]
     },
     {
-      "order": 40,
+      "order": 41,
       "part": "III",
       "number": "2.0",
       "title": "Cyber Threat Intelligence: How the 2.x Block Fits Together",
       "source_path": "/thraining-plan/modules/02-cti/00-intro/student-guide.md",
-      "library_file_id": "libfile_be30cc6a130c8191bad571f1c3cfa9f2",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T20:08:25.849887Z",
-      "sha256": "3b43f63d91c411e41f7de42c6202a1ce30d6828a290a116eba21a7330fd97ab7",
+      "modified_at": null,
+      "sha256": "39872cdf17b40e0d2ce269525c23e34b984107de0709487b7c11e5158818ca7d",
       "anchor": "20--cyber-threat-intelligence-how-the-2x-block-fits-together",
       "assets": [],
       "references": [],
@@ -1137,14 +1214,14 @@
       ]
     },
     {
-      "order": 41,
+      "order": 42,
       "part": "III",
       "number": "2.1.1",
       "title": "Difference between data, information, and intelligence",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/01-data-info-intel/student-guide.md",
-      "library_file_id": "libfile_a5baaabd57c88191aa2674c8a8f59c39",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:27.980210Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "db99b3f2a4ed8e9f87831378a4b6114ba4e7b96935023c7b8d4be8997460bd5b",
       "anchor": "211--difference-between-data-information-and-intelligence",
       "assets": [],
@@ -1166,14 +1243,14 @@
       "notes": []
     },
     {
-      "order": 42,
+      "order": 43,
       "part": "III",
       "number": "2.1.2",
       "title": "Intelligence lifecycle",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/02-intelligence-lifecycle/student-guide.md",
-      "library_file_id": "libfile_66be33829e6c8191a0d65222240d054d",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:31.136213Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "aa060e50bef5b26051c4d40195007e18c9d481a59d329d43bcaa31491bed9ba1",
       "anchor": "212--intelligence-lifecycle",
       "assets": [],
@@ -1189,14 +1266,14 @@
       "notes": []
     },
     {
-      "order": 43,
+      "order": 44,
       "part": "III",
       "number": "2.1.3",
       "title": "Intelligence Types",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/03-intelligence-types/student-guide.md",
-      "library_file_id": "libfile_a78f661ea0f8819190eb587fdca4f1c9",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:31.089852Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "7e9b94934a45bbdd1f950daae2506fa12edf435aec0c1262b41f29ea68bdc4de",
       "anchor": "213--intelligence-types",
       "assets": [],
@@ -1214,14 +1291,14 @@
       "notes": []
     },
     {
-      "order": 44,
+      "order": 45,
       "part": "III",
       "number": "2.1.4",
       "title": "Intelligence Requirements",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/04-intelligence-requirements/student-guide.md",
-      "library_file_id": "libfile_c9c1aebcff50819183337909bfd173b8",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:31.134179Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "e6dbb99437e400a668002c10b3ce892e5571bf7415dbe3817c6ba81ad8792ab5",
       "anchor": "214--intelligence-requirements",
       "assets": [],
@@ -1239,14 +1316,14 @@
       "notes": []
     },
     {
-      "order": 45,
+      "order": 46,
       "part": "III",
       "number": "2.1.5",
       "title": "RFI Intake and Prioritization",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/05-rfi-intake/student-guide.md",
-      "library_file_id": "libfile_d01c237d08c481919c5bb68e7668bfe8",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T19:42:31.119642Z",
+      "modified_at": null,
       "sha256": "7dae4a7dfcaab09e8d2aeef6b588788127b900dfd21a9c3b0a9b11a4ff43cbfc",
       "anchor": "215--rfi-intake-and-prioritization",
       "assets": [],
@@ -1262,14 +1339,14 @@
       "notes": []
     },
     {
-      "order": 46,
+      "order": 47,
       "part": "III",
       "number": "2.1.6",
       "title": "Ensuring Intelligence Is Actionable",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/06-actionable-intelligence/student-guide.md",
-      "library_file_id": "libfile_52167c9b09508191928c5de06b51f495",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:31.207209Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "50ba1806c9af912c3981c91252ee13c4ff32a91e354adc0aba4865c919bc5fe8",
       "anchor": "216--ensuring-intelligence-is-actionable",
       "assets": [],
@@ -1285,14 +1362,14 @@
       "notes": []
     },
     {
-      "order": 47,
+      "order": 48,
       "part": "III",
       "number": "2.1.7",
       "title": "Tailoring Output to the Audience",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/07-tailoring-audience/student-guide.md",
-      "library_file_id": "libfile_762e7da0d15c81918b1ada9f1f97a56c",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:34.480918Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "6adcf5bfec2395a9ed0fe013986e558c33bff27145fcc6706cf447d2e5ebc804",
       "anchor": "217--tailoring-output-to-the-audience",
       "assets": [],
@@ -1308,14 +1385,14 @@
       "notes": []
     },
     {
-      "order": 48,
+      "order": 49,
       "part": "III",
       "number": "2.1.8",
       "title": "Attribution",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/08-attribution/student-guide.md",
-      "library_file_id": "libfile_1c4342ecf9f081919570d9fe5b81317e",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:34.584735Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "fb7d8f407e40f2a9a1f9a1892caaa59b6678b545fdaf2dd2c70b1289365ff808",
       "anchor": "218--attribution",
       "assets": [],
@@ -1330,15 +1407,15 @@
       "notes": []
     },
     {
-      "order": 49,
+      "order": 50,
       "part": "III",
       "number": "2.1.9",
       "title": "Collection Sources and Methods",
       "source_path": "/thraining-plan/modules/02-cti/01-core-intel/09-collection-sources/student-guide.md",
-      "library_file_id": "libfile_630a2747b3ec8191b9544f9db7810855",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:34.667178Z",
-      "sha256": "eb521487d63954aa6a2db010d68371c34e03b8c3d7a6d0f91224726a277a6b6a",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "b46c95cb548f37c90a0eaa04c4aee4eb9e708b1278afdd6e8c7b6eb364fbc20e",
       "anchor": "219--collection-sources-and-methods",
       "assets": [],
       "references": [],
@@ -1355,15 +1432,15 @@
       "notes": []
     },
     {
-      "order": 50,
+      "order": 51,
       "part": "III",
       "number": "2.2.1",
       "title": "Estimative language",
       "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/01-estimative-language/student-guide.md",
-      "library_file_id": "libfile_5db683eec570819197544b64681d904f",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:34.395275Z",
-      "sha256": "d58a60695fa1108d193d23fb6533a6ea032aaa9f574eadab4697ff35932ffd0e",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "ee7647a2013398c295015269c237eaeb71c648bca7de3efc61b878c9e2565543",
       "anchor": "221--estimative-language",
       "assets": [],
       "references": [
@@ -1383,14 +1460,14 @@
       "notes": []
     },
     {
-      "order": 51,
+      "order": 52,
       "part": "III",
       "number": "2.2.2",
       "title": "Structured Analytic Techniques",
       "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/02-structured-techniques/student-guide.md",
-      "library_file_id": "libfile_4af9a39e16a48191895df08903d4d034",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:34.716900Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "289ed7170a101499333cb304b3167fc772789062c18093b9368620278371fd44",
       "anchor": "222--structured-analytic-techniques",
       "assets": [],
@@ -1405,14 +1482,14 @@
       "notes": []
     },
     {
-      "order": 52,
+      "order": 53,
       "part": "III",
       "number": "2.2.3",
       "title": "Admiralty Code",
       "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/03-admiralty-code/student-guide.md",
-      "library_file_id": "libfile_4bfb995405d88191854ed30ddf5667bd",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:34.530712Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "3289551d915d29551e9a245794ef4d3b0aa6bd76585cd3d58fe6a5b941c5e4d1",
       "anchor": "223--admiralty-code",
       "assets": [],
@@ -1422,15 +1499,15 @@
       "notes": []
     },
     {
-      "order": 53,
+      "order": 54,
       "part": "III",
       "number": "2.2.4",
       "title": "Cognitive Biases and Mitigation",
       "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/04-cognitive-biases/student-guide.md",
-      "library_file_id": "libfile_29dc4b9135d08191a3ae1587262ec8aa",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:38.222779Z",
-      "sha256": "8a56205b224b32d3608a5242c1fef61c1b5d9dc150a57348cc64d40ccad0caf8",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "90b2cceb1a0e7534c3db3151147d3d6d61de8b9680040c959d19c49e97e53f3e",
       "anchor": "224--cognitive-biases-and-mitigation",
       "assets": [],
       "references": [],
@@ -1444,14 +1521,14 @@
       "notes": []
     },
     {
-      "order": 54,
+      "order": 55,
       "part": "III",
       "number": "2.3.1",
       "title": "MITRE ATT&CK for CTI Analysis and Reporting",
       "source_path": "/thraining-plan/modules/02-cti/03-frameworks/01-attck-cti/student-guide.md",
-      "library_file_id": "libfile_68643d3022ec8191894622f7cfebe2ad",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:38.170980Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "6270329a52321dc617020b5765234a0ca880170d20a15a65de69999de7ee4878",
       "anchor": "231--mitre-attck-for-cti-analysis-and-reporting",
       "assets": [],
@@ -1486,21 +1563,21 @@
       "notes": []
     },
     {
-      "order": 55,
+      "order": 56,
       "part": "III",
       "number": "2.3.2",
       "title": "Diamond Model Application in CTI",
       "source_path": "/thraining-plan/modules/02-cti/03-frameworks/02-diamond-cti/student-guide.md",
-      "library_file_id": "libfile_658a68f4475c8191bb4819af28ea8ed3",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:38.093959Z",
-      "sha256": "914d2d2beee485257fb749614a13c743c65d33e217c182110478cf034cc2d56a",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "944f79170a021df2fb54ebae2c82a8bfca83e8f40f93dd70b0b56e68a1b06a75",
       "anchor": "232--diamond-model-application-in-cti",
       "assets": [],
       "references": [
         {
           "label": "The Diamond Model of Intrusion Analysis",
-          "url": "https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf"
+          "url": "https://www.threatintel.academy/diamond/"
         }
       ],
       "a12_terms": [
@@ -1516,15 +1593,15 @@
       "notes": []
     },
     {
-      "order": 56,
+      "order": 57,
       "part": "III",
       "number": "2.3.3",
       "title": "Cyber Kill Chain in Intelligence Analysis",
       "source_path": "/thraining-plan/modules/02-cti/03-frameworks/03-kill-chain-cti/student-guide.md",
-      "library_file_id": "libfile_6436cba9b8d08191ba3a40e426523530",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:38.173396Z",
-      "sha256": "17d85c490b4c8ff659680bc15843e7f3a60bca2faa068221c0ea585ef9535c40",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "53d6f9dcde1f3f2da7b6ad911f3379b578564846f1f1edaf474396538edc72e5",
       "anchor": "233--cyber-kill-chain-in-intelligence-analysis",
       "assets": [],
       "references": [
@@ -1546,20 +1623,20 @@
         "invoice.vbs"
       ],
       "a12_sections": [
-        "A download is not automatically Installation",
+        "A Download Supports Delivery More Directly Than Installation",
         "Worked progression example"
       ],
       "notes": []
     },
     {
-      "order": 57,
+      "order": 58,
       "part": "III",
       "number": "2.4.1",
       "title": "Internal Threat Intelligence Platform",
       "source_path": "/thraining-plan/modules/02-cti/04-platforms/01-internal-tip/student-guide.md",
-      "library_file_id": "libfile_daaeae2dd214819191ed8d3dfa65b00d",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:42.019942Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "c63e3db7c241383c69ef922219b0282a57cb77345d49fe306a33bbba8e0c5a55",
       "anchor": "241--internal-threat-intelligence-platform",
       "assets": [],
@@ -1575,32 +1652,49 @@
       "notes": []
     },
     {
-      "order": 58,
+      "order": 59,
       "part": "III",
       "number": "2.4.2",
       "title": "Selecting Platforms for CTI Work",
       "source_path": "/thraining-plan/modules/02-cti/04-platforms/02-platform-selection/student-guide.md",
-      "library_file_id": "libfile_ca805b6cca4c8191a56d645046698640",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T19:42:41.844384Z",
-      "sha256": "71011412af93acc572c3b5c1c9d1c1e637d81f376703bcc1fa94eb99edf72b26",
+      "modified_at": null,
+      "sha256": "d164d6bce67818e5e6b1ac4797cc920f27f8b1914eb69688b65c48883ba05b38",
       "anchor": "242--selecting-platforms-for-cti-work",
       "assets": [],
-      "references": [],
+      "references": [
+        {
+          "label": "VirusTotal — Searching",
+          "url": "https://docs.virustotal.com/docs/searching"
+        },
+        {
+          "label": "ANY.RUN — Threat Intelligence Lookup",
+          "url": "https://any.run/threat-intelligence-lookup/"
+        },
+        {
+          "label": "Silent Push — DNS Data",
+          "url": "https://help.silentpush.com/docs/dns-data"
+        },
+        {
+          "label": "urlscan.io — Quickstart",
+          "url": "https://docs.urlscan.io/guides/quickstart"
+        }
+      ],
       "a12_terms": [],
       "a12_sections": [],
       "notes": []
     },
     {
-      "order": 59,
+      "order": 60,
       "part": "III",
       "number": "2.4.3",
       "title": "VirusTotal Relations and Behavior",
       "source_path": "/thraining-plan/modules/02-cti/04-platforms/03-virustotal/student-guide.md",
-      "library_file_id": "libfile_935a71a53c208191a9040f6f0c44aaee",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:42.022803Z",
-      "sha256": "3ee703f5901dca80d33b1608dd487a3823beb9240eb9844261005b925e9ae371",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "a800a3fb3438e73b8427ffa2715b57e94dbe4a4d178e5282288cd21c19bd7281",
       "anchor": "243--virustotal-relations-and-behavior",
       "assets": [],
       "references": [
@@ -1614,31 +1708,28 @@
         }
       ],
       "a12_terms": [
-        "203.0.113.88",
         "A12",
         "login-prd",
         "Updater"
       ],
       "a12_sections": [
         "Relations: linked objects, not automatic ownership",
-        "Behavior: sandbox observations",
-        "Classroom card",
-        "2. Knowledge Check"
+        "Separate classroom card — not A12"
       ],
       "notes": [
         "two-pass platform use retained; total time covers both passes"
       ]
     },
     {
-      "order": 60,
+      "order": 61,
       "part": "III",
       "number": "2.4.4",
       "title": "ANY.RUN",
       "source_path": "/thraining-plan/modules/02-cti/04-platforms/04-anyrun/student-guide.md",
-      "library_file_id": "libfile_1ecc4444da90819192e400729e350968",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:42.048347Z",
-      "sha256": "93074965ddb6210601a614e4cce2e418d0cc59b12d94e8953717fa1565bc4443",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "cb700902073becc85924aa750614fabb86435c9c82e087f9ee4a8e7f26ec9b27",
       "anchor": "244--anyrun",
       "assets": [],
       "references": [
@@ -1652,25 +1743,24 @@
         }
       ],
       "a12_terms": [
-        "203.0.113.88"
+        "A12"
       ],
       "a12_sections": [
-        "Search from evidence you already have",
-        "Classroom card"
+        "Separate classroom card — not A12"
       ],
       "notes": [
         "two-pass platform use retained; total time covers both passes"
       ]
     },
     {
-      "order": 61,
+      "order": 62,
       "part": "III",
       "number": "2.4.5",
       "title": "Silent Push",
       "source_path": "/thraining-plan/modules/02-cti/04-platforms/05-silent-push/student-guide.md",
-      "library_file_id": "libfile_437819fbcca08191b559dabf8dad7a51",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:42.024466Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "b1fd29287c223dc8840a48169acbb191e1ae0e4eec37b36f06cb26f63ef7e831",
       "anchor": "245--silent-push",
       "assets": [],
@@ -1698,15 +1788,15 @@
       ]
     },
     {
-      "order": 62,
+      "order": 63,
       "part": "III",
       "number": "2.4.6",
       "title": "urlscan.io",
       "source_path": "/thraining-plan/modules/02-cti/04-platforms/06-urlscan/student-guide.md",
-      "library_file_id": "libfile_105f692e4c5c81918192ec099ff68d12",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:47.490015Z",
-      "sha256": "2697699bf5ad3caa092fd514616999abf8460e0df1b254e8afd335278ee5315f",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "63885fe34a0d537af229721b4adaf3c9e4753d3c3306e20497d6a7dd825e420d",
       "anchor": "246--urlscanio",
       "assets": [],
       "references": [
@@ -1728,26 +1818,24 @@
         }
       ],
       "a12_terms": [
-        "203.0.113.88",
         "A12"
       ],
       "a12_sections": [
-        "A12 classroom example",
-        "2. Knowledge Check"
+        "Separate classroom example — not A12"
       ],
       "notes": [
         "two-pass platform use retained; total time covers both passes"
       ]
     },
     {
-      "order": 63,
+      "order": 64,
       "part": "III",
       "number": "2.5.1",
       "title": "IOC Handling and Enrichment Concepts",
       "source_path": "/thraining-plan/modules/02-cti/05-enrichment/01-ioc-handling/student-guide.md",
-      "library_file_id": "libfile_b473350318ec8191b3eb934cd552e0ab",
-      "version_id": "3",
-      "modified_at": "2026-10-02T19:42:47.578944Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "72eea06996d753160e34b882ae052bbd04535fd532969750c3490bf9c0afc165",
       "anchor": "251--ioc-handling-and-enrichment-concepts",
       "assets": [],
@@ -1774,15 +1862,15 @@
       "notes": []
     },
     {
-      "order": 64,
+      "order": 65,
       "part": "III",
       "number": "2.5.2",
       "title": "Hashing and Similarity Concepts",
       "source_path": "/thraining-plan/modules/02-cti/05-enrichment/02-file-similarity/student-guide.md",
-      "library_file_id": "libfile_35a816e5682881919318c494f838af9d",
-      "version_id": "3",
-      "modified_at": "2026-10-02T19:42:47.525525Z",
-      "sha256": "c704db8c22b57b7de676acc2d7eb37358b64364841a1294705097ee74bceab2e",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "b1da1c4deaa1cad6be9207c7024e1025780ee01e45ba90236add9bd5e50ba97f",
       "anchor": "252--hashing-and-similarity-concepts",
       "assets": [],
       "references": [
@@ -1803,19 +1891,23 @@
           "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/authenticode"
         }
       ],
-      "a12_terms": [],
-      "a12_sections": [],
+      "a12_terms": [
+        "A12"
+      ],
+      "a12_sections": [
+        "Separate worked example — not A12"
+      ],
       "notes": []
     },
     {
-      "order": 65,
+      "order": 66,
       "part": "III",
       "number": "2.5.3",
       "title": "RDAP and WHOIS Concepts",
       "source_path": "/thraining-plan/modules/02-cti/05-enrichment/03-rdap-whois/student-guide.md",
-      "library_file_id": "libfile_3dbfa62c597881919dde923945f8f426",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:47.030388Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "6550dccd4334c587febc4f7a965fd2d21f8b9a05159b4a85daab05c60c3dc4cb",
       "anchor": "253--rdap-and-whois-concepts",
       "assets": [],
@@ -1851,15 +1943,15 @@
       "notes": []
     },
     {
-      "order": 66,
+      "order": 67,
       "part": "III",
       "number": "2.5.4",
       "title": "Advanced DNS Concepts",
       "source_path": "/thraining-plan/modules/02-cti/05-enrichment/04-advanced-dns/student-guide.md",
-      "library_file_id": "libfile_99946dcca3388191b622f71224e9e1b2",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:47.187704Z",
-      "sha256": "4079bb2f74a126f7bb765761b20cd413d39a20afdf15d6a68223e0dcd4e092d4",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "53e04ad45537278272988e67cc536d99e14e15e5f4d7b73b7162dbb6c8861cd3",
       "anchor": "254--advanced-dns-concepts",
       "assets": [],
       "references": [
@@ -1895,20 +1987,20 @@
       ],
       "a12_sections": [
         "Shared DNS records create candidates, not automatic siblings",
-        "Do not promote one address to an entire network",
+        "Keep Infrastructure Claims at the Scope the DNS Evidence Supports",
         "A practical pivot workflow"
       ],
       "notes": []
     },
     {
-      "order": 67,
+      "order": 68,
       "part": "III",
       "number": "2.5.5",
       "title": "Identifying Additional Adversary Infrastructure from Seed Indicators",
       "source_path": "/thraining-plan/modules/02-cti/05-enrichment/05-infra-pivot/student-guide.md",
-      "library_file_id": "libfile_2bd073a2443481918556733ae14b6ebd",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:50.666340Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "5119bc2e04f0e345ee9b9cdb690950ec26c8390ac5c4ca8d43710e1bb703faae",
       "anchor": "255--identifying-additional-adversary-infrastructure-from-seed-indicators",
       "assets": [],
@@ -1947,14 +2039,14 @@
       "notes": []
     },
     {
-      "order": 68,
+      "order": 69,
       "part": "III",
       "number": "2.5.6",
       "title": "MalasadaTech Defender's ThreatMesh Framework (DTF)",
       "source_path": "/thraining-plan/modules/02-cti/05-enrichment/06-dtf/student-guide.md",
-      "library_file_id": "libfile_9b3414824d54819199397cd8473b7b1f",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:50.849846Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "96c1b0cbf7a993cb031f3da1ff519ca989eb9ffd5d48a90b548b910fe343e802",
       "anchor": "256--malasadatech-defenders-threatmesh-framework-dtf",
       "assets": [],
@@ -1989,15 +2081,15 @@
       "notes": []
     },
     {
-      "order": 69,
+      "order": 70,
       "part": "III",
       "number": "2.5.7",
       "title": "Correlation, Link Analysis, and Campaign Tracking",
       "source_path": "/thraining-plan/modules/02-cti/05-enrichment/07-correlation/student-guide.md",
-      "library_file_id": "libfile_c4e2e3849f148191a16e83794552cd44",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T19:42:50.454402Z",
-      "sha256": "d5c1f82f80f95889fa04d74d59487951f895a8d330ac5d60976474a37b1861b6",
+      "modified_at": null,
+      "sha256": "722171ba5bff357a0009a09fcaae64bdd374348b370c2f623980c95f47da34fd",
       "anchor": "257--correlation-link-analysis-and-campaign-tracking",
       "assets": [],
       "references": [
@@ -2017,15 +2109,15 @@
       "notes": []
     },
     {
-      "order": 70,
+      "order": 71,
       "part": "III",
       "number": "2.6.1",
       "title": "Extracting Applicable TTPs from Intelligence Reports",
       "source_path": "/thraining-plan/modules/02-cti/06-assessment/01-applicable-ttps/student-guide.md",
-      "library_file_id": "libfile_d62a87a615f08191bfa334df8993f3c6",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:50.687910Z",
-      "sha256": "1be21f53cbd134d3b21a0d5208ebac79b19aff8404dd292fa68b27af082f9883",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "d378cb3ca033d0be98396e03c5a883db131ad86a97823cb8d5d7ed48c79b5e38",
       "anchor": "261--extracting-applicable-ttps-from-intelligence-reports",
       "assets": [],
       "references": [
@@ -2057,15 +2149,15 @@
       ]
     },
     {
-      "order": 71,
+      "order": 72,
       "part": "III",
       "number": "2.6.2",
       "title": "Threat Relevance and Organizational Impact",
       "source_path": "/thraining-plan/modules/02-cti/06-assessment/02-relevance-impact/student-guide.md",
-      "library_file_id": "libfile_0b3137008c488191b9ef2ca025f70276",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:50.670942Z",
-      "sha256": "7c8769d729a0b4e65ecc465fa9ae6a5e7714e4422b468fbaea4543e399f661ea",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "f2266f07695900d043999f22ef9247ba98240903f3a212da4114c6df2c9363fe",
       "anchor": "262--threat-relevance-and-organizational-impact",
       "assets": [],
       "references": [],
@@ -2082,14 +2174,14 @@
       "notes": []
     },
     {
-      "order": 72,
+      "order": 73,
       "part": "III",
       "number": "2.7.1",
       "title": "Core STIX Objects",
       "source_path": "/thraining-plan/modules/02-cti/07-production/01-core-objects/student-guide.md",
-      "library_file_id": "libfile_9171394f24248191b565d03605939cb9",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:54.320053Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "ec059f841d44c09920e1a5ca89da73f00830ec031479bf90b42342b2f1dd0d58",
       "anchor": "271--core-stix-objects",
       "assets": [],
@@ -2116,15 +2208,15 @@
       "notes": []
     },
     {
-      "order": 73,
+      "order": 74,
       "part": "III",
       "number": "2.7.2",
       "title": "How STIX Objects Are Used in Intelligence Production",
       "source_path": "/thraining-plan/modules/02-cti/07-production/02-stix-production/student-guide.md",
-      "library_file_id": "libfile_01c438c280888191b8acddaac477b95b",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:54.272009Z",
-      "sha256": "4ba6ffaf1024d5cdb5590adf0e6507222e9be84a7ce6065a303485d633f01690",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "91de023882c613f9a45fe7e120aeefd96dac385091eb423c4da314a236b23f81",
       "anchor": "272--how-stix-objects-are-used-in-intelligence-production",
       "assets": [],
       "references": [
@@ -2160,15 +2252,15 @@
       "notes": []
     },
     {
-      "order": 74,
+      "order": 75,
       "part": "III",
       "number": "2.7.3",
       "title": "Creating Finished Intelligence Products",
       "source_path": "/thraining-plan/modules/02-cti/07-production/03-finished-products/student-guide.md",
-      "library_file_id": "libfile_908351bf71c88191b263ada8f9116737",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:53.925271Z",
-      "sha256": "386e6f1376a4bbdd5828fbb72e5bbf48521e70144eaf9947bdc6d36ec75099a7",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "3f4d5ba1dfa8a9ef76da0044c75df94858719ce38df14dca6d6e233aa168859b",
       "anchor": "273--creating-finished-intelligence-products",
       "assets": [],
       "references": [
@@ -2190,19 +2282,20 @@
         "Facts and judgments should remain distinguishable",
         "The “so what” should be proportional",
         "Activity profile before actor identity",
-        "2. Knowledge Check"
+        "2. Demonstration Exercise — Non-A12 Threat Actor Profile",
+        "3. Knowledge Check"
       ],
       "notes": []
     },
     {
-      "order": 75,
+      "order": 76,
       "part": "III",
       "number": "2.7.4",
       "title": "RFI Responses and Closure",
       "source_path": "/thraining-plan/modules/02-cti/07-production/04-rfi-response/student-guide.md",
-      "library_file_id": "libfile_68fc5e48ee608191bffdd509912a6dcf",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:54.315699Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "69bc65e19434340944e961d9477593da40d58e5b843e01719e079f5a07e8a149",
       "anchor": "274--rfi-responses-and-closure",
       "assets": [],
@@ -2218,15 +2311,15 @@
       "notes": []
     },
     {
-      "order": 76,
+      "order": 77,
       "part": "III",
       "number": "2.7.5",
       "title": "Disseminating Intelligence to the Correct Audiences",
       "source_path": "/thraining-plan/modules/02-cti/07-production/05-dissemination/student-guide.md",
-      "library_file_id": "libfile_8180d1b773b08191be50b485c4afc9bf",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:57.391611Z",
-      "sha256": "3151ae3d87bdd4c7301269b373e93678c59eba63caa9a6eea4e42d2744897f96",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "25bcd5db204d68a6a25b3f5e28c5ea782987dcd268b72515fb70d98e718e828c",
       "anchor": "275--disseminating-intelligence-to-the-correct-audiences",
       "assets": [],
       "references": [
@@ -2255,14 +2348,14 @@
       "notes": []
     },
     {
-      "order": 77,
+      "order": 78,
       "part": "III",
       "number": "2.8.1",
       "title": "Local Intelligence Requirements and Priorities",
       "source_path": "/thraining-plan/modules/02-cti/08-site-specific/01-local-priorities/student-guide.md",
-      "library_file_id": "libfile_e3e2de1672a081919c0344fa105d9940",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:57.427863Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "7d49265769f776b85a7179b0e2b2ad4787090cea6e971414c1c861d0ca6bb0e3",
       "anchor": "281--local-intelligence-requirements-and-priorities",
       "assets": [],
@@ -2278,14 +2371,14 @@
       "notes": []
     },
     {
-      "order": 78,
+      "order": 79,
       "part": "III",
       "number": "2.8.2",
       "title": "Local Production and Approval Processes",
       "source_path": "/thraining-plan/modules/02-cti/08-site-specific/02-local-production/student-guide.md",
-      "library_file_id": "libfile_e4ecb00e4c4c8191bb89a48f7db335c8",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:57.552099Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "0bb3aef4daf960755bb410367579f947b114896eb0cb293b2e5d46950709fa79",
       "anchor": "282--local-production-and-approval-processes",
       "assets": [],
@@ -2300,15 +2393,15 @@
       "notes": []
     },
     {
-      "order": 79,
+      "order": 80,
       "part": "III",
       "number": "2.8.3",
       "title": "Local Dissemination Channels and Customers",
       "source_path": "/thraining-plan/modules/02-cti/08-site-specific/03-local-dissemination/student-guide.md",
-      "library_file_id": "libfile_d902426ca76081919c9b6c9449c3db32",
-      "version_id": "2",
-      "modified_at": "2026-10-02T19:42:57.626491Z",
-      "sha256": "870e5024e301bb045757213d5c42f448e1ae5e06d17045aa3f89812eb76a7a5e",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "71d844626a49ddcf728a44fece0f76a837a9df83c95fdada4d05d640d78ab159",
       "anchor": "283--local-dissemination-channels-and-customers",
       "assets": [],
       "references": [],
@@ -2322,21 +2415,22 @@
       "notes": []
     },
     {
-      "order": 80,
+      "order": 81,
       "part": "III",
       "number": "2.9",
       "title": "Cyber Threat Intelligence Section Summary",
       "source_path": "/thraining-plan/modules/02-cti/09-summary/student-guide.md",
-      "library_file_id": "libfile_d2b5640dcfe08191ab04fad0054513c8",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T20:08:33.844528Z",
-      "sha256": "fd7a8c3384ea65837889e98f677e5ed47079789192d3a0ce247dde6e8646f1fa",
+      "modified_at": null,
+      "sha256": "8257facbbe560914f158bcc26b48e5e9a25406bc6facf42961b6d38ecc90cba4",
       "anchor": "29--cyber-threat-intelligence-section-summary",
       "assets": [],
       "references": [],
       "a12_terms": [
         "A12",
-        "login-prd"
+        "login-prd",
+        "WS-JLEE"
       ],
       "a12_sections": [
         "3. A12 End to End",
@@ -2350,15 +2444,15 @@
       ]
     },
     {
-      "order": 81,
+      "order": 82,
       "part": "IV",
       "number": "3.0",
       "title": "Threat Hunting: How the 3.x Block Fits Together",
       "source_path": "/thraining-plan/modules/03-hunter/00-intro/student-guide.md",
-      "library_file_id": "libfile_1cf4c0dada308191b7d4ead6d8f6102f",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T16:14:37.262995Z",
-      "sha256": "3ef385562f1e9de691640729deafa62f88985753fe2a4796b44b67be25eb4e9d",
+      "modified_at": null,
+      "sha256": "ccea9251f83f5ad47105eb13b1b3c03d2326b2a59f9cdfeeb0dff00c4c9fff4c",
       "anchor": "30--threat-hunting-how-the-3x-block-fits-together",
       "assets": [],
       "references": [],
@@ -2369,24 +2463,25 @@
       "a12_sections": [
         "3. Hunting Starts With a Question",
         "4. Turn the Question Into a Testable Hypothesis",
-        "9. The A12 Hunt Loop",
+        "9. Hypothetical A12-Based Hunt Loop",
         "Question",
-        "Refine"
+        "Refine",
+        "Handoff"
       ],
       "notes": [
         "no proficiency mapping"
       ]
     },
     {
-      "order": 82,
+      "order": 83,
       "part": "IV",
       "number": "3.1",
       "title": "Purpose of Threat Hunting",
       "source_path": "/thraining-plan/modules/03-hunter/01-purpose/student-guide.md",
-      "library_file_id": "libfile_3be82faf867c819181aeaea76dc476be",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:46:08.564152Z",
-      "sha256": "6ebfc4b84f4d5c5397bced80c261c74ab4d5be114ea942df5816220fcd25a8cd",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "ce78bb4aad0a9e7bb4a43ecdcebc15f58ff4a91b49292eb963740f79d3226141",
       "anchor": "31--purpose-of-threat-hunting",
       "assets": [],
       "references": [],
@@ -2402,15 +2497,15 @@
       "notes": []
     },
     {
-      "order": 83,
+      "order": 84,
       "part": "IV",
       "number": "3.2.1",
       "title": "Hunt Types",
       "source_path": "/thraining-plan/modules/03-hunter/02-methodology/01-hunt-types/student-guide.md",
-      "library_file_id": "libfile_b0a43f9dbf3c81919aa34045277d8142",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:46:25.706909Z",
-      "sha256": "d010a9c0302dddfe9c9a66f300eaba07cb74eb082dbc1b5682df94332744af8f",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "e1b2ded1d9407fdfd3a95b3f1a1b8c3c3a96c24afe140fcb316ecc6e85967466",
       "anchor": "321--hunt-types",
       "assets": [],
       "references": [],
@@ -2426,15 +2521,15 @@
       "notes": []
     },
     {
-      "order": 84,
+      "order": 85,
       "part": "IV",
       "number": "3.2.2",
       "title": "Hunt Development Concepts",
       "source_path": "/thraining-plan/modules/03-hunter/02-methodology/02-hunt-development/student-guide.md",
-      "library_file_id": "libfile_492ab91947d88191bdb435298cbb16f1",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:46:41.734703Z",
-      "sha256": "4c1cabb3d815905971712975d961d615ddb62efd5cf59aef9be3d0f2bc208fc7",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "be60ab90dfaf364b45ff86cefc4216c6392fc414c3a6a30997c2c09fb61c43f4",
       "anchor": "322--hunt-development-concepts",
       "assets": [],
       "references": [],
@@ -2452,15 +2547,15 @@
       "notes": []
     },
     {
-      "order": 85,
+      "order": 86,
       "part": "IV",
       "number": "3.3.1",
       "title": "Tool Capabilities for Hunting",
       "source_path": "/thraining-plan/modules/03-hunter/03-online-tools/student-guide.md",
-      "library_file_id": "libfile_6f20cee233288191a5fb7d97bd0dbf72",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:46:58.181208Z",
-      "sha256": "d786bf9bbfd1c8bcae6447696eb17632d169ca4c3ad3bceec642981d6619a881",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "f1844b1bef7ac936deda7dfb6204a7a7ea65110588340c130ed6778dd3dec8ad",
       "anchor": "331--tool-capabilities-for-hunting",
       "assets": [],
       "references": [
@@ -2498,14 +2593,14 @@
       "notes": []
     },
     {
-      "order": 86,
+      "order": 87,
       "part": "IV",
       "number": "3.4.1",
       "title": "Assessing CTI for Hunting Value",
       "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/01-assessing-cti/student-guide.md",
-      "library_file_id": "libfile_934ebc881be4819197f5f6e8c4cd46f3",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:47:19.058582Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "e73000bcc4a1cc5ddb9ecc5ba2dcdf149f14230530cb9abf7d35b212f9a64b5d",
       "anchor": "341--assessing-cti-for-hunting-value",
       "assets": [],
@@ -2519,14 +2614,14 @@
       "notes": []
     },
     {
-      "order": 87,
+      "order": 88,
       "part": "IV",
       "number": "3.4.2",
       "title": "Extracting Hunt Leads from CTI",
       "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/02-extracting-leads/student-guide.md",
-      "library_file_id": "libfile_443b06ff89d081918fe2826e07bcf66c",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:47:35.554021Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "665db398c08e532a892d8544ad235674b2bfe3fd73597633d67e0bb768dae4d7",
       "anchor": "342--extracting-hunt-leads-from-cti",
       "assets": [],
@@ -2543,15 +2638,15 @@
       "notes": []
     },
     {
-      "order": 88,
+      "order": 89,
       "part": "IV",
       "number": "3.4.3",
       "title": "STIX as Hunt Input",
       "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/student-guide.md",
-      "library_file_id": "libfile_1b1d88587c688191969619e8905e3c60",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:47:51.991513Z",
-      "sha256": "31d3d9ed47e36e5113ef831d823dffcbc02dadcc9f2a2abb553c4d278ac40185",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "484fd9527c5035e113f3bb24155fedc6afb06249f0161fddb442d9a13f71dda7",
       "anchor": "343--stix-as-hunt-input",
       "assets": [],
       "references": [
@@ -2570,15 +2665,15 @@
       "notes": []
     },
     {
-      "order": 89,
+      "order": 90,
       "part": "IV",
       "number": "3.5.1",
       "title": "Using MITRE ATT&CK for Hunt Planning",
       "source_path": "/thraining-plan/modules/03-hunter/05-framework-application/student-guide.md",
-      "library_file_id": "libfile_147b411813348191ba24e338aa829ea9",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:48:07.437956Z",
-      "sha256": "27b20cac70db290f0b54d6f707dd728e6b41936de93c3f97ebd68dbdd43ca71c",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "13dbd000b212f2b5cc916072f1bf0a91648031fea42b6c04934641c0a1e29ebd",
       "anchor": "351--using-mitre-attck-for-hunt-planning",
       "assets": [],
       "references": [
@@ -2601,14 +2696,14 @@
       "notes": []
     },
     {
-      "order": 90,
+      "order": 91,
       "part": "IV",
       "number": "3.6.1",
       "title": "Persistence Techniques",
       "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/01-persistence/student-guide.md",
-      "library_file_id": "libfile_7632b402e26c8191b0494a5fb0aa59b9",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:48:28.340676Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "4fa5a705c354904020f8fe67f5daeeb14f39ce00adfab295181ce5e5cb0130f5",
       "anchor": "361--persistence-techniques",
       "assets": [],
@@ -2639,14 +2734,14 @@
       "notes": []
     },
     {
-      "order": 91,
+      "order": 92,
       "part": "IV",
       "number": "3.6.2",
       "title": "Privilege Escalation Techniques",
       "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/02-privilege-escalation/student-guide.md",
-      "library_file_id": "libfile_b0009b5822cc8191960a9bd5373a0746",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:48:44.509468Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "6384b772e8820f097eb53ee0f003562b75e306d14f6b2bc540bfb2ae6e16bd35",
       "anchor": "362--privilege-escalation-techniques",
       "assets": [],
@@ -2677,15 +2772,15 @@
       "notes": []
     },
     {
-      "order": 92,
+      "order": 93,
       "part": "IV",
       "number": "3.6.3",
       "title": "Hunt for a Specific Persistence or Privilege-Escalation Technique",
       "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/03-hunt-specific/student-guide.md",
-      "library_file_id": "libfile_7cad43def4c08191a9ecc6e83ed854a8",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:49:01.755384Z",
-      "sha256": "2550538b592bef5aee86ab65f06df634418451621fad3248417f71a3d95ced06",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "e449e24e96f1c5b403cf5a9889a82f1436678ec6667a034b9b5c5a51bc849c87",
       "anchor": "363--hunt-for-a-specific-persistence-or-privilege-escalation-technique",
       "assets": [],
       "references": [
@@ -2706,14 +2801,14 @@
       "notes": []
     },
     {
-      "order": 93,
+      "order": 94,
       "part": "IV",
       "number": "3.7.1",
       "title": "Hunt Control and Lead Management",
       "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/01-hunt-control/student-guide.md",
-      "library_file_id": "libfile_f8d038b07d9c8191a3ef6128edf9720d",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:49:22.270430Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "9d31243838345621e0821008a9bbf4ca4e3c324f2faa55aea159a1435c222be3",
       "anchor": "371--hunt-control-and-lead-management",
       "assets": [],
@@ -2723,14 +2818,14 @@
       "notes": []
     },
     {
-      "order": 94,
+      "order": 95,
       "part": "IV",
       "number": "3.7.2",
       "title": "Hunt Documentation Standards",
       "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/02-hunt-documentation/student-guide.md",
-      "library_file_id": "libfile_0a9a7a8c41e4819195890557701008eb",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:49:39.570958Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "90fc2d9aba746586d1af58cd4eb006417a5a64b9c3ce94f6237385eecf012d4a",
       "anchor": "372--hunt-documentation-standards",
       "assets": [],
@@ -2740,15 +2835,15 @@
       "notes": []
     },
     {
-      "order": 95,
+      "order": 96,
       "part": "IV",
       "number": "3.7.3",
       "title": "Hunt Outputs and Hand-off",
       "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/03-hunt-outputs/student-guide.md",
-      "library_file_id": "libfile_e7e3a0cb3174819197aaf5ef1c5bc7a1",
-      "version_id": "1",
-      "modified_at": "2026-10-02T04:49:56.727368Z",
-      "sha256": "530444243be941560181922ddf92fc64b2feae2fcfbc33fbd1a377d072b11e65",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "c08eac09630339d1570fe6b87f8441f5bf3d73882574ff093748ddb200d5ab23",
       "anchor": "373--hunt-outputs-and-hand-off",
       "assets": [],
       "references": [],
@@ -2757,27 +2852,27 @@
         "Updater"
       ],
       "a12_sections": [
-        "A12 example"
+        "Hypothetical A12-based output example"
       ],
       "notes": []
     },
     {
-      "order": 96,
+      "order": 97,
       "part": "IV",
       "number": "3.8",
       "title": "Threat Hunting Section Summary",
       "source_path": "/thraining-plan/modules/03-hunter/08-summary/student-guide.md",
-      "library_file_id": "libfile_f638462b57b4819194179fcbcb35383f",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T17:18:44.932032Z",
-      "sha256": "57e6f19954ee6fe08c8fd0bc38dd98d0a4a8228837f4ed3c3977befb057b852a",
+      "modified_at": null,
+      "sha256": "c1a0a8d39369116492eb91d16c26e73a6c0d7ad798c9aba1ca2ca5c71859db10",
       "anchor": "38--threat-hunting-section-summary",
       "assets": [],
       "references": [],
       "a12_terms": [
         "A12",
-        "updater",
         "Updater",
+        "updater",
         "WS-JLEE"
       ],
       "a12_sections": [
@@ -2786,7 +2881,7 @@
         "Step 2 – Hypothesis",
         "Step 3 – Scope",
         "Step 8 – Findings",
-        "Topic ≠ hypothesis",
+        "A topic becomes a hypothesis when it predicts evidence",
         "5. Integrated Review Exercise",
         "7. Bridge Into 4.x Detection Engineering"
       ],
@@ -2795,15 +2890,15 @@
       ]
     },
     {
-      "order": 97,
+      "order": 98,
       "part": "V",
       "number": "4.0",
       "title": "Detection Engineering: How the 4.x Block Fits Together",
       "source_path": "/thraining-plan/modules/04-de/00-intro/student-guide.md",
-      "library_file_id": "libfile_678093dc0e34819199539c98d63618a5",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T16:38:55.793285Z",
-      "sha256": "3488f36d5fbbba9d880b004fb1c7dd1858113b659521fa569151464c28b27afd",
+      "modified_at": null,
+      "sha256": "37560c8cf776bb95afccad7a1440b91b63d11c0dc915a863a2354d99ccbce50c",
       "anchor": "40--detection-engineering-how-the-4x-block-fits-together",
       "assets": [],
       "references": [],
@@ -2813,21 +2908,23 @@
       ],
       "a12_sections": [
         "3. Start With the Defensive Need",
-        "10. The A12 Detection Lifecycle"
+        "10. Hypothetical A12-Based Detection Lifecycle",
+        "Need",
+        "Retire"
       ],
       "notes": [
         "no proficiency mapping"
       ]
     },
     {
-      "order": 98,
+      "order": 99,
       "part": "V",
       "number": "4.1",
       "title": "What Detection Engineering Owns",
       "source_path": "/thraining-plan/modules/04-de/01-what-de-owns/student-guide.md",
-      "library_file_id": "libfile_bcdf814972f48191b90ac36167851300",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:00:59.694845Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "c54c99b1e46aba598f2cf266b44c69440fbe4418c3a189b9400aaf3b29483186",
       "anchor": "41--what-detection-engineering-owns",
       "assets": [],
@@ -2843,15 +2940,15 @@
       "notes": []
     },
     {
-      "order": 99,
+      "order": 100,
       "part": "V",
       "number": "4.2",
       "title": "Making a Detection Sound and Meeting Shop Requirements",
       "source_path": "/thraining-plan/modules/04-de/02-sound-and-shop-requirements/student-guide.md",
-      "library_file_id": "libfile_338be2669ba88191be2b175da7a689dc",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:01:15.047061Z",
-      "sha256": "714ed943a3ca464abfdad68d8ab9591ee5c5073679f25549e625fcc66d692e23",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "9e4299b657f250bd3f1a2fce278c7d65349a6858938e726bee57d204f568b37a",
       "anchor": "42--making-a-detection-sound-and-meeting-shop-requirements",
       "assets": [],
       "references": [
@@ -2889,14 +2986,14 @@
       "notes": []
     },
     {
-      "order": 100,
+      "order": 101,
       "part": "V",
       "number": "4.3",
       "title": "Nominations from SOC, Hunt, and CTI",
       "source_path": "/thraining-plan/modules/04-de/03-nominations/student-guide.md",
-      "library_file_id": "libfile_754be005ab448191af0cbf49f16139f9",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:01:30.419398Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "a757809c81818da742098be98b084e3bf33f1a27dcc7cde38031783fe1eb84ea",
       "anchor": "43--nominations-from-soc-hunt-and-cti",
       "assets": [],
@@ -2915,14 +3012,14 @@
       ]
     },
     {
-      "order": 101,
+      "order": 102,
       "part": "V",
       "number": "4.4",
       "title": "Tune Requests from SOC",
       "source_path": "/thraining-plan/modules/04-de/04-tune-requests/student-guide.md",
-      "library_file_id": "libfile_f685679e811881918e4413a0deb9e78d",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:01:46.236067Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "26f576e7610dada43ffb44115ab8fbdfc2ece6829b54f995e61d1cc90b60020f",
       "anchor": "44--tune-requests-from-soc",
       "assets": [],
@@ -2937,15 +3034,15 @@
       "notes": []
     },
     {
-      "order": 102,
+      "order": 103,
       "part": "V",
       "number": "4.5",
       "title": "Hunt and Intel Packages",
       "source_path": "/thraining-plan/modules/04-de/05-hunt-and-intel-packages/student-guide.md",
-      "library_file_id": "libfile_9eb66e4b65748191a1cbf2c1acac6a78",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:02:05.643180Z",
-      "sha256": "8186423e46d8beda044f0bc9f89bd1be2c63d7ac8434595096d0679c3f642e75",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "5e2fd78ec2aa665bdf817e123b54971cd94768f693177b8253008c8cc980b919",
       "anchor": "45--hunt-and-intel-packages",
       "assets": [],
       "references": [],
@@ -2959,14 +3056,14 @@
       "notes": []
     },
     {
-      "order": 103,
+      "order": 104,
       "part": "V",
       "number": "4.6",
       "title": "Detection Lifecycle",
       "source_path": "/thraining-plan/modules/04-de/06-detection-lifecycle/student-guide.md",
-      "library_file_id": "libfile_4c3fb19c952c819189be5f7b292fd738",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:02:20.559051Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "1a0477a521d331cabf5ccac008e88835bc9c8775e03e51ba15e9b394b3aad72b",
       "anchor": "46--detection-lifecycle",
       "assets": [],
@@ -2985,14 +3082,14 @@
       "notes": []
     },
     {
-      "order": 104,
+      "order": 105,
       "part": "V",
       "number": "4.7",
       "title": "Sensor and Data Availability for Detection",
       "source_path": "/thraining-plan/modules/04-de/07-sensors/student-guide.md",
-      "library_file_id": "libfile_3fbaab9185dc81918af3a93f02d7d063",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:02:37.397449Z",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
       "sha256": "3ea1a8353e234e976c238b335e11bee5d3dd6ebc33f119f3ae4e489f734e6792",
       "anchor": "47--sensor-and-data-availability-for-detection",
       "assets": [],
@@ -3019,15 +3116,15 @@
       "notes": []
     },
     {
-      "order": 105,
+      "order": 106,
       "part": "V",
       "number": "4.8",
       "title": "Site-Specific Detection Engineering Knowledge",
       "source_path": "/thraining-plan/modules/04-de/08-site-specific/student-guide.md",
-      "library_file_id": "libfile_d59e9e475e7c819199eabc9f8f9c49b7",
-      "version_id": "1",
-      "modified_at": "2026-10-02T05:02:52.298352Z",
-      "sha256": "6652785e9a8ccad68175ebbb880fa692293646f174e1fbdc0205cbca2b935ce4",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "6318d784d35e7e1af65262102a0396248fa04a4bcd83b61bb80d8bfda25bd619",
       "anchor": "48--site-specific-detection-engineering-knowledge",
       "assets": [],
       "references": [
@@ -3045,15 +3142,15 @@
       "notes": []
     },
     {
-      "order": 106,
+      "order": 107,
       "part": "V",
       "number": "4.9",
       "title": "Detection Engineering Section Summary",
       "source_path": "/thraining-plan/modules/04-de/09-summary/student-guide.md",
-      "library_file_id": "libfile_a76421fdc10481918a53ff9fc2ea4596",
-      "version_id": "1",
-      "modified_at": "2026-10-02T20:31:49.933787Z",
-      "sha256": "45e1994372d8e0f2094ddbb5f9bed554f7fa8ca18498d02b5636a6dabf2fd5ee",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "29e242725cb8f205800160f625fb0a8b98d97d299a388230e27f04e93cc2718f",
       "anchor": "49--detection-engineering-section-summary",
       "assets": [],
       "references": [],
@@ -3073,15 +3170,15 @@
       ]
     },
     {
-      "order": 107,
+      "order": 108,
       "part": "VI",
       "number": "conclusion",
       "title": "Course Summary – Bringing the Defensive Workflow Together",
       "source_path": "/thraining-plan/modules/course-summary/student-guide.md",
-      "library_file_id": "libfile_9560a3ca230881918b3741bf885a035c",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T20:31:35.184173Z",
-      "sha256": "08cb4f3866457d9bde7ae8b7a014dadd9f9d2f714aa3b6a80a26dc718100320c",
+      "modified_at": null,
+      "sha256": "d71fc298a33194b325a8837a5237db2fc7b2e7d92cfac8f68af4740921f69f3a",
       "anchor": "course-summary--bringing-the-defensive-workflow-together",
       "assets": [],
       "references": [],
@@ -3105,34 +3202,717 @@
       ]
     }
   ],
-  "supporting_sources": [
+  "wrappers": [
     {
-      "source_path": "/thraining-plan/docs/companion-story/story.md",
-      "library_file_id": "libfile_8bdc2461717c8191a4a315261961a978",
-      "version_id": "1",
-      "modified_at": "2026-10-02T19:42:28.044234Z",
-      "sha256": "f913e2cba7c535047ad5db34627c5694b2cbc76f5d3073155cbf47ed47ca4d88"
+      "part": "I",
+      "unit": "0.6",
+      "kind": "intro",
+      "title": "0.6 – Shared Analytical Frameworks: Introduction",
+      "source_path": "/thraining-plan/modules/00-intro/06-frameworks/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "52e1bf5ad3b0fbf4bcf87616de07d3eeb5acac7ead76beaa05feb6cd3ed78a59",
+      "anchor": "06--shared-analytical-frameworks-introduction"
     },
     {
-      "source_path": "/thraining-plan/docs/story-bible.md",
-      "library_file_id": "libfile_0c6f85cf31288191ad6388d2a1f8d563",
-      "version_id": "1",
-      "modified_at": "2026-10-02T19:42:27.986080Z",
-      "sha256": "57d5774a6d5a5d7a86d8d67ed380a133776cf20d866b036a40e53ae119014ef5"
+      "part": "I",
+      "unit": "0.6",
+      "kind": "summary",
+      "title": "0.6 – Shared Analytical Frameworks: Summary",
+      "source_path": "/thraining-plan/modules/00-intro/06-frameworks/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "4cd13bfce97c271e5fdf171752706df8e9ac6a6d13c4b05c062a6debe45affc3",
+      "anchor": "06--shared-analytical-frameworks-summary"
+    },
+    {
+      "part": "II",
+      "unit": "1.1",
+      "kind": "intro",
+      "title": "1.1 – Endpoint Activity: Introduction",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "b7124d6f8a4098979692714ae2a0ad4d8ab117b6a16c28a8870e9206328b26db",
+      "anchor": "11--endpoint-activity-introduction"
+    },
+    {
+      "part": "II",
+      "unit": "1.1",
+      "kind": "summary",
+      "title": "1.1 – Endpoint Activity: Summary",
+      "source_path": "/thraining-plan/modules/01-soc/01-endpoint/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "90dc697b65956d028ce6ee81ef49c2e02df61bf6e985d9c4d7bb4adf2707df83",
+      "anchor": "11--endpoint-activity-summary"
+    },
+    {
+      "part": "II",
+      "unit": "1.2",
+      "kind": "intro",
+      "title": "1.2 – Zeek Network Evidence: Introduction",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "1be31e95a0da95012735434102a1ff57c720ecbe06a2474e0d1173e49fc3a10e",
+      "anchor": "12--zeek-network-evidence-introduction"
+    },
+    {
+      "part": "II",
+      "unit": "1.2",
+      "kind": "summary",
+      "title": "1.2 – Zeek Network Evidence: Summary",
+      "source_path": "/thraining-plan/modules/01-soc/02-zeek/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "d11837a0d81c66ccbb22ec87e67e4da493e21a18a957f7c77ac7d5b432e247c5",
+      "anchor": "12--zeek-network-evidence-summary"
+    },
+    {
+      "part": "II",
+      "unit": "1.3",
+      "kind": "intro",
+      "title": "1.3 – Detection Rules: Introduction",
+      "source_path": "/thraining-plan/modules/01-soc/03-detection/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "aed91e4cce1849eeb1d0ccc678d2750da249889c3156527db3e90e41357cddc0",
+      "anchor": "13--detection-rules-introduction"
+    },
+    {
+      "part": "II",
+      "unit": "1.3",
+      "kind": "summary",
+      "title": "1.3 – Detection Rules: Summary",
+      "source_path": "/thraining-plan/modules/01-soc/03-detection/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "f81238efaac7fd6b1db1e099d7135dea1150bc4e6b1ad2d552f992982f15bd26",
+      "anchor": "13--detection-rules-summary"
+    },
+    {
+      "part": "II",
+      "unit": "1.4",
+      "kind": "intro",
+      "title": "1.4 – Alert Investigation and Assessment: Introduction",
+      "source_path": "/thraining-plan/modules/01-soc/04-alerts/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "214a449a8952cb088e8524413e8afe3375f41a788b8ed01198a02a61bbb53f15",
+      "anchor": "14--alert-investigation-and-assessment-introduction"
+    },
+    {
+      "part": "II",
+      "unit": "1.4",
+      "kind": "summary",
+      "title": "1.4 – Alert Investigation and Assessment: Summary",
+      "source_path": "/thraining-plan/modules/01-soc/04-alerts/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "999aa27d27fba8993962f25ca8cca3da82a14b8d5ca9d37a866804d47c6a5c49",
+      "anchor": "14--alert-investigation-and-assessment-summary"
+    },
+    {
+      "part": "II",
+      "unit": "1.5",
+      "kind": "intro",
+      "title": "1.5 – Reporting and Notification: Introduction",
+      "source_path": "/thraining-plan/modules/01-soc/05-reporting/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "27b523b28475e9ea46683f6a4c67a6823f5356e5f8b935cf7edf9882db11f734",
+      "anchor": "15--reporting-and-notification-introduction"
+    },
+    {
+      "part": "II",
+      "unit": "1.5",
+      "kind": "summary",
+      "title": "1.5 – Reporting and Notification: Summary",
+      "source_path": "/thraining-plan/modules/01-soc/05-reporting/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "1973684b9605cbd35bbb6212502cf77264b3716ecf688762432ee7f258086b53",
+      "anchor": "15--reporting-and-notification-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.1",
+      "kind": "intro",
+      "title": "2.1 – Intelligence Foundations and Requirements: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "90230023640b8dc0dd138de6fa9427a63aaad477f7d4d324954d6c6b43979c17",
+      "anchor": "21--intelligence-foundations-and-requirements-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.1",
+      "kind": "summary",
+      "title": "2.1 – Intelligence Foundations and Requirements: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/01-core-intel/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "75438586d7cfe2e6a8b1528009284d8ced6e4b15a0a5a5768a84d0ba7c09eb29",
+      "anchor": "21--intelligence-foundations-and-requirements-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.2",
+      "kind": "intro",
+      "title": "2.2 – Analytical Tradecraft: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "18071822d6bc529ed78d65c0cb0af983f100619b775f17ef1de1fe43be95141e",
+      "anchor": "22--analytical-tradecraft-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.2",
+      "kind": "summary",
+      "title": "2.2 – Analytical Tradecraft: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/02-tradecraft/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "4c072d07a7655694b6345ea6fde82e6169790f058da1af2dad54a18e424052c9",
+      "anchor": "22--analytical-tradecraft-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.3",
+      "kind": "intro",
+      "title": "2.3 – Analytical Frameworks: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/03-frameworks/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "1e36777e004b49af6003036d23b8a6b31f6d48dd8d76793eeae668d2d9675aa0",
+      "anchor": "23--analytical-frameworks-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.3",
+      "kind": "summary",
+      "title": "2.3 – Analytical Frameworks: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/03-frameworks/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "7819bb74975a6b09d45ca210515353e4e371c2ce6c42ce2d6461459068424b9d",
+      "anchor": "23--analytical-frameworks-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.4",
+      "kind": "intro",
+      "title": "2.4 – CTI Tools and Platforms: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "d443c2598956b34bb088474a12d2b32ec9d0a2fc0786e5d81c0df2e15f9992f2",
+      "anchor": "24--cti-tools-and-platforms-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.4",
+      "kind": "summary",
+      "title": "2.4 – CTI Tools and Platforms: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/04-platforms/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "0b0dc08936d36998a076ccd8c8a8f4d6452629fca954b74f4da3ee214c196f76",
+      "anchor": "24--cti-tools-and-platforms-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.5",
+      "kind": "intro",
+      "title": "2.5 – Technical Enrichment and Discovery: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "2e4ac988a45ba2b1a40b23305f147b6ba4bdade2b33cde6945735f9f51e33fca",
+      "anchor": "25--technical-enrichment-and-discovery-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.5",
+      "kind": "summary",
+      "title": "2.5 – Technical Enrichment and Discovery: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/05-enrichment/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "20a5feb7ecf475606c4cc82f2204d1d9da7f350ad6d6e43aec04d3eb3c2871e8",
+      "anchor": "25--technical-enrichment-and-discovery-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.6",
+      "kind": "intro",
+      "title": "2.6 – Threat Assessment and Organizational Significance: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/06-assessment/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "2929fa649319d814b9ffbd172a06bfd31c73bf91d053930fa76ff1e28e4352f0",
+      "anchor": "26--threat-assessment-and-organizational-significance-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.6",
+      "kind": "summary",
+      "title": "2.6 – Threat Assessment and Organizational Significance: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/06-assessment/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "8941ffd9e867e2a53560bcc5a19f9860caa78ddda224340abc1e7640f4d7b7f5",
+      "anchor": "26--threat-assessment-and-organizational-significance-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.7",
+      "kind": "intro",
+      "title": "2.7 – Intelligence Production and Dissemination: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/07-production/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "749a52441ae537405847a2e6b5179b88f12b8bb5d9ee428501f22da37a9f3068",
+      "anchor": "27--intelligence-production-and-dissemination-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.7",
+      "kind": "summary",
+      "title": "2.7 – Intelligence Production and Dissemination: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/07-production/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "b5e97a540a586200a7c2776d0c84c1e5c5f10e1b502f578da90afe1c6a06e473",
+      "anchor": "27--intelligence-production-and-dissemination-summary"
+    },
+    {
+      "part": "III",
+      "unit": "2.8",
+      "kind": "intro",
+      "title": "2.8 – Local Application: Introduction",
+      "source_path": "/thraining-plan/modules/02-cti/08-site-specific/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "f7757da91a9c4c046b5c9f1a96e751f874ef927fc5e97ba5a061e8ed950d70a2",
+      "anchor": "28--local-application-introduction"
+    },
+    {
+      "part": "III",
+      "unit": "2.8",
+      "kind": "summary",
+      "title": "2.8 – Local Application: Summary",
+      "source_path": "/thraining-plan/modules/02-cti/08-site-specific/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "2ca36314b092f471fc82b503e4052eca723332db2043538d2903a495a210b07f",
+      "anchor": "28--local-application-summary"
+    },
+    {
+      "part": "IV",
+      "unit": "3.2",
+      "kind": "intro",
+      "title": "3.2 – Hunt Methodology: Introduction",
+      "source_path": "/thraining-plan/modules/03-hunter/02-methodology/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "aef66d0638440792731ee737f1cc3c948f74b23d004c14230a4c4a56bf0d116d",
+      "anchor": "32--hunt-methodology-introduction"
+    },
+    {
+      "part": "IV",
+      "unit": "3.2",
+      "kind": "summary",
+      "title": "3.2 – Hunt Methodology: Summary",
+      "source_path": "/thraining-plan/modules/03-hunter/02-methodology/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "c9e9c970a7f2c36c6394a1701a219ed12b688235fb57c648fd44c4c9a2972d91",
+      "anchor": "32--hunt-methodology-summary"
+    },
+    {
+      "part": "IV",
+      "unit": "3.4",
+      "kind": "intro",
+      "title": "3.4 – CTI as Hunt Input: Introduction",
+      "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "401bef98689169d16548de988f166b88b2b0c4f90a9c1a297cb0fd6aba1e4e4f",
+      "anchor": "34--cti-as-hunt-input-introduction"
+    },
+    {
+      "part": "IV",
+      "unit": "3.4",
+      "kind": "summary",
+      "title": "3.4 – CTI as Hunt Input: Summary",
+      "source_path": "/thraining-plan/modules/03-hunter/04-cti-for-hunters/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "9f3ae89b1b81838d01502da5f7cef1e2a041a902974a6647233ca82db8e8a320",
+      "anchor": "34--cti-as-hunt-input-summary"
+    },
+    {
+      "part": "IV",
+      "unit": "3.6",
+      "kind": "intro",
+      "title": "3.6 – Attacker Techniques for Hunting: Introduction",
+      "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "d8ccbe1acf41b346bfa8ebfb5cf05fa0175d055af3fab2e05830c607c8edfa59",
+      "anchor": "36--attacker-techniques-for-hunting-introduction"
+    },
+    {
+      "part": "IV",
+      "unit": "3.6",
+      "kind": "summary",
+      "title": "3.6 – Attacker Techniques for Hunting: Summary",
+      "source_path": "/thraining-plan/modules/03-hunter/06-attacker-techniques/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "ceffd5b5e6583ea85813eb005653edc6faad0682935bec58d63a79f5eae8b5de",
+      "anchor": "36--attacker-techniques-for-hunting-summary"
+    },
+    {
+      "part": "IV",
+      "unit": "3.7",
+      "kind": "intro",
+      "title": "3.7 – Local Hunt Control and Outputs: Introduction",
+      "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/intro.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "2605389924a933862a87a6bf372b552429d5ab23917ca21efd5e23d0349b1463",
+      "anchor": "37--local-hunt-control-and-outputs-introduction"
+    },
+    {
+      "part": "IV",
+      "unit": "3.7",
+      "kind": "summary",
+      "title": "3.7 – Local Hunt Control and Outputs: Summary",
+      "source_path": "/thraining-plan/modules/03-hunter/07-site-specific/summary.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "ce00795e92f81e82394bc7472cef2741c7de3aabd940f69721a9d495dfdb99ec",
+      "anchor": "37--local-hunt-control-and-outputs-summary"
+    }
+  ],
+  "practicals": [
+    {
+      "parent_number": "3.2.1",
+      "title": "Hunt Execution Practical — Controlled Telemetry",
+      "source_path": "/thraining-plan/modules/03-hunter/02-methodology/01-hunt-types/hunt-execution-practical.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "df66d0563fe01a0401b65eaccddb3d268edd99cbb8e608945a1927aea667aab8",
+      "anchor": "hunt-execution-practical--controlled-telemetry",
+      "assets": [
+        "/thraining-plan/labs/hunt-execution-practical.csv"
+      ]
+    },
+    {
+      "parent_number": "3.3.1",
+      "title": "External Tool Pivot Practical — VirusTotal, ANY.RUN, urlscan.io, and Silent Push",
+      "source_path": "/thraining-plan/modules/03-hunter/03-online-tools/external-tool-pivot-practical.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "4c49ff9a063e0b7d4d838fe3f94f5d5ef3c16745805be0c63848c420c18515ea",
+      "anchor": "external-tool-pivot-practical--virustotal-anyrun-urlscanio-and-silent-push",
+      "assets": []
+    },
+    {
+      "parent_number": "4.2",
+      "title": "Detection Validation Practical — Draft Analytic Test",
+      "source_path": "/thraining-plan/modules/04-de/02-sound-and-shop-requirements/detection-validation-practical.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "f4e3b789230f884d7deac7cdcfd197c85ae2210d0003ad75956e8f3f6c8794f2",
+      "anchor": "detection-validation-practical--draft-analytic-test",
+      "assets": [
+        "/thraining-plan/labs/de-validation-practical.csv",
+        "/thraining-plan/labs/de-validation-runner.py"
+      ]
+    }
+  ],
+  "embedded_lab_assets": [
+    {
+      "source_path": "/thraining-plan/labs/hunt-execution-practical.csv",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "ed854124d4ac9f67008e6d354169172346c7ecc19603206718b9531bf549722d",
+      "anchor": "lab-asset--hunt-execution-practicalcsv"
+    },
+    {
+      "source_path": "/thraining-plan/labs/de-validation-practical.csv",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "bb5a4b54b2597157b87c98beb666d66c5609398691383e789c6c42b98025f8ce",
+      "anchor": "lab-asset--de-validation-practicalcsv"
+    },
+    {
+      "source_path": "/thraining-plan/labs/de-validation-runner.py",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "6d87bc7ed33ac74cec4c3e1b7c99cf8f247f06907ce5b2204e58b2dd19ce78c9",
+      "anchor": "lab-asset--de-validation-runnerpy"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "source_path": "/thraining-plan/docs/a12-reconciliation-review.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "cd56f96e3bb0429683b8fe9cf16f73340dd051e751c05c524db8109b185ee39b"
     },
     {
       "source_path": "/thraining-plan/docs/companion-story/README.md",
-      "library_file_id": "libfile_7305dbdfbc448191944314720ccb7190",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T01:15:23.145014Z",
-      "sha256": "3f2415a23948df413ae72182045a2fab6ff4fb4739ebef29b587f5de09c41777"
+      "modified_at": null,
+      "sha256": "b330a7f513144b2bb70051cb559006aa0a88b7c37be380b52dd3a932c2f494b1"
+    },
+    {
+      "source_path": "/thraining-plan/docs/companion-story/desk-beats.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "506919e0279e3255eb72c79950d12fd9cdfd3a2f43f32702d39a081367deb2b4"
+    },
+    {
+      "source_path": "/thraining-plan/docs/companion-story/outline.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "1791c83b5fe4fc78d0232da86ec695b53c6f618b519585ce16a3221ee2c6d165"
+    },
+    {
+      "source_path": "/thraining-plan/docs/companion-story/plan.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "aa9478b2562d47b26066fea35f805357ea29244606784337ccb8ad5f64feb05a"
+    },
+    {
+      "source_path": "/thraining-plan/docs/companion-story/story.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "ebb8210df2921439718cf253aa804a271b27a2f2a3561ae15c5e5633b5f4d007"
     },
     {
       "source_path": "/thraining-plan/docs/proficiency-legend.md",
-      "library_file_id": "libfile_80962a6c37d08191aeb7c9d3d7467853",
+      "library_file_id": null,
       "version_id": null,
-      "modified_at": "2026-10-02T01:15:22.931935Z",
-      "sha256": "8b4bf6b6c62983983d26c9ac697e0a1b2ab0a70fd0ee2883bce52da8bf6140df"
+      "modified_at": null,
+      "sha256": "9fcb3968899cc99ca16066933e2b3167ce636780afdf2260b15eb6325d62b45f"
+    },
+    {
+      "source_path": "/thraining-plan/docs/skim-first-authoring-standard.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "0aa531485def4ca4042b09f2bec5f17f3502f97510323d447a15df8e07ca5392"
+    },
+    {
+      "source_path": "/thraining-plan/docs/story-bible.md",
+      "library_file_id": null,
+      "version_id": null,
+      "modified_at": null,
+      "sha256": "74596831b31d5afc8f3e37413bb2144712321ba20245a0f60df9fd9b192a6455"
     }
-  ]
+  ],
+  "reading_order": [
+    "/thraining-plan/modules/00-intro/01-course-layout/student-guide.md",
+    "/thraining-plan/modules/00-intro/02-what-a-soc-is/student-guide.md",
+    "/thraining-plan/modules/00-intro/03-jobs-in-one-sentence/student-guide.md",
+    "/thraining-plan/modules/00-intro/04-how-work-moves/student-guide.md",
+    "/thraining-plan/modules/00-intro/05-where-jobs-overlap/student-guide.md",
+    "/thraining-plan/modules/00-intro/06-frameworks/intro.md",
+    "/thraining-plan/modules/00-intro/06-frameworks/01-attck/student-guide.md",
+    "/thraining-plan/modules/00-intro/06-frameworks/02-diamond-model/student-guide.md",
+    "/thraining-plan/modules/00-intro/06-frameworks/03-cyber-kill-chain/student-guide.md",
+    "/thraining-plan/modules/00-intro/06-frameworks/summary.md",
+    "/thraining-plan/modules/00-intro/07-tool-survey/01-external-tools/student-guide.md",
+    "/thraining-plan/modules/00-intro/08-environment/01-orientation/student-guide.md",
+    "/thraining-plan/modules/00-intro/09-initial-access/student-guide.md",
+    "/thraining-plan/modules/00-intro/10-summary/student-guide.md",
+    "/thraining-plan/modules/01-soc/00-intro/student-guide.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/intro.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/01-endpoint-activity/student-guide.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/02-process-activity/student-guide.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/03-file-system-activity/student-guide.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/04-network-activity/student-guide.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/05-registry-activity/student-guide.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/06-image-driver-load/student-guide.md",
+    "/thraining-plan/modules/01-soc/01-endpoint/summary.md",
+    "/thraining-plan/modules/01-soc/02-zeek/intro.md",
+    "/thraining-plan/modules/01-soc/02-zeek/01-concepts/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/02-conn-engine/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/03-dns-engine/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/04-tls-engine/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/05-http-engine/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/06-smtp-engine/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/07-files-engine/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/08-weird-engine/student-guide.md",
+    "/thraining-plan/modules/01-soc/02-zeek/summary.md",
+    "/thraining-plan/modules/01-soc/03-detection/intro.md",
+    "/thraining-plan/modules/01-soc/03-detection/01-sigma-rules/student-guide.md",
+    "/thraining-plan/modules/01-soc/03-detection/02-suricata-rules/student-guide.md",
+    "/thraining-plan/modules/01-soc/03-detection/03-yara-rules/student-guide.md",
+    "/thraining-plan/modules/01-soc/03-detection/04-siem-rules/student-guide.md",
+    "/thraining-plan/modules/01-soc/03-detection/summary.md",
+    "/thraining-plan/modules/01-soc/04-alerts/intro.md",
+    "/thraining-plan/modules/01-soc/04-alerts/01-context-investigation/student-guide.md",
+    "/thraining-plan/modules/01-soc/04-alerts/02-classification/student-guide.md",
+    "/thraining-plan/modules/01-soc/04-alerts/03-false-positive-causes/student-guide.md",
+    "/thraining-plan/modules/01-soc/04-alerts/04-categorizations/student-guide.md",
+    "/thraining-plan/modules/01-soc/04-alerts/05-sla-response-times/student-guide.md",
+    "/thraining-plan/modules/01-soc/04-alerts/summary.md",
+    "/thraining-plan/modules/01-soc/05-reporting/intro.md",
+    "/thraining-plan/modules/01-soc/05-reporting/01-report-types/student-guide.md",
+    "/thraining-plan/modules/01-soc/05-reporting/02-reporting-timelines/student-guide.md",
+    "/thraining-plan/modules/01-soc/05-reporting/03-notification-distribution/student-guide.md",
+    "/thraining-plan/modules/01-soc/05-reporting/summary.md",
+    "/thraining-plan/modules/01-soc/06-summary/student-guide.md",
+    "/thraining-plan/modules/02-cti/00-intro/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/intro.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/01-data-info-intel/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/02-intelligence-lifecycle/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/03-intelligence-types/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/04-intelligence-requirements/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/05-rfi-intake/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/06-actionable-intelligence/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/07-tailoring-audience/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/08-attribution/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/09-collection-sources/student-guide.md",
+    "/thraining-plan/modules/02-cti/01-core-intel/summary.md",
+    "/thraining-plan/modules/02-cti/02-tradecraft/intro.md",
+    "/thraining-plan/modules/02-cti/02-tradecraft/01-estimative-language/student-guide.md",
+    "/thraining-plan/modules/02-cti/02-tradecraft/02-structured-techniques/student-guide.md",
+    "/thraining-plan/modules/02-cti/02-tradecraft/03-admiralty-code/student-guide.md",
+    "/thraining-plan/modules/02-cti/02-tradecraft/04-cognitive-biases/student-guide.md",
+    "/thraining-plan/modules/02-cti/02-tradecraft/summary.md",
+    "/thraining-plan/modules/02-cti/03-frameworks/intro.md",
+    "/thraining-plan/modules/02-cti/03-frameworks/01-attck-cti/student-guide.md",
+    "/thraining-plan/modules/02-cti/03-frameworks/02-diamond-cti/student-guide.md",
+    "/thraining-plan/modules/02-cti/03-frameworks/03-kill-chain-cti/student-guide.md",
+    "/thraining-plan/modules/02-cti/03-frameworks/summary.md",
+    "/thraining-plan/modules/02-cti/04-platforms/intro.md",
+    "/thraining-plan/modules/02-cti/04-platforms/01-internal-tip/student-guide.md",
+    "/thraining-plan/modules/02-cti/04-platforms/02-platform-selection/student-guide.md",
+    "/thraining-plan/modules/02-cti/04-platforms/03-virustotal/student-guide.md",
+    "/thraining-plan/modules/02-cti/04-platforms/04-anyrun/student-guide.md",
+    "/thraining-plan/modules/02-cti/04-platforms/05-silent-push/student-guide.md",
+    "/thraining-plan/modules/02-cti/04-platforms/06-urlscan/student-guide.md",
+    "/thraining-plan/modules/02-cti/04-platforms/summary.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/intro.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/01-ioc-handling/student-guide.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/02-file-similarity/student-guide.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/03-rdap-whois/student-guide.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/04-advanced-dns/student-guide.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/05-infra-pivot/student-guide.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/06-dtf/student-guide.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/07-correlation/student-guide.md",
+    "/thraining-plan/modules/02-cti/05-enrichment/summary.md",
+    "/thraining-plan/modules/02-cti/06-assessment/intro.md",
+    "/thraining-plan/modules/02-cti/06-assessment/01-applicable-ttps/student-guide.md",
+    "/thraining-plan/modules/02-cti/06-assessment/02-relevance-impact/student-guide.md",
+    "/thraining-plan/modules/02-cti/06-assessment/summary.md",
+    "/thraining-plan/modules/02-cti/07-production/intro.md",
+    "/thraining-plan/modules/02-cti/07-production/01-core-objects/student-guide.md",
+    "/thraining-plan/modules/02-cti/07-production/02-stix-production/student-guide.md",
+    "/thraining-plan/modules/02-cti/07-production/03-finished-products/student-guide.md",
+    "/thraining-plan/modules/02-cti/07-production/04-rfi-response/student-guide.md",
+    "/thraining-plan/modules/02-cti/07-production/05-dissemination/student-guide.md",
+    "/thraining-plan/modules/02-cti/07-production/summary.md",
+    "/thraining-plan/modules/02-cti/08-site-specific/intro.md",
+    "/thraining-plan/modules/02-cti/08-site-specific/01-local-priorities/student-guide.md",
+    "/thraining-plan/modules/02-cti/08-site-specific/02-local-production/student-guide.md",
+    "/thraining-plan/modules/02-cti/08-site-specific/03-local-dissemination/student-guide.md",
+    "/thraining-plan/modules/02-cti/08-site-specific/summary.md",
+    "/thraining-plan/modules/02-cti/09-summary/student-guide.md",
+    "/thraining-plan/modules/03-hunter/00-intro/student-guide.md",
+    "/thraining-plan/modules/03-hunter/01-purpose/student-guide.md",
+    "/thraining-plan/modules/03-hunter/02-methodology/intro.md",
+    "/thraining-plan/modules/03-hunter/02-methodology/01-hunt-types/student-guide.md",
+    "/thraining-plan/modules/03-hunter/02-methodology/02-hunt-development/student-guide.md",
+    "/thraining-plan/modules/03-hunter/02-methodology/summary.md",
+    "/thraining-plan/modules/03-hunter/03-online-tools/student-guide.md",
+    "/thraining-plan/modules/03-hunter/04-cti-for-hunters/intro.md",
+    "/thraining-plan/modules/03-hunter/04-cti-for-hunters/01-assessing-cti/student-guide.md",
+    "/thraining-plan/modules/03-hunter/04-cti-for-hunters/02-extracting-leads/student-guide.md",
+    "/thraining-plan/modules/03-hunter/04-cti-for-hunters/03-stix-as-hunt-input/student-guide.md",
+    "/thraining-plan/modules/03-hunter/04-cti-for-hunters/summary.md",
+    "/thraining-plan/modules/03-hunter/05-framework-application/student-guide.md",
+    "/thraining-plan/modules/03-hunter/06-attacker-techniques/intro.md",
+    "/thraining-plan/modules/03-hunter/06-attacker-techniques/01-persistence/student-guide.md",
+    "/thraining-plan/modules/03-hunter/06-attacker-techniques/02-privilege-escalation/student-guide.md",
+    "/thraining-plan/modules/03-hunter/06-attacker-techniques/03-hunt-specific/student-guide.md",
+    "/thraining-plan/modules/03-hunter/06-attacker-techniques/summary.md",
+    "/thraining-plan/modules/03-hunter/07-site-specific/intro.md",
+    "/thraining-plan/modules/03-hunter/07-site-specific/01-hunt-control/student-guide.md",
+    "/thraining-plan/modules/03-hunter/07-site-specific/02-hunt-documentation/student-guide.md",
+    "/thraining-plan/modules/03-hunter/07-site-specific/03-hunt-outputs/student-guide.md",
+    "/thraining-plan/modules/03-hunter/07-site-specific/summary.md",
+    "/thraining-plan/modules/03-hunter/08-summary/student-guide.md",
+    "/thraining-plan/modules/04-de/00-intro/student-guide.md",
+    "/thraining-plan/modules/04-de/01-what-de-owns/student-guide.md",
+    "/thraining-plan/modules/04-de/02-sound-and-shop-requirements/student-guide.md",
+    "/thraining-plan/modules/04-de/03-nominations/student-guide.md",
+    "/thraining-plan/modules/04-de/04-tune-requests/student-guide.md",
+    "/thraining-plan/modules/04-de/05-hunt-and-intel-packages/student-guide.md",
+    "/thraining-plan/modules/04-de/06-detection-lifecycle/student-guide.md",
+    "/thraining-plan/modules/04-de/07-sensors/student-guide.md",
+    "/thraining-plan/modules/04-de/08-site-specific/student-guide.md",
+    "/thraining-plan/modules/04-de/09-summary/student-guide.md",
+    "/thraining-plan/modules/course-summary/student-guide.md"
+  ],
+  "editorial_review_current": true,
+  "metadata_note": "Library identifiers, versions, and timestamps describe retrieval. SHA-256 values identify the exact build inputs, including canonical edits made during this pass; saved bytes are verified after writeback."
 }

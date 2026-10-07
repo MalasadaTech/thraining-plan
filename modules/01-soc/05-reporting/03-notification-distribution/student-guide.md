@@ -62,7 +62,7 @@ Use the notification chart to route the product, provide appropriate leadership 
 
 Previous: [1.5.2 – Reporting Timeline Requirements](../02-reporting-timelines/student-guide.md)
 
-Next: [2.1.1 — Data, information, and intelligence](../../../02-cti/01-core-intel/01-data-info-intel/student-guide.md)
+Next: [1.5 – Reporting and Notification Summary](../summary.md)
 
 [1.x module index](../../README.md)
 

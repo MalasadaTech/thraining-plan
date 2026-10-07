@@ -36,6 +36,12 @@ References:
 | Treats Sigma metadata as local policy. | Sigma is a format; the local list is the deployment authority. |
 | Writes “done” to nominator. | Explain shipped/changed/sent-back and what changed. |
 
+## Practical Demonstration
+
+Use [detection-validation-practical.md](detection-validation-practical.md) for `4.2.1`. The evaluator should observe the learner actually run the supplied draft against the controlled dataset and interpret positive, benign-control, and data-path results. Discussion of the three test categories is not sufficient sign-off for **test a draft or change**.
+
+`4.2.2` has a later local prerequisite. Teach the checking method here, but complete/sign off the met/missing review only after the learner obtains the verified local shop requirement list in 4.8 (or an authorized local simulation). Do not invent a DYA/BHM field list.
+
 ## Knowledge Check – Answer Key
 
 1. Positive/intended, negative/benign-control, and data availability.

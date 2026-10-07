@@ -49,6 +49,8 @@ Compare the two schema representations rather than teaching old fields as univer
 
 ### 2. Working through the example
 
+Treat this as a **separate classroom file-analysis record, not A12**.
+
 Ask learners to determine sender from is_orig and explain the missing endpoint-path claim. Use the related HTTP record only for what it actually adds.
 
 **Key point to reinforce:** With is_orig=false, the responder supplies the content. A network observation does not establish a host Temp path.
@@ -67,7 +69,7 @@ Confirm that learners change both direction and the sender-address field. Do not
 
 ### 2. Who supplied the content when is_orig=false in the example, and does it establish a Temp file on the host?
 
-**Expected answer:** The responder, 203.0.113.88, supplied it. The network observation does not establish an endpoint path or file creation.
+**Expected answer:** The responder, 198.51.100.60, supplied it. The network observation does not establish an endpoint path or file creation.
 
 ### 3. Modify the query for files supplied by the originator and identify the legacy equivalent.
 

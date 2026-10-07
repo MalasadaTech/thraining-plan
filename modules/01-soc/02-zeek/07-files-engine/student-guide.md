@@ -39,7 +39,9 @@ A `files.log` record does not guarantee that Zeek saved a file to disk or captur
 
 ## 2. Working through the example
 
-Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `203.0.113.88`, and `is_orig=false`. A related HTTP record associates it with `/update.exe`.
+**Separate classroom file-analysis record — not A12.** It intentionally pairs with the separate HTTP training record from 1.2.5.
+
+Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `198.51.100.60`, and `is_orig=false`. A related HTTP record associates it with `/package.bin`.
 
 The supported account is that Zeek observed executable-type content supplied by the responder to the originator in that HTTP context. Use `CTrain1` for the connection and `FTrain1` for file references such as an HTTP `resp_fuids` entry. In a legacy record, `tx_hosts` and `rx_hosts` supply direction and `conn_uids` supplies the connection pivot. State separately whether a hash, complete bytes, or an extracted object is available.
 
@@ -51,7 +53,7 @@ This KQL teaching example assumes an ingested table named `ZeekFiles`, a datetim
 ZeekFiles
 | where TimeGenerated > ago(1d)
 | where mime_type == "application/x-dosexec"
-| where ['id.resp_h'] == "203.0.113.88" and is_orig == false
+| where ['id.resp_h'] == "198.51.100.60" and is_orig == false
 | project TimeGenerated, fuid, uid, ['id.orig_h'], ['id.resp_h'],
           mime_type, is_orig
 ```

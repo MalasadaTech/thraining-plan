@@ -53,7 +53,9 @@ Broad candidate set
 
 Do not tune away the behavior you are trying to find.
 
-### Slide 7 – “Not found” has boundaries
+### Slide 7 – Hypothetical practice result — not canonical A12
+Illustrative result only:
+
 No matches on 18 visible hosts.
 
 7 hosts lack required registry telemetry.

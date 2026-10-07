@@ -1,12 +1,25 @@
 # Module X.X – [Module Title]
 
-**Target Audience:** SOC Analyst / Threat Hunter / CTI Analyst  
+**Target Audience:** SOC Analyst / Threat Hunter / CTI Analyst / Detection Engineer  
 **Proficiency Focus:** 3-level / 5-level / 7-level (or mixed)  
-**Estimated Time:** XX minutes (real length — do not pad to an hour)  
+**Estimated Time:** XX minutes  
 
-Do not add optional sections just to fill the page.
+> **Authoring note:** This template models the learner-facing voice. Keep the explanation self-contained, mentor-like, and evidence-first. Use optional sections only when they help teach the mapped material. See [Skim-First / Advance-Organizer Design](../docs/skim-first-authoring-standard.md).
 
-Write so a reader with no live instructor can follow. Say **this lesson**, not **this hour**, unless you mean clock time. Complete sentences. If you use a shop or SIEM word (row, map, encoding), put ordinary words next to it on first use, or do not use it.
+---
+
+## Why This Matters
+
+[In 1–3 short paragraphs, explain what the learner does with this material in the job and why it matters. Connect to prior knowledge when that connection helps. Preview the main ideas and tell the learner what distinction, decision, or pattern is especially worth watching for.]
+
+A useful introduction lets the learner answer:
+
+- What am I about to learn?
+- What prior knowledge does this build on?
+- What should I pay particular attention to?
+- What should I be able to understand or do when I finish?
+
+Do not turn these prompts into a mechanical four-question list unless that format genuinely improves the lesson. The final learner text should read naturally.
 
 ---
 
@@ -15,61 +28,74 @@ Write so a reader with no live instructor can follow. Say **this lesson**, not *
 By the end of this module, you will be able to:
 
 1. [Objective tied to what this lesson actually teaches]
-2. [Add more only if needed]
+2. [Additional objective only when needed]
 
 **Mapped Proficiency Items:**
 - K: X.X.X – [Item name] (Target: A/B/C)
-- T: X.X.X – [Item name] (Target: 2b/3c/4c) — omit if this lesson has no task
+- T: X.X.X – [Item name] (Target: 2b/3c/4c) — omit when this lesson has no mapped task
 
 ---
 
-## 1. Key Concepts
+## 1. [Descriptive Concept or Decision Heading]
 
-**Intro (required).** First paragraph, before the outline ideas. Ordinary words. Why this lesson exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last lesson was X.” If you cannot finish “in this job they do this because ___,” you do not have an intro.
+[Explain the concept in complete sentences. Show why it matters and how the learner should reason about it. Use headings that make the intellectual progression visible during a skim.]
 
-Teach every outline bullet for this lesson. No extra concept sections to look complete.
+**Key Point:** [Optional. Use when one idea deserves explicit emphasis.]
 
-### 1.1 [Concept Name]
-- Definition / explanation
-- Why it matters (only if it is not obvious)
-- Key fields or components (only if this lesson has them)
+### 1.1 [Specific Concept]
+
+[Definition/explanation, important fields or components, and how the learner uses them.]
+
+### 1.2 [Next Concept or Decision]
+
+[Continue only as the outline requires.]
 
 ---
 
-## 2. Detailed Walkthrough / Examples *(optional)*
+## 2. Example / A12 Case Study *(optional)*
 
-Include only if an example teaches something the concepts did not already make obvious. Do not invent fail-stories to hit a count.
+Use an example when it makes the reasoning clearer than explanation alone.
 
 ### Example: [Scenario Name]
-- What happened
-- What to call it / what to write down
+
+[Evidence or situation.]
+
+[Reasoning that connects the evidence to the conclusion.]
+
+[Bounded conclusion or action.]
+
+**Evidence Boundary:** [Optional. State what the evidence supports and what remains unresolved when that distinction matters.]
 
 ---
 
-## 3. Hands-On Exercise *(later — do not write yet)*
+## 3. Task / Workflow Guidance *(when mapped)*
 
-Do not add a lab, demo, or hands-on exercise until the human asks. Outline **tasks** are still taught in Key Concepts as what good looks like.
+[Teach what good performance looks like for the mapped task. A lab or demonstration is a separate artifact and is added only when requested.]
 
 ---
 
 ## 4. Knowledge Check
 
-Required when this lesson has slides: **1–3 questions for the whole lesson**. Not per concept. Answers only in the instructor guide.
-
-Do not add a fourth question to fill. Do not ask about the next lesson just to have more items.
+Use **1–3 questions for the whole lesson** when the lesson has slides. Questions should retrieve or apply the ideas this lesson actually taught.
 
 1. [Question]
-2. [Question]
+2. [Question, if needed]
 
 ---
 
 ## 5. Summary
 
-- Only the takeaways this lesson earned
+### By this point, you should be able to:
+
+- [End-state capability or understanding]
+- [Important distinction the learner should now be able to explain]
+- [Mapped task or decision the learner should now be able to perform, when applicable]
+
+[Optional closing paragraph connecting this lesson to the next learner question.]
 
 ---
 
-## 6. References & Further Reading *(optional except related modules if there is a next lesson)*
+## 6. References & Further Reading *(optional)*
 
-- Related modules
-- External links only if this lesson uses that source
+- [Related module, when useful]
+- [Supporting reference with a usable hyperlink when the lesson names or relies on it]

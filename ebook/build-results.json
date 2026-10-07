@@ -1,12 +1,15 @@
 {
-  "chapters": 107,
-  "words": 100097,
-  "external_occurrences": 202,
-  "unique_external_urls": 83,
-  "internal_links": 641,
-  "code_blocks": 18,
+  "chapters": 108,
+  "subunit_wrappers": 36,
+  "learner_practicals": 3,
+  "embedded_lab_assets": 3,
+  "words": 121486,
+  "external_occurrences": 217,
+  "unique_external_urls": 93,
+  "internal_links": 690,
+  "code_blocks": 22,
   "unmapped": [
-    "0.9",
+    "0.10",
     "1.0",
     "1.6",
     "2.0",
@@ -17,8 +20,13 @@
     "4.9",
     "conclusion"
   ],
-  "nav_removed": 165,
-  "relative_links_converted": 30,
-  "a12_chapters": 80,
-  "broken_internal_links": []
+  "nav_removed": 204,
+  "relative_links_converted": 67,
+  "a12_chapters": 84,
+  "broken_internal_links": [],
+  "wrapper_pairs": 18,
+  "reading_order_entries": 144,
+  "table_errors": [],
+  "editorial_review_current": true,
+  "editorial_review_changed_sources": []
 }

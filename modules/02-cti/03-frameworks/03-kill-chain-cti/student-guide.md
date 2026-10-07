@@ -46,7 +46,7 @@ The value of the framework in CTI is to describe **progression that the evidence
 | **Command and Control** | Establishing or using a channel that allows adversary control/communication. |
 | **Actions on Objectives** | Performing the intended mission effect, such as collection, theft, disruption, or destruction. |
 
-### Do not force a stage from an ambiguous event
+### Use Surrounding Context to Assign the Stage
 
 A process event such as:
 
@@ -65,9 +65,9 @@ Examples:
 
 The framework is describing the role of the activity in the intrusion, not simply the name of the process.
 
-### A download is not automatically Installation
+### A Download Supports Delivery More Directly Than Installation
 
-Suppose A12 shows a successful download of `/update.exe`.
+For a separate progression exercise, suppose a record shows a successful download of `/update.exe`. This adds a hypothetical transfer condition for practice; successful transfer remains unresolved in the canonical A12 case.
 
 That can support **Delivery** of a follow-on payload into the victim environment.
 
@@ -91,7 +91,7 @@ The Kill Chain should help answer:
 
 ### Worked progression example
 
-Suppose reporting contains:
+For a separate hypothetical progression example, suppose reporting contains:
 
 - phishing email with `invoice.vbs` → **Delivery**
 - user launches the script and malicious code executes → **Exploitation**
@@ -120,4 +120,4 @@ Unobserved stages are useful gaps, not blanks that need to be filled.
 - [Lockheed Martin – Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
 - [Cyber Kill Chain overview PDF](https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/Gaining_the_Advantage_Cyber_Kill_Chain.pdf)
 
-**Next:** [2.4.1 – Internal Threat Intelligence Platform](../../04-platforms/01-internal-tip/student-guide.md).
+**Next:** [2.3 – Analytical Frameworks: Summary](../summary.md).

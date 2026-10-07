@@ -45,8 +45,8 @@ References:
 The safest starting point is a seed already connected to your investigation.
 
 Examples:
-- SHA256 of `update.exe`;
-- `203.0.113.88`;
+- SHA256 of `sync-client.exe`;
+- `198.51.100.77`;
 - update domain;
 - a specific process command line from reporting.
 
@@ -103,7 +103,7 @@ Example:
 
 or:
 
-> ANY.RUN session observed a request to `/update.exe` on the update domain.
+> ANY.RUN session observed a request to `/client.bin` on `sync-gateway.example`.
 
 Those can inform:
 - TTP analysis;
@@ -113,20 +113,22 @@ Those can inform:
 
 A generic verdict such as “malicious” contains less operational detail.
 
-### Classroom card
+### Separate classroom card — not A12
 
-Search seed: SHA256 for `update.exe`
+This training-only sandbox card is **not canonical A12**. A12 does not provide a recovered `update.exe` hash or a sandbox execution. Use this card only to practice session-evidence interpretation.
+
+Search seed: SHA256 for `sync-client.exe`
 
 Suppose the card shows:
-- process: `update.exe`;
+- process: `sync-client.exe`;
 - child process: `powershell.exe`;
-- contacted IP: `203.0.113.88`;
+- contacted IP: `198.51.100.77`;
 - dropped file: `stage.dat`;
 - no check-in POST shown.
 
 Valid output:
 
-> ANY.RUN session observed `update.exe` spawning PowerShell and contacting `203.0.113.88`.
+> ANY.RUN session observed `sync-client.exe` spawning PowerShell and contacting `198.51.100.77`.
 
 If a check-in POST is absent from the card:
 

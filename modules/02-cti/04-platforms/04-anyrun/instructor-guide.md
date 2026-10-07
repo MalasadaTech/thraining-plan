@@ -22,10 +22,14 @@ References:
 
 ## Key Teaching Points
 
-- Start with evidence already connected to the case.
+- Start with evidence connected to the investigation or supplied training scenario.
 - Review process/network/file/registry events.
 - Attribute service labels: “ANY.RUN labels...”
 - Treat sandbox behavior as session-specific evidence.
+
+## Practice-Card Boundary
+
+The worked sandbox card used with this lesson is **separate classroom evidence, not A12**. Do not let a training hash, execution tree, or contacted IP become a fact of the recurring case.
 
 ## Common Student Challenges
 

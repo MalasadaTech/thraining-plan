@@ -25,7 +25,7 @@ This course follows the work of SOC analysts, CTI analysts, threat hunters, and 
 
 ## 1. How the course progresses
 
-The introductory lessons explain the setting, the roles, and how their work connects. They are followed by three shared topics: frameworks, external tools, and the organization's environment. These topics support every role, so they are taught before the SOC material.
+The introductory lessons explain the setting, the roles, and how their work connects. They are followed by four shared topics: frameworks, external tools, the organization's environment, and common initial-access paths. These topics support every role, so they are taught before the SOC material.
 
 The four role tracks then follow this order:
 

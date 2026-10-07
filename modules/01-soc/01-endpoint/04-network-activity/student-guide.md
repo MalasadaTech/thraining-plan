@@ -38,9 +38,11 @@ Sysmon 3 concerns network connections; Sysmon 22 concerns DNS queries. MDE uses 
 
 ## 2. Working through the example
 
-A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=203.0.113.88`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
+**Separate classroom record — not A12.** The values below are training-only and should not be merged into the recurring case.
 
-A supported description is: “The endpoint recorded a successful TCP connection associated with PowerShell to the remote endpoint `203.0.113.88:443`; no remote URL or FQDN is recorded.” The port alone does not establish HTTPS or Command and Control. The abbreviated command does not establish hidden-window execution. Use source-specific direction evidence before adding “outbound” to the finding.
+A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=198.51.100.44`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
+
+A supported description is: “The endpoint recorded a successful TCP connection associated with PowerShell to the remote endpoint `198.51.100.44:443`; no remote URL or FQDN is recorded.” The port alone does not establish HTTPS or Command and Control. The abbreviated command does not establish hidden-window execution. Use source-specific direction evidence before adding “outbound” to the finding.
 
 ## 3. Creating a focused network query
 
@@ -51,7 +53,7 @@ DeviceNetworkEvents
 | where Timestamp > ago(1d)
 | where ActionType == "ConnectionSuccess"
 | where InitiatingProcessFileName =~ "powershell.exe"
-| where RemoteIP == "203.0.113.88" and RemotePort == 443
+| where RemoteIP == "198.51.100.44" and RemotePort == 443
 | project Timestamp, DeviceName, Protocol, LocalIP, LocalPort,
           RemoteIP, RemotePort, RemoteUrl, InitiatingProcessCommandLine
 ```

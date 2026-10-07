@@ -54,16 +54,13 @@ Examples:
 **Anomaly-based**
 > Several hosts made rare `:8080` requests for `/update.exe`. Is the pattern associated with the A12 activity set or a benign application?
 
-### “Execute” at this stage
+### Preparation is not execution
 
-In this lesson, executing the type means you can state:
+This lesson prepares you to recognize the initiating signal, classify the primary hunt type, and form the first testable question. Those are required planning skills, but they do **not** by themselves satisfy a task whose approved verb is **execute**.
 
-- what initiated the hunt;
-- the primary type;
-- the first testable question;
-- what kind of evidence you would search.
+For `3.2.1.1`–`3.2.1.4`, execution means you actually run the hunt against supplied or approved telemetry and record the scope, query/search, results, gaps, and bounded finding.
 
-The detailed hunt card comes next in 3.2.2.
+Use the [Hunt Execution Practical](hunt-execution-practical.md) to demonstrate the four execution tasks. The detailed hunt-development model is taught next in 3.2.2.
 
 ## 2. Knowledge Check
 

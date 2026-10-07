@@ -89,10 +89,14 @@ For example, Sigma supports fields such as IDs, status, description, references,
 
 Your shop may require some, all, or different fields.
 
-Use the **actual local list** from 4.8 and mark:
+At this point in the course, learn the method but do **not** pretend you already have the authoritative local list. Module 4.8 teaches you how to locate and verify that source.
+
+After 4.8, return to [Part B of the Detection Validation Practical](detection-validation-practical.md) with the **verified local list** and mark:
 - met;
 - missing;
-- not applicable, if the local process permits it.
+- not applicable, if the real local process permits it.
+
+Until that local source is available, `4.2.2` is taught/prepared but not qualification-complete.
 
 ### Close the loop
 
@@ -110,6 +114,12 @@ Example:
 > **Changed:** We kept the encoded-PowerShell behavior but removed the host-specific IOC so the analytic can detect similar execution across workstations. Positive and benign-control tests passed. Deployment follows the local change path.
 
 That feedback is more useful than simply writing “done.”
+
+### Demonstrate validation by running the draft
+
+The three-test model above is preparation. Task `4.2.1` requires you to **test** a draft/change, so you must execute the analytic against controlled or approved evidence and evaluate the result.
+
+Use the [Detection Validation Practical](detection-validation-practical.md). It supplies target behavior, benign near-neighbor behavior, and a deliberate data-path problem. Run the draft, preserve the output, and make a justified **PASS / CHANGE / FAIL-HOLD** decision.
 
 ## 2. Knowledge Check
 

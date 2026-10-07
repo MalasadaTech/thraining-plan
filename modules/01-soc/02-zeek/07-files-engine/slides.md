@@ -47,9 +47,11 @@ With is_orig=false, the responder supplies the content. A network observation do
 
 ---
 
-## Supplied example
+## Supplied example — separate classroom record
 
-Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `203.0.113.88`, and `is_orig=false`. A related HTTP record associates it with `/update.exe`.
+**Not A12.**
+
+Suppose a record identifies executable-type content with `mime_type=application/x-dosexec`, `fuid=FTrain1`, `uid=CTrain1`, originator `192.0.2.10`, responder `198.51.100.60`, and `is_orig=false`. A related HTTP record associates it with `/package.bin`.
 
 **Speaker notes:** Ask learners to determine sender from is_orig and explain the missing endpoint-path claim. Use the related HTTP record only for what it actually adds.
 
@@ -67,7 +69,7 @@ Query content type and supported sender/direction fields. Preserve completeness 
 
 | where TimeGenerated > ago(1d)
 | where mime_type == "application/x-dosexec"
-| where ['id.resp_h'] == "203.0.113.88" and is_orig == false
+| where ['id.resp_h'] == "198.51.100.60" and is_orig == false
 | project TimeGenerated, fuid, uid, ['id.orig_h'], ['id.resp_h'],
 
 **Speaker notes:** Confirm that learners change both direction and the sender-address field. Do not require nonexistent legacy columns in a current feed. Use the surrounding student-guide explanation to interpret the table and its limits.
@@ -80,7 +82,7 @@ Query content type and supported sender/direction fields. Preserve completeness 
 ZeekFiles
 | where TimeGenerated > ago(1d)
 | where mime_type == "application/x-dosexec"
-| where ['id.resp_h'] == "203.0.113.88" and is_orig == false
+| where ['id.resp_h'] == "198.51.100.60" and is_orig == false
 | project TimeGenerated, fuid, uid, ['id.orig_h'], ['id.resp_h'],
           mime_type, is_orig
 ```

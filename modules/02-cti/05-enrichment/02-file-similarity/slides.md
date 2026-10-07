@@ -86,7 +86,9 @@ Contrast the direction with ssdeep. This is the common learner error: ssdeep hig
 ### Slide 6 – Similarity is a lead
 **Title:** Several signals strengthen the pivot
 
-New file versus `update.exe`:
+**Separate classroom samples — not A12.**
+
+New file versus `sync-client.exe`:
 
 - different SHA256;
 - same imphash;
@@ -144,7 +146,7 @@ This slide connects the lesson back to the analytic discipline developed in 2.1 
 
 1. Same imphash, different SHA256: what does that support and what does it not prove?  
 2. ssdeep 72 and TLSH 22: how do the score directions differ, and what comes next?  
-3. `update.exe` is unsigned: what did you learn, and what would go beyond the evidence?
+3. `sync-client.exe` is unsigned: what did you learn, and what would go beyond the evidence?
 
 **Remember:** similarity techniques identify candidates; analysis establishes relationships.
 

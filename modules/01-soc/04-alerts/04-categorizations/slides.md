@@ -48,7 +48,7 @@ Execution context supports privilege conclusions. A suspicious command or servic
 
 ## Supplied example
 
-The course PowerShell example runs under `jlee` with a recorded Medium integrity, non-elevated context. That supports user-level activity for this event. It does not prove that the account lacks every administrative membership or that no privileged activity occurred elsewhere.
+A separate classroom PowerShell example (not A12) runs under `labuser` with a recorded Medium integrity, non-elevated context. That supports user-level activity for this event. It does not prove that the account lacks every administrative membership or that no privileged activity occurred elsewhere.
 
 **Speaker notes:** Use the same command under two explicitly different execution contexts. Ask learners to change only the conclusion supported by that difference.
 
@@ -65,7 +65,7 @@ State the category, evidence, and why a plausible alternative is less supported.
 ## Knowledge check
 
 1. Name the four syllabus categories and explain how Other is used.
-2. Categorize the supplied non-elevated jlee event and explain why root-level is unsupported.
+2. Categorize the supplied non-elevated labuser event and explain why root-level is unsupported.
 3. How would you distinguish a port sweep from a failed login, and why is HTTP 401 alone insufficient?
 
 **Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.

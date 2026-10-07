@@ -19,6 +19,8 @@
 - behavioral validation
 - local requirements vs external rule formats
 - meaningful nominator feedback
+- executed detection validation with target, benign-control, and data-path evidence
+- deferred local-requirement qualification after verified 4.8 onboarding
 
 ## Supporting references
 
@@ -26,3 +28,7 @@
 - [Sigma Logsources](https://sigmahq.io/docs/basics/log-sources.html)
 - [Sigma Filters](https://sigmahq.io/docs/meta/)
 - [CTID – Continuous Emulation as Detection Validation](https://ctid.mitre.org/blog/2025/08/04/lessons-from-sharepoint-vulnerability-cve-2025-53770/)
+
+## Practical artifact
+
+- [detection-validation-practical.md](detection-validation-practical.md) — controlled execution event for `4.2.1`; Part B returns after 4.8 for `4.2.2` using the verified local requirement list.

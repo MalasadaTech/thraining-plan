@@ -126,4 +126,4 @@ Impact answers **what plausible consequence follows if it is true here?**
 
 Keep those judgments tied to mission, assets, technology, exposure, and observed evidence. Preserve uncertainty rather than turning a relevant finding into a larger crisis than the evidence supports.
 
-**Next:** [2.7.1 – Core STIX Objects](../../07-production/01-core-objects/student-guide.md).
+**Next:** [2.6 – Threat Assessment and Organizational Significance Summary](../summary.md).

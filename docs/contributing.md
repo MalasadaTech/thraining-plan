@@ -23,6 +23,7 @@ A 7-level (or equivalent) proposes the change. The review board approves or reje
 - Concept or topic in one sentence
 - Why it is required now (gap, incident, tool change, inspection finding)
 - Roles and 3/5/7 codes (`A/B/C`, `2b/3c/4c`, or `—`) — see [proficiency-legend.md](proficiency-legend.md)
+- For any new or changed **Task (`T`)** row, identify how the task will be **demonstrated** for qualification using [qualification-demonstration-signoff-standard.md](qualification-demonstration-signoff-standard.md); do not assume lesson completion is sign-off
 - **New module** vs **add to an existing module**
 - Suggested teaching-unit ID and outline headings, or “assign on approval”
 - Shared (`modules/00-intro/`) vs role-specific
@@ -47,7 +48,9 @@ Only after Gate 1. If Gate 1 said “add to an existing module,” amend that mo
 
 ### Coverage (required)
 
-The module must cover **every** outline knowledge bullet and task that belongs to this teaching unit. Those items go in the student guide and in **Concepts taught**. Follow the outline’s **stay-in-this-lesson** note for that ID. How to write the files is [generate-module.md](generate-module.md).
+The module must cover **every** outline knowledge bullet and task that belongs to this teaching unit. For Task (`T`) rows, preserve the matrix verb and distinguish **instruction/preparation** from the separate performance demonstration defined in [qualification-demonstration-signoff-standard.md](qualification-demonstration-signoff-standard.md). The current demonstration crosswalk is [qualification-evidence-map.md](qualification-evidence-map.md). Those items go in the student guide and in **Concepts taught**. Follow the outline’s **stay-in-this-lesson** note for that ID.
+
+When a lesson uses the recurring A12 case, follow [A12 Scenario Governance Standard](a12-scenario-governance-standard.md). Canonical facts come from the story bible; added exercise conditions must be explicitly hypothetical or separate rather than silently becoming A12 facts. How to write the files is [generate-module.md](generate-module.md).
 
 Length follows the outline, not a clock. **Do not add optional content to fill.** If a section is marked optional and this lesson does not need it, omit it.
 
@@ -63,15 +66,20 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 
 - [ ] Module folder (new modules only): `modules/<role>/<unit>/<nn-short-name>/`
 - [ ] `README.md` — mapped matrix IDs, outline headings, roles, time, **Concepts taught**
-- [ ] `student-guide.md` from [templates/student-guide.md](../templates/student-guide.md). Must have an **Intro** as the first paragraph of Key Concepts: why this lesson exists in the job, in ordinary words. Not only “last lesson was X.” A reader with no live instructor must still understand it.
-- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md). Must have **Context (plain language)** as one block at the top of the overview. “What this lesson is for” must match the student Intro. Notes a substitute can use; no planning-chat residue. **Common Student Challenges** is optional. If you list any, each bullet needs a short why and one example. Do not invent challenges to fill a quota. Do not add a new lab or demo unless asked.
-- [ ] `slides.md` from [templates/slides.md](../templates/slides.md). On-slide text stays short and readable without extra briefing or a live instructor. Slide 2 is **Why this lesson exists**. Every slide has **Speaker Notes** in plain language (why this slide, how it connects — not a recap of the bullets).
+- [ ] `student-guide.md` from [templates/student-guide.md](../templates/student-guide.md). Its **Why This Matters** opening functions as an advance organizer: activate useful prior knowledge, preview the main ideas and distinctions, and make the expected end state visible. A reader with no live instructor must still understand it.
+- [ ] `instructor-guide.md` from [templates/instructor-guide.md](../templates/instructor-guide.md). Its context explains the learning arc: prior knowledge, the capability developed here, and where the learner goes next. Notes must be usable by a substitute and should not compensate for explanations missing from the learner material. **Common Student Challenges** remains optional and should include only real, concrete misunderstandings.
+- [ ] `slides.md` from [templates/slides.md](../templates/slides.md). The deck supports **Preview → Predict → Read → Confirm**. Slide titles expose the learning structure during a skim; the opening establishes why the lesson matters and the closing states what the learner should now be able to do. Every slide has plain-language speaker notes.
 - [ ] [concept-index.md](concept-index.md) — Taught vs Used, aliases, roles; same terms as the README Concepts list
 - [ ] [tracker.csv](tracker.csv) — move the row to `Review`, then `Complete` when accepted
-- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index; Context is present; student Intro is present; any challenges have examples; slide notes are plain language; student guide and slide faces stand alone; no unexplained “this hour” / “row” / “map” slang in student-facing text
+- [ ] Review: every outline bullet/task for this unit is in the student guide; Concepts taught matches the index; the learner introduction works as an advance organizer; the summary works as an end-state check; instructor context explains the learning arc; any challenges have examples; slide notes are plain language; student guide and slide faces stand alone.
 - [ ] Review: names match the outline and student guide. A shop nickname (e.g. “bulletin”) is either the same word the student already has, or it is defined on first use in ordinary words. Do not leave the instructor saying a word the student guide never explained.
+- [ ] **Skim test (required):** read only the introduction, headings, tables, emphasized concepts/callouts, and summary. Confirm that the learner can see the structure, important distinctions, and expected end state before the detailed read. See [skim-first-authoring-standard.md](skim-first-authoring-standard.md).
 - [ ] **Fluff review (required):** hunt for content that is only there to fill. Cut examples, slides, tables, labs, or extra questions that do not teach a new outline fact. If you cannot say what outline bullet a piece serves, remove it.
-- [ ] **Gemini Notebook exports:** if this change touches a **student-guide**, the **story bible**, or the **companion story**, rebuild the whole [exports/gemini-notebook/](../exports/gemini-notebook/) tree in the same change (corpus, by-track, by-unit, by-lesson, fiction copies). Replace files. Do not surgical-edit a blob. Instructor-only, slides-only, and matrix-only changes skip this. How-to: [exports-gemini-notebook.md](exports-gemini-notebook.md).
+- [ ] **Ebook rebuild:** if this change touches a **student-guide**, a subunit **`intro.md` / `summary.md`**, the **story bible**, or the **companion story**, rebuild [ebook/ebook-manuscript.md](../ebook/ebook-manuscript.md) with [ebook/build_ebook.py](../ebook/build_ebook.py). Fix source content in the canonical files and rebuild rather than editing the compiled manuscript directly. Instructor-only, slides-only, and matrix-only changes normally skip this.
+
+### Subunit introduction and summary wrappers
+
+A meaningful multi-lesson grouping may have `intro.md` and `summary.md` directly in the subunit directory. These wrappers are synthesis/navigation content and **do not create new matrix requirements**. Use [templates/subunit-intro.md](../templates/subunit-intro.md) and [templates/subunit-summary.md](../templates/subunit-summary.md), and apply the instructional-hierarchy rule in [skim-first-authoring-standard.md](skim-first-authoring-standard.md).
 
 ### Optional / later
 
@@ -81,7 +89,7 @@ If an outline bullet has no obvious home in this unit, stop and map it. Do not d
 - Quiz (tracker column exists; not part of sign-off yet)
 - “Related modules” / next-steps links in sibling guides
 
-Front door and shared lessons live under `modules/00-intro/` and are taught before SOC: `0.1`–`0.5`, `0.6`, `0.7`, `0.8`. SOC ends at `1.5`. Do not copy those lessons into each role. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
+Front door and shared lessons live under `modules/00-intro/` and are taught before SOC: `0.1`–`0.9`, followed by the `0.10` section summary. The SOC instructional units run through `1.5`, followed by the `1.6` section summary. Shared lessons should not be copied into each role. **Retired:** `1.7`, `1.8.2`–`1.8.5`.
 
 ### Concept index rules
 

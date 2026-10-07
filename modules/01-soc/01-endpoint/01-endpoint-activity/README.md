@@ -31,7 +31,7 @@ Endpoint evidence helps you describe activity on a device. Recognizing the kind 
 
 ## Course connections
 
-Previous: [0.8 — Environment / signal flow](../../../00-intro/08-environment/01-orientation/student-guide.md)
+Previous: [1.0 – SOC Analyst Fundamentals](../../00-intro/student-guide.md)
 
 Next: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)
 

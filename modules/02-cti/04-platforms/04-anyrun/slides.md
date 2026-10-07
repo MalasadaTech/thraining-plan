@@ -25,11 +25,13 @@ Events:
 
 Reference: [ANY.RUN TI Lookup](https://any.run/threat-intelligence-lookup/)
 
-### Slide 3 – Start from the case
+### Slide 3 – Start from a supplied seed
+**Separate classroom scenario — not A12.**
+
 Good:
-- `update.exe` SHA256
-- `203.0.113.88`
-- update domain
+- `sync-client.exe` SHA256
+- `198.51.100.77`
+- `sync-gateway.example`
 
 Avoid label-fishing.
 

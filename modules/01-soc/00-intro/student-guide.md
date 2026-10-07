@@ -48,8 +48,10 @@ The most important habit in this block is to separate **what the sensor recorded
 
 For example:
 
-- Endpoint telemetry may show `wscript.exe` launching PowerShell with an encoded command.
-- Zeek may show the same workstation making an HTTP request for `/update.exe`.
+> **Scenario status: Separate classroom example — not A12.**
+
+- Endpoint telemetry may show a script interpreter launching PowerShell.
+- Network telemetry may show the same workstation making an HTTP request.
 - A detection may alert on one of those patterns.
 
 Those observations can support an investigation, but each source tells you something different.
@@ -66,18 +68,18 @@ That evidence discipline will repeat throughout the course.
 
 ## 4. One Activity, Several Views
 
-The classroom A12 scenario is intentionally reused across the 1.x block.
+The classroom A12 scenario is intentionally reused across the 1.x block, but its detailed evidence is revealed progressively.
 
-Imagine this simplified sequence:
+At this orientation point, keep only the case frame:
 
-1. `wscript.exe` launches encoded PowerShell on `WS-JLEE`.
-2. The workstation communicates with external infrastructure.
-3. A request for `/update.exe` appears in network telemetry.
-4. One or more detections fire.
-5. The SOC investigates the alert.
-6. The result is classified, documented, and routed.
+1. Suspicious activity involving `WS-JLEE` enters the SOC track.
+2. 1.1 will introduce the relevant host observations.
+3. 1.2 will add network observations.
+4. 1.3 will show how detection logic describes what it is designed to match.
+5. 1.4 will investigate and assess the resulting alert context.
+6. 1.5 will turn the supported result into a usable report or handoff.
 
-Different lessons will revisit that activity from different viewpoints.
+Do not fill in later A12 process, network, or registry facts before the lesson that introduces them. Different lessons will revisit the same case from different viewpoints as the evidence becomes available.
 
 ### In 1.1
 
@@ -216,4 +218,4 @@ The recurring discipline is simple:
 
 > **Describe what the evidence shows first. Then decide what it means.**
 
-**Next:** **1.1.1 – Endpoint Activity (the Map)**.
+**Next:** [1.1 – Endpoint Evidence Preview](../01-endpoint/intro.md).

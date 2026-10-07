@@ -18,7 +18,7 @@ Introduce estimative language as a way to communicate probability consistently. 
 ---
 
 ### Slide 2 – Why estimative language matters
-**Title:** Do not make the reader guess
+**Title:** Help the reader interpret the probability
 
 Analysts often have to make judgments before every uncertainty is resolved.
 
@@ -66,13 +66,13 @@ Make the distinction explicit. Stronger likelihood wording does not automaticall
 
 Vague:
 
-“The update domain **could be** the payload host for A12.”
+“The update domain **could have been used** for attempted payload delivery in A12.”
 
 More precise:
 
-“The update domain is **likely** the payload host for A12.”
+“The update domain was **likely** used for attempted payload delivery in A12.”
 
-If useful, add confidence separately and explain the remaining evidence gaps.
+The HTTP request supports the assessment. Successful transfer and execution remain unresolved. Add confidence separately when its basis can be explained.
 
 **Speaker Notes:**  
 Connect the statement to the earlier A12 assessment. The estimative term summarizes the probability judgment; it does not replace the supporting reasoning.

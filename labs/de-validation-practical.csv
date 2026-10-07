@@ -1,0 +1,7 @@
+event_id,host,sensor,process,parent_process,command_line,telemetry_complete,expected_class,note
+DV-001,BHM-WKS-07,EDR-A,powershell.exe,wscript.exe,powershell.exe -NoProfile -EncodedCommand JAB3AGM...,true,target_should_match,intended suspicious behavior with complete telemetry
+DV-002,BHM-WKS-12,EDR-A,powershell.exe,ccmexec.exe,powershell.exe -NoProfile -EncodedCommand SQBUACA...,true,benign_should_not_match,approved software deployment near-neighbor
+DV-003,BHM-WKS-15,EDR-A,powershell.exe,wscript.exe,powershell.exe Get-Process,true,benign_should_not_match,same parent/child but no encoded command
+DV-004,BHM-WKS-21,EDR-B,powershell.exe,,powershell.exe -NoProfile -EncodedCommand JABjAGw...,false,target_data_gap,target-like behavior but parent_process missing on EDR-B
+DV-005,BHM-WKS-25,EDR-A,cmd.exe,explorer.exe,cmd.exe /c whoami,true,irrelevant_should_not_match,unrelated command shell
+DV-006,BHM-WKS-29,EDR-A,powershell.exe,wscript.exe,powershell.exe -NoP -enc JABlAG4...,true,target_should_match,encoded PowerShell using short -enc switch

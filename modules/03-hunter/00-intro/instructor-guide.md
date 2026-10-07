@@ -28,7 +28,7 @@ By the end of the introduction, learners should be able to:
 |---|---:|
 | Why hunting begins | 2 min |
 | Walk through 3.1–3.7 | 4 min |
-| A12 hunt loop | 4–5 min |
+| Hypothetical A12-based hunt loop | 4–5 min |
 | Orientation check and transition | 2–3 min |
 
 ## Core Teaching Model
@@ -48,6 +48,8 @@ Then map the track beneath it:
 - **3.7 Site-Specific** → control, document, complete, and route the hunt
 
 ## Teaching Notes
+
+**A12 boundary:** canonical A12 provides the hunt package/lead but not a completed hunt result. Treat any host counts, visibility-gap counts, or coverage findings in the orientation as **hypothetical practice conditions**, not facts to add to the case.
 
 ### Begin with the question
 
@@ -92,7 +94,7 @@ Avoid:
 
 ### Distinguish finding types
 
-Use the A12 output:
+Use the **hypothetical practice output**:
 
 - two additional affected hosts;
 - a detection gap;

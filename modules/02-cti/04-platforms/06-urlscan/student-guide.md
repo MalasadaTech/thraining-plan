@@ -105,15 +105,17 @@ If live submission is ever used operationally, **scan visibility matters**. urls
 
 Reference: [urlscan.io API Documentation – Submission and visibility](https://urlscan.io/docs/api/)
 
-### A12 classroom example
+### Separate classroom example — not A12
+
+This static result is **training-only**. Its redirect/page/contact details are not facts of A12.
 
 Suppose the result card shows:
 
-- tasked URL: update-domain URL;
+- tasked URL: `https://sync-gateway.example/start`;
 - final URL: `/download`;
 - title: `Software Update`;
-- requested host: `cdn-test.net`;
-- primary IP: `203.0.113.88`;
+- requested host: `cdn-lab.example`;
+- primary IP: `198.51.100.77`;
 - redirect occurred;
 - screenshot stored.
 
@@ -121,7 +123,7 @@ Valid observations:
 
 > The scan redirected from the submitted URL to `/download`.
 
-> The scan contacted `cdn-test.net` and `203.0.113.88`.
+> The scan contacted `cdn-lab.example` and `198.51.100.77`.
 
 > The rendered page title was `Software Update`.
 
@@ -130,7 +132,7 @@ These facts become candidates for enrichment. They do not by themselves prove th
 ## 2. Knowledge Check
 
 1. Why should one urlscan result be described as an observation rather than permanent truth about a URL?
-2. A page requests a common analytics domain and a rare domain also seen in A12. Should both automatically become adversary infrastructure? Why or why not?
+2. A page requests a common analytics domain and a rare host from the supplied classroom card. Should both automatically become adversary infrastructure? Why or why not?
 3. Name three useful fields or evidence types you can extract from a urlscan result.
 
 ## 3. Summary
@@ -146,4 +148,4 @@ Use page metadata, redirects, requested domains/IPs/URLs, responses, certificate
 - [urlscan.io Result API Reference](https://urlscan.io/docs/result/)
 - [urlscan.io Quickstart](https://docs.urlscan.io/guides/quickstart)
 
-**Next:** [2.5.1 – IOC Handling and Enrichment Concepts](../../05-enrichment/01-ioc-handling/student-guide.md).
+**Next:** [2.4 – CTI Tools and Platforms Summary](../summary.md).

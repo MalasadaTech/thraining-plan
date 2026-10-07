@@ -25,6 +25,45 @@ Everyone. Taught before SOC. Same idea on the hunter, CTI, and DE sheets. Not si
 | 0.4.1 | Given a step in the flow, name the next hand-off and whose product it is | T | 1a | 2b | 2b | Name the hand-off. Do not invent a ticket path. No 4d. |
 | 0.5 | Where the jobs lightly overlap | K | A | B | B | Same evidence, different product. |
 
+
+---
+
+## 0.6 Frameworks
+
+Taught on the shared floor before SOC. Hunt planning is 3.5. DTF is 2.5.6.
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.6.1.1 | MITRE ATT&CK | K | A | B | C | 3-level needs basic familiarity. 5-level understands principles. 7-level can analyze and apply. |
+| 0.6.1.2 | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | T | 2b | 3c | 4c | Map + cite. Not an alert pane (1.4). |
+| 0.6.2.1 | Diamond Model | K | A | B | C | Same knowledge progression. |
+| 0.6.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 2b | 3c | 4c | Same performance progression. |
+| 0.6.3.1 | Cyber Kill Chain | K | A | B | C | Same knowledge progression. |
+| 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 2b | 3c | 4c | Same performance progression. |
+
+## 0.7 External Tools (shared floor)
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.7 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | A | B | B | Shared orientation before role-specific platform depth. |
+| 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a | 2b | 3c | Select the source that fits the question; later role lessons add platform depth. |
+
+## 0.8 Environment / signal flow (shared floor)
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.8 | Environment / signal flow | K | A | B | C | Shared site-orientation knowledge before SOC evidence work. |
+| 0.8.1 | Identify which kind of fact applies and why it is not the adjacent kind | T | 2b | 3c | 4c | Distinguish path, collection, and visibility facts before investigation depth. |
+
+## 0.9 Common Initial Access Paths (shared floor)
+
+Taught after **0.8**, before the **0.10** shared-foundations summary and SOC **1.1**.
+
+| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.9 | Common initial access paths | K | A | B | C | Shared evidence model before SOC. |
+| 0.9.1 | Identify the most defensible initial-access path from supplied evidence, preserve uncertainty, and name the next evidence needed | T | 2b | 3c | 4c | Evidence-based path assessment; later SOC lessons supply field depth. |
+
 ---
 
 ## 1.1 Endpoint Logs
@@ -146,7 +185,7 @@ Host-observed Sysmon / MDE activity. Not Sysmon deployment. Protocol deep-dive i
 
 ---
 
-## 1.3 Detection Engineering
+## 1.3 Detection Rules
 
 ### 1.3.1 SIGMA Rules
 
@@ -195,7 +234,7 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 | 1.4.1.3 | Review the alert configuration and explain what would fire | T | 2b | 3c | 4c | Knowledge *b* had no task before. |
 | 1.4.1.4 | Trace an alert to its upstream detection logic and name each hop | T | 2b | 3c | 4c | Extends upstream knowledge — name the chain, not “look at the rule.” |
 | 1.4.1.5 | Collect related endpoint logs and state what they add (or fail to add) | T | 2b | 3c | 4c | Extends collection — say what the logs change about the story. |
-| 1.4.1.6 | Collect related PCAP and state what it adds versus the alert fields | T | 2b | 3c | 4c | Contrast with the alert, not “open a pcap.” Why/when is 1.2.1. Download/view is 1.8.3 if listed. |
+| 1.4.1.6 | Collect related PCAP and state what it adds versus the alert fields | T | 2b | 3c | 4c | Contrast with the alert, not “open a pcap.” Why/when is 1.2.1. PCAP download/view follows the local procedure; retired `1.8.3` is not an active course unit. |
 
 ### 1.4.2 Alert classification
 
@@ -228,24 +267,9 @@ Detection authoring is 1.3. Tasks apply the knowledge they sit under.
 
 ---
 
-## 0.6 Frameworks
-
-Taught on the shared floor after 0 (IDs unchanged). Hunt planning is 3.5. DTF is 2.5.6.
-
-| # | Item | Type | SOC 3 | SOC 5 | SOC 7 | Justification |
-|---|------|------|-------|-------|-------|---------------|
-| 0.6.1.1 | MITRE ATT&CK | K | A | B | C | 3-level needs basic familiarity. 5-level understands principles. 7-level can analyze and apply. |
-| 0.6.1.2 | Map observed activity to an ATT&CK tactic and technique (or sub-technique) and cite the evidence | T | 2b | 3c | 4c | Map + cite. Not an alert pane (1.4). |
-| 0.6.2.1 | Diamond Model | K | A | B | C | Same knowledge progression. |
-| 0.6.2.2 | Apply the Diamond Model to an incident or set of indicators | T | 2b | 3c | 4c | Same performance progression. |
-| 0.6.3.1 | Cyber Kill Chain | K | A | B | C | Same knowledge progression. |
-| 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 2b | 3c | 4c | Same performance progression. |
-
----
-
 ## 1.5 Reporting
 
-Shift-change reports are 1.7. Alert SLA clocks are 1.4.5. Tasks apply the knowledge they sit under.
+Shift-change `1.7` is retired. Alert SLA clocks are 1.4.5. Tasks apply the knowledge they sit under.
 
 ### 1.5.1 Report types
 

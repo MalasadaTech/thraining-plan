@@ -64,9 +64,11 @@ A hunt package should make clear:
 - whether additional hosts were found;
 - whether a negative result is limited by visibility.
 
-### A12 example
+### Hypothetical A12-based output example
 
-A finished A12 hunt might report:
+Canonical A12 does **not** specify the completed hunt result. The following is a **practice-only extension based on A12 behavior**; the host counts, visibility gap, detection gap, and follow-on lead are exercise conditions rather than canonical A12 facts.
+
+A finished practice hunt might report:
 
 - 2 additional hosts with the exact `Updater → %TEMP%\update.exe` persistence pattern;
 - 18 hosts searched with complete registry visibility;
@@ -74,7 +76,7 @@ A finished A12 hunt might report:
 - no existing analytic covering the exact pattern;
 - a follow-on lead involving a different Run-value name pointing to a user-writable path.
 
-The **facts** remain the same regardless of which local team receives each part. The local hand-off map determines who owns response, detection improvement, visibility remediation, and follow-on intelligence.
+The **practice results** remain the same regardless of which local team receives each part. The local hand-off map determines who owns response, detection improvement, visibility remediation, and follow-on intelligence.
 
 ### Missing local list/map
 
@@ -96,9 +98,9 @@ A finished hunt communicates findings, scope, evidence, gaps, and follow-on work
 
 Then route each outcome through the organization's authorized hand-off map.
 
-This completes the **3.x threat-hunting block**.
+This completes the **3.7 local hunt operations subunit**.
 
-**Next track:** **4.x – Detection Engineering**.
+**Next:** [3.7 – Local Hunt Control and Outputs Summary](../summary.md).
 
 ## Reference Model
 

@@ -22,6 +22,7 @@ ATT&CK gives analysts a shared vocabulary for describing adversary behavior. A u
 - ATT&CK tactics
 - ATT&CK techniques and sub-techniques
 - map observed activity to ATT&CK and cite the evidence
+- choose the better-supported primary mapping when nearby ATT&CK labels are plausible
 
 ## Artifacts
 

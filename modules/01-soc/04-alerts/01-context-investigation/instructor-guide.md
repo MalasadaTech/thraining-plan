@@ -65,19 +65,15 @@ Have learners produce the present/missing and contribution statements from the e
 
 ## Knowledge Check — Answer Key
 
-### 1. For the process example, name what is present and two unresolved questions.
+### 1. For the process example, identify what context is present and missing, then explain the SIEM rule configuration and upstream event-to-alert path.
 
-**Expected answer:** Present are host, account, process creation, parent, and command-line pattern. Unresolved questions include decoded behavior, authorization, and related activity.
+**Expected answer:** Present are host, account, process creation, parent, and command-line pattern. Unresolved questions include decoded behavior, authorization, and related activity. The rule tests the supplied process predicates and trigger; the path is endpoint event → ingested table → SIEM rule → alert. A Suricata stage is not supplied.
 
-### 2. Explain the configuration and upstream path for the SIEM-only alert.
+### 2. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute, and what would each still leave unresolved?
 
-**Expected answer:** The rule tests the specified process pattern and trigger; the path is endpoint event → ingested table → SIEM rule → alert. A Suricata stage is not supplied.
+**Expected answer:** Preserve and correlate the file event using host, time, path, and process evidence. Look up the actual hash and record the report/time and relevant result or absence of a report. The file event does not automatically establish execution or causation, and the external lookup does not establish local behavior beyond the evidence supplied.
 
-### 3. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute?
-
-**Expected answer:** Preserve and correlate the file event using host, time, path, and process evidence. Look up the actual hash and record the report/time and relevant result or absence of a report, explaining what each adds.
-
-### 4. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
+### 3. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
 
 **Expected answer:** Request the relevant flow/time/sensor to seek details such as a visible HTTP URI. Record what the packets add, or explicitly state that relevant capture is unavailable; do not invent content.
 

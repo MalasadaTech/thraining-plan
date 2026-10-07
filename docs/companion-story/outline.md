@@ -1,90 +1,27 @@
-# Companion story outline
+# A12 companion-story outline
 
-This is the training outline again, as one incident. It is not a second plot.
+Use the [story bible](../story-bible.md) for facts and claim limits. The [finished story](story.md) is a standalone learner case, organized around **Evidence → Reasoning → Bounded Conclusion → Action**. It adds synthesis rather than proficiency requirements.
 
-**Canon:** [story-bible.md](../story-bible.md). If this file and the bible disagree, the bible wins.
+## Reader outcome
 
-**Training fiction only.** Not live org policy. Do not invent DYA hunt tickets, PIR lists, approval chains, or a site architecture card.
+The learner should be able to trace evidence between roles, explain the purpose of each product, and identify what additional evidence would justify a stronger conclusion. Open with a short preview inviting the reader to predict those handoffs; close with a product table and an end-state check.
 
----
+## Nine-stage narrative
 
-## Purpose
+| Stage | Evidence or input | Reasoning and bounded conclusion | Action / product |
+|---|---|---|---|
+| 1. Process alert | WS-JLEE / jlee; `wscript.exe` → encoded PowerShell | The rule matched the recorded pattern; authorization, maliciousness, and the earlier initial-access path remain unresolved. The process record does not tell whether access began through mail, web, exploitation, credential use, or a third party. | Explain the alert and its actual SIEM lineage; identify collection questions, including which evidence would test an initial-access hypothesis if that question matters. |
+| 2. Context | Temp `invoice.vbs` and hash; process-associated connection; HTTP request | The request establishes attempted retrieval. The initial classification and request-coverage question remain open. | Record observations by source. VT result is not supplied; an ANY.RUN hash search may retrieve an existing report. |
+| 3. Incident route | Supported process/file/network observations | Response can proceed while analytical questions remain open. | SOC routes the host to Sam and tailors a concise leadership update. |
+| 4. RFI intake | Request for `/update.exe` from the update domain | The requester asks whether payload delivery succeeded; transfer evidence is missing. | Jordan owns the bounded RFI; priority and routing use the actual local process. |
+| 5. CTI answer | Request during suspicious activity | Likely attempted payload delivery; transfer and execution unresolved. ATT&CK describes behavior, Diamond organizes entities, Kill Chain examines supported progression. PRD remains a vendor label. | Return the answer available now, evidence basis, uncertainty, and follow-up need. |
+| 6. Infrastructure candidate | `login-prd.net` shares the uncommon NS pair and observed A during the relevant period | Candidate relationship requiring corroboration. The Example Cloud `/24` is too broad to promote. | Preserve the hop and next test; reject the broad range. |
+| 7. Protective-control review | Candidate, observation period, provenance, and limitations | Operational action depends on the owner's local threshold. | Refer the candidate for review; the final action remains unspecified. |
+| 8. Hunt development | PowerShell-set HKCU Run `Updater` → `%TEMP%\update.exe`; supporting case artifacts | Configuration is observed; target execution and additional affected hosts remain unresolved. | Form a bounded hypothesis and package the evidence, scope, and questions. |
+| 9. DE review | Need and case/hunt evidence pointer | Check existing coverage, data availability, and whether detection work is justified. | Present add/change/reuse/no-new-rule/data-gap/routing possibilities; the actual outcome remains open. |
 
-After the lessons, a reader should be able to walk **A12** from the first alert in the queue to the last hand-off and see the same beats the syllabus already taught.
+## Presentation and factual continuity
 
-The story does not teach new obligations. It names which desk owns which product.
+Preserve DYA, Building C, WS-JLEE, `jlee` / `BUILDINGC\jlee`, Sam, Jordan, the established process/file/registry/network values, and the sibling candidate. Present later evidence when its operational use becomes relevant. Keep supplied sandbox cards and hypothetical deployment exercises distinct from local A12 observations.
 
----
-
-## Names (from the bible)
-
-| Thing | Canonical |
-|-------|-----------|
-| Company | Dixon, Yamada, & Associates (**DYA**), law firm |
-| Adversary label | Pink River Dolphin (**PRD**) — a vendor label, not proof of who they are |
-| User / host | `jlee` / `BUILDINGC\jlee` on **WS-JLEE** (`10.10.8.40`), Building C |
-| Incident | **A12** |
-| IR | **Sam** has the host |
-| RFI owner | **Jordan** (CTI) |
-| Payload | `GET /update.exe` on port **8080** to `prd-updates.net` / `203.0.113.88` |
-| Dropper | `invoice.vbs` in Temp |
-| Persistence (not on first alert) | HKCU Run **`Updater`** → `%TEMP%\update.exe` |
-| Sibling infra | `login-prd.net` — same NS pair, same A |
-| Not plot | OT network, `pay-db-01`, `checkin` / beacon POST, `helpdesk.exe`, Word → `helper.dll` |
-
-Do not invent first names for Dixon or Yamada.
-
----
-
-## Spine (nine beats)
-
-These are the same nine steps from the course todo. Each beat maps to teaching-unit IDs. Plant or read only that beat’s facts.
-
-| # | Beat | Desk | Product | Teach / read |
-|---|------|------|---------|--------------|
-| 1 | A SOC analyst gets an alert | SOC | Fired alert | **1.3** wrote the rule. **1.4.1** is the fired object: `wscript` → `powershell -enc` on **WS-JLEE** / `jlee`. |
-| 2 | They triage it | SOC | Label + cite | **1.4.2** TP on the process alert. **1.4.1** file event adds Temp `invoice.vbs` and its hash. SOC looks that hash up on **VirusTotal** (one line: what it adds, or not in VT). Not Relations. **FN:** `GET /update.exe` `:8080` with no fired alert. Run key is **not** required on this pass. |
-| 3 | Forward to IR and leadership notify | SOC | Incident route | **1.5.1** type = incident. **1.5.2** clocks (training). **1.5.3** SOC + **IR Sam**; leadership **yes**; approved **ticket**. One sentence for leadership: host, user, process chain, the `.vbs`. Not the hash. Not the Run key. |
-| 4 | RFI to CTI | SOC | Question, not a second case | **1.5.1** type = RFI. **1.5.3** recipients **CTI**; leadership **no**; ticket or approved RFI form. Question: is the update domain / `203.0.113.88` the payload host? **Jordan** owns it. |
-| 5 | CTI works the RFI | CTI | Answer | **2.7.4** receive → evaluate → answer. Open incident + IR has the host → work now. Response: **likely** yes — treat it as the payload host. No country. No second incident. |
-| 6 | Enrich; find more infra | CTI | Hop sentence | **2.5.3** / **2.5.4** / **2.5.5**. Seed = update domain / `203.0.113.88`. Shared NS `ns1.cdn-test.net` / `ns2.cdn-test.net` → candidate **`login-prd.net`**. Reject the whole `/24`. |
-| 7 | Extra infra to firewall / IA | CTI → block team | Block / blacklist | **0.3 f**. Extra adversary infrastructure is a **block**, not a DE job (**4.5.2**). Not a new course. |
-| 8 | Hunt package | Hunt (CTI seeds) | Package, not a rewritten ticket | **3.1** purpose: missed activity + gaps. **3.4** gate then leads. **3.6.3** one named technique: HKCU Run **`Updater`**. Look for `Updater` / `update.exe` / more `invoice.vbs`. Obtain local control (**3.7**); do not invent a ticket. |
-| 9 | Same package to DE | DE | Nomination review | **4.3** / **4.5**. Need + pointer. **Add** a detection if the FN path is a gap. **Reject** turning the package into a block list. Do not write the rule here (**1.3**). Local form is **4.8**. |
-
----
-
-## What each desk does *not* owe
-
-| Desk | Does not dump / invent |
-|------|------------------------|
-| SOC first alert | Run key, sibling domain, nation-state, hunt ticket |
-| Leadership notify | File hash, Run key, `/24`, DE rule text |
-| RFI | A rewritten incident; a second question |
-| CTI enrich | OT, payroll DB, invented PIR-01 |
-| Hunt | “Hunt persistence”; a made-up Hunt-17 |
-| DE | Firewall blocks; a finished SIGMA/YARA in this story |
-
----
-
-## Shared-floor hooks (not extra plot)
-
-The reader already sat **0.x** before SOC. The story may *name* those lessons. It does not retell them.
-
-- **0.2** DYA / PRD names live here first.
-- **0.3** jobs in one sentence; extra infra → block.
-- **0.4** same evidence, different products; one person may wear two hats.
-- **0.6.1** ATT&CK map of *this* hunt is **3.5**, not the first alert.
-- **0.7** VT is context on a hash/IP/domain you already have. SOC uses it on the first pass in **1.4.1**, not as a Relations lesson.
-- **0.8** ask your shop; do not invent spans or a DYA site card.
-
----
-
-## Story shape (for the finished file)
-
-1. Title and one-paragraph setup (DYA, Building C, A12).
-2. One section per spine beat, in order.
-3. Close: same chain, four products (SOC case, CTI answer + hop, hunt package, DE review).
-4. No epilogue that adds plot.
-
-Length follows the beats. Do not pad.
+Use explanatory paragraphs to connect stages. Tables should clarify evidence or decisions. Place optional lesson links at the end so the narrative reads independently. The ending states what remains open: successful transfer/execution, other affected hosts, protective-control action, DE outcome, incident closure, and attribution.

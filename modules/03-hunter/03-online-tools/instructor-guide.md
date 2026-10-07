@@ -10,7 +10,7 @@
 
 ## Module Purpose
 
-Use this lesson to teach the reasoning skill in the student guide, not merely the vocabulary. Keep the A12 examples evidence-bound and connect findings to the next module rather than turning each lesson into a complete hunt exercise.
+Use this lesson to teach the reasoning skill in the student guide, not merely the vocabulary. Keep the A12 examples evidence-bound. Make clear that platform capability knowledge and query planning are preparation; `3.3.1.1` is demonstrated only when the learner actually searches and pivots in all four named platforms. Use the separate [External Tool Pivot Practical](external-tool-pivot-practical.md) for that evidence.
 
 ## Learning Objectives and Mapping
 
@@ -45,6 +45,12 @@ When a learner overstates the evidence, ask:
 3. **What additional evidence would be required for the stronger claim?**
 
 For hunt modules, also ask whether the required telemetry exists and whether the search is bounded enough for a negative result to mean anything.
+
+## Qualification / Demonstration Boundary
+
+Do not sign off `3.3.1.1` from screenshots, discussion, or the knowledge check alone. The evaluator should observe or review evidence from all four stations in [external-tool-pivot-practical.md](external-tool-pivot-practical.md), including the seed, query, pivot, result/provenance, extracted lead, and internal test.
+
+The evaluator supplies current approved seeds at delivery time; this avoids hard-coding public results that can disappear or change.
 
 ## Knowledge Check – Answer Key
 

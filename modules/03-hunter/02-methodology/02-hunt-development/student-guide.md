@@ -101,4 +101,4 @@ Develop the hunt before running the search.
 
 A useful hunt has a testable hypothesis, bounded scope, defensible priority, and a distinctive pattern grounded in telemetry you actually have.
 
-**Next:** **3.3.1 – Tool Capabilities for Hunting**.
+**Next:** [3.2 – Hunt Methodology Summary](../summary.md).

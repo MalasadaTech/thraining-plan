@@ -2,7 +2,7 @@
 
 Use this file when asked to generate or revise module content for an **existing** teaching-unit ID (Gate 2). Humans follow [contributing.md](contributing.md). You follow this file.
 
-This is a procedure for **every** lesson. Stay-in-this-lesson notes live in [training-outlines.md](outlines/training-outlines.md) under that ID. Do not invent requirements, IDs, or a second voice. Follow the templates: student-facing text must stand alone; say **this lesson**, not **this hour**, unless you mean clock time.
+This is a procedure for **every** lesson. Stay-in-this-lesson notes live in [training-outlines.md](outlines/training-outlines.md) under that ID. Do not invent requirements or IDs. Learner-facing structure and voice follow [skim-first-authoring-standard.md](skim-first-authoring-standard.md) and the templates; student-facing text must stand alone. Specification files may be terse, but their maintenance language is **not** a voice model for learner prose.
 
 **Caller prompt (either tool):**  
 `Follow docs/generate-module.md and generate teaching-unit <ID> (<Title>) for me to review. Do not invent IDs.`
@@ -19,7 +19,7 @@ Stop and say what is missing if any of these fail:
 
 **Teach order:** `0` → shared floor → SOC `1` → **CTI `2`** → hunt `3` → DE `4`. Folders: `modules/02-cti/`, `modules/03-hunter/`.
 
-**Assign work by ID prefix:** `0.x` and shared-floor IDs live under `modules/00-intro/` and are taught **before SOC**: `0.1`–`0.5`, then `0.6`, `0.7`, `0.8`. `1.x` SOC content is `1.1`–`1.4` and `1.5` (`modules/01-soc/`). `2.x` = CTI (`modules/02-cti/`). `3.x` = Hunt (`modules/03-hunter/`). `4.x` = Detection Engineer (`modules/04-de/`). **Retired — do not generate:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
+**Assign work by ID prefix:** `0.x` and shared-floor IDs live under `modules/00-intro/` and are taught **before SOC**: `0.1`–`0.5`, then `0.6`, `0.7`, `0.8`, `0.9`; the `0.10` summary is synthesis-only. `1.x` SOC content is `1.1`–`1.4` and `1.5` (`modules/01-soc/`). `2.x` = CTI (`modules/02-cti/`). `3.x` = Hunt (`modules/03-hunter/`). `4.x` = Detection Engineer (`modules/04-de/`). **Retired — do not generate:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
 
 **How big is one lesson**
 
@@ -28,6 +28,8 @@ Stop and say what is missing if any of these fail:
 | A **cluster** heading with several distinct K topics | **Stop.** List the child K items and ask which one. Do **not** write the whole cluster unless the human asks for those children together. |
 | A **child item** | That K row plus its child T row(s) only. |
 | A **unit** that is already one lesson | That heading’s rows (K and matching T). |
+
+**Subunit-wrapper exception:** when the human explicitly asks for an introduction and/or summary around an **existing meaningful instructional grouping**, create synthesis/navigation content rather than treating the grouping as a new proficiency lesson. Use [subunit-intro.md](../templates/subunit-intro.md) and [subunit-summary.md](../templates/subunit-summary.md). Do not invent matrix IDs or new requirements for these wrappers. Apply the hierarchy rule in [skim-first-authoring-standard.md](skim-first-authoring-standard.md): instructional hierarchy, not every filesystem directory.
 
 If the user wants a **new** requirement, stop and point them at [templates/requirement-proposal.md](../templates/requirement-proposal.md).
 
@@ -39,13 +41,16 @@ If the user wants a **new** requirement, stop and point them at [templates/requi
 2. The matching combined.md **rows** (the K item and its T pair), plus 3/5/7 codes for every role that has a column.
 3. The matching role matrix (`soc.md` / `hunter.md` / `cti.md` / `de.md`).
 4. [proficiency-legend.md](proficiency-legend.md)
-5. [contributing.md](contributing.md) Gate 2
-6. [templates/student-guide.md](../templates/student-guide.md), [instructor-guide.md](../templates/instructor-guide.md), [slides.md](../templates/slides.md)
-7. A **voice sibling** — see below
+5. For any Task (`T`) row, [qualification-demonstration-signoff-standard.md](qualification-demonstration-signoff-standard.md) and the matching row in [qualification-evidence-map.md](qualification-evidence-map.md)
+6. [contributing.md](contributing.md) Gate 2
+7. [skim-first-authoring-standard.md](skim-first-authoring-standard.md)
+8. When the lesson uses A12, [a12-scenario-governance-standard.md](a12-scenario-governance-standard.md) and [story-bible.md](story-bible.md)
+9. [templates/student-guide.md](../templates/student-guide.md), [instructor-guide.md](../templates/instructor-guide.md), [slides.md](../templates/slides.md); for wrappers also read [subunit-intro.md](../templates/subunit-intro.md) and [subunit-summary.md](../templates/subunit-summary.md)
+10. A **voice sibling** — see below
 
 Also open [concept-index.md](concept-index.md) and [tracker.csv](tracker.csv) before you write.
 
-**Voice sibling:** clone **length and stay-in-lesson discipline** from `modules/00-intro/` or `modules/04-de/` (short, Intro, no pad). Voice itself comes from the templates, not from an old sibling’s “this hour” / cue-card wording. Use the previous module in the same unit only for names already taught and to stay out of that lesson. **Do not copy** an old hour-long sibling’s length, section list, tables, example count, slide count, or labs.
+**Voice sibling:** use a nearby revised lesson to understand established terminology, expected depth, and stay-in-lesson discipline. **Do not copy its prose rhythm blindly.** Learner voice comes from the skim-first standard and current templates, especially the explanatory mentor-like style. Older cue-card, slogan-heavy, or prohibition-heavy wording is not a voice source. Use the previous module in the same unit mainly for names already taught and boundaries already established.
 
 ---
 
@@ -77,12 +82,16 @@ Match the voice sibling (plain words, same names, stay in this lesson). **Do not
 | Time | As long as the outline needs. Never stretch a short topic to fill 60–75 minutes. |
 | Audience | Primary + secondary roles from the matrix |
 | Proficiency | 3/5/7 codes from the matrix, per role, identical in student + instructor headers |
-| Student guide | Objectives → **Intro** (why this lesson exists in the job) → key concepts that cover the outline, including what each **task** looks like when done well. **No labs, demos, or hands-on exercises** until the human asks. **Knowledge check: 1–3 questions per lesson** that has slides. Short summary. Readable with no live instructor. |
-| Instructor guide | **Intro required** (Context + what this lesson is). No demo or lab write-up until the human asks. Timing table lists only sections you actually teach. Answers for the 1–3 lesson questions. Notes a substitute can use; no planning-chat residue. |
-| Slides | As many as you need. Intro + concepts + **knowledge check (1–3 questions for the lesson)** are required. No demo or exercise slides until the human asks. Face of each slide is short enough to read alone. **Speaker Notes** on every slide: a few plain sentences (why this slide, how it connects). |
+| Student guide | **Why This Matters / advance organizer** → objectives → descriptive concept/decision headings → mapped task/workflow guidance → **knowledge check (1–3 questions for the lesson)** → **end-state summary**. Examples/callouts only when they improve comprehension. Readable with no live instructor. |
+| Instructor guide | Learning-arc context → preview emphasis → teaching notes → answer key → **skim-first instructor check**. Timing table lists only sections actually taught. Notes should help a substitute understand the teaching logic; they should not supply explanations missing from learner materials. |
+| Slides | **Why this matters** → optional `What to watch for` roadmap → concept/decision slides → **knowledge check (1–3 questions for the lesson)** → **By this point, you should be able to…**. Slide titles should expose the learning structure during a skim. Speaker notes explain why the idea matters and how it connects. |
 | Answers | Only in the instructor guide. No standalone `answer-key.md`. No quiz. |
 
-Outline **tasks stay**. Teach what the task *is* (the product line, what good looks like). **Do not write labs, demos, or hands-on exercises** unless the human asks. Existing labs stay until that section is reviewed.
+Outline **tasks stay**, including their approved verbs. Teach what the task is, why it matters, what good looks like, and the reasoning needed to perform it.
+
+**Lesson completion is not automatically task qualification.** Use [qualification-demonstration-signoff-standard.md](qualification-demonstration-signoff-standard.md): **Taught / Prepared → Demonstrated → Qualified / Signed Off**. Do not redefine **execute**, **perform**, **test**, **produce**, **disseminate**, or **follow** into a weaker planning/discussion activity.
+
+**Do not automatically write a lab, demo, or hands-on exercise for every task.** If a separate practical demonstration is required, preserve that requirement in [qualification-evidence-map.md](qualification-evidence-map.md) and only author the practical when the human asks or the implementation plan reaches that step. Existing labs stay until that section is reviewed.
 
 Examples: use them when they help. Do not invent fail-stories to hit a count.
 
@@ -90,28 +99,29 @@ Examples: use them when they help. Do not invent fail-stories to hit a count.
 
 **Knowledge check:** **1–3 questions per lesson** that has slides. Required. Not per concept. Do not write a fourth question to fill. Do not ask about the next lesson just to have more items.
 
-Voice: direct, instructional, short paragraphs, tables for fields. Complete sentences. A reader with no live instructor must still understand the student guide and the slide faces. Say **this lesson**, not **this hour**, unless you mean clock time. Do not use SIEM slang (row, map, encoding) as the first word for an idea; define it on first use in ordinary words, or use a plain word.
+### Voice and skim-first structure
 
-**Student Intro (required).** First paragraph of Key Concepts, before the outline ideas. Ordinary words. Why this lesson exists in the job — what the person actually does, and why they do it. Not outline letters. Not only “last lesson was X.” Put the same idea on slide 2. If you cannot finish “in this job they do this because ___,” you do not have an intro.
+Learner-facing prose should sound like an **experienced analyst coaching a junior analyst**. Use explanatory paragraphs and natural connective reasoning. Explain why a distinction matters and how the evidence supports the conclusion. Prefer positive guidance over chains of prohibitions.
 
-**Context (required). Challenges (only if real):**
+Avoid using slogan fragments or compressed contrasts as the main explanation, such as `X ≠ Y`, “Information describes. Intelligence judges.”, or repeated “This is not…” / “Do not…” statements. A short contrast can reinforce an explanation, but it should not replace one.
 
-Write **Context (plain language)** as the first block in the instructor overview, before Key Teaching Points. Anyone who was not in the planning chat should still see the connection. Use ordinary words. No outline letters, no matrix codes in this block. The “what this lesson is for” line must match the student Intro.
+A useful reasoning pattern is:
 
-Include:
+**Evidence → Reasoning → Bounded Conclusion → Action**
 
-- What this lesson is for (one or two sentences)
-- How it hooks to the lesson before and the lesson after (one line each)
-- Why we are doing it this way (the human’s stated reason, not a new rule)
-- What we are *not* doing in this lesson
+A reader with no live instructor must understand the student guide and slide faces. Define unfamiliar shop/SIEM language in ordinary words on first use.
 
-If you add a step the human did not say, it must appear in Context as “extra, because ___.” If you cannot finish that sentence, do not add the step. Do not jump ahead.
+**Student introduction (required):** begin with **Why This Matters** or equivalent natural prose. It should activate useful prior knowledge, preview the main ideas, point out an important distinction/decision to watch for, and give the learner a sense of the expected end state. Do not mechanically answer four prompts if prose works better. Put the same mental model on the opening slides.
 
-**Common Student Challenges:** omit the whole list when the lesson is this simple. Do not invent struggles to satisfy a quota. If you *do* list a challenge, each bullet is one short why + one concrete example.
+**Summary (required):** write it as an **end-state check**, preferably with `By this point, you should be able to…`. It should tell the learner what they can now explain, distinguish, decide, or do. Do not simply restate section headings.
 
-**Slides:** someone who only reads the deck should still get the point. Slide 2 title is **Why this lesson exists**, not “What this hour is.” Slide titles name the idea. Speaker notes carry the why; they are not “read the bullets again,” and they are not planning-chat fragments (“Outline a. Stop.” / “You wanted…”).
+**Context for instructors (required):** explain the learning arc in ordinary prose: what prior knowledge is activated, what new capability is developed, and where the learner goes next. State a scope boundary only when it prevents a likely misunderstanding; do not make “what we are not doing” a mandatory teaching pattern.
 
-**Words:** use the word the outline and student guide already use. If you want a shop nickname, define it on first use in ordinary words. Do not invent a second name and assume the reader knows it. If the outline still says “hour,” “row,” or “map” as unexplained slang, use the plain word in the student-facing text and put the outline word in parentheses on first use if later lessons still need it.
+**Common Student Challenges:** include only real, predictable misunderstandings. Each one should explain why it happens and give a concrete example.
+
+**Slides:** the deck should support **Preview → Predict → Read → Confirm**. Slide titles should name concepts, decisions, or workflow stages so the deck is useful during a skim. The final summary slide should state the learner end state. Speaker notes explain why the idea matters and how it connects; they are not a second student guide or planning-chat residue.
+
+**Words:** use established curriculum terminology. If a shop nickname is useful, define it in ordinary words on first use. Specification/outlining shorthand may remain in maintainer files, but translate it into learner language rather than copying its terse style.
 
 **Stay in this lesson:** the outline note under this ID (or its unit) is the fence. Do not pull in the next child or another unit.
 
@@ -121,7 +131,7 @@ If you add a step the human did not say, it must appear in Context as “extra, 
 
 - Outline knowledge bullets (`a`, `b`, `c`…) become the field/idea sections. None may be skipped.
 - Outline tasks are taught as *what good looks like*, not as a lab (until the human asks for labs).
-- Combined.md / role-matrix rows are the **sign-off** items and IDs. Put them in the README map.
+- Combined.md / role-matrix rows are the **qualification requirements** and IDs. Put them in the README map. Lesson coverage prepares the learner; observable performance and evaluator sign-off are governed separately by [qualification-demonstration-signoff-standard.md](qualification-demonstration-signoff-standard.md).
 - Expansion is allowed when it supports the outline. New obligations need Gate 1.
 - If an outline bullet has no home in this teaching-unit, **stop** and say so. Do not drop it.
 - Stay out of the *next* lesson. Point to it under Related modules.
@@ -149,7 +159,7 @@ Then update:
 - [tracker.csv](tracker.csv) — add or update the row; mark only the artifacts you actually wrote
 - [tracker.md](tracker.md) — folder map row if this ID is new
 - README numbering table in the repo root if this ID is new
-- [exports/gemini-notebook/](../exports/gemini-notebook/) — **rebuild the whole tree** (corpus, by-track, by-unit, by-lesson, fiction copies) if this change touches a student-guide, the story bible, or the companion story. Do not surgical-edit a blob. Instructor-only / slides-only / matrix-only changes skip this. How-to: [exports-gemini-notebook.md](exports-gemini-notebook.md).
+- [ebook/ebook-manuscript.md](../ebook/ebook-manuscript.md) — **rebuild the ebook** with [ebook/build_ebook.py](../ebook/build_ebook.py) when a student guide, subunit `intro.md`/`summary.md`, the story bible, or the companion story changes. The ebook is derived output: fix the canonical source and rebuild rather than surgical-editing the compiled manuscript. Instructor-only / slides-only / matrix-only changes normally skip this. The retired `exports/gemini-notebook/` tree is not rebuilt; use the complete ebook as the learner upload for NotebookLM/Gemini.
 
 Do not set tracker status to human-accepted (`Complete` on the whole package). Use the per-artifact columns: student/instructor/slides complete, then tell the user it is ready to review.
 
@@ -162,17 +172,23 @@ Do not set tracker status to human-accepted (`Complete` on the whole package). U
 - Invent matrix IDs, outline headings, or proficiency codes
 - Collapse or invent 3/5/7 codes
 - Invent local policy, tickets, field lists, approval chains, or PIR lists
+- Add or strengthen an A12 fact inside a lesson without first changing [story-bible.md](story-bible.md); use the canonical/hypothetical/separate-example labels in [a12-scenario-governance-standard.md](a12-scenario-governance-standard.md)
+- Treat a knowledge check or lesson-completion status as qualification sign-off for a Task (`T`) row
+- Weaken a mapped task verb (for example, call planning an “executed hunt”) to make it fit a concept-only lesson
 - Index sample IPs, `example.com`, or passing name-drops
 - Copy shared frameworks into a role folder
 - Mark the module human-accepted — stop for review
 - Write Gate 1 proposal files unless asked
-- Skip **Context (plain language)** or the student **Intro**
+- Skip the learner **Why This Matters** / advance-organizer introduction or the instructor learning-arc context
 - Invent Common Student Challenges to fill a quota, or leave a listed challenge as a label with no example
 - Leave a slide without plain-language speaker notes
 - Write student-facing text that only makes sense with a live instructor
 - Say “this hour” when you mean this lesson
 - Use unexplained SIEM slang (row, map, encoding) as the headline word for an idea
 - Leave planning-chat residue (“You wanted…,” “Outline a. Stop.”)
+- Use specification/checklist language as the learner-facing voice
+- Use slogan fragments or repeated `X ≠ Y` / “This is not…” contrasts instead of explanatory reasoning
+- Write a summary that merely repeats headings rather than checking the learner end state
 - Jump ahead of what the human asked without saying why in Context
 - Pad a short lesson, or add optional sections only to fill
 - Copy a sibling’s table of contents, timing, or example set
@@ -180,12 +196,14 @@ Do not set tracker status to human-accepted (`Complete` on the whole package). U
 - Write a new lab, demo, or hands-on exercise unless the human asked for one
 - Skip the fluff review when you finish
 - Use a shop nickname in the instructor guide or slides without the student-guide word or a one-line gloss
-- Skip rebuilding the [exports/gemini-notebook/](../exports/gemini-notebook/) tree when a student-guide, the story bible, or the companion story changed
+- Skip rebuilding the [ebook manuscript](../ebook/ebook-manuscript.md) when a learner-facing canonical source used by the ebook changed
 
 ---
 
 ## 7. When you finish
 
-List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) stay-in-this-lesson notes were followed, (3) Concepts taught matches the index, (4) Context is in the instructor guide, (5) the student **Intro** says why this lesson exists in the job, (6) any challenges have examples (or the list is omitted), (7) every slide has plain speaker notes, (8) **fluff review done**, (9) 1–3 knowledge-check questions for the lesson, (10) no new lab/demo unless asked, (11) student guide and slide faces stand alone (no live instructor required), (12) status stays at review until they accept the lesson, (13) Gemini Notebook export tree rebuilt if a student-guide, the story bible, or the companion story changed.
+List the paths you wrote and the outline ↔ matrix map. Remind the reviewer to confirm: (1) every outline bullet/task is in the student guide, (2) stay-in-this-lesson notes were followed, (3) Concepts taught matches the index, (4) instructor context explains the learning arc, (5) the student introduction works as an advance organizer, (6) the summary works as an end-state check, (7) any challenges have examples or are omitted, (8) every slide has plain speaker notes, (9) **skim test done**, (10) **fluff review done**, (11) 1–3 knowledge-check questions for the lesson, (12) no new lab/demo unless asked, (13) student guide and slide faces stand alone, (14) status stays at review until the human accepts the lesson, and (15) the ebook is rebuilt when a learner-facing canonical source used by it changed.
+
+**Skim test (required):** read only the introduction, headings, tables, emphasized concepts/callouts, and summary. Confirm that the learner can see the structure, important distinctions, and expected end state before reading the detailed prose. Use the full checklist in [skim-first-authoring-standard.md](skim-first-authoring-standard.md).
 
 **Fluff review (required, you and the human):** For each extra example, table, slide, lab step, or question, say which outline bullet it serves. If you cannot, delete it.

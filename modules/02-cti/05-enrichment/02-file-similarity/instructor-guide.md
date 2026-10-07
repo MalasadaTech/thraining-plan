@@ -89,7 +89,7 @@ For classroom exercises, ≤30 means “select this sample for further compariso
 
 ### 5. Show why multiple features are stronger than one
 
-Use the `update.exe` worked example:
+Use the **separate, non-A12** `sync-client.exe` worked example:
 - different SHA256;
 - matching imphash;
 - ssdeep 68;
@@ -149,7 +149,7 @@ Examples:
 
 **Expected answer:** Both values indicate relatively strong similarity under their respective methods: higher is closer for ssdeep and lower is closer for TLSH. The analyst should compare additional structural, behavioral, or contextual evidence before asserting a relationship.
 
-### 3. `update.exe` is unsigned
+### 3. `sync-client.exe` is unsigned
 
 **Expected answer:** The file has no usable code-signing signature under the check performed. That does not establish maliciousness, actor attribution, or malware family.
 

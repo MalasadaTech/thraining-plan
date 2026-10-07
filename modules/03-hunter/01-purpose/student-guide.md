@@ -87,4 +87,4 @@ Its value is not limited to finding compromise. Hunts also expose coverage and v
 
 Call something a **false negative** only when a control was expected to detect it and failed.
 
-**Next:** **3.2.1 – Hunt Types**.
+**Next:** [3.2 – Hunt Methodology Preview](../02-methodology/intro.md).

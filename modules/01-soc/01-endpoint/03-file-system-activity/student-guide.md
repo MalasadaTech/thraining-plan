@@ -40,9 +40,9 @@ MDE `DeviceFileEvents` includes file operations such as creation, modification, 
 
 ## 2. Working through the example
 
-A Sysmon 11 event on `WS-JLEE` records `Image=wscript.exe` and `TargetFilename=C:\Users\jlee\AppData\Local\Temp\update.exe`, with no hash field. Describe it as: “Sysmon recorded Script Host creating or overwriting `update.exe` at the Temp path; this event supplies no file hash.”
+For this separate field-reading example, a supplied Sysmon 11 event uses the familiar classroom host `WS-JLEE`. It records `Image=wscript.exe` and `TargetFilename=C:\Users\jlee\AppData\Local\Temp\update.exe`, with no hash field. Describe it as: “Sysmon recorded Script Host creating or overwriting `update.exe` at the Temp path; this event supplies no file hash.”
 
-The event does not establish that `update.exe` ran. To investigate execution, look for a related process event using the host, time, path, and any available identity evidence. Treat that as an additional observation rather than adding it to the file event's meaning.
+This practice record is not evidence that A12's HTTP request successfully transferred the file. The event does not establish that `update.exe` ran. To investigate execution, look for a related process event using the host, time, path, and any available identity evidence. Treat that as an additional observation rather than adding it to the file event's meaning.
 
 ## 3. Creating a focused file query
 

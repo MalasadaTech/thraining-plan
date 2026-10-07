@@ -1,103 +1,112 @@
 # Instructor Guide – Module X.X – [Module Title]
 
-**Target Audience:** SOC Analyst / Threat Hunter / CTI Analyst  
+**Target Audience:** SOC Analyst / Threat Hunter / CTI Analyst / Detection Engineer  
 **Proficiency Focus:** 3-level / 5-level / 7-level (or mixed)  
-**Estimated Time:** XX minutes (real length — do not pad to an hour)  
+**Estimated Time:** XX minutes  
 **Delivery Method:** Instructor-led / Self-paced / Hybrid  
 
-Student-facing artifacts (student guide and slide faces) must still make sense with no live talk. Instructor notes are for a substitute who was not in the planning chat: complete sentences, no cue-card fragments, no “you wanted…”.
+> **Authoring note:** Student-facing artifacts must stand on their own. Instructor notes should help another instructor understand the teaching logic, not supply explanations that the learner materials are missing. See [Skim-First / Advance-Organizer Design](../docs/skim-first-authoring-standard.md).
 
 ---
 
 ## Module Overview for Instructors
 
 **Purpose of this module:**  
-[1–2 sentence summary of why this module exists]
+[1–2 sentences describing the job-relevant reason this lesson exists.]
 
-**Context (plain language):**  
-[One block. Ordinary words. No outline letters or matrix codes.]
+**Context and learning arc:**  
+[In ordinary prose, explain what prior knowledge this lesson activates, what new capability it develops, and where the learner goes next. Describe a scope boundary only when it prevents a likely misunderstanding.]
 
-- What this lesson is for: (same job-context idea as the student **Intro**)
-- How it hooks to the lesson before:
-- How it hooks to the lesson after:
-- Why we are doing it this way:
-- What we are *not* doing in this lesson:
-- Extra step (only if you added something the outline/human did not say, and why):
-
-Use the same names as the student guide. If you use a shop nickname, define it here in ordinary words on first use.
+**What to emphasize during the preview:**
+- [The main question or problem the learner should carry into the lesson]
+- [A distinction, evidence boundary, or decision worth watching for]
+- [The end state the summary will ask the learner to confirm]
 
 **Key Teaching Points:**
 - ...
 - ...
 - ...
 
-**Common Student Challenges:**  
-Optional. Omit this heading if the lesson is simple and you do not expect a real struggle. Do not invent bullets to fill a list. If you list any, each is: short why + one example.
+**Common Student Challenges** *(optional)*  
+Include this section only when a real, predictable misunderstanding exists. Explain why it happens and give a concrete example.
 
 - [Challenge]. [Why it happens]. Example: [concrete wrong move].
 
 **Required Materials / Access:**
 - Student Guide
 - Slide Deck
-- Lab / sample logs only if this lesson has a lab
-
-Do not add optional sections just to fill the page.
+- [Lab/sample logs only when this lesson actually uses them]
 
 ---
 
 ## Learning Objectives
 
-Match the student guide. Do not invent extra objectives.
+Match the student guide.
 
 **Mapped Proficiency Items:**
 - K: X.X.X – [Item name]
-- T: X.X.X – [Item name] — omit if none
+- T: X.X.X – [Item name] — omit when none
 
 ---
 
 ## Suggested Timing
 
-Keep the **intro** (Context + what this lesson is). Drop any row you are not teaching.
+List only the sections actually taught.
 
-| Section                        | Time     | Notes |
-|--------------------------------|----------|-------|
-| Introduction (required)        | XX min   | Context + what this lesson is |
-| Key Concepts                   | XX min   |       |
-| Demonstration / Walkthrough    | omit | Do not write a demo until asked |
-| Hands-On Exercise              | omit | Do not write a lab until asked |
-| Knowledge Check                | XX min   | 1–3 questions for the lesson |
-| Summary                        | XX min   |       |
-| **Total**                      | **XX min** | Real length |
+| Section | Time | Notes |
+|---|---:|---|
+| Preview / introduction | XX min | Activate prior knowledge and establish the learning target |
+| Key concepts | XX min | |
+| Task/workflow guidance | XX min | Include only when mapped |
+| Knowledge check | XX min | 1–3 questions for the lesson |
+| Summary / end-state check | XX min | Confirm what the learner can now explain or do |
+| **Total** | **XX min** | Real length |
 
 ---
 
 ## Detailed Teaching Notes
 
-### 1. Key Concepts (required)
+### 1. [Concept / Decision Heading]
 
-#### 1.1 [Concept Name]
-**Talking Points:**
+**Teaching intent:** [Why this idea is here and what reasoning the learner should develop.]
+
+**Talking points:**
+- ...
 - ...
 
-### 2. Demonstration / Walkthrough *(do not write until asked)*
+**Evidence or example:** [Optional. Use the same evidence model and terminology as the student guide.]
 
-### 3. Hands-On Exercise *(do not write until asked)*
+### 2. [Next Concept / Decision Heading]
 
-Teach outline **tasks** in Key Concepts (what good looks like). No lab script yet.
+[Continue as needed.]
 
 ---
 
 ## Knowledge Check – Answer Key
 
-Required: **1–3 questions for the lesson** (same as the slides / student guide).
+Use the same **1–3 questions** that appear in the student guide/slides.
 
 1. **Question**  
    **Answer:** ...  
-   **Explanation:** ...
+   **Explanation:** [Explain the reasoning, not only the correct phrase.]
+
+---
+
+## Skim-First Instructor Check
+
+Before delivery, read only the student guide's:
+
+- introduction;
+- headings;
+- tables;
+- callouts/emphasized concepts;
+- summary.
+
+Confirm that a learner can see the lesson's structure, expected end state, and important evidence boundaries without reading the full prose. If the skim is unclear, improve the student-facing structure rather than compensating with live explanation.
 
 ---
 
 ## Additional Instructor Resources *(optional)*
 
-- Next lesson
-- Story bible or external docs only if this lesson uses them
+- [Next lesson]
+- [Story bible or supporting reference only when this lesson uses it]

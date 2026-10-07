@@ -33,7 +33,7 @@ A report becomes useful when it reaches the responsible people through a channel
 
 Previous: [1.5.2 – Reporting Timeline Requirements](../02-reporting-timelines/student-guide.md)
 
-Next: [2.1.1 — Data, information, and intelligence](../../../02-cti/01-core-intel/01-data-info-intel/student-guide.md)
+Next: [1.6 – SOC Analyst Section Summary](../../06-summary/student-guide.md)
 
 [1.x module index](../../README.md)
 

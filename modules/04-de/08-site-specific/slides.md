@@ -1,7 +1,7 @@
 # Module 4.8 – Site-Specific Detection Engineering
 ## Slide Deck Content
 
-**Total Suggested Slides:** 9
+**Total Suggested Slides:** 10
 
 ### Slide 1 – Title
 **How Detection Engineering Works Here**
@@ -24,7 +24,16 @@ Your organization decides what is required.
 
 Reference: [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html)
 
-### Slide 5 – Map the lifecycle
+### Slide 5 – Finish the 4.2.2 local check
+Now that the verified list is available:
+- return to the 4.2 validation record
+- mark requirements met / missing
+- cite evidence and list version
+- record any unresolved local gap
+
+Do not substitute public Sigma fields for local policy.
+
+### Slide 6 – Map the lifecycle
 Intake  
 Test  
 Review  
@@ -35,26 +44,26 @@ Change
 Rollback  
 Retire
 
-### Slide 6 – Authority matters
+### Slide 7 – Authority matters
 Review ≠ approval  
 Approval ≠ deployment  
 Deployment ≠ rollback authority
 
-### Slide 7 – Know the authoritative copy
+### Slide 8 – Know the authoritative copy
 Repository?  
 Detection-as-code?  
 Platform console?
 
 Which one is source of truth?
 
-### Slide 8 – Missing information
+### Slide 9 – Missing information
 Record the exact gap:
 
 **Deployment approval authority not yet verified.**
 
-### Slide 9 – Knowledge Check
+### Slide 10 – Knowledge Check
 1. Sigma vs local standard?  
 2. Four lifecycle steps/roles?  
 3. Deploy known, approval/rollback unknown: what do you record?
 
-**4.x Detection Engineering complete**
+**Next:** 4.9 – Detection Engineering Section Summary

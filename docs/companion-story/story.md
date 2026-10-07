@@ -1,208 +1,174 @@
-# A12 — the same incident from four desks
+# A12 — Following the Evidence Across Four Defensive Roles
 
-Dixon, Yamada, & Associates is a law firm. This course uses it as the firm in the scenario, not as live policy. The adversary name on the vendor PDF is **Pink River Dolphin** (**PRD**). That label is a name on a page, not proof of who they are.
+Dixon, Yamada, & Associates (**DYA**) is the fictional law firm used throughout this course. In Building C, the workstation **WS-JLEE** (`10.10.8.40`) is associated with `jlee` / `BUILDINGC\jlee`. The investigation involving that workstation is **A12**. A vendor report uses the tracking label **Pink River Dolphin (PRD)**; that name tells us how the vendor describes activity, while the identity of the actor responsible for this case remains unresolved.
 
-Building C has a user workstation **WS-JLEE** (`10.10.8.40`). The account is `jlee` / `BUILDINGC\jlee`. The incident on that host is **A12**.
+You have already encountered parts of A12 in the lessons. This retelling brings them together so you can follow how an observation becomes an investigation, an intelligence question, a hunt lead, and a detection-coverage review. As you read, watch what each role receives, how it reasons from that evidence, and what the next person needs to continue. The case becomes more useful through these handoffs even when some questions remain unanswered.
 
-The **alert** is not the whole incident. The **notification** is not the whole investigation. CTI and hunt add facts the SOC product did not owe. Same evidence can sit on more than one desk. The *product* is different.
+Before reading closely, skim the nine stages and the closing product table. Try to predict where the evidence supports an observation, where an analyst must make an assessment, and where another source would be needed. Return to the table afterward and check whether you can explain why each product has a different purpose.
 
-This story is the syllabus again, as that one case.
+One question stays open from the beginning: **how access first occurred**. The case later shows `invoice.vbs` in a Temp path and the process activity that followed, but those observations do not identify the entry mechanism. A phishing message, malicious web path, public-facing exploit, valid-account session, or trusted-third-party path would require its own supporting evidence. Treat those as hypotheses unless the case supplies that evidence.
 
----
+## 1. Start with the process event behind the alert
 
-## 1. The alert in the queue
+The first record in the SOC queue is a SIEM alert for `wscript.exe` launching `powershell.exe -enc ...` on **WS-JLEE** as `jlee`. The rule has matched a process pattern involving an encoded-command argument. An analyst can verify that pattern from the recorded fields and explain why the rule selected the event.
 
-A SOC analyst gets an alert.
+Understanding the match is the beginning of the investigation. The encoded argument alone leaves the command's behavior and authorization unresolved. Several other useful details, including a related destination, URI, and file hash, are absent from the initial alert. Their absence tells the analyst what additional evidence to seek before drawing a broader conclusion about the activity.
 
-The detection that fired is the SIEM rule they already know how to read (**1.3**). It keys on a **process** create: parent `wscript`, child PowerShell with `-enc`, user `jlee`, host **WS-JLEE**. That is the first object in the queue. That is **A12**.
+The analyst records the host, account, time, rule identity, parent process, and child command line, then traces how the alert was produced. In this example, endpoint telemetry reaches an ingested table, the SIEM rule evaluates the event, and the SIEM creates the alert. Tracing that path makes it possible to connect the alert to the actual logic and data that produced it. A Suricata stage would belong in a different detection path only if the source records showed one.
 
-The job in this beat is to investigate the fired object (**1.4.1**), not to write a new rule.
+The next collection step follows the question. At this stage the analyst needs related host records. Packet capture may become useful once a network flow and a question about that flow have been identified.
 
-Present on the alert: host, user, time, rule name, parent, the encoded command line. Missing until they pull more: destination IP, URI (the path on the server), file hash. Missing is a gap, not “benign.” The command line on the alert is the command line they have.
+## 2. Add context while keeping the classification open
 
-**Configuration:** PowerShell with `-enc` and parent `wscript` would fire.
+The analyst collects related endpoint records for **WS-JLEE** and the case time window. The broader case includes `wscript.exe` running `invoice.vbs` from a Temp path and launching encoded PowerShell. A file event supplies the `invoice.vbs` artifact and a hash. Endpoint network telemetry associates the PowerShell process with an outbound connection to `203.0.113.88:8080`.
 
-**Upstream hops:** SIEM rule → SIEM alert. This is a SIEM-only process alert. There is no Suricata hop unless the given includes a Suricata rule.
+Zeek adds the protocol view: an HTTP `GET` request with Host `prd-updates.net` and URI `/update.exe`. Correlating the host, time, and connection context allows the analyst to read these records together while retaining what each source actually observes.
 
-This alert is process-only. A packet capture (**PCAP**) is **not applicable** until they have a flow.
+| Source | What it contributes | Question still open |
+|---|---|---|
+| Process evidence | The Script Host–PowerShell chain and recorded command-line context | What was authorized, and what did the encoded command do? |
+| File evidence | Temp `invoice.vbs` and its recorded hash | What does further analysis establish about the file? |
+| Endpoint network evidence | A process-associated connection to `203.0.113.88:8080` | What was exchanged over that connection? |
+| Zeek HTTP evidence | A request to `prd-updates.net` for `/update.exe` | Did a response transfer the file, and did the file execute? |
 
-Registry activity is not required to close this first pass. Hunt will use it later (**3.x**).
+Retained packets, if available, could help answer a specific traffic question. The analyst would record which flow and time were examined and what the packets added. The case does not supply a packet-capture result that confirms transfer, so the request remains the established network observation.
 
----
+The file hash also provides a possible enrichment starting point. An approved VirusTotal lookup would preserve the exact queried value, report reference, time, and result. For this case, the record is **lookup result not supplied**. There is no supplied service verdict to interpret as either malicious or benign, and no live lookup was performed for this publication.
 
-## 2. Triage
+A hash could also locate an existing ANY.RUN report. That retrieval can be useful without possessing a sample for a new detonation. Submitting a file for a new run is a separate workflow with its own input and handling requirements. The analyst chooses between those actions by asking which result could resolve the current uncertainty.
 
-They put a label on what they have, and they cite it (**1.4.2**).
+The combined evidence gives the analyst a reason to investigate and escalate, while the **malicious/unauthorized target-condition assessment remains unresolved**. A true-positive label would require evidence of that condition in addition to the rule match. Preserving the unresolved classification lets another analyst see both the suspicious pattern and the work still needed to assess it.
 
-**True positive (TP).** The rule said this process chain was bad. The activity is the activity the rule is for: `wscript` launched encoded PowerShell on **WS-JLEE**. Cite: parent + `-enc`. “Malicious” without a field is a slogan, not evidence.
+There is also no supplied alert specifically for the `/update.exe` request. This raises a **coverage question**. Establishing a false negative would require the assessed target condition, an expectation that a detector should cover it, evidence that the necessary telemetry reached that detector, and a checked alert outcome for the relevant scope and time. Those conditions have not been established here, so the case carries the question forward for review.
 
-They pull related host logs for that host and window (**1.4.1** / **1.1**). Those logs are events: a program ran, a file changed, this host talked.
+## 3. Give incident response and leadership the products they need
 
-| Kind | What this beat pulled |
-|------|------------------------|
-| **Process** | The create that fired: `wscript` → `powershell -enc` |
-| **File** | A file event **adds** Temp `invoice.vbs` and its hash |
-| **Host-network** | Encoded PowerShell connected outbound to `203.0.113.88:8080`. The process is named. URI may be empty. |
+SOC opens the incident record and routes the affected host to **Sam** in Incident Response. The handoff includes the observed process chain, related file and network records, and the questions that remain open. Sam can work from those observations while further analysis continues.
 
-Registry is a fifth kind. It is not required to close this pass. Image and driver load are not this incident.
+The leadership update has a narrower purpose. It can explain that **WS-JLEE**, associated with `jlee`, generated a suspicious Script Host–PowerShell alert and that investigation identified Temp `invoice.vbs`. Detailed hashes, registry paths, and subsequent enrichment belong in the technical record where the receiving analysts can use them. Selecting detail by audience makes the update easier to act on without weakening the evidence retained in the case.
 
-If the tenant has no parent process, they write that the logs **fail to add** it.
+The course uses classroom response clocks and approved-ticket examples to teach timely routing. Actual deadlines, recipients, and approval paths come from the learner's organization. A12 demonstrates why those routes matter without assigning DYA a complete operating policy.
 
-The file event has a hash. They look that hash up on VirusTotal (**1.4.1** / **0.7**) during this first pass. The one-line result: the hash is **not in VT**. Relations is a later CTI skill (**2.4**), not this first pass. AnyRun is the wrong first tool: they have a hash, not a sample to detonate.
+Escalation and analytical certainty answer different questions. The observed activity can warrant response while the team continues to establish authorization, delivery, and scope. Recording that uncertainty in the handoff helps Sam understand the basis for the referral.
 
-Once they have a flow, they can read the talk two ways. A **host-network** event names the initiating process: encoded PowerShell connected to `203.0.113.88` on port **8080**. A Zeek HTTP log names the protocol: method `GET`, Host `prd-updates.net`, URI `/update.exe`. Zeek does not name the process that opened the socket. If a capture exists for that flow, PCAP can **add** the URI when the alert only had IP:port.
+## 4. Turn the network question into a bounded RFI
 
-Nothing in the queue fired on that download. That is a **false negative (FN)**. A false negative is a miss: activity that should have been detected and was not. It is not a fired alert they dislike.
+SOC now has enough context to ask CTI a focused question:
 
-The product of this beat is a TP process alert, a file path, a VT line on the hash, and a named miss on the download. Scan / root / user is a later category (**1.4.4**). Attribution is not a SOC triage field.
+> **Was the update domain the host that successfully delivered the payload in A12?**
 
----
+**Jordan** owns this Request for Information, or **RFI**. The existing incident supplies the scope: WS-JLEE, the update domain, `/update.exe`, and the relevant case window. The question asks CTI to distinguish an attempted retrieval from a successful delivery.
 
-## 3. IR and leadership
+At intake, Jordan can explain why the question matters and identify the missing evidence. The HTTP request supports an attempted retrieval, while confirmation of delivery would require response, transfer, or resulting host-artifact evidence. The requester and Jordan clarify the needed-by time and any handling restrictions through the actual request process.
 
-SOC opens the incident product and routes it (**1.5**).
+Because the question supports an active incident, the classroom example gives it priority over routine background reading, subject to the organization's priorities. That reasoning establishes a useful next action without inventing a universal queue rule. If analysis later raises a separate question about infrastructure control or actor identity, it can be recorded as a follow-on requirement with its own scope.
 
-**Type:** incident report — the case record for IR. The adjacent type is a **Request for Information (RFI)**. This product is the case, not the question (**1.5.1**).
+## 5. Answer the RFI with a judgment the evidence can support
 
-**Route** (classroom chart — not a live shop matrix): recipients are the SOC queue and **IR**. Leadership awareness is **yes** — the duty SOC lead. Approved channel is the **ticket**. Personal chat to the IR analyst only is the wrong path (**1.5.3**).
+Jordan evaluates the request alongside the suspicious host activity. Requesting an executable-looking resource from the associated destination during that activity supports an assessment of the domain's likely delivery role. Successful transfer and execution remain separate questions because the supplied records do not show those outcomes.
 
-**Sam** has the host.
+A useful response is:
 
-The leadership product is one sentence: **WS-JLEE** / `jlee`, `wscript` → encoded PowerShell, Temp `invoice.vbs`. The file hash and the Run key are not leadership fields.
+> We assess that the update domain was **likely used for attempted payload delivery** in A12. WS-JLEE requested `/update.exe` from that destination during the suspicious activity, but current evidence does not establish successful transfer or execution of the file.
 
-Classroom clocks (**1.5.2**), not live DYA policy: the **submit — incident** clock is 30 minutes from the decision that an incident report is required. That is not the alert 15 / 45 clocks (**1.4.5**).
+The answer gives the requester an assessment now and identifies what additional evidence would be needed to answer the successful-delivery question fully. “Likely” expresses the probability of the assessed role. Any confidence statement should separately explain the strength and limitations of the sources supporting that judgment.
 
----
+Frameworks help Jordan make the reasoning easier to inspect. ATT&CK provides a behavioral description for the observed PowerShell execution through **T1059.001 – PowerShell**. The mapping describes the observed behavior; the authorization assessment still depends on the investigation. Mapping **T1105 – Ingress Tool Transfer** would require evidence of transfer beyond the request currently available.
 
-## 4. The question for intel
+The Diamond Model organizes the entities and relationships:
 
-SOC still needs a fact they do not have: is the update domain / `203.0.113.88` the payload host — the host that served the file?
+| Vertex | Supported A12 content |
+|---|---|
+| **Victim** | WS-JLEE, `jlee`, and DYA |
+| **Capability** | Encoded PowerShell; `/update.exe` as the requested candidate payload name |
+| **Infrastructure** | `prd-updates.net` and `203.0.113.88` |
+| **Adversary** | Unresolved; PRD remains a vendor tracking label rather than an independently established actor identity |
 
-That ask is an **RFI**. It sits beside the incident. It is not a second case (**1.5.1**). Recipients are **CTI**. Leadership awareness is **no**, unless the shop chart says otherwise. Channel is the ticket or the approved RFI form. Texting a CTI friend is the wrong path (**1.5.3**).
+The unfilled adversary identity helps the reader see where attribution would require further evidence. The Cyber Kill Chain offers another view, focused on progression, but assigning a stage still requires evidence of the role the activity played. A process launch or request cannot establish every later stage simply because the names suggest an attack sequence.
 
-**Jordan** owns the RFI.
+Jordan returns the bounded answer with its evidence and remaining collection need. That closes the communication loop for the answer available now while allowing any agreed follow-up to remain visible.
 
-Classroom clock: **submit — RFI** is 60 minutes from when the question arises (**1.5.2**).
+## 6. Use infrastructure overlap to generate a testable candidate
 
-The body is that one question. CTI will answer it. They will not rewrite the leadership notify.
+CTI can also enrich the destination already associated with A12. Registration and DNS information identify the nameserver pair `ns1.cdn-test.net` and `ns2.cdn-test.net`. The supplied SOA RNAME is `hostmaster.cdn-test.net`, which provides zone-contact context. These fields help the analyst choose further lookups; their presence alone does not identify the responsible actor.
 
----
+A second name, **`login-prd.net`**, shares the uncommon nameserver pair and the observed A address `203.0.113.88` during the relevant period. The overlap is specific enough to investigate as **candidate related infrastructure**. Its value comes from the shared features, their timing, and the question they make testable.
 
-## 5. CTI answers
+A concise record is:
 
-Jordan receives, evaluates, prioritizes, and answers (**2.7.4**).
+| Seed | Shared characteristics | Candidate | Next analytical step |
+|---|---|---|---|
+| `prd-updates.net` | Uncommon NS pair and the same observed A address during the relevant period | `login-prd.net` | Compare registration and DNS history, hosting context, and independent evidence that could strengthen or weaken the relationship |
 
-**Evaluate:** The question is bounded. They have the Zeek **A** record — the name-to-IP the network sensor logged — and the host file. They can answer.
+Several objects can share a provider or service without sharing an operator. The next lookup therefore tests that alternative alongside the possible operational connection. Common control would require corroboration; an activity-set or campaign assessment would additionally need evidence of related activity. Actor attribution is a further judgment with its own evidentiary burden.
 
-**Prioritize:** An incident is open, and IR already has the host. Work now. This does not sit behind standing work such as a blog read.
+The address also sits inside **Example Cloud's `203.0.113.0/24`**. The allocation tells the analyst about the hosting range, but one case address gives too little specificity to treat all neighboring addresses as A12 infrastructure. The range is **rejected as too broad for promotion**. Expiration would describe a different lifecycle situation in which a previously valid indicator had lost its usefulness.
 
-The objects on the desk sit on three layers (**2.1.1**). `203.0.113.88` is **data**. The Zeek A record plus the file on **WS-JLEE** is **information**. The RFI answer is **intelligence**: a judged answer to the question.
+The result of this enrichment is a documented candidate and a next question. The record retains both the observed overlap and the limits of the relationship claim so later analysis can revise it without losing its history.
 
-**Respond:** **Likely** yes — the update domain / `203.0.113.88` is the payload host for A12. Treat it as such.
+## 7. Let the protective-control owner evaluate the candidate
 
-**Likely** is estimative language (**2.2.1**): more probable than not. It is not the confidence scale from **2.1.8**. Medium confidence names how good the sourcing is (Zeek A and the host file). It is not a country.
+The candidate may be relevant to a protective-control decision because the organization is investigating activity involving related infrastructure. CTI packages the object, shared characteristics, relevant observation period, and uncertainty for the function responsible for those controls. Depending on the organization, that may be a firewall team or an Information Assurance function.
 
-Diamond (**0.6.2** / **2.3.2**), filled only from evidence this beat has:
+The receiving owner applies local thresholds and considers the consequences of blocking, monitoring, or taking no action. CTI's contribution is the assessment and its basis; the control owner's contribution is the authorized operational decision. Keeping both visible prevents the candidate from quietly becoming a confirmed malicious destination as it moves through a ticket.
 
-| Vertex | Fill |
-|--------|------|
-| **Victim** | **WS-JLEE** / `jlee` / DYA |
-| **Capability** | Encoded PowerShell; `update.exe` |
-| **Infrastructure** | Update domain / `203.0.113.88` |
-| **Adversary** | Unknown cluster — **not** “PRD APT” |
+The canonical case leaves the final control action unspecified. Sam continues to own the host response, and Jordan's intelligence record remains available to support the decision. The same evidence can later inform detection work without turning a control request into a completed detection change.
 
-Weakest is **Adversary**. That gap constrains the write-up. The weakest vertex is the next question, not a guess. Beacon POST is not this activity set.
+## 8. Build a hunt around the observed registry configuration
 
-The answer is not a second incident. Local queue policy is obtain-and-follow (**2.8**). A **Priority Intelligence Requirement (PIR)** list is a shop document; they obtain it.
+Threat Hunting uses the case to ask whether related behavior or artifacts appear elsewhere in the environment. At this stage, the course brings forward registry evidence that was not required to explain the initial process alert: PowerShell set the current-user Run value **`Updater`** to **`%TEMP%\update.exe`**.
 
----
+That observation establishes a configured persistence mechanism. The target file's existence, its successful launch, and persistence taking effect remain unresolved. This distinction gives the hunter a concrete search lead while keeping the result of that configuration open.
 
-## 6. One hop
+A bounded hypothesis could be:
 
-While answering, CTI enriches the seed they already have: the update domain / `203.0.113.88`.
+> If related A12 persistence configurations exist on other user workstations, we expect to find the `Updater` Run value pointing to `%TEMP%\update.exe`, or related case artifacts, within the selected time window.
 
-**Registration (**2.5.3**).** They look up registration on the domain (RDAP first; WHOIS if RDAP has no record). The nameservers on the record are `ns1.cdn-test.net` and `ns2.cdn-test.net`. Distinctive nameservers are enrichment, not a country. The IP sits in `203.0.113.0/24`. The org on that block is **Example Cloud** — who holds the address, not the actor.
+The hunter begins with the observed value and target path, then may broaden deliberately to relevant variants. Registry and file telemetry determine what the search can test. `invoice.vbs` and the domain/address/request pattern provide additional case leads, with matches evaluated in their own context. A filename or registry-value hit is a candidate for investigation before it becomes a finding of another affected host.
 
-**Authoritative DNS (**2.5.4**).** The SOA (Start of Authority) RNAME is `hostmaster.cdn-test.net`: the mailbox that runs the zone is `hostmaster` at `cdn-test.net`. That is an operator mailbox, not a country. The sibling name **`login-prd.net`** publishes the same nameserver pair and the same A record (`203.0.113.88`). Same control and same address. The whole Example Cloud prefix is not theirs.
+ATT&CK's **T1547.001 – Registry Run Keys / Startup Folder** helps describe the technique associated with the configuration. The practical hunt still needs a defined population, time window, evidence sources, and reviewable results. Those details make it possible for another hunter to repeat the work and understand the limits of a negative result.
 
-**Hop sentence (**2.5.5**).** Seed | shared characteristic | candidate | why not coincidence:
+The package records the question, scope, look-fors, telemetry, findings if established, and visibility or coverage questions. Any new evidence of affected hosts would go to the incident-response process. A12 leaves the hunt's host count and search results unspecified, so the handoff preserves the question and available evidence without implying that an outbreak has been found.
 
-`prd-updates.net` / `203.0.113.88` | distinctive nameserver pair `ns1.cdn-test.net` + `ns2.cdn-test.net` | candidate **`login-prd.net`** | same nameservers, same A, not a public resolver.
+## 9. Give Detection Engineering a need and an evidence pointer
 
-They reject the whole `203.0.113.0/24`. Shared hosting is not a hop.
+The case and hunt package provide **a need and an evidence pointer** for Detection Engineering: assess whether current coverage adequately addresses the relevant behavior, using the documented process, registry, and network observations. A completed production rule is not required from the nominator; DE first evaluates the coverage question.
 
-**IOC handling (**2.5.1**).** Keep the cited current objects: the update domain, `203.0.113.88`, `login-prd.net`, and the hash of Temp `invoice.vbs`. Expire the whole `203.0.113.0/24` as shared-infrastructure noise. Link the sibling to the seed because they share nameservers and the same A — one activity set. “PRD APT” on the PDF is not a link.
+The engineer checks whether an existing analytic can be reused, whether the necessary telemetry reaches the detection system, and whether the requested behavior falls within the intended coverage. This review can distinguish a gap in analytic logic from a collection or visibility problem. It can also show that the current coverage is already adequate.
 
-**So what here (**2.6.2**).** DYA is a law firm that runs Windows workstations. Encoded PowerShell and the update-domain fetch already happened on **WS-JLEE**, so the finding applies here. The sibling shares that payload host’s control; if it is live, other workstations could use it. That is relevance and impact, not a PIR and not a country.
+| Possible review result | Reasoning that would support it |
+|---|---|
+| **Reuse or no new rule** | Existing coverage already addresses the need adequately. |
+| **Change** | An existing analytic needs a supported improvement. |
+| **Add** | The behavior warrants detection and available telemetry can support coverage that is currently missing. |
+| **Data or visibility gap** | The needed evidence is absent, incomplete, or not reaching the detection system. |
+| **Route to another owner** | The requested outcome concerns blocking, containment, or another function. |
 
-`login-prd.net` is extra infrastructure. It is not a SOC notify field. It is not a hunt of every name in the zone.
+The unalerted request remains a question within that review, rather than a pre-established false negative. If the review later establishes the required target condition, coverage expectation, telemetry, and failed alert outcome, the classification can be updated with that basis.
 
----
+The case ends with the package available for this coverage review. It supplies no completed review outcome, deployed analytic, validation result, eradication, or final incident resolution. Keeping that endpoint explicit allows the later engineering lessons to explore possible follow-through without presenting their practice conditions as events that happened in A12.
 
-## 7. Block, not a detection
+## What you should be able to explain afterward
 
-The extra name goes to whoever **blocks** — firewall or **IA** (Information Assurance) (**0.3 f**). That block is the change that follows from the relevance line: keep other workstations from using the sibling. It is not a new course, and it is not a Detection Engineering deploy. DE will **reject** a package that is only a list of IPs to put on the firewall (**4.5.2**).
+The same observations support several products because the roles need to answer different questions. Each handoff should preserve the evidence and reasoning while making the next decision clear.
 
-SOC still owns the incident. IR still has the host. CTI still owns the answer and the hop.
+| Role | Question carried forward | Product at this point in A12 |
+|---|---|---|
+| **SOC** | What happened, what remains uncertain, and who needs the case? | Investigation record, incident route, concise leadership update, and RFI |
+| **CTI** | What role did the destination likely play, and what relationship is worth testing? | Attempted-delivery assessment, explicit transfer/execution gap, and candidate infrastructure record |
+| **Threat Hunting** | Where else could the supported behavior or artifacts appear within a bounded scope? | Search hypothesis and package retaining its evidence, scope, and unresolved results |
+| **Detection Engineering** | Is a coverage change justified, and can the available data support it? | Need and evidence pointer for coverage/visibility review; outcome still open |
+| **Incident Response** | What host-response work is required? | Continued ownership of the affected host by Sam |
+| **Protective-control owner** | Does the candidate justify an action under local policy? | Evidence for a control review; action still open |
 
----
+By this point, you should be able to trace the observations through those products, explain why the RFI answer stops at attempted delivery, and distinguish a useful hunt or infrastructure lead from a confirmed finding. You should also be able to name the additional evidence needed for a TP, an FN, successful transfer, or a stronger infrastructure relationship.
 
-## 8. The hunt package
+The course principle applies throughout: **Describe what the evidence shows first. Then decide what it means.** A clear account of what remains uncertain gives the next analyst a reliable place to continue.
 
-Hunting exists to find what the alerts **missed**, and to name **gaps** the detections cannot see (**3.1**). The hunt product is a package, not a rewrite of the SOC ticket.
+## Related course reading
 
-The first alert did not require the registry Run key. Hunt uses it.
-
-**Gate (**3.4.1**):** the CTI leftovers are hunt-worthy. There is a question, telemetry that could answer it, and a bound scope. “APT exists” is awareness-only. Sam already has **WS-JLEE**; that host is a hand-off to IR. Hunt is *who else*.
-
-**Type (**3.2.1**):** **hypothesis-driven**. If more A12 persistors exist, we should see Run **`Updater`**. The leftovers came from CTI; the start of *this* search is the if/then, not a rewritten ticket. Execute is type plus look-for, not a SIEM query and not a **3.2.2** card.
-
-**Leads (**3.4.2**):** keep current-user (**HKCU**) Run **`Updater`** → `%TEMP%\update.exe`. Keep `GET /update.exe` `:8080`. Keep more `invoice.vbs`. Drop “they use persistence.” Drop the `/24`.
-
-**Question:** if more A12 persistors exist, we see Run **`Updater`**, `update.exe`, or another `invoice.vbs`.
-
-**Hunt line (**3.6.3**):** named technique = HKCU Run **`Updater`** → `%TEMP%\update.exe`. Class = persistence. Unique pattern = the value name **`Updater`**, not any Run key. Scope = user workstations, a bounded window, registry + file. Why not the whole tactic: this value, not every autorun.
-
-ATT&CK can map *this* hunt to TA0003 / T1547.001 and name the detection gap (**3.5.1**). It does not replace the question.
-
-How the shop **starts** a hunt, where the write-up lives, and who receives the package is local (**3.7**). A new hunter obtains that path. If no one has shown it, they write **not yet**.
-
-The product is a **package**: more hosts, the gap, something DE can take. Same package. Different desks.
-
----
-
-## 9. DE reviews the package
-
-Detection Engineering does not own the block list. They own the set of detections (**4.1**).
-
-SOC, hunt, or CTI may **nominate** (**4.3**). The nomination needs a **need** and a **pointer**. A drafted rule only if they have one. The local form is **4.8** — obtain it.
-
-The hunt package is the pointer. The need is the FN download and the persistence the first alert missed. Need and pointer are present, so DE **accepts** the nomination for work. The nominator does not owe a drafted rule. DE will finish it. Send-back would be a missing need or pointer. Reject would be a block, an investigation, or “write me SIGMA” as **1.3**.
-
-Then DE reviews the package like any other nomination (**4.5**):
-
-- **Add** — a detection this package supports, if the shop does not already cover `Updater` / the `:8080` URI.
-- **Change** — only if a live rule should change.
-- **No new rule** — valid, if they already cover it.
-- **Reject** — if someone handed them IPs “for the firewall.” That is beat 7, not this desk.
-
-They do not write the detection text (SIGMA or SIEM) in this beat (**1.3**). Who finishes what stays on the card.
-
----
-
-## Close
-
-Four products. One chain.
-
-The same `GET /update.exe` `:8080` is a SOC false negative, the CTI RFI seed, a hunt lead, and a DE gap. The evidence is the same. The products are not. A smaller shop may have one person write two of them (**0.5**).
-
-| Desk | Product |
-|------|---------|
-| SOC | TP process alert on **A12**; VT line: `invoice.vbs` hash not in VT; incident to **Sam**; leadership one-liner; RFI to **Jordan** |
-| CTI | Answer: likely the payload host. Hop: `login-prd.net`. Extra name to block. |
-| Hunt | Package: **`Updater`** / `update.exe` / more `invoice.vbs`. Not a rewritten ticket. |
-| DE | Accept for work (**4.3**). Then add or not (**4.5**). Not a block list. |
-
-Firewall / IA took the extra name. IR still has the host.
-
-Nothing in this file is a second plot. If a later lesson needs a new fact, add it to the [story bible](../story-bible.md) first.
+- [Alert context and investigation — 1.4.1](../../modules/01-soc/04-alerts/01-context-investigation/student-guide.md) and [classification — 1.4.2](../../modules/01-soc/04-alerts/02-classification/student-guide.md).
+- [RFI intake — 2.1.5](../../modules/02-cti/01-core-intel/05-rfi-intake/student-guide.md) and [response and closure — 2.7.4](../../modules/02-cti/07-production/04-rfi-response/student-guide.md).
+- [Analytical frameworks — 2.3](../../modules/02-cti/03-frameworks/intro.md), [ANY.RUN — 2.4.4](../../modules/02-cti/04-platforms/04-anyrun/student-guide.md), and [IOC handling — 2.5.1](../../modules/02-cti/05-enrichment/01-ioc-handling/student-guide.md).
+- [Infrastructure pivots — 2.5.5](../../modules/02-cti/05-enrichment/05-infra-pivot/student-guide.md) and [correlation — 2.5.7](../../modules/02-cti/05-enrichment/07-correlation/student-guide.md).
+- [Technique-focused hunting — 3.6.3](../../modules/03-hunter/06-attacker-techniques/03-hunt-specific/student-guide.md) and [DE package review — 4.5](../../modules/04-de/05-hunt-and-intel-packages/student-guide.md).

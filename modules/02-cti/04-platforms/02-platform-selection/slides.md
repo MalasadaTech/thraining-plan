@@ -12,6 +12,9 @@ What do we need to learn, and which source could answer it?
 
 TIP: prior context · VT/ANY.RUN: sample evidence · Silent Push: DNS history · urlscan.io: browser visit
 
+
+References: [VirusTotal](https://docs.virustotal.com/docs/searching) | [ANY.RUN](https://any.run/threat-intelligence-lookup/) | [Silent Push](https://help.silentpush.com/docs/dns-data) | [urlscan.io](https://docs.urlscan.io/guides/quickstart)
+
 ### Slide 3 – Record the lookup
 
 question | object | source/report | time | result | meaning | next question

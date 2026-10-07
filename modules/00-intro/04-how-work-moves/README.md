@@ -19,7 +19,7 @@ An investigation can create several kinds of follow-on work. Some work addresses
 
 - how work can move from an alert
 - RFI to intel
-- hunt package and block list as later hand-offs
+- hunt package and protective-control review as later hand-offs
 - name the next hand-off and whose product it is
 
 ## Artifacts

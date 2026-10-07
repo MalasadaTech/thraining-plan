@@ -40,9 +40,11 @@ The sequence is a model for reasoning about an intrusion. Real activity can repe
 
 ## 2. Placing an observed event
 
-Suppose an email record shows that a message containing a `.vbs` attachment was delivered to a mailbox. For this example, separate analysis has established that the attachment is malicious. The email record supports **Delivery** because it shows the malicious material reaching the target.
+> **Scenario status: Separate classroom example — not A12.**
 
-The record does not show how the attachment was prepared, whether anyone opened it, or whether it established a foothold. Those are questions for other evidence. The `.vbs` extension alone would not establish maliciousness; the example's stated analysis supplies that context.
+Suppose an email record shows that a message containing `shipping-notice.js` was delivered to a mailbox. For this example, separate analysis has established that the attachment is malicious. The email record supports **Delivery** because it shows the malicious material reaching the target.
+
+The record does not show how the attachment was prepared, whether anyone opened it, or whether it established a foothold. Those are questions for other evidence. The `.js` extension alone would not establish maliciousness; the example's stated analysis supplies that context.
 
 ## 3. Explaining a stage assignment
 

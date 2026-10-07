@@ -27,6 +27,15 @@ Start with the requirement from 2.1 and an existing case value. Check what the i
 | What infrastructure associations were observed over time? | Silent Push; registration sources for registration questions | Record type, returned relationship, observation window, and source. |
 | What did a recorded browser visit load or contact? | urlscan.io | Scan context, redirects, requests, destinations, and relevant time. |
 
+### Official platform references
+
+Use these pages to confirm platform capabilities and terminology. Local handling rules still determine whether a case value may be submitted to an external service.
+
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching)
+- [ANY.RUN — Threat Intelligence Lookup](https://any.run/threat-intelligence-lookup/)
+- [Silent Push — DNS Data](https://help.silentpush.com/docs/dns-data)
+- [urlscan.io — Quickstart](https://docs.urlscan.io/guides/quickstart)
+
 A tool result answers a narrower question than “Is everything related malicious?” A sandbox record describes the observed execution; a recorded browser visit describes that visit; a missing result reflects the queried source's coverage.
 
 ### First pass through the platforms

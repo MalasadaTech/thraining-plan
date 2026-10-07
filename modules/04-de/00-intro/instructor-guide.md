@@ -28,7 +28,7 @@ By the end of the introduction, learners should be able to:
 |---|---:|
 | Why DE exists | 2 min |
 | Walk through 4.1–4.8 | 4 min |
-| A12 detection lifecycle | 4–5 min |
+| Hypothetical A12-based detection lifecycle | 4–5 min |
 | Orientation check and transition | 2–3 min |
 
 ## Core Teaching Model
@@ -49,6 +49,8 @@ Then map the track beneath it:
 - **4.8 Site-Specific** → how the local organization reviews, approves, deploys, and retires
 
 ## Teaching Notes
+
+**A12 boundary:** canonical A12 reaches DE coverage review only. Build/change, validation, deployment, monitoring, and retirement in the orientation are a **hypothetical practice extension**, not recorded A12 outcomes.
 
 ### Start with the need, not the rule
 

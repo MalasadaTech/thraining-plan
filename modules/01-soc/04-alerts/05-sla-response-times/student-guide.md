@@ -66,7 +66,7 @@ Identify the applicable clock, calculate its due time, and record the action act
 
 Previous: [1.4.4 – Common Alert Categorizations](../04-categorizations/student-guide.md)
 
-Next: [1.5.1 – Report Types](../../05-reporting/01-report-types/student-guide.md)
+Next: [1.4 – Alert Investigation and Assessment Summary](../summary.md)
 
 [1.x module index](../../README.md)
 

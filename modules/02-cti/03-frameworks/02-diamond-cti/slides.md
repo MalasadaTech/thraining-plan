@@ -13,7 +13,7 @@
 **Infrastructure**  
 **Victim**
 
-Reference: [Diamond Model paper](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf)
+Reference: [Diamond Model paper](https://www.threatintel.academy/diamond/)
 
 ### Slide 3 – An incomplete Diamond is still useful
 Unknown does not mean failure.
@@ -22,7 +22,7 @@ A missing vertex can identify the next intelligence question.
 
 ### Slide 4 – A12
 **Adversary:** unresolved cluster  
-**Capability:** encoded PowerShell / `update.exe`  
+**Capability:** encoded PowerShell / requested `/update.exe` (candidate payload name)  
 **Infrastructure:** update domain / `203.0.113.88`  
 **Victim:** `WS-JLEE` / `jlee`
 

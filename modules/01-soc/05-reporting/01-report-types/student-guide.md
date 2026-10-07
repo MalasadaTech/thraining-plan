@@ -57,7 +57,7 @@ Select the report type by the work it must accomplish. Record the supported inci
 
 ## Course Connections
 
-Previous: [1.4.5 – SLA / Response Time Goals](../../04-alerts/05-sla-response-times/student-guide.md)
+Previous: [1.5 – Reporting and Notification Preview](../intro.md)
 
 Next: [1.5.2 – Reporting Timeline Requirements](../02-reporting-timelines/student-guide.md)
 

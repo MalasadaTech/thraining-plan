@@ -55,10 +55,9 @@ Preserve evidence references and unresolved questions. Distinguish unavailable c
 
 ## Knowledge check
 
-1. For the process example, name what is present and two unresolved questions.
-2. Explain the configuration and upstream path for the SIEM-only alert.
-3. You have a related hash and a file event. What should collection and a VirusTotal lookup contribute?
-4. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
+1. For the process example, identify present/missing context and explain the SIEM rule configuration and upstream event-to-alert path.
+2. You have a related hash and file event. What should collection and a VirusTotal lookup contribute, and what would each still leave unresolved?
+3. A network alert has IP/port only. What would you request from PCAP, and how would you document an unavailable capture?
 
 **Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
 

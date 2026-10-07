@@ -713,7 +713,7 @@ See also: [hunting leads from external tools](#hunting-leads-from-external-tools
 
 ### criteria for TTP applicability to the environment
 
-Also: Harbor platform and path, applicable vs relevant TTP, classroom apply criteria
+Also: DYA platform and path, applicable vs relevant TTP, classroom apply criteria
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -760,6 +760,15 @@ See also: [Kill Chain stages](#kill-chain-stages), [identifying the stage and re
 ---
 
 ## D
+
+### drive-by compromise / watering hole
+
+Also: malicious web path, strategic web compromise, watering-hole attack, malvertising, SEO poisoning
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.9 Common Initial Access Paths](../modules/00-intro/09-initial-access/) | SOC, Hunter, CTI, DE |
+
 
 ### develop or refine intelligence requirements
 
@@ -1038,7 +1047,7 @@ Also: Zeek events, `connection_established`
 
 ### extract applicable TTPs from an intelligence report
 
-Also: applicable TTP line, dual-gate TTP extract, Harbor-applicable IDs
+Also: applicable TTP line, dual-gate TTP extract, DYA-applicable IDs
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -1211,7 +1220,7 @@ Also: Security Operations Center, watch and start the response
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
+| Taught | [0.2 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
 See also: [a SOC is a team sport](#a-soc-is-a-team-sport), [DYA and PRD are course fiction](#dya-and-prd-are-course-fiction), [what DE owns](#what-de-owns)
 
@@ -1221,17 +1230,17 @@ Also: more than one job next to the SOC
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
+| Taught | [0.2 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 
 See also: [what a SOC is](#what-a-soc-is)
 
 ### DYA and PRD are course fiction
 
-Also: Dixon Yamada and Associates, Pink River Dolphin, not site policy
+Also: Dixon Yamada and Associates, Pink River Dolphin vendor tracking label, PRD is not automatically actor identity, not site policy
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
-| Taught | [0.1 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
+| Taught | [0.2 What a SOC is](../modules/00-intro/02-what-a-soc-is/) | SOC, Hunter, CTI, DE |
 | Used | [0.1 How this course is laid out](../modules/00-intro/01-course-layout/) | SOC, Hunter, CTI, DE |
 
 See also: [what a SOC is](#what-a-soc-is), [PRD / DYA companion story](#prd--dya-companion-story)
@@ -1904,7 +1913,7 @@ See also: [Suricata rules](#suricata-rules), [http log](#http-log)
 
 ### how to download PCAP
 
-Also: PCAP-REQ, pcap.harbor.internal, hot vs warm PCAP. **1.8.2 is retired.** If the shop lists a store, that is tool access.
+Also: PCAP-REQ, pcap.example.internal, hot vs warm PCAP. **1.8.2 is retired.** If the shop lists a store, that is tool access.
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -2164,6 +2173,25 @@ See also: [hunt types](#hunt-types), [hunt hypothesis](#hunt-hypothesis), [anoma
 ---
 
 ## I
+
+### initial access
+
+Also: initial foothold, entry path, entry-path hypothesis, ATT&CK Initial Access
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.9 Common Initial Access Paths](../modules/00-intro/09-initial-access/) | SOC, Hunter, CTI, DE |
+
+See also: [phishing / malspam](#phishing--malspam), [public-facing exploitation](#public-facing-exploitation), [valid accounts / external remote services](#valid-accounts--external-remote-services)
+
+### initial-access evidence progression
+
+Also: exposure, delivery, attempt, successful access, execution boundary
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.9 Common Initial Access Paths](../modules/00-intro/09-initial-access/) | SOC, Hunter, CTI, DE |
+
 
 ### image and driver load activity
 
@@ -2522,7 +2550,7 @@ See also: [Cyber Kill Chain purpose](#cyber-kill-chain-purpose), [Cyber Kill Cha
 
 ### key network segments and data flow
 
-Also: user VLAN, OT segment, Harbor segments
+Also: user VLAN, OT segment, example environment segments
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -2704,7 +2732,7 @@ See [qtype_name](#qtype_name).
 
 ### navigating and searching the internal TIP
 
-Also: Harbor TIP search, indicator type filter
+Also: DYA TIP search, indicator type filter
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -2856,6 +2884,23 @@ See also: [assigning a category and ruling out the adjacent one](#assigning-a-ca
 
 ## P
 
+### phishing / malspam
+
+Also: spearphishing, malicious attachment, phishing link, message delivery
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.9 Common Initial Access Paths](../modules/00-intro/09-initial-access/) | SOC, Hunter, CTI, DE |
+
+### public-facing exploitation
+
+Also: exploit public-facing application, exposed service, CVE exploit attempt
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.9 Common Initial Access Paths](../modules/00-intro/09-initial-access/) | SOC, Hunter, CTI, DE |
+
+
 ### potential organizational impact
 
 Also: impact if true, so what here, not because clause
@@ -2868,7 +2913,7 @@ See also: [relevance to this environment](#relevance-to-this-environment), [reje
 
 ### relevance to this environment
 
-Also: so what here, relevant to Harbor estate, mission asset platform
+Also: so what here, relevant to DYA estate, mission asset platform
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -3186,7 +3231,7 @@ See also: [local PIRs are site-specific](#local-pirs-are-site-specific), [align 
 
 ### align analytic work to a stated local requirement
 
-Also: align Night Owl to a shown PIR, cannot mark in focus without a list
+Also: align PRD/vendor-labeled activity to a shown PIR, cannot mark in focus without a list
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -3281,7 +3326,7 @@ See also: [levels of confidence in attribution](#levels-of-confidence-in-attribu
 
 ### produce a threat actor profile
 
-Also: honest Night Owl profile, unattributed actor profile, 3.11.1.2
+Also: evidence-bounded PRD/vendor-labeled profile, unattributed actor profile, 3.11.1.2
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -3321,7 +3366,7 @@ See also: [structure and quality standards for a finished product](#structure-an
 
 ### purpose and core functions of the internal TIP
 
-Also: intel store, have we seen this, Harbor TIP
+Also: intel store, have we seen this, DYA TIP
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -3516,7 +3561,7 @@ See also: [map a report or activity set to ATT&CK](#map-a-report-or-activity-set
 
 ### reject a TTP that does not apply here
 
-Also: reject Unix TTP on Windows Harbor, reject ESXi T1486, platform-miss TTP
+Also: reject Unix TTP on a Windows DYA environment, reject ESXi T1486, platform-miss TTP
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -3526,7 +3571,7 @@ See also: [extract applicable TTPs from an intelligence report](#extract-applica
 
 ### reject a vendor group name with no shared objects
 
-Also: APT name is not a link, Night Owl APT is not glue
+Also: vendor actor label is not a link, PRD label is not relationship evidence
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -3610,7 +3655,7 @@ See also: [place a report or activity set on the Kill Chain](#place-a-report-or-
 
 ### reject filling Adversary from a vendor name
 
-Also: vendor-name Adversary, Night Owl APT is not Adversary, reject vendor cluster name
+Also: vendor-name Adversary, PRD label does not establish Adversary identity, qualify vendor cluster name
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -4170,7 +4215,7 @@ See also: [use TAXII for sharing and consumption of intelligence](#use-taxii-for
 
 ### linking STIX objects to represent threat activity
 
-Also: STIX relationship_type, Night Owl STIX graph, explain a STIX scenario
+Also: STIX relationship_type, PRD-labeled STIX example, explain a STIX scenario
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -4190,7 +4235,7 @@ See also: [linking STIX objects to represent threat activity](#linking-stix-obje
 
 ### use TAXII for sharing and consumption of intelligence
 
-Also: TAXII collection, publish STIX bundle, consume STIX, harbor-cti classroom collection
+Also: TAXII collection, publish STIX bundle, consume STIX, dya-cti classroom collection
 
 | Coverage | Module | Roles |
 |----------|--------|-------|
@@ -4327,6 +4372,15 @@ See also: [image and driver load activity](#image-and-driver-load-activity), [us
 ---
 
 ## T
+
+### trusted relationship / supply-chain compromise
+
+Also: third-party initial access, compromised dependency, compromised update mechanism
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.9 Common Initial Access Paths](../modules/00-intro/09-initial-access/) | SOC, Hunter, CTI, DE |
+
 
 ### TAP / SPAN
 
@@ -4759,6 +4813,15 @@ See also: [mapping hunts to ATT&CK](#mapping-hunts-to-attck), [ATT&CK coverage a
 ---
 
 ## V
+
+### valid accounts / external remote services
+
+Also: VPN entry, remote service access, cloud account access
+
+| Coverage | Module | Roles |
+|----------|--------|-------|
+| Taught | [0.9 Common Initial Access Paths](../modules/00-intro/09-initial-access/) | SOC, Hunter, CTI, DE |
+
 
 ### visibility gaps
 

@@ -79,4 +79,4 @@ Confirmation bias favors evidence that fits the current explanation. Anchoring g
 - 2.1.8 – Attribution
 - 2.4.1 – Internal threat intelligence platform
 
-**Next:** [2.3.1 – MITRE ATT&CK for CTI Analysis and Reporting](../../03-frameworks/01-attck-cti/student-guide.md).
+**Next:** [2.2 – Analytical Tradecraft Summary](../summary.md).

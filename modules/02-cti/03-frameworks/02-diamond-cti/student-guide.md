@@ -27,7 +27,7 @@ The Diamond Model treats an intrusion **event** as relationships among four core
 
 The original paper describes these features as the core of an intrusion event and uses the edges between them to support analysis, correlation, and discovery.
 
-Reference: [The Diamond Model of Intrusion Analysis](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf)
+Reference: [The Diamond Model of Intrusion Analysis](https://www.threatintel.academy/diamond/)
 
 ### The four vertices
 
@@ -45,7 +45,7 @@ A Diamond does not become invalid because one vertex is unknown. Incomplete know
 For the A12 activity set:
 
 - `wscript.exe` launches encoded PowerShell;
-- `update.exe` is associated with the activity;
+- A12 includes a request for `/update.exe`; that path is a **candidate payload name**, not an established transferred or executed sample;
 - the update domain and `203.0.113.88` appear in the infrastructure;
 - `WS-JLEE` / `jlee` are the affected victim assets.
 
@@ -54,7 +54,7 @@ A defensible Diamond is:
 | Vertex | A12 fill |
 |---|---|
 | **Adversary** | Unknown / unresolved activity cluster |
-| **Capability** | Encoded PowerShell; `update.exe` |
+| **Capability** | Encoded PowerShell; requested `/update.exe` as a candidate payload name |
 | **Infrastructure** | Update domain; `203.0.113.88` |
 | **Victim** | `WS-JLEE`; `jlee`; DYA |
 
@@ -114,6 +114,6 @@ Use evidence to populate each vertex. Leave a vertex unresolved when the evidenc
 
 ## Supporting Reference
 
-- [The Diamond Model of Intrusion Analysis](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf)
+- [The Diamond Model of Intrusion Analysis](https://www.threatintel.academy/diamond/)
 
 **Next:** [2.3.3 – Cyber Kill Chain in Intelligence Analysis](../03-kill-chain-cti/student-guide.md).

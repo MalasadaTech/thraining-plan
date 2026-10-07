@@ -66,6 +66,24 @@ An unresolved activity cluster is a legitimate profile. A nation-state is not re
 | Writes a dramatic impact statement. | Tie the implication directly to the supported judgment. |
 | Treats formatting as quality. | Review analytic reasoning separately from presentation. |
 
+## Demonstration Exercise — SILVER KITE
+
+The SILVER KITE card is deliberately separate from A12. It exists because the approved task is **produce a threat actor profile**, while A12 correctly leaves actor identity unresolved. Do not let learners import SILVER KITE facts into A12.
+
+### Evaluator criteria
+
+A satisfactory profile should:
+
+- identify SILVER KITE as the tracked actor supplied by the exercise rather than infer a sponsor or nationality;
+- summarize the supported targeting pattern and information sought;
+- distinguish observed behaviors from analytic judgments;
+- describe KiteDoor and VPS use without turning either into unsupported ownership claims beyond the exercise evidence;
+- include at least one bounded judgment with an explicit evidence basis and appropriate confidence;
+- identify meaningful gaps, especially the absence of government sponsorship/nationality/legal-identity evidence;
+- pass the lesson's finished-product review: requirement fit, source/evidence traceability, uncertainty, relevance, and clear reasoning.
+
+For higher proficiency, expect tighter prioritization, more explicit alternative explanations, and cleaner explanation of why the evidence supports each judgment. Record demonstration/sign-off separately under the qualification standard.
+
 ## Knowledge Check – Answer Key
 
 1. It contains data/observables but may lack a requirement, judgment, reasoning, uncertainty, and relevance.

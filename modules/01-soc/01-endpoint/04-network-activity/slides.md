@@ -38,17 +38,19 @@ Read outcome, endpoints, protocol, direction evidence, names, and associated pro
 
 ---
 
-## Working through the example
+## Working through the example — separate classroom record
 
-PowerShell is associated with a recorded successful TCP connection to 203.0.113.88:443. The record lacks a URL/FQDN.
+**Not A12.**
+
+PowerShell is associated with a recorded successful TCP connection to 198.51.100.44:443. The record lacks a URL/FQDN.
 
 **Speaker notes:** Have learners build the sentence from supplied fields; discuss why a commonly used port is insufficient to identify application behavior.
 
 ---
 
-## Supplied example
+## Supplied example — separate classroom record
 
-A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=203.0.113.88`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
+A supplied MDE event records `ConnectionSuccess`, `Protocol=Tcp`, `RemoteIP=198.51.100.44`, `RemotePort=443`, and initiating process `powershell.exe` with command line `powershell.exe -enc …`. `RemoteUrl` is blank.
 
 **Speaker notes:** Have learners build the sentence from supplied fields; discuss why a commonly used port is insufficient to identify application behavior.
 
@@ -67,7 +69,7 @@ Search the specified process and destination. A connection query and a DNS query
 | where Timestamp > ago(1d)
 | where ActionType == "ConnectionSuccess"
 | where InitiatingProcessFileName =~ "powershell.exe"
-| where RemoteIP == "203.0.113.88" and RemotePort == 443
+| where RemoteIP == "198.51.100.44" and RemotePort == 443
 | project Timestamp, DeviceName, Protocol, LocalIP, LocalPort,
 
 **Speaker notes:** Ask what broadens when the process filter is removed. This tests query reasoning without requiring a live connection or tenant. Use the surrounding student-guide explanation to interpret the table and its limits.
@@ -81,7 +83,7 @@ DeviceNetworkEvents
 | where Timestamp > ago(1d)
 | where ActionType == "ConnectionSuccess"
 | where InitiatingProcessFileName =~ "powershell.exe"
-| where RemoteIP == "203.0.113.88" and RemotePort == 443
+| where RemoteIP == "198.51.100.44" and RemotePort == 443
 | project Timestamp, DeviceName, Protocol, LocalIP, LocalPort,
           RemoteIP, RemotePort, RemoteUrl, InitiatingProcessCommandLine
 ```

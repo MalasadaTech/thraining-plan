@@ -63,6 +63,19 @@ Capture:
 
 A copied checklist with no owner or version may be useful background but is not enough to confidently describe current policy.
 
+### Complete the deferred 4.2.2 local-requirements demonstration
+
+Module 4.2 taught the method for checking a detection against shop requirements, but it deliberately did not invent a local checklist. Now that you have located and verified the real requirements source, return to [Part B of the Detection Validation Practical](../02-sound-and-shop-requirements/detection-validation-practical.md).
+
+Using the same validation record from 4.2:
+
+1. identify the authoritative local requirements source, owner, and version/effective date;
+2. mark each applicable requirement **met**, **missing**, or the locally authorized equivalent;
+3. cite the evidence for each status;
+4. record any requirement you cannot evaluate because a local artifact, authority, or data source is still unavailable.
+
+This is the practical demonstration for task `4.2.2`. If the verified local list is unavailable, record an onboarding/qualification gap rather than substituting Sigma fields or fictional DYA policy.
+
 ### Part 2: the local lifecycle path
 
 Map how a detection becomes official:
@@ -152,7 +165,9 @@ Find the current requirements list, its owner and version, and the real review/d
 
 Follow verified local process. When a piece is missing, identify that specific onboarding gap so the organization can close it.
 
-This completes the **4.x Detection Engineering track**.
+This completes the **4.8 site-specific Detection Engineering module**.
+
+**Next:** [4.9 – Detection Engineering Section Summary](../09-summary/student-guide.md).
 
 ## Supporting Reference
 

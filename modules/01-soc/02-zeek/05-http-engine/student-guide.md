@@ -39,9 +39,11 @@ Host and URI help reconstruct the requested resource, but a complete URL also ne
 
 ## 2. Working through the example
 
-The supplied record shows `GET /update.exe` from `192.0.2.10` to `203.0.113.88:8080`, `status_code=200`, and no recorded Host or User-Agent.
+**Separate classroom HTTP record — not A12.** These values exist only to teach field interpretation and query scope.
 
-A supported description is: “The client requested `/update.exe` with GET from the supplied destination on port 8080 and received HTTP status 200; Host and User-Agent are unavailable in this record.” The path name does not establish the returned bytes. File-analysis records or retained content may help determine what was transferred, while endpoint evidence can address whether a file was saved or executed.
+The supplied record shows `GET /package.bin` from `192.0.2.10` to `198.51.100.60:8080`, `status_code=200`, and no recorded Host or User-Agent.
+
+A supported description is: “The client requested `/package.bin` with GET from the supplied destination on port 8080 and received HTTP status 200; Host and User-Agent are unavailable in this record.” The path name does not establish the returned bytes. File-analysis records or retained content may help determine what was transferred, while endpoint evidence can address whether a file was saved or executed.
 
 ## 3. Creating a focused HTTP query
 
@@ -50,19 +52,19 @@ This KQL teaching example assumes an ingested table named `ZeekHttp`, a datetime
 ```kusto
 ZeekHttp
 | where TimeGenerated > ago(1d)
-| where method == "GET" and uri == "/update.exe"
-| where ['id.resp_h'] == "203.0.113.88" and ['id.resp_p'] == 8080
+| where method == "GET" and uri == "/package.bin"
+| where ['id.resp_h'] == "198.51.100.60" and ['id.resp_p'] == 8080
 | project TimeGenerated, uid, ['id.orig_h'], host, uri,
           user_agent, status_code
 ```
 
-The equality test matches exactly `/update.exe`; it will not include a URI with an added query string. A substring or carefully scoped path expression changes that behavior. Choose the comparison that answers the stated question and explain the extra results it permits.
+The equality test matches exactly `/package.bin`; it will not include a URI with an added query string. A substring or carefully scoped path expression changes that behavior. Choose the comparison that answers the stated question and explain the extra results it permits.
 
 ## Knowledge Check
 
 1. How do the Host header, destination IP, and URI differ?
-2. What does the example establish, and does it prove update.exe ran?
-3. Would uri == "/update.exe" match /update.exe?id=1? How could you broaden it?
+2. What does the example establish, and does it prove package.bin ran?
+3. Would uri == "/package.bin" match /package.bin?id=1? How could you broaden it?
 
 ## Summary
 

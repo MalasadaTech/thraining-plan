@@ -60,7 +60,9 @@ A concise hunt line can be:
 
 > **T1547.001 / Persistence** — Windows user workstations, previous 14 days, registry + file telemetry; search exact `Updater → %TEMP%\update.exe` first, then broaden to rare Run values launching from user-writable Temp paths.
 
-That is specific enough to execute and broad enough to explain the behavior family.
+That hunt line is specific enough to **prepare an executable search**, but writing the line is not the same as executing the mapped task.
+
+To demonstrate `3.6.3`, run both the exact-observed and behavior-broadened layers in [Practical E of the Hunt Execution Practical](../../02-methodology/01-hunt-types/hunt-execution-practical.md). Record the query/filter, returned hosts, benign near-neighbor, gaps, and bounded finding.
 
 ## 2. Knowledge Check
 
@@ -74,7 +76,7 @@ Hunt one named technique through a procedure-level pattern.
 
 Start exact when intelligence gives you exact evidence; broaden deliberately when you want variants. Keep the scope and required telemetry explicit.
 
-**Next:** **3.7.1 – Hunt Control and Lead Management**.
+**Next:** [3.6 – Attacker Techniques for Hunting Summary](../summary.md).
 
 ## Supporting Reference
 

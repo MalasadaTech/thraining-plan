@@ -1,6 +1,10 @@
 # Introductory Modules — 0.x
 
-These shared lessons introduce the course, the people involved in defensive work, and the frameworks, tools, and environment knowledge used across the four role tracks. Teach them in the sequence below before the SOC track.
+These shared lessons introduce the course, the people involved in defensive work, and the frameworks, tools, environment knowledge, and common initial-access reasoning used across the four role tracks. Teach them in the sequence below before the SOC track.
+
+## Skim-first subunit wrapper
+
+The 0.6 framework cluster is a meaningful multi-lesson subunit. Preview it with the [0.6 Shared Analytical Frameworks Introduction](06-frameworks/intro.md), then read 0.6.1–0.6.3 and finish with the [0.6 Summary](06-frameworks/summary.md).
 
 | Module | Student guide | Instructor guide | Slides |
 |---|---|---|---|
@@ -14,11 +18,12 @@ These shared lessons introduce the course, the people involved in defensive work
 | 0.6.3 — Cyber Kill Chain | [Read](06-frameworks/03-cyber-kill-chain/student-guide.md) | [Teach](06-frameworks/03-cyber-kill-chain/instructor-guide.md) | [Present](06-frameworks/03-cyber-kill-chain/slides.md) |
 | 0.7 — External tools | [Read](07-tool-survey/01-external-tools/student-guide.md) | [Teach](07-tool-survey/01-external-tools/instructor-guide.md) | [Present](07-tool-survey/01-external-tools/slides.md) |
 | 0.8 — Environment / signal flow | [Read](08-environment/01-orientation/student-guide.md) | [Teach](08-environment/01-orientation/instructor-guide.md) | [Present](08-environment/01-orientation/slides.md) |
-| 0.9 — Shared Foundations Section Summary | [Read](09-summary/student-guide.md) | [Teach](09-summary/instructor-guide.md) | [Present](09-summary/slides.md) |
+| 0.9 — Common Initial Access Paths | [Read](09-initial-access/student-guide.md) | [Teach](09-initial-access/instructor-guide.md) | [Present](09-initial-access/slides.md) |
+| 0.10 — Shared Foundations Section Summary | [Read](10-summary/student-guide.md) | [Teach](10-summary/instructor-guide.md) | [Present](10-summary/slides.md) |
 
 ## Revision notes
 
-The student guides, instructor guides, slide sources, and lesson indexes have been revised together. The revision adds connected explanations, evidence-based examples, matching knowledge checks and answer keys, and linked references. It preserves the module IDs, proficiency mappings, teaching order, and introductory scope.
+The student guides, instructor guides, slide sources, and lesson indexes have been revised together. The revision adds connected explanations, evidence-based examples, matching knowledge checks and answer keys, and linked references. This revision also adds approved module `0.9` for common initial access and moves the synthesis from `0.9` to `0.10`; other module IDs and proficiency mappings are preserved.
 
 Repeated lesson-boundary instructions have been consolidated into teaching guidance and course connections. Framework examples make uncertainty explicit. The tool survey distinguishes overlapping capabilities, interpretation limits, and submission workflows. Environment orientation distinguishes traffic paths from actual visibility.
 

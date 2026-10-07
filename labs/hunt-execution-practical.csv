@@ -1,0 +1,25 @@
+timestamp,host,event_source,event_type,user,process,command_line,registry_path,registry_value_name,registry_value_data,file_path,dst_domain,dst_ip,dst_port,url_path,signature_status,note
+2026-09-14T08:12:03Z,BHM-WKS-07,endpoint,process,mkim,wscript.exe,wscript.exe invoice.vbs,,,,,,,,,signed,reactive seed host
+2026-09-14T08:12:08Z,BHM-WKS-07,endpoint,process,mkim,powershell.exe,powershell.exe -NoP -EncodedCommand JAB3AGM...,,,,,,,,,signed,encoded PowerShell child
+2026-09-14T08:13:20Z,BHM-WKS-07,registry,registry_set,mkim,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Updater,C:\Users\mkim\AppData\Local\Temp\updater.exe,,,,,,,run key to user-writable temp
+2026-09-14T08:14:01Z,BHM-WKS-07,network,http,mkim,powershell.exe,,,,,,,cdn-sync.example,198.51.100.44,8080,/update.exe,,rare external 8080
+2026-09-14T08:15:10Z,BHM-WKS-07,file,file_create,mkim,powershell.exe,,,,,C:\Users\mkim\AppData\Local\Temp\updater.exe,,,,,unsigned,temp executable created
+2026-09-14T09:41:02Z,BHM-WKS-12,registry,registry_set,ajones,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Updater,C:\Users\ajones\AppData\Local\Temp\updater.exe,,,,,,,exact Updater pattern
+2026-09-14T09:42:16Z,BHM-WKS-12,network,http,ajones,updater.exe,,,,,,,cdn-sync.example,198.51.100.44,8080,/update.exe,unsigned,same infrastructure/path
+2026-09-14T09:42:50Z,BHM-WKS-12,file,file_create,ajones,updater.exe,,,,,C:\Users\ajones\AppData\Local\Temp\updater.exe,,,,,unsigned,related file
+2026-09-15T11:05:44Z,BHM-WKS-19,registry,registry_set,rpatel,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,OneDriveUpdate,C:\Users\rpatel\AppData\Local\Temp\syncsvc.exe,,,,,,,variant temp Run key
+2026-09-15T11:06:31Z,BHM-WKS-19,network,http,rpatel,syncsvc.exe,,,,,,,updates-cdn.example,203.0.113.74,8080,/pkg.bin,unsigned,variant infrastructure
+2026-09-15T11:07:09Z,BHM-WKS-19,file,file_create,rpatel,syncsvc.exe,,,,,C:\Users\rpatel\AppData\Local\Temp\syncsvc.exe,,,,,unsigned,variant temp executable
+2026-09-14T07:01:11Z,BHM-WKS-03,registry,registry_set,lchen,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,OneDrive,C:\Program Files\Microsoft OneDrive\OneDrive.exe /background,,,,,,,Microsoft,common benign Run key
+2026-09-14T07:02:03Z,BHM-WKS-04,registry,registry_set,sgarcia,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,Teams,C:\Program Files\Microsoft\Teams\current\Teams.exe --processStart Teams.exe,,,,,,,Microsoft,common benign Run key
+2026-09-15T12:30:00Z,BHM-WKS-22,network,http,svc_backup,backupagent.exe,,,,,,,backup-gw.internal,10.20.30.40,8080,/health,signed,approved internal backup service
+2026-09-15T12:31:00Z,BHM-WKS-23,network,http,svc_backup,backupagent.exe,,,,,,,backup-gw.internal,10.20.30.40,8080,/health,signed,same approved service
+2026-09-15T15:10:21Z,BHM-WKS-31,network,http,dnguyen,java.exe,,,,,,,telemetry.vendor.example,192.0.2.80,8080,/metrics,signed,approved vendor telemetry
+2026-09-16T08:55:18Z,BHM-WKS-44,registry,registry_set,hlee,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,AcmeUpdater,C:\Users\hlee\AppData\Local\Temp\AcmeSetup\acme-update.exe,,,,,,,Acme Software LLC,near-neighbor temp Run key; signed vendor
+2026-09-16T08:55:32Z,BHM-WKS-44,file,file_create,hlee,acme-update.exe,,,,,C:\Users\hlee\AppData\Local\Temp\AcmeSetup\acme-update.exe,,,,,Acme Software LLC,benign signed updater
+2026-09-16T08:56:01Z,BHM-WKS-44,network,https,hlee,acme-update.exe,,,,,,,updates.acme.example,192.0.2.55,443,/v3/check,Acme Software LLC,benign updater traffic
+2026-09-16T10:02:19Z,BHM-WKS-52,endpoint,process,kwhite,powershell.exe,powershell.exe Get-Service | Where-Object {$_.Status -eq 'Running'},,,,,,,,,signed,administrative PowerShell
+2026-09-16T10:04:29Z,BHM-WKS-53,registry,registry_set,jcooper,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,PrinterHelper,C:\Program Files\PrinterCo\helper.exe,,,,,,,PrinterCo,benign Run key
+2026-09-17T03:14:05Z,BHM-SRV-02,network,http,svc_app,appsvc.exe,,,,,,,api.partner.example,192.0.2.140,8080,/api/status,signed,server app expected 8080
+2026-09-17T05:20:50Z,BHM-WKS-58,registry,registry_set,mross,,,HKCU\Software\Microsoft\Windows\CurrentVersion\Run,UpdaterService,C:\Users\mross\AppData\Roaming\Updater\svc.exe,,,,,,,unsigned,rare Run key but not Temp
+2026-09-17T05:21:30Z,BHM-WKS-58,network,https,mross,svc.exe,,,,,,,cloud-storage.example,203.0.113.120,443,/sync,unsigned,needs review; no exact CTI match

@@ -81,7 +81,7 @@ Sigma makes detection logic shareable. Explain the source, tests, and condition,
 
 ## Course Connections
 
-Previous: [1.2.8 – Weird Engine](../../02-zeek/08-weird-engine/student-guide.md)
+Previous: [1.3 – Detection Rules Preview](../intro.md)
 
 Next: [1.3.2 – Suricata Rules](../02-suricata-rules/student-guide.md)
 

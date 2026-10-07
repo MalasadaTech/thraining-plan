@@ -77,7 +77,7 @@ A SIEM detection proposal connects clear logic to a source, schedule, trigger, a
 
 Previous: [1.3.3 – YARA Rules](../03-yara-rules/student-guide.md)
 
-Next: [1.4.1 – Alert Context and Investigation](../../04-alerts/01-context-investigation/student-guide.md)
+Next: [1.3 – Detection Rules Summary](../summary.md)
 
 [1.x module index](../../README.md)
 

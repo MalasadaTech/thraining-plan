@@ -23,6 +23,12 @@ Public formats such as Sigma can illustrate common metadata but do not define lo
 
 Reference: [Sigma Rules Specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html)
 
+## Qualification Bridge Back to 4.2.2
+
+After the learner verifies the authoritative local requirements list, have them return to [Part B of the 4.2 Detection Validation Practical](../02-sound-and-shop-requirements/detection-validation-practical.md). The learner should apply the real list to the validation record and mark each applicable item met/missing (or the locally authorized equivalent), with evidence.
+
+Do not sign off `4.2.2` from the 4.2 knowledge check or a fictional checklist. If the local list cannot be obtained, record the specific qualification/onboarding gap.
+
 ## Lifecycle Map
 
 Require the learner to fill local answers for:
@@ -52,3 +58,8 @@ Require the learner to fill local answers for:
 1. Sigma defines a portable rule format; the organization defines its deployment/governance requirements.
 2. Any four of review, approval, deploy, monitoring, rollback, tune/change, retire, repository/source control.
 3. Record that approval and rollback authority have not yet been verified and identify the process owner/source needed.
+
+
+## Transition
+
+Continue to **4.9 – Detection Engineering Section Summary**. Reserve “4.x complete” language for the end of that synthesis lesson.

@@ -28,7 +28,9 @@ Use the stages to describe progression and opportunities to interrupt it.
 
 ## Placing an observed event
 
-Observed: email with an established malicious attachment reaches a mailbox.
+**Scenario status: Separate classroom example — not A12.**
+
+Observed: an email containing established-malicious `shipping-notice.js` reaches a mailbox.
 
 Supported stage: Delivery.
 
@@ -36,7 +38,7 @@ Evidence: the email delivery record.
 
 Opening, exploitation, and installation remain unestablished.
 
-**Speaker notes:** Keep the example anchored to the delivery record. If learners choose Weaponization, ask what evidence shows preparation. If they choose Exploitation or Installation, ask what happened on the endpoint and whether any such event was supplied.
+**Speaker notes:** Keep the example separate from A12. If learners choose Weaponization, ask what evidence shows preparation. If they choose Exploitation or Installation, ask what happened on the endpoint and whether any such event was supplied.
 
 ---
 

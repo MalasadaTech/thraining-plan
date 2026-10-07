@@ -28,6 +28,8 @@ Example:
 
 **We need durable visibility for A12-style encoded PowerShell.**
 
+Canonical A12 reaches **coverage review**. Any later build/deploy lifecycle steps shown here are hypothetical practice, not A12 outcomes.
+
 A nomination does not need to contain the final rule.
 
 ### Slide 5 – Reuse before adding

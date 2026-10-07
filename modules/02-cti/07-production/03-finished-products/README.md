@@ -19,6 +19,7 @@
 - customer relevance and implications
 - analytic-quality review
 - activity-cluster profiling when attribution is unresolved
+- non-A12 SILVER KITE actor-profile demonstration for mapped task `2.7.3.2`
 
 ## Supporting references
 

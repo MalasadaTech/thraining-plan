@@ -7,7 +7,7 @@
 
 Help learners use the Diamond Model as an evidence-backed representation of an intrusion event rather than as a four-box form that must be completely filled.
 
-Reference: [The Diamond Model of Intrusion Analysis](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf)
+Reference: [The Diamond Model of Intrusion Analysis](https://www.threatintel.academy/diamond/)
 
 ## Key Teaching Points
 
@@ -20,7 +20,7 @@ Reference: [The Diamond Model of Intrusion Analysis](https://threatconnect.com/w
 ## A12 Walkthrough
 
 **Adversary:** unresolved activity cluster  
-**Capability:** encoded PowerShell / `update.exe`  
+**Capability:** encoded PowerShell / requested `/update.exe` as a candidate payload name  
 **Infrastructure:** update domain / `203.0.113.88`  
 **Victim:** `WS-JLEE` / `jlee` / DYA
 
@@ -43,4 +43,4 @@ Ask learners why Adversary is the least developed. The answer should be about ev
 
 ## Instructor Reference
 
-- [The Diamond Model of Intrusion Analysis](https://threatconnect.com/wp-content/uploads/2023/01/The_Diamond_Model_of_Intrusion_Analysis.pdf)
+- [The Diamond Model of Intrusion Analysis](https://www.threatintel.academy/diamond/)

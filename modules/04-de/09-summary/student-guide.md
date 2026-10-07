@@ -175,79 +175,71 @@ Later, DE may decide to:
 
 Retirement should be an engineering decision, not simply a reaction to age.
 
-## 4. Distinctions Worth Keeping
+## 4. Distinctions That Keep Detection Engineering Focused on Coverage
 
-### Nomination ≠ finished detection
+Detection Engineering receives requests from many parts of the defensive workflow. The following distinctions help the engineer identify the actual problem before deciding to change a rule.
 
-SOC, hunt, and CTI can identify a need.
+### A nomination identifies a defensive need; DE turns it into a coverage decision
 
-DE owns the engineering decision and lifecycle.
+SOC, Hunt, and CTI can identify behavior that deserves review and provide an evidence pointer. They do not need to deliver a finished production detection.
 
-### Rule syntax ≠ production readiness
+DE evaluates the need, checks existing coverage and data, and determines whether engineering work is warranted.
 
-A query that parses successfully is not automatically:
-- analytically sound;
-- adequately tested;
-- supported by production telemetry;
-- deployable;
-- maintainable.
+### Valid syntax is only one requirement for production readiness
 
-### New need ≠ new rule
+A query that parses correctly may still be analytically weak, poorly tested, unsupported by production telemetry, operationally noisy, or difficult to maintain.
 
-Always check existing coverage first.
+Production readiness comes from the combination of sound logic, usable data, validation, deployment controls, and ongoing ownership.
 
-Reuse or modify when that produces better coverage with less duplication.
+### A new defensive need does not always require a new rule
 
-### Tune request ≠ new nomination
+Before creating coverage, check whether an existing analytic already addresses the behavior or can be safely extended.
 
-A tune request concerns a **live analytic**.
+Reuse or modification can provide better coverage with less duplication and a smaller maintenance burden.
 
-A nomination introduces a new or newly identified defensive need.
+### Tune requests and new nominations enter the lifecycle at different points
 
-### Exception ≠ successful tune
+A **tune request** concerns a live analytic whose behavior needs adjustment.
 
-An exception is successful only if it reduces the intended benign condition **and still preserves the target detection behavior**.
+A **nomination** introduces a new or newly recognized defensive need that DE must evaluate.
 
-### Detection gap ≠ data gap
+Both require evidence, but the engineering question is different.
 
-If required telemetry exists but no analytic covers the behavior, that is a detection/coverage gap.
+### An exception succeeds only when it fixes the benign condition without losing the target behavior
 
-If the required telemetry is absent or unusable, that is a visibility/data-path problem.
+Removing a noisy benign case is not enough. Re-run the positive test after the exception and confirm that the intended malicious or unauthorized behavior is still detected.
 
-### Silent analytic ≠ no activity
+This makes tuning a validation problem rather than simply a reduction in alert volume.
 
-No alert may reflect:
-- no target behavior;
-- logic failure;
-- collection failure;
-- ingestion failure;
-- parsing change;
-- population gap;
-- late data.
+### Detection gaps and data gaps require different engineering responses
 
-Silence must be explained before it is trusted.
+If the required telemetry exists but current analytics do not adequately cover the behavior, the problem is detection/coverage.
 
-### Detection ≠ enforcement
+If the required telemetry is missing, malformed, delayed, or absent from part of the target population, the problem is visibility or the data path.
 
-Detection answers:
+Trace the data before changing analytic logic.
 
-> Should this behavior produce defensive visibility or an alert?
+### A silent analytic has several possible explanations
 
-Blocking, containment, or prevention follows the organization's control-ownership model.
+No alert may mean the target behavior did not occur. It can also reflect logic failure, collection or ingestion failure, parsing changes, population gaps, or late data.
 
-### Deployment ≠ completion
+A trustworthy conclusion about silence comes from checking the path from source event through analytic evaluation.
 
-Production detections require:
-- ownership;
-- monitoring;
-- maintenance;
-- tuning;
-- revalidation;
-- eventual replacement or retirement.
+### Detection and enforcement are different defensive controls
+
+Detection asks whether the organization should create durable visibility or alerting for a behavior.
+
+Blocking, containment, prevention, and other enforcement actions belong to the control owners defined by the organization. The same evidence may inform both decisions without making them the same function.
+
+### Deployment begins production ownership
+
+Once an analytic reaches production, DE still owns monitoring, maintenance, tuning, revalidation, and eventual replacement or retirement.
+
+The lifecycle continues because telemetry, environments, adversary behavior, and operational needs change.
 
 ## 5. Integrated Review Exercise
 
-Use this A12 detection card:
+Use this **hypothetical Detection Engineering practice card based on A12 behavior**. The deployment result below is an exercise condition, not a canonical A12 outcome:
 
 > **Need:** durable detection for A12-style encoded PowerShell  
 > **Existing coverage:** partial; current analytic misses some variants  
@@ -344,4 +336,4 @@ Keep one final principle:
 
 This completes the **4.x Detection Engineering block**.
 
-**Next:** **Course Summary – Bringing the Defensive Workflow Together**.
+**Next:** [Course Summary – Bringing the Defensive Workflow Together](../../course-summary/student-guide.md).

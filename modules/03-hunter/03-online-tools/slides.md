@@ -2,7 +2,7 @@
 ## Slide Deck Content
 
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 10
+**Total Suggested Slides:** 11
 
 ---
 
@@ -47,12 +47,23 @@ resp_h 203.0.113.88 | resp_p 8080 | uri /update.exe | scoped time/population.
 
 ---
 
-### Slide 9 – Knowledge Check
+### Slide 9 – Actual platform use is separate evidence
+`3.3.1.1` requires real search + pivot in:
+- VirusTotal
+- ANY.RUN
+- urlscan.io
+- Silent Push
+
+Preserve seed, query, pivot, provenance, lead, and local test.
+
+---
+
+### Slide 10 – Knowledge Check
 External vs internal evidence? Query-plan fields? A12 conversion?
 
 ---
 
-### Slide 10 – Summary
+### Slide 11 – Summary
 Pivot externally; prove or disprove internally.
 
 

@@ -82,6 +82,12 @@ or:
 
 Then ask whether internal telemetry contains the same or related activity.
 
+### Platform use must be demonstrated separately
+
+This lesson teaches what the four platforms can contribute and how to turn their results into internal hunt leads. That preparation does **not** by itself satisfy `3.3.1.1`, whose approved verb is **perform**.
+
+Use the [External Tool Pivot Practical](external-tool-pivot-practical.md) to demonstrate actual searching and pivoting in VirusTotal, ANY.RUN, urlscan.io, and Silent Push. The practical requires preserved provenance and a local test derived from each platform result.
+
 ## 2. Knowledge Check
 
 1. Why is a VirusTotal relationship useful but not proof of internal activity?
@@ -94,4 +100,4 @@ External tools generate context and candidates. Hunting converts them into preci
 
 Carry forward the artifact **and** its context, then search the local telemetry that can actually answer the question.
 
-**Next:** **3.4.1 – Assessing CTI for Hunting Value**.
+**Next:** [3.4 – CTI as Hunt Input Preview](../04-cti-for-hunters/intro.md).

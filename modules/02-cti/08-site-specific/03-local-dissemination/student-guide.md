@@ -134,11 +134,11 @@ Learn the customer, channel, and handling path for the products you produce.
 
 When the map is missing, record that onboarding gap explicitly instead of substituting a convenient recipient or personal channel.
 
-This completes the **2.x CTI block**.
+This completes the **2.8 Local Application subunit**.
 
 
 ## Reference Model
 
 This module intentionally relies on the organization's **local customer, dissemination, handling, and partner-sharing guidance** as the source of truth.
 
-**Next:** Continue to [3.x – Threat Hunting](../../../03-hunter/00-intro/student-guide.md).
+**Next:** [2.8 – Local Application Summary](../summary.md).

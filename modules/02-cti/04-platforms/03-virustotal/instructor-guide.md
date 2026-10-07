@@ -28,17 +28,19 @@ Reference: [VirusTotal – Relationships](https://docs.virustotal.com/reference/
 
 Reference: [VirusTotal – File Behaviours](https://docs.virustotal.com/reference/file-object-behaviours)
 
-## Classroom Card
+## Separate Classroom Card — Not A12
 
-Seed: `update.exe` SHA256
+State explicitly that A12 does **not** supply a recovered sample, hash, or VirusTotal behavior record. These values are training-only.
+
+Seed: `sync-client.exe` SHA256
 
 Relations:
-- `203.0.113.88`
+- `198.51.100.77`
 
 Behavior:
-- `update.exe` starts;
+- `sync-client.exe` starts;
 - Temp file write;
-- connection to `203.0.113.88:8080`;
+- connection to `198.51.100.77:8080`;
 - no Run-key event shown.
 
 ## Common Student Challenges
@@ -54,7 +56,7 @@ Behavior:
 
 1. It establishes that VirusTotal records a relationship between the objects. Relevance, malicious control, and campaign relationship still require analysis.
 2. No. You can say the event was not observed on that report/card; sandbox coverage is conditional.
-3. Accept: relationship to `203.0.113.88`; behavior connection to `203.0.113.88:8080`, process start, or Temp write.
+3. Accept: relationship to `198.51.100.77`; behavior connection to `198.51.100.77:8080`, process start, or Temp write.
 
 ## References
 

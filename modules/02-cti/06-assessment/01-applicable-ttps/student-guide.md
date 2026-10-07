@@ -105,7 +105,7 @@ This keeps three decisions separate:
 2. Can it occur here?
 3. Can we currently observe it?
 
-### Do not copy the vendor ATT&CK appendix blindly
+### Validate Vendor ATT&CK Mappings Against the Reported Behavior
 
 A vendor's technique list can be useful, but the local extract should remain tied to the report's actual procedures.
 

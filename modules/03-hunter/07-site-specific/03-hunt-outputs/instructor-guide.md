@@ -23,12 +23,13 @@ Use this lesson to teach the reasoning skill in the student guide, not merely th
 |---|---:|
 | Context / prior-module connection | 3 min |
 | Core concepts | 10–12 min |
-| A12 or classroom application | 4–5 min |
+| Hypothetical A12-based classroom application | 4–5 min |
 | Knowledge check | 4 min |
 | Summary / transition | 2 min |
 
 ## Teaching Notes
 
+- Treat the host counts, visibility gap, detection gap, and follow-on lead in the student example as **hypothetical practice conditions, not canonical A12 outcomes**. Canonical A12 leaves the completed hunt result unspecified.
 - Reframe completion around local done criteria, not merely query completion.
 - Teach generic output categories as examples, not invented local policy.
 - Different findings can have different consumers; local hand-off map decides.

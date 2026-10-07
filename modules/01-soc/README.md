@@ -14,6 +14,18 @@ This sequence develops the evidence and decisions used in SOC work: interpret en
 | 1.5 | Report purpose, timing, and distribution. |
 | 1.6 | Section synthesis: reconnect evidence, investigation, and handoff; bridge into CTI. |
 
+## Skim-first subunit wrappers
+
+Use each introduction as an advance organizer and each summary as an end-state check.
+
+| Unit | Introduction | Summary |
+|---|---|---|
+| **1.1 – Endpoint Activity** | [Preview](01-endpoint/intro.md) | [Confirm](01-endpoint/summary.md) |
+| **1.2 – Zeek Network Evidence** | [Preview](02-zeek/intro.md) | [Confirm](02-zeek/summary.md) |
+| **1.3 – Detection Rules** | [Preview](03-detection/intro.md) | [Confirm](03-detection/summary.md) |
+| **1.4 – Alert Investigation and Assessment** | [Preview](04-alerts/intro.md) | [Confirm](04-alerts/summary.md) |
+| **1.5 – Reporting and Notification** | [Preview](05-reporting/intro.md) | [Confirm](05-reporting/summary.md) |
+
 ## Module index
 
 | Module | Student guide | Instructor guide | Slides |

@@ -39,7 +39,7 @@ Activities may be mixed or incompletely observed. Choose the category supported 
 
 ## 2. Comparing similar cases
 
-The course PowerShell example runs under `jlee` with a recorded Medium integrity, non-elevated context. That supports user-level activity for this event. It does not prove that the account lacks every administrative membership or that no privileged activity occurred elsewhere.
+A separate classroom PowerShell example (not A12) runs under `labuser` with a recorded Medium integrity, non-elevated context. That supports user-level activity for this event. It does not prove that the account lacks every administrative membership or that no privileged activity occurred elsewhere.
 
 If another supplied event establishes SYSTEM execution, privileged activity is supported for that event. A process name or “service” label alone is insufficient to make that change.
 
@@ -54,7 +54,7 @@ This comparison is a reasoning check. It does not require all possible categorie
 ## Knowledge Check
 
 1. Name the four syllabus categories and explain how Other is used.
-2. Categorize the supplied non-elevated jlee event and explain why root-level is unsupported.
+2. Categorize the supplied non-elevated labuser event and explain why root-level is unsupported.
 3. How would you distinguish a port sweep from a failed login, and why is HTTP 401 alone insufficient?
 
 ## Summary

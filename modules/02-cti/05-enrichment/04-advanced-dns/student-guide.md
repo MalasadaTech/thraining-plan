@@ -104,7 +104,7 @@ If the nameservers belong to a huge managed-DNS provider and the IP is shared ho
 
 DNS pivots are most reliable when **multiple independent, distinctive features converge**.
 
-### Do not promote one address to an entire network
+### Keep Infrastructure Claims at the Scope the DNS Evidence Supports
 
 If two domains resolve to `203.0.113.88`, that supports a relationship involving that address at the observed time.
 

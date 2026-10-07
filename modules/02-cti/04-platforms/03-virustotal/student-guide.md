@@ -50,11 +50,11 @@ VirusTotal's API documentation describes relationships as links or dependencies 
 
 A useful analyst statement is:
 
-> VirusTotal relates the seed file to `203.0.113.88`; investigate whether that relationship is relevant to A12.
+> VirusTotal relates the seed file to `198.51.100.77`; investigate whether that relationship is relevant to A12.
 
 That is stronger than:
 
-> `203.0.113.88` is adversary infrastructure because VirusTotal shows it.
+> `198.51.100.77` is adversary infrastructure because VirusTotal shows it.
 
 The second statement skips the required contextual evaluation.
 
@@ -75,13 +75,13 @@ A behavior report describes what that sandbox observed under its particular envi
 
 So:
 
-> Sandbox report observed `update.exe` contacting `203.0.113.88:8080`.
+> Sandbox report observed `sync-client.exe` contacting `198.51.100.77:8080`.
 
 is evidence.
 
 It is not the same as:
 
-> Every execution of `update.exe` will contact that address.
+> Every execution of `sync-client.exe` will contact that address.
 
 ### Different sandboxes can produce different observations
 
@@ -95,26 +95,28 @@ A behavior absent from one sandbox report may be:
 
 “Not observed” is narrower than “does not occur.”
 
-### Classroom card
+### Separate classroom card — not A12
 
-Seed: SHA256 for `update.exe`
+This training-only card is **not canonical A12**. A12 does not provide a recovered `update.exe` sample, a SHA256, or VirusTotal behavior. The supplied values below exist only to practice Relations/Behavior interpretation.
+
+Seed: SHA256 for `sync-client.exe`
 
 The classroom card shows:
 
 **Relations**
-- contacted IP: `203.0.113.88`
+- contacted IP: `198.51.100.77`
 
 **Behavior**
-- process: `update.exe` started;
+- process: `sync-client.exe` started;
 - file: write under a Temp path;
-- network: connection to `203.0.113.88:8080`;
+- network: connection to `198.51.100.77:8080`;
 - no registry Run-key event shown.
 
 Defensible outputs:
 
-> **Relationship candidate:** VirusTotal links the file to `203.0.113.88`.
+> **Relationship candidate:** VirusTotal links the file to `198.51.100.77`.
 
-> **Sandbox observation:** the behavior report recorded a connection to `203.0.113.88:8080`.
+> **Sandbox observation:** the behavior report recorded a connection to `198.51.100.77:8080`.
 
 > **Registry:** no Run-key event is shown on this card.
 
@@ -133,7 +135,7 @@ This lesson focuses on:
 
 1. VirusTotal relates a file to an IP. What does that establish, and what still needs analysis?
 2. A Behavior report does not show a registry persistence event. Can you conclude the file never uses registry persistence? Why or why not?
-3. From the A12 classroom card, write one valid Relations finding and one valid Behavior finding.
+3. From the separate classroom card, write one valid Relations finding and one valid Behavior finding.
 
 ## 3. Summary
 

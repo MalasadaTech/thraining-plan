@@ -121,4 +121,4 @@ A good collection plan explains **what evidence is needed and why**, not merely 
 - 2.8.2.1 – Local collection requests
 - 0.7 / 2.4 / 2.4 – Tool survey, TIP, and platform depth
 
-**Next:** [2.2.1 – Estimative language](../../02-tradecraft/01-estimative-language/student-guide.md).
+**Next:** [2.1 – Intelligence Foundations and Requirements Summary](../summary.md).

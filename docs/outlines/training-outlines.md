@@ -10,7 +10,7 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 **Stay in this lesson:** a short note under a unit or child says what this lesson is *not*. It is not extra syllabus. Follow it when writing or revising the lesson. How to write the lesson is [generate-module.md](../generate-module.md).
 
-**Teach order:** `0` (includes `0.6`–`0.8`) → SOC `1` → **CTI `2`** → hunt `3` → DE `4`. This file is in that order. Folders: `02-cti`, `03-hunter`.
+**Teach order:** `0` (includes `0.6`–`0.9`, then synthesis `0.10`) → SOC `1` → **CTI `2`** → hunt `3` → DE `4`. This file is in that order. Folders: `02-cti`, `03-hunter`.
 
 ---
 
@@ -18,37 +18,37 @@ These rules apply across SOC Analyst, Threat Hunter, CTI Analyst, and Detection 
 
 Everyone (SOC, Hunter, CTI, DE). Lessons live under `modules/00-intro/`. This whole section is taught **before SOC 1.1**. One possible way work moves. Not “the” way every shop runs. No DYA ticket names, PIR lists, or approval chains.
 
-Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`**. Tool survey is **`0.7`**. Environment / signal flow is **`0.8`**. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
+Write only the asked child unless asked for the whole intro. Frameworks are **`0.6`**. Tool survey is **`0.7`**. Environment / signal flow is **`0.8`**. Common initial access is **`0.9`**. The shared-foundations synthesis is **`0.10`** and adds no proficiency requirement. Retired from this block: `1.7`, `1.8.3`, `1.8.4`, `1.8.5` (and `1.8.2`). The companion story at the end is this outline again, as one incident.
 
 **0.1 [K] How this course is laid out**  
 Stay in this lesson: the layout of the course. Not what a SOC is (`0.2`). Not the jobs (`0.3`). Not the hand-off (`0.4.1`).
 
 a. Front door, then shared lessons that apply to every role, then four tracks: SOC analyst, CTI, hunting, detection engineers  
 b. Inside SOC, detections *are* before the alert queue. SOC ends at reporting (`1.5`). The RFI is the door into CTI  
-c. After this intro and still before SOC: frameworks, tool survey, and environment / signal flow. Those apply to everyone. Role-local hunt / CTI / DE lists come later and differ by shop  
-d. This course uses one company and one adversary as fiction. Those names come in the next lesson. After the lessons, a companion story retells the same flow as one incident  
+c. After this intro and still before SOC: frameworks, tool survey, environment / signal flow, and common initial-access paths. Those apply to everyone. Role-local hunt / CTI / DE lists come later and differ by shop  
+d. This course uses one company (DYA) and one vendor tracking label (PRD) as fiction. PRD is source context, not automatically a proven actor identity. After the lessons, a companion story retells the same flow as one incident  
 
 **0.2 [K] What a SOC is**  
 a. A place that watches for bad or suspicious activity and starts the response  
 b. It is a team sport: more than one job sits in or next to the SOC  
-c. This course uses one company (DYA) and one adversary (PRD). Those are fiction, not your site’s policy  
+c. This course uses one company (DYA) and one vendor tracking label (PRD). Those are fiction, not your site’s policy; the label does not by itself establish actor identity  
 
 **0.3 [K] Jobs in one sentence**  
 a. **SOC analyst** — work the alert in front of you; start the hand-offs  
 b. **Incident response** — contain and recover (this course points at them; it does not train IR)  
-c. **CTI analyst** — answer the RFI; add context; find more of the adversary  
+c. **CTI analyst** — answer the RFI; add context; develop supported related activity or infrastructure  
 d. **Threat hunter** — look for more activity the alerts missed, from a hunt package or a hypothesis  
-e. **Detection engineer** — turn what we learned into lasting rules  
-f. **Firewall / IA** — block what intel names (a hand-off, not a track in this course)  
+e. **Detection engineer** — review what we learned for reusable detection coverage and decide whether a change is warranted  
+f. **Firewall / IA / protective-control owner** — review candidate infrastructure for blocking, monitoring, or no action under local policy (a hand-off, not a track in this course)  
 
 **0.4 [K] How work can move**  
 a. An analyst gets an alert and triages it  
 b. They send it to incident response and notify leadership  
 c. They ask intel for more work on that alert (an RFI)  
 d. Intel works the RFI, enriches it, and may find more adversary infrastructure  
-e. Extra infrastructure can go to whoever blocks (firewall / IA)  
+e. Candidate infrastructure can go to the protective-control owner for review under local policy  
 f. Intel can also hand hunters a hunt package  
-g. That same package can go to detection engineers to write or tune rules (MDE, YARA, Suricata, SIGMA, and so on)  
+g. That same package can go to detection engineers to assess existing coverage and decide whether to add, change, or leave detection coverage as-is  
 
 **0.4.1 [T] Tasks**  
 1. Given a step in the flow, name the next hand-off and whose product it is (not how your site files the ticket)
@@ -78,7 +78,7 @@ Stay in this lesson: four vertices and the weakest one. Not attribution (**2.7**
 
 a. Purpose: organize what you know so you can see what you do **not** know. Not a verdict  
 b. The four vertices: Adversary, Capability, Infrastructure, Victim  
-c. Fill all four from evidence you have. Name the **weakest** vertex (least evidence) — that is the next question, not a guess. A vendor or course-fiction name is not Adversary evidence  
+c. Fill all four from evidence you have. Name the **weakest** vertex (least evidence) as an evidence gap and a **candidate** follow-up question. Choose the actual next question based on the investigation’s purpose and priorities. A vendor or course-fiction name is not Adversary evidence  
 
 **0.6.2.2 [T] Diamond Model tasks**  
 1. Apply the Diamond Model to an incident or set of indicators: fill the four vertices and state which vertex is weakest  
@@ -103,7 +103,7 @@ b. When to use each tool
 1. Select the appropriate external tool for a given enrichment or analysis need  
 
 **0.8 [K] Environment / signal flow**  
-Taught after `0.7`, still before SOC. All four roles. Lessons live under `modules/00-intro/08-environment/`. Stay in this lesson: why every role must know the site’s infrastructure and how signal flows, and how to tell two *kinds* of fact apart. These are questions you take to **your shop**. Do **not** invent a site card, spans, ticket names, or DYA / Harbor architecture. Not Zeek field reading (`1.2`). Not host-observed network (`1.1.4`). **Retired:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
+Taught after `0.7`, still before SOC. All four roles. Lessons live under `modules/00-intro/08-environment/`. Stay in this lesson: why every role must know the site’s infrastructure and how signal flows, and how to tell two *kinds* of fact apart. These are questions you take to **your shop**. Do **not** invent a site card, spans, ticket names, or DYA architecture. Not Zeek field reading (`1.2`). Not host-observed network (`1.1.4`). **Retired:** `1.7`, `1.8.2`, `1.8.3`, `1.8.4`, `1.8.5`.
 
 a. Path to the internet / network egress points  
 b. Key network segments and data flow  
@@ -116,11 +116,29 @@ g. PCAP collection points / sensors
 **0.8.1 [T] Environment / signal flow tasks**  
 1. Identify which kind of fact applies to a given situation and why it is not the adjacent kind  
 
+**0.9 [K] Common Initial Access Paths**  
+Taught after `0.8`, still before SOC. All four roles. Lesson lives under `modules/00-intro/09-initial-access/`. Stay in this lesson: recognize common entry paths, reason from supplied evidence, and keep successful access separate from exposure, delivery, or an attempt. Deep endpoint fields are `1.1`; Zeek/protocol fields are `1.2`; alert investigation is `1.4`; CTI production is `2.x`; hunt development is `3.x`; detection design is `4.x`.
+
+a. **Initial Access** is the adversary objective of gaining an initial foothold. An observed delivery mechanism, vulnerable system, or login path does not automatically establish successful adversary access.  
+b. **Phishing / malspam**: attachments, links, and messages/services used to reach a user. Distinguish message delivery from click/open, execution, and compromise.  
+c. **Exploit public-facing application / exposed service**: an Internet-facing weakness or misconfiguration may create an access path. Vulnerability presence or an exploit request is weaker than evidence the exploit succeeded.  
+d. **Web-based access**: drive-by compromise, watering-hole activity, malvertising, and search/SEO poisoning can bring a user to adversary-controlled content. Treat the lure or route separately from the evidence that exploitation or execution succeeded.  
+e. **Valid accounts / external remote services**: an external login can provide access without malware. A successful login proves account use; authorization and adversary control still require context.  
+f. **Trusted relationships / supply chain**: third-party access, dependencies, updates, or delivery mechanisms can become entry paths. Exposure to the relationship does not establish that it was used for A12 or another case.  
+g. Evidence progression: **exposure or delivery → interaction / access attempt → evidence of successful access → later execution or follow-on behavior**. State only the strongest step the evidence supports.  
+h. Typical evidence sources include mail/security-gateway records, identity/authentication and remote-access logs, proxy/DNS/HTTP evidence, public-facing application/WAF/service logs, endpoint file/process evidence, and vulnerability/patch context.
+
+**0.9.1 [T] Initial Access Evidence and Reasoning Tasks**  
+1. Given a short incident or intelligence scenario, identify the most defensible initial-access path or state that it remains unresolved; cite the supporting evidence, state what is not yet established, and name the next evidence source or question that would strengthen or reject the hypothesis.
+
+**0.10 Shared Foundations Section Summary**  
+Synthesis/navigation only. No proficiency mapping. Reconnect course map → roles → handoffs → frameworks → tools → environment → initial access, then transition into SOC evidence interpretation.
+
 ---
 
 # 1. SOC Analyst Fundamentals
 
-After the full `00` block (`0.1`–`0.8`). This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.5**. **SOC ends at 1.5 reporting.** The RFI is the door into CTI. The next section is **2. CTI Analyst**.
+After the full `00` block (`0.1`–`0.9`) and the `0.10` synthesis. This section is **1.1** → **1.2** → **1.3** → **1.4** → **1.5**. **SOC ends at 1.5 reporting.** The RFI is the door into CTI. The next section is **2. CTI Analyst**.
 
 **1.1 [K/T] Endpoint Logs**
 
@@ -196,7 +214,7 @@ d. How this shows up: Sysmon 6 / 7; MDE `DeviceImageLoadEvents`
 
 **1.2 [K/T] Zeek and Zeek Engines**
 
-Network-sensor telemetry. **1.1** is host and endpoint activity (logs from the host). Stay in this lesson: this is not a PCAP analysis course. PCAP is mentioned on **1.2.1** (why you pull it). Applying PCAP against an alert is **1.4.1**. Where sensors sit is **0.8.g**. Download / view is **1.8.3** if the shop lists them.
+Network-sensor telemetry. **1.1** is host and endpoint activity (logs from the host). Stay in this lesson: this is not a PCAP analysis course. PCAP is mentioned on **1.2.1** (why you pull it). Applying PCAP against an alert is **1.4.1**. Where sensors sit is **0.8.g**. PCAP download/view procedures are site-specific and should come from the learner’s actual organization; retired `1.8.3` is not an active destination.
 
 **1.2.1 [K] Zeek concepts**  
 Stay in this lesson: what Zeek is, how engines extract, and that PCAP is the usual next artifact. Not Wireshark. Not site download path. Not **1.4.1**.
@@ -282,7 +300,7 @@ c. Connection UID (linking to other Zeek logs)
 1. Analyze a Zeek weird log and accurately describe what occurred  
 2. Create a SIEM query to detect specific weird activity  
 
-**1.3 [T] Detection Engineering**
+**1.3 [T] Detection Rules**
 
 Rule *syntax* and a first read/write. How detections are run as a service is **4.x**. Write only the asked child (SIGMA, Suricata, YARA, or SIEM).
 
@@ -326,7 +344,7 @@ c. Matching techniques: regex and wildcards
 
 **1.4 [K/T] Alerts**
 
-Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it. **1.4.1.e** applies PCAP against the alert. Why you pull PCAP is **1.2.1**. Sensors are **0.8.g**. Download / view is **1.8.3** if the shop lists them.
+Alert handling. Detection *authoring* is 1.3. Five units: investigate (`1.4.1`), classify (`1.4.2`), FP causes (`1.4.3`), categorize (`1.4.4`), SLA clocks (`1.4.5`). Do not collapse FP causes into classification. Do not write the next `1.4` child when asked for one. Each knowledge item has its own tasks; tasks apply the knowledge, they do not restate it. **1.4.1.e** applies PCAP against the alert. Why you pull PCAP is **1.2.1**. Sensors are **0.8.g**. PCAP download/view follows the learner’s actual local procedure; retired `1.8.3` is not an active course unit.
 
 **1.4.1 [K] Alert context and investigation**  
 Stay in this lesson: gather context, including VirusTotal on a hash, IP, or domain you already have (**0.7**). Not platform depth / Relations (**2.4**). Not a live-account lab.
@@ -939,7 +957,7 @@ c. What “actionable for a hunt” means (question, telemetry, scope)
 
 **3.4.2 [K] Extracting hunt leads from CTI**  
 a. TTPs vs IOCs vs behaviors — which can drive a hunt  
-b. What to drop (no telemetry, expired IOCs, noise)  
+b. What not to execute as a current hunt lead: insufficient visibility, indicators that are actually expired/invalid, or noise. Preserve relevant but unobservable procedures as visibility gaps rather than discarding the intelligence  
 c. Record ATT&CK IDs if the report has them (mapping hunts is 3.5)  
 
 **3.4.2.1 [T] Tasks**  
@@ -1015,7 +1033,7 @@ Taught last: intro → shared floor → SOC → CTI → hunting → this section
 
 SOC, hunt, and CTI may **nominate** a detection. The nomination does not need to be perfect. DE reviews it, makes it sound, tunes it, meets shop requirements (meta fields and the like), and deploys.
 
-Extra adversary infrastructure from intel is a **block** for firewall / IA, not a DE job. “We blocked X — do we still need a rule?” is lifecycle, not running the firewall.
+Candidate adversary infrastructure from intel goes to the protective-control owner for a block/monitor/no-action decision under local policy; that enforcement decision is not a DE job. “We blocked X — do we still need a rule?” is lifecycle, not running the firewall.
 
 Do not invent DYA meta-field lists, change boards, or deploy tickets. Those vary by site (**4.8**). Write only the asked `4.1`–`4.7` child. `4.8` is one teaching unit when asked for `4.8` or both children.
 

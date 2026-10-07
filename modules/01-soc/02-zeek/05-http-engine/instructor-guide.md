@@ -49,9 +49,11 @@ Explain why Host plus URI can still leave scheme or port uncertain. Emphasize th
 
 ### 2. Working through the example
 
+Treat this as a **separate classroom HTTP record, not A12**.
+
 Ask what evidence would establish file contents and what would establish execution. Preserve the distinction between the two.
 
-**Key point to reinforce:** GET /update.exe receives status 200. That establishes neither the returned file’s identity nor its execution.
+**Key point to reinforce:** GET /package.bin receives status 200. That establishes neither the returned file’s identity nor its execution.
 
 ### 3. Creating a focused HTTP query
 
@@ -65,13 +67,13 @@ Compare exact path, path-plus-query, and a different path containing the same fi
 
 **Expected answer:** Host identifies the requested host name as recorded in the header; the IP identifies the network destination; URI identifies the requested resource.
 
-### 2. What does the example establish, and does it prove update.exe ran?
+### 2. What does the example establish, and does it prove package.bin ran?
 
 **Expected answer:** It establishes the observed GET request and 200 response. It does not establish the content’s identity, saving to disk, or execution.
 
-### 3. Would uri == "/update.exe" match /update.exe?id=1? How could you broaden it?
+### 3. Would uri == "/package.bin" match /package.bin?id=1? How could you broaden it?
 
-**Expected answer:** No. A scoped alternative such as `uri == "/update.exe" or uri startswith "/update.exe?"` includes the exact path with a query string without matching every occurrence of the name.
+**Expected answer:** No. A scoped alternative such as `uri == "/package.bin" or uri startswith "/package.bin?"` includes the exact path with a query string without matching every occurrence of the name.
 
 ## Assessment Guidance
 

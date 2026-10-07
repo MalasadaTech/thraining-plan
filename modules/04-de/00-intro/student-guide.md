@@ -187,13 +187,15 @@ For example:
 
 The exact team names and approval paths are local and are taught in 4.8.
 
-## 10. The A12 Detection Lifecycle
+## 10. Hypothetical A12-Based Detection Lifecycle
 
-One A12 example can show the entire 4.x block.
+Canonical A12 reaches a **Detection Engineering coverage review**. It does **not** specify whether DE builds or changes an analytic, validates it, deploys it, monitors it, or later retires it.
+
+The sequence below is a **hypothetical practice extension based on A12 behavior** so you can see the complete 4.x lifecycle without turning those downstream steps into A12 facts.
 
 ### Need
 
-Threat hunting identifies recurring encoded PowerShell and a persistence pattern.
+For this practice extension, assume hunting reports recurring encoded PowerShell and a persistence pattern. That assumed hunt result is an exercise condition, not a canonical A12 outcome.
 
 ### Coverage Decision
 
@@ -227,7 +229,7 @@ Tune narrow benign conditions, update logic when behavior changes, or replace th
 
 Remove or supersede the analytic when it no longer provides enough value.
 
-That is a complete detection-engineering story.
+That is a complete **practice** detection-engineering story. The canonical A12 case still stops at coverage review.
 
 ## 11. What You Need to Remember Before 4.1
 

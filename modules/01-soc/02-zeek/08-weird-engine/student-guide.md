@@ -71,7 +71,7 @@ A weird record supplies a named condition and any available connection context. 
 
 Previous: [1.2.7 – Files Engine](../07-files-engine/student-guide.md)
 
-Next: [1.3.1 – SIGMA Rules](../../03-detection/01-sigma-rules/student-guide.md)
+Next: [1.2 – Zeek Network Evidence Summary](../summary.md)
 
 [1.x module index](../../README.md)
 

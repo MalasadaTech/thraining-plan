@@ -37,9 +37,9 @@ A SOC can operate with staff in one location, across multiple locations, or thro
 
 ## 3. The setting used in this course
 
-**Dixon, Yamada, & Associates (DYA)** is the fictional law firm used in the lessons. **Pink River Dolphin (PRD)** is the fictional adversary name. These names let later examples refer to a consistent setting without introducing a new organization each time.
+**Dixon, Yamada, & Associates (DYA)** is the fictional law firm used in the lessons. **Pink River Dolphin (PRD)** is the fictional vendor tracking label used in the scenario. These names let later examples refer to a consistent setting without introducing a new organization each time.
 
-The scenario supplies facts for teaching. Your employer's procedures, approval paths, and system details must come from your employer. When a lesson presents evidence, use the evidence supplied at that point; knowing the fictional adversary's name does not establish who caused a particular event.
+The scenario supplies facts for teaching. Your employer's procedures, approval paths, and system details must come from your employer. When a lesson presents evidence, use the evidence supplied at that point; seeing a vendor tracking label does not establish who caused a particular event.
 
 ## Knowledge Check
 

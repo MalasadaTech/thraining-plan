@@ -58,13 +58,15 @@ Require a plausible alternative and a concrete reason. Permit uncertainty when t
 
 **Key point to reinforce:** State the category, evidence, and why a plausible alternative is less supported.
 
+**Teaching boundary:** the non-elevated `labuser` PowerShell record is a separate classroom example, not A12.
+
 ## Knowledge Check — Answer Key
 
 ### 1. Name the four syllabus categories and explain how Other is used.
 
 **Expected answer:** Scanning/reconnaissance, root-level access, user-level access, and unsuccessful activity; Other uses an actual local category and definition.
 
-### 2. Categorize the supplied non-elevated jlee event and explain why root-level is unsupported.
+### 2. Categorize the supplied non-elevated labuser event and explain why root-level is unsupported.
 
 **Expected answer:** User-level activity for this event, based on the supplied execution context. No privileged execution is established by the encoding argument.
 

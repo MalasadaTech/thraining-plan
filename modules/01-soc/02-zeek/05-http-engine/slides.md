@@ -39,17 +39,19 @@ Read method, Host, URI, User-Agent, response status, endpoints, and transaction 
 
 ---
 
-## Working through the example
+## Working through the example — separate classroom record
 
-GET /update.exe receives status 200. That establishes neither the returned file’s identity nor its execution.
+**Not A12.**
+
+GET /package.bin receives status 200. That establishes neither the returned file’s identity nor its execution.
 
 **Speaker notes:** Ask what evidence would establish file contents and what would establish execution. Preserve the distinction between the two.
 
 ---
 
-## Supplied example
+## Supplied example — separate classroom record
 
-The supplied record shows `GET /update.exe` from `192.0.2.10` to `203.0.113.88:8080`, `status_code=200`, and no recorded Host or User-Agent.
+The supplied record shows `GET /package.bin` from `192.0.2.10` to `198.51.100.60:8080`, `status_code=200`, and no recorded Host or User-Agent.
 
 **Speaker notes:** Ask what evidence would establish file contents and what would establish execution. Preserve the distinction between the two.
 
@@ -66,8 +68,8 @@ Exact URI and path-plus-query matching return different results. Choose and expl
 ## Reference — Creating a focused HTTP query
 
 | where TimeGenerated > ago(1d)
-| where method == "GET" and uri == "/update.exe"
-| where ['id.resp_h'] == "203.0.113.88" and ['id.resp_p'] == 8080
+| where method == "GET" and uri == "/package.bin"
+| where ['id.resp_h'] == "198.51.100.60" and ['id.resp_p'] == 8080
 | project TimeGenerated, uid, ['id.orig_h'], host, uri,
 
 **Speaker notes:** Compare exact path, path-plus-query, and a different path containing the same filename. Have learners explain their intended scope. Use the surrounding student-guide explanation to interpret the table and its limits.
@@ -79,8 +81,8 @@ Exact URI and path-plus-query matching return different results. Choose and expl
 ```kusto
 ZeekHttp
 | where TimeGenerated > ago(1d)
-| where method == "GET" and uri == "/update.exe"
-| where ['id.resp_h'] == "203.0.113.88" and ['id.resp_p'] == 8080
+| where method == "GET" and uri == "/package.bin"
+| where ['id.resp_h'] == "198.51.100.60" and ['id.resp_p'] == 8080
 | project TimeGenerated, uid, ['id.orig_h'], host, uri,
           user_agent, status_code
 ```
@@ -92,8 +94,8 @@ ZeekHttp
 ## Knowledge check
 
 1. How do the Host header, destination IP, and URI differ?
-2. What does the example establish, and does it prove update.exe ran?
-3. Would uri == "/update.exe" match /update.exe?id=1? How could you broaden it?
+2. What does the example establish, and does it prove package.bin ran?
+3. Would uri == "/package.bin" match /package.bin?id=1? How could you broaden it?
 
 **Speaker notes:** Ask learners to explain their reasoning. Use the [instructor answer key](instructor-guide.md#knowledge-check--answer-key) for feedback.
 

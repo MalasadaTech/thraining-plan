@@ -32,8 +32,10 @@ Compromise | detection coverage | intelligence | telemetry | follow-on lead.
 
 ---
 
-### Slide 6 – A12 example
-More hosts found + coverage gap + visibility gap + follow-on lead.
+### Slide 6 – Hypothetical A12-based practice
+**Not canonical A12 results**
+
+Practice conditions: more hosts found + coverage gap + visibility gap + follow-on lead.
 
 ---
 

@@ -74,7 +74,7 @@ Ask:
 
 For A12, `203.0.113.88` may be useful as evidence or short-term context. A behavioral analytic around suspicious encoded PowerShell or unusual user-level autorun creation may survive infrastructure rotation better.
 
-### Do not turn the whole infrastructure set into a detection or block list
+### Route Infrastructure Findings According to the Defensive Need
 
 A package may contain candidate related infrastructure.
 

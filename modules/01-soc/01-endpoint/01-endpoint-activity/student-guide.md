@@ -61,7 +61,7 @@ Identify the recorded operation, then use the fields and coverage of its source 
 
 ## Course Connections
 
-Previous: [0.8 — Environment / signal flow](../../../00-intro/08-environment/01-orientation/student-guide.md)
+Previous: [1.1 – Endpoint Evidence Preview](../intro.md)
 
 Next: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)
 

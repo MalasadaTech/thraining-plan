@@ -38,6 +38,10 @@ The lesson uses static cards. Operational live submission should follow local po
 ### Machine-readable evidence matters
 Redirect chains and requested hosts often provide stronger infrastructure pivots than screenshots alone.
 
+## Practice-Card Boundary
+
+The static urlscan result is **separate classroom evidence, not A12**. Its redirect, title, hosts, and IP exist only for the exercise and must not be promoted into the recurring case.
+
 ## Common Student Challenges
 
 | Challenge | Coaching response |
@@ -50,7 +54,7 @@ Redirect chains and requested hosts often provide stronger infrastructure pivots
 ## Knowledge Check – Answer Key
 
 1. Web content and routing can change by time/environment; the result describes one scan.
-2. No. Common analytics is likely third-party infrastructure; the rare A12-associated domain is a candidate that merits enrichment.
+2. No. Common analytics is likely third-party infrastructure; the rare host from the supplied classroom card is a candidate that merits enrichment.
 3. Examples: final URL, title, redirect status/chain, requested domains/IPs/URLs, primary IP, certificate data, screenshot, DOM, HTTP responses.
 
 ## References

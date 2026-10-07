@@ -29,23 +29,37 @@ Do these first (course order and story):
 
 Then:
 
-- [x] Explore a fictional back story — an ongoing theme, like the Night Owl story and Harbor company already in the lessons
+- [x] Build the recurring fictional A12 story around Pink River Dolphin (PRD) and Dixon, Yamada, & Associates (DYA)
 - [x] Review for chances to re-order things
 - [x] Put a “when each fact appears” map in the story bible (alert vs notify vs CTI vs hunt vs DE)
 - [x] Keep [docs/story-bible.md](story-bible.md) current as training develops
-- [x] Decide leftover Harbor map items that do not fit a law firm (OT, payroll) — OT and payroll are not A12 plot; see story bible
-- [ ] Rename Night Owl → Pink River Dolphin (PRD) and Harbor → Dixon, Yamada, & Associates (DYA) in the lessons
+- [x] Decide which legacy pre-DYA environment examples belong outside the law-firm scenario — OT and payroll are not A12 plot; see story bible
+- [x] Rename legacy Night Owl / Harbor references in active lessons to Pink River Dolphin (PRD) / Dixon, Yamada, & Associates (DYA)
 - [x] Write the companion story (see [companion-story/](companion-story/))
-- [ ] Add common **initial access** material (malspam / phishing, CVE exploits, watering hole, SEO poisoning, drive-by download, and the like). Gate 1 first — do not invent IDs. Then develop it into the [companion story](companion-story/) (bible first, then the story; do not invent a second plot)
-- [x] Shared floor in `00-intro`, taught before SOC: frameworks, tool survey, environment. Retired `1.7`, `1.8.2`–`1.8.5`. SOC ends at 1.5.
-- [x] Rewrite `0.8` (00.08): why every role must understand infrastructure and signal flow. Do **not** invent a site card / Harbor architecture.
+- [x] Add common **initial access** material (malspam / phishing, CVE exploits, watering hole, SEO poisoning, drive-by download, valid accounts/remote services, trusted relationships, and supply chain). Approved as shared module `0.9`; A12 keeps the entry path unresolved rather than inventing a second plot.
+- [x] Shared floor in `00-intro`, taught before SOC: frameworks, tool survey, environment, initial access, then the 0.10 summary. Retired `1.7`, `1.8.2`–`1.8.5`; SOC instructional units end at 1.5 and close with the 1.6 summary.
+- [x] Rewrite `0.8` (00.08): why every role must understand infrastructure and signal flow. Keep site-specific architecture tied to the learner's real organization rather than inventing a DYA site card.
 - [x] Voice rewrite: templates + all 0.x–4.x lessons so student-facing text stands alone (this lesson, not this hour)
-- [ ] Review everything and make sure it makes sense
-- [ ] Check the reference links that are already there
-- [ ] Look for places to add more reference links
+- [x] Add skim-first / advance-organizer authoring standard and subunit intro/summary templates
+- [x] Add intro + summary wrappers to every meaningful multi-lesson subunit
+- [x] Reconcile and rewrite the canonical A12 story sources to the current evidence model and learner voice
+- [x] Rebuild the Markdown ebook with the new wrappers and reconciled Appendix A
+- [x] Deprecate the Gemini split-export workflow in favor of `ebook/ebook-manuscript.md`
+- [x] Review everything and make sure it makes sense
+- [x] Implement approved coherence corrections in dependency order
+  - [x] Lock A12 scenario-governance standard
+  - [x] Lock qualification demonstration/sign-off standard
+  - [x] Build the 147-row qualification evidence map
+  - [x] Correct authoritative source-of-truth findings
+  - [x] Repair affected learner/instructor/slide artifacts
+  - [x] Repair Previous/Next navigation through wrappers and role summaries
+  - [x] Rebuild and QA the Markdown ebook
+  - [x] Re-run course coherence review and close Issues / resolve Frictions
+- [x] Check the reference links that are already there
+- [x] Look for places to add more reference links
 
 ## Companion story
 
 Moved to [companion-story/](companion-story/). The nine-beat spine is in [companion-story/outline.md](companion-story/outline.md). The finished retelling is [companion-story/story.md](companion-story/story.md).
 
-Later: fold common initial access (malspam / phishing, CVE exploits, watering hole, SEO poisoning, drive-by download) into the story after it is on the outline and in the [story bible](story-bible.md).
+Initial access is now folded into the shared curriculum and A12 canonical sources. The case intentionally leaves the actual A12 entry path unresolved until evidence is supplied.

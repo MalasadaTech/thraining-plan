@@ -1,7 +1,7 @@
 # Module 4.2 – Sound Detections
 ## Slide Deck Content
 
-**Total Suggested Slides:** 9
+**Total Suggested Slides:** 10
 
 ### Slide 1 – Title
 **Sound Detection Engineering**  
@@ -41,7 +41,7 @@ Reference: [CTID detection validation](https://ctid.mitre.org/blog/2025/08/04/le
 ### Slide 7 – Local requirements
 Public formats ≠ local deployment policy.
 
-Use the list from 4.8.
+Learn the check here; complete `4.2.2` only after 4.8 provides the verified local list.
 
 ### Slide 8 – Close the loop
 Shipped  
@@ -51,7 +51,14 @@ Retired / superseded
 
 Explain meaningful changes.
 
-### Slide 9 – Knowledge Check
+### Slide 9 – Run the validation practical
+`4.2.1` requires an executed test:
+- target behavior
+- benign near-neighbor
+- data path
+- PASS / CHANGE / FAIL-HOLD decision
+
+### Slide 10 – Knowledge Check
 1. Three test categories?  
 2. Why can logic be right but detection fail?  
 3. Does Sigma define local policy?

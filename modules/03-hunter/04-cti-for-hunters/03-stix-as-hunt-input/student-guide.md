@@ -76,7 +76,7 @@ Use STIX structure to preserve **what the lead is and why it is related**.
 
 Indicator patterns and observed cyber-observables often provide direct query material. Attack Patterns provide behavior. Context objects provide scope and priority.
 
-**Next:** **3.5.1 – Using MITRE ATT&CK for Hunt Planning**.
+**Next:** [3.4 – CTI as Hunt Input Summary](../summary.md).
 
 ## Supporting Reference
 

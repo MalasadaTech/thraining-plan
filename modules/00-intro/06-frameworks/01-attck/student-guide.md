@@ -14,7 +14,7 @@ By the end of this module, you will be able to:
 
 1. Explain the purpose and structure of ATT&CK.
 2. Distinguish a tactic, technique, and sub-technique.
-3. Map one observed behavior and cite the evidence supporting the mapping.
+3. Map one observed behavior, cite the supporting evidence, and choose the better-supported mapping when two nearby ATT&CK labels appear plausible.
 
 **Mapped Proficiency Items:**
 - K: 0.6.1.1 – MITRE ATT&CK
@@ -44,7 +44,21 @@ A short mapping could read: “Execution / T1059.001 — PowerShell; the process
 
 The broader T1059 label describes the interpreter family. When the evidence identifies PowerShell, the sub-technique gives a more precise description.
 
-## 3. Keeping the conclusion within the evidence
+
+## 3. Choosing between plausible mappings
+
+Sometimes two ATT&CK labels can both seem reasonable at first glance. The useful question is not simply whether a label can be made to fit; it is which mapping best describes the observed behavior at the level of specificity the evidence supports.
+
+Suppose a registry event shows `reg.exe` creating value `Updater` under `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` and pointing it to `%TEMP%\update.exe`. Two labels may come to mind:
+
+- **T1112 – Modify Registry** describes registry modification broadly.
+- **T1547.001 – Registry Run Keys / Startup Folder** specifically describes use of a Run key for boot or logon autostart execution.
+
+If you must choose the primary mapping for this event, **T1547.001** is better supported because the observed registry location is itself a Run key and the event records a value being configured there. T1112 describes the generic mechanism, but it is less specific to what this event shows.
+
+If the event only showed an unspecified registry value being changed, without evidence that the key was a Run/Startup persistence location, **T1112** would be the safer mapping. The evidence determines how specific the mapping can be.
+
+## 4. Keeping the conclusion within the evidence
 
 This event alone does not establish Command and Control: it contains no evidence of communication with an external controller. That behavior might appear in another event and support an additional mapping. More than one mapping can be appropriate when each has evidence.
 
@@ -53,12 +67,12 @@ An ATT&CK label also does not establish that an event is malicious. Administrato
 ## Knowledge Check
 
 1. How do a tactic, technique, and sub-technique differ?
-2. A process event shows wscript.exe launching powershell.exe with an encoded command. Give a supported mapping and identify the evidence.
-3. Does that event establish Command and Control or malicious intent? Explain.
+2. A process event shows `wscript.exe` launching `powershell.exe` with an encoded command. Give a supported mapping, identify the evidence, and explain whether the same event establishes Command and Control or malicious intent.
+3. A registry event shows `reg.exe` creating a value under `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`. Between T1112 and T1547.001, which should be the primary mapping, and why? When would T1112 be the safer choice?
 
 ## Summary
 
-ATT&CK provides names for behavior. A useful mapping identifies the tactic and technique or sub-technique, cites the supporting evidence, and explains why the label fits. Keep additional conclusions tied to additional evidence.
+ATT&CK provides names for behavior. A useful mapping identifies the tactic and technique or sub-technique, cites the supporting evidence, and explains why the label fits. When two labels look plausible, choose the one whose specificity is best supported by the observed behavior, and keep additional conclusions tied to additional evidence.
 
 ## Course Connections
 
@@ -70,3 +84,5 @@ Next: [0.6.2 – Diamond Model](../02-diamond-model/student-guide.md)
 
 - [MITRE ATT&CK — Enterprise matrix](https://attack.mitre.org/matrices/enterprise/) — Explore the matrix structure.
 - [MITRE ATT&CK — PowerShell (T1059.001)](https://attack.mitre.org/techniques/T1059/001/) — Read the behavior description used in the example.
+- [MITRE ATT&CK — Modify Registry (T1112)](https://attack.mitre.org/techniques/T1112/) — Compare the broader registry-modification behavior.
+- [MITRE ATT&CK — Registry Run Keys / Startup Folder (T1547.001)](https://attack.mitre.org/techniques/T1547/001/) — Compare the more specific Run-key persistence behavior.

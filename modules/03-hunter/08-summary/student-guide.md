@@ -156,7 +156,7 @@ The goal is to reduce the candidate set without filtering away the behavior you 
 
 ### Step 8 – Findings
 
-Example result:
+The canonical A12 story does not specify the hunt outcome. For practice, suppose a hunt produced the following result:
 
 - 2 additional hosts show the exact `Updater → %TEMP%\update.exe` pattern;
 - 3 other hosts show related Run-key behavior needing review;
@@ -182,86 +182,73 @@ Possible routing:
 
 The actual local team names and queues come from the site's hunt-governance process.
 
-## 4. Distinctions Worth Keeping
+## 4. Distinctions That Keep a Hunt Reviewable
 
-These distinctions are easy to blur and matter in later work.
+Hunting combines intelligence, hypotheses, telemetry, and search logic. The concepts below stay useful when each one is tied to the question it is meant to answer.
 
-### Hunt type ≠ complete hunt design
+### Hunt type describes the starting signal, not the whole design
 
-**Reactive**, **intel-driven**, **hypothesis-driven**, and **anomaly-based** describe how the hunt primarily began.
+**Reactive**, **intel-driven**, **hypothesis-driven**, and **anomaly-based** describe how a hunt primarily begins.
 
-Every hunt still needs:
-- a testable question;
-- scope;
-- telemetry;
-- search logic;
-- findings.
+Regardless of the starting signal, a reviewable hunt still needs a testable question, bounded scope, required telemetry, search logic, and a documented result.
 
-### Topic ≠ hypothesis
+### A topic becomes a hypothesis when it predicts evidence
 
 > Hunt persistence
 
-is a topic.
+names an area of interest.
 
 > If A12-style persistence exists elsewhere, we expect to observe Run values pointing into user-writable paths
 
-is testable.
+creates an expectation that can be tested. The second form tells the hunter what evidence would support or weaken the idea.
 
-### CTI lead ≠ local evidence
+### CTI creates a lead; local telemetry establishes local occurrence
 
-A sandbox observation, passive-DNS result, indicator, or STIX object can justify an internal search.
+A sandbox observation, passive-DNS result, indicator, or STIX object can give the hunter a reason to search. It does not establish that the activity occurred inside the organization.
 
-It does not establish that the activity occurred in your environment.
+The hunt connects the external lead to local evidence within a defined population and time window.
 
-### Indicator ≠ behavior
+### Indicators and behaviors support different kinds of searching
 
-An exact hash, domain, or IP can be useful.
+An exact hash, domain, or IP can provide a precise match. A behavior or procedure can survive infrastructure or file changes and support a broader search.
 
-A behavior or procedure may survive longer and support broader searching.
+Good hunts often use both: exact artifacts for precision and behavior for durability.
 
-Good hunts often use both.
+### ATT&CK names the technique; the hunt needs the observable procedure
 
-### ATT&CK technique ≠ observed procedure
+ATT&CK gives the team a shared behavior category. The hunt still needs the specific procedure, fields, and telemetry pattern that can be tested locally.
 
-ATT&CK names a behavior category.
+Technique mapping helps organize the question; the procedure makes it searchable.
 
-The hunt still needs the specific local procedure and telemetry pattern that can be searched.
+### Detection gaps and visibility gaps require different fixes
 
-### Detection gap ≠ visibility gap
+A **detection gap** exists when the required telemetry is available but current analytics do not adequately cover the behavior.
 
-**Detection gap:** the required telemetry exists, but current analytics do not adequately cover the behavior.
+A **visibility gap** exists when the telemetry needed to test or detect the behavior is absent or insufficient.
 
-**Visibility gap:** the required telemetry is missing or insufficient.
+The first points toward analytic coverage. The second points toward collection, ingestion, parsing, or population coverage.
 
-These require different fixes.
+### Unalerted activity becomes a false negative only when an expected detector failed
 
-### Unalerted activity ≠ automatic false negative
+The absence of an alert can reveal a coverage question, but a confirmed false negative requires an established expectation that a control should have detected the target condition and evidence that the required telemetry reached that control.
 
-A false negative requires a control that was expected to detect the event and failed.
+This prevents the hunt from labeling every previously unalerted finding as a detection failure.
 
-If no analytic was designed to detect the behavior, the absence of an alert is a coverage gap—not automatically a failed detection.
+### A privileged outcome does not identify the privilege-escalation method by itself
 
-### Elevated outcome ≠ privilege-escalation method
+Observing a process running as SYSTEM can establish a high-privilege state when the context supports that comparison. Identifying token theft, UAC bypass, or another specific escalation method requires evidence of how that state was reached.
 
-Seeing a process run as SYSTEM can establish a high-privilege outcome when the prior context supports that comparison.
+### A negative hunt result is bounded by what was actually tested
 
-It does not automatically prove token theft, UAC bypass, or another specific escalation technique.
-
-Technique attribution requires evidence of the method.
-
-### “Not found” ≠ “does not exist”
-
-A valid negative result is bounded:
+A defensible result says:
 
 > **Not found within the tested population, time window, and available telemetry.**
 
-That is different from:
-
-> The enterprise is clean.
+That statement preserves the scope of the search. It does not imply that the activity cannot exist elsewhere in the enterprise or outside the observable period.
 
 ## 5. Integrated Review Exercise
 
-Use this hunt card:
+Use this **hypothetical practice card based on A12 behavior**. These results extend the case for the exercise and are not canonical A12 outcomes:
 
 > **Seed:** A12 incident  
 > **Known behavior:** Run-key persistence pointing to `%TEMP%\update.exe`  
@@ -362,4 +349,4 @@ Keep one principle with you into 4.x:
 
 > **A hunt result is only as broad as the scope and visibility that produced it.**
 
-**Next:** **4.x – Detection Engineering**.
+**Next:** [4.0 – Detection Engineering Orientation](../../04-de/00-intro/student-guide.md).

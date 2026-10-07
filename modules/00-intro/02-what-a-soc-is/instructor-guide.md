@@ -56,7 +56,7 @@ If learners associate SOC with a room of monitors, broaden that picture to the f
 
 Introduce the full names once and use the abbreviations consistently. Explain the difference between knowing a story’s cast and having evidence within an investigation. This supports later lessons on attribution without trying to teach that entire topic here.
 
-**Student-facing emphasis:** DYA is the fictional law firm. PRD is the fictional adversary name. Use the evidence supplied in each example and obtain real procedures from your site.
+**Student-facing emphasis:** DYA is the fictional law firm. PRD is the fictional vendor tracking label used in the scenario; the label is source context, not proof of actor identity. Use the evidence supplied in each example and obtain real procedures from your site.
 
 ## Knowledge Check — Answer Key
 
@@ -74,7 +74,7 @@ Introduce the full names once and use the abbreviations consistently. Explain th
 
 ### 3. What are DYA and PRD, and where should you obtain the procedures used at your workplace?
 
-**Expected answer:** DYA is Dixon, Yamada, & Associates, the fictional law firm; PRD is Pink River Dolphin, the fictional adversary name. Workplace procedures come from the actual organization.
+**Expected answer:** DYA is Dixon, Yamada, & Associates, the fictional law firm; PRD is Pink River Dolphin, the fictional vendor tracking label used in the scenario; it does not by itself establish actor identity. Workplace procedures come from the actual organization.
 
 **Feedback and assessment:** Check that learners distinguish the teaching setting from real local policy.
 

@@ -52,13 +52,15 @@ Investigation determines:
 - what the result means.
 
 ### Slide 6 – One A12 story, five questions
+**A12 detail is revealed progressively.**
+
 **1.1:** What happened on `WS-JLEE`?  
 **1.2:** What happened on the wire?  
 **1.3:** Why did the rule fire?  
 **1.4:** How should the alert be assessed?  
 **1.5:** How should the result be handed off?
 
-Same activity. Different question.
+Same case. New evidence appears in the lesson that teaches how to interpret it.
 
 ### Slide 7 – Evidence first
 Keep the sequence:

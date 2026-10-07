@@ -148,4 +148,4 @@ Existing role proficiency codes are retained. RFI intake and response divide the
 - STIX remains a distinct two-lesson unit in 2.7.1–2.7.2.
 - Local requirements and permissions are referenced when first needed, then consolidated in 2.8.
 
-All existing source files are retained. Prior review drafts and extraction records remain historical snapshots. Generated exports are intentionally unchanged pending the later export rebuild.
+All existing source files are retained. Prior review drafts and extraction records remain historical snapshots. The legacy split-export workflow is retired; canonical CTI learner sources now feed the rebuilt `ebook/ebook-manuscript.md`, which is the maintained learner publication.

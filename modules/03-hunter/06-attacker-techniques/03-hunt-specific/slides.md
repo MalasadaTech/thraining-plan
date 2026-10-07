@@ -2,7 +2,7 @@
 ## Slide Deck Content
 
 **Estimated Delivery Time:** 20–25 minutes  
-**Total Suggested Slides:** 9
+**Total Suggested Slides:** 10
 
 ---
 
@@ -42,13 +42,20 @@ SYSTEM outcome alone does not name a privilege-escalation technique.
 
 ---
 
-### Slide 8 – Knowledge Check
+### Slide 8 – Demonstrate the hunt
+A hunt line is preparation.
+
+Practical E requires actual exact + broadened searches against controlled telemetry and comparison of results.
+
+---
+
+### Slide 9 – Knowledge Check
 Technique vs pattern? Trade-off? A12 line?
 
 ---
 
-### Slide 9 – Summary
-Named technique + procedure pattern + scope + telemetry.
+### Slide 10 – Summary
+Named technique + procedure pattern + scope + telemetry + executed search.
 
 
 **References:** [T1547.001 Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)

@@ -172,9 +172,11 @@ The actual team names and workflows are local and are taught in 3.7.
 
 The important idea is that the hunt does not have to solve every downstream problem itself.
 
-## 9. The A12 Hunt Loop
+## 9. Hypothetical A12-Based Hunt Loop
 
-One A12 hunt can show the entire 3.x sequence.
+Canonical A12 reaches a hunt package, but the case does **not** specify the completed hunt result, additional affected-host count, visibility-gap count, or detection-coverage outcome.
+
+The sequence below is a **hypothetical practice extension based on A12 behavior**. Its result counts are exercise conditions used to show the full 3.x workflow; they are **not canonical A12 facts**.
 
 ### Question
 
@@ -200,7 +202,7 @@ Separate:
 
 ### Finding
 
-Example result:
+Hypothetical practice result:
 
 - 2 additional hosts with the exact persistence pattern;
 - 7 hosts lack the registry telemetry needed to test the hypothesis;
@@ -213,7 +215,7 @@ Example result:
 - telemetry gap → platform/telemetry owner;
 - new infrastructure lead → CTI.
 
-That is a complete hunt story.
+That is a complete **practice** hunt story. Do not carry the invented host counts or coverage result back into canonical A12.
 
 ## 10. What You Need to Remember Before 3.1
 

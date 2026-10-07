@@ -38,7 +38,7 @@ Teams can work together across organizational or physical boundaries.
 
 ## The setting used in this course
 
-DYA is the fictional law firm. PRD is the fictional adversary name.
+DYA is the fictional law firm. PRD is the fictional vendor tracking label used in the scenario.
 
 Use the evidence supplied in each example and obtain real procedures from your site.
 

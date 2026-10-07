@@ -42,10 +42,11 @@ Not:
 
 → **never happens**
 
-### Slide 6 – A12 card
-Relations → `203.0.113.88`
+### Slide 6 – Separate classroom card
+**Not A12:** A12 has no recovered sample/hash/VT behavior.
+Relations → `198.51.100.77`
 
-Behavior → `update.exe` start + Temp write + connection to `203.0.113.88:8080`
+Behavior → `sync-client.exe` start + Temp write + connection to `198.51.100.77:8080`
 
 No Run-key event shown.
 

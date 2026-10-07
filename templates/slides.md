@@ -1,72 +1,77 @@
 # Slide Deck Template Structure
 
-**Suggested slide sequence** (a menu, not a quota). Use only the slides this lesson needs. Do not add slides to fill.
+Use the slides the lesson needs; slide count is not a target. The deck should support the same **Preview → Predict → Read/Learn → Confirm** structure as the student guide. See [Skim-First / Advance-Organizer Design](../docs/skim-first-authoring-standard.md).
 
-| Slide # | Slide Title                        | Required? | Content Guidance |
-|---------|------------------------------------|-----------|------------------|
-| 1       | Title Slide                        | Yes       | Module number + title + roles |
-| 2       | Why this lesson exists             | Yes       | Student **Intro** — why this lesson exists in the job, then what you will name. Title the idea; do not use “What this hour is.” |
-|         | Learning Objectives                | If useful | Only the objectives you actually have |
-|         | Agenda / Roadmap                   | Optional  | Skip on a short lesson |
-|         | Key Concepts                       | Yes       | One idea per slide |
-|         | Demonstration / Walkthrough        | Later     | Do not add until asked |
-|         | Common Mistakes                    | Optional  | Only real ones |
-|         | Hands-On Exercise                  | Later     | Do not add until asked |
-|         | Knowledge Check                    | Yes       | **1–3 questions for the lesson.** Not per concept. |
-|         | Summary                            | If useful | Only earned takeaways |
-| Last    | Next lesson                        | If there is one | One line |
+| Slide | Suggested title | Use | Content guidance |
+|---|---|---|---|
+| 1 | Title | Required | Module number + title + roles |
+| 2 | Why this matters | Required | Job context, prior-knowledge connection, and the main learner question |
+| 3 | What to watch for | Complex lessons | A short roadmap of the distinctions, decisions, or workflow stages worth noticing |
+| — | Learning objectives | When useful | Only the objectives actually taught |
+| — | Concept / decision slides | Required | One meaningful idea per slide; titles should reveal the progression during a skim |
+| — | Example / A12 Case Study | When useful | Evidence → reasoning → bounded conclusion/action |
+| — | Knowledge Check | Required | 1–3 questions for the lesson, not per concept |
+| — | By this point, you should be able to… | Required | End-state check aligned with the student summary |
+| Last | Where this leads next | When useful | One natural transition to the next learner question |
 
 ---
 
-## Speaker notes (required)
+## Speaker Notes
 
-Every slide has **Speaker Notes**. Write them in ordinary words. Someone who was not in the planning chat should still follow.
+Every slide should have speaker notes in ordinary language. Someone who was not in the planning chat should still understand why the slide exists and how it connects to the learning arc.
 
-- A few short sentences
-- Why this slide is here, and how it connects to the last one or the next one
-- Not a recap of the on-slide bullets
-- Not a second student guide
+Good notes explain:
 
-The **face of the slide** must be short enough to understand without a briefing or a live instructor. One idea. Complete sentences or short lines that still name the idea. If you need a technical term, put a few ordinary words next to it. Slide titles name the idea (`Five kinds of host activity`), not a classroom ritual (`What this hour is`).
+- why this idea matters;
+- how it connects to the previous or next idea;
+- what evidence boundary or common reasoning mistake deserves attention.
+
+Speaker notes should not simply repeat the slide face, and they should not contain planning-chat fragments.
+
+The slide face must still make sense without a live presenter.
 
 ---
 
 ## Slide Design Guidelines
 
-- Title at top of every slide
-- Minimal text (prefer visuals, tables, screenshots, diagrams). A reader who only sees the deck should still get the point.
-- Consistent footer with module number and “SOC / Hunter / CTI Training”
-- Pick one theme (dark or clean light) and stick to it across all decks
-- Optional color coding:
-  - Knowledge items → Blue
-  - Task items → Green
-- Use real screenshots and log samples whenever possible
-- Avoid walls of text — one idea per slide is ideal
+- Give every slide a descriptive title that names the concept, decision, or workflow stage.
+- Prefer visuals, compact tables, evidence snippets, and diagrams when they genuinely clarify the idea.
+- Use consistent callout labels with the student guide: **Key Point**, **Evidence Boundary**, **Example**, **A12 Case Study**, **Remember**, **Knowledge Check**.
+- Use bold emphasis selectively so a skim reveals the key terms and decisions.
+- Keep terminology aligned with the student guide and define unfamiliar shop language in ordinary words.
+- Preserve evidence-first reasoning: show what the evidence says before the conclusion it supports.
+- Use a consistent footer with module number and track.
+- Keep the visual theme consistent across decks.
 
 ---
 
-## Recommended PowerPoint / Google Slides Master Layout
+## Recommended Master Layouts
 
 1. **Title Slide**
-   - Module number and full title
-   - Target audience (SOC / Hunter / CTI)
-   - Version / date
+   - Module number and title
+   - Target audience
+   - Version/date
 
-2. **Section Divider** (optional)
-   - Used when a module has distinct major sections
+2. **Preview Slide**
+   - Why this matters
+   - What to watch for
 
-3. **Content Slide**
-   - Title
-   - Bullet points or visual
-   - Footer
+3. **Section Divider** *(optional)*
+   - For genuinely distinct major sections
 
-4. **Demo / Screenshot Slide**
-   - Large image area
-   - Minimal caption
+4. **Content Slide**
+   - Descriptive title
+   - One central idea
+   - Bullets, evidence, table, or visual as appropriate
 
-5. **Exercise Slide**
-   - Clear numbered instructions
-   - Time allocation
+5. **Example / Evidence Slide**
+   - Evidence or scenario
+   - Reasoning cue
+   - Bounded conclusion or question
 
-6. **Summary Slide**
-   - Only the takeaways this lesson earned
+6. **Knowledge Check Slide**
+   - One or more of the lesson's 1–3 questions
+
+7. **Summary Slide**
+   - `By this point, you should be able to…`
+   - Only the end-state capabilities this lesson earned

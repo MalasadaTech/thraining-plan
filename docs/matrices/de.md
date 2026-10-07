@@ -14,7 +14,7 @@
 - Knowledge items generally start at **B**
 - Task items generally start at **3c**
 - Section **0** is the shared intro (same codes as SOC, Hunter, and CTI), not DE-primary work. Do not start 0.x at B/3c.
-- Shared floor after **0** (`0.6`, `0.7`, `0.8`) is also not DE-primary. Do not start those at B/3c.
+- Shared floor after **0** (`0.6`, `0.7`, `0.8`, `0.9`) is also not DE-primary. Do not start those at B/3c.
 - Sensor work (**4.7**) is lighter
 - Site-specific (**4.8**) is obtain-and-follow, not invented DYA process
 - Rule syntax / first read-write is **1.3**, not this sheet
@@ -52,6 +52,8 @@ Taught after **0**, before SOC **1.1**. Same IDs as the SOC/CTI sheets. Not DE-p
 | 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 1a | 2b | 3c | Select. Not a 2.4 pivot. Matches SOC awareness. |
 | 0.8 | Environment orientation | K | A | B | B | Seven facts including PCAP sensors. Sensor *health* is 4.7. |
 | 0.8.1 | Identify which orientation fact applies and why it is not the adjacent fact | T | 2b | 3c | 4c | Same apply-task as SOC. Needed for 4.7. |
+| 0.9 | Common initial access paths | K | A | B | B | Shared awareness; DE is not primary owner of reconstructing entry. |
+| 0.9.1 | Identify the most defensible initial-access path from supplied evidence, preserve uncertainty, and name the next evidence needed | T | 1a | 2b | 3c | Enough to interpret nominations and coverage questions; not primary investigation depth. |
 
 ---
 

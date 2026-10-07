@@ -180,7 +180,7 @@ This converts technical findings into organizational intelligence.
 
 A strong RFI response might say:
 
-> Available evidence supports the update domain's association with the A12 activity set and is consistent with attempted payload delivery. Current evidence does not establish successful execution of `update.exe`.
+> Available evidence supports the assessment that the update domain was used for attempted payload delivery in A12. `WS-JLEE` requested `/update.exe` from that destination during the suspicious activity, but current evidence does not establish successful transfer or execution of the file.
 
 The answer:
 - addresses the question;
@@ -197,90 +197,95 @@ Then record:
 - follow-up agreed;
 - new requirement if needed.
 
-## 4. Distinctions Worth Keeping
+## 4. Concepts to Keep Separate During CTI Analysis
 
-### Data ≠ information ≠ intelligence
+The CTI workflow contains several closely related concepts. The distinctions below matter because each one changes what the analyst is justified in claiming or doing next.
 
-Raw observations become information when context is added.
+### Data, information, and intelligence build on one another
 
-Intelligence requires analysis against a question or requirement.
+**Data** are recorded observations or values. **Information** adds context that explains how those observations relate. **Intelligence** adds an assessed answer to a relevant question or requirement.
 
-### Requirement ≠ collection activity
+The transition is not created by renaming the artifact. It comes from adding context, analysis, and decision relevance.
 
-The requirement is the question.
+### The requirement directs collection
 
-Collection is how you gather evidence to answer it.
+The requirement defines the question and the decision the work is meant to support. Collection obtains the evidence needed to answer it.
 
-### Source reliability ≠ information credibility
+Starting with the requirement helps the analyst choose sources deliberately instead of allowing an interesting tool result to redefine the task.
 
-A generally reliable source can still report a weak claim.
+### Source reliability and information credibility are separate judgments
 
-An unfamiliar source can still provide technically verifiable information.
+A source with a strong historical record can still provide a weak or poorly supported claim. An unfamiliar source can still provide information that is technically verifiable.
 
-Evaluate both.
+Evaluate the source and the specific information independently, then explain how those judgments affect the assessment.
 
-### Platform result ≠ intelligence judgment
+### Platform output becomes intelligence through analysis
 
-A sandbox event, passive-DNS record, detection count, or web scan is evidence.
+A sandbox event, passive-DNS record, detection count, TIP relationship, or web scan is evidence with provenance. Its significance depends on the question, surrounding evidence, and interpretation.
 
-The analyst decides what that evidence supports.
+The analyst's job is to explain what the platform result supports and where its limitations begin.
 
-### Observable ≠ IOC
+### An observable becomes an operational IOC through context and purpose
 
-A technical value is an observable.
+A hash, IP, domain, URL, or filename is first a technical observable. Promoting it into an IOC requires enough suspicious or malicious context, provenance, specificity, validity, and operational purpose to justify using it defensively.
 
-Its promotion into an operational IOC depends on context, provenance, specificity, validity, and purpose.
+This is also why lifecycle decisions such as retain, enrich, review/expire, and reject are evidence-dependent.
 
-### Candidate pivot ≠ supported relationship
+### A pivot candidate needs corroboration before it becomes a supported relationship
 
-A shared field can justify another check.
+A shared nameserver, address, certificate field, or page characteristic can justify another lookup. The initial overlap is a reason to investigate, not proof of common control or malicious purpose.
 
-It does not automatically establish common control or common malicious purpose.
+Use distinctiveness, time relevance, hosting context, and independent evidence to decide whether the relationship strengthens.
 
-### Candidate relationship ≠ campaign ≠ attribution
+### Candidate relationships, campaign assessments, and attribution require progressively stronger evidence
 
-These are progressively stronger claims.
+A candidate link can be recorded early. A campaign or activity-set assessment requires a coherent pattern of related activity. Attribution adds the still stronger judgment about who is responsible.
 
-Promote only as far as the evidence supports.
+Keeping those levels separate allows the analysis to mature without promoting a tentative relationship beyond the evidence.
 
-### File/behavioral relationship ≠ DTF infrastructure relationship
+### DTF is used for infrastructure relationships
 
-DTF remains infrastructure-focused.
+The Defender's ThreatMesh Framework organizes justified infrastructure pivots. File similarity and behavioral relationships remain useful evidence, but they should be recorded alongside the infrastructure analysis rather than forced into an infrastructure-only model.
 
-File similarity and behavioral pivots should be retained alongside infrastructure analysis without being forced into DTF.
+### Applicability, visibility, relevance, and impact answer different organizational questions
 
-### Applicability ≠ visibility ≠ relevance ≠ impact
+**Applicability** asks whether the behavior can occur in the environment.
 
-These answer different questions and can produce different outcomes.
+**Visibility** asks whether current telemetry can observe it.
 
-### STIX representation ≠ proof
+**Relevance** asks whether the finding materially intersects the organization's mission, assets, technology, or exposure.
 
-STIX structures information.
+**Impact** asks what plausible organizational consequence follows if the finding is true here.
 
-The object or relationship still needs evidence and appropriate confidence.
+Because these questions are different, they can legitimately produce different answers.
 
-### Enrichment ≠ finished intelligence
+### STIX represents intelligence; the representation does not establish the claim
 
-A large collection of lookups is not the product.
+STIX provides a structured way to describe objects and relationships. The represented assertion still needs evidence, provenance, and appropriate confidence.
 
-The supported answer is the product.
+A well-formed STIX relationship is useful for exchange and reuse, but formatting cannot substitute for analysis.
 
-### RFI intake ≠ RFI response
+### Enrichment supports the finished answer
 
-2.1.5 captures and prioritizes the question.
+A large set of lookups, pivots, and graphs may be valuable working material. The finished intelligence product selects the evidence that answers the requirement and explains its significance.
 
-2.7.4 returns to that question and records closure or follow-up.
+The goal is not to show every action the analyst performed; it is to deliver a supported answer.
+
+### RFI intake and RFI response are different stages of the same requirement
+
+Module 2.1.5 captures, clarifies, prioritizes, and assigns the question. Module 2.7.4 returns to that requirement with the supported answer, uncertainty, and closure or agreed follow-up.
+
+Keeping both stages visible makes it possible to judge whether the analysis actually answered what the requester needed.
 
 ## 5. Integrated Review Exercise
 
-Use this A12 CTI card:
+Use this **hypothetical CTI practice card built from the A12 case**. The supplied enrichment and visibility details are exercise conditions rather than additional canonical A12 facts:
 
-> **Requirement:** Determine what is known about the update domain and whether evidence supports payload delivery.  
-> **Internal TIP:** no prior hash match  
-> **Sandbox:** encoded PowerShell and attempted retrieval behavior observed  
-> **DNS/RDAP:** update domain and `login-prd.net` share an uncommon nameserver; IP overlap exists during part of the relevant window  
+> **Requirement:** Determine what role the update domain played and whether available evidence establishes successful payload delivery.  
+> **Case evidence:** encoded PowerShell on `WS-JLEE`; HTTP request for `/update.exe` to the update domain  
+> **Enrichment:** `login-prd.net` shares an uncommon nameserver pair and an overlapping observed IP with the update domain  
 > **Environment:** Windows workstations are present; process visibility is partial on one endpoint population  
-> **Evidence gap:** successful execution of `update.exe` is not established
+> **Evidence gap:** successful transfer or execution of `update.exe` is not established
 
 Write a short intelligence answer using:
 
@@ -371,4 +376,4 @@ Keep one principle with you into 3.x:
 
 > **The value of CTI is the supported answer—not the number of tools, indicators, or pivots used to reach it.**
 
-**Next:** **3.x – Threat Hunting**.
+**Next:** [3.0 – Threat Hunting Orientation](../../03-hunter/00-intro/student-guide.md).

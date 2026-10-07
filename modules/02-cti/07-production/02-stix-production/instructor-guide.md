@@ -72,7 +72,7 @@ This preserves the distinction among:
 **Collection** = logical repository exposed by TAXII server  
 **Envelope** = TAXII transport wrapper
 
-Classroom `harbor-cti` remains fictional. Learners describe read/write interaction; they do not deploy infrastructure.
+Classroom `dya-cti` remains fictional. Learners describe read/write interaction; they do not deploy infrastructure.
 
 ## Common Student Challenges
 

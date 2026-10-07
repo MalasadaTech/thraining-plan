@@ -49,9 +49,11 @@ Distinguish local/remote from source/destination and initiation. Use Sysmon Init
 
 ### 2. Working through the example
 
+Treat this as a **separate classroom record, not A12**.
+
 Have learners build the sentence from supplied fields; discuss why a commonly used port is insufficient to identify application behavior.
 
-**Key point to reinforce:** PowerShell is associated with a recorded successful TCP connection to 203.0.113.88:443. The record lacks a URL/FQDN.
+**Key point to reinforce:** PowerShell is associated with a recorded successful TCP connection to 198.51.100.44:443. The record lacks a URL/FQDN.
 
 ### 3. Creating a focused network query
 

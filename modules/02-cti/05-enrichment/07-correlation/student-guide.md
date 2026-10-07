@@ -66,4 +66,4 @@ Promote relationships only as far as the evidence supports. Keep candidate links
 
 - [OASIS STIX 2.1](https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html)
 
-**Next:** [2.6.1 – Extracting Applicable TTPs from Intelligence Reports](../../06-assessment/01-applicable-ttps/student-guide.md).
+**Next:** [2.5 – Technical Enrichment and Discovery Summary](../summary.md).

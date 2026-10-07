@@ -22,12 +22,14 @@
 - exact-observed vs behavior-broadened hunt
 - scope and telemetry
 - wrong-class avoidance
+- execution of exact-observed and behavior-broadened searches
 
 ## Artifacts
 
 - [student-guide.md](student-guide.md)
 - [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
+- [shared Hunt Execution Practical](../../02-methodology/01-hunt-types/hunt-execution-practical.md) — Practical E demonstrates `3.6.3`
 - `assets/` — unchanged
 
 ## Supporting references

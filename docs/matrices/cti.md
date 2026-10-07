@@ -45,6 +45,29 @@ Taught in `00` before SOC. Advanced CTI application is **2.3**. Codes match comb
 | 0.6.3.1 | Cyber Kill Chain | K | B | C | C | Shared floor. Advanced staging is 2.3.3. |
 | 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 3c | 4c | 4c | Stage + reject neighbor. |
 
+## 0.7 External Tools (shared floor)
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.7 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | B | C | C | Shared orientation; CTI-specific platform depth is 2.4. |
+| 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 3c | 4c | 4d | Question-driven source selection before platform depth. |
+
+## 0.8 Environment / signal flow (shared floor)
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.8 | Environment / signal flow | K | A | B | B | Shared site orientation; organizational assessment depth comes later in 2.6. |
+| 0.8.1 | Identify which kind of fact applies and why it is not the adjacent kind | T | 1a | 2b | 3c | Distinguish path/collection/visibility facts before CTI assessment. |
+
+## 0.9 Common Initial Access Paths (shared floor)
+
+Taught after the other shared-foundation lessons and before SOC.
+
+| # | Item | Type | CTI 3 | CTI 5 | CTI 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.9 | Common initial access paths | K | A | B | C | Shared entry-path model; CTI production depth remains in 2.x. |
+| 0.9.1 | Identify the most defensible initial-access path from supplied evidence, preserve uncertainty, and name the next evidence needed | T | 2b | 3c | 4c | Supports evidence-bounded assessment before advanced CTI tradecraft. |
+
 ---
 
 ## 2.1 Intelligence Foundations and Requirements

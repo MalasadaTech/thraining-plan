@@ -52,7 +52,7 @@ Zeek supplies structured observations from network traffic. Choose a log accordi
 
 ## Course Connections
 
-Previous: [1.1.6 – Image and Driver Load Activity](../../01-endpoint/06-image-driver-load/student-guide.md)
+Previous: [1.2 – Zeek Network Evidence Preview](../intro.md)
 
 Next: [1.2.2 – Conn Engine](../02-conn-engine/student-guide.md)
 

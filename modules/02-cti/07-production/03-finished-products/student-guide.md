@@ -130,13 +130,44 @@ A useful review asks:
 
 A polished document that fails those questions is still analytically weak.
 
-## 2. Knowledge Check
+## 2. Demonstration Exercise — Non-A12 Threat Actor Profile
+
+This exercise is **not part of A12**. It uses a separate training-only evidence set so you can practice the approved threat-actor-profile task without inventing attribution for the recurring case.
+
+### Training evidence set: SILVER KITE
+
+You are supporting a fictional regional manufacturer. Four independent reports over six months describe the same tracked actor, **SILVER KITE**, with the following corroborated characteristics:
+
+- repeatedly targets aerospace and advanced-manufacturing organizations in the United States and Japan;
+- obtains initial access through spearphishing attachments and exploitation of externally exposed VPN appliances;
+- uses PowerShell for discovery and staging, then deploys a custom backdoor consistently identified in the supplied reporting as **KiteDoor**;
+- creates scheduled tasks for persistence and commonly archives collected engineering documents before exfiltration;
+- uses short-lived VPS infrastructure registered through multiple providers;
+- has targeted organizations for technical drawings, proprietary manufacturing data, and program documentation;
+- two high-confidence sources attribute the activity to the same named actor, while **no supplied evidence supports a government sponsor, nationality, or legal identity**.
+
+### Required output
+
+Produce a concise threat actor profile that includes:
+
+1. **Tracking identity and scope** — what SILVER KITE represents and the reporting period.
+2. **Targeting** — sectors/regions and the information apparently sought.
+3. **Observed behavior** — the major access, execution, persistence, collection, and exfiltration behaviors supported by the evidence.
+4. **Infrastructure/tooling** — what is known and what remains too weak to claim.
+5. **Key judgments and confidence** — at least one analytic judgment with its evidence basis.
+6. **Attribution boundary and gaps** — explicitly state what the supplied evidence does **not** establish.
+
+Then evaluate your draft against the finished-product standards taught above: requirement fit, evidence-versus-judgment separation, uncertainty, traceability, relevance, and bounded attribution.
+
+**Demonstration note:** producing the profile demonstrates task `2.7.3.2`. When you draft it as a finished product and evaluate it against the standards above, the same event can also produce evidence for `2.7.3.1`. The evaluator records each task separately under the qualification/sign-off standard; lesson completion alone is not automatic sign-off.
+
+## 3. Knowledge Check
 
 1. Why is a TIP export or IOC list not automatically a finished intelligence product?
 2. Name four elements that should be easy to find in a short finished product.
 3. Write a three-line A12 activity profile that keeps attribution unresolved and preserves the download/execution evidence gap.
 
-## 3. Summary
+## 4. Summary
 
 A finished intelligence product is a judged answer to a requirement, not a data dump.
 

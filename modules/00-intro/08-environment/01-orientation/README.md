@@ -36,7 +36,7 @@ An event becomes easier to interpret when you understand where it occurred and h
 
 Previous: [0.7 – External tools](../../07-tool-survey/01-external-tools/student-guide.md)
 
-Next: the SOC analyst track, beginning with observations and detections.
+Next: [0.9 – Common Initial Access Paths](../../09-initial-access/student-guide.md).
 
 ## References and Further Reading
 

@@ -84,7 +84,7 @@ Image and driver events describe different kinds of loads. Identify the loaded o
 
 Previous: [1.1.5 – Registry Activity](../05-registry-activity/student-guide.md)
 
-Next: [1.2.1 – Zeek Concepts](../../02-zeek/01-concepts/student-guide.md)
+Next: [1.1 – Endpoint Evidence Summary](../summary.md)
 
 [1.x module index](../../README.md)
 

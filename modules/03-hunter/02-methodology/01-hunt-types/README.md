@@ -27,12 +27,14 @@
 - reactive hunts
 - anomaly-based hunts
 - overlapping hunt motivations
+- distinction between hunt planning and actual execution
 
 ## Artifacts
 
 - [student-guide.md](student-guide.md)
 - [instructor-guide.md](instructor-guide.md)
 - [slides.md](slides.md)
+- [hunt-execution-practical.md](hunt-execution-practical.md) — shared controlled-telemetry execution event for `3.2.1.1`–`3.2.1.4` and `3.6.3`
 - `assets/` — unchanged
 
 ## Revision status

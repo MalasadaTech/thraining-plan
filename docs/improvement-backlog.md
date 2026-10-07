@@ -4,11 +4,11 @@ Recorded: 2026-10-01 (Hawaii)
 
 Scope: Review recommendations for the supplied thraining-plan.zip. These are proposed changes, not approved curriculum requirements. Existing lesson content has not been changed. Follow the existing requirement-review process before adding obligations or modules. Hands-on work remains deliberately deferred.
 
-## Earmarked for later discussion
+## Authoring and voice work
 
 | ID | Item | Status | Next action |
 |---|---|---|---|
-| VOICE-01 | Add a voice-quality check to the training resource review process. | Earmarked by user; criteria pending discussion. | Discuss the desired voice, examples, and acceptance criteria before revising lessons. Pilot agreed criteria on representative lessons before broad application. |
+| VOICE-01 | Add a voice-quality check to the training resource review process. | Implemented 2026-10-04. | Maintain the skim-first / advance-organizer standard and mentor-like evidence-first voice during future revisions; use the required skim test in QA. |
 
 ## Corrections to review first
 
@@ -25,25 +25,25 @@ Scope: Review recommendations for the supplied thraining-plan.zip. These are pro
 | REV-09 | Medium | 3.4.2 Hunt leads | Assess old indicators against the hunt window and retained history rather than discarding them primarily by age. | A retrospective example explains when an old hash remains useful. |
 | REV-10 | Medium | Student guides and knowledge checks | Move authoring/scope instructions into instructor guidance and assess analyst judgment instead. | Review with the future voice criteria; preserve meaningful boundaries and required concepts. |
 | REV-11 | Medium | Concept index; retired external-tools redirect | Repair 18 broken relative-link occurrences identified during review, including 17 in the concept index. | Local path-link validation passes; missing content is not invented just to satisfy links. |
-| REV-12 | Medium | tracker.csv; STIX classroom collection naming | Correct encoding artifacts and reconcile remaining Harbor naming with the story bible. | Existing values and status meanings preserved; names consistent across dependent copies. |
+| REV-12 | Medium | tracker.csv; STIX classroom collection naming | Correct encoding artifacts and reconcile remaining legacy classroom naming with the story bible. | Existing values and status meanings preserved; names consistent across dependent copies. |
 
 ## Later teaching additions
 
 | ID | Item | Proposed scope | Status |
 |---|---|---|---|
 | ADD-01 | Unfamiliar knowledge-check variants | Retain A12 as the worked example; vary legitimate administration, telemetry gaps, shared infrastructure, or conflicting evidence. No lab is needed for conceptual checks. | Proposed |
-| ADD-02 | Initial access | Complete the existing TODO for initial access; connect delivery, execution, and observable evidence through the approved curriculum process. | Already on original TODO; proposed priority |
+| ADD-02 | Initial access | Complete the existing TODO for initial access; connect delivery, execution, and observable evidence through the approved curriculum process. | Implemented 2026-10-04 as shared module 0.9; A12 entry path remains evidence-bounded and unresolved |
 | ADD-03 | File-enrichment workflow | Connect seed file, related candidates, behavioral comparison, supported relationships, and useful outputs across existing file similarity, signing, VT, and ANY.RUN lessons. Preserve DTF's infrastructure scope. | Proposed |
 | ADD-04 | Empty hunt results | Distinguish no matches from missing sensors, insufficient retention, absent fields, or poor query/scope choices. | Proposed |
 | ADD-05 | Role-specific learning routes | Identify prerequisites and shorter routes for experienced SOC, CTI, Hunt, and DE personnel while retaining the full sequence. | Proposed |
 
 ## Implementation sequence for later approval
 
-1. Discuss and agree on VOICE-01 criteria.
-2. Review the high-priority reasoning corrections and choose a small pilot set.
-3. Revise pilot lessons and obtain user review before applying the approach broadly.
+1. Apply the implemented skim-first / voice standard to future learner-facing revisions.
+2. Review the remaining high-priority reasoning corrections and choose a small pilot set where needed.
+3. Revise pilot lessons and obtain user review before applying a new technical approach broadly.
 4. Keep student guides, instructor notes, slides, knowledge checks, matrices, and concept index aligned where affected.
-5. Rebuild dependent exports when required by the existing contribution guide.
+5. Rebuild the ebook when learner-facing canonical sources change.
 
 ## Review basis and limits
 

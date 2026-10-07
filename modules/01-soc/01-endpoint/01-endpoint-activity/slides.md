@@ -76,7 +76,7 @@ Sysmon and MDE overlap but differ in coverage and schema. Network-sensor records
 
 Identify the recorded operation, then use the fields and coverage of its source to describe it. Related events can build a fuller sequence while retaining what each observation actually establishes.
 
-Previous: [0.8 — Environment / signal flow](../../../00-intro/08-environment/01-orientation/student-guide.md)
+Previous: [1.0 – SOC Analyst Fundamentals](../../00-intro/student-guide.md)
 
 Next: [1.1.2 – Process Activity](../02-process-activity/student-guide.md)
 

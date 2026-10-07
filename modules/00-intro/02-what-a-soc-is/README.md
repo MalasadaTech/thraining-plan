@@ -18,7 +18,7 @@ A Security Operations Center, or **SOC**, is an organizational function that mon
 
 - what a SOC is
 - a SOC is a team sport
-- DYA and PRD are course fiction
+- DYA and PRD are course fiction; PRD is a vendor tracking label, not automatic actor identity
 
 ## Artifacts
 

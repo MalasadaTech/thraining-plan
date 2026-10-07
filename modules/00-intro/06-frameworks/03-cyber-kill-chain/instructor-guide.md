@@ -49,6 +49,8 @@ Read the stages in order with a brief explanation of each. Emphasize that unobse
 
 ### 2. Placing an observed event
 
+Treat this as a **separate classroom example, not A12**. Use `shipping-notice.js` so the learner does not import the example into the recurring A12 `invoice.vbs` case.
+
 Keep the example anchored to the delivery record. If learners choose Weaponization, ask what evidence shows preparation. If they choose Exploitation or Installation, ask what happened on the endpoint and whether any such event was supplied.
 
 **Student-facing emphasis:** Observed: email with an established malicious attachment reaches a mailbox. Supported stage: Delivery. Evidence: the email delivery record. Opening, exploitation, and installation remain unestablished.

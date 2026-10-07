@@ -52,6 +52,24 @@ Examples:
 
 ---
 
+## Instruction, Demonstration, and Qualification
+
+The proficiency codes above describe the **required end-state performance**, not merely lesson completion.
+
+Use the three-state model in [Qualification Demonstration and Sign-Off Standard](qualification-demonstration-signoff-standard.md):
+
+> **Taught / Prepared → Demonstrated → Qualified / Signed Off**
+
+- A lesson or knowledge check can prepare a learner for a task without proving the mapped task-performance level.
+- A **Task (`T`)** row requires observable performance before qualification sign-off.
+- The smallest honest demonstration should prove the verb in the requirement; not every task needs a full lab.
+- Local/site-specific tasks require the real approved local process or an authorized local simulation.
+- The working crosswalk for all current task rows is [qualification-evidence-map.md](qualification-evidence-map.md).
+
+Do not reinterpret a matrix verb such as **execute**, **perform**, **test**, **produce**, **disseminate**, or **follow** as a weaker planning/discussion exercise merely because the lesson is concept-first.
+
+---
+
 ## Manning & Qualification Rules (Quick Reference)
 
 - **1-level**: Never on shift

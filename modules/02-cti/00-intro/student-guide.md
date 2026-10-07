@@ -284,4 +284,4 @@ The recurring discipline is:
 
 > **Preserve the evidence, make the judgment explicit, and answer the requirement—not the tool.**
 
-**Next:** **2.1.1 – Difference Between Data, Information, and Intelligence**.
+**Next:** [2.1 – Intelligence Foundations and Requirements Preview](../01-core-intel/intro.md).

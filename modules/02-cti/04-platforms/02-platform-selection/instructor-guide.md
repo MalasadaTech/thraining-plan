@@ -14,6 +14,15 @@
 3. Use the two-pass delivery notes in 2.4.3–2.4.6: short orientation here, detailed method application in 2.5. Total lesson time is shared between passes.
 4. Consult local access and handling rules before any live operation. Static results are sufficient for the classroom task.
 
+## Teaching References
+
+- [VirusTotal — Searching](https://docs.virustotal.com/docs/searching)
+- [ANY.RUN — Threat Intelligence Lookup](https://any.run/threat-intelligence-lookup/)
+- [Silent Push — DNS Data](https://help.silentpush.com/docs/dns-data)
+- [urlscan.io — Quickstart](https://docs.urlscan.io/guides/quickstart)
+
+Use the references to confirm what each source can answer; do not let a live lookup override local handling restrictions.
+
 ## Knowledge Check – Answer Key
 
 1. It starts with an intelligence question and selects a source expected to change the analysis. The result is recorded with its limitations.

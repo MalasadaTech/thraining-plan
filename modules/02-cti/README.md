@@ -1,12 +1,27 @@
 # CTI Analyst – Course Map
 
-Begin after SOC reporting (1.5). The sequence follows the work: define the question, evaluate and collect evidence, assess its significance, then produce and deliver an answer.
+Begin after the SOC section summary (1.6). The sequence follows the work: define the question, evaluate and collect evidence, assess its significance, then produce and deliver an answer.
 
 Platform guides use two passes: a short retrieval orientation in 2.4, followed by detailed interpretation and assessment alongside the relevant 2.5 method. Complete the whole platform lesson across those two passes; do not count its duration twice.
 
 Keep one A12 evidence record through the sequence: RFI intake → collection question → source/provenance → enrichment and links → applicability/impact → supported answer and follow-up.
 
 ## Teaching sequence
+
+## Skim-first subunit wrappers
+
+Preview each subunit before reading its lessons, then use the summary to check the expected end state.
+
+| Subunit | Introduction | Summary |
+|---|---|---|
+| **2.1 – Intelligence Foundations and Requirements** | [Preview](01-core-intel/intro.md) | [Confirm](01-core-intel/summary.md) |
+| **2.2 – Analytical Tradecraft** | [Preview](02-tradecraft/intro.md) | [Confirm](02-tradecraft/summary.md) |
+| **2.3 – Analytical Frameworks** | [Preview](03-frameworks/intro.md) | [Confirm](03-frameworks/summary.md) |
+| **2.4 – CTI Tools and Platforms** | [Preview](04-platforms/intro.md) | [Confirm](04-platforms/summary.md) |
+| **2.5 – Technical Enrichment and Discovery** | [Preview](05-enrichment/intro.md) | [Confirm](05-enrichment/summary.md) |
+| **2.6 – Threat Assessment and Organizational Significance** | [Preview](06-assessment/intro.md) | [Confirm](06-assessment/summary.md) |
+| **2.7 – Intelligence Production and Dissemination** | [Preview](07-production/intro.md) | [Confirm](07-production/summary.md) |
+| **2.8 – Local Application** | [Preview](08-site-specific/intro.md) | [Confirm](08-site-specific/summary.md) |
 
 ## Orientation
 
@@ -94,4 +109,4 @@ Keep one A12 evidence record through the sequence: RFI intake → collection que
 - [Combined proficiency matrix](../../docs/matrices/combined.md)
 - [Course outline](../../docs/outlines/training-outlines.md)
 
-Source guides, slides, indexes, matrices, and tracker reflect this sequence. Generated exports remain pending a later rebuild.
+Source guides, slides, indexes, matrices, and tracker reflect this sequence. Canonical learner sources feed the rebuilt `ebook/ebook-manuscript.md`; the legacy split-export workflow is retired.

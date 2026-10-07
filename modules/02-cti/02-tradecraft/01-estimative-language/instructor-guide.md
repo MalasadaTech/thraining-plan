@@ -73,7 +73,7 @@ An estimative term is not a substitute for evidence. Return briefly to the A12 o
 
 ### 5. Listen for meaningful interpretation
 
-During the knowledge check, accept different likelihood terms when the learner can defend them from the supplied evidence. The objective is correct use of the language, not forcing every learner to choose the same word when the scenario does not provide a complete probability model.
+During the knowledge check, accept different likelihood terms when the learner can defend them from the supplied evidence. The objective is correct use of the language with a claim bounded by the evidence. In the A12 comparison, both sentences concern attempted payload delivery; the likelihood term adds precision without establishing successful transfer or execution. A different term still needs a defensible basis.
 
 ## Common Student Challenges
 
@@ -96,7 +96,7 @@ During the knowledge check, accept different likelihood terms when the learner c
 
 ### 3. Write one A12 judgment using a classroom likelihood term and, if appropriate, a separate confidence statement.
 
-**Acceptable response:** Any coherent judgment using one classroom likelihood term. If confidence is included, it should be expressed separately rather than used as a synonym for likelihood.
+**Acceptable response:** A defensible judgment using one classroom likelihood term, such as likely attempted payload delivery, with transfer and execution left unresolved. If confidence is included, it should be expressed separately and explained rather than used as a synonym for likelihood.
 
 ## Summary and Transition
 

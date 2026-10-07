@@ -45,6 +45,29 @@ Taught in `00` before SOC. Hunt planning is **3.5**. Codes match combined.
 | 0.6.3.1 | Cyber Kill Chain | K | B | C | C | Shared floor. |
 | 0.6.3.2 | Identify the Kill Chain stage of observed activity | T | 3c | 4c | 4c | Stage + reject neighbor. |
 
+## 0.7 External Tools (shared floor)
+
+| # | Item | Type | Hunter 3 | Hunter 5 | Hunter 7 | Justification |
+|---|------|------|----------|----------|----------|---------------|
+| 0.7 | External tools (VirusTotal, AnyRun, Silent Push, URLScan) | K | B | C | C | Shared orientation; hunter-specific platform use is later in 3.3. |
+| 0.7.1 | Select the appropriate external tool for a given enrichment or analysis need | T | 3c | 4c | 4d | Select the source that fits the question before advanced hunter pivoting. |
+
+## 0.8 Environment / signal flow (shared floor)
+
+| # | Item | Type | Hunter 3 | Hunter 5 | Hunter 7 | Justification |
+|---|------|------|----------|----------|----------|---------------|
+| 0.8 | Environment / signal flow | K | B | C | C | Shared site knowledge required to scope hunts and interpret visibility. |
+| 0.8.1 | Identify which kind of fact applies and why it is not the adjacent kind | T | 2b | 3c | 4c | Supports path/collection/visibility reasoning before hunt execution. |
+
+## 0.9 Common Initial Access Paths (shared floor)
+
+Taught after the other shared-foundation lessons and before SOC.
+
+| # | Item | Type | Hunter 3 | Hunter 5 | Hunter 7 | Justification |
+|---|------|------|-------|-------|-------|---------------|
+| 0.9 | Common initial access paths | K | A | B | C | Shared entry-path model; hunting depth remains in 3.x. |
+| 0.9.1 | Identify the most defensible initial-access path from supplied evidence, preserve uncertainty, and name the next evidence needed | T | 2b | 3c | 4c | Supports later hunt hypotheses without turning the shared lesson into hunt execution. |
+
 ---
 
 ## 3.1 Purpose of Threat Hunting

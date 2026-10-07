@@ -1,6 +1,6 @@
 # Training Plan
 
-Curriculum for SOC Analysts, Threat Hunters, and CTI Analysts. Content is organized so each teaching module is one folder, grouped by role and unit.
+Curriculum for SOC Analysts, CTI Analysts, Threat Hunters, and Detection Engineers. Content is organized so each teaching module is one folder, grouped by role and unit.
 
 ## Layout
 
@@ -16,11 +16,10 @@ docs/
   generate-module.md              # AI instructions to write a Gate 2 module
   story-bible.md                  # living classroom fiction (PRD / DYA)
   companion-story/                # outline, plan, finished A12 story
-  exports-gemini-notebook.md      # Gemini Notebook exports: sets, when to rebuild
+  exports-gemini-notebook.md      # legacy Gemini split-export deprecation note
   todo.md                         # review and follow-up list
 
 templates/                        # proposal + module writing templates
-exports/gemini-notebook/          # corpus + by-track / by-unit / by-lesson / fiction; rebuild, do not surgical-edit
 modules/
   00-intro/<unit>/<module>/       # front door + shared hours (everyone, before SOC)
   01-soc/<unit>/<module>/
@@ -28,6 +27,7 @@ modules/
   03-hunter/<unit>/<module>/      # taught after CTI; IDs 3.x
   04-de/<module>/                 # Detection Engineer
   course-summary/                 # final unnumbered course synthesis
+ebook/                            # derived learner manuscript + build/QA artifacts
 labs/                             # reusable sample logs and PCAP
 ```
 
@@ -83,6 +83,7 @@ Folder names are not dotted IDs:
 | `modules/01-soc/05-reporting/02-reporting-timelines` | `1.5.2.1`–`1.5.2.2` | `1.5.2` + `1.5.2.1` |
 | `modules/01-soc/05-reporting/03-notification-distribution` | `1.5.3.1`–`1.5.3.2` | `1.5.3` + `1.5.3.1` |
 | `modules/00-intro/08-environment/01-orientation` | `0.8` / `0.8.1` | `0.8` + `0.8.1` (00.08) |
+| `modules/00-intro/09-initial-access` | `0.9` / `0.9.1` | `0.9` + `0.9.1` |
 | `modules/02-cti/01-core-intel/01-data-info-intel` | `2.1.1` and mapped tasks | `2.1.1` |
 | `modules/02-cti/01-core-intel/02-intelligence-lifecycle` | `2.1.2` and mapped tasks | `2.1.2` |
 | `modules/02-cti/01-core-intel/03-intelligence-types` | `2.1.3` and mapped tasks | `2.1.3` |
@@ -160,7 +161,16 @@ Shared topics live under `modules/00-intro/`. Do not copy those lessons into eac
 
 ## CTI learning sequence
 
-The [CTI course map](modules/02-cti/README.md) lists the reorganized 2.1–2.8 sections. The [crosswalk](docs/cti-reorganization-crosswalk.md) maps earlier lesson and task IDs to their current locations. Generated exports will be rebuilt in a later pass.
+The [CTI course map](modules/02-cti/README.md) lists the reorganized 2.1–2.8 sections. The [crosswalk](docs/cti-reorganization-crosswalk.md) maps earlier lesson and task IDs to their current locations. Meaningful multi-lesson subunits use skim-first introductions and summaries so learners can preview the mental model before reading and confirm the end state afterward. The shared-foundations sequence now ends with `0.9` Common Initial Access Paths and the `0.10` synthesis before SOC begins.
+
+
+## Learner publication
+
+The primary derived learner artifact is [ebook/ebook-manuscript.md](ebook/ebook-manuscript.md). It compiles the canonical student lessons, skim-first subunit introductions/summaries, the complete reconciled A12 case, proficiency appendix, glossary, acronyms, and references into one reviewable Markdown source.
+
+The curriculum source of truth remains `modules/` plus the canonical A12 files under `docs/`; do not hand-edit the compiled manuscript to fix curriculum content. Rebuild it with `ebook/build_ebook.py` after learner-facing source changes.
+
+For NotebookLM / Gemini notebook use, upload `ebook/ebook-manuscript.md` directly. The older split-export tree is retired from the required publishing workflow; historical copies need neither rebuilding nor deletion. See [docs/exports-gemini-notebook.md](docs/exports-gemini-notebook.md) for the migration note.
 
 
 ## Course completion

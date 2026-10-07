@@ -144,15 +144,13 @@ A TAXII client can:
 - GET objects from a Collection;
 - POST objects to a writable Collection.
 
-### TAXII Envelope ≠ STIX Bundle
+### TAXII Envelopes and STIX Bundles Serve Different Purposes
 
-This is an important technical distinction.
+TAXII and STIX define different layers of the exchange, so their container concepts should remain distinct.
 
-TAXII 2.1 uses a **TAXII Envelope** as the wrapper when STIX objects are exchanged through Collection endpoints.
+TAXII 2.1 uses a **TAXII Envelope** as the transport wrapper when STIX objects are exchanged through Collection endpoints. A **STIX Bundle** is a separate STIX container that can group STIX objects independently of TAXII.
 
-A STIX Bundle is a separate STIX container.
-
-You can use STIX Bundles outside TAXII, and TAXII does not require every exchange to be represented as a STIX Bundle.
+This means a STIX Bundle can be used outside TAXII, while a TAXII exchange does not require every set of objects to be represented as a STIX Bundle.
 
 A useful mental model is:
 
@@ -164,11 +162,11 @@ A useful mental model is:
 
 ### Classroom TAXII exercise
 
-The classroom collection name `harbor-cti` is fictional.
+The classroom collection name `dya-cti` is fictional.
 
 The skill is to explain:
 
-> A TAXII client with read access could retrieve STIX objects from the `harbor-cti` Collection.
+> A TAXII client with read access could retrieve STIX objects from the `dya-cti` Collection.
 
 and, if write permission existed:
 

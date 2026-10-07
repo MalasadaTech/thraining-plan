@@ -95,3 +95,6 @@ No alert ≠ automatic proof of no activity.
 Final principle:
 
 **A detection is a maintained capability, not a finished query.**
+
+
+**Next:** Course Summary – Bringing the Defensive Workflow Together
